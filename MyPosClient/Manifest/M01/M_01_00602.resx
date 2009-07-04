@@ -1,0 +1,1600 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TextEdit_HomePhone.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Department.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;ToolStrip_Form.Name" xml:space="preserve">
+    <value>ToolStrip_Form</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>供应商代码</value>
+  </data>
+  <data name="TextEdit_Title.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Label6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 72</value>
+  </data>
+  <data name="&gt;&gt;Label6.Name" xml:space="preserve">
+    <value>Label6</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ContactPerson.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ManualCode.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="TextEdit_SupplierID.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;Label16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 126</value>
+  </data>
+  <data name="&gt;&gt;Label12.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="Label11.Text" xml:space="preserve">
+    <value>工作电话</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_Title.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;Label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 15</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ContactPerson.Name" xml:space="preserve">
+    <value>TextEdit_ContactPerson</value>
+  </data>
+  <data name="Label3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="TextEdit_Title.TabIndex" type="System.Int32, mscorlib">
+    <value>10006</value>
+  </data>
+  <data name="&gt;&gt;Label17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label13.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="Label15.Text" xml:space="preserve">
+    <value>国家</value>
+  </data>
+  <data name="TextEdit_Fax.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Label10.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="TextEdit_City.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Fax.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>301, 286</value>
+  </data>
+  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Country.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_Country.TabIndex" type="System.Int32, mscorlib">
+    <value>10025</value>
+  </data>
+  <data name="Label4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="TextEdit_Country.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_SupplierName.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="TextEdit_SupplierID.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label15.TabIndex" type="System.Int32, mscorlib">
+    <value>10026</value>
+  </data>
+  <data name="&gt;&gt;Label11.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_CellPhone.Name" xml:space="preserve">
+    <value>TextEdit_CellPhone</value>
+  </data>
+  <data name="TextEdit_Country.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>XL.Win.Component.BaseForm, XL.Win, Version=0.0.0.2, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 15</value>
+  </data>
+  <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="TextEdit_Fax.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;MemoEdit_Remarks.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.MemoEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 22</value>
+  </data>
+  <assembly alias="DevExpress.XtraEditors.v7.3" name="DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
+  <data name="TextEdit_WorkPhone.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v7.3">
+    <value>Default</value>
+  </data>
+  <data name="TextEdit_SupplierID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>110, 42</value>
+  </data>
+  <data name="Label6.Text" xml:space="preserve">
+    <value>地址</value>
+  </data>
+  <data name="Label8.Text" xml:space="preserve">
+    <value>电话</value>
+  </data>
+  <data name="&gt;&gt;Label12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>301, 178</value>
+  </data>
+  <data name="TextEdit_Title.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 21</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_SupplierID.ZOrder" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="TextEdit_Address.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_SupplierName.TabIndex" type="System.Int32, mscorlib">
+    <value>10002</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>M_01_00602</value>
+  </data>
+  <data name="TextEdit_WebSite.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;ContextMenu_Paragraph.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenu, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="MemoEdit_Remarks.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
+  </data>
+  <data name="TextEdit_WorkPhone.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_HomePhone.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_WorkPhone.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_HomePhone.Location" type="System.Drawing.Point, System.Drawing">
+    <value>378, 175</value>
+  </data>
+  <data name="TextEdit_WorkPhone.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v7.3">
+    <value>None</value>
+  </data>
+  <data name="Label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>301, 205</value>
+  </data>
+  <data name="TextEdit_CellPhone.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="TextEdit_Address.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v7.3">
+    <value>Default</value>
+  </data>
+  <data name="TextEdit_Department.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;Label5.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="MemoEdit_Remarks.Size" type="System.Drawing.Size, System.Drawing">
+    <value>424, 117</value>
+  </data>
+  <data name="TextEdit_SupplierName.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 15</value>
+  </data>
+  <data name="Label11.TabIndex" type="System.Int32, mscorlib">
+    <value>10019</value>
+  </data>
+  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
+    <value>Label1</value>
+  </data>
+  <data name="&gt;&gt;Label13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TextEdit_WorkPhone.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ToolStrip_Form.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;Label7.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="Label8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>供应商名称</value>
+  </data>
+  <data name="TextEdit_CellPhone.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_City.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v7.3">
+    <value>Default</value>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>职位</value>
+  </data>
+  <data name="TextEdit_WorkPhone.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextEdit_City.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextEdit_Title.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextEdit_CellPhone.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v7.3">
+    <value>None</value>
+  </data>
+  <data name="Label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;DefaultLookAndFeel_Form.Name" xml:space="preserve">
+    <value>DefaultLookAndFeel_Form</value>
+  </data>
+  <data name="TextEdit_WebSite.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;TextEdit_CellPhone.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 15</value>
+  </data>
+  <data name="Label17.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_WebSite.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="Label9.Text" xml:space="preserve">
+    <value>省/州</value>
+  </data>
+  <data name="&gt;&gt;Label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>572, 483</value>
+  </data>
+  <data name="TextEdit_CellPhone.TabIndex" type="System.Int32, mscorlib">
+    <value>10018</value>
+  </data>
+  <data name="TextEdit_CellPhone.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Label14.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_ManualCode.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Address.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 21</value>
+  </data>
+  <data name="TextEdit_Department.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 15</value>
+  </data>
+  <data name="TextEdit_Email.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_ManualCode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 19</value>
+  </data>
+  <data name="TextEdit_CellPhone.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_WebSite.Location" type="System.Drawing.Point, System.Drawing">
+    <value>110, 312</value>
+  </data>
+  <data name="TextEdit_WebSite.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_State.Location" type="System.Drawing.Point, System.Drawing">
+    <value>110, 231</value>
+  </data>
+  <data name="&gt;&gt;ToolStripButton_Save.Name" xml:space="preserve">
+    <value>ToolStripButton_Save</value>
+  </data>
+  <data name="&gt;&gt;Label5.Name" xml:space="preserve">
+    <value>Label5</value>
+  </data>
+  <data name="$this.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_ManualCode.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
+  </data>
+  <data name="TextEdit_Postcode.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="TextEdit_Country.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextEdit_WebSite.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Label6.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="TextEdit_City.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 21</value>
+  </data>
+  <data name="Label12.Text" xml:space="preserve">
+    <value>传真</value>
+  </data>
+  <data name="Label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 15</value>
+  </data>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>部门</value>
+  </data>
+  <data name="Label14.TabIndex" type="System.Int32, mscorlib">
+    <value>10028</value>
+  </data>
+  <data name="TextEdit_CellPhone.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v7.3">
+    <value>Default</value>
+  </data>
+  <data name="TextEdit_Email.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_State.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="TextEdit_ContactPerson.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_Email.Name" xml:space="preserve">
+    <value>TextEdit_Email</value>
+  </data>
+  <data name="TextEdit_Postcode.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Address.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v7.3">
+    <value>None</value>
+  </data>
+  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 15</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ManualCode.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="TextEdit_WebSite.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label16.Text" xml:space="preserve">
+    <value>网址</value>
+  </data>
+  <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 207</value>
+  </data>
+  <data name="Label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_Address.Name" xml:space="preserve">
+    <value>TextEdit_Address</value>
+  </data>
+  <data name="TextEdit_SupplierID.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
+  </data>
+  <data name="TextEdit_Title.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;MemoEdit_Remarks.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="TextEdit_Email.TabIndex" type="System.Int32, mscorlib">
+    <value>10027</value>
+  </data>
+  <data name="TextEdit_Email.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextEdit_Address.Location" type="System.Drawing.Point, System.Drawing">
+    <value>110, 177</value>
+  </data>
+  <data name="TextEdit_Postcode.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Label3.Name" xml:space="preserve">
+    <value>Label3</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_SupplierID.Name" xml:space="preserve">
+    <value>TextEdit_SupplierID</value>
+  </data>
+  <data name="Label12.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_Department.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="TextEdit_City.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Label4.Name" xml:space="preserve">
+    <value>Label4</value>
+  </data>
+  <data name="&gt;&gt;Label11.Name" xml:space="preserve">
+    <value>Label11</value>
+  </data>
+  <data name="TextEdit_ContactPerson.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextEdit_Department.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ToolStrip_Form.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Label9.TabIndex" type="System.Int32, mscorlib">
+    <value>10015</value>
+  </data>
+  <data name="TextEdit_Title.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v7.3">
+    <value>Default</value>
+  </data>
+  <data name="TextEdit_Fax.Location" type="System.Drawing.Point, System.Drawing">
+    <value>378, 256</value>
+  </data>
+  <data name="TextEdit_Postcode.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_Email.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Label10.TabIndex" type="System.Int32, mscorlib">
+    <value>10017</value>
+  </data>
+  <data name="TextEdit_ContactPerson.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_Country.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;ToolStrip_Form.ZOrder" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="Label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_Country.Name" xml:space="preserve">
+    <value>TextEdit_Country</value>
+  </data>
+  <data name="TextEdit_Fax.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Fax.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextEdit_HomePhone.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 21</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_Address.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TextEdit_State.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_Fax.Name" xml:space="preserve">
+    <value>TextEdit_Fax</value>
+  </data>
+  <data name="Label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 180</value>
+  </data>
+  <data name="Label11.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="Label15.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="&gt;&gt;Label7.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="TextEdit_Email.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;Label8.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_City.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="Label13.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="ToolStripButton_Save.Text" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="CheckEdit_ManualCode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>272, 43</value>
+  </data>
+  <data name="Label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="TextEdit_Postcode.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;Timer_Surveillant.Name" xml:space="preserve">
+    <value>Timer_Surveillant</value>
+  </data>
+  <data name="TextEdit_ContactPerson.Location" type="System.Drawing.Point, System.Drawing">
+    <value>110, 96</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_Address.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="TextEdit_City.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ManualCode.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;Label6.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="Label8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="TextEdit_CellPhone.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;DefaultLookAndFeel_Form.Type" xml:space="preserve">
+    <value>DevExpress.LookAndFeel.DefaultLookAndFeel, DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="TextEdit_SupplierName.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 288</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_City.Name" xml:space="preserve">
+    <value>TextEdit_City</value>
+  </data>
+  <data name="Label3.TabIndex" type="System.Int32, mscorlib">
+    <value>10003</value>
+  </data>
+  <data name="MemoEdit_Remarks.Location" type="System.Drawing.Point, System.Drawing">
+    <value>110, 339</value>
+  </data>
+  <data name="TextEdit_Title.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="Label16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 315</value>
+  </data>
+  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 45</value>
+  </data>
+  <data name="TextEdit_Title.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 15</value>
+  </data>
+  <data name="TextEdit_ContactPerson.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 21</value>
+  </data>
+  <data name="Label7.TabIndex" type="System.Int32, mscorlib">
+    <value>10011</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_Postcode.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="TextEdit_Country.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Label15.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_SupplierID.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v7.3">
+    <value>None</value>
+  </data>
+  <data name="TextEdit_WebSite.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="TextEdit_SupplierID.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_SupplierName.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_Country.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_Department.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Label2.Name" xml:space="preserve">
+    <value>Label2</value>
+  </data>
+  <data name="TextEdit_Fax.TabIndex" type="System.Int32, mscorlib">
+    <value>10023</value>
+  </data>
+  <data name="TextEdit_ContactPerson.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="TextEdit_ContactPerson.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="Label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 234</value>
+  </data>
+  <data name="TextEdit_Email.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_City.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v7.3">
+    <value>None</value>
+  </data>
+  <data name="TextEdit_Country.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v7.3">
+    <value>Default</value>
+  </data>
+  <data name="TextEdit_SupplierName.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>301, 232</value>
+  </data>
+  <data name="TextEdit_Title.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v7.3">
+    <value>None</value>
+  </data>
+  <data name="TextEdit_Department.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_WorkPhone.Location" type="System.Drawing.Point, System.Drawing">
+    <value>378, 229</value>
+  </data>
+  <data name="CheckEdit_ManualCode.Properties.Caption" xml:space="preserve">
+    <value>手动</value>
+  </data>
+  <data name="&gt;&gt;Label3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_SupplierID.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_HomePhone.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="Label4.TabIndex" type="System.Int32, mscorlib">
+    <value>10005</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_WebSite.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 15</value>
+  </data>
+  <data name="TextEdit_State.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label16.TabIndex" type="System.Int32, mscorlib">
+    <value>10029</value>
+  </data>
+  <data name="TextEdit_City.Location" type="System.Drawing.Point, System.Drawing">
+    <value>110, 204</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_Department.Name" xml:space="preserve">
+    <value>TextEdit_Department</value>
+  </data>
+  <data name="Label8.TabIndex" type="System.Int32, mscorlib">
+    <value>10013</value>
+  </data>
+  <data name="&gt;&gt;Label8.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="TextEdit_Postcode.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label13.Text" xml:space="preserve">
+    <value>邮编</value>
+  </data>
+  <data name="TextEdit_Title.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_ContactPerson.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v7.3">
+    <value>None</value>
+  </data>
+  <data name="TextEdit_Email.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v7.3">
+    <value>Default</value>
+  </data>
+  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TextEdit_Postcode.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v7.3">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;Label9.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="TextEdit_Country.Location" type="System.Drawing.Point, System.Drawing">
+    <value>110, 285</value>
+  </data>
+  <data name="Label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="TextEdit_CellPhone.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Fax.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_Postcode.Name" xml:space="preserve">
+    <value>TextEdit_Postcode</value>
+  </data>
+  <data name="ToolStrip_Form.Size" type="System.Drawing.Size, System.Drawing">
+    <value>572, 25</value>
+  </data>
+  <data name="Label11.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label17.Text" xml:space="preserve">
+    <value>备注</value>
+  </data>
+  <data name="TextEdit_SupplierName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 21</value>
+  </data>
+  <data name="TextEdit_City.TabIndex" type="System.Int32, mscorlib">
+    <value>10012</value>
+  </data>
+  <data name="TextEdit_Fax.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 21</value>
+  </data>
+  <data name="Label12.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="&gt;&gt;Label14.Name" xml:space="preserve">
+    <value>Label14</value>
+  </data>
+  <data name="&gt;&gt;Label14.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="TextEdit_Country.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Email.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_State.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="TextEdit_Country.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 21</value>
+  </data>
+  <data name="TextEdit_HomePhone.TabIndex" type="System.Int32, mscorlib">
+    <value>10014</value>
+  </data>
+  <data name="TextEdit_SupplierName.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_City.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="&gt;&gt;Label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TextEdit_State.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label17.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Address.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;Label15.Name" xml:space="preserve">
+    <value>Label15</value>
+  </data>
+  <data name="TextEdit_SupplierName.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v7.3">
+    <value>Default</value>
+  </data>
+  <data name="Label16.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="&gt;&gt;Label15.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="Label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 15</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_Title.Name" xml:space="preserve">
+    <value>TextEdit_Title</value>
+  </data>
+  <data name="TextEdit_SupplierID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 21</value>
+  </data>
+  <data name="TextEdit_Fax.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v7.3">
+    <value>None</value>
+  </data>
+  <data name="TextEdit_Title.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Label7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="TextEdit_Department.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Label12.TabIndex" type="System.Int32, mscorlib">
+    <value>10024</value>
+  </data>
+  <data name="Label14.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="Label13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 15</value>
+  </data>
+  <data name="Label10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="TextEdit_City.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Department.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="Label13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 261</value>
+  </data>
+  <data name="TextEdit_SupplierName.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Label7.Name" xml:space="preserve">
+    <value>Label7</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_WorkPhone.Name" xml:space="preserve">
+    <value>TextEdit_WorkPhone</value>
+  </data>
+  <data name="TextEdit_SupplierName.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Department.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 15</value>
+  </data>
+  <data name="Label13.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_City.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="TextEdit_State.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextEdit_Department.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 21</value>
+  </data>
+  <data name="TextEdit_WorkPhone.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_State.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 21</value>
+  </data>
+  <data name="Label17.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 341</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ContactPerson.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="TextEdit_State.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;MemoEdit_Remarks.Name" xml:space="preserve">
+    <value>MemoEdit_Remarks</value>
+  </data>
+  <data name="Label17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 15</value>
+  </data>
+  <data name="TextEdit_HomePhone.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v7.3">
+    <value>Default</value>
+  </data>
+  <data name="TextEdit_Postcode.TabIndex" type="System.Int32, mscorlib">
+    <value>10021</value>
+  </data>
+  <data name="&gt;&gt;Label5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_HomePhone.Name" xml:space="preserve">
+    <value>TextEdit_HomePhone</value>
+  </data>
+  <data name="TextEdit_Email.Location" type="System.Drawing.Point, System.Drawing">
+    <value>378, 283</value>
+  </data>
+  <data name="TextEdit_State.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v7.3">
+    <value>Default</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_Title.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="TextEdit_State.TabIndex" type="System.Int32, mscorlib">
+    <value>10016</value>
+  </data>
+  <data name="TextEdit_SupplierID.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TextEdit_Department.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v7.3">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;ContextMenu_Paragraph.Name" xml:space="preserve">
+    <value>ContextMenu_Paragraph</value>
+  </data>
+  <data name="TextEdit_Country.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v7.3">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_Email.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_HomePhone.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;Label10.Name" xml:space="preserve">
+    <value>Label10</value>
+  </data>
+  <data name="TextEdit_ContactPerson.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v7.3">
+    <value>Default</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="&gt;&gt;ToolStripButton_Save.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_City.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="TextEdit_Email.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label16.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Department.TabIndex" type="System.Int32, mscorlib">
+    <value>10008</value>
+  </data>
+  <data name="&gt;&gt;Label14.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="TextEdit_ContactPerson.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_Email.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v7.3">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_Title.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="TextEdit_Postcode.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v7.3">
+    <value>Default</value>
+  </data>
+  <data name="TextEdit_State.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_SupplierID.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>城市</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_Fax.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="TextEdit_Fax.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v7.3">
+    <value>Default</value>
+  </data>
+  <data name="&gt;&gt;Label4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Label15.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="TextEdit_HomePhone.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_Postcode.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="TextEdit_SupplierName.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_HomePhone.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_ContactPerson.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_Department.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="TextEdit_SupplierName.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v7.3">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;Label16.Name" xml:space="preserve">
+    <value>Label16</value>
+  </data>
+  <data name="TextEdit_CellPhone.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 21</value>
+  </data>
+  <data name="ToolStripButton_Close.Text" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_SupplierName.Name" xml:space="preserve">
+    <value>TextEdit_SupplierName</value>
+  </data>
+  <data name="TextEdit_SupplierID.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_SupplierName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>110, 69</value>
+  </data>
+  <data name="ToolStrip_Form.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
+  </data>
+  <data name="Label9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="&gt;&gt;Label16.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="Label13.TabIndex" type="System.Int32, mscorlib">
+    <value>10022</value>
+  </data>
+  <data name="TextEdit_State.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v7.3">
+    <value>None</value>
+  </data>
+  <data name="Label2.TabIndex" type="System.Int32, mscorlib">
+    <value>10001</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_Fax.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_WorkPhone.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="TextEdit_CellPhone.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_WebSite.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;Label17.Name" xml:space="preserve">
+    <value>Label17</value>
+  </data>
+  <data name="Label9.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_SupplierID.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="&gt;&gt;Label17.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="Label14.Text" xml:space="preserve">
+    <value>电子邮件</value>
+  </data>
+  <data name="&gt;&gt;Label14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Timer_Surveillant.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>联系人</value>
+  </data>
+  <data name="TextEdit_Department.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v7.3">
+    <value>Default</value>
+  </data>
+  <data name="TextEdit_CellPhone.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label6.TabIndex" type="System.Int32, mscorlib">
+    <value>10009</value>
+  </data>
+  <data name="TextEdit_State.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_Postcode.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="TextEdit_WorkPhone.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 21</value>
+  </data>
+  <data name="TextEdit_HomePhone.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v7.3">
+    <value>None</value>
+  </data>
+  <data name="Label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 153</value>
+  </data>
+  <data name="TextEdit_Email.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="TextEdit_Address.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextEdit_Postcode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>110, 258</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_Address.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;Label9.Name" xml:space="preserve">
+    <value>Label9</value>
+  </data>
+  <data name="&gt;&gt;MemoEdit_Remarks.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ToolStripButton_Close.Name" xml:space="preserve">
+    <value>ToolStripButton_Close</value>
+  </data>
+  <data name="TextEdit_Title.Location" type="System.Drawing.Point, System.Drawing">
+    <value>110, 123</value>
+  </data>
+  <data name="Label10.Text" xml:space="preserve">
+    <value>手机</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ManualCode.Name" xml:space="preserve">
+    <value>CheckEdit_ManualCode</value>
+  </data>
+  <data name="TextEdit_Address.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="&gt;&gt;Label10.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="TextEdit_Address.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Country.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_Email.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="TextEdit_Address.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_HomePhone.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;Label8.Name" xml:space="preserve">
+    <value>Label8</value>
+  </data>
+  <data name="TextEdit_State.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label10.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_HomePhone.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_WebSite.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v7.3">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
+    <value>34</value>
+  </data>
+  <data name="&gt;&gt;Label15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Label17.TabIndex" type="System.Int32, mscorlib">
+    <value>10031</value>
+  </data>
+  <data name="TextEdit_Department.Location" type="System.Drawing.Point, System.Drawing">
+    <value>110, 150</value>
+  </data>
+  <data name="&gt;&gt;Label11.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="TextEdit_CellPhone.Location" type="System.Drawing.Point, System.Drawing">
+    <value>378, 202</value>
+  </data>
+  <data name="&gt;&gt;Label12.Name" xml:space="preserve">
+    <value>Label12</value>
+  </data>
+  <data name="Label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 15</value>
+  </data>
+  <data name="TextEdit_City.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_CellPhone.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_State.Name" xml:space="preserve">
+    <value>TextEdit_State</value>
+  </data>
+  <data name="&gt;&gt;Label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TextEdit_ContactPerson.TabIndex" type="System.Int32, mscorlib">
+    <value>10004</value>
+  </data>
+  <data name="TextEdit_WebSite.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Label14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 15</value>
+  </data>
+  <data name="&gt;&gt;Label12.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Label16.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;ToolStripButton_Close.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_SupplierID.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="TextEdit_Fax.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="TextEdit_WorkPhone.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_WebSite.TabIndex" type="System.Int32, mscorlib">
+    <value>10030</value>
+  </data>
+  <data name="&gt;&gt;ToolStrip_Form.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="TextEdit_SupplierID.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v7.3">
+    <value>Default</value>
+  </data>
+  <data name="TextEdit_HomePhone.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;Label13.Name" xml:space="preserve">
+    <value>Label13</value>
+  </data>
+  <data name="TextEdit_City.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_Country.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Label13.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_WebSite.Name" xml:space="preserve">
+    <value>TextEdit_WebSite</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_State.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="TextEdit_WorkPhone.TabIndex" type="System.Int32, mscorlib">
+    <value>10020</value>
+  </data>
+  <data name="&gt;&gt;Label17.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ToolStripButton_Save.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 22</value>
+  </data>
+  <data name="Label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 15</value>
+  </data>
+  <data name="TextEdit_Email.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 21</value>
+  </data>
+  <data name="TextEdit_WebSite.Size" type="System.Drawing.Size, System.Drawing">
+    <value>424, 21</value>
+  </data>
+  <data name="TextEdit_Postcode.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 99</value>
+  </data>
+  <data name="TextEdit_Country.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_Fax.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;Label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_WorkPhone.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="Label5.TabIndex" type="System.Int32, mscorlib">
+    <value>10007</value>
+  </data>
+  <data name="TextEdit_Title.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_WorkPhone.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="TextEdit_Postcode.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_CellPhone.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="TextEdit_SupplierID.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;TextEdit_WebSite.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="TextEdit_Address.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Label10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TextEdit_WorkPhone.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_WebSite.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v7.3">
+    <value>Default</value>
+  </data>
+  <data name="Label16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 15</value>
+  </data>
+  <data name="TextEdit_Address.TabIndex" type="System.Int32, mscorlib">
+    <value>10010</value>
+  </data>
+  <data name="TextEdit_Postcode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 21</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_SupplierName.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="Label12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>301, 259</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_HomePhone.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_SupplierName.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Label9.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="TextEdit_Fax.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Address.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_HomePhone.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="TextEdit_ContactPerson.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Label11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_WorkPhone.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ContactPerson.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <metadata name="ContextMenu_Paragraph.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>337, 17</value>
+  </metadata>
+  <metadata name="Timer_Surveillant.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="ToolStrip_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>511, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="DefaultLookAndFeel_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>155, 17</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>English</value>
+  </metadata>
+</root>

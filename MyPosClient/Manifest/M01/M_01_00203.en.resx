@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ToolStripButton_Save.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 22</value>
+  </data>
+  <data name="ToolStripButton_Close.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TextEdit_WareCode.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_WareCode.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="DevExpress.XtraEditors.v8.1" name="DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
+  <data name="TextEdit_WareCode.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
+    <value>Default</value>
+  </data>
+  <data name="TextEdit_WareCode.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_WareCode.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextEdit_WareCode.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_WareCode.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
+    <value>None</value>
+  </data>
+  <data name="TextEdit_WareCode.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="TextEdit_WareCode.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_WareCode.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_WareCode.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 15</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>Barcode</value>
+  </data>
+  <data name="CheckEdit_ManualCode.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_ManualCode.Properties.Caption" xml:space="preserve">
+    <value>Manual barcode</value>
+  </data>
+  <data name="CheckEdit_ManualCode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 19</value>
+  </data>
+  <data name="TextEdit_CustomCode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>82, 3</value>
+  </data>
+  <data name="TextEdit_CustomCode.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_CustomCode.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
+    <value>Default</value>
+  </data>
+  <data name="TextEdit_CustomCode.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_CustomCode.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextEdit_CustomCode.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_CustomCode.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
+    <value>None</value>
+  </data>
+  <data name="TextEdit_CustomCode.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="TextEdit_CustomCode.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_CustomCode.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_CustomCode.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_CustomCode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 21</value>
+  </data>
+  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 6</value>
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 15</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Item code</value>
+  </data>
+  <data name="Panel_CustomCode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>379, 48</value>
+  </data>
+  <data name="TextEdit_WareName.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_WareName.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
+    <value>Default</value>
+  </data>
+  <data name="TextEdit_WareName.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_WareName.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextEdit_WareName.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_WareName.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
+    <value>None</value>
+  </data>
+  <data name="TextEdit_WareName.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="TextEdit_WareName.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_WareName.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_WareName.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_WareName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>476, 21</value>
+  </data>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 15</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Item name</value>
+  </data>
+  <data name="TextEdit_Model.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Model.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
+    <value>Default</value>
+  </data>
+  <data name="TextEdit_Model.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_Model.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextEdit_Model.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Model.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
+    <value>None</value>
+  </data>
+  <data name="TextEdit_Model.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="TextEdit_Model.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Model.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Model.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>267, 8</value>
+  </data>
+  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 15</value>
+  </data>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>Model</value>
+  </data>
+  <data name="TextEdit_Spec.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Spec.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
+    <value>Default</value>
+  </data>
+  <data name="TextEdit_Spec.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_Spec.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextEdit_Spec.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Spec.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
+    <value>None</value>
+  </data>
+  <data name="TextEdit_Spec.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="TextEdit_Spec.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Spec.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Spec.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 15</value>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>Spec</value>
+  </data>
+  <data name="Panel_SpecModel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>609, 32</value>
+  </data>
+  <data name="TextEdit_WareNameEn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>115, 3</value>
+  </data>
+  <data name="TextEdit_WareNameEn.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_WareNameEn.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
+    <value>Default</value>
+  </data>
+  <data name="TextEdit_WareNameEn.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_WareNameEn.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextEdit_WareNameEn.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_WareNameEn.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
+    <value>None</value>
+  </data>
+  <data name="TextEdit_WareNameEn.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="TextEdit_WareNameEn.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_WareNameEn.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_WareNameEn.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_WareNameEn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>476, 21</value>
+  </data>
+  <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 6</value>
+  </data>
+  <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 15</value>
+  </data>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>Item name(En)</value>
+  </data>
+  <data name="Panel_WareNameEn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>609, 30</value>
+  </data>
+  <data name="TextEdit_ModelEn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>344, 2</value>
+  </data>
+  <data name="TextEdit_ModelEn.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_ModelEn.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
+    <value>Default</value>
+  </data>
+  <data name="TextEdit_ModelEn.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ModelEn.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextEdit_ModelEn.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_ModelEn.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
+    <value>None</value>
+  </data>
+  <data name="TextEdit_ModelEn.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="TextEdit_ModelEn.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_ModelEn.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_ModelEn.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 15</value>
+  </data>
+  <data name="Label6.Text" xml:space="preserve">
+    <value>Model (En)</value>
+  </data>
+  <data name="TextEdit_SpecEn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>115, 2</value>
+  </data>
+  <data name="TextEdit_SpecEn.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_SpecEn.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
+    <value>Default</value>
+  </data>
+  <data name="TextEdit_SpecEn.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_SpecEn.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextEdit_SpecEn.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_SpecEn.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
+    <value>None</value>
+  </data>
+  <data name="TextEdit_SpecEn.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="TextEdit_SpecEn.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_SpecEn.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_SpecEn.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 5</value>
+  </data>
+  <data name="Label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 15</value>
+  </data>
+  <data name="Label8.Text" xml:space="preserve">
+    <value>Spec (En)</value>
+  </data>
+  <data name="Panel_SpecModelEn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 161</value>
+  </data>
+  <data name="Panel_SpecModelEn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>609, 26</value>
+  </data>
+  <data name="CalcEdit_UnitCost.Location" type="System.Drawing.Point, System.Drawing">
+    <value>115, 2</value>
+  </data>
+  <data name="CalcEdit_UnitCost.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CalcEdit_UnitCost.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
+    <value>Default</value>
+  </data>
+  <data name="CalcEdit_UnitCost.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CalcEdit_UnitCost.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CalcEdit_UnitCost.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CalcEdit_UnitCost.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
+    <value>Numeric</value>
+  </data>
+  <data name="CalcEdit_UnitCost.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="CalcEdit_UnitCost.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CalcEdit_UnitCost.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CalcEdit_UnitCost.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CalcEdit_UnitPrice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>344, 2</value>
+  </data>
+  <data name="CalcEdit_UnitPrice.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CalcEdit_UnitPrice.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
+    <value>Default</value>
+  </data>
+  <data name="CalcEdit_UnitPrice.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CalcEdit_UnitPrice.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CalcEdit_UnitPrice.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CalcEdit_UnitPrice.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
+    <value>Numeric</value>
+  </data>
+  <data name="CalcEdit_UnitPrice.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="CalcEdit_UnitPrice.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CalcEdit_UnitPrice.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CalcEdit_UnitPrice.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 15</value>
+  </data>
+  <data name="Label9.Text" xml:space="preserve">
+    <value>Unit price</value>
+  </data>
+  <data name="Label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 5</value>
+  </data>
+  <data name="Label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 15</value>
+  </data>
+  <data name="Label10.Text" xml:space="preserve">
+    <value>Unit cost</value>
+  </data>
+  <data name="Panel_FinacialPart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 187</value>
+  </data>
+  <data name="Panel_FinacialPart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>609, 28</value>
+  </data>
+  <data name="TextEdit_Attribute1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>115, 2</value>
+  </data>
+  <data name="TextEdit_Attribute1.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Attribute1.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
+    <value>Default</value>
+  </data>
+  <data name="TextEdit_Attribute1.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_Attribute1.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextEdit_Attribute1.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Attribute1.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
+    <value>None</value>
+  </data>
+  <data name="TextEdit_Attribute1.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="TextEdit_Attribute1.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Attribute1.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Attribute1.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Label_Attribute1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 5</value>
+  </data>
+  <data name="Label_Attribute1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 15</value>
+  </data>
+  <data name="Label_Attribute1.Text" xml:space="preserve">
+    <value>Attribute1</value>
+  </data>
+  <data name="Panel_Attribute1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 214</value>
+  </data>
+  <data name="Panel_Attribute1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>354, 26</value>
+  </data>
+  <data name="TextEdit_Attribute2.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Attribute2.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
+    <value>Default</value>
+  </data>
+  <data name="TextEdit_Attribute2.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_Attribute2.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextEdit_Attribute2.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Attribute2.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
+    <value>None</value>
+  </data>
+  <data name="TextEdit_Attribute2.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="TextEdit_Attribute2.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Attribute2.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Attribute2.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Label_Attribute2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 15</value>
+  </data>
+  <data name="Label_Attribute2.Text" xml:space="preserve">
+    <value>Attribute2</value>
+  </data>
+  <data name="Panel_Attribute2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 240</value>
+  </data>
+  <data name="Panel_Attribute2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>354, 31</value>
+  </data>
+  <data name="TextEdit_Attribute3.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Attribute3.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
+    <value>Default</value>
+  </data>
+  <data name="TextEdit_Attribute3.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_Attribute3.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextEdit_Attribute3.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Attribute3.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
+    <value>None</value>
+  </data>
+  <data name="TextEdit_Attribute3.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="TextEdit_Attribute3.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Attribute3.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Attribute3.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Label_Attribute3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 15</value>
+  </data>
+  <data name="Label_Attribute3.Text" xml:space="preserve">
+    <value>Attribute3</value>
+  </data>
+  <data name="Panel_Attribute3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 271</value>
+  </data>
+  <data name="Panel_Attribute3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>354, 31</value>
+  </data>
+  <data name="TextEdit_Attribute4.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Attribute4.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
+    <value>Default</value>
+  </data>
+  <data name="TextEdit_Attribute4.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_Attribute4.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextEdit_Attribute4.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Attribute4.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
+    <value>None</value>
+  </data>
+  <data name="TextEdit_Attribute4.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="TextEdit_Attribute4.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Attribute4.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Attribute4.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Label_Attribute4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 15</value>
+  </data>
+  <data name="Label_Attribute4.Text" xml:space="preserve">
+    <value>Attribute4</value>
+  </data>
+  <data name="Panel_Attribute4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 302</value>
+  </data>
+  <data name="Panel_Attribute4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>354, 31</value>
+  </data>
+  <data name="CheckEdit_PractCodeRequired.Location" type="System.Drawing.Point, System.Drawing">
+    <value>432, 6</value>
+  </data>
+  <data name="CheckEdit_PractCodeRequired.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_PractCodeRequired.Properties.Caption" xml:space="preserve">
+    <value>Instance barcode trace</value>
+  </data>
+  <data name="CheckEdit_PractCodeRequired.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 19</value>
+  </data>
+  <data name="SpinEdit_GuaranteeDays.Location" type="System.Drawing.Point, System.Drawing">
+    <value>367, 5</value>
+  </data>
+  <data name="SpinEdit_GuaranteeDays.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SpinEdit_GuaranteeDays.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
+    <value>Default</value>
+  </data>
+  <data name="SpinEdit_GuaranteeDays.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="SpinEdit_GuaranteeDays.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SpinEdit_GuaranteeDays.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SpinEdit_GuaranteeDays.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
+    <value>Numeric</value>
+  </data>
+  <data name="SpinEdit_GuaranteeDays.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="SpinEdit_GuaranteeDays.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SpinEdit_GuaranteeDays.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SpinEdit_GuaranteeDays.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Label15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 15</value>
+  </data>
+  <data name="Label15.Text" xml:space="preserve">
+    <value>Remark</value>
+  </data>
+  <data name="TextEdit_UnitName.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_UnitName.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
+    <value>Default</value>
+  </data>
+  <data name="TextEdit_UnitName.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_UnitName.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextEdit_UnitName.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_UnitName.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
+    <value>None</value>
+  </data>
+  <data name="TextEdit_UnitName.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="TextEdit_UnitName.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_UnitName.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_UnitName.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 15</value>
+  </data>
+  <data name="Label11.Text" xml:space="preserve">
+    <value>Guarantee days</value>
+  </data>
+  <data name="Label16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 15</value>
+  </data>
+  <data name="Label16.Text" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="Panel_Misc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 333</value>
+  </data>
+  <data name="Panel_Misc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>616, 115</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>638, 479</value>
+  </data>
+</root>
