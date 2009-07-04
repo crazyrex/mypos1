@@ -155,531 +155,712 @@
     <Compile Include="BasicModules\Entry.vb" />
     <Compile Include="BasicModules\ExcelTK.vb" />
     <Compile Include="BasicModules\Login.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="BasicModules\MainForm.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="BasicModules\MainFormAgent.vb">
     </Compile>
     <Compile Include="BasicModules\SecureOptionsBox.vb">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="BasicModules\TK.vb" />
     <Compile Include="BasicModules\UserOptionsBox.vb">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Business\B01\B_01_00101.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B01\B_01_00102.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B01\B_01_00103.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B01\B_01_00201.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B01\B_01_00202.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B01\B_01_00203.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B01\B_01_00204.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B01\B_01_00205.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B01\B_01_00301.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B01\B_01_00302.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B01\B_01_00303.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B01\B_01_00304.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B01\B_01_00401.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B01\B_01_00402.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B01\B_01_00404.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B01\B_01_00601.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B01\B_01_00602.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B01\B_01_00603.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B01\B_01_00801.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B01\B_01_00802.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B01\B_01_00803.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B01\B_01_00804.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B01\B_01_00901.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B01\B_01_00902.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B01\B_01_01001.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B01\B_01_01002.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B01\B_01_01003.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B02\B_02_00101.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B02\B_02_00102.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B02\B_02_00103.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B02\B_02_00104.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B02\B_02_00105.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B02\B_02_00106.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B02\B_02_00107.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B02\B_02_00108.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B02\B_02_00109.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B02\B_02_00110.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B02\B_02_00111.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B02\B_02_00201.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B02\B_02_00202.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B02\B_02_00203.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B02\B_02_00204.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B02\B_02_00301.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B02\B_02_00302.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B02\B_02_00401.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B02\B_02_00402.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B02\B_02_00501.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B02\B_02_00601.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B02\B_02_00602.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B02\B_02_00603.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B02\B_02_00604.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B02\B_02_00701.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B02\B_02_00801.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B02\B_02_00802.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B02\B_02_00901.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B02\B_02_00902.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B02\B_02_01001.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B03\B_03_00101.vb">
-      <SubType>Code</SubType>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B03\B_03_00102.vb">
-      <SubType>Code</SubType>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B03\B_03_00103.vb">
-      <SubType>Code</SubType>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B03\B_03_00201.vb">
-      <SubType>Code</SubType>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B03\B_03_00301.vb">
-      <SubType>Code</SubType>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B03\B_03_00302.vb">
-      <SubType>Code</SubType>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B03\B_03_00401.vb">
-      <SubType>Code</SubType>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B03\B_03_00501.vb">
-      <SubType>Code</SubType>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B03\B_03_00601.vb">
-      <SubType>Code</SubType>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B03\B_03_00701.vb">
-      <SubType>Code</SubType>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B03\B_03_00702.vb">
-      <SubType>Code</SubType>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B03\B_03_00801.vb">
-      <SubType>Code</SubType>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B03\B_03_00901.vb">
-      <SubType>Code</SubType>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B03\B_03_01001.vb">
-      <SubType>Code</SubType>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B03\B_03_01002.vb">
-      <SubType>Code</SubType>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B03\B_03_01101.vb">
-      <SubType>Code</SubType>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B08\B_08_00101.vb">
-      <SubType>Code</SubType>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B08\B_08_00201.vb">
-      <SubType>Code</SubType>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B08\B_08_00301.vb">
-      <SubType>Code</SubType>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Business\B08\B_08_00401.vb">
-      <SubType>Code</SubType>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00101.Designer.vb">
       <DependentUpon>M_01_00101.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00101.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00102.Designer.vb">
       <DependentUpon>M_01_00102.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00102.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00103.Designer.vb">
       <DependentUpon>M_01_00103.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00103.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00201.Designer.vb">
       <DependentUpon>M_01_00201.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00201.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00202.Designer.vb">
       <DependentUpon>M_01_00202.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00202.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00203.Designer.vb">
       <DependentUpon>M_01_00203.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00203.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00204.Designer.vb">
       <DependentUpon>M_01_00204.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00204.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00205.Designer.vb">
       <DependentUpon>M_01_00205.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00205.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00301.Designer.vb">
       <DependentUpon>M_01_00301.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00301.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00302.Designer.vb">
       <DependentUpon>M_01_00302.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00302.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00303.Designer.vb">
       <DependentUpon>M_01_00303.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00303.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00304.Designer.vb">
       <DependentUpon>M_01_00304.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00304.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00401.Designer.vb">
       <DependentUpon>M_01_00401.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00401.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00402.Designer.vb">
       <DependentUpon>M_01_00402.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00402.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00404.Designer.vb">
       <DependentUpon>M_01_00404.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00404.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00601.Designer.vb">
       <DependentUpon>M_01_00601.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00601.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00602.Designer.vb">
       <DependentUpon>M_01_00602.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00602.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00603.Designer.vb">
       <DependentUpon>M_01_00603.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00603.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00801.Designer.vb">
       <DependentUpon>M_01_00801.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00801.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00802.Designer.vb">
       <DependentUpon>M_01_00802.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00802.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00803.Designer.vb">
       <DependentUpon>M_01_00803.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00803.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00804.Designer.vb">
       <DependentUpon>M_01_00804.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00804.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00901.Designer.vb">
       <DependentUpon>M_01_00901.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00901.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00902.Designer.vb">
       <DependentUpon>M_01_00902.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00902.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M01\M_01_01001.Designer.vb">
       <DependentUpon>M_01_01001.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M01\M_01_01001.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M01\M_01_01002.Designer.vb">
       <DependentUpon>M_01_01002.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M01\M_01_01002.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M01\M_01_01003.Designer.vb">
       <DependentUpon>M_01_01003.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M01\M_01_01003.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00101.Designer.vb">
       <DependentUpon>M_02_00101.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00101.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00102.Designer.vb">
       <DependentUpon>M_02_00102.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00102.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00103.Designer.vb">
       <DependentUpon>M_02_00103.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00103.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00104.Designer.vb">
       <DependentUpon>M_02_00104.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00104.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00105.Designer.vb">
       <DependentUpon>M_02_00105.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00105.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00106.Designer.vb">
       <DependentUpon>M_02_00106.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00106.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00107.Designer.vb">
       <DependentUpon>M_02_00107.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00107.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00108.Designer.vb">
       <DependentUpon>M_02_00108.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00108.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00109.Designer.vb">
       <DependentUpon>M_02_00109.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00109.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00110.Designer.vb">
       <DependentUpon>M_02_00110.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00110.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00111.Designer.vb">
       <DependentUpon>M_02_00111.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00111.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00201.Designer.vb">
       <DependentUpon>M_02_00201.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00201.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00202.Designer.vb">
       <DependentUpon>M_02_00202.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00202.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00203.Designer.vb">
       <DependentUpon>M_02_00203.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00203.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00204.Designer.vb">
       <DependentUpon>M_02_00204.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00204.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00301.Designer.vb">
       <DependentUpon>M_02_00301.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00301.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00302.Designer.vb">
       <DependentUpon>M_02_00302.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00302.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00401.Designer.vb">
       <DependentUpon>M_02_00401.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00401.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00402.Designer.vb">
       <DependentUpon>M_02_00402.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00402.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00501.Designer.vb">
       <DependentUpon>M_02_00501.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00501.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00601.Designer.vb">
       <DependentUpon>M_02_00601.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00601.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00602.Designer.vb">
       <DependentUpon>M_02_00602.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00602.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00603.Designer.vb">
       <DependentUpon>M_02_00603.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00603.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00604.Designer.vb">
       <DependentUpon>M_02_00604.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00604.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00701.Designer.vb">
       <DependentUpon>M_02_00701.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00701.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00801.Designer.vb">
       <DependentUpon>M_02_00801.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00801.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00802.Designer.vb">
       <DependentUpon>M_02_00802.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00802.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00901.Designer.vb">
       <DependentUpon>M_02_00901.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00901.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00902.Designer.vb">
       <DependentUpon>M_02_00902.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00902.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M02\M_02_01001.Designer.vb">
       <DependentUpon>M_02_01001.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M02\M_02_01001.vb">
-      <SubType>Code</SubType>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manifest\M03\M_03_00101.Designer.vb">
+      <DependentUpon>M_03_00101.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M03\M_03_00101.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manifest\M03\M_03_00102.Designer.vb">
+      <DependentUpon>M_03_00102.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M03\M_03_00102.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manifest\M03\M_03_00103.Designer.vb">
+      <DependentUpon>M_03_00103.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M03\M_03_00103.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manifest\M03\M_03_00201.Designer.vb">
+      <DependentUpon>M_03_00201.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M03\M_03_00201.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manifest\M03\M_03_00301.Designer.vb">
+      <DependentUpon>M_03_00301.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M03\M_03_00301.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manifest\M03\M_03_00302.Designer.vb">
+      <DependentUpon>M_03_00302.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M03\M_03_00302.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manifest\M03\M_03_00401.Designer.vb">
+      <DependentUpon>M_03_00401.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M03\M_03_00401.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manifest\M03\M_03_00501.Designer.vb">
+      <DependentUpon>M_03_00501.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M03\M_03_00501.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manifest\M03\M_03_00601.Designer.vb">
+      <DependentUpon>M_03_00601.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M03\M_03_00601.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manifest\M03\M_03_00701.Designer.vb">
+      <DependentUpon>M_03_00701.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M03\M_03_00701.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manifest\M03\M_03_00702.Designer.vb">
+      <DependentUpon>M_03_00702.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M03\M_03_00702.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manifest\M03\M_03_00801.Designer.vb">
+      <DependentUpon>M_03_00801.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M03\M_03_00801.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manifest\M03\M_03_00901.Designer.vb">
+      <DependentUpon>M_03_00901.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M03\M_03_00901.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manifest\M03\M_03_01001.Designer.vb">
+      <DependentUpon>M_03_01001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M03\M_03_01001.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manifest\M03\M_03_01002.Designer.vb">
+      <DependentUpon>M_03_01002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M03\M_03_01002.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manifest\M03\M_03_01101.Designer.vb">
+      <DependentUpon>M_03_01101.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M03\M_03_01101.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manifest\M08\M_08_00101.Designer.vb">
+      <DependentUpon>M_08_00101.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M08\M_08_00101.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manifest\M08\M_08_00201.Designer.vb">
+      <DependentUpon>M_08_00201.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M08\M_08_00201.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manifest\M08\M_08_00301.Designer.vb">
+      <DependentUpon>M_08_00301.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M08\M_08_00301.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manifest\M08\M_08_00401.Designer.vb">
+      <DependentUpon>M_08_00401.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M08\M_08_00401.vb">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -1171,6 +1352,154 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Manifest\M02\M_02_00902.resx">
       <DependentUpon>M_02_00902.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M03\M_03_00101.en.resx">
+      <DependentUpon>M_03_00101.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M03\M_03_00101.resx">
+      <DependentUpon>M_03_00101.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M03\M_03_00102.en.resx">
+      <DependentUpon>M_03_00102.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M03\M_03_00102.resx">
+      <DependentUpon>M_03_00102.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M03\M_03_00103.en.resx">
+      <DependentUpon>M_03_00103.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M03\M_03_00103.resx">
+      <DependentUpon>M_03_00103.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M03\M_03_00201.en.resx">
+      <DependentUpon>M_03_00201.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M03\M_03_00201.resx">
+      <DependentUpon>M_03_00201.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M03\M_03_00301.en.resx">
+      <DependentUpon>M_03_00301.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M03\M_03_00301.resx">
+      <DependentUpon>M_03_00301.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M03\M_03_00302.en.resx">
+      <DependentUpon>M_03_00302.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M03\M_03_00302.resx">
+      <DependentUpon>M_03_00302.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M03\M_03_00401.en.resx">
+      <DependentUpon>M_03_00401.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M03\M_03_00401.resx">
+      <DependentUpon>M_03_00401.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M03\M_03_00501.en.resx">
+      <DependentUpon>M_03_00501.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M03\M_03_00501.resx">
+      <DependentUpon>M_03_00501.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M03\M_03_00601.en.resx">
+      <DependentUpon>M_03_00601.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M03\M_03_00601.resx">
+      <DependentUpon>M_03_00601.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M03\M_03_00701.en.resx">
+      <DependentUpon>M_03_00701.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M03\M_03_00701.resx">
+      <DependentUpon>M_03_00701.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M03\M_03_00702.en.resx">
+      <DependentUpon>M_03_00702.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M03\M_03_00702.resx">
+      <DependentUpon>M_03_00702.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M03\M_03_00801.en.resx">
+      <DependentUpon>M_03_00801.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M03\M_03_00801.resx">
+      <DependentUpon>M_03_00801.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M03\M_03_00901.en.resx">
+      <DependentUpon>M_03_00901.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M03\M_03_00901.resx">
+      <DependentUpon>M_03_00901.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M03\M_03_01001.en.resx">
+      <DependentUpon>M_03_01001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M03\M_03_01001.resx">
+      <DependentUpon>M_03_01001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M03\M_03_01002.resx">
+      <DependentUpon>M_03_01002.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M03\M_03_01101.resx">
+      <DependentUpon>M_03_01101.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M08\M_08_00101.en.resx">
+      <DependentUpon>M_08_00101.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M08\M_08_00101.resx">
+      <DependentUpon>M_08_00101.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M08\M_08_00201.resx">
+      <DependentUpon>M_08_00201.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M08\M_08_00301.en.resx">
+      <DependentUpon>M_08_00301.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M08\M_08_00301.resx">
+      <DependentUpon>M_08_00301.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M08\M_08_00401.en.resx">
+      <DependentUpon>M_08_00401.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M08\M_08_00401.resx">
+      <DependentUpon>M_08_00401.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
