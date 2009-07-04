@@ -279,6 +279,66 @@
     </Compile>
     <Compile Include="Business\B02\B_02_01001.vb">
     </Compile>
+    <Compile Include="Business\B03\B_03_00101.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\B03\B_03_00102.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\B03\B_03_00103.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\B03\B_03_00201.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\B03\B_03_00301.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\B03\B_03_00302.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\B03\B_03_00401.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\B03\B_03_00501.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\B03\B_03_00601.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\B03\B_03_00701.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\B03\B_03_00702.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\B03\B_03_00801.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\B03\B_03_00901.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\B03\B_03_01001.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\B03\B_03_01002.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\B03\B_03_01101.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\B08\B_08_00101.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\B08\B_08_00201.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\B08\B_08_00301.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\B08\B_08_00401.vb">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -404,6 +464,8 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Resources\Config\MultiLanguage.config" />
+    <None Include="bin\Resources\Config\Softland My PosLayout.config" />
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
