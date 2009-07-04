@@ -501,6 +501,186 @@
     <Compile Include="Manifest\M01\M_01_01003.vb">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Manifest\M02\M_02_00101.Designer.vb">
+      <DependentUpon>M_02_00101.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00101.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00102.Designer.vb">
+      <DependentUpon>M_02_00102.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00102.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00103.Designer.vb">
+      <DependentUpon>M_02_00103.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00103.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00104.Designer.vb">
+      <DependentUpon>M_02_00104.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00104.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00105.Designer.vb">
+      <DependentUpon>M_02_00105.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00105.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00106.Designer.vb">
+      <DependentUpon>M_02_00106.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00106.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00107.Designer.vb">
+      <DependentUpon>M_02_00107.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00107.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00108.Designer.vb">
+      <DependentUpon>M_02_00108.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00108.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00109.Designer.vb">
+      <DependentUpon>M_02_00109.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00109.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00110.Designer.vb">
+      <DependentUpon>M_02_00110.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00110.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00111.Designer.vb">
+      <DependentUpon>M_02_00111.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00111.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00201.Designer.vb">
+      <DependentUpon>M_02_00201.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00201.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00202.Designer.vb">
+      <DependentUpon>M_02_00202.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00202.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00203.Designer.vb">
+      <DependentUpon>M_02_00203.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00203.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00204.Designer.vb">
+      <DependentUpon>M_02_00204.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00204.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00301.Designer.vb">
+      <DependentUpon>M_02_00301.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00301.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00302.Designer.vb">
+      <DependentUpon>M_02_00302.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00302.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00401.Designer.vb">
+      <DependentUpon>M_02_00401.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00401.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00402.Designer.vb">
+      <DependentUpon>M_02_00402.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00402.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00501.Designer.vb">
+      <DependentUpon>M_02_00501.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00501.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00601.Designer.vb">
+      <DependentUpon>M_02_00601.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00601.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00602.Designer.vb">
+      <DependentUpon>M_02_00602.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00602.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00603.Designer.vb">
+      <DependentUpon>M_02_00603.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00603.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00604.Designer.vb">
+      <DependentUpon>M_02_00604.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00604.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00701.Designer.vb">
+      <DependentUpon>M_02_00701.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00701.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00801.Designer.vb">
+      <DependentUpon>M_02_00801.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00801.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00802.Designer.vb">
+      <DependentUpon>M_02_00802.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00802.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00901.Designer.vb">
+      <DependentUpon>M_02_00901.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00901.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00902.Designer.vb">
+      <DependentUpon>M_02_00902.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_00902.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_01001.Designer.vb">
+      <DependentUpon>M_02_01001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_01001.vb">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -780,6 +960,218 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Manifest\M01\M_01_01003.resx">
       <DependentUpon>M_01_01003.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00101.en.resx">
+      <DependentUpon>M_02_00101.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00101.resx">
+      <DependentUpon>M_02_00101.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00102.en.resx">
+      <DependentUpon>M_02_00102.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00102.resx">
+      <DependentUpon>M_02_00102.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00103.en.resx">
+      <DependentUpon>M_02_00103.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00103.resx">
+      <DependentUpon>M_02_00103.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00104.en.resx">
+      <DependentUpon>M_02_00104.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00104.resx">
+      <DependentUpon>M_02_00104.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00105.en.resx">
+      <DependentUpon>M_02_00105.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00105.resx">
+      <DependentUpon>M_02_00105.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00106.en.resx">
+      <DependentUpon>M_02_00106.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00106.resx">
+      <DependentUpon>M_02_00106.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00107.en.resx">
+      <DependentUpon>M_02_00107.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00107.resx">
+      <DependentUpon>M_02_00107.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00108.en.resx">
+      <DependentUpon>M_02_00108.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00108.resx">
+      <DependentUpon>M_02_00108.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00109.en.resx">
+      <DependentUpon>M_02_00109.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00109.resx">
+      <DependentUpon>M_02_00109.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00110.en.resx">
+      <DependentUpon>M_02_00110.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00110.resx">
+      <DependentUpon>M_02_00110.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00111.en.resx">
+      <DependentUpon>M_02_00111.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00111.resx">
+      <DependentUpon>M_02_00111.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00201.en.resx">
+      <DependentUpon>M_02_00201.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00201.resx">
+      <DependentUpon>M_02_00201.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00202.en.resx">
+      <DependentUpon>M_02_00202.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00202.resx">
+      <DependentUpon>M_02_00202.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00203.en.resx">
+      <DependentUpon>M_02_00203.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00203.resx">
+      <DependentUpon>M_02_00203.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00204.en.resx">
+      <DependentUpon>M_02_00204.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00204.resx">
+      <DependentUpon>M_02_00204.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00301.en.resx">
+      <DependentUpon>M_02_00301.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00301.resx">
+      <DependentUpon>M_02_00301.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00302.en.resx">
+      <DependentUpon>M_02_00302.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00302.resx">
+      <DependentUpon>M_02_00302.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00401.en.resx">
+      <DependentUpon>M_02_00401.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00401.resx">
+      <DependentUpon>M_02_00401.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00402.en.resx">
+      <DependentUpon>M_02_00402.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00402.resx">
+      <DependentUpon>M_02_00402.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00501.en.resx">
+      <DependentUpon>M_02_00501.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00501.resx">
+      <DependentUpon>M_02_00501.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00601.en.resx">
+      <DependentUpon>M_02_00601.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00601.resx">
+      <DependentUpon>M_02_00601.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00602.en.resx">
+      <DependentUpon>M_02_00602.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00602.resx">
+      <DependentUpon>M_02_00602.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00603.en.resx">
+      <DependentUpon>M_02_00603.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00603.resx">
+      <DependentUpon>M_02_00603.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00604.en.resx">
+      <DependentUpon>M_02_00604.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00604.resx">
+      <DependentUpon>M_02_00604.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00701.resx">
+      <DependentUpon>M_02_00701.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00801.resx">
+      <DependentUpon>M_02_00801.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00802.resx">
+      <DependentUpon>M_02_00802.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00901.resx">
+      <DependentUpon>M_02_00901.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_00902.resx">
+      <DependentUpon>M_02_00902.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
