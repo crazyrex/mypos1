@@ -1,0 +1,3192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="DefaultLookAndFeel_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>294, 0</value>
+  </metadata>
+  <metadata name="Timer_Surveillant.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>141, 0</value>
+  </metadata>
+  <metadata name="ToolStrip_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ToolStripButton_Save.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 22</value>
+  </data>
+  <data name="ToolStripButton_Save.Text" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 22</value>
+  </data>
+  <data name="ToolStripButton_Close.Text" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="ToolStrip_Form.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="ToolStrip_Form.Size" type="System.Drawing.Size, System.Drawing">
+    <value>605, 25</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ToolStrip_Form.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
+  </data>
+  <data name="&gt;&gt;ToolStrip_Form.Name" xml:space="preserve">
+    <value>ToolStrip_Form</value>
+  </data>
+  <data name="&gt;&gt;ToolStrip_Form.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStrip_Form.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ToolStrip_Form.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="TextEdit_ClientAttr4.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ClientAttr4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>254, 114</value>
+  </data>
+  <data name="TextEdit_ClientAttr4.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ClientAttr4.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ClientAttr4.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ClientAttr4.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ClientAttr4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 21</value>
+  </data>
+  <data name="TextEdit_ClientAttr4.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ClientAttr4.Name" xml:space="preserve">
+    <value>TextEdit_ClientAttr4</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ClientAttr4.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ClientAttr4.Parent" xml:space="preserve">
+    <value>GroupControl5</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ClientAttr4.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="CheckEdit_ClientAttr4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 114</value>
+  </data>
+  <data name="CheckEdit_ClientAttr4.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckEdit_ClientAttr4.Properties.Caption" xml:space="preserve">
+    <value>自定属性4</value>
+  </data>
+  <data name="CheckEdit_ClientAttr4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 19</value>
+  </data>
+  <data name="CheckEdit_ClientAttr4.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ClientAttr4.Name" xml:space="preserve">
+    <value>CheckEdit_ClientAttr4</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ClientAttr4.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ClientAttr4.Parent" xml:space="preserve">
+    <value>GroupControl5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ClientAttr4.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="TextEdit_ClientAttr3.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ClientAttr3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>254, 87</value>
+  </data>
+  <data name="TextEdit_ClientAttr3.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ClientAttr3.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ClientAttr3.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ClientAttr3.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ClientAttr3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 21</value>
+  </data>
+  <data name="TextEdit_ClientAttr3.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ClientAttr3.Name" xml:space="preserve">
+    <value>TextEdit_ClientAttr3</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ClientAttr3.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ClientAttr3.Parent" xml:space="preserve">
+    <value>GroupControl5</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ClientAttr3.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="CheckEdit_ClientAttr3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 87</value>
+  </data>
+  <data name="CheckEdit_ClientAttr3.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckEdit_ClientAttr3.Properties.Caption" xml:space="preserve">
+    <value>自定属性3</value>
+  </data>
+  <data name="CheckEdit_ClientAttr3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 19</value>
+  </data>
+  <data name="CheckEdit_ClientAttr3.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ClientAttr3.Name" xml:space="preserve">
+    <value>CheckEdit_ClientAttr3</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ClientAttr3.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ClientAttr3.Parent" xml:space="preserve">
+    <value>GroupControl5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ClientAttr3.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="TextEdit_ClientAttr2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ClientAttr2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>254, 60</value>
+  </data>
+  <data name="TextEdit_ClientAttr2.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ClientAttr2.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ClientAttr2.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ClientAttr2.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ClientAttr2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 21</value>
+  </data>
+  <data name="TextEdit_ClientAttr2.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ClientAttr2.Name" xml:space="preserve">
+    <value>TextEdit_ClientAttr2</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ClientAttr2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ClientAttr2.Parent" xml:space="preserve">
+    <value>GroupControl5</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ClientAttr2.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="CheckEdit_ClientAttr2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 60</value>
+  </data>
+  <data name="CheckEdit_ClientAttr2.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckEdit_ClientAttr2.Properties.Caption" xml:space="preserve">
+    <value>自定属性2</value>
+  </data>
+  <data name="CheckEdit_ClientAttr2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 19</value>
+  </data>
+  <data name="CheckEdit_ClientAttr2.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ClientAttr2.Name" xml:space="preserve">
+    <value>CheckEdit_ClientAttr2</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ClientAttr2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ClientAttr2.Parent" xml:space="preserve">
+    <value>GroupControl5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ClientAttr2.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="TextEdit_ClientAttr1.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ClientAttr1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>254, 33</value>
+  </data>
+  <data name="TextEdit_ClientAttr1.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ClientAttr1.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ClientAttr1.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ClientAttr1.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ClientAttr1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 21</value>
+  </data>
+  <data name="TextEdit_ClientAttr1.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ClientAttr1.Name" xml:space="preserve">
+    <value>TextEdit_ClientAttr1</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ClientAttr1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ClientAttr1.Parent" xml:space="preserve">
+    <value>GroupControl5</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ClientAttr1.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="CheckEdit_ClientAttr1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 33</value>
+  </data>
+  <data name="CheckEdit_ClientAttr1.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckEdit_ClientAttr1.Properties.Caption" xml:space="preserve">
+    <value>自定属性1</value>
+  </data>
+  <data name="CheckEdit_ClientAttr1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 19</value>
+  </data>
+  <data name="CheckEdit_ClientAttr1.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ClientAttr1.Name" xml:space="preserve">
+    <value>CheckEdit_ClientAttr1</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ClientAttr1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ClientAttr1.Parent" xml:space="preserve">
+    <value>GroupControl5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ClientAttr1.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="TextEdit_ClientAttr6.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ClientAttr6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>254, 168</value>
+  </data>
+  <data name="TextEdit_ClientAttr6.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ClientAttr6.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ClientAttr6.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ClientAttr6.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ClientAttr6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 21</value>
+  </data>
+  <data name="TextEdit_ClientAttr6.TabIndex" type="System.Int32, mscorlib">
+    <value>10003</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ClientAttr6.Name" xml:space="preserve">
+    <value>TextEdit_ClientAttr6</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ClientAttr6.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ClientAttr6.Parent" xml:space="preserve">
+    <value>GroupControl5</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ClientAttr6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="CheckEdit_ClientAttr6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 168</value>
+  </data>
+  <data name="CheckEdit_ClientAttr6.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckEdit_ClientAttr6.Properties.Caption" xml:space="preserve">
+    <value>自定属性6</value>
+  </data>
+  <data name="CheckEdit_ClientAttr6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 19</value>
+  </data>
+  <data name="CheckEdit_ClientAttr6.TabIndex" type="System.Int32, mscorlib">
+    <value>10004</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ClientAttr6.Name" xml:space="preserve">
+    <value>CheckEdit_ClientAttr6</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ClientAttr6.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ClientAttr6.Parent" xml:space="preserve">
+    <value>GroupControl5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ClientAttr6.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="TextEdit_ClientAttr5.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ClientAttr5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>254, 141</value>
+  </data>
+  <data name="TextEdit_ClientAttr5.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ClientAttr5.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ClientAttr5.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ClientAttr5.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ClientAttr5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 21</value>
+  </data>
+  <data name="TextEdit_ClientAttr5.TabIndex" type="System.Int32, mscorlib">
+    <value>10001</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ClientAttr5.Name" xml:space="preserve">
+    <value>TextEdit_ClientAttr5</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ClientAttr5.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ClientAttr5.Parent" xml:space="preserve">
+    <value>GroupControl5</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ClientAttr5.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="CheckEdit_ClientAttr5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 141</value>
+  </data>
+  <data name="CheckEdit_ClientAttr5.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckEdit_ClientAttr5.Properties.Caption" xml:space="preserve">
+    <value>自定属性5</value>
+  </data>
+  <data name="CheckEdit_ClientAttr5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 19</value>
+  </data>
+  <data name="CheckEdit_ClientAttr5.TabIndex" type="System.Int32, mscorlib">
+    <value>10002</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ClientAttr5.Name" xml:space="preserve">
+    <value>CheckEdit_ClientAttr5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ClientAttr5.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ClientAttr5.Parent" xml:space="preserve">
+    <value>GroupControl5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ClientAttr5.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="Label15.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label15.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="Label15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>85, 28</value>
+  </data>
+  <data name="Label15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 15</value>
+  </data>
+  <data name="Label15.TabIndex" type="System.Int32, mscorlib">
+    <value>10003</value>
+  </data>
+  <data name="Label15.Text" xml:space="preserve">
+    <value>+货号</value>
+  </data>
+  <data name="&gt;&gt;Label15.Name" xml:space="preserve">
+    <value>Label15</value>
+  </data>
+  <data name="&gt;&gt;Label15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label15.Parent" xml:space="preserve">
+    <value>GroupControl7</value>
+  </data>
+  <data name="&gt;&gt;Label15.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="Label16.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label16.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9pt</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Label16.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>219, 27</value>
+  </data>
+  <data name="Label16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 14</value>
+  </data>
+  <data name="Label16.TabIndex" type="System.Int32, mscorlib">
+    <value>10003</value>
+  </data>
+  <data name="Label16.Text" xml:space="preserve">
+    <value>+</value>
+  </data>
+  <data name="&gt;&gt;Label16.Name" xml:space="preserve">
+    <value>Label16</value>
+  </data>
+  <data name="&gt;&gt;Label16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label16.Parent" xml:space="preserve">
+    <value>GroupControl7</value>
+  </data>
+  <data name="&gt;&gt;Label16.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="Label17.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label17.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="Label17.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label17.Location" type="System.Drawing.Point, System.Drawing">
+    <value>273, 27</value>
+  </data>
+  <data name="Label17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 15</value>
+  </data>
+  <data name="Label17.TabIndex" type="System.Int32, mscorlib">
+    <value>10003</value>
+  </data>
+  <data name="Label17.Text" xml:space="preserve">
+    <value>位流水号</value>
+  </data>
+  <data name="&gt;&gt;Label17.Name" xml:space="preserve">
+    <value>Label17</value>
+  </data>
+  <data name="&gt;&gt;Label17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label17.Parent" xml:space="preserve">
+    <value>GroupControl7</value>
+  </data>
+  <data name="&gt;&gt;Label17.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Label18.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label18.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="Label18.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label18.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 31</value>
+  </data>
+  <data name="Label18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 15</value>
+  </data>
+  <data name="Label18.TabIndex" type="System.Int32, mscorlib">
+    <value>10003</value>
+  </data>
+  <data name="Label18.Text" xml:space="preserve">
+    <value>前缀</value>
+  </data>
+  <data name="&gt;&gt;Label18.Name" xml:space="preserve">
+    <value>Label18</value>
+  </data>
+  <data name="&gt;&gt;Label18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label18.Parent" xml:space="preserve">
+    <value>GroupControl7</value>
+  </data>
+  <data name="&gt;&gt;Label18.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="CheckEdit_OperationLimitedHere.Location" type="System.Drawing.Point, System.Drawing">
+    <value>273, 31</value>
+  </data>
+  <data name="CheckEdit_OperationLimitedHere.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckEdit_OperationLimitedHere.Properties.Caption" xml:space="preserve">
+    <value>操作限于此处</value>
+  </data>
+  <data name="CheckEdit_OperationLimitedHere.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 19</value>
+  </data>
+  <data name="CheckEdit_OperationLimitedHere.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_OperationLimitedHere.Name" xml:space="preserve">
+    <value>CheckEdit_OperationLimitedHere</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_OperationLimitedHere.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_OperationLimitedHere.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_OperationLimitedHere.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="TextEdit_ServiceTel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>354, 150</value>
+  </data>
+  <data name="TextEdit_ServiceTel.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ServiceTel.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ServiceTel.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ServiceTel.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ServiceTel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 21</value>
+  </data>
+  <data name="TextEdit_ServiceTel.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ServiceTel.Name" xml:space="preserve">
+    <value>TextEdit_ServiceTel</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ServiceTel.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ServiceTel.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ServiceTel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="TextEdit_CompanyAddress.Location" type="System.Drawing.Point, System.Drawing">
+    <value>80, 176</value>
+  </data>
+  <data name="TextEdit_CompanyAddress.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_CompanyAddress.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_CompanyAddress.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_CompanyAddress.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_CompanyAddress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>444, 21</value>
+  </data>
+  <data name="TextEdit_CompanyAddress.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_CompanyAddress.Name" xml:space="preserve">
+    <value>TextEdit_CompanyAddress</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_CompanyAddress.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_CompanyAddress.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_CompanyAddress.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="TextEdit_CompanyTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>80, 150</value>
+  </data>
+  <data name="TextEdit_CompanyTitle.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_CompanyTitle.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_CompanyTitle.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_CompanyTitle.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_CompanyTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 21</value>
+  </data>
+  <data name="TextEdit_CompanyTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_CompanyTitle.Name" xml:space="preserve">
+    <value>TextEdit_CompanyTitle</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_CompanyTitle.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_CompanyTitle.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_CompanyTitle.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="Label13.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label13.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>291, 153</value>
+  </data>
+  <data name="Label13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 15</value>
+  </data>
+  <data name="Label13.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="Label13.Text" xml:space="preserve">
+    <value>热线电话</value>
+  </data>
+  <data name="&gt;&gt;Label13.Name" xml:space="preserve">
+    <value>Label13</value>
+  </data>
+  <data name="&gt;&gt;Label13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label13.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;Label13.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Label14.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label14.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 179</value>
+  </data>
+  <data name="Label14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 15</value>
+  </data>
+  <data name="Label14.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="Label14.Text" xml:space="preserve">
+    <value>公司地址</value>
+  </data>
+  <data name="&gt;&gt;Label14.Name" xml:space="preserve">
+    <value>Label14</value>
+  </data>
+  <data name="&gt;&gt;Label14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label14.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;Label14.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="TextEdit_MobileSmapPath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>284, 92</value>
+  </data>
+  <data name="TextEdit_MobileSmapPath.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_MobileSmapPath.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_MobileSmapPath.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_MobileSmapPath.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_MobileSmapPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 21</value>
+  </data>
+  <data name="TextEdit_MobileSmapPath.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_MobileSmapPath.Name" xml:space="preserve">
+    <value>TextEdit_MobileSmapPath</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_MobileSmapPath.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_MobileSmapPath.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_MobileSmapPath.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="Label12.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 153</value>
+  </data>
+  <data name="Label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 15</value>
+  </data>
+  <data name="Label12.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="Label12.Text" xml:space="preserve">
+    <value>公司简称
+</value>
+  </data>
+  <data name="&gt;&gt;Label12.Name" xml:space="preserve">
+    <value>Label12</value>
+  </data>
+  <data name="&gt;&gt;Label12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label12.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;Label12.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>223, 95</value>
+  </data>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 15</value>
+  </data>
+  <data name="Label2.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>交互路径</value>
+  </data>
+  <data name="&gt;&gt;Label2.Name" xml:space="preserve">
+    <value>Label2</value>
+  </data>
+  <data name="&gt;&gt;Label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="CheckEdit_KeepOrigionWareCodeToRemark.Location" type="System.Drawing.Point, System.Drawing">
+    <value>222, 71</value>
+  </data>
+  <data name="CheckEdit_KeepOrigionWareCodeToRemark.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckEdit_KeepOrigionWareCodeToRemark.Properties.Caption" xml:space="preserve">
+    <value>保留货号</value>
+  </data>
+  <data name="CheckEdit_KeepOrigionWareCodeToRemark.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 19</value>
+  </data>
+  <data name="CheckEdit_KeepOrigionWareCodeToRemark.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_KeepOrigionWareCodeToRemark.Name" xml:space="preserve">
+    <value>CheckEdit_KeepOrigionWareCodeToRemark</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_KeepOrigionWareCodeToRemark.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_KeepOrigionWareCodeToRemark.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_KeepOrigionWareCodeToRemark.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="SimpleButton_SaveMobileWareList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 92</value>
+  </data>
+  <data name="SimpleButton_SaveMobileWareList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 23</value>
+  </data>
+  <data name="SimpleButton_SaveMobileWareList.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="SimpleButton_SaveMobileWareList.Text" xml:space="preserve">
+    <value>货品信息至移动设备</value>
+  </data>
+  <data name="&gt;&gt;SimpleButton_SaveMobileWareList.Name" xml:space="preserve">
+    <value>SimpleButton_SaveMobileWareList</value>
+  </data>
+  <data name="&gt;&gt;SimpleButton_SaveMobileWareList.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;SimpleButton_SaveMobileWareList.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;SimpleButton_SaveMobileWareList.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="SimpleButton_SaveMobilePosLocationList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 117</value>
+  </data>
+  <data name="SimpleButton_SaveMobilePosLocationList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 23</value>
+  </data>
+  <data name="SimpleButton_SaveMobilePosLocationList.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="SimpleButton_SaveMobilePosLocationList.Text" xml:space="preserve">
+    <value>储位信息至移动设备</value>
+  </data>
+  <data name="&gt;&gt;SimpleButton_SaveMobilePosLocationList.Name" xml:space="preserve">
+    <value>SimpleButton_SaveMobilePosLocationList</value>
+  </data>
+  <data name="&gt;&gt;SimpleButton_SaveMobilePosLocationList.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;SimpleButton_SaveMobilePosLocationList.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;SimpleButton_SaveMobilePosLocationList.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="SimpleButton_AutomateWareCodes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 67</value>
+  </data>
+  <data name="SimpleButton_AutomateWareCodes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 23</value>
+  </data>
+  <data name="SimpleButton_AutomateWareCodes.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="SimpleButton_AutomateWareCodes.Text" xml:space="preserve">
+    <value>条码编号</value>
+  </data>
+  <data name="&gt;&gt;SimpleButton_AutomateWareCodes.Name" xml:space="preserve">
+    <value>SimpleButton_AutomateWareCodes</value>
+  </data>
+  <data name="&gt;&gt;SimpleButton_AutomateWareCodes.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;SimpleButton_AutomateWareCodes.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;SimpleButton_AutomateWareCodes.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="LookUpEdit_CurrentPOS.Location" type="System.Drawing.Point, System.Drawing">
+    <value>80, 29</value>
+  </data>
+  <data name="LookUpEdit_CurrentPOS.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v8.1" name="DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
+  <data name="LookUpEdit_CurrentPOS.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
+  </data>
+  <data name="LookUpEdit_CurrentPOS.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="LookUpEdit_CurrentPOS.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="LookUpEdit_CurrentPOS.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="LookUpEdit_CurrentPOS.Size" type="System.Drawing.Size, System.Drawing">
+    <value>187, 21</value>
+  </data>
+  <data name="LookUpEdit_CurrentPOS.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;LookUpEdit_CurrentPOS.Name" xml:space="preserve">
+    <value>LookUpEdit_CurrentPOS</value>
+  </data>
+  <data name="&gt;&gt;LookUpEdit_CurrentPOS.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;LookUpEdit_CurrentPOS.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;LookUpEdit_CurrentPOS.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 32</value>
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 15</value>
+  </data>
+  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>当前地点</value>
+  </data>
+  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
+    <value>Label1</value>
+  </data>
+  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="GroupControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="GroupControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 25</value>
+  </data>
+  <data name="GroupControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>605, 205</value>
+  </data>
+  <data name="GroupControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
+  </data>
+  <data name="GroupControl1.Text" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="&gt;&gt;GroupControl1.Name" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;GroupControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;GroupControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;GroupControl1.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="TextEdit_PractWareCodePrefix.Location" type="System.Drawing.Point, System.Drawing">
+    <value>42, 24</value>
+  </data>
+  <data name="TextEdit_PractWareCodePrefix.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 20</value>
+  </data>
+  <data name="TextEdit_PractWareCodePrefix.TabIndex" type="System.Int32, mscorlib">
+    <value>10007</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_PractWareCodePrefix.Name" xml:space="preserve">
+    <value>TextEdit_PractWareCodePrefix</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_PractWareCodePrefix.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_PractWareCodePrefix.Parent" xml:space="preserve">
+    <value>GroupControl7</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_PractWareCodePrefix.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="CheckEdit_PractWareCodeHasDay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>178, 25</value>
+  </data>
+  <data name="CheckEdit_PractWareCodeHasDay.Properties.Caption" xml:space="preserve">
+    <value>+日</value>
+  </data>
+  <data name="CheckEdit_PractWareCodeHasDay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 19</value>
+  </data>
+  <data name="CheckEdit_PractWareCodeHasDay.TabIndex" type="System.Int32, mscorlib">
+    <value>10005</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_PractWareCodeHasDay.Name" xml:space="preserve">
+    <value>CheckEdit_PractWareCodeHasDay</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_PractWareCodeHasDay.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_PractWareCodeHasDay.Parent" xml:space="preserve">
+    <value>GroupControl7</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_PractWareCodeHasDay.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CheckEdit_PractWareCodeHasYearMonth.Location" type="System.Drawing.Point, System.Drawing">
+    <value>122, 25</value>
+  </data>
+  <data name="CheckEdit_PractWareCodeHasYearMonth.Properties.Caption" xml:space="preserve">
+    <value>+年月</value>
+  </data>
+  <data name="CheckEdit_PractWareCodeHasYearMonth.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 19</value>
+  </data>
+  <data name="CheckEdit_PractWareCodeHasYearMonth.TabIndex" type="System.Int32, mscorlib">
+    <value>10006</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_PractWareCodeHasYearMonth.Name" xml:space="preserve">
+    <value>CheckEdit_PractWareCodeHasYearMonth</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_PractWareCodeHasYearMonth.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_PractWareCodeHasYearMonth.Parent" xml:space="preserve">
+    <value>GroupControl7</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_PractWareCodeHasYearMonth.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="SpinEdit_PractWareCodeDigitLength.EditValue" type="System.Decimal, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="SpinEdit_PractWareCodeDigitLength.Location" type="System.Drawing.Point, System.Drawing">
+    <value>231, 25</value>
+  </data>
+  <data name="SpinEdit_PractWareCodeDigitLength.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 20</value>
+  </data>
+  <data name="SpinEdit_PractWareCodeDigitLength.TabIndex" type="System.Int32, mscorlib">
+    <value>10004</value>
+  </data>
+  <data name="&gt;&gt;SpinEdit_PractWareCodeDigitLength.Name" xml:space="preserve">
+    <value>SpinEdit_PractWareCodeDigitLength</value>
+  </data>
+  <data name="&gt;&gt;SpinEdit_PractWareCodeDigitLength.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;SpinEdit_PractWareCodeDigitLength.Parent" xml:space="preserve">
+    <value>GroupControl7</value>
+  </data>
+  <data name="&gt;&gt;SpinEdit_PractWareCodeDigitLength.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="GroupControl7.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="GroupControl7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 152</value>
+  </data>
+  <data name="GroupControl7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>601, 49</value>
+  </data>
+  <data name="GroupControl7.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="GroupControl7.Text" xml:space="preserve">
+    <value>实际货品自动编号</value>
+  </data>
+  <data name="&gt;&gt;GroupControl7.Name" xml:space="preserve">
+    <value>GroupControl7</value>
+  </data>
+  <data name="&gt;&gt;GroupControl7.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;GroupControl7.Parent" xml:space="preserve">
+    <value>GroupControl2</value>
+  </data>
+  <data name="&gt;&gt;GroupControl7.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GridControl_RecipientTypeBarcode.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="GridControl_RecipientTypeBarcode.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="GridControl_RecipientTypeBarcode.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="GridControl_RecipientTypeBarcode.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <assembly alias="DevExpress.XtraEditors.v8.1" name="DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
+  <data name="GridControl_RecipientTypeBarcode.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v8.1">
+    <value>None</value>
+  </data>
+  <data name="GridControl_RecipientTypeBarcode.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v8.1">
+    <value>Application</value>
+  </data>
+  <data name="GridControl_RecipientTypeBarcode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 20</value>
+  </data>
+  <data name="GridColumn_RecipientType.Caption" xml:space="preserve">
+    <value>包装类型</value>
+  </data>
+  <data name="RepositoryItemLookUpEdit_RecipientType.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RepositoryItemLookUpEdit_RecipientType.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
+  </data>
+  <data name="RepositoryItemLookUpEdit_RecipientType.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RepositoryItemLookUpEdit_RecipientType.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RepositoryItemLookUpEdit_RecipientType.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="GridColumn_RecipientType.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn_RecipientType.VisibleIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="GridColumn_RecipientType.Width" type="System.Int32, mscorlib">
+    <value>99</value>
+  </data>
+  <data name="GridColumn_RecipientTypeValue.Caption" xml:space="preserve">
+    <value>包装类型值</value>
+  </data>
+  <data name="GridColumn_RecipientTypeValue.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn_RecipientTypeValue.VisibleIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="GridColumn_BarcodePrefix.Caption" xml:space="preserve">
+    <value>条码前缀</value>
+  </data>
+  <data name="RepositoryItemTextEdit_BarcodePrefix.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RepositoryItemTextEdit_BarcodePrefix.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RepositoryItemTextEdit_BarcodePrefix.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RepositoryItemTextEdit_BarcodePrefix.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="GridColumn_BarcodePrefix.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn_BarcodePrefix.VisibleIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="GridControl_RecipientTypeBarcode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>597, 115</value>
+  </data>
+  <data name="GridControl_RecipientTypeBarcode.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;GridControl_RecipientTypeBarcode.Name" xml:space="preserve">
+    <value>GridControl_RecipientTypeBarcode</value>
+  </data>
+  <data name="&gt;&gt;GridControl_RecipientTypeBarcode.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;GridControl_RecipientTypeBarcode.Parent" xml:space="preserve">
+    <value>GroupControl3</value>
+  </data>
+  <data name="&gt;&gt;GridControl_RecipientTypeBarcode.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GroupControl3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="GroupControl3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 201</value>
+  </data>
+  <data name="GroupControl3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>601, 137</value>
+  </data>
+  <data name="GroupControl3.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="GroupControl3.Text" xml:space="preserve">
+    <value>包装号前缀</value>
+  </data>
+  <data name="&gt;&gt;GroupControl3.Name" xml:space="preserve">
+    <value>GroupControl3</value>
+  </data>
+  <data name="&gt;&gt;GroupControl3.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;GroupControl3.Parent" xml:space="preserve">
+    <value>GroupControl2</value>
+  </data>
+  <data name="&gt;&gt;GroupControl3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="TextEdit_ClientCodePrefix.Location" type="System.Drawing.Point, System.Drawing">
+    <value>462, 56</value>
+  </data>
+  <data name="TextEdit_ClientCodePrefix.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ClientCodePrefix.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ClientCodePrefix.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ClientCodePrefix.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ClientCodePrefix.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 21</value>
+  </data>
+  <data name="TextEdit_ClientCodePrefix.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ClientCodePrefix.Name" xml:space="preserve">
+    <value>TextEdit_ClientCodePrefix</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ClientCodePrefix.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ClientCodePrefix.Parent" xml:space="preserve">
+    <value>GroupControl2</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ClientCodePrefix.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Label8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>351, 59</value>
+  </data>
+  <data name="Label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 15</value>
+  </data>
+  <data name="Label8.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="Label8.Text" xml:space="preserve">
+    <value>自动客户号前缀</value>
+  </data>
+  <data name="&gt;&gt;Label8.Name" xml:space="preserve">
+    <value>Label8</value>
+  </data>
+  <data name="&gt;&gt;Label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label8.Parent" xml:space="preserve">
+    <value>GroupControl2</value>
+  </data>
+  <data name="&gt;&gt;Label8.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="TextEdit_SupplierCodePrefix.Location" type="System.Drawing.Point, System.Drawing">
+    <value>462, 29</value>
+  </data>
+  <data name="TextEdit_SupplierCodePrefix.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_SupplierCodePrefix.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_SupplierCodePrefix.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_SupplierCodePrefix.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_SupplierCodePrefix.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 21</value>
+  </data>
+  <data name="TextEdit_SupplierCodePrefix.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_SupplierCodePrefix.Name" xml:space="preserve">
+    <value>TextEdit_SupplierCodePrefix</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_SupplierCodePrefix.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_SupplierCodePrefix.Parent" xml:space="preserve">
+    <value>GroupControl2</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_SupplierCodePrefix.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Label9.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>351, 32</value>
+  </data>
+  <data name="Label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 15</value>
+  </data>
+  <data name="Label9.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="Label9.Text" xml:space="preserve">
+    <value>自动供应商号前缀</value>
+  </data>
+  <data name="&gt;&gt;Label9.Name" xml:space="preserve">
+    <value>Label9</value>
+  </data>
+  <data name="&gt;&gt;Label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label9.Parent" xml:space="preserve">
+    <value>GroupControl2</value>
+  </data>
+  <data name="&gt;&gt;Label9.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="RadioGroup_WareTurnoverMode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>80, 113</value>
+  </data>
+  <data name="RadioGroup_WareTurnoverMode.Properties.Items" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="RadioGroup_WareTurnoverMode.Properties.Items1" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="RadioGroup_WareTurnoverMode.Properties.Items2" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="RadioGroup_WareTurnoverMode.Properties.Items3" xml:space="preserve">
+    <value>Batch</value>
+  </data>
+  <data name="RadioGroup_WareTurnoverMode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 22</value>
+  </data>
+  <data name="RadioGroup_WareTurnoverMode.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;RadioGroup_WareTurnoverMode.Name" xml:space="preserve">
+    <value>RadioGroup_WareTurnoverMode</value>
+  </data>
+  <data name="&gt;&gt;RadioGroup_WareTurnoverMode.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.RadioGroup, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;RadioGroup_WareTurnoverMode.Parent" xml:space="preserve">
+    <value>GroupControl2</value>
+  </data>
+  <data name="&gt;&gt;RadioGroup_WareTurnoverMode.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="Label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 117</value>
+  </data>
+  <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 15</value>
+  </data>
+  <data name="Label7.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>业务模式</value>
+  </data>
+  <data name="&gt;&gt;Label7.Name" xml:space="preserve">
+    <value>Label7</value>
+  </data>
+  <data name="&gt;&gt;Label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label7.Parent" xml:space="preserve">
+    <value>GroupControl2</value>
+  </data>
+  <data name="&gt;&gt;Label7.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="TextEdit_WareBatchPrefix.Location" type="System.Drawing.Point, System.Drawing">
+    <value>284, 114</value>
+  </data>
+  <data name="TextEdit_WareBatchPrefix.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_WareBatchPrefix.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_WareBatchPrefix.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_WareBatchPrefix.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_WareBatchPrefix.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 21</value>
+  </data>
+  <data name="TextEdit_WareBatchPrefix.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_WareBatchPrefix.Name" xml:space="preserve">
+    <value>TextEdit_WareBatchPrefix</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_WareBatchPrefix.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_WareBatchPrefix.Parent" xml:space="preserve">
+    <value>GroupControl2</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_WareBatchPrefix.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="Label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>221, 117</value>
+  </data>
+  <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 15</value>
+  </data>
+  <data name="Label6.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="Label6.Text" xml:space="preserve">
+    <value>批号前缀</value>
+  </data>
+  <data name="&gt;&gt;Label6.Name" xml:space="preserve">
+    <value>Label6</value>
+  </data>
+  <data name="&gt;&gt;Label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label6.Parent" xml:space="preserve">
+    <value>GroupControl2</value>
+  </data>
+  <data name="&gt;&gt;Label6.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="TextEdit_TransferTurnoverCodePrefix.Location" type="System.Drawing.Point, System.Drawing">
+    <value>160, 83</value>
+  </data>
+  <data name="TextEdit_TransferTurnoverCodePrefix.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_TransferTurnoverCodePrefix.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_TransferTurnoverCodePrefix.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_TransferTurnoverCodePrefix.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_TransferTurnoverCodePrefix.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 21</value>
+  </data>
+  <data name="TextEdit_TransferTurnoverCodePrefix.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_TransferTurnoverCodePrefix.Name" xml:space="preserve">
+    <value>TextEdit_TransferTurnoverCodePrefix</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_TransferTurnoverCodePrefix.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_TransferTurnoverCodePrefix.Parent" xml:space="preserve">
+    <value>GroupControl2</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_TransferTurnoverCodePrefix.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="Label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 86</value>
+  </data>
+  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 15</value>
+  </data>
+  <data name="Label5.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>调剂出入单号前缀</value>
+  </data>
+  <data name="&gt;&gt;Label5.Name" xml:space="preserve">
+    <value>Label5</value>
+  </data>
+  <data name="&gt;&gt;Label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label5.Parent" xml:space="preserve">
+    <value>GroupControl2</value>
+  </data>
+  <data name="&gt;&gt;Label5.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="TextEdit_TurnoverCodePrefix.Location" type="System.Drawing.Point, System.Drawing">
+    <value>160, 56</value>
+  </data>
+  <data name="TextEdit_TurnoverCodePrefix.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_TurnoverCodePrefix.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_TurnoverCodePrefix.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_TurnoverCodePrefix.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_TurnoverCodePrefix.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 21</value>
+  </data>
+  <data name="TextEdit_TurnoverCodePrefix.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_TurnoverCodePrefix.Name" xml:space="preserve">
+    <value>TextEdit_TurnoverCodePrefix</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_TurnoverCodePrefix.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_TurnoverCodePrefix.Parent" xml:space="preserve">
+    <value>GroupControl2</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_TurnoverCodePrefix.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="Label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 59</value>
+  </data>
+  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 15</value>
+  </data>
+  <data name="Label4.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>出入单号前缀</value>
+  </data>
+  <data name="&gt;&gt;Label4.Name" xml:space="preserve">
+    <value>Label4</value>
+  </data>
+  <data name="&gt;&gt;Label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label4.Parent" xml:space="preserve">
+    <value>GroupControl2</value>
+  </data>
+  <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="TextEdit_ConsignCodePrefix.Location" type="System.Drawing.Point, System.Drawing">
+    <value>160, 29</value>
+  </data>
+  <data name="TextEdit_ConsignCodePrefix.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ConsignCodePrefix.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ConsignCodePrefix.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ConsignCodePrefix.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_ConsignCodePrefix.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 21</value>
+  </data>
+  <data name="TextEdit_ConsignCodePrefix.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ConsignCodePrefix.Name" xml:space="preserve">
+    <value>TextEdit_ConsignCodePrefix</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ConsignCodePrefix.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ConsignCodePrefix.Parent" xml:space="preserve">
+    <value>GroupControl2</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_ConsignCodePrefix.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="Label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 32</value>
+  </data>
+  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 15</value>
+  </data>
+  <data name="Label3.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>交货单号前缀</value>
+  </data>
+  <data name="&gt;&gt;Label3.Name" xml:space="preserve">
+    <value>Label3</value>
+  </data>
+  <data name="&gt;&gt;Label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label3.Parent" xml:space="preserve">
+    <value>GroupControl2</value>
+  </data>
+  <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="GroupControl2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="GroupControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 230</value>
+  </data>
+  <data name="GroupControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>605, 340</value>
+  </data>
+  <data name="GroupControl2.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
+  </data>
+  <data name="GroupControl2.Text" xml:space="preserve">
+    <value>编号规则</value>
+  </data>
+  <data name="&gt;&gt;GroupControl2.Name" xml:space="preserve">
+    <value>GroupControl2</value>
+  </data>
+  <data name="&gt;&gt;GroupControl2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;GroupControl2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;GroupControl2.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="CheckEdit_LabelWithPrice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>218, 31</value>
+  </data>
+  <data name="CheckEdit_LabelWithPrice.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckEdit_LabelWithPrice.Properties.Caption" xml:space="preserve">
+    <value>标签带有价格</value>
+  </data>
+  <data name="CheckEdit_LabelWithPrice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 19</value>
+  </data>
+  <data name="CheckEdit_LabelWithPrice.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_LabelWithPrice.Name" xml:space="preserve">
+    <value>CheckEdit_LabelWithPrice</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_LabelWithPrice.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_LabelWithPrice.Parent" xml:space="preserve">
+    <value>GroupControl4</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_LabelWithPrice.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ComboBoxEdit_PractWareLabelSolution.Location" type="System.Drawing.Point, System.Drawing">
+    <value>102, 82</value>
+  </data>
+  <data name="ComboBoxEdit_PractWareLabelSolution.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ComboBoxEdit_PractWareLabelSolution.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
+  </data>
+  <data name="ComboBoxEdit_PractWareLabelSolution.Properties.Items" xml:space="preserve">
+    <value>Option 1</value>
+  </data>
+  <data name="ComboBoxEdit_PractWareLabelSolution.Properties.Items1" xml:space="preserve">
+    <value>Option 2</value>
+  </data>
+  <data name="ComboBoxEdit_PractWareLabelSolution.Properties.Items2" xml:space="preserve">
+    <value>Option 3</value>
+  </data>
+  <data name="ComboBoxEdit_PractWareLabelSolution.Properties.Items3" xml:space="preserve">
+    <value>Option 4</value>
+  </data>
+  <data name="ComboBoxEdit_PractWareLabelSolution.Properties.Items4" xml:space="preserve">
+    <value>Option 5</value>
+  </data>
+  <data name="ComboBoxEdit_PractWareLabelSolution.Properties.Items5" xml:space="preserve">
+    <value>Option 6</value>
+  </data>
+  <data name="ComboBoxEdit_PractWareLabelSolution.Properties.Items6" xml:space="preserve">
+    <value>Option 7</value>
+  </data>
+  <data name="ComboBoxEdit_PractWareLabelSolution.Properties.Items7" xml:space="preserve">
+    <value>Option 8</value>
+  </data>
+  <data name="ComboBoxEdit_PractWareLabelSolution.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ComboBoxEdit_PractWareLabelSolution.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ComboBoxEdit_PractWareLabelSolution.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ComboBoxEdit_PractWareLabelSolution.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 21</value>
+  </data>
+  <data name="ComboBoxEdit_PractWareLabelSolution.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxEdit_PractWareLabelSolution.Name" xml:space="preserve">
+    <value>ComboBoxEdit_PractWareLabelSolution</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxEdit_PractWareLabelSolution.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxEdit_PractWareLabelSolution.Parent" xml:space="preserve">
+    <value>GroupControl4</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxEdit_PractWareLabelSolution.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Label19.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label19.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label19.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 85</value>
+  </data>
+  <data name="Label19.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 15</value>
+  </data>
+  <data name="Label19.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="Label19.Text" xml:space="preserve">
+    <value>实物标签方案</value>
+  </data>
+  <data name="&gt;&gt;Label19.Name" xml:space="preserve">
+    <value>Label19</value>
+  </data>
+  <data name="&gt;&gt;Label19.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label19.Parent" xml:space="preserve">
+    <value>GroupControl4</value>
+  </data>
+  <data name="&gt;&gt;Label19.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ComboBoxEdit_BatchLabelSolution.Location" type="System.Drawing.Point, System.Drawing">
+    <value>102, 55</value>
+  </data>
+  <data name="ComboBoxEdit_BatchLabelSolution.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ComboBoxEdit_BatchLabelSolution.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
+  </data>
+  <data name="ComboBoxEdit_BatchLabelSolution.Properties.Items" xml:space="preserve">
+    <value>Option 1</value>
+  </data>
+  <data name="ComboBoxEdit_BatchLabelSolution.Properties.Items1" xml:space="preserve">
+    <value>Option 2</value>
+  </data>
+  <data name="ComboBoxEdit_BatchLabelSolution.Properties.Items2" xml:space="preserve">
+    <value>Option 3</value>
+  </data>
+  <data name="ComboBoxEdit_BatchLabelSolution.Properties.Items3" xml:space="preserve">
+    <value>Option 4</value>
+  </data>
+  <data name="ComboBoxEdit_BatchLabelSolution.Properties.Items4" xml:space="preserve">
+    <value>Option 5</value>
+  </data>
+  <data name="ComboBoxEdit_BatchLabelSolution.Properties.Items5" xml:space="preserve">
+    <value>Option 6</value>
+  </data>
+  <data name="ComboBoxEdit_BatchLabelSolution.Properties.Items6" xml:space="preserve">
+    <value>Option 7</value>
+  </data>
+  <data name="ComboBoxEdit_BatchLabelSolution.Properties.Items7" xml:space="preserve">
+    <value>Option 8</value>
+  </data>
+  <data name="ComboBoxEdit_BatchLabelSolution.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ComboBoxEdit_BatchLabelSolution.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ComboBoxEdit_BatchLabelSolution.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ComboBoxEdit_BatchLabelSolution.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 21</value>
+  </data>
+  <data name="ComboBoxEdit_BatchLabelSolution.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxEdit_BatchLabelSolution.Name" xml:space="preserve">
+    <value>ComboBoxEdit_BatchLabelSolution</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxEdit_BatchLabelSolution.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxEdit_BatchLabelSolution.Parent" xml:space="preserve">
+    <value>GroupControl4</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxEdit_BatchLabelSolution.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="Label11.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 58</value>
+  </data>
+  <data name="Label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 15</value>
+  </data>
+  <data name="Label11.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="Label11.Text" xml:space="preserve">
+    <value>批号标签方案</value>
+  </data>
+  <data name="&gt;&gt;Label11.Name" xml:space="preserve">
+    <value>Label11</value>
+  </data>
+  <data name="&gt;&gt;Label11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label11.Parent" xml:space="preserve">
+    <value>GroupControl4</value>
+  </data>
+  <data name="&gt;&gt;Label11.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="ComboBoxEdit_WareLabelSolution.Location" type="System.Drawing.Point, System.Drawing">
+    <value>102, 28</value>
+  </data>
+  <data name="ComboBoxEdit_WareLabelSolution.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ComboBoxEdit_WareLabelSolution.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
+  </data>
+  <data name="ComboBoxEdit_WareLabelSolution.Properties.Items" xml:space="preserve">
+    <value>Option 1</value>
+  </data>
+  <data name="ComboBoxEdit_WareLabelSolution.Properties.Items1" xml:space="preserve">
+    <value>Option 2</value>
+  </data>
+  <data name="ComboBoxEdit_WareLabelSolution.Properties.Items2" xml:space="preserve">
+    <value>Option 3</value>
+  </data>
+  <data name="ComboBoxEdit_WareLabelSolution.Properties.Items3" xml:space="preserve">
+    <value>Option 4</value>
+  </data>
+  <data name="ComboBoxEdit_WareLabelSolution.Properties.Items4" xml:space="preserve">
+    <value>Option 5</value>
+  </data>
+  <data name="ComboBoxEdit_WareLabelSolution.Properties.Items5" xml:space="preserve">
+    <value>Option 6</value>
+  </data>
+  <data name="ComboBoxEdit_WareLabelSolution.Properties.Items6" xml:space="preserve">
+    <value>Option 7</value>
+  </data>
+  <data name="ComboBoxEdit_WareLabelSolution.Properties.Items7" xml:space="preserve">
+    <value>Option 8</value>
+  </data>
+  <data name="ComboBoxEdit_WareLabelSolution.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ComboBoxEdit_WareLabelSolution.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ComboBoxEdit_WareLabelSolution.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ComboBoxEdit_WareLabelSolution.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 21</value>
+  </data>
+  <data name="ComboBoxEdit_WareLabelSolution.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxEdit_WareLabelSolution.Name" xml:space="preserve">
+    <value>ComboBoxEdit_WareLabelSolution</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxEdit_WareLabelSolution.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxEdit_WareLabelSolution.Parent" xml:space="preserve">
+    <value>GroupControl4</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxEdit_WareLabelSolution.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="Label10.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 31</value>
+  </data>
+  <data name="Label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 15</value>
+  </data>
+  <data name="Label10.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="Label10.Text" xml:space="preserve">
+    <value>货品标签方案</value>
+  </data>
+  <data name="&gt;&gt;Label10.Name" xml:space="preserve">
+    <value>Label10</value>
+  </data>
+  <data name="&gt;&gt;Label10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label10.Parent" xml:space="preserve">
+    <value>GroupControl4</value>
+  </data>
+  <data name="&gt;&gt;Label10.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="GroupControl4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="GroupControl4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 570</value>
+  </data>
+  <data name="GroupControl4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>605, 126</value>
+  </data>
+  <data name="GroupControl4.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
+  </data>
+  <data name="GroupControl4.Text" xml:space="preserve">
+    <value>标签/报表方案</value>
+  </data>
+  <data name="&gt;&gt;GroupControl4.Name" xml:space="preserve">
+    <value>GroupControl4</value>
+  </data>
+  <data name="&gt;&gt;GroupControl4.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;GroupControl4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;GroupControl4.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="TextEdit_CustomAttribute4.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_CustomAttribute4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>254, 114</value>
+  </data>
+  <data name="TextEdit_CustomAttribute4.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_CustomAttribute4.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_CustomAttribute4.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_CustomAttribute4.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_CustomAttribute4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 21</value>
+  </data>
+  <data name="TextEdit_CustomAttribute4.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_CustomAttribute4.Name" xml:space="preserve">
+    <value>TextEdit_CustomAttribute4</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_CustomAttribute4.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_CustomAttribute4.Parent" xml:space="preserve">
+    <value>PanelControl_CustomAttribute</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_CustomAttribute4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="CheckEdit_WareAttribute4Hidden.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckEdit_WareAttribute4Hidden.Location" type="System.Drawing.Point, System.Drawing">
+    <value>390, 114</value>
+  </data>
+  <data name="CheckEdit_WareAttribute4Hidden.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckEdit_WareAttribute4Hidden.Properties.Caption" xml:space="preserve">
+    <value>不可见</value>
+  </data>
+  <data name="CheckEdit_WareAttribute4Hidden.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 19</value>
+  </data>
+  <data name="CheckEdit_WareAttribute4Hidden.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_WareAttribute4Hidden.Name" xml:space="preserve">
+    <value>CheckEdit_WareAttribute4Hidden</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_WareAttribute4Hidden.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_WareAttribute4Hidden.Parent" xml:space="preserve">
+    <value>PanelControl_CustomAttribute</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_WareAttribute4Hidden.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CheckEdit_CustomWareAttribute4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 114</value>
+  </data>
+  <data name="CheckEdit_CustomWareAttribute4.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckEdit_CustomWareAttribute4.Properties.Caption" xml:space="preserve">
+    <value>自定属性4</value>
+  </data>
+  <data name="CheckEdit_CustomWareAttribute4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 19</value>
+  </data>
+  <data name="CheckEdit_CustomWareAttribute4.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_CustomWareAttribute4.Name" xml:space="preserve">
+    <value>CheckEdit_CustomWareAttribute4</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_CustomWareAttribute4.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_CustomWareAttribute4.Parent" xml:space="preserve">
+    <value>PanelControl_CustomAttribute</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_CustomWareAttribute4.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="TextEdit_CustomAttribute3.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_CustomAttribute3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>254, 87</value>
+  </data>
+  <data name="TextEdit_CustomAttribute3.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_CustomAttribute3.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_CustomAttribute3.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_CustomAttribute3.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_CustomAttribute3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 21</value>
+  </data>
+  <data name="TextEdit_CustomAttribute3.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_CustomAttribute3.Name" xml:space="preserve">
+    <value>TextEdit_CustomAttribute3</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_CustomAttribute3.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_CustomAttribute3.Parent" xml:space="preserve">
+    <value>PanelControl_CustomAttribute</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_CustomAttribute3.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="CheckEdit_WareAttribute3Hidden.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckEdit_WareAttribute3Hidden.Location" type="System.Drawing.Point, System.Drawing">
+    <value>390, 87</value>
+  </data>
+  <data name="CheckEdit_WareAttribute3Hidden.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckEdit_WareAttribute3Hidden.Properties.Caption" xml:space="preserve">
+    <value>不可见</value>
+  </data>
+  <data name="CheckEdit_WareAttribute3Hidden.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 19</value>
+  </data>
+  <data name="CheckEdit_WareAttribute3Hidden.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_WareAttribute3Hidden.Name" xml:space="preserve">
+    <value>CheckEdit_WareAttribute3Hidden</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_WareAttribute3Hidden.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_WareAttribute3Hidden.Parent" xml:space="preserve">
+    <value>PanelControl_CustomAttribute</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_WareAttribute3Hidden.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="CheckEdit_CustomWareAttribute3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 87</value>
+  </data>
+  <data name="CheckEdit_CustomWareAttribute3.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckEdit_CustomWareAttribute3.Properties.Caption" xml:space="preserve">
+    <value>自定属性3</value>
+  </data>
+  <data name="CheckEdit_CustomWareAttribute3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 19</value>
+  </data>
+  <data name="CheckEdit_CustomWareAttribute3.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_CustomWareAttribute3.Name" xml:space="preserve">
+    <value>CheckEdit_CustomWareAttribute3</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_CustomWareAttribute3.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_CustomWareAttribute3.Parent" xml:space="preserve">
+    <value>PanelControl_CustomAttribute</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_CustomWareAttribute3.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="TextEdit_CustomAttribute2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_CustomAttribute2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>254, 60</value>
+  </data>
+  <data name="TextEdit_CustomAttribute2.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_CustomAttribute2.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_CustomAttribute2.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_CustomAttribute2.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_CustomAttribute2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 21</value>
+  </data>
+  <data name="TextEdit_CustomAttribute2.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_CustomAttribute2.Name" xml:space="preserve">
+    <value>TextEdit_CustomAttribute2</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_CustomAttribute2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_CustomAttribute2.Parent" xml:space="preserve">
+    <value>PanelControl_CustomAttribute</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_CustomAttribute2.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="CheckEdit_WareAttribute2Hidden.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckEdit_WareAttribute2Hidden.Location" type="System.Drawing.Point, System.Drawing">
+    <value>390, 60</value>
+  </data>
+  <data name="CheckEdit_WareAttribute2Hidden.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckEdit_WareAttribute2Hidden.Properties.Caption" xml:space="preserve">
+    <value>不可见</value>
+  </data>
+  <data name="CheckEdit_WareAttribute2Hidden.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 19</value>
+  </data>
+  <data name="CheckEdit_WareAttribute2Hidden.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_WareAttribute2Hidden.Name" xml:space="preserve">
+    <value>CheckEdit_WareAttribute2Hidden</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_WareAttribute2Hidden.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_WareAttribute2Hidden.Parent" xml:space="preserve">
+    <value>PanelControl_CustomAttribute</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_WareAttribute2Hidden.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="CheckEdit_CustomWareAttribute2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 60</value>
+  </data>
+  <data name="CheckEdit_CustomWareAttribute2.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckEdit_CustomWareAttribute2.Properties.Caption" xml:space="preserve">
+    <value>自定属性2</value>
+  </data>
+  <data name="CheckEdit_CustomWareAttribute2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 19</value>
+  </data>
+  <data name="CheckEdit_CustomWareAttribute2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_CustomWareAttribute2.Name" xml:space="preserve">
+    <value>CheckEdit_CustomWareAttribute2</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_CustomWareAttribute2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_CustomWareAttribute2.Parent" xml:space="preserve">
+    <value>PanelControl_CustomAttribute</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_CustomWareAttribute2.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="TextEdit_CustomAttribute1.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_CustomAttribute1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>254, 33</value>
+  </data>
+  <data name="TextEdit_CustomAttribute1.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_CustomAttribute1.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_CustomAttribute1.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_CustomAttribute1.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_CustomAttribute1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 21</value>
+  </data>
+  <data name="TextEdit_CustomAttribute1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_CustomAttribute1.Name" xml:space="preserve">
+    <value>TextEdit_CustomAttribute1</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_CustomAttribute1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_CustomAttribute1.Parent" xml:space="preserve">
+    <value>PanelControl_CustomAttribute</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_CustomAttribute1.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="CheckEdit_WareAttribute1Hidden.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckEdit_WareAttribute1Hidden.Location" type="System.Drawing.Point, System.Drawing">
+    <value>390, 33</value>
+  </data>
+  <data name="CheckEdit_WareAttribute1Hidden.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckEdit_WareAttribute1Hidden.Properties.Caption" xml:space="preserve">
+    <value>不可见</value>
+  </data>
+  <data name="CheckEdit_WareAttribute1Hidden.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 19</value>
+  </data>
+  <data name="CheckEdit_WareAttribute1Hidden.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_WareAttribute1Hidden.Name" xml:space="preserve">
+    <value>CheckEdit_WareAttribute1Hidden</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_WareAttribute1Hidden.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_WareAttribute1Hidden.Parent" xml:space="preserve">
+    <value>PanelControl_CustomAttribute</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_WareAttribute1Hidden.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="CheckEdit_CustomWareAttribute1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 33</value>
+  </data>
+  <data name="CheckEdit_CustomWareAttribute1.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckEdit_CustomWareAttribute1.Properties.Caption" xml:space="preserve">
+    <value>自定属性1</value>
+  </data>
+  <data name="CheckEdit_CustomWareAttribute1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 19</value>
+  </data>
+  <data name="CheckEdit_CustomWareAttribute1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_CustomWareAttribute1.Name" xml:space="preserve">
+    <value>CheckEdit_CustomWareAttribute1</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_CustomWareAttribute1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_CustomWareAttribute1.Parent" xml:space="preserve">
+    <value>PanelControl_CustomAttribute</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_CustomWareAttribute1.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="PanelControl_CustomAttribute.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="PanelControl_CustomAttribute.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 696</value>
+  </data>
+  <data name="PanelControl_CustomAttribute.Size" type="System.Drawing.Size, System.Drawing">
+    <value>605, 147</value>
+  </data>
+  <data name="PanelControl_CustomAttribute.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
+  </data>
+  <data name="PanelControl_CustomAttribute.Text" xml:space="preserve">
+    <value>货品自定属性</value>
+  </data>
+  <data name="&gt;&gt;PanelControl_CustomAttribute.Name" xml:space="preserve">
+    <value>PanelControl_CustomAttribute</value>
+  </data>
+  <data name="&gt;&gt;PanelControl_CustomAttribute.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;PanelControl_CustomAttribute.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;PanelControl_CustomAttribute.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="GroupControl5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="GroupControl5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 843</value>
+  </data>
+  <data name="GroupControl5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>605, 199</value>
+  </data>
+  <data name="GroupControl5.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
+  </data>
+  <data name="GroupControl5.Text" xml:space="preserve">
+    <value>客户自定属性</value>
+  </data>
+  <data name="&gt;&gt;GroupControl5.Name" xml:space="preserve">
+    <value>GroupControl5</value>
+  </data>
+  <data name="&gt;&gt;GroupControl5.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;GroupControl5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;GroupControl5.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="CheckEdit_AllowExtraConsign.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 249</value>
+  </data>
+  <data name="CheckEdit_AllowExtraConsign.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckEdit_AllowExtraConsign.Properties.Caption" xml:space="preserve">
+    <value>允许计划外出货</value>
+  </data>
+  <data name="CheckEdit_AllowExtraConsign.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 19</value>
+  </data>
+  <data name="CheckEdit_AllowExtraConsign.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_AllowExtraConsign.Name" xml:space="preserve">
+    <value>CheckEdit_AllowExtraConsign</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_AllowExtraConsign.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_AllowExtraConsign.Parent" xml:space="preserve">
+    <value>GroupControl6</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_AllowExtraConsign.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="CheckEdit_PrintShoppingList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>222, 49</value>
+  </data>
+  <data name="CheckEdit_PrintShoppingList.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckEdit_PrintShoppingList.Properties.Caption" xml:space="preserve">
+    <value>出货时自动打印小票</value>
+  </data>
+  <data name="CheckEdit_PrintShoppingList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>162, 19</value>
+  </data>
+  <data name="CheckEdit_PrintShoppingList.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_PrintShoppingList.Name" xml:space="preserve">
+    <value>CheckEdit_PrintShoppingList</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_PrintShoppingList.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_PrintShoppingList.Parent" xml:space="preserve">
+    <value>GroupControl6</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_PrintShoppingList.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CheckEdit_UnitPriceDisabledInIO.Location" type="System.Drawing.Point, System.Drawing">
+    <value>222, 74</value>
+  </data>
+  <data name="CheckEdit_UnitPriceDisabledInIO.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckEdit_UnitPriceDisabledInIO.Properties.Caption" xml:space="preserve">
+    <value>出入货时禁止修改单价</value>
+  </data>
+  <data name="CheckEdit_UnitPriceDisabledInIO.Size" type="System.Drawing.Size, System.Drawing">
+    <value>162, 19</value>
+  </data>
+  <data name="CheckEdit_UnitPriceDisabledInIO.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_UnitPriceDisabledInIO.Name" xml:space="preserve">
+    <value>CheckEdit_UnitPriceDisabledInIO</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_UnitPriceDisabledInIO.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_UnitPriceDisabledInIO.Parent" xml:space="preserve">
+    <value>GroupControl6</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_UnitPriceDisabledInIO.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="CheckEdit_WareArriveConfirm.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 149</value>
+  </data>
+  <data name="CheckEdit_WareArriveConfirm.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckEdit_WareArriveConfirm.Properties.Caption" xml:space="preserve">
+    <value>需要到货确认</value>
+  </data>
+  <data name="CheckEdit_WareArriveConfirm.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 19</value>
+  </data>
+  <data name="CheckEdit_WareArriveConfirm.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_WareArriveConfirm.Name" xml:space="preserve">
+    <value>CheckEdit_WareArriveConfirm</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_WareArriveConfirm.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_WareArriveConfirm.Parent" xml:space="preserve">
+    <value>GroupControl6</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_WareArriveConfirm.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="CheckEdit_WareArriveByRecipient.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 174</value>
+  </data>
+  <data name="CheckEdit_WareArriveByRecipient.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckEdit_WareArriveByRecipient.Properties.Caption" xml:space="preserve">
+    <value>以包装形式到货</value>
+  </data>
+  <data name="CheckEdit_WareArriveByRecipient.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 19</value>
+  </data>
+  <data name="CheckEdit_WareArriveByRecipient.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_WareArriveByRecipient.Name" xml:space="preserve">
+    <value>CheckEdit_WareArriveByRecipient</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_WareArriveByRecipient.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_WareArriveByRecipient.Parent" xml:space="preserve">
+    <value>GroupControl6</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_WareArriveByRecipient.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="CheckEdit_ShowEnItemName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 199</value>
+  </data>
+  <data name="CheckEdit_ShowEnItemName.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckEdit_ShowEnItemName.Properties.Caption" xml:space="preserve">
+    <value>显示英文品名信息</value>
+  </data>
+  <data name="CheckEdit_ShowEnItemName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 19</value>
+  </data>
+  <data name="CheckEdit_ShowEnItemName.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ShowEnItemName.Name" xml:space="preserve">
+    <value>CheckEdit_ShowEnItemName</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ShowEnItemName.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ShowEnItemName.Parent" xml:space="preserve">
+    <value>GroupControl6</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ShowEnItemName.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="CheckEdit_MoneyArriveConfirm.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 224</value>
+  </data>
+  <data name="CheckEdit_MoneyArriveConfirm.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckEdit_MoneyArriveConfirm.Properties.Caption" xml:space="preserve">
+    <value>需要到款确认</value>
+  </data>
+  <data name="CheckEdit_MoneyArriveConfirm.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 19</value>
+  </data>
+  <data name="CheckEdit_MoneyArriveConfirm.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_MoneyArriveConfirm.Name" xml:space="preserve">
+    <value>CheckEdit_MoneyArriveConfirm</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_MoneyArriveConfirm.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_MoneyArriveConfirm.Parent" xml:space="preserve">
+    <value>GroupControl6</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_MoneyArriveConfirm.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="CheckEdit_LabelPrintingDisabled.Location" type="System.Drawing.Point, System.Drawing">
+    <value>222, 149</value>
+  </data>
+  <data name="CheckEdit_LabelPrintingDisabled.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckEdit_LabelPrintingDisabled.Properties.Caption" xml:space="preserve">
+    <value>禁止标签打印</value>
+  </data>
+  <data name="CheckEdit_LabelPrintingDisabled.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 19</value>
+  </data>
+  <data name="CheckEdit_LabelPrintingDisabled.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_LabelPrintingDisabled.Name" xml:space="preserve">
+    <value>CheckEdit_LabelPrintingDisabled</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_LabelPrintingDisabled.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_LabelPrintingDisabled.Parent" xml:space="preserve">
+    <value>GroupControl6</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_LabelPrintingDisabled.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="CheckEdit_AllowPosSetSyncExport.Location" type="System.Drawing.Point, System.Drawing">
+    <value>222, 124</value>
+  </data>
+  <data name="CheckEdit_AllowPosSetSyncExport.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckEdit_AllowPosSetSyncExport.Properties.Caption" xml:space="preserve">
+    <value>允许导出地点同步源</value>
+  </data>
+  <data name="CheckEdit_AllowPosSetSyncExport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 19</value>
+  </data>
+  <data name="CheckEdit_AllowPosSetSyncExport.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_AllowPosSetSyncExport.Name" xml:space="preserve">
+    <value>CheckEdit_AllowPosSetSyncExport</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_AllowPosSetSyncExport.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_AllowPosSetSyncExport.Parent" xml:space="preserve">
+    <value>GroupControl6</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_AllowPosSetSyncExport.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="CheckEdit_ShowDeliveryFieldsInTurnover.Location" type="System.Drawing.Point, System.Drawing">
+    <value>222, 24</value>
+  </data>
+  <data name="CheckEdit_ShowDeliveryFieldsInTurnover.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckEdit_ShowDeliveryFieldsInTurnover.Properties.Caption" xml:space="preserve">
+    <value>出入货时显示送货信息</value>
+  </data>
+  <data name="CheckEdit_ShowDeliveryFieldsInTurnover.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 19</value>
+  </data>
+  <data name="CheckEdit_ShowDeliveryFieldsInTurnover.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ShowDeliveryFieldsInTurnover.Name" xml:space="preserve">
+    <value>CheckEdit_ShowDeliveryFieldsInTurnover</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ShowDeliveryFieldsInTurnover.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ShowDeliveryFieldsInTurnover.Parent" xml:space="preserve">
+    <value>GroupControl6</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ShowDeliveryFieldsInTurnover.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="CheckEdit_HideFinancials.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 49</value>
+  </data>
+  <data name="CheckEdit_HideFinancials.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckEdit_HideFinancials.Properties.Caption" xml:space="preserve">
+    <value>隐藏财务元素</value>
+  </data>
+  <data name="CheckEdit_HideFinancials.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 19</value>
+  </data>
+  <data name="CheckEdit_HideFinancials.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_HideFinancials.Name" xml:space="preserve">
+    <value>CheckEdit_HideFinancials</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_HideFinancials.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_HideFinancials.Parent" xml:space="preserve">
+    <value>GroupControl6</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_HideFinancials.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="CheckEdit_QuickCustomerCreatingAllowed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 74</value>
+  </data>
+  <data name="CheckEdit_QuickCustomerCreatingAllowed.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckEdit_QuickCustomerCreatingAllowed.Properties.Caption" xml:space="preserve">
+    <value>显示创建客户快捷方式</value>
+  </data>
+  <data name="CheckEdit_QuickCustomerCreatingAllowed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 19</value>
+  </data>
+  <data name="CheckEdit_QuickCustomerCreatingAllowed.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_QuickCustomerCreatingAllowed.Name" xml:space="preserve">
+    <value>CheckEdit_QuickCustomerCreatingAllowed</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_QuickCustomerCreatingAllowed.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_QuickCustomerCreatingAllowed.Parent" xml:space="preserve">
+    <value>GroupControl6</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_QuickCustomerCreatingAllowed.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="CheckEdit_AllowMinusStock.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 99</value>
+  </data>
+  <data name="CheckEdit_AllowMinusStock.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckEdit_AllowMinusStock.Properties.Caption" xml:space="preserve">
+    <value>允许负库存</value>
+  </data>
+  <data name="CheckEdit_AllowMinusStock.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 19</value>
+  </data>
+  <data name="CheckEdit_AllowMinusStock.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_AllowMinusStock.Name" xml:space="preserve">
+    <value>CheckEdit_AllowMinusStock</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_AllowMinusStock.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_AllowMinusStock.Parent" xml:space="preserve">
+    <value>GroupControl6</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_AllowMinusStock.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="CheckEdit_WareSpecModelDiscard.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 124</value>
+  </data>
+  <data name="CheckEdit_WareSpecModelDiscard.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckEdit_WareSpecModelDiscard.Properties.Caption" xml:space="preserve">
+    <value>不使用规格, 型号字段</value>
+  </data>
+  <data name="CheckEdit_WareSpecModelDiscard.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 19</value>
+  </data>
+  <data name="CheckEdit_WareSpecModelDiscard.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_WareSpecModelDiscard.Name" xml:space="preserve">
+    <value>CheckEdit_WareSpecModelDiscard</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_WareSpecModelDiscard.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_WareSpecModelDiscard.Parent" xml:space="preserve">
+    <value>GroupControl6</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_WareSpecModelDiscard.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="CheckEdit_ShowCustomWareCode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 24</value>
+  </data>
+  <data name="CheckEdit_ShowCustomWareCode.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckEdit_ShowCustomWareCode.Properties.Caption" xml:space="preserve">
+    <value>输出自定货号</value>
+  </data>
+  <data name="CheckEdit_ShowCustomWareCode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 19</value>
+  </data>
+  <data name="CheckEdit_ShowCustomWareCode.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ShowCustomWareCode.Name" xml:space="preserve">
+    <value>CheckEdit_ShowCustomWareCode</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ShowCustomWareCode.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ShowCustomWareCode.Parent" xml:space="preserve">
+    <value>GroupControl6</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_ShowCustomWareCode.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="GroupControl6.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="GroupControl6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 1042</value>
+  </data>
+  <data name="GroupControl6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>605, 279</value>
+  </data>
+  <data name="GroupControl6.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
+  </data>
+  <data name="GroupControl6.Text" xml:space="preserve">
+    <value>其它选项</value>
+  </data>
+  <data name="&gt;&gt;GroupControl6.Name" xml:space="preserve">
+    <value>GroupControl6</value>
+  </data>
+  <data name="&gt;&gt;GroupControl6.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;GroupControl6.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;GroupControl6.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CalcEdit1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>169, 33</value>
+  </data>
+  <data name="CalcEdit1.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
+  </data>
+  <data name="CalcEdit1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 20</value>
+  </data>
+  <data name="CalcEdit1.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;CalcEdit1.Name" xml:space="preserve">
+    <value>CalcEdit1</value>
+  </data>
+  <data name="&gt;&gt;CalcEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CalcEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CalcEdit1.Parent" xml:space="preserve">
+    <value>GroupControl8</value>
+  </data>
+  <data name="&gt;&gt;CalcEdit1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Label20.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label20.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label20.Location" type="System.Drawing.Point, System.Drawing">
+    <value>238, 35</value>
+  </data>
+  <data name="Label20.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 15</value>
+  </data>
+  <data name="Label20.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="Label20.Text" xml:space="preserve">
+    <value>点兑换1元</value>
+  </data>
+  <data name="&gt;&gt;Label20.Name" xml:space="preserve">
+    <value>Label20</value>
+  </data>
+  <data name="&gt;&gt;Label20.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label20.Parent" xml:space="preserve">
+    <value>GroupControl8</value>
+  </data>
+  <data name="&gt;&gt;Label20.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CheckEdit_PointsAvailable.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 33</value>
+  </data>
+  <data name="CheckEdit1.Properties.Caption" xml:space="preserve">
+    <value>使用点数, 兑换人民币:</value>
+  </data>
+  <data name="CheckEdit_PointsAvailable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 19</value>
+  </data>
+  <data name="CheckEdit_PointsAvailable.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_PointsAvailable.Name" xml:space="preserve">
+    <value>CheckEdit_PointsAvailable</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_PointsAvailable.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_PointsAvailable.Parent" xml:space="preserve">
+    <value>GroupControl8</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_PointsAvailable.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="GroupControl8.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="GroupControl8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 1321</value>
+  </data>
+  <data name="GroupControl8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>605, 119</value>
+  </data>
+  <data name="GroupControl8.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
+  </data>
+  <data name="GroupControl8.Text" xml:space="preserve">
+    <value>点数及优惠</value>
+  </data>
+  <data name="&gt;&gt;GroupControl8.Name" xml:space="preserve">
+    <value>GroupControl8</value>
+  </data>
+  <data name="&gt;&gt;GroupControl8.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;GroupControl8.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;GroupControl8.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>605, 1545</value>
+  </data>
+  <data name="&gt;&gt;DefaultLookAndFeel_Form.Name" xml:space="preserve">
+    <value>DefaultLookAndFeel_Form</value>
+  </data>
+  <data name="&gt;&gt;DefaultLookAndFeel_Form.Type" xml:space="preserve">
+    <value>DevExpress.LookAndFeel.DefaultLookAndFeel, DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;Timer_Surveillant.Name" xml:space="preserve">
+    <value>Timer_Surveillant</value>
+  </data>
+  <data name="&gt;&gt;Timer_Surveillant.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripButton_Save.Name" xml:space="preserve">
+    <value>ToolStripButton_Save</value>
+  </data>
+  <data name="&gt;&gt;ToolStripButton_Save.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripButton_Close.Name" xml:space="preserve">
+    <value>ToolStripButton_Close</value>
+  </data>
+  <data name="&gt;&gt;ToolStripButton_Close.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GridView_TurnoverTypeBarcodeRule.Name" xml:space="preserve">
+    <value>GridView_TurnoverTypeBarcodeRule</value>
+  </data>
+  <data name="&gt;&gt;GridView_TurnoverTypeBarcodeRule.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_RecipientType.Name" xml:space="preserve">
+    <value>GridColumn_RecipientType</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_RecipientType.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;RepositoryItemLookUpEdit_RecipientType.Name" xml:space="preserve">
+    <value>RepositoryItemLookUpEdit_RecipientType</value>
+  </data>
+  <data name="&gt;&gt;RepositoryItemLookUpEdit_RecipientType.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_RecipientTypeValue.Name" xml:space="preserve">
+    <value>GridColumn_RecipientTypeValue</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_RecipientTypeValue.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_BarcodePrefix.Name" xml:space="preserve">
+    <value>GridColumn_BarcodePrefix</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_BarcodePrefix.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;RepositoryItemTextEdit_BarcodePrefix.Name" xml:space="preserve">
+    <value>RepositoryItemTextEdit_BarcodePrefix</value>
+  </data>
+  <data name="&gt;&gt;RepositoryItemTextEdit_BarcodePrefix.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemTextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>M_08_00101</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>XL.Win.Component.BaseForm, XL.Win, Version=0.0.0.68, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+</root>

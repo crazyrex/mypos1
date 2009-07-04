@@ -1,0 +1,980 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ToolStripButton_Save.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 22</value>
+  </data>
+  <data name="ToolStripButton_Close.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TextEdit_ClientAttr4.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_ClientAttr4.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_ClientAttr4.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_ClientAttr4.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_ClientAttr4.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_ClientAttr4.Properties.Caption" xml:space="preserve">
+    <value>Client attribute4</value>
+  </data>
+  <data name="CheckEdit_ClientAttr4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 19</value>
+  </data>
+  <data name="TextEdit_ClientAttr3.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_ClientAttr3.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_ClientAttr3.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_ClientAttr3.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_ClientAttr3.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_ClientAttr3.Properties.Caption" xml:space="preserve">
+    <value>Client attribute3</value>
+  </data>
+  <data name="CheckEdit_ClientAttr3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 19</value>
+  </data>
+  <data name="TextEdit_ClientAttr2.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_ClientAttr2.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_ClientAttr2.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_ClientAttr2.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_ClientAttr2.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_ClientAttr2.Properties.Caption" xml:space="preserve">
+    <value>Client attribute2</value>
+  </data>
+  <data name="CheckEdit_ClientAttr2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 19</value>
+  </data>
+  <data name="TextEdit_ClientAttr1.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_ClientAttr1.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_ClientAttr1.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_ClientAttr1.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_ClientAttr1.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_ClientAttr1.Properties.Caption" xml:space="preserve">
+    <value>Client attribute1</value>
+  </data>
+  <data name="CheckEdit_ClientAttr1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 19</value>
+  </data>
+  <data name="TextEdit_ClientAttr6.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_ClientAttr6.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_ClientAttr6.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_ClientAttr6.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_ClientAttr6.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_ClientAttr6.Properties.Caption" xml:space="preserve">
+    <value>Client attribute6</value>
+  </data>
+  <data name="CheckEdit_ClientAttr6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 19</value>
+  </data>
+  <data name="TextEdit_ClientAttr5.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_ClientAttr5.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_ClientAttr5.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_ClientAttr5.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_ClientAttr5.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_ClientAttr5.Properties.Caption" xml:space="preserve">
+    <value>Client attribute5</value>
+  </data>
+  <data name="CheckEdit_ClientAttr5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 19</value>
+  </data>
+  <data name="Label15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 15</value>
+  </data>
+  <data name="Label15.Text" xml:space="preserve">
+    <value>+Item code</value>
+  </data>
+  <data name="Label16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>264, 27</value>
+  </data>
+  <data name="Label17.Location" type="System.Drawing.Point, System.Drawing">
+    <value>318, 27</value>
+  </data>
+  <data name="Label17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 15</value>
+  </data>
+  <data name="Label17.Text" xml:space="preserve">
+    <value>Didgital length</value>
+  </data>
+  <data name="Label18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 15</value>
+  </data>
+  <data name="Label18.Text" xml:space="preserve">
+    <value>Prefix</value>
+  </data>
+  <data name="CheckEdit_OperationLimitedHere.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 30</value>
+  </data>
+  <data name="CheckEdit_OperationLimitedHere.Properties.Caption" xml:space="preserve">
+    <value>Operations adhere</value>
+  </data>
+  <data name="CheckEdit_OperationLimitedHere.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 19</value>
+  </data>
+  <data name="TextEdit_ServiceTel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>379, 155</value>
+  </data>
+  <data name="TextEdit_ServiceTel.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_ServiceTel.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_ServiceTel.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_ServiceTel.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_ServiceTel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 21</value>
+  </data>
+  <data name="TextEdit_CompanyAddress.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 184</value>
+  </data>
+  <data name="TextEdit_CompanyAddress.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_CompanyAddress.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_CompanyAddress.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_CompanyAddress.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_CompanyAddress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 21</value>
+  </data>
+  <data name="TextEdit_CompanyTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 155</value>
+  </data>
+  <data name="TextEdit_CompanyTitle.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_CompanyTitle.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_CompanyTitle.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_CompanyTitle.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_CompanyTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 21</value>
+  </data>
+  <data name="Label13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>315, 158</value>
+  </data>
+  <data name="Label13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 15</value>
+  </data>
+  <data name="Label13.Text" xml:space="preserve">
+    <value>Service tel</value>
+  </data>
+  <data name="Label14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 187</value>
+  </data>
+  <data name="Label14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 15</value>
+  </data>
+  <data name="Label14.Text" xml:space="preserve">
+    <value>Company address</value>
+  </data>
+  <data name="TextEdit_MobileSmapPath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>318, 101</value>
+  </data>
+  <data name="TextEdit_MobileSmapPath.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_MobileSmapPath.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_MobileSmapPath.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_MobileSmapPath.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 158</value>
+  </data>
+  <data name="Label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 15</value>
+  </data>
+  <data name="Label12.Text" xml:space="preserve">
+    <value>Company title</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 15</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>PDA swap path</value>
+  </data>
+  <data name="CheckEdit_KeepOrigionWareCodeToRemark.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_KeepOrigionWareCodeToRemark.Properties.Caption" xml:space="preserve">
+    <value>Keeps item code</value>
+  </data>
+  <data name="CheckEdit_KeepOrigionWareCodeToRemark.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 19</value>
+  </data>
+  <data name="SimpleButton_SaveMobileWareList.Text" xml:space="preserve">
+    <value>Export item info to PDA</value>
+  </data>
+  <data name="SimpleButton_SaveMobilePosLocationList.Text" xml:space="preserve">
+    <value>Export lot info to PDA</value>
+  </data>
+  <data name="SimpleButton_AutomateWareCodes.Text" xml:space="preserve">
+    <value>Create barcode numbers</value>
+  </data>
+  <data name="LookUpEdit_CurrentPOS.Location" type="System.Drawing.Point, System.Drawing">
+    <value>117, 29</value>
+  </data>
+  <data name="LookUpEdit_CurrentPOS.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LookUpEdit_CurrentPOS.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LookUpEdit_CurrentPOS.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LookUpEdit_CurrentPOS.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 15</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Current location</value>
+  </data>
+  <data name="GroupControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>605, 232</value>
+  </data>
+  <data name="GroupControl1.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="CheckEdit_PractWareCodeHasDay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>222, 26</value>
+  </data>
+  <data name="CheckEdit_PractWareCodeHasDay.Properties.Caption" xml:space="preserve">
+    <value>+dd</value>
+  </data>
+  <data name="CheckEdit_PractWareCodeHasYearMonth.Location" type="System.Drawing.Point, System.Drawing">
+    <value>156, 26</value>
+  </data>
+  <data name="CheckEdit_PractWareCodeHasYearMonth.Properties.Caption" xml:space="preserve">
+    <value>+yymm</value>
+  </data>
+  <data name="SpinEdit_PractWareCodeDigitLength.Location" type="System.Drawing.Point, System.Drawing">
+    <value>276, 25</value>
+  </data>
+  <data name="GroupControl7.Text" xml:space="preserve">
+    <value>Practical ware barcode</value>
+  </data>
+  <data name="GridControl_RecipientTypeBarcode.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left</value>
+  </data>
+  <data name="GridControl_RecipientTypeBarcode.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Tile</value>
+  </data>
+  <data name="GridControl_RecipientTypeBarcode.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
+  </data>
+  <assembly alias="DevExpress.XtraEditors.v8.1" name="DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
+  <data name="GridControl_RecipientTypeBarcode.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v8.1">
+    <value>Center</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v8.1" name="DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
+  <data name="GridControl_RecipientTypeBarcode.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v8.1">
+    <value>None</value>
+  </data>
+  <data name="GridColumn_RecipientType.Caption" xml:space="preserve">
+    <value>Recipient type</value>
+  </data>
+  <data name="RepositoryItemLookUpEdit_RecipientType.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RepositoryItemLookUpEdit_RecipientType.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RepositoryItemLookUpEdit_RecipientType.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn_RecipientTypeValue.Caption" xml:space="preserve">
+    <value>Recipient type value</value>
+  </data>
+  <data name="GridColumn_BarcodePrefix.Caption" xml:space="preserve">
+    <value>Prefix</value>
+  </data>
+  <data name="RepositoryItemTextEdit_BarcodePrefix.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RepositoryItemTextEdit_BarcodePrefix.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RepositoryItemTextEdit_BarcodePrefix.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GroupControl3.Text" xml:space="preserve">
+    <value>Recipient code prefix </value>
+  </data>
+  <data name="TextEdit_ClientCodePrefix.Location" type="System.Drawing.Point, System.Drawing">
+    <value>471, 56</value>
+  </data>
+  <data name="TextEdit_ClientCodePrefix.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_ClientCodePrefix.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_ClientCodePrefix.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_ClientCodePrefix.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>336, 59</value>
+  </data>
+  <data name="Label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 15</value>
+  </data>
+  <data name="Label8.Text" xml:space="preserve">
+    <value>Customer code prefix</value>
+  </data>
+  <data name="TextEdit_SupplierCodePrefix.Location" type="System.Drawing.Point, System.Drawing">
+    <value>471, 28</value>
+  </data>
+  <data name="TextEdit_SupplierCodePrefix.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_SupplierCodePrefix.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_SupplierCodePrefix.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_SupplierCodePrefix.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>336, 32</value>
+  </data>
+  <data name="Label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 15</value>
+  </data>
+  <data name="Label9.Text" xml:space="preserve">
+    <value>Supplier code prefix</value>
+  </data>
+  <data name="RadioGroup_WareTurnoverMode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>160, 113</value>
+  </data>
+  <data name="RadioGroup_WareTurnoverMode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 22</value>
+  </data>
+  <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 117</value>
+  </data>
+  <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 15</value>
+  </data>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>Business mode</value>
+  </data>
+  <data name="TextEdit_WareBatchPrefix.Location" type="System.Drawing.Point, System.Drawing">
+    <value>416, 114</value>
+  </data>
+  <data name="TextEdit_WareBatchPrefix.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_WareBatchPrefix.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_WareBatchPrefix.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_WareBatchPrefix.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>336, 117</value>
+  </data>
+  <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 15</value>
+  </data>
+  <data name="Label6.Text" xml:space="preserve">
+    <value>Batch prefix</value>
+  </data>
+  <data name="TextEdit_TransferTurnoverCodePrefix.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_TransferTurnoverCodePrefix.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_TransferTurnoverCodePrefix.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_TransferTurnoverCodePrefix.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_TransferTurnoverCodePrefix.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 21</value>
+  </data>
+  <data name="Label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 89</value>
+  </data>
+  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 15</value>
+  </data>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>Move code prefix</value>
+  </data>
+  <data name="TextEdit_TurnoverCodePrefix.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_TurnoverCodePrefix.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_TurnoverCodePrefix.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_TurnoverCodePrefix.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_TurnoverCodePrefix.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 21</value>
+  </data>
+  <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 59</value>
+  </data>
+  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 15</value>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>Check-in /out code Prefix</value>
+  </data>
+  <data name="TextEdit_ConsignCodePrefix.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_ConsignCodePrefix.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_ConsignCodePrefix.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_ConsignCodePrefix.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_ConsignCodePrefix.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 21</value>
+  </data>
+  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 32</value>
+  </data>
+  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 15</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>Arrival code prefix</value>
+  </data>
+  <data name="GroupControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 257</value>
+  </data>
+  <data name="GroupControl2.Text" xml:space="preserve">
+    <value>Prefixes settings</value>
+  </data>
+  <data name="CheckEdit_LabelWithPrice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>224, 34</value>
+  </data>
+  <data name="CheckEdit_LabelWithPrice.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_LabelWithPrice.Properties.Caption" xml:space="preserve">
+    <value>Label with price</value>
+  </data>
+  <data name="Label19.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 15</value>
+  </data>
+  <data name="Label19.Text" xml:space="preserve">
+    <value>Practical label</value>
+  </data>
+  <data name="ComboBoxEdit_BatchLabelSolution.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ComboBoxEdit_BatchLabelSolution.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ComboBoxEdit_BatchLabelSolution.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ComboBoxEdit_BatchLabelSolution.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 15</value>
+  </data>
+  <data name="Label11.Text" xml:space="preserve">
+    <value>Batch label</value>
+  </data>
+  <data name="ComboBoxEdit_WareLabelSolution.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ComboBoxEdit_WareLabelSolution.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ComboBoxEdit_WareLabelSolution.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ComboBoxEdit_WareLabelSolution.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 15</value>
+  </data>
+  <data name="Label10.Text" xml:space="preserve">
+    <value>Item label</value>
+  </data>
+  <data name="GroupControl4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 597</value>
+  </data>
+  <data name="GroupControl4.Text" xml:space="preserve">
+    <value>Label / report configure</value>
+  </data>
+  <data name="TextEdit_CustomAttribute4.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_CustomAttribute4.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_CustomAttribute4.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_CustomAttribute4.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_WareAttribute4Hidden.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_WareAttribute4Hidden.Properties.Caption" xml:space="preserve">
+    <value>Invisible</value>
+  </data>
+  <data name="CheckEdit_CustomWareAttribute4.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_CustomWareAttribute4.Properties.Caption" xml:space="preserve">
+    <value>Attribute4</value>
+  </data>
+  <data name="TextEdit_CustomAttribute3.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_CustomAttribute3.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_CustomAttribute3.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_CustomAttribute3.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_WareAttribute3Hidden.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_WareAttribute3Hidden.Properties.Caption" xml:space="preserve">
+    <value>Invisible</value>
+  </data>
+  <data name="CheckEdit_CustomWareAttribute3.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_CustomWareAttribute3.Properties.Caption" xml:space="preserve">
+    <value>Attribute3</value>
+  </data>
+  <data name="TextEdit_CustomAttribute2.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_CustomAttribute2.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_CustomAttribute2.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_CustomAttribute2.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_WareAttribute2Hidden.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_WareAttribute2Hidden.Properties.Caption" xml:space="preserve">
+    <value>Invisible</value>
+  </data>
+  <data name="CheckEdit_CustomWareAttribute2.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_CustomWareAttribute2.Properties.Caption" xml:space="preserve">
+    <value>Attribute2</value>
+  </data>
+  <data name="TextEdit_CustomAttribute1.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_CustomAttribute1.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_CustomAttribute1.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_CustomAttribute1.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_WareAttribute1Hidden.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_WareAttribute1Hidden.Properties.Caption" xml:space="preserve">
+    <value>Invisible</value>
+  </data>
+  <data name="CheckEdit_CustomWareAttribute1.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_CustomWareAttribute1.Properties.Caption" xml:space="preserve">
+    <value>Attribute1</value>
+  </data>
+  <data name="PanelControl_CustomAttribute.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 723</value>
+  </data>
+  <data name="PanelControl_CustomAttribute.Text" xml:space="preserve">
+    <value>Attribute settings</value>
+  </data>
+  <data name="GroupControl5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 870</value>
+  </data>
+  <data name="GroupControl5.Text" xml:space="preserve">
+    <value>Client attribute settings</value>
+  </data>
+  <data name="CheckEdit_AllowExtraConsign.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_AllowExtraConsign.Properties.Caption" xml:space="preserve">
+    <value>Allow extra arrival</value>
+  </data>
+  <data name="CheckEdit_PrintShoppingList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>269, 63</value>
+  </data>
+  <data name="CheckEdit_PrintShoppingList.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_PrintShoppingList.Properties.Caption" xml:space="preserve">
+    <value>Print shopping list in check-out</value>
+  </data>
+  <data name="CheckEdit_PrintShoppingList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 19</value>
+  </data>
+  <data name="CheckEdit_UnitPriceDisabledInIO.Location" type="System.Drawing.Point, System.Drawing">
+    <value>269, 88</value>
+  </data>
+  <data name="CheckEdit_UnitPriceDisabledInIO.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_UnitPriceDisabledInIO.Properties.Caption" xml:space="preserve">
+    <value>Unit price readonly in Check in / out</value>
+  </data>
+  <data name="CheckEdit_UnitPriceDisabledInIO.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 19</value>
+  </data>
+  <data name="CheckEdit_WareArriveConfirm.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_WareArriveConfirm.Properties.Caption" xml:space="preserve">
+    <value>Arrival confirm needed</value>
+  </data>
+  <data name="CheckEdit_WareArriveByRecipient.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_WareArriveByRecipient.Properties.Caption" xml:space="preserve">
+    <value>Recipient operations</value>
+  </data>
+  <data name="CheckEdit_ShowEnItemName.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_ShowEnItemName.Properties.Caption" xml:space="preserve">
+    <value>Show English item name</value>
+  </data>
+  <data name="CheckEdit_ShowEnItemName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 19</value>
+  </data>
+  <data name="CheckEdit_MoneyArriveConfirm.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_MoneyArriveConfirm.Properties.Caption" xml:space="preserve">
+    <value>Money arrival confirm needed</value>
+  </data>
+  <data name="CheckEdit_MoneyArriveConfirm.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 19</value>
+  </data>
+  <data name="CheckEdit_LabelPrintingDisabled.Location" type="System.Drawing.Point, System.Drawing">
+    <value>269, 163</value>
+  </data>
+  <data name="CheckEdit_LabelPrintingDisabled.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_LabelPrintingDisabled.Properties.Caption" xml:space="preserve">
+    <value>Label printing disabled</value>
+  </data>
+  <data name="CheckEdit_AllowPosSetSyncExport.Location" type="System.Drawing.Point, System.Drawing">
+    <value>269, 138</value>
+  </data>
+  <data name="CheckEdit_AllowPosSetSyncExport.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_AllowPosSetSyncExport.Properties.Caption" xml:space="preserve">
+    <value>Location management Sync. info export allowed</value>
+  </data>
+  <data name="CheckEdit_AllowPosSetSyncExport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>287, 19</value>
+  </data>
+  <data name="CheckEdit_ShowDeliveryFieldsInTurnover.Location" type="System.Drawing.Point, System.Drawing">
+    <value>269, 38</value>
+  </data>
+  <data name="CheckEdit_ShowDeliveryFieldsInTurnover.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_ShowDeliveryFieldsInTurnover.Properties.Caption" xml:space="preserve">
+    <value>Show delivery fields in check-in / out</value>
+  </data>
+  <data name="CheckEdit_ShowDeliveryFieldsInTurnover.Size" type="System.Drawing.Size, System.Drawing">
+    <value>244, 19</value>
+  </data>
+  <data name="CheckEdit_HideFinancials.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_HideFinancials.Properties.Caption" xml:space="preserve">
+    <value>Hide financials</value>
+  </data>
+  <data name="CheckEdit_QuickCustomerCreatingAllowed.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_QuickCustomerCreatingAllowed.Properties.Caption" xml:space="preserve">
+    <value>Customer create shotcut in check-out</value>
+  </data>
+  <data name="CheckEdit_QuickCustomerCreatingAllowed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>235, 19</value>
+  </data>
+  <data name="CheckEdit_AllowMinusStock.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_AllowMinusStock.Properties.Caption" xml:space="preserve">
+    <value>Allow minus stock</value>
+  </data>
+  <data name="CheckEdit_AllowMinusStock.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 19</value>
+  </data>
+  <data name="CheckEdit_WareSpecModelDiscard.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_WareSpecModelDiscard.Properties.Caption" xml:space="preserve">
+    <value>Hide spec model fields</value>
+  </data>
+  <data name="CheckEdit_WareSpecModelDiscard.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 19</value>
+  </data>
+  <data name="CheckEdit_ShowCustomWareCode.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit_ShowCustomWareCode.Properties.Caption" xml:space="preserve">
+    <value>Show item code</value>
+  </data>
+  <data name="CheckEdit_ShowCustomWareCode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 19</value>
+  </data>
+  <data name="GroupControl6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 1069</value>
+  </data>
+  <data name="GroupControl6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>605, 390</value>
+  </data>
+  <data name="GroupControl6.Text" xml:space="preserve">
+    <value>Etc.</value>
+  </data>
+</root>
