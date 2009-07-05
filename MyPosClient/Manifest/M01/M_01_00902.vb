@@ -442,8 +442,8 @@ Namespace Manifest
 
         Private Sub TbActionAdd()
 
-            'Dim choiceForm As New M_(Me.TransactRequestHandle, Me.FormID)
-            'Me.PopupForm(choiceForm,"TbActionAdd", False)
+            Dim chooseForm As New M_01_00101(Me.TransactRequestHandle, Me.FormID)
+            Me.PopupForm(choiceForm, "TbActionAdd", False)
 
         End Sub
 
