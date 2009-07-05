@@ -443,7 +443,7 @@ Namespace Manifest
         Private Sub TbActionAdd()
 
             Dim chooseForm As New M_01_00101(Me.TransactRequestHandle, Me.FormID)
-            Me.PopupForm(choiceForm, "TbActionAdd", False)
+            Me.PopupForm(chooseForm, "TbActionAdd", False)
 
         End Sub
 
