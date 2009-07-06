@@ -464,6 +464,7 @@ Namespace Business
 
                 Me._manifest.TextEdit_AffairName.Text = saleAffairRow.AFFAIR_NAME
                 Me._manifest.DateEdit_BeginDate.DateTime = saleAffairRow.BEGIN_DATE
+                Me._manifest.DateEdit_BeginDate.DateTime = saleAffairRow.END_DATE
                 Me._manifest.CalcEdit_AffairDays.EditValue = saleAffairRow.AFFAIR_DAYS
 
                 Dim templateConditions As New MyPosXAuto.Facade.AfBizManage.ConditionOfT_MP_SALE_TEMPLATE(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
@@ -527,7 +528,8 @@ Namespace Business
                          CommTK.FInteger(Me._manifest.CalcEdit_AffairDays.EditValue), _
                          affairID, _
                          Me._manifest.TextEdit_AffairName.Text, _
-                         Me._manifest.DateEdit_BeginDate.DateTime, _
+                         CommTK.GetBeginOfDate(Me._manifest.DateEdit_BeginDate.DateTime), _
+                         CommTK.GetEndOfDate(Me._manifest.DateEdit_BeginDate.DateTime.AddDays(CommTK.FInteger(Me._manifest.CalcEdit_AffairDays.EditValue))), _
                          Me._manifest.Label_TemplateID.Text)
 
                     Return String.Empty
@@ -537,7 +539,8 @@ Namespace Business
                         Me._manifest.SV_REVISING_AFFAIR_ID, _
                         CommTK.FInteger(Me._manifest.CalcEdit_AffairDays.EditValue), _
                         Me._manifest.TextEdit_AffairName.Text, _
-                        Me._manifest.DateEdit_BeginDate.DateTime, _
+                         CommTK.GetBeginOfDate(Me._manifest.DateEdit_BeginDate.DateTime), _
+                         CommTK.GetEndOfDate(Me._manifest.DateEdit_BeginDate.DateTime.AddDays(CommTK.FInteger(Me._manifest.CalcEdit_AffairDays.EditValue))), _
                         Me._manifest.Label_TemplateID.Text)
 
                 'Dim servResult As String = _                                       
