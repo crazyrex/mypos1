@@ -107,20 +107,19 @@ Namespace Manifest
             Me.SetKeyJumpCycle(Keys.Enter, True, _
                  Me.TextEdit_AffairName, _
                  Me.DateEdit_BeginDate, _
-                 Me.CalcEdit_AffairDays, _
+                 Me.SpinEdit_AffairDays, _
                  Me.ButtonEdit_TemplateCode)
 
             Me.SetValueEditControls( _
                  Me.TextEdit_AffairName, _
                  Me.DateEdit_BeginDate, _
-                 Me.CalcEdit_AffairDays, _
+                 Me.SpinEdit_AffairDays, _
                  Me.ButtonEdit_TemplateCode)
 
             'Me.SetToolStripButtonFunctionKey(Me.ToolStripButton_Close, Keys.F12)
 
             Me.FormInputGuarder.SetValidate(Me.TextEdit_AffairName, InputGuarder.ValidateClassify.Required, Nothing)
             Me.FormInputGuarder.SetValidate(Me.DateEdit_BeginDate, InputGuarder.ValidateClassify.Required, Nothing)
-            Me.FormInputGuarder.SetValidate(Me.CalcEdit_AffairDays, InputGuarder.ValidateClassify.Required, Nothing)
             Me.FormInputGuarder.SetValidate(Me.ButtonEdit_TemplateCode, InputGuarder.ValidateClassify.Required, Nothing)
 
             Me.FormInputGuarder.SetInputLinkedLabel(Me.ButtonEdit_TemplateCode, Me.Label_TemplateName, Me.Label_TemplateID)
@@ -332,7 +331,9 @@ Namespace Manifest
         End Function
 
         Public Overrides Function ValidateInput() As String
-
+            If CommTK.FInteger(Me.SpinEdit_AffairDays.EditValue) <= 0 Then
+                Return MyPosXService.Decls.MSG_ALERT_00060
+            End If
             Return String.Empty
 
         End Function
