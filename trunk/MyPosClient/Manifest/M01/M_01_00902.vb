@@ -45,10 +45,10 @@ Namespace Manifest
         'Public SVLM_UTLD_0002 As String ="SVLM_UTLD_0002"
 
         '数据列表变量
-        'Public SVFT_BINDING_XXX_LIST As New XAuto.FTs.FT_
+        Public SVFT_BINDING_POS_LIST As New MyPosXAuto.FTs.FT_M_MP_POS
         'Public SVFT_CHOOSE_XXX_LIST As New XAuto.FTs.FT_
 
-        'Public SVFR_SELECTING_XXX_ROW As XAuto.FTs.FT_ Row
+        Public SVFR_SELECTING_POS_ROW As MyPosXAuto.FTs.FT_M_MP_POSRow
 
         #End Region
 
@@ -398,16 +398,16 @@ Namespace Manifest
         End Sub
 
 
-        'Private Sub RepositoryItemCheckEdit_Select_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemCheckEdit_Select.EditValueChanged
+        Private Sub RepositoryItemCheckEdit_Select_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemCheckEdit_Select.EditValueChanged
 
-        '    Dim checkEdit As DevExpress.XtraEditors.CheckEdit = CType(sender, DevExpress.XtraEditors.CheckEdit)                                                                 
-        '    Me.SVFR_SELECTING_ROW.ROW_SELECTED = checkEdit.Checked                                                                                                              
+            Dim checkEdit As DevExpress.XtraEditors.CheckEdit = CType(sender, DevExpress.XtraEditors.CheckEdit)
+            Me.SVFR_SELECTING_POS_ROW.ROW_SELECTED = checkEdit.Checked
 
-        'End Sub                                                                                                                                                                 
+        End Sub
 
-        'Private Sub GridView_List_FocusedRowChanged(ByVal sender As Object, ByVal e As DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs) Handles GridView_List.FocusedRowChanged
-        '    Me.DoPrivateUpdateSelectingRow()                                                                                                                                          
-        'End Sub                                                                                                                                                                          
+        Private Sub GridView_List_FocusedRowChanged(ByVal sender As Object, ByVal e As DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs) Handles GridView_Pos.FocusedRowChanged
+            Me.DoPrivateUpdateSelectingRow()
+        End Sub
 
 
         'Private Sub GridView_List_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles GridView_List.DoubleClick                                                     
@@ -568,42 +568,21 @@ Namespace Manifest
         Private Sub DoPrivateUpdateSelectingRow()
 
 
-            'Me.SVFR_SELECTING_ROW = Nothing                          
-            '                                                         
-            'Me.ToolStripButton_Delete.Enabled = False                
-            'Me.ToolStripButton_Revise.Enabled = False                
-            '                                                         
-            'If Me.GridView_BranchList.RowCount > 0 Then              
-            '    Me.SVFR_SELECTING_ROW = _                            
-            '        CType(Me.GridView_BindingList.GetDataRow( _      
-            '            Me.GridView_BindingList.FocusedRowHandle),  _
-            '            XAuto.FTs.FT_Row)                            
-            '                                                         
-            '    Me.ToolStripButton_Delete.Enabled = True             
-            '    Me.ToolStripButton_Revise.Enabled = True             
-            '                                                         
-            'End If                                                   
+            Me.SVFR_SELECTING_POS_ROW = Nothing
 
+            'Me.toolstripbutton_delete.enabled = False
+            'Me.toolstripbutton_revise.enabled = False
 
+            If Me.GridView_Pos.RowCount > 0 Then
+                Me.SVFR_SELECTING_POS_ROW = _
+                    CType(Me.GridView_Pos.GetDataRow( _
+                        Me.GridView_Pos.FocusedRowHandle),  _
+                        MyPosXAuto.FTs.FT_M_MP_POSRow)
 
-            'If IsNothing(Me.TreeList_XXXX.FocusedNode) = False Then  
-            '                                                         
-            '    Me.SVFR_SELECTING_ROW = _                            
-            '         CType(CType( _                                  
-            '             Me.TreeList_XXXX.GetDataRecordByNode( _     
-            '                 Me.TreeList_XXXX.FocusedNode),  _       
-            '             DataRowView).Row, XAuto.FTs.FT_M_AV_XXXXRow)
-            '                                                         
-            '    If Me.SVFR_SELECTING_ROW.XXXX_ID > 0 Then            
-            '        Me.ToolStripButton_Choose.Enabled = True         
-            '    End If                                               
-            '                                                         
-            '    Me.ToolStripButton_DeleteXXXX.Enabled = True         
-            '    Me.ToolStripButton_ReviseXXXX.Enabled = True         
-            '                                                         
-            'End If                                                   
+                'Me.toolstripbutton_delete.enabled = True
+                'Me.toolstripbutton_revise.enabled = True
 
-
+            End If
 
         End Sub
 

@@ -6,17 +6,41 @@ Imports System.Data
 
 Namespace Facade
 
-    Public Class OpManage
+    Public Class OpBizManage
 
-        Public Shared Function ValidatePosAffairConflict(ByVal affairID As String, ByVal affairPosList As MyPosXAuto.FTs.FT_T_MP_SALE_AFFAIR_POS) As Boolean
+        Public Shared Function ValidatePosAffairConflict( _
+            ByVal affairID As String, _
+            ByVal beginDate As DateTime, _
+            ByVal endDate As DateTime, _
+            ByVal affairPosList As MyPosXAuto.FTs.FT_M_MP_POS) As Boolean
 
+            beginDate = CommTK.GetBeginOfDate(beginDate)
+            endDate = CommTK.GetEndOfDate(endDate)
 
             Dim affairPosCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_T_MP_SALE_AFFAIR_POS(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
-            Dim otherAffairPosList As New MyPosXAuto.FTs.FT_XV_T_MP_SALE_AFFAIR_POS
-            Dim otherAffairPosRow As MyPosXAuto.FTs.FT_XV_T_MP_SALE_AFFAIR_POSRow
-            affairPosCondition.Add(AfXV.XV_T_MP_SALE_AFFAIR_POSColumns.BEGIN_DATEColumn, "<=", CommTK.GetSyncServerTime)
-            affairPosCondition.Add(AfXV.XV_T_MP_SALE_AFFAIR_POSColumns.BEGIN_DATEColumn, "<=", CommTK.GetSyncServerTime)
+            Dim dateRangeCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_T_MP_SALE_AFFAIR_POS(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_Or)
+
+            Dim beginCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_T_MP_SALE_AFFAIR_POS(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim endCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_T_MP_SALE_AFFAIR_POS(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim includingCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_T_MP_SALE_AFFAIR_POS(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+
+
+            beginCondition.Add(AfXV.XV_T_MP_SALE_AFFAIR_POSColumns.BEGIN_DATEColumn, ">=", beginDate)
+            beginCondition.Add(AfXV.XV_T_MP_SALE_AFFAIR_POSColumns.BEGIN_DATEColumn, "<=", endDate)
+
+            endCondition.Add(AfXV.XV_T_MP_SALE_AFFAIR_POSColumns.END_DATEColumn, ">=", beginDate)
+            endCondition.Add(AfXV.XV_T_MP_SALE_AFFAIR_POSColumns.END_DATEColumn, "<=", endDate)
+
+            includingCondition.Add(AfXV.XV_T_MP_SALE_AFFAIR_POSColumns.BEGIN_DATEColumn, "<=", beginDate)
+            includingCondition.Add(AfXV.XV_T_MP_SALE_AFFAIR_POSColumns.END_DATEColumn, ">=", endDate)
+
+            dateRangeCondition.Add(beginCondition, True)
+            dateRangeCondition.Add(endCondition, True)
+            dateRangeCondition.Add(includingCondition, True)
+            affairPosCondition.Add(dateRangeCondition, True)
             affairPosCondition.Add(AfXV.XV_T_MP_SALE_AFFAIR_POSColumns.AFFAIR_IDColumn, "<>", affairID)
+
+            Dim otherAffairPosList As New MyPosXAuto.FTs.FT_XV_T_MP_SALE_AFFAIR_POS
             MyPosXAuto.Facade.AfXV.FillFT_XV_T_MP_SALE_AFFAIR_POS(affairPosCondition, otherAffairPosList)
 
             If otherAffairPosList.Count = 0 Then
@@ -24,15 +48,16 @@ Namespace Facade
             End If
 
             Dim result As Boolean = True
-            For Each selectedAffairPosRow As MyPosXAuto.FTs.FT_T_MP_SALE_AFFAIR_POSRow In affairPosList.FindRowsSelecting(True)
+            Dim otherAffairPosRow As MyPosXAuto.FTs.FT_XV_T_MP_SALE_AFFAIR_POSRow
+            For Each selectedPosRow As MyPosXAuto.FTs.FT_M_MP_POSRow In affairPosList.FindRowsSelecting(True)
 
                 affairPosCondition.Clear()
-                affairPosCondition.Add(AfXV.XV_T_MP_SALE_AFFAIR_POSColumns.POS_IDColumn, "=", selectedAffairPosRow.POS_ID)
+                affairPosCondition.Add(AfXV.XV_T_MP_SALE_AFFAIR_POSColumns.POS_IDColumn, "=", selectedPosRow.POS_ID)
 
                 otherAffairPosRow = otherAffairPosList.FindRowByCondition(affairPosCondition)
                 If IsNothing(otherAffairPosRow) = False Then
-                    selectedAffairPosRow.ROW_HIGHLIGHT = Decls.ROW_HIGHLIGHT_EXIST
-                    selectedAffairPosRow.ROW_REMARK = CommTK.GetTranslatedString(Decls.ROW_REMARK_0005, otherAffairPosRow.AFFAIR_NAME, otherAffairPosRow.TEMPLATE_CODE)
+                    selectedPosRow.ROW_HIGHLIGHT = Decls.ROW_HIGHLIGHT_EXIST
+                    selectedPosRow.ROW_REMARK = CommTK.GetTranslatedString(Decls.ROW_REMARK_0005, otherAffairPosRow.AFFAIR_NAME, otherAffairPosRow.TEMPLATE_CODE)
                     result = False
                 End If
             Next

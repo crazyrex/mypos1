@@ -374,7 +374,9 @@ Namespace Business
 
             Try
 
-
+                MyPosXAuto.Facade.AfBizMaster.FillFT_M_MP_POS( _
+                    Nothing, _
+                    Me._manifest.SVFT_BINDING_POS_LIST)
 
 
                 'Dim choosePurchaseWayList As New MyPosXAuto.FTs.FT_CIV_PURCHASE_WAY                                       
@@ -477,7 +479,22 @@ Namespace Business
                 Me._manifest.ButtonEdit_TemplateCode.Text = templateRowSE.TEMPLATE_CODE
                 Me._manifest.Label_TemplateName.Text = templateRowSE.TEMPLATE_NAME
                 Me._manifest.Label_TemplateID.Text = templateRowSE.TEMPLATE_ID
-           
+
+
+                Dim affairPosCondition As New MyPosXAuto.Facade.AfBizManage.ConditionOfT_MP_SALE_AFFAIR_POS(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+                affairPosCondition.Add(MyPosXAuto.Facade.AfBizManage.T_MP_SALE_AFFAIR_POSColumns.AFFAIR_IDColumn, "=", Me._manifest.SV_REVISING_AFFAIR_ID)
+
+                Dim posIDs = MyPosXAuto.Facade.AfBizManage.GetT_MP_SALE_AFFAIR_POS_CVListDistinct( _
+                    affairPosCondition, _
+                    MyPosXAuto.Facade.AfBizManage.T_MP_SALE_AFFAIR_POSColumns.POS_IDColumn)
+                Dim posCondition As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_MP_POS(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+                posCondition.Add(MyPosXAuto.Facade.AfBizMaster.M_MP_POSColumns.POS_IDColumn, True, posIDs)
+
+                Me._manifest.SVFT_BINDING_POS_LIST.UnselectAllRows()
+                For Each bindingRow As MyPosXAuto.FTs.FT_M_MP_POSRow In Me._manifest.SVFT_BINDING_POS_LIST.FindRowsByCondition(posCondition)
+                    bindingRow.ROW_SELECTED = True
+                Next
+
                 'Dim servResult As String = _                                       
                 '    Me._service.ServLoadInfo()                                     
 
@@ -521,6 +538,16 @@ Namespace Business
 
             Try
 
+                Dim dbAffairPosList As New MyPosXAuto.FTs.FT_T_MP_SALE_AFFAIR_POS
+
+                If MyPosXService.Facade.OpBizManage.ValidatePosAffairConflict( _
+                    Me._manifest.SV_REVISING_AFFAIR_ID, _
+                    Me._manifest.DateEdit_BeginDate.DateTime, _
+                    Me._manifest.DateEdit_BeginDate.DateTime.AddDays(Me._manifest.CalcEdit_AffairDays.Value), _
+                    Me._manifest.SVFT_BINDING_POS_LIST) = False Then
+                    Return MyPosXService.Decls.MSG_ALERT_00058
+                End If
+
                 If Me._manifest.SV_REVISING_AFFAIR_ID = String.Empty Then
                     Dim affairID = Guid.NewGuid.ToString
 
@@ -532,16 +559,47 @@ Namespace Business
                          CommTK.GetEndOfDate(Me._manifest.DateEdit_BeginDate.DateTime.AddDays(CommTK.FInteger(Me._manifest.CalcEdit_AffairDays.EditValue))), _
                          Me._manifest.Label_TemplateID.Text)
 
-                    Return String.Empty
-                End If
+                    For Each bindingRow As MyPosXAuto.FTs.FT_M_MP_POSRow In Me._manifest.SVFT_BINDING_POS_LIST.FindRowsSelecting(True)
+                        dbAffairPosList.AddNewT_MP_SALE_AFFAIR_POSRow( _
+                            affairID, _
+                            Guid.NewGuid.ToString, _
+                            bindingRow.POS_ID)
+                    Next
 
-                MyPosXAuto.Facade.AfBizManage.ReviseT_MP_SALE_AFFAIRInfo( _
-                        Me._manifest.SV_REVISING_AFFAIR_ID, _
-                        CommTK.FInteger(Me._manifest.CalcEdit_AffairDays.EditValue), _
-                        Me._manifest.TextEdit_AffairName.Text, _
-                         CommTK.GetBeginOfDate(Me._manifest.DateEdit_BeginDate.DateTime), _
-                         CommTK.GetEndOfDate(Me._manifest.DateEdit_BeginDate.DateTime.AddDays(CommTK.FInteger(Me._manifest.CalcEdit_AffairDays.EditValue))), _
-                        Me._manifest.Label_TemplateID.Text)
+                Else
+
+                    MyPosXAuto.Facade.AfBizManage.ReviseT_MP_SALE_AFFAIRInfo( _
+                            Me._manifest.SV_REVISING_AFFAIR_ID, _
+                            CommTK.FInteger(Me._manifest.CalcEdit_AffairDays.EditValue), _
+                            Me._manifest.TextEdit_AffairName.Text, _
+                             CommTK.GetBeginOfDate(Me._manifest.DateEdit_BeginDate.DateTime), _
+                             CommTK.GetEndOfDate(Me._manifest.DateEdit_BeginDate.DateTime.AddDays(CommTK.FInteger(Me._manifest.CalcEdit_AffairDays.EditValue))), _
+                            Me._manifest.Label_TemplateID.Text)
+
+                    Dim posIDs As New ArrayList
+                    For Each bindingRow As MyPosXAuto.FTs.FT_M_MP_POSRow In Me._manifest.SVFT_BINDING_POS_LIST.FindRowsSelecting(True)
+                        posIDs.Add(bindingRow.POS_ID)
+                    Next
+
+                    Dim affairPosCondition As New MyPosXAuto.Facade.AfBizManage.ConditionOfT_MP_SALE_AFFAIR_POS(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+                    affairPosCondition.Add(MyPosXAuto.Facade.AfBizManage.T_MP_SALE_AFFAIR_POSColumns.AFFAIR_IDColumn, "=", Me._manifest.SV_REVISING_AFFAIR_ID)
+                    MyPosXAuto.Facade.AfBizManage.FillFT_T_MP_SALE_AFFAIR_POS(affairPosCondition, dbAffairPosList)
+
+                    For Each posID As String In posIDs
+
+                        affairPosCondition.Clear()
+                        affairPosCondition.Add(MyPosXAuto.Facade.AfBizManage.T_MP_SALE_AFFAIR_POSColumns.POS_IDColumn, "=", posID)
+                        If dbAffairPosList.FindRowsByCondition(affairPosCondition).Length = 0 Then
+                            dbAffairPosList.AddNewT_MP_SALE_AFFAIR_POSRow(Me._manifest.SV_REVISING_AFFAIR_ID, Guid.NewGuid.ToString, posID)
+                        End If
+
+                    Next
+
+                    affairPosCondition.Clear()
+                    affairPosCondition.Add(MyPosXAuto.Facade.AfBizManage.T_MP_SALE_AFFAIR_POSColumns.POS_IDColumn, False, posIDs)
+                    dbAffairPosList.RemoveFT_T_MP_SALE_AFFAIR_POSRows(affairPosCondition)
+
+                End If
 
                 'Dim servResult As String = _                                       
                 '    Me._service.ServSaveInfo()                                     

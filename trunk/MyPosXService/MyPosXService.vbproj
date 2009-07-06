@@ -64,7 +64,7 @@
     <Compile Include="Facade\OpBizInventory.vb" />
     <Compile Include="Facade\OpBizMaster.vb" />
     <Compile Include="Facade\OpBizTurnover.vb" />
-    <Compile Include="Facade\OpManage.vb" />
+    <Compile Include="Facade\OpBizManage.vb" />
     <Compile Include="Facade\OpMP.vb" />
     <Compile Include="Facade\OpSysConfig.vb">
       <SubType>Code</SubType>
