@@ -48,14 +48,13 @@
             Dim CTag8 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag9 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag10 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
+            Dim CTag13 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag11 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
-            Dim CTag14 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
+            Dim CTag12 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim StyleFormatCondition1 As DevExpress.XtraGrid.StyleFormatCondition = New DevExpress.XtraGrid.StyleFormatCondition
             Dim StyleFormatCondition2 As DevExpress.XtraGrid.StyleFormatCondition = New DevExpress.XtraGrid.StyleFormatCondition
             Dim StyleFormatCondition3 As DevExpress.XtraGrid.StyleFormatCondition = New DevExpress.XtraGrid.StyleFormatCondition
-            Dim CTag12 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
-            Dim CTag13 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
-            Dim CTag15 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
+            Dim CTag14 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Me.ToolStrip_Form = New System.Windows.Forms.ToolStrip
             Me.ToolStripButton_Add = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_Save = New System.Windows.Forms.ToolStripButton
@@ -66,11 +65,12 @@
             Me.Label3 = New System.Windows.Forms.Label
             Me.DateEdit_BeginDate = New DevExpress.XtraEditors.DateEdit
             Me.Label4 = New System.Windows.Forms.Label
-            Me.CalcEdit_AffairDays = New DevExpress.XtraEditors.CalcEdit
             Me.ButtonEdit_TemplateCode = New DevExpress.XtraEditors.ButtonEdit
             Me.Label_TemplateID = New System.Windows.Forms.Label
             Me.Label_TemplateName = New System.Windows.Forms.Label
             Me.PanelControl_Filter = New DevExpress.XtraEditors.PanelControl
+            Me.TextEdit_Search = New DevExpress.XtraEditors.TextEdit
+            Me.Label5 = New System.Windows.Forms.Label
             Me.GridColumn_RowHighlight = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl
             Me.GridControl_Pos = New DevExpress.XtraGrid.GridControl
@@ -85,23 +85,22 @@
             Me.RepositoryItemLookUpEdit_PosSet = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
             Me.GridColumn_Remarks = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_Email = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.TextEdit_Search = New DevExpress.XtraEditors.TextEdit
-            Me.Label5 = New System.Windows.Forms.Label
+            Me.SpinEdit_AffairDays = New DevExpress.XtraEditors.SpinEdit
             Me.ToolStrip_Form.SuspendLayout()
             CType(Me.TextEdit_AffairName.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.DateEdit_BeginDate.Properties.VistaTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.DateEdit_BeginDate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.CalcEdit_AffairDays.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.ButtonEdit_TemplateCode.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.PanelControl_Filter, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.PanelControl_Filter.SuspendLayout()
+            CType(Me.TextEdit_Search.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.GroupControl1.SuspendLayout()
             CType(Me.GridControl_Pos, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.GridView_Pos, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemCheckEdit_Select, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemLookUpEdit_PosSet, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.TextEdit_Search.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.SpinEdit_AffairDays.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'DefaultLookAndFeel_Form
@@ -146,20 +145,20 @@
             'ToolStripButton_Add
             '
             Me.ToolStripButton_Add.Name = "ToolStripButton_Add"
-            Me.ToolStripButton_Add.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Add.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Add.Text = "添加"
             Me.ToolStripButton_Add.Visible = False
             '
             'ToolStripButton_Save
             '
             Me.ToolStripButton_Save.Name = "ToolStripButton_Save"
-            Me.ToolStripButton_Save.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Save.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Save.Text = "保存"
             '
             'ToolStripButton_Close
             '
             Me.ToolStripButton_Close.Name = "ToolStripButton_Close"
-            Me.ToolStripButton_Close.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Close.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Close.Text = "关闭"
             '
             'Label1
@@ -239,7 +238,7 @@
             Me.TextEdit_AffairName.EditValue = ""
             Me.TextEdit_AffairName.Location = New System.Drawing.Point(79, 11)
             Me.TextEdit_AffairName.Name = "TextEdit_AffairName"
-            Me.TextEdit_AffairName.Size = New System.Drawing.Size(278, 21)
+            Me.TextEdit_AffairName.Size = New System.Drawing.Size(278, 20)
             Me.TextEdit_AffairName.TabIndex = 10006
             CTag4.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag4.CalculatorRequired = True
@@ -310,7 +309,7 @@
             Me.DateEdit_BeginDate.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
             Me.DateEdit_BeginDate.Properties.NullDate = New Date(1753, 1, 1, 12, 0, 0, 0)
             Me.DateEdit_BeginDate.Properties.VistaTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
-            Me.DateEdit_BeginDate.Size = New System.Drawing.Size(109, 21)
+            Me.DateEdit_BeginDate.Size = New System.Drawing.Size(109, 20)
             Me.DateEdit_BeginDate.TabIndex = 10000
             CTag6.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag6.CalculatorRequired = True
@@ -373,13 +372,13 @@
             Me.Label4.Tag = CTag7
             Me.Label4.Text = "模板编号"
             '
-            'CalcEdit_AffairDays
+            'ButtonEdit_TemplateCode
             '
-            Me.CalcEdit_AffairDays.Location = New System.Drawing.Point(271, 36)
-            Me.CalcEdit_AffairDays.Name = "CalcEdit_AffairDays"
-            Me.CalcEdit_AffairDays.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-            Me.CalcEdit_AffairDays.Size = New System.Drawing.Size(86, 21)
-            Me.CalcEdit_AffairDays.TabIndex = 10000
+            Me.ButtonEdit_TemplateCode.Location = New System.Drawing.Point(79, 63)
+            Me.ButtonEdit_TemplateCode.Name = "ButtonEdit_TemplateCode"
+            Me.ButtonEdit_TemplateCode.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
+            Me.ButtonEdit_TemplateCode.Size = New System.Drawing.Size(109, 20)
+            Me.ButtonEdit_TemplateCode.TabIndex = 10000
             CTag8.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag8.CalculatorRequired = True
             CTag8.ComboValueTextBox = Nothing
@@ -398,20 +397,23 @@
             CTag8.KeyValueAbsentable = False
             CTag8.LeagleText = ""
             CTag8.NumericButtonTextBox = Nothing
-            CTag8.ParentControl = Me.CalcEdit_AffairDays
+            CTag8.ParentControl = Me.ButtonEdit_TemplateCode
             CTag8.SkipValidate = False
             CTag8.TimeButtonTextBox = Nothing
             CTag8.ToolTip = ""
             CTag8.ValueType = XL.Common.ControlValueType.Character
-            Me.CalcEdit_AffairDays.Tag = CTag8
+            Me.ButtonEdit_TemplateCode.Tag = CTag8
             '
-            'ButtonEdit_TemplateCode
+            'Label_TemplateID
             '
-            Me.ButtonEdit_TemplateCode.Location = New System.Drawing.Point(79, 63)
-            Me.ButtonEdit_TemplateCode.Name = "ButtonEdit_TemplateCode"
-            Me.ButtonEdit_TemplateCode.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
-            Me.ButtonEdit_TemplateCode.Size = New System.Drawing.Size(109, 21)
-            Me.ButtonEdit_TemplateCode.TabIndex = 10000
+            Me.Label_TemplateID.BackColor = System.Drawing.Color.White
+            Me.Label_TemplateID.Font = New System.Drawing.Font("Arial", 9.0!)
+            Me.Label_TemplateID.ForeColor = System.Drawing.Color.Black
+            Me.Label_TemplateID.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.Label_TemplateID.Location = New System.Drawing.Point(363, 66)
+            Me.Label_TemplateID.Name = "Label_TemplateID"
+            Me.Label_TemplateID.Size = New System.Drawing.Size(47, 20)
+            Me.Label_TemplateID.TabIndex = 10008
             CTag9.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag9.CalculatorRequired = True
             CTag9.ComboValueTextBox = Nothing
@@ -424,29 +426,32 @@
             CTag9.DisplayLinkTable = Nothing
             CTag9.FlexgridEditItem = ""
             CTag9.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
-            CTag9.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
+            CTag9.FormStatus = XL.Win.Component.BaseForm.FormStatuses.BeforeLoading
             CTag9.IsButtonCustomed = False
             CTag9.IsTextValid = True
             CTag9.KeyValueAbsentable = False
             CTag9.LeagleText = ""
             CTag9.NumericButtonTextBox = Nothing
-            CTag9.ParentControl = Me.ButtonEdit_TemplateCode
+            CTag9.ParentControl = Me.Label_TemplateID
             CTag9.SkipValidate = False
             CTag9.TimeButtonTextBox = Nothing
             CTag9.ToolTip = ""
             CTag9.ValueType = XL.Common.ControlValueType.Character
-            Me.ButtonEdit_TemplateCode.Tag = CTag9
+            Me.Label_TemplateID.Tag = CTag9
+            Me.Label_TemplateID.Text = "TEMPLATE_ID"
+            Me.Label_TemplateID.Visible = False
             '
-            'Label_TemplateID
+            'Label_TemplateName
             '
-            Me.Label_TemplateID.BackColor = System.Drawing.Color.White
-            Me.Label_TemplateID.Font = New System.Drawing.Font("Arial", 9.0!)
-            Me.Label_TemplateID.ForeColor = System.Drawing.Color.Black
-            Me.Label_TemplateID.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.Label_TemplateID.Location = New System.Drawing.Point(363, 66)
-            Me.Label_TemplateID.Name = "Label_TemplateID"
-            Me.Label_TemplateID.Size = New System.Drawing.Size(47, 20)
-            Me.Label_TemplateID.TabIndex = 10008
+            Me.Label_TemplateName.BackColor = System.Drawing.Color.White
+            Me.Label_TemplateName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+            Me.Label_TemplateName.Font = New System.Drawing.Font("Arial", 9.0!)
+            Me.Label_TemplateName.ForeColor = System.Drawing.Color.Black
+            Me.Label_TemplateName.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.Label_TemplateName.Location = New System.Drawing.Point(194, 66)
+            Me.Label_TemplateName.Name = "Label_TemplateName"
+            Me.Label_TemplateName.Size = New System.Drawing.Size(163, 20)
+            Me.Label_TemplateName.TabIndex = 10009
             CTag10.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag10.CalculatorRequired = True
             CTag10.ComboValueTextBox = Nothing
@@ -465,26 +470,66 @@
             CTag10.KeyValueAbsentable = False
             CTag10.LeagleText = ""
             CTag10.NumericButtonTextBox = Nothing
-            CTag10.ParentControl = Me.Label_TemplateID
+            CTag10.ParentControl = Me.Label_TemplateName
             CTag10.SkipValidate = False
             CTag10.TimeButtonTextBox = Nothing
             CTag10.ToolTip = ""
             CTag10.ValueType = XL.Common.ControlValueType.Character
-            Me.Label_TemplateID.Tag = CTag10
-            Me.Label_TemplateID.Text = "TEMPLATE_ID"
-            Me.Label_TemplateID.Visible = False
+            Me.Label_TemplateName.Tag = CTag10
             '
-            'Label_TemplateName
+            'PanelControl_Filter
             '
-            Me.Label_TemplateName.BackColor = System.Drawing.Color.White
-            Me.Label_TemplateName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-            Me.Label_TemplateName.Font = New System.Drawing.Font("Arial", 9.0!)
-            Me.Label_TemplateName.ForeColor = System.Drawing.Color.Black
-            Me.Label_TemplateName.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.Label_TemplateName.Location = New System.Drawing.Point(194, 66)
-            Me.Label_TemplateName.Name = "Label_TemplateName"
-            Me.Label_TemplateName.Size = New System.Drawing.Size(163, 20)
-            Me.Label_TemplateName.TabIndex = 10009
+            Me.PanelControl_Filter.Appearance.BackColor = System.Drawing.Color.White
+            Me.PanelControl_Filter.Appearance.Options.UseBackColor = True
+            Me.PanelControl_Filter.Controls.Add(Me.SpinEdit_AffairDays)
+            Me.PanelControl_Filter.Controls.Add(Me.TextEdit_Search)
+            Me.PanelControl_Filter.Controls.Add(Me.Label5)
+            Me.PanelControl_Filter.Controls.Add(Me.TextEdit_AffairName)
+            Me.PanelControl_Filter.Controls.Add(Me.Label_TemplateName)
+            Me.PanelControl_Filter.Controls.Add(Me.Label1)
+            Me.PanelControl_Filter.Controls.Add(Me.Label_TemplateID)
+            Me.PanelControl_Filter.Controls.Add(Me.Label2)
+            Me.PanelControl_Filter.Controls.Add(Me.ButtonEdit_TemplateCode)
+            Me.PanelControl_Filter.Controls.Add(Me.Label3)
+            Me.PanelControl_Filter.Controls.Add(Me.DateEdit_BeginDate)
+            Me.PanelControl_Filter.Controls.Add(Me.Label4)
+            Me.PanelControl_Filter.Dock = System.Windows.Forms.DockStyle.Top
+            Me.PanelControl_Filter.Location = New System.Drawing.Point(0, 25)
+            Me.PanelControl_Filter.Name = "PanelControl_Filter"
+            Me.PanelControl_Filter.Size = New System.Drawing.Size(710, 115)
+            Me.PanelControl_Filter.TabIndex = 10010
+            CTag13.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
+            CTag13.CalculatorRequired = True
+            CTag13.ComboValueTextBox = Nothing
+            CTag13.ControlRelatedCode = Nothing
+            CTag13.DateButtonTextBox = Nothing
+            CTag13.DateTimeButtonTextBox = Nothing
+            CTag13.DisplayLinkControl = Nothing
+            CTag13.DisplayLinkDisplayFieldName = Nothing
+            CTag13.DisplayLinkKeyFieldName = Nothing
+            CTag13.DisplayLinkTable = Nothing
+            CTag13.FlexgridEditItem = ""
+            CTag13.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
+            CTag13.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
+            CTag13.IsButtonCustomed = False
+            CTag13.IsTextValid = True
+            CTag13.KeyValueAbsentable = False
+            CTag13.LeagleText = ""
+            CTag13.NumericButtonTextBox = Nothing
+            CTag13.ParentControl = Me.PanelControl_Filter
+            CTag13.SkipValidate = False
+            CTag13.TimeButtonTextBox = Nothing
+            CTag13.ToolTip = ""
+            CTag13.ValueType = XL.Common.ControlValueType.Character
+            Me.PanelControl_Filter.Tag = CTag13
+            '
+            'TextEdit_Search
+            '
+            Me.TextEdit_Search.EditValue = ""
+            Me.TextEdit_Search.Location = New System.Drawing.Point(79, 88)
+            Me.TextEdit_Search.Name = "TextEdit_Search"
+            Me.TextEdit_Search.Size = New System.Drawing.Size(184, 20)
+            Me.TextEdit_Search.TabIndex = 10011
             CTag11.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag11.CalculatorRequired = True
             CTag11.ComboValueTextBox = Nothing
@@ -497,64 +542,54 @@
             CTag11.DisplayLinkTable = Nothing
             CTag11.FlexgridEditItem = ""
             CTag11.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
-            CTag11.FormStatus = XL.Win.Component.BaseForm.FormStatuses.BeforeLoading
+            CTag11.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
             CTag11.IsButtonCustomed = False
             CTag11.IsTextValid = True
             CTag11.KeyValueAbsentable = False
             CTag11.LeagleText = ""
             CTag11.NumericButtonTextBox = Nothing
-            CTag11.ParentControl = Me.Label_TemplateName
+            CTag11.ParentControl = Me.TextEdit_Search
             CTag11.SkipValidate = False
             CTag11.TimeButtonTextBox = Nothing
             CTag11.ToolTip = ""
             CTag11.ValueType = XL.Common.ControlValueType.Character
-            Me.Label_TemplateName.Tag = CTag11
+            Me.TextEdit_Search.Tag = CTag11
             '
-            'PanelControl_Filter
+            'Label5
             '
-            Me.PanelControl_Filter.Appearance.BackColor = System.Drawing.Color.White
-            Me.PanelControl_Filter.Appearance.Options.UseBackColor = True
-            Me.PanelControl_Filter.Controls.Add(Me.TextEdit_Search)
-            Me.PanelControl_Filter.Controls.Add(Me.Label5)
-            Me.PanelControl_Filter.Controls.Add(Me.TextEdit_AffairName)
-            Me.PanelControl_Filter.Controls.Add(Me.Label_TemplateName)
-            Me.PanelControl_Filter.Controls.Add(Me.Label1)
-            Me.PanelControl_Filter.Controls.Add(Me.Label_TemplateID)
-            Me.PanelControl_Filter.Controls.Add(Me.Label2)
-            Me.PanelControl_Filter.Controls.Add(Me.ButtonEdit_TemplateCode)
-            Me.PanelControl_Filter.Controls.Add(Me.Label3)
-            Me.PanelControl_Filter.Controls.Add(Me.CalcEdit_AffairDays)
-            Me.PanelControl_Filter.Controls.Add(Me.DateEdit_BeginDate)
-            Me.PanelControl_Filter.Controls.Add(Me.Label4)
-            Me.PanelControl_Filter.Dock = System.Windows.Forms.DockStyle.Top
-            Me.PanelControl_Filter.Location = New System.Drawing.Point(0, 25)
-            Me.PanelControl_Filter.Name = "PanelControl_Filter"
-            Me.PanelControl_Filter.Size = New System.Drawing.Size(710, 115)
-            Me.PanelControl_Filter.TabIndex = 10010
-            CTag14.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
-            CTag14.CalculatorRequired = True
-            CTag14.ComboValueTextBox = Nothing
-            CTag14.ControlRelatedCode = Nothing
-            CTag14.DateButtonTextBox = Nothing
-            CTag14.DateTimeButtonTextBox = Nothing
-            CTag14.DisplayLinkControl = Nothing
-            CTag14.DisplayLinkDisplayFieldName = Nothing
-            CTag14.DisplayLinkKeyFieldName = Nothing
-            CTag14.DisplayLinkTable = Nothing
-            CTag14.FlexgridEditItem = ""
-            CTag14.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
-            CTag14.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
-            CTag14.IsButtonCustomed = False
-            CTag14.IsTextValid = True
-            CTag14.KeyValueAbsentable = False
-            CTag14.LeagleText = ""
-            CTag14.NumericButtonTextBox = Nothing
-            CTag14.ParentControl = Me.PanelControl_Filter
-            CTag14.SkipValidate = False
-            CTag14.TimeButtonTextBox = Nothing
-            CTag14.ToolTip = ""
-            CTag14.ValueType = XL.Common.ControlValueType.Character
-            Me.PanelControl_Filter.Tag = CTag14
+            Me.Label5.BackColor = System.Drawing.Color.White
+            Me.Label5.Font = New System.Drawing.Font("Arial", 9.0!)
+            Me.Label5.ForeColor = System.Drawing.Color.Black
+            Me.Label5.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.Label5.Location = New System.Drawing.Point(15, 87)
+            Me.Label5.Name = "Label5"
+            Me.Label5.Size = New System.Drawing.Size(57, 20)
+            Me.Label5.TabIndex = 10010
+            CTag12.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
+            CTag12.CalculatorRequired = True
+            CTag12.ComboValueTextBox = Nothing
+            CTag12.ControlRelatedCode = Nothing
+            CTag12.DateButtonTextBox = Nothing
+            CTag12.DateTimeButtonTextBox = Nothing
+            CTag12.DisplayLinkControl = Nothing
+            CTag12.DisplayLinkDisplayFieldName = Nothing
+            CTag12.DisplayLinkKeyFieldName = Nothing
+            CTag12.DisplayLinkTable = Nothing
+            CTag12.FlexgridEditItem = ""
+            CTag12.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
+            CTag12.FormStatus = XL.Win.Component.BaseForm.FormStatuses.BeforeLoading
+            CTag12.IsButtonCustomed = False
+            CTag12.IsTextValid = True
+            CTag12.KeyValueAbsentable = False
+            CTag12.LeagleText = ""
+            CTag12.NumericButtonTextBox = Nothing
+            CTag12.ParentControl = Me.Label5
+            CTag12.SkipValidate = False
+            CTag12.TimeButtonTextBox = Nothing
+            CTag12.ToolTip = ""
+            CTag12.ValueType = XL.Common.ControlValueType.Character
+            Me.Label5.Tag = CTag12
+            Me.Label5.Text = "地点搜索"
             '
             'GridColumn_RowHighlight
             '
@@ -578,11 +613,11 @@
             '
             Me.GridControl_Pos.Dock = System.Windows.Forms.DockStyle.Fill
             Me.GridControl_Pos.EmbeddedNavigator.Name = ""
-            Me.GridControl_Pos.Location = New System.Drawing.Point(2, 21)
+            Me.GridControl_Pos.Location = New System.Drawing.Point(2, 20)
             Me.GridControl_Pos.MainView = Me.GridView_Pos
             Me.GridControl_Pos.Name = "GridControl_Pos"
             Me.GridControl_Pos.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemLookUpEdit_PosSet, Me.RepositoryItemCheckEdit_Select})
-            Me.GridControl_Pos.Size = New System.Drawing.Size(706, 279)
+            Me.GridControl_Pos.Size = New System.Drawing.Size(706, 280)
             Me.GridControl_Pos.TabIndex = 10001
             Me.GridControl_Pos.TabStop = False
             Me.GridControl_Pos.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView_Pos})
@@ -713,73 +748,14 @@
             Me.GridColumn_Email.VisibleIndex = 5
             Me.GridColumn_Email.Width = 39
             '
-            'TextEdit_Search
+            'SpinEdit_AffairDays
             '
-            Me.TextEdit_Search.EditValue = ""
-            Me.TextEdit_Search.Location = New System.Drawing.Point(79, 88)
-            Me.TextEdit_Search.Name = "TextEdit_Search"
-            Me.TextEdit_Search.Size = New System.Drawing.Size(184, 21)
-            Me.TextEdit_Search.TabIndex = 10011
-            CTag12.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
-            CTag12.CalculatorRequired = True
-            CTag12.ComboValueTextBox = Nothing
-            CTag12.ControlRelatedCode = Nothing
-            CTag12.DateButtonTextBox = Nothing
-            CTag12.DateTimeButtonTextBox = Nothing
-            CTag12.DisplayLinkControl = Nothing
-            CTag12.DisplayLinkDisplayFieldName = Nothing
-            CTag12.DisplayLinkKeyFieldName = Nothing
-            CTag12.DisplayLinkTable = Nothing
-            CTag12.FlexgridEditItem = ""
-            CTag12.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
-            CTag12.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
-            CTag12.IsButtonCustomed = False
-            CTag12.IsTextValid = True
-            CTag12.KeyValueAbsentable = False
-            CTag12.LeagleText = ""
-            CTag12.NumericButtonTextBox = Nothing
-            CTag12.ParentControl = Me.TextEdit_Search
-            CTag12.SkipValidate = False
-            CTag12.TimeButtonTextBox = Nothing
-            CTag12.ToolTip = ""
-            CTag12.ValueType = XL.Common.ControlValueType.Character
-            Me.TextEdit_Search.Tag = CTag12
-            '
-            'Label5
-            '
-            Me.Label5.BackColor = System.Drawing.Color.White
-            Me.Label5.Font = New System.Drawing.Font("Arial", 9.0!)
-            Me.Label5.ForeColor = System.Drawing.Color.Black
-            Me.Label5.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.Label5.Location = New System.Drawing.Point(15, 87)
-            Me.Label5.Name = "Label5"
-            Me.Label5.Size = New System.Drawing.Size(57, 20)
-            Me.Label5.TabIndex = 10010
-            CTag13.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
-            CTag13.CalculatorRequired = True
-            CTag13.ComboValueTextBox = Nothing
-            CTag13.ControlRelatedCode = Nothing
-            CTag13.DateButtonTextBox = Nothing
-            CTag13.DateTimeButtonTextBox = Nothing
-            CTag13.DisplayLinkControl = Nothing
-            CTag13.DisplayLinkDisplayFieldName = Nothing
-            CTag13.DisplayLinkKeyFieldName = Nothing
-            CTag13.DisplayLinkTable = Nothing
-            CTag13.FlexgridEditItem = ""
-            CTag13.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
-            CTag13.FormStatus = XL.Win.Component.BaseForm.FormStatuses.BeforeLoading
-            CTag13.IsButtonCustomed = False
-            CTag13.IsTextValid = True
-            CTag13.KeyValueAbsentable = False
-            CTag13.LeagleText = ""
-            CTag13.NumericButtonTextBox = Nothing
-            CTag13.ParentControl = Me.Label5
-            CTag13.SkipValidate = False
-            CTag13.TimeButtonTextBox = Nothing
-            CTag13.ToolTip = ""
-            CTag13.ValueType = XL.Common.ControlValueType.Character
-            Me.Label5.Tag = CTag13
-            Me.Label5.Text = "地点搜索"
+            Me.SpinEdit_AffairDays.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
+            Me.SpinEdit_AffairDays.Location = New System.Drawing.Point(271, 37)
+            Me.SpinEdit_AffairDays.Name = "SpinEdit_AffairDays"
+            Me.SpinEdit_AffairDays.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
+            Me.SpinEdit_AffairDays.Size = New System.Drawing.Size(86, 20)
+            Me.SpinEdit_AffairDays.TabIndex = 10012
             '
             'M_01_00902
             '
@@ -793,46 +769,46 @@
             Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
             Me.Name = "M_01_00902"
             Me.Size = New System.Drawing.Size(710, 442)
-            CTag15.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
-            CTag15.CalculatorRequired = True
-            CTag15.ComboValueTextBox = Nothing
-            CTag15.ControlRelatedCode = Nothing
-            CTag15.DateButtonTextBox = Nothing
-            CTag15.DateTimeButtonTextBox = Nothing
-            CTag15.DisplayLinkControl = Nothing
-            CTag15.DisplayLinkDisplayFieldName = Nothing
-            CTag15.DisplayLinkKeyFieldName = Nothing
-            CTag15.DisplayLinkTable = Nothing
-            CTag15.FlexgridEditItem = ""
-            CTag15.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
-            CTag15.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
-            CTag15.IsButtonCustomed = False
-            CTag15.IsTextValid = True
-            CTag15.KeyValueAbsentable = False
-            CTag15.LeagleText = ""
-            CTag15.NumericButtonTextBox = Nothing
-            CTag15.ParentControl = Me
-            CTag15.SkipValidate = False
-            CTag15.TimeButtonTextBox = Nothing
-            CTag15.ToolTip = ""
-            CTag15.ValueType = XL.Common.ControlValueType.Character
-            Me.Tag = CTag15
+            CTag14.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
+            CTag14.CalculatorRequired = True
+            CTag14.ComboValueTextBox = Nothing
+            CTag14.ControlRelatedCode = Nothing
+            CTag14.DateButtonTextBox = Nothing
+            CTag14.DateTimeButtonTextBox = Nothing
+            CTag14.DisplayLinkControl = Nothing
+            CTag14.DisplayLinkDisplayFieldName = Nothing
+            CTag14.DisplayLinkKeyFieldName = Nothing
+            CTag14.DisplayLinkTable = Nothing
+            CTag14.FlexgridEditItem = ""
+            CTag14.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
+            CTag14.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
+            CTag14.IsButtonCustomed = False
+            CTag14.IsTextValid = True
+            CTag14.KeyValueAbsentable = False
+            CTag14.LeagleText = ""
+            CTag14.NumericButtonTextBox = Nothing
+            CTag14.ParentControl = Me
+            CTag14.SkipValidate = False
+            CTag14.TimeButtonTextBox = Nothing
+            CTag14.ToolTip = ""
+            CTag14.ValueType = XL.Common.ControlValueType.Character
+            Me.Tag = CTag14
             Me.ToolStrip_Form.ResumeLayout(False)
             Me.ToolStrip_Form.PerformLayout()
             CType(Me.TextEdit_AffairName.Properties, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.DateEdit_BeginDate.Properties.VistaTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.DateEdit_BeginDate.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.CalcEdit_AffairDays.Properties, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.ButtonEdit_TemplateCode.Properties, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.PanelControl_Filter, System.ComponentModel.ISupportInitialize).EndInit()
             Me.PanelControl_Filter.ResumeLayout(False)
+            CType(Me.TextEdit_Search.Properties, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.GroupControl1.ResumeLayout(False)
             CType(Me.GridControl_Pos, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.GridView_Pos, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemCheckEdit_Select, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemLookUpEdit_PosSet, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.TextEdit_Search.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.SpinEdit_AffairDays.Properties, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -843,7 +819,6 @@
         Friend WithEvents Label3 As System.Windows.Forms.Label
         Friend WithEvents DateEdit_BeginDate As DevExpress.XtraEditors.DateEdit
         Friend WithEvents Label4 As System.Windows.Forms.Label
-        Friend WithEvents CalcEdit_AffairDays As DevExpress.XtraEditors.CalcEdit
         Friend WithEvents ButtonEdit_TemplateCode As DevExpress.XtraEditors.ButtonEdit
         Friend WithEvents Label_TemplateID As System.Windows.Forms.Label
         Friend WithEvents Label_TemplateName As System.Windows.Forms.Label
@@ -864,6 +839,7 @@
         Friend WithEvents GridColumn_Email As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents TextEdit_Search As DevExpress.XtraEditors.TextEdit
         Friend WithEvents Label5 As System.Windows.Forms.Label
+        Friend WithEvents SpinEdit_AffairDays As DevExpress.XtraEditors.SpinEdit
 
 #End Region
 
