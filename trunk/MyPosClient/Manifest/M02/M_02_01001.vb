@@ -120,9 +120,9 @@ Namespace Manifest
             '指定需要备份值的控件
             'Me.SetValueBackupControl(Me.ControlToBeBackup)
 
-            Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Add, AddressOf Me.TbActionAdd)
+            'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Add, AddressOf Me.TbActionAdd)
             Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Save, AddressOf Me.TbActionSave)
-            Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Remove, AddressOf Me.TbActionRemove)
+            'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Remove, AddressOf Me.TbActionRemove)
             Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Close, AddressOf Me.TbActionClose)
             'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0001, AddressOf Me.TbActionUtld0001)
             'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0002, AddressOf Me.TbActionUtld0002)
