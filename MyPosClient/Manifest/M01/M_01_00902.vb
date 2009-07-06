@@ -826,6 +826,12 @@ Namespace Manifest
                 Me._bizAgent.DoRequest(Business.B_01_00902.Affairs.LoadSaleTemplateInfoByCode, False)
             End If
         End Sub
+
+        Private Sub TextEdit_Search_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextEdit_Search.KeyDown
+            If e.KeyCode = Keys.Enter Then
+                WinTK.SearchGridViewText(Me.GridView_Pos, Me.TextEdit_Search.Text, True)
+            End If
+        End Sub
     End Class
 
 

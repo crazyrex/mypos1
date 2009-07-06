@@ -76,7 +76,6 @@
             Me.Label2 = New System.Windows.Forms.Label
             Me.GridControl_SaleTemplateWare = New DevExpress.XtraGrid.GridControl
             Me.GridView_SaleTemplateWare = New DevExpress.XtraGrid.Views.Grid.GridView
-            Me.GridColumn_TemplateID = New DevExpress.XtraGrid.Columns.GridColumn
             Me.RepositoryItemLookUpEdit_TemplateID = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
             Me.GridColumn_WareID = New DevExpress.XtraGrid.Columns.GridColumn
             Me.RepositoryItemLookUpEdit_WareID = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
@@ -483,7 +482,7 @@
             '
             'GridView_SaleTemplateWare
             '
-            Me.GridView_SaleTemplateWare.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn_TemplateID, Me.GridColumn_WareID, Me.GridColumn_DiscountType, Me.GridColumn_DiscountAmount, Me.GridColumn_RowHighlight})
+            Me.GridView_SaleTemplateWare.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn_WareID, Me.GridColumn_DiscountType, Me.GridColumn_DiscountAmount, Me.GridColumn_RowHighlight})
             StyleFormatCondition1.Appearance.BackColor = System.Drawing.Color.Lime
             StyleFormatCondition1.Appearance.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
             StyleFormatCondition1.Appearance.Options.UseBackColor = True
@@ -497,18 +496,6 @@
             Me.GridView_SaleTemplateWare.OptionsView.ColumnAutoWidth = False
             Me.GridView_SaleTemplateWare.OptionsView.ShowFooter = True
             Me.GridView_SaleTemplateWare.OptionsView.ShowGroupPanel = False
-            '
-            'GridColumn_TemplateID
-            '
-            Me.GridColumn_TemplateID.Caption = "模板编号"
-            Me.GridColumn_TemplateID.ColumnEdit = Me.RepositoryItemLookUpEdit_TemplateID
-            Me.GridColumn_TemplateID.FieldName = "TEMPLATE_ID"
-            Me.GridColumn_TemplateID.Name = "GridColumn_TemplateID"
-            Me.GridColumn_TemplateID.OptionsColumn.AllowFocus = False
-            Me.GridColumn_TemplateID.SummaryItem.FieldName = "STAFF_CODE"
-            Me.GridColumn_TemplateID.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Count
-            Me.GridColumn_TemplateID.Visible = True
-            Me.GridColumn_TemplateID.VisibleIndex = 0
             '
             'RepositoryItemLookUpEdit_TemplateID
             '
@@ -527,7 +514,7 @@
             Me.GridColumn_WareID.Name = "GridColumn_WareID"
             Me.GridColumn_WareID.OptionsColumn.AllowFocus = False
             Me.GridColumn_WareID.Visible = True
-            Me.GridColumn_WareID.VisibleIndex = 1
+            Me.GridColumn_WareID.VisibleIndex = 0
             '
             'RepositoryItemLookUpEdit_WareID
             '
@@ -546,7 +533,7 @@
             Me.GridColumn_DiscountType.Name = "GridColumn_DiscountType"
             Me.GridColumn_DiscountType.OptionsColumn.AllowFocus = False
             Me.GridColumn_DiscountType.Visible = True
-            Me.GridColumn_DiscountType.VisibleIndex = 2
+            Me.GridColumn_DiscountType.VisibleIndex = 1
             '
             'RepositoryItemLookUpEdit_DiscountType
             '
@@ -564,7 +551,7 @@
             Me.GridColumn_DiscountAmount.Name = "GridColumn_DiscountAmount"
             Me.GridColumn_DiscountAmount.OptionsColumn.AllowFocus = False
             Me.GridColumn_DiscountAmount.Visible = True
-            Me.GridColumn_DiscountAmount.VisibleIndex = 3
+            Me.GridColumn_DiscountAmount.VisibleIndex = 2
             '
             'GridColumn_RowHighlight
             '
@@ -630,7 +617,6 @@
         Friend WithEvents Label2 As System.Windows.Forms.Label
         Friend WithEvents GridControl_SaleTemplateWare As DevExpress.XtraGrid.GridControl
         Friend WithEvents GridView_SaleTemplateWare As DevExpress.XtraGrid.Views.Grid.GridView
-        Friend WithEvents GridColumn_TemplateID As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents GridColumn_WareID As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents GridColumn_DiscountType As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents GridColumn_DiscountAmount As DevExpress.XtraGrid.Columns.GridColumn
