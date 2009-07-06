@@ -178,7 +178,7 @@
     <value>0, 0</value>
   </data>
   <data name="TreeList_WareClassify.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 243</value>
+    <value>259, 245</value>
   </data>
   <data name="TreeList_WareClassify.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -208,7 +208,7 @@
     <value>NoControl</value>
   </data>
   <data name="LinkLabel_DeleteImage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 17</value>
+    <value>217, 17</value>
   </data>
   <data name="LinkLabel_DeleteImage.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 15</value>
@@ -265,7 +265,7 @@
     <value>0, 0</value>
   </data>
   <data name="PictureBox_Item.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 173</value>
+    <value>259, 173</value>
   </data>
   <data name="PictureBox_Item.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -286,7 +286,7 @@
     <value>Panel2</value>
   </data>
   <data name="SplitContainerControl_Left.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 422</value>
+    <value>259, 424</value>
   </data>
   <data name="SplitContainerControl_Left.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -448,7 +448,7 @@
     <value>高亮显示</value>
   </data>
   <data name="GridControl_Ware.Size" type="System.Drawing.Size, System.Drawing">
-    <value>425, 422</value>
+    <value>427, 424</value>
   </data>
   <data name="GridControl_Ware.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -643,7 +643,7 @@
     <value>True</value>
   </data>
   <data name="LinkLabel_CancelAll.Location" type="System.Drawing.Point, System.Drawing">
-    <value>641, 18</value>
+    <value>642, 17</value>
   </data>
   <data name="LinkLabel_CancelAll.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 15</value>
@@ -670,7 +670,7 @@
     <value>Top, Right</value>
   </data>
   <data name="LinkLabel_SelectAll.Location" type="System.Drawing.Point, System.Drawing">
-    <value>601, 18</value>
+    <value>602, 17</value>
   </data>
   <data name="LinkLabel_SelectAll.Size" type="System.Drawing.Size, System.Drawing">
     <value>34, 17</value>
@@ -697,7 +697,7 @@
     <value>Top, Right</value>
   </data>
   <data name="LinkLabel_AllWareList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>514, 18</value>
+    <value>515, 17</value>
   </data>
   <data name="LinkLabel_AllWareList.Size" type="System.Drawing.Size, System.Drawing">
     <value>81, 17</value>
@@ -724,7 +724,7 @@
     <value>Top, Right</value>
   </data>
   <data name="LinkLabel_AllWareExportExcel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>422, 18</value>
+    <value>423, 17</value>
   </data>
   <data name="LinkLabel_AllWareExportExcel.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 17</value>
@@ -778,7 +778,7 @@
     <value>Arial, 9pt</value>
   </data>
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 18</value>
+    <value>20, 17</value>
   </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 15</value>
