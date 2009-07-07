@@ -79,21 +79,21 @@ Namespace Facade
             affairPosCondition.Add(AfXV.XV_T_MP_SALE_AFFAIR_POSColumns.END_DATEColumn, ">=", CommTK.GetSyncServerTime)
             Dim affairPosRow = MyPosXAuto.Facade.AfXV.GetXV_T_MP_SALE_AFFAIR_POSRow(affairPosCondition)
 
-            If IsNothing(affairPosRow) = False Then
+            If IsNothing(affairPosRow) = True Then
                 Return
             End If
 
             Dim affairTemplateWareCondition As New MyPosXAuto.Facade.AfBizManage.ConditionOfT_MP_SALE_TEMPLATE_WARE(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
             affairTemplateWareCondition.Add(AfBizManage.T_MP_SALE_TEMPLATE_WAREColumns.TEMPLATE_IDColumn, "=", affairPosRow.TEMPLATE_ID)
 
-            Dim affairTemplateRow = _
-                          MyPosXAuto.Facade.AfBizManage.GetT_MP_SALE_TEMPLATERow(affairPosRow.TEMPLATE_ID)
+            Dim affairTemplateRow = MyPosXAuto.Facade.AfBizManage.GetT_MP_SALE_TEMPLATERow(affairPosRow.TEMPLATE_ID)
 
             Dim descriptionBuilder As New LineStrBuilder
             descriptionBuilder.AppendLine("名称{0}:", affairPosRow.AFFAIR_NAME)
             descriptionBuilder.AppendLine("起始: {0:yyyy-MM-dd}", affairPosRow.BEGIN_DATE)
             descriptionBuilder.AppendLine("截止: {0:yyyy-MM-dd}", affairPosRow.END_DATE)
             descriptionBuilder.AppendLine("优惠模板: {0}", affairTemplateRow.TEMPLATE_NAME)
+
         End Sub
     End Class
 

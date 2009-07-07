@@ -48,9 +48,9 @@
             Dim CTag8 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag9 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag10 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
-            Dim CTag13 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag11 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag12 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
+            Dim CTag13 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim StyleFormatCondition1 As DevExpress.XtraGrid.StyleFormatCondition = New DevExpress.XtraGrid.StyleFormatCondition
             Dim StyleFormatCondition2 As DevExpress.XtraGrid.StyleFormatCondition = New DevExpress.XtraGrid.StyleFormatCondition
             Dim StyleFormatCondition3 As DevExpress.XtraGrid.StyleFormatCondition = New DevExpress.XtraGrid.StyleFormatCondition
@@ -71,8 +71,9 @@
             Me.PanelControl_Filter = New DevExpress.XtraEditors.PanelControl
             Me.TextEdit_Search = New DevExpress.XtraEditors.TextEdit
             Me.Label5 = New System.Windows.Forms.Label
-            Me.GridColumn_RowHighlight = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl
+            Me.SpinEdit_AffairDays = New DevExpress.XtraEditors.SpinEdit
+            Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl
             Me.GridControl_Pos = New DevExpress.XtraGrid.GridControl
             Me.GridView_Pos = New DevExpress.XtraGrid.Views.Grid.GridView
             Me.GridColumn_Select = New DevExpress.XtraGrid.Columns.GridColumn
@@ -83,9 +84,9 @@
             Me.GridColumn_PosAddress = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_PriceSetID = New DevExpress.XtraGrid.Columns.GridColumn
             Me.RepositoryItemLookUpEdit_PosSet = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
+            Me.GridColumn_RowHighlight = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_Remarks = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_Email = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.SpinEdit_AffairDays = New DevExpress.XtraEditors.SpinEdit
             Me.ToolStrip_Form.SuspendLayout()
             CType(Me.TextEdit_AffairName.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.DateEdit_BeginDate.Properties.VistaTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -96,11 +97,13 @@
             CType(Me.TextEdit_Search.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.GroupControl1.SuspendLayout()
+            CType(Me.SpinEdit_AffairDays.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.PanelControl1.SuspendLayout()
             CType(Me.GridControl_Pos, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.GridView_Pos, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemCheckEdit_Select, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemLookUpEdit_PosSet, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.SpinEdit_AffairDays.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'DefaultLookAndFeel_Form
@@ -482,8 +485,6 @@
             Me.PanelControl_Filter.Appearance.BackColor = System.Drawing.Color.White
             Me.PanelControl_Filter.Appearance.Options.UseBackColor = True
             Me.PanelControl_Filter.Controls.Add(Me.SpinEdit_AffairDays)
-            Me.PanelControl_Filter.Controls.Add(Me.TextEdit_Search)
-            Me.PanelControl_Filter.Controls.Add(Me.Label5)
             Me.PanelControl_Filter.Controls.Add(Me.TextEdit_AffairName)
             Me.PanelControl_Filter.Controls.Add(Me.Label_TemplateName)
             Me.PanelControl_Filter.Controls.Add(Me.Label1)
@@ -498,38 +499,6 @@
             Me.PanelControl_Filter.Name = "PanelControl_Filter"
             Me.PanelControl_Filter.Size = New System.Drawing.Size(710, 115)
             Me.PanelControl_Filter.TabIndex = 10010
-            CTag13.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
-            CTag13.CalculatorRequired = True
-            CTag13.ComboValueTextBox = Nothing
-            CTag13.ControlRelatedCode = Nothing
-            CTag13.DateButtonTextBox = Nothing
-            CTag13.DateTimeButtonTextBox = Nothing
-            CTag13.DisplayLinkControl = Nothing
-            CTag13.DisplayLinkDisplayFieldName = Nothing
-            CTag13.DisplayLinkKeyFieldName = Nothing
-            CTag13.DisplayLinkTable = Nothing
-            CTag13.FlexgridEditItem = ""
-            CTag13.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
-            CTag13.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
-            CTag13.IsButtonCustomed = False
-            CTag13.IsTextValid = True
-            CTag13.KeyValueAbsentable = False
-            CTag13.LeagleText = ""
-            CTag13.NumericButtonTextBox = Nothing
-            CTag13.ParentControl = Me.PanelControl_Filter
-            CTag13.SkipValidate = False
-            CTag13.TimeButtonTextBox = Nothing
-            CTag13.ToolTip = ""
-            CTag13.ValueType = XL.Common.ControlValueType.Character
-            Me.PanelControl_Filter.Tag = CTag13
-            '
-            'TextEdit_Search
-            '
-            Me.TextEdit_Search.EditValue = ""
-            Me.TextEdit_Search.Location = New System.Drawing.Point(79, 88)
-            Me.TextEdit_Search.Name = "TextEdit_Search"
-            Me.TextEdit_Search.Size = New System.Drawing.Size(184, 20)
-            Me.TextEdit_Search.TabIndex = 10011
             CTag11.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag11.CalculatorRequired = True
             CTag11.ComboValueTextBox = Nothing
@@ -548,23 +517,20 @@
             CTag11.KeyValueAbsentable = False
             CTag11.LeagleText = ""
             CTag11.NumericButtonTextBox = Nothing
-            CTag11.ParentControl = Me.TextEdit_Search
+            CTag11.ParentControl = Me.PanelControl_Filter
             CTag11.SkipValidate = False
             CTag11.TimeButtonTextBox = Nothing
             CTag11.ToolTip = ""
             CTag11.ValueType = XL.Common.ControlValueType.Character
-            Me.TextEdit_Search.Tag = CTag11
+            Me.PanelControl_Filter.Tag = CTag11
             '
-            'Label5
+            'TextEdit_Search
             '
-            Me.Label5.BackColor = System.Drawing.Color.White
-            Me.Label5.Font = New System.Drawing.Font("Arial", 9.0!)
-            Me.Label5.ForeColor = System.Drawing.Color.Black
-            Me.Label5.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.Label5.Location = New System.Drawing.Point(15, 87)
-            Me.Label5.Name = "Label5"
-            Me.Label5.Size = New System.Drawing.Size(57, 20)
-            Me.Label5.TabIndex = 10010
+            Me.TextEdit_Search.EditValue = ""
+            Me.TextEdit_Search.Location = New System.Drawing.Point(76, 12)
+            Me.TextEdit_Search.Name = "TextEdit_Search"
+            Me.TextEdit_Search.Size = New System.Drawing.Size(278, 20)
+            Me.TextEdit_Search.TabIndex = 10011
             CTag12.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag12.CalculatorRequired = True
             CTag12.ComboValueTextBox = Nothing
@@ -577,48 +543,95 @@
             CTag12.DisplayLinkTable = Nothing
             CTag12.FlexgridEditItem = ""
             CTag12.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
-            CTag12.FormStatus = XL.Win.Component.BaseForm.FormStatuses.BeforeLoading
+            CTag12.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
             CTag12.IsButtonCustomed = False
             CTag12.IsTextValid = True
             CTag12.KeyValueAbsentable = False
             CTag12.LeagleText = ""
             CTag12.NumericButtonTextBox = Nothing
-            CTag12.ParentControl = Me.Label5
+            CTag12.ParentControl = Me.TextEdit_Search
             CTag12.SkipValidate = False
             CTag12.TimeButtonTextBox = Nothing
             CTag12.ToolTip = ""
             CTag12.ValueType = XL.Common.ControlValueType.Character
-            Me.Label5.Tag = CTag12
+            Me.TextEdit_Search.Tag = CTag12
+            '
+            'Label5
+            '
+            Me.Label5.BackColor = System.Drawing.Color.White
+            Me.Label5.Font = New System.Drawing.Font("Arial", 9.0!)
+            Me.Label5.ForeColor = System.Drawing.Color.Black
+            Me.Label5.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.Label5.Location = New System.Drawing.Point(12, 11)
+            Me.Label5.Name = "Label5"
+            Me.Label5.Size = New System.Drawing.Size(57, 20)
+            Me.Label5.TabIndex = 10010
+            CTag13.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
+            CTag13.CalculatorRequired = True
+            CTag13.ComboValueTextBox = Nothing
+            CTag13.ControlRelatedCode = Nothing
+            CTag13.DateButtonTextBox = Nothing
+            CTag13.DateTimeButtonTextBox = Nothing
+            CTag13.DisplayLinkControl = Nothing
+            CTag13.DisplayLinkDisplayFieldName = Nothing
+            CTag13.DisplayLinkKeyFieldName = Nothing
+            CTag13.DisplayLinkTable = Nothing
+            CTag13.FlexgridEditItem = ""
+            CTag13.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
+            CTag13.FormStatus = XL.Win.Component.BaseForm.FormStatuses.BeforeLoading
+            CTag13.IsButtonCustomed = False
+            CTag13.IsTextValid = True
+            CTag13.KeyValueAbsentable = False
+            CTag13.LeagleText = ""
+            CTag13.NumericButtonTextBox = Nothing
+            CTag13.ParentControl = Me.Label5
+            CTag13.SkipValidate = False
+            CTag13.TimeButtonTextBox = Nothing
+            CTag13.ToolTip = ""
+            CTag13.ValueType = XL.Common.ControlValueType.Character
+            Me.Label5.Tag = CTag13
             Me.Label5.Text = "地点搜索"
-            '
-            'GridColumn_RowHighlight
-            '
-            Me.GridColumn_RowHighlight.Caption = "高亮显示"
-            Me.GridColumn_RowHighlight.FieldName = "DSR_FT_ROW_HIGHLIGHT"
-            Me.GridColumn_RowHighlight.Name = "GridColumn_RowHighlight"
-            Me.GridColumn_RowHighlight.OptionsColumn.AllowFocus = False
-            Me.GridColumn_RowHighlight.Width = 80
             '
             'GroupControl1
             '
             Me.GroupControl1.Controls.Add(Me.GridControl_Pos)
+            Me.GroupControl1.Controls.Add(Me.PanelControl1)
             Me.GroupControl1.Dock = System.Windows.Forms.DockStyle.Fill
             Me.GroupControl1.Location = New System.Drawing.Point(0, 140)
             Me.GroupControl1.Name = "GroupControl1"
             Me.GroupControl1.Size = New System.Drawing.Size(710, 302)
             Me.GroupControl1.TabIndex = 10000
-            Me.GroupControl1.Text = "参加网点"
+            Me.GroupControl1.Text = "参加地点"
+            '
+            'SpinEdit_AffairDays
+            '
+            Me.SpinEdit_AffairDays.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
+            Me.SpinEdit_AffairDays.Location = New System.Drawing.Point(271, 37)
+            Me.SpinEdit_AffairDays.Name = "SpinEdit_AffairDays"
+            Me.SpinEdit_AffairDays.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
+            Me.SpinEdit_AffairDays.Size = New System.Drawing.Size(86, 20)
+            Me.SpinEdit_AffairDays.TabIndex = 10012
+            '
+            'PanelControl1
+            '
+            Me.PanelControl1.Controls.Add(Me.Label5)
+            Me.PanelControl1.Controls.Add(Me.TextEdit_Search)
+            Me.PanelControl1.Dock = System.Windows.Forms.DockStyle.Top
+            Me.PanelControl1.Location = New System.Drawing.Point(2, 20)
+            Me.PanelControl1.Name = "PanelControl1"
+            Me.PanelControl1.Size = New System.Drawing.Size(706, 43)
+            Me.PanelControl1.TabIndex = 10002
             '
             'GridControl_Pos
             '
             Me.GridControl_Pos.Dock = System.Windows.Forms.DockStyle.Fill
             Me.GridControl_Pos.EmbeddedNavigator.Name = ""
-            Me.GridControl_Pos.Location = New System.Drawing.Point(2, 20)
+            Me.GridControl_Pos.Location = New System.Drawing.Point(2, 63)
             Me.GridControl_Pos.MainView = Me.GridView_Pos
             Me.GridControl_Pos.Name = "GridControl_Pos"
             Me.GridControl_Pos.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemLookUpEdit_PosSet, Me.RepositoryItemCheckEdit_Select})
-            Me.GridControl_Pos.Size = New System.Drawing.Size(706, 280)
-            Me.GridControl_Pos.TabIndex = 10001
+            Me.GridControl_Pos.Size = New System.Drawing.Size(706, 237)
+            Me.GridControl_Pos.TabIndex = 10003
             Me.GridControl_Pos.TabStop = False
             Me.GridControl_Pos.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView_Pos})
             '
@@ -726,6 +739,14 @@
             Me.RepositoryItemLookUpEdit_PosSet.DisplayMember = "SET_CODE"
             Me.RepositoryItemLookUpEdit_PosSet.Name = "RepositoryItemLookUpEdit_PosSet"
             '
+            'GridColumn_RowHighlight
+            '
+            Me.GridColumn_RowHighlight.Caption = "高亮显示"
+            Me.GridColumn_RowHighlight.FieldName = "DSR_FT_ROW_HIGHLIGHT"
+            Me.GridColumn_RowHighlight.Name = "GridColumn_RowHighlight"
+            Me.GridColumn_RowHighlight.OptionsColumn.AllowFocus = False
+            Me.GridColumn_RowHighlight.Width = 80
+            '
             'GridColumn_Remarks
             '
             Me.GridColumn_Remarks.Caption = "备注"
@@ -747,15 +768,6 @@
             Me.GridColumn_Email.Visible = True
             Me.GridColumn_Email.VisibleIndex = 5
             Me.GridColumn_Email.Width = 39
-            '
-            'SpinEdit_AffairDays
-            '
-            Me.SpinEdit_AffairDays.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
-            Me.SpinEdit_AffairDays.Location = New System.Drawing.Point(271, 37)
-            Me.SpinEdit_AffairDays.Name = "SpinEdit_AffairDays"
-            Me.SpinEdit_AffairDays.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
-            Me.SpinEdit_AffairDays.Size = New System.Drawing.Size(86, 20)
-            Me.SpinEdit_AffairDays.TabIndex = 10012
             '
             'M_01_00902
             '
@@ -804,11 +816,13 @@
             CType(Me.TextEdit_Search.Properties, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.GroupControl1.ResumeLayout(False)
+            CType(Me.SpinEdit_AffairDays.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.PanelControl1.ResumeLayout(False)
             CType(Me.GridControl_Pos, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.GridView_Pos, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemCheckEdit_Select, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemLookUpEdit_PosSet, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.SpinEdit_AffairDays.Properties, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -824,6 +838,10 @@
         Friend WithEvents Label_TemplateName As System.Windows.Forms.Label
         Friend WithEvents PanelControl_Filter As DevExpress.XtraEditors.PanelControl
         Friend WithEvents GroupControl1 As DevExpress.XtraEditors.GroupControl
+        Friend WithEvents TextEdit_Search As DevExpress.XtraEditors.TextEdit
+        Friend WithEvents Label5 As System.Windows.Forms.Label
+        Friend WithEvents SpinEdit_AffairDays As DevExpress.XtraEditors.SpinEdit
+        Friend WithEvents PanelControl1 As DevExpress.XtraEditors.PanelControl
         Friend WithEvents GridControl_Pos As DevExpress.XtraGrid.GridControl
         Friend WithEvents GridView_Pos As DevExpress.XtraGrid.Views.Grid.GridView
         Friend WithEvents GridColumn_Select As DevExpress.XtraGrid.Columns.GridColumn
@@ -837,9 +855,6 @@
         Friend WithEvents GridColumn_RowHighlight As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents GridColumn_Remarks As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents GridColumn_Email As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents TextEdit_Search As DevExpress.XtraEditors.TextEdit
-        Friend WithEvents Label5 As System.Windows.Forms.Label
-        Friend WithEvents SpinEdit_AffairDays As DevExpress.XtraEditors.SpinEdit
 
 #End Region
 

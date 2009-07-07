@@ -118,23 +118,23 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="DefaultLookAndFeel_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>294, 0</value>
+    <value>278, 0</value>
   </metadata>
   <metadata name="Timer_Surveillant.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>141, 0</value>
+    <value>134, 0</value>
   </metadata>
   <metadata name="ToolStrip_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ToolStripButton_Save.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 22</value>
+    <value>35, 22</value>
   </data>
   <data name="ToolStripButton_Save.Text" xml:space="preserve">
     <value>保存</value>
   </data>
   <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 22</value>
+    <value>35, 22</value>
   </data>
   <data name="ToolStripButton_Close.Text" xml:space="preserve">
     <value>关闭</value>
@@ -3003,29 +3003,83 @@
   <data name="&gt;&gt;GroupControl6.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="CalcEdit1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>169, 33</value>
+  <data name="CalcEdit_RMBToPointsRate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>459, 33</value>
+  </data>
+  <data name="CalcEdit2.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
+  </data>
+  <data name="CalcEdit_RMBToPointsRate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 20</value>
+  </data>
+  <data name="CalcEdit_RMBToPointsRate.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;CalcEdit_RMBToPointsRate.Name" xml:space="preserve">
+    <value>CalcEdit_RMBToPointsRate</value>
+  </data>
+  <data name="&gt;&gt;CalcEdit_RMBToPointsRate.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CalcEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CalcEdit_RMBToPointsRate.Parent" xml:space="preserve">
+    <value>GroupControl8</value>
+  </data>
+  <data name="&gt;&gt;CalcEdit_RMBToPointsRate.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="CalcEdit_PointsToRMBRate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>204, 34</value>
   </data>
   <data name="CalcEdit1.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
     <value>Combo</value>
   </data>
-  <data name="CalcEdit1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="CalcEdit_PointsToRMBRate.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 20</value>
   </data>
-  <data name="CalcEdit1.TabIndex" type="System.Int32, mscorlib">
+  <data name="CalcEdit_PointsToRMBRate.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
-  <data name="&gt;&gt;CalcEdit1.Name" xml:space="preserve">
-    <value>CalcEdit1</value>
+  <data name="&gt;&gt;CalcEdit_PointsToRMBRate.Name" xml:space="preserve">
+    <value>CalcEdit_PointsToRMBRate</value>
   </data>
-  <data name="&gt;&gt;CalcEdit1.Type" xml:space="preserve">
+  <data name="&gt;&gt;CalcEdit_PointsToRMBRate.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.CalcEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="&gt;&gt;CalcEdit1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;CalcEdit_PointsToRMBRate.Parent" xml:space="preserve">
     <value>GroupControl8</value>
   </data>
-  <data name="&gt;&gt;CalcEdit1.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;CalcEdit_PointsToRMBRate.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Label21.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label21.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label21.Location" type="System.Drawing.Point, System.Drawing">
+    <value>527, 35</value>
+  </data>
+  <data name="Label21.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 15</value>
+  </data>
+  <data name="Label21.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="Label21.Text" xml:space="preserve">
+    <value>元获取1点</value>
+  </data>
+  <data name="&gt;&gt;Label21.Name" xml:space="preserve">
+    <value>Label21</value>
+  </data>
+  <data name="&gt;&gt;Label21.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label21.Parent" xml:space="preserve">
+    <value>GroupControl8</value>
+  </data>
+  <data name="&gt;&gt;Label21.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="Label20.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3034,16 +3088,16 @@
     <value>NoControl</value>
   </data>
   <data name="Label20.Location" type="System.Drawing.Point, System.Drawing">
-    <value>238, 35</value>
+    <value>272, 36</value>
   </data>
   <data name="Label20.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 15</value>
+    <value>19, 15</value>
   </data>
   <data name="Label20.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
   </data>
   <data name="Label20.Text" xml:space="preserve">
-    <value>点兑换1元</value>
+    <value>元</value>
   </data>
   <data name="&gt;&gt;Label20.Name" xml:space="preserve">
     <value>Label20</value>
@@ -3055,31 +3109,55 @@
     <value>GroupControl8</value>
   </data>
   <data name="&gt;&gt;Label20.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
-  <data name="CheckEdit_PointsAvailable.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 33</value>
+  <data name="CheckEdit_CanRMBToPoints.Location" type="System.Drawing.Point, System.Drawing">
+    <value>351, 34</value>
   </data>
   <data name="CheckEdit1.Properties.Caption" xml:space="preserve">
-    <value>使用点数, 兑换人民币:</value>
+    <value>消费人民币, 每</value>
   </data>
-  <data name="CheckEdit_PointsAvailable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 19</value>
+  <data name="CheckEdit_CanRMBToPoints.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 19</value>
   </data>
-  <data name="CheckEdit_PointsAvailable.TabIndex" type="System.Int32, mscorlib">
+  <data name="CheckEdit_CanRMBToPoints.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;CheckEdit_PointsAvailable.Name" xml:space="preserve">
-    <value>CheckEdit_PointsAvailable</value>
+  <data name="&gt;&gt;CheckEdit_CanRMBToPoints.Name" xml:space="preserve">
+    <value>CheckEdit_CanRMBToPoints</value>
   </data>
-  <data name="&gt;&gt;CheckEdit_PointsAvailable.Type" xml:space="preserve">
+  <data name="&gt;&gt;CheckEdit_CanRMBToPoints.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="&gt;&gt;CheckEdit_PointsAvailable.Parent" xml:space="preserve">
+  <data name="&gt;&gt;CheckEdit_CanRMBToPoints.Parent" xml:space="preserve">
     <value>GroupControl8</value>
   </data>
-  <data name="&gt;&gt;CheckEdit_PointsAvailable.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;CheckEdit_CanRMBToPoints.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="CheckEdit_CanPointsToRMB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 33</value>
+  </data>
+  <data name="CheckEdit_PointsAvailable.Properties.Caption" xml:space="preserve">
+    <value>使用点数, 兑换人民币, 每点换</value>
+  </data>
+  <data name="CheckEdit_CanPointsToRMB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 19</value>
+  </data>
+  <data name="CheckEdit_CanPointsToRMB.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_CanPointsToRMB.Name" xml:space="preserve">
+    <value>CheckEdit_CanPointsToRMB</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_CanPointsToRMB.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_CanPointsToRMB.Parent" xml:space="preserve">
+    <value>GroupControl8</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_CanPointsToRMB.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="GroupControl8.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -3088,7 +3166,7 @@
     <value>0, 1321</value>
   </data>
   <data name="GroupControl8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>605, 119</value>
+    <value>605, 67</value>
   </data>
   <data name="GroupControl8.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
