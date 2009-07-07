@@ -95,39 +95,80 @@ Public Class S_02_01001
     'End Function
 
 
-    Public Function ServBizUtld0001( _
-        ByVal valParaUtld As String, _
-        ByRef refParaUtld As String _
-        ) As String
-
-            If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
-
-            Try
-
-
-
-            Catch ex As XL.Common.Utils.XLException
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
-
-                'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
-
-                Return logContentBuilder.ToString()
-
-             Catch ex As Exception
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+    Public Function ServInitDisplay( _
+        ByVal valLanguagOption As Integer, _
+        ByVal valLoginStaffID As String, _
+        ByRef refStaffRowSE As MyPosXAuto.FTs.FT_M_STAFFRowSEntity, _
+        ByRef refSysWareSpecModelDiscard As Boolean, _
+        ByRef refSysHideFinancials As Boolean, _
+        ByRef refSysShowCustomWareCode As Boolean, _
+        ByRef refSysAttribute1 As String, _
+        ByRef refSysAttribute2 As String, _
+        ByRef refSysAttribute3 As String, _
+        ByRef refSysAttribute4 As String, _
+        ByRef refAffairDescription As String, _
+        ByRef refSaleTemplateWareList As MyPosXAuto.FTs.FT_XV_T_MP_SALE_TEMPLATE_WARE) As String
 
 
-                Return logContentBuilder.ToString()
+        Try
 
-            End Try
+            Dim result As String = String.Empty
 
-        Return string.Empty
+            XL.Common.Utils.SysInfo.SetShareTRSysInfo(AddressOf Facade.OpSysConfig.GetSysValue, AddressOf Facade.OpSysConfig.SetSysValue)
+
+            MyPosXAuto.Facade.AfBasicMaster.FillM_STAFFRowSEntity(refStaffRowSE, valLoginStaffID)
+
+
+            refSysWareSpecModelDiscard = CommTK.FBoolean(SysInfo.ReadShareSysInfo(Decls.SVN_WARE_SPEC_MODEL_DISCARD))
+            refSysHideFinancials = CommTK.FBoolean(SysInfo.ReadShareSysInfo(Decls.SVN_HIDE_FINANCIALS))
+            refSysShowCustomWareCode = CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_SHOW_CUSTOM_WARE_CODE))
+
+            refSysAttribute1 = SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE1)
+            refSysAttribute2 = SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE2)
+            refSysAttribute3 = SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE3)
+            refSysAttribute4 = SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE4)
+
+            If CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE1_HIDDEN)) = True Then
+                refSysAttribute1 = String.Empty
+            End If
+            If CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE2_HIDDEN)) = True Then
+                refSysAttribute2 = String.Empty
+            End If
+            If CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE3_HIDDEN)) = True Then
+                refSysAttribute3 = String.Empty
+            End If
+            If CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE4_HIDDEN)) = True Then
+                refSysAttribute4 = String.Empty
+            End If
+
+            MyPosXService.Facade.OpBizManage.FillPosCurrentAffairInfo( _
+                SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_CURRENT_POS_ID), _
+                refSaleTemplateWareList, _
+                refAffairDescription)
+
+
+        Catch ex As XL.Common.Utils.XLException
+
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+            'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
+
+            Return logContentBuilder.ToString()
+
+        Catch ex As Exception
+
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+
+            Return logContentBuilder.ToString()
+
+        End Try
+
+        Return String.Empty
 
     End Function
 

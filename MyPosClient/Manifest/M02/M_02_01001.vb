@@ -45,10 +45,11 @@ Namespace Manifest
         'Public SVLM_UTLD_0002 As String ="SVLM_UTLD_0002"
 
         '数据列表变量
-        'Public SVFT_BINDING_XXX_LIST As New XAuto.FTs.FT_
+        Public SVFT_REF_SALE_TEMPLATE_WARE_LIST As New MyPosXAuto.FTs.FT_XV_T_MP_SALE_TEMPLATE_WARE
+        Public SVFT_BINDING_TURNOVER_DTL_LIST As New MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTL
         'Public SVFT_CHOOSE_XXX_LIST As New XAuto.FTs.FT_
 
-        'Public SVFR_SELECTING_XXX_ROW As XAuto.FTs.FT_ Row
+        Public SVFR_BINDING_TURNOVER_DTL_ROW As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow
 
         #End Region
 
@@ -110,7 +111,7 @@ Namespace Manifest
 
             'Me.FormInputGuarder.SetValidate(Me.TextEdit_Input, InputGuarder.ValidateClassify.Required, Nothing)
 
-            'Me.FormInputGuarder.SetInputLinkedLabel(Me.ButtonEdit_Code, Me.Label_Name, Me.Label_ID)
+            Me.FormInputGuarder.SetInputLinkedLabel(Me.ButtonEdit_WareCode, Me.Label_WareInfo, Me.Label_WareID)
 
             'Me._bizAgent.SetDisableControlUnderRequest(Me.DisableControlUnderRequest)
 
@@ -120,7 +121,7 @@ Namespace Manifest
             '指定需要备份值的控件
             'Me.SetValueBackupControl(Me.ControlToBeBackup)
 
-            'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Add, AddressOf Me.TbActionAdd)
+            Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Create, AddressOf Me.TbActionCreate)
             Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Save, AddressOf Me.TbActionSave)
             'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Remove, AddressOf Me.TbActionRemove)
             Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Close, AddressOf Me.TbActionClose)
@@ -162,7 +163,8 @@ Namespace Manifest
 
             Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.InitDisplay, False)
 
-            'Me.GridControl_.DataSource = Me.SVFT_BINDING_
+            Me.GridControl_TurnoverDtl.DataSource = Me.SVFT_BINDING_TURNOVER_DTL_LIST
+
             'Me.LookupEdit_.Properties.DataSource = Me.SVFT_CHOOSE_
 
         End Sub
@@ -173,7 +175,7 @@ Namespace Manifest
 
             'Initialize option list controls which value source is from the edit form content
 
-            'Me.TextBox_FirstInput.Select
+            Me.ButtonEdit_WareCode.Select()
 
             If clearFields = False Then
                 Return
@@ -371,7 +373,8 @@ Namespace Manifest
                 'Else                                              
                 '    Me.IA_ClearContent()                          
                 'End If                                            
-
+                Case Business.B_02_01001.Affairs.InitDisplay, Business.B_02_01001.Affairs.AddWare
+                    Me.GridView_TurnoverDtl.BestFitColumns()
 
             End Select
         End Sub
@@ -420,14 +423,20 @@ Namespace Manifest
 
 #End Region
 
-#Region"ToolStrip Actions"
+#Region "ToolStrip Actions"
 
 
-        Private Sub TbActionAdd()
+        Private Sub TbActionCreate()
 
-            'Dim choiceForm As New M_(Me.TransactRequestHandle, Me.FormID)
-            'Me.PopupForm(choiceForm,"TbActionAdd", False)
+            If Me.IsSaved = False AndAlso _
+                Window.XLMessageBox.ShowMessage( _
+                    MyPosXService.Decls.MSG_CONFIRM_00021, _
+                    Window.XLMessageBox.MessageType.Warning, _
+                     MessageBoxButtons.OKCancel) = DialogResult.Cancel Then
+                Return
+            End If
 
+            Me.IA_ClearContent(True)
         End Sub
 
         Private Sub TbActionSave()
@@ -802,6 +811,22 @@ Namespace Manifest
 
 #End Region
 
+        Private Sub ButtonEdit_WareCode_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles ButtonEdit_WareCode.KeyDown
+            If e.KeyCode = Keys.Enter Then
+                Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.AddWare, False)
+            End If
+        End Sub
+
+        Private Sub CheckEdit_IsClient_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckEdit_IsClient.CheckedChanged
+            Me.TextEdit_ClientCode.Enabled = Me.CheckEdit_IsClient.Checked
+            If Me.TextEdit_ClientCode.Enabled = True Then
+                Me.TextEdit_ClientCode.Select()
+                Me.FormInputGuarder.SetValidate(Me.TextEdit_ClientCode, InputGuarder.ValidateClassify.Required, Nothing)
+            Else
+                Me.TextEdit_ClientCode.ResetText()
+                Me.FormInputGuarder.RemoveRequiredField(Me.TextEdit_ClientCode)
+            End If
+        End Sub
     End Class
 
 

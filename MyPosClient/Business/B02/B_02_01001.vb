@@ -72,9 +72,9 @@ Namespace Business
             LoadInfo
             SaveInfo
             LoadList
-            BizUtld0001
-            BizUtld0002
-            BizUtld0003
+            AddWare
+            UpdateSummary
+            LoadClientInfoByCode
             BizUtld0004
             BizUtld0005
             BizUtld0006
@@ -183,26 +183,26 @@ Namespace Business
                     '-------------------------------------------------------------------          
                     functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoLoadList)
 
-                Case Affairs.BizUtld0001
+                Case Affairs.AddWare
 
                     '
                     '取到处理函数的结果，传入返回给Manifest的AgentResponse包
                     '-------------------------------------------------------------------
-                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoBizUtld0001)
+                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoAddWare)
 
-                Case Affairs.BizUtld0002
-
-                    '
-                    '取到处理函数的结果，传入返回给Manifest的AgentResponse包
-                    '-------------------------------------------------------------------
-                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoBizUtld0002)
-
-                Case Affairs.BizUtld0003
+                Case Affairs.UpdateSummary
 
                     '
                     '取到处理函数的结果，传入返回给Manifest的AgentResponse包
                     '-------------------------------------------------------------------
-                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoBizUtld0003)
+                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoUpdateSummary)
+
+                Case Affairs.LoadClientInfoByCode
+
+                    '
+                    '取到处理函数的结果，传入返回给Manifest的AgentResponse包
+                    '-------------------------------------------------------------------
+                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoLoadClientInfoByCode)
 
                 Case Affairs.BizUtld0004
 
@@ -375,49 +375,88 @@ Namespace Business
             Try
 
 
+                Dim staffRowSE As New MyPosXAuto.FTs.FT_M_STAFFRowSEntity
+
+                Dim sysWareSpecModelDiscard As Boolean
+                Dim sysHideFinancials As Boolean
+                Dim sysShowCustomWareCode As Boolean
+                Dim affairDescription As String = String.Empty
+
+                Dim sysAttribute1 As String = String.Empty
+                Dim sysAttribute2 As String = String.Empty
+                Dim sysAttribute3 As String = String.Empty
+                Dim sysAttribute4 As String = String.Empty
+
+                Dim wareBatchPrefix As String = String.Empty
+
+                Me._service.ServInitDisplay( _
+                    CommDecl.CURRENT_LANGUAGE_OPTION, _
+                    Utils.Decls.LOGIN_STAFF_ID, _
+                    staffRowSE, _
+                    sysWareSpecModelDiscard, _
+                    sysHideFinancials, _
+                    sysShowCustomWareCode, _
+                    sysAttribute1, _
+                    sysAttribute2, _
+                    sysAttribute3, _
+                    sysAttribute4, _
+                    affairDescription, _
+                    Me._manifest.SVFT_REF_SALE_TEMPLATE_WARE_LIST)
+
+                If staffRowSE.IsNull = False Then
+                    'Me._manifest.ButtonEdit_EmployeeCode.Text = staffRowSE.STAFF_CODE
+                    'Me._manifest.Label_EmployeeName.Text = staffRowSE.STAFF_NAME
+                    'Me._manifest.Label_EmployeeID.Text = CommTK.FString(staffRowSE.STAFF_ID)
+                End If
 
 
-                'Dim choosePurchaseWayList As New MyPosXAuto.FTs.FT_CIV_PURCHASE_WAY                                       
-                'Dim chooseAssetAbsentTypeList As New MyPosXAuto.FTs.FT_CIV_ASSET_ABSENT_TYPE                              
-                'Dim chooseAssetConformationList As New MyPosXAuto.FTs.FT_CIV_ASSET_CONFORMATION                           
-                'Dim chooseEliminateWayList As New MyPosXAuto.FTs.FT_CIV_ELIMINATE_WAY                                     
-                'Dim chooseInAccountCredenceTextList As New MyPosXAuto.FTs.FT_CIV_IN_ACCOUNT_CREDENCE_TEXT                 
-                '                                                                                                     
-                'Dim sysManageFormMustConfirm As Boolean                                                              
-                '                                                                                                     
-                'Me._service.ServInitDisplay( _                                                                       
-                '    CommDecl.CURRENT_LANGUAGE_OPTION, _                                                              
-                '    choosePurchaseWayList, _                                                                         
-                '    chooseAssetAbsentTypeList, _                                                                     
-                '    chooseAssetConformationList, _                                                                   
-                '    chooseEliminateWayList, _                                                                        
-                '    chooseInAccountCredenceTextList, _                                                               
-                '    sysManageFormMustConfirm)                                                                        
-                '                                                                                                     
-                'Me._manifest.LookUpEdit_AssetAbsentType.Properties.DataSource = chooseAssetAbsentTypeList            
-                'Me._manifest.LookUpEdit_Conformation.Properties.DataSource = chooseAssetConformationList             
-                'Me._manifest.LookUpEdit_EliminateWay.Properties.DataSource = chooseEliminateWayList                  
-                'Me._manifest.LookUpEdit_PurchaseWay.Properties.DataSource = choosePurchaseWayList                    
-                'Me._manifest.LookUpEdit_InAccountCredenceText.Properties.DataSource = chooseInAccountCredenceTextList
-                '                                                                                                     
-                'Me._manifest.LookUpEdit_AssetAbsentType.EditValue = XAuto.Decls.CIVALUE_ASSET_ABSENT_TYPE_NONE       
-                'Me._manifest.LookUpEdit_EliminateWay.EditValue = MyPosXService.Decls.DEFAULT_CI_ELIMINATE_WAY_VALUE_NONE  
-                '                                                                                                     
-                'If Me._manifest.SV_EDITING_ASSET_ID < 0 Then                                                         
-                '			xxxx                                                                                            
-                'End If                                                                                               
-                '                                                                                                     
-                'If sysManageFormMustConfirm = True Then                                                              
-                '    Me._manifest.ButtonEdit_CurrentDepartmentCode.Enabled = False                                    
-                'End If                                                                                               
+                'If CommTK.FBoolean(SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_PRINT_SHOPPING_LIST)) = True  Then
+                '    Me._manifest.ToolStripButton_PrintPurchaseLabel.Visible = False
+                'End If
 
+                If sysHideFinancials = True Then
+                    Me._manifest.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0005)
+                End If
 
-                'Me._manifest.SV_RPTOPT_LABEL = New XForm.ReportOption(MyPosXService.Decls.RPT_NAME_0001, XForm.ReportOption.PrintType.Label, True)
-                'Me._manifest.SV_RPTOPT_LABEL.DefaultFileName = SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_ASSET_LABEL_FILE_PATH)            
+                Me._manifest.GridColumn_Attribute1.Caption = sysAttribute1
+                Me._manifest.GridColumn_Attribute2.Caption = sysAttribute2
+                Me._manifest.GridColumn_Attribute3.Caption = sysAttribute3
+                Me._manifest.GridColumn_Attribute4.Caption = sysAttribute4
 
-                'Me._manifest.SV_RPTOPT_PRINTER = New XForm.ReportOption(MyPosXService.Decls.RPT_NAME_0001, XForm.ReportOption.PrintType.Print, True)
-                '                                                                                                                             
-                'Me._manifest.SV_RPTOPT_EXCEL = New XForm.ReportOption(MyPosXService.Decls.RPT_NAME_0002, XForm.ReportOption.PrintType.Excel, True)
+                If sysAttribute1.Length = 0 Then
+                    Me._manifest.GridColumn_Attribute1.Visible = False
+                End If
+
+                If sysAttribute2.Length = 0 Then
+                    Me._manifest.GridColumn_Attribute2.Visible = False
+                End If
+
+                If sysAttribute3.Length = 0 Then
+                    Me._manifest.GridColumn_Attribute3.Visible = False
+                End If
+
+                If sysAttribute4.Length = 0 Then
+                    Me._manifest.GridColumn_Attribute4.Visible = False
+                End If
+
+                If sysWareSpecModelDiscard = True Then
+                    Me._manifest.GridColumn_Spec.Visible = False
+                    Me._manifest.GridColumn_Model.Visible = False
+                End If
+
+                If sysShowCustomWareCode = False Then
+                    Me._manifest.GridColumn_CustomCode.Visible = False
+                End If
+
+                Dim userCostHidden As Boolean = CommTK.FBoolean(SysInfo.LoginUserOptions.Options("OPN_COST_HIDDEN"))
+                Dim userPriceHidden As Boolean = CommTK.FBoolean(SysInfo.LoginUserOptions.Options("OPN_PRICE_HIDDEN"))
+
+                If userPriceHidden = True Then
+                    Me._manifest.GridColumn_UnitPrice.Visible = False
+                    Me._manifest.GridColumn_SumPrice.Visible = False
+                End If
+
+                Me._manifest.Label_AffairDescription.Text = affairDescription
 
 
             Catch ex As XL.Common.Utils.XLException
@@ -583,14 +622,66 @@ Namespace Business
         '''
         '''
         '''-------------------------------------------------------------------
-        Private Function DoBizUtld0001() As String
+        Private Function DoAddWare() As String
 
 
             Try
 
+                Dim wareCondition As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_MP_WARE(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+                wareCondition.Add(MyPosXAuto.Facade.AfBizMaster.M_MP_WAREColumns.WARE_CODEColumn, "=", Me._manifest.ButtonEdit_WareCode.Text)
+
+                Dim wareRowSEntity As New MyPosXAuto.FTs.FT_M_MP_WARERowSEntity
+                MyPosXAuto.Facade.AfBizMaster.FillM_MP_WARERowSEntity(wareRowSEntity, wareCondition)
+
+                If wareRowSEntity.IsNull = True Then
+                    WinTK.PlayWavSound("Error.wmv")
+                    Me._manifest.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0023)
+                    Return String.Empty
+                End If
+
+                Me._manifest.ButtonEdit_WareCode.Text = wareRowSEntity.WARE_CODE
+                Me._manifest.Label_WareID.Text = wareRowSEntity.WARE_ID
+                Me._manifest.Label_WareInfo.Text = MyPosXService.Facade.OpBizMaster.GetWareInfoString(wareRowSEntity.WARE_ID, SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_CURRENT_POS_ID))
+
+                Dim dtlCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_H_MP_TURNOVER_DTL(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+                dtlCondition.Add(MyPosXAuto.Facade.AfXV.XV_H_MP_TURNOVER_DTLColumns.WARE_CODEColumn, "=", Me._manifest.ButtonEdit_WareCode.Text)
+
+                Dim dtlRow = Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.FindRowByCondition(dtlCondition)
+                If IsNothing(dtlRow) = True Then
+                    dtlRow = Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.NewXV_H_MP_TURNOVER_DTLRow()
+                    Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.AddXV_H_MP_TURNOVER_DTLRow(dtlRow)
+                    dtlRow.WARE_ID = wareRowSEntity.WARE_ID
+                    dtlRow.WARE_CODE = wareRowSEntity.WARE_CODE
+                    dtlRow.WARE_NAME = wareRowSEntity.WARE_NAME
+                    dtlRow.SPEC = wareRowSEntity.SPEC
+                    dtlRow.SPEC_EN = wareRowSEntity.SPEC_EN
+                    dtlRow.MODEL = wareRowSEntity.MODEL
+                    dtlRow.MODEL_EN = wareRowSEntity.MODEL_EN
+                    dtlRow.ATTRIBUTE1 = wareRowSEntity.ATTRIBUTE1
+                    dtlRow.ATTRIBUTE2 = wareRowSEntity.ATTRIBUTE2
+                    dtlRow.ATTRIBUTE3 = wareRowSEntity.ATTRIBUTE3
+                    dtlRow.ATTRIBUTE4 = wareRowSEntity.ATTRIBUTE4
+                    dtlRow.TURNOVER_BOOK_STATUS = MyPosXAuto.Decls.CIVALUE_TURNOVER_BOOK_STATUS_ON_HAND
+                End If
+
+                dtlRow.UNIT_PRICE = wareRowSEntity.UNIT_PRICE
+
+                dtlRow.WARE_AMOUNT += 1
+                Dim saleTemplateWareCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_T_MP_SALE_TEMPLATE_WARE(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+                saleTemplateWareCondition.Add(MyPosXAuto.Facade.AfXV.XV_T_MP_SALE_TEMPLATE_WAREColumns.WARE_IDColumn, "=", wareRowSEntity.WARE_ID)
+
+                Dim saleTemplateWareRow = Me._manifest.SVFT_REF_SALE_TEMPLATE_WARE_LIST.FindRowByCondition(saleTemplateWareCondition)
+                If IsNothing(saleTemplateWareRow) = False Then
+                    dtlRow.UNIT_DISCOUNT = Utils.TK.CalcWareSaleUnitDiscount(dtlRow.UNIT_PRICE, saleTemplateWareRow)
+                    dtlRow.UNIT_PRICE -= dtlRow.UNIT_DISCOUNT
+                End If
+
+                dtlRow.SUM_PRICE = CommTK.FDecimal(dtlRow.UNIT_PRICE * dtlRow.WARE_AMOUNT)
+                dtlRow.SUM_DISCOUNT = CommTK.FDecimal(dtlRow.UNIT_DISCOUNT * dtlRow.WARE_AMOUNT)
+
 
                 'Dim servResult As String = _
-                '    Me._service.ServBizUtld0001()
+                '    Me._service.ServAddWare()
 
                 'If servResult.Length > 0 Then
                 '    Return servResult        
@@ -627,14 +718,25 @@ Namespace Business
         '''
         '''
         '''-------------------------------------------------------------------
-        Private Function DoBizUtld0002() As String
+        Private Function DoUpdateSummary() As String
 
 
             Try
 
+                Me._manifest.Label_TotalPrice.Text = _
+                    CommTK.FString(Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.Compute("Sum(SUM_PRICE)", String.Empty), _
+                    False, _
+                    "#,##0.00")
+                Me._manifest.Label_TotalDiscount.Text = _
+                    CommTK.FString(Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.Compute("Sum(SUM_DISCOUNT)", String.Empty), _
+                    False, _
+                    "#,##0.00")
+
+                Me._manifest.Label_Payable.Text = 
+                Me._manifest.Label_AquiringPoints.Text =
 
                 'Dim servResult As String = _
-                '    Me._service.ServBizUtld0002()
+                '    Me._service.ServUpdateSummary()
 
                 'If servResult.Length > 0 Then
                 '    Return servResult        
@@ -671,14 +773,28 @@ Namespace Business
         '''
         '''
         '''-------------------------------------------------------------------
-        Private Function DoBizUtld0003() As String
+        Private Function DoLoadClientInfoByCode() As String
 
 
             Try
 
+                Dim clientCondition As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_MP_CLIENT(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+                clientCondition.Add(MyPosXAuto.Facade.AfBizMaster.M_MP_CLIENTColumns.CLIENT_CODEColumn, "=", Me._manifest.TextEdit_ClientCode.Text)
+                Dim clientRow = MyPosXAuto.Facade.AfBizMaster.GetM_MP_CLIENTRow(clientCondition)
+
+                If IsNothing(clientRow) = True Then
+                    Me._manifest.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0019)
+                    WinTK.PlayWavSound("Error.WAV")
+                    Return String.Empty
+                End If
+
+                Me._manifest.ButtonEdit_WareCode.Text = clientRow.CLIENT_CODE
+                Me._manifest.Label_ClientID.Text = clientRow.CLIENT_ID
+                Me._manifest.Label_ClientName.Text = clientRow.CLIENT_NAME
+                Me._manifest.Label_HoldingPoint.Text = clientCondition.CURRENT_POINT
 
                 'Dim servResult As String = _
-                '    Me._service.ServBizUtld0003()
+                '    Me._service.ServLoadClientInfoByCode()
 
                 'If servResult.Length > 0 Then
                 '    Return servResult        
