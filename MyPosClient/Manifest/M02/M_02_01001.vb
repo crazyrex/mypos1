@@ -259,9 +259,10 @@ Namespace Manifest
 
 
         Public Overrides Sub KeyDownProcess(ByVal e As System.Windows.Forms.KeyEventArgs)
-            'If e.KeyCode = Keys.XXXX Then
-
-            'End If
+            Select Case e.KeyCode
+                Case Keys.F4
+                    Me.DoPrivateUtld0001()
+            End Select
         End Sub
 
 
@@ -353,26 +354,28 @@ Namespace Manifest
 
             Select Case Me._bizAgent.AffairOf(responseResult.ResponseTitle)
 
-                'Case Business.B_01_00201.Affairs.DeleteInfo
-                '    Me.UpdateDisplay()                     
+                Case Business.B_02_01001.Affairs.AddWare
 
-                'Case Business.B_02_00201.Affairs.LoadList             
-                '    Me.DoPrivateUpdateSelectingRow()               
-                '    Me.GridView_XXXXXList.BestFitColumns()         
+                    'Case Business.B_01_00201.Affairs.DeleteInfo
+                    '    Me.UpdateDisplay()                     
 
-                'Case Business.B_02_00202.Affairs.SaveInfo             
-                'Window.XLMessageBox.ShowMessage( _                
-                '    MyPosXService.Decls.MSG_OK_00001, _                
-                '    Window.XLMessageBox.MessageType.Information, _
-                '    MessageBoxButtons.OK)                         
-                'Me.ResponseToParentForm()                         
+                    'Case Business.B_02_00201.Affairs.LoadList             
+                    '    Me.DoPrivateUpdateSelectingRow()               
+                    '    Me.GridView_XXXXXList.BestFitColumns()         
 
-                'If Me.SV_EDITING_TRANSFER_ID > 0 Then            
-                '    Me.ResetSaveMode()                            
-                '    Me.CloseForm()                                
-                'Else                                              
-                '    Me.IA_ClearContent()                          
-                'End If                                            
+                    'Case Business.B_02_00202.Affairs.SaveInfo             
+                    'Window.XLMessageBox.ShowMessage( _                
+                    '    MyPosXService.Decls.MSG_OK_00001, _                
+                    '    Window.XLMessageBox.MessageType.Information, _
+                    '    MessageBoxButtons.OK)                         
+                    'Me.ResponseToParentForm()                         
+
+                    'If Me.SV_EDITING_TRANSFER_ID > 0 Then            
+                    '    Me.ResetSaveMode()                            
+                    '    Me.CloseForm()                                
+                    'Else                                              
+                    '    Me.IA_ClearContent()                          
+                    'End If                                            
                 Case Business.B_02_01001.Affairs.InitDisplay, Business.B_02_01001.Affairs.AddWare
                     Me.GridView_TurnoverDtl.BestFitColumns()
 
@@ -558,7 +561,7 @@ Namespace Manifest
 
 #End Region
 
-#Region"Private Methods"
+#Region "Private Methods"
 
 
         Private Sub DoPrivateUpdateSelectingRow()
@@ -605,6 +608,13 @@ Namespace Manifest
 
 
         Private Sub DoPrivateUtld0001()
+            If Me.Label_WareID.Text.Length = 0 Then
+                Me.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0020)
+                Me.ButtonEdit_WareCode.Select()
+                Return
+            End If
+
+            Me.SpinEdit_WareAmount.Select()
 
         End Sub
 
@@ -706,7 +716,7 @@ Namespace Manifest
 
 #End Region
 
-#Region"Public Methods"
+#Region "Public Methods"
 
 
         Public Sub DoPublicUtld0001()
