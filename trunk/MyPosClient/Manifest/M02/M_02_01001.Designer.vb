@@ -109,7 +109,7 @@
             Me.GridColumn_RowHighlight = New DevExpress.XtraGrid.Columns.GridColumn
             Me.RepositoryItemCheckEdit_Select = New DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
             Me.PanelControl_WareInput = New DevExpress.XtraEditors.PanelControl
-            Me.SpinEdit1 = New DevExpress.XtraEditors.SpinEdit
+            Me.SpinEdit_WareAmount = New DevExpress.XtraEditors.SpinEdit
             Me.Label_WareID = New System.Windows.Forms.Label
             Me.Label_WareInfo = New System.Windows.Forms.Label
             Me.ButtonEdit_WareCode = New DevExpress.XtraEditors.ButtonEdit
@@ -152,7 +152,7 @@
             CType(Me.RepositoryItemCheckEdit_Select, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.PanelControl_WareInput, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.PanelControl_WareInput.SuspendLayout()
-            CType(Me.SpinEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.SpinEdit_WareAmount.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.ButtonEdit_WareCode.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.GroupControl3, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.GroupControl3.SuspendLayout()
@@ -762,7 +762,7 @@
             '
             'PanelControl_WareInput
             '
-            Me.PanelControl_WareInput.Controls.Add(Me.SpinEdit1)
+            Me.PanelControl_WareInput.Controls.Add(Me.SpinEdit_WareAmount)
             Me.PanelControl_WareInput.Controls.Add(Me.Label_WareID)
             Me.PanelControl_WareInput.Controls.Add(Me.Label_WareInfo)
             Me.PanelControl_WareInput.Controls.Add(Me.ButtonEdit_WareCode)
@@ -800,12 +800,12 @@
             '
             'SpinEdit1
             '
-            Me.SpinEdit1.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
-            Me.SpinEdit1.Location = New System.Drawing.Point(645, 14)
-            Me.SpinEdit1.Name = "SpinEdit1"
-            Me.SpinEdit1.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
-            Me.SpinEdit1.Size = New System.Drawing.Size(57, 20)
-            Me.SpinEdit1.TabIndex = 10001
+            Me.SpinEdit_WareAmount.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
+            Me.SpinEdit_WareAmount.Location = New System.Drawing.Point(645, 14)
+            Me.SpinEdit_WareAmount.Name = "SpinEdit1"
+            Me.SpinEdit_WareAmount.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
+            Me.SpinEdit_WareAmount.Size = New System.Drawing.Size(57, 20)
+            Me.SpinEdit_WareAmount.TabIndex = 10001
             CTag23.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag23.CalculatorRequired = True
             CTag23.ComboValueTextBox = Nothing
@@ -824,12 +824,12 @@
             CTag23.KeyValueAbsentable = False
             CTag23.LeagleText = ""
             CTag23.NumericButtonTextBox = Nothing
-            CTag23.ParentControl = Me.SpinEdit1
+            CTag23.ParentControl = Me.SpinEdit_WareAmount
             CTag23.SkipValidate = False
             CTag23.TimeButtonTextBox = Nothing
             CTag23.ToolTip = ""
             CTag23.ValueType = XL.Common.ControlValueType.Character
-            Me.SpinEdit1.Tag = CTag23
+            Me.SpinEdit_WareAmount.Tag = CTag23
             '
             'Label_WareID
             '
@@ -1672,7 +1672,7 @@
             CType(Me.PanelControl_WareInput, System.ComponentModel.ISupportInitialize).EndInit()
             Me.PanelControl_WareInput.ResumeLayout(False)
             Me.PanelControl_WareInput.PerformLayout()
-            CType(Me.SpinEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.SpinEdit_WareAmount.Properties, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.ButtonEdit_WareCode.Properties, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.GroupControl3, System.ComponentModel.ISupportInitialize).EndInit()
             Me.GroupControl3.ResumeLayout(False)
@@ -1715,7 +1715,7 @@
         Friend WithEvents GridColumn_RowHighlight As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents RepositoryItemCheckEdit_Select As DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
         Friend WithEvents PanelControl_WareInput As DevExpress.XtraEditors.PanelControl
-        Friend WithEvents SpinEdit1 As DevExpress.XtraEditors.SpinEdit
+        Friend WithEvents SpinEdit_WareAmount As DevExpress.XtraEditors.SpinEdit
         Friend WithEvents Label_WareID As System.Windows.Forms.Label
         Friend WithEvents Label_WareInfo As System.Windows.Forms.Label
         Friend WithEvents ButtonEdit_WareCode As DevExpress.XtraEditors.ButtonEdit
