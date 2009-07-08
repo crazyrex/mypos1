@@ -732,8 +732,8 @@ Namespace Business
                     False, _
                     "#,##0.00")
 
-                Me._manifest.Label_Payable.Text = 
-                Me._manifest.Label_AquiringPoints.Text =
+                'Me._manifest.Label_Payable.Text = 
+                'Me._manifest.Label_AquiringPoints.Text =
 
                 'Dim servResult As String = _
                 '    Me._service.ServUpdateSummary()
@@ -791,7 +791,7 @@ Namespace Business
                 Me._manifest.ButtonEdit_WareCode.Text = clientRow.CLIENT_CODE
                 Me._manifest.Label_ClientID.Text = clientRow.CLIENT_ID
                 Me._manifest.Label_ClientName.Text = clientRow.CLIENT_NAME
-                Me._manifest.Label_HoldingPoint.Text = clientCondition.CURRENT_POINT
+                'Me._manifest.Label_HoldingPoint.Text = clientCondition.CURRENT_POINT
 
                 'Dim servResult As String = _
                 '    Me._service.ServLoadClientInfoByCode()
