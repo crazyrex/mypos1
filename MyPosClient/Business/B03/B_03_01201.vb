@@ -374,8 +374,9 @@ Namespace Business
 
             Try
 
-
-
+                If Me._manifest.SVLM_DEFAULT_CLIENT_ID.Length > 0 Then
+                    Me._manifest.ButtonEdit_ClientCode.Enabled = False
+                End If
 
                 Dim chooseClientList As New MyPosXAuto.FTs.FT_M_MP_CLIENT
                 Dim chooseTurnoverList As New MyPosXAuto.FTs.FT_H_MP_TURNOVER

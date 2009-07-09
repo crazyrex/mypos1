@@ -41,7 +41,7 @@ Namespace Manifest
         'Public SV_RPTOPT_LABEL As XForm.ReportOption = Nothing
 
         '读取,显示数据的条件值变量
-        'Public SVLM_UTLD_0001 As String ="SVLM_UTLD_0001"
+        Public SVLM_DEFAULT_CLIENT_ID As String = "SVLM_DEFAULT_CLIENT_ID"
         'Public SVLM_UTLD_0002 As String ="SVLM_UTLD_0002"
 
         '数据列表变量
