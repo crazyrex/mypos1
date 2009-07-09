@@ -166,18 +166,11 @@
   <data name="DateEdit_End.Location" type="System.Drawing.Point, System.Drawing">
     <value>255, 8</value>
   </data>
-  <assembly alias="DevExpress.Utils.v8.1" name="DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
-  <data name="DateEdit_End.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
-    <value>Combo</value>
-  </data>
   <data name="DateEdit_Begin.Location" type="System.Drawing.Point, System.Drawing">
     <value>75, 8</value>
   </data>
-  <data name="DateEdit_Begin.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
-    <value>Combo</value>
-  </data>
   <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>232, 13</value>
+    <value>231, 12</value>
   </data>
   <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>21, 15</value>
@@ -185,17 +178,11 @@
   <data name="Label2.Text" xml:space="preserve">
     <value>To</value>
   </data>
-  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 41</value>
-  </data>
   <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 15</value>
   </data>
   <data name="Label3.Text" xml:space="preserve">
     <value>Search</value>
-  </data>
-  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 14</value>
   </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 15</value>
@@ -230,8 +217,14 @@
   <data name="GridColumn_RowSelected.Caption" xml:space="preserve">
     <value>Selected</value>
   </data>
+  <data name="GridControl_ClientSalesReport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>691, 348</value>
+  </data>
   <data name="CheckEdit1.Properties.Caption" xml:space="preserve">
     <value>Only this customer</value>
+  </data>
+  <data name="XtraTabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>691, 378</value>
   </data>
   <data name="XtraTabPage1.Text" xml:space="preserve">
     <value>Customer Collect</value>

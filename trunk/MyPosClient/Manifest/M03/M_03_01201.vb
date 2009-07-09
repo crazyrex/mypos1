@@ -158,7 +158,8 @@ Namespace Manifest
             '做根据LaunchCondition判断分支的相关动作, 如控件的显示不显示, 必填不必填
 
             Select Case Me.LAUNCH_CONDITION
-
+                Case MyPosXService.S_03_01201.LCs.Choose
+                    Me.ToolStripButton_Choose.Visible = True
             End Select
 
             'Initialize option list controls which value source isn't from the edit form content
@@ -443,12 +444,12 @@ Namespace Manifest
 
         Private Sub TbActionChoose()
 
-            'If Me.LAUNCH_CONDITION <> MyPosXService.S_01_00101.LCs.Choose Then
-            '    Return                                                   
-            'End If                                                       
-                                                                          
-            'Me.ResponseToParentForm()                                    
-            'Me.CloseForm()                                               
+            If Me.LAUNCH_CONDITION <> MyPosXService.S_03_01201.LCs.Choose Then
+                Return
+            End If
+
+            Me.ResponseToParentForm()
+            Me.CloseForm()
 
 
         End Sub
