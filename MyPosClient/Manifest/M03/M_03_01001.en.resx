@@ -119,13 +119,13 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ToolStripButton_Search.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 22</value>
+    <value>45, 22</value>
   </data>
   <data name="ToolStripButton_Search.Text" xml:space="preserve">
     <value>Search</value>
   </data>
   <data name="ToolStripButton_Refresh.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 22</value>
+    <value>51, 22</value>
   </data>
   <data name="ToolStripButton_Refresh.Text" xml:space="preserve">
     <value>Refresh</value>
@@ -146,13 +146,13 @@
 </value>
   </data>
   <data name="ToolStripButton_SellDiscount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 22</value>
+    <value>87, 22</value>
   </data>
   <data name="ToolStripButton_SellDiscount.Text" xml:space="preserve">
     <value>Sell discount</value>
   </data>
   <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 22</value>
+    <value>39, 22</value>
   </data>
   <data name="ToolStripButton_Close.Text" xml:space="preserve">
     <value>Close</value>
@@ -166,8 +166,15 @@
   <data name="DateEdit_End.Location" type="System.Drawing.Point, System.Drawing">
     <value>255, 8</value>
   </data>
+  <assembly alias="DevExpress.Utils.v8.1" name="DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
+  <data name="DateEdit_End.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
+  </data>
   <data name="DateEdit_Begin.Location" type="System.Drawing.Point, System.Drawing">
     <value>75, 8</value>
+  </data>
+  <data name="DateEdit_Begin.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
   </data>
   <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>232, 13</value>
