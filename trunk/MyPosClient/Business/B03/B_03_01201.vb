@@ -380,18 +380,27 @@ Namespace Business
 
                 Dim chooseClientList As New MyPosXAuto.FTs.FT_M_MP_CLIENT
                 Dim chooseTurnoverList As New MyPosXAuto.FTs.FT_H_MP_TURNOVER
-                'Dim chooseAssetConformationList As New MyPosXAuto.FTs.FT_CIV_ASSET_CONFORMATION                           
+                Dim ClientRowSE As New MyPosXAuto.FTs.FT_M_MP_CLIENTRowSEntity
+
+                Me._manifest.SVLM_DEFAULT_CLIENT_ID = Me._manifest.SVFR_SELECTING_ROW.CLIENT_ID
+
                 'Dim chooseEliminateWayList As New MyPosXAuto.FTs.FT_CIV_ELIMINATE_WAY                                     
                 'Dim chooseInAccountCredenceTextList As New MyPosXAuto.FTs.FT_CIV_IN_ACCOUNT_CREDENCE_TEXT                 
                 '                                                                                                     
                 'Dim sysManageFormMustConfirm As Boolean                                                              
 
                 Me._service.ServInitDisplay( _
+                    Me._manifest.SVLM_DEFAULT_CLIENT_ID, _
                     chooseClientList, _
-                    chooseTurnoverList)
+                    chooseTurnoverList, _
+                    ClientRowSE)
 
                 Me._manifest.RepositoryItemLookUpEdit_ClientID.DataSource = chooseClientList
                 Me._manifest.RepositoryItemLookUpEdit_TurnoverID.DataSource = chooseTurnoverList
+
+                Me._manifest.ButtonEdit_ClientCode.Text = ClientRowSE.CLIENT_CODE
+                Me._manifest.Label_ClientName.Text = ClientRowSE.CLIENT_NAME
+                Me._manifest.Label_ClientID.Text = ClientRowSE.CLIENT_ID
 
                 'Me._manifest.LookUpEdit_Conformation.Properties.DataSource = chooseAssetConformationList
                 'Me._manifest.LookUpEdit_EliminateWay.Properties.DataSource = chooseEliminateWayList                  

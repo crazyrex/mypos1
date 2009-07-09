@@ -96,15 +96,22 @@ Public Class S_03_01201
 
 
     Public Function ServInitDisplay( _
+        ByVal valClinetID As String, _
         ByRef refClientList As MyPosXAuto.FTs.FT_M_MP_CLIENT, _
-        ByRef refTurnoverList As MyPosXAuto.FTs.FT_H_MP_TURNOVER _
+        ByRef refTurnoverList As MyPosXAuto.FTs.FT_H_MP_TURNOVER, _
+        ByRef refClientRowSE As MyPosXAuto.FTs.FT_M_MP_CLIENTRowSEntity _
         ) As String
 
         If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
 
         Try
+
+            Dim clientConditions As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_MP_CLIENT(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            clientConditions.Add(MyPosXAuto.Facade.AfBizMaster.M_MP_CLIENTColumns.CLIENT_IDColumn, "=", valClinetID)
+
             MyPosXAuto.Facade.AfBizMaster.FillFT_M_MP_CLIENT(Nothing, refClientList)
             MyPosXAuto.Facade.AfBizTurnover.FillFT_H_MP_TURNOVER(Nothing, refTurnoverList)
+            MyPosXAuto.Facade.AfBizMaster.FillM_MP_CLIENTRowSEntity(refClientRowSE, clientConditions)
 
 
         Catch ex As XL.Common.Utils.XLException
@@ -182,34 +189,34 @@ Public Class S_03_01201
         ByRef refParaUtld As String _
         ) As String
 
-            If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
 
-            Try
-
-
-
-            Catch ex As XL.Common.Utils.XLException
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
-
-                'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
-
-                Return logContentBuilder.ToString()
-
-             Catch ex As Exception
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+        Try
 
 
-                Return logContentBuilder.ToString()
 
-            End Try
+        Catch ex As XL.Common.Utils.XLException
 
-        Return string.Empty
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+            'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
+
+            Return logContentBuilder.ToString()
+
+        Catch ex As Exception
+
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+
+            Return logContentBuilder.ToString()
+
+        End Try
+
+        Return String.Empty
 
     End Function
 
@@ -219,34 +226,34 @@ Public Class S_03_01201
         ByRef refParaUtld As String _
         ) As String
 
-            If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
 
-            Try
-
-
-
-            Catch ex As XL.Common.Utils.XLException
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
-
-                'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
-
-                Return logContentBuilder.ToString()
-
-             Catch ex As Exception
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+        Try
 
 
-                Return logContentBuilder.ToString()
 
-            End Try
+        Catch ex As XL.Common.Utils.XLException
 
-        Return string.Empty
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+            'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
+
+            Return logContentBuilder.ToString()
+
+        Catch ex As Exception
+
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+
+            Return logContentBuilder.ToString()
+
+        End Try
+
+        Return String.Empty
 
     End Function
 
@@ -256,34 +263,34 @@ Public Class S_03_01201
         ByRef refParaUtld As String _
         ) As String
 
-            If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
 
-            Try
-
-
-
-            Catch ex As XL.Common.Utils.XLException
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
-
-                'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
-
-                Return logContentBuilder.ToString()
-
-             Catch ex As Exception
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+        Try
 
 
-                Return logContentBuilder.ToString()
 
-            End Try
+        Catch ex As XL.Common.Utils.XLException
 
-        Return string.Empty
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+            'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
+
+            Return logContentBuilder.ToString()
+
+        Catch ex As Exception
+
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+
+            Return logContentBuilder.ToString()
+
+        End Try
+
+        Return String.Empty
 
     End Function
 
@@ -293,34 +300,34 @@ Public Class S_03_01201
         ByRef refParaUtld As String _
         ) As String
 
-            If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
 
-            Try
-
-
-
-            Catch ex As XL.Common.Utils.XLException
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
-
-                'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
-
-                Return logContentBuilder.ToString()
-
-             Catch ex As Exception
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+        Try
 
 
-                Return logContentBuilder.ToString()
 
-            End Try
+        Catch ex As XL.Common.Utils.XLException
 
-        Return string.Empty
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+            'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
+
+            Return logContentBuilder.ToString()
+
+        Catch ex As Exception
+
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+
+            Return logContentBuilder.ToString()
+
+        End Try
+
+        Return String.Empty
 
     End Function
 
@@ -330,34 +337,34 @@ Public Class S_03_01201
         ByRef refParaUtld As String _
         ) As String
 
-            If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
 
-            Try
-
-
-
-            Catch ex As XL.Common.Utils.XLException
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
-
-                'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
-
-                Return logContentBuilder.ToString()
-
-             Catch ex As Exception
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+        Try
 
 
-                Return logContentBuilder.ToString()
 
-            End Try
+        Catch ex As XL.Common.Utils.XLException
 
-        Return string.Empty
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+            'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
+
+            Return logContentBuilder.ToString()
+
+        Catch ex As Exception
+
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+
+            Return logContentBuilder.ToString()
+
+        End Try
+
+        Return String.Empty
 
     End Function
 
@@ -367,34 +374,34 @@ Public Class S_03_01201
         ByRef refParaUtld As String _
         ) As String
 
-            If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
 
-            Try
-
-
-
-            Catch ex As XL.Common.Utils.XLException
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
-
-                'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
-
-                Return logContentBuilder.ToString()
-
-             Catch ex As Exception
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+        Try
 
 
-                Return logContentBuilder.ToString()
 
-            End Try
+        Catch ex As XL.Common.Utils.XLException
 
-        Return string.Empty
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+            'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
+
+            Return logContentBuilder.ToString()
+
+        Catch ex As Exception
+
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+
+            Return logContentBuilder.ToString()
+
+        End Try
+
+        Return String.Empty
 
     End Function
 
@@ -404,34 +411,34 @@ Public Class S_03_01201
         ByRef refParaUtld As String _
         ) As String
 
-            If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
 
-            Try
-
-
-
-            Catch ex As XL.Common.Utils.XLException
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
-
-                'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
-
-                Return logContentBuilder.ToString()
-
-             Catch ex As Exception
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+        Try
 
 
-                Return logContentBuilder.ToString()
 
-            End Try
+        Catch ex As XL.Common.Utils.XLException
 
-        Return string.Empty
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+            'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
+
+            Return logContentBuilder.ToString()
+
+        Catch ex As Exception
+
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+
+            Return logContentBuilder.ToString()
+
+        End Try
+
+        Return String.Empty
 
     End Function
 
@@ -441,34 +448,34 @@ Public Class S_03_01201
         ByRef refParaUtld As String _
         ) As String
 
-            If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
 
-            Try
-
-
-
-            Catch ex As XL.Common.Utils.XLException
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
-
-                'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
-
-                Return logContentBuilder.ToString()
-
-             Catch ex As Exception
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+        Try
 
 
-                Return logContentBuilder.ToString()
 
-            End Try
+        Catch ex As XL.Common.Utils.XLException
 
-        Return string.Empty
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+            'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
+
+            Return logContentBuilder.ToString()
+
+        Catch ex As Exception
+
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+
+            Return logContentBuilder.ToString()
+
+        End Try
+
+        Return String.Empty
 
     End Function
 
@@ -478,34 +485,34 @@ Public Class S_03_01201
         ByRef refParaUtld As String _
         ) As String
 
-            If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
 
-            Try
-
-
-
-            Catch ex As XL.Common.Utils.XLException
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
-
-                'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
-
-                Return logContentBuilder.ToString()
-
-             Catch ex As Exception
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+        Try
 
 
-                Return logContentBuilder.ToString()
 
-            End Try
+        Catch ex As XL.Common.Utils.XLException
 
-        Return string.Empty
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+            'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
+
+            Return logContentBuilder.ToString()
+
+        Catch ex As Exception
+
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+
+            Return logContentBuilder.ToString()
+
+        End Try
+
+        Return String.Empty
 
     End Function
 
@@ -515,34 +522,34 @@ Public Class S_03_01201
         ByRef refParaUtld As String _
         ) As String
 
-            If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
 
-            Try
-
-
-
-            Catch ex As XL.Common.Utils.XLException
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
-
-                'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
-
-                Return logContentBuilder.ToString()
-
-             Catch ex As Exception
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+        Try
 
 
-                Return logContentBuilder.ToString()
 
-            End Try
+        Catch ex As XL.Common.Utils.XLException
 
-        Return string.Empty
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+            'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
+
+            Return logContentBuilder.ToString()
+
+        Catch ex As Exception
+
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+
+            Return logContentBuilder.ToString()
+
+        End Try
+
+        Return String.Empty
 
     End Function
 
@@ -552,34 +559,34 @@ Public Class S_03_01201
         ByRef refParaUtld As String _
         ) As String
 
-            If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
 
-            Try
-
-
-
-            Catch ex As XL.Common.Utils.XLException
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
-
-                'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
-
-                Return logContentBuilder.ToString()
-
-             Catch ex As Exception
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+        Try
 
 
-                Return logContentBuilder.ToString()
 
-            End Try
+        Catch ex As XL.Common.Utils.XLException
 
-        Return string.Empty
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+            'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
+
+            Return logContentBuilder.ToString()
+
+        Catch ex As Exception
+
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+
+            Return logContentBuilder.ToString()
+
+        End Try
+
+        Return String.Empty
 
     End Function
 
@@ -589,34 +596,34 @@ Public Class S_03_01201
         ByRef refParaUtld As String _
         ) As String
 
-            If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
 
-            Try
-
-
-
-            Catch ex As XL.Common.Utils.XLException
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
-
-                'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
-
-                Return logContentBuilder.ToString()
-
-             Catch ex As Exception
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+        Try
 
 
-                Return logContentBuilder.ToString()
 
-            End Try
+        Catch ex As XL.Common.Utils.XLException
 
-        Return string.Empty
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+            'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
+
+            Return logContentBuilder.ToString()
+
+        Catch ex As Exception
+
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+
+            Return logContentBuilder.ToString()
+
+        End Try
+
+        Return String.Empty
 
     End Function
 
@@ -626,34 +633,34 @@ Public Class S_03_01201
         ByRef refParaUtld As String _
         ) As String
 
-            If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
 
-            Try
-
-
-
-            Catch ex As XL.Common.Utils.XLException
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
-
-                'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
-
-                Return logContentBuilder.ToString()
-
-             Catch ex As Exception
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+        Try
 
 
-                Return logContentBuilder.ToString()
 
-            End Try
+        Catch ex As XL.Common.Utils.XLException
 
-        Return string.Empty
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+            'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
+
+            Return logContentBuilder.ToString()
+
+        Catch ex As Exception
+
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+
+            Return logContentBuilder.ToString()
+
+        End Try
+
+        Return String.Empty
 
     End Function
 
@@ -663,34 +670,34 @@ Public Class S_03_01201
         ByRef refParaUtld As String _
         ) As String
 
-            If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
 
-            Try
-
-
-
-            Catch ex As XL.Common.Utils.XLException
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
-
-                'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
-
-                Return logContentBuilder.ToString()
-
-             Catch ex As Exception
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+        Try
 
 
-                Return logContentBuilder.ToString()
 
-            End Try
+        Catch ex As XL.Common.Utils.XLException
 
-        Return string.Empty
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+            'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
+
+            Return logContentBuilder.ToString()
+
+        Catch ex As Exception
+
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+
+            Return logContentBuilder.ToString()
+
+        End Try
+
+        Return String.Empty
 
     End Function
 
@@ -700,34 +707,34 @@ Public Class S_03_01201
         ByRef refParaUtld As String _
         ) As String
 
-            If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
 
-            Try
-
-
-
-            Catch ex As XL.Common.Utils.XLException
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
-
-                'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
-
-                Return logContentBuilder.ToString()
-
-             Catch ex As Exception
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+        Try
 
 
-                Return logContentBuilder.ToString()
 
-            End Try
+        Catch ex As XL.Common.Utils.XLException
 
-        Return string.Empty
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+            'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
+
+            Return logContentBuilder.ToString()
+
+        Catch ex As Exception
+
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+
+            Return logContentBuilder.ToString()
+
+        End Try
+
+        Return String.Empty
 
     End Function
 
@@ -737,34 +744,34 @@ Public Class S_03_01201
         ByRef refParaUtld As String _
         ) As String
 
-            If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
 
-            Try
-
-
-
-            Catch ex As XL.Common.Utils.XLException
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
-
-                'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
-
-                Return logContentBuilder.ToString()
-
-             Catch ex As Exception
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+        Try
 
 
-                Return logContentBuilder.ToString()
 
-            End Try
+        Catch ex As XL.Common.Utils.XLException
 
-        Return string.Empty
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+            'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
+
+            Return logContentBuilder.ToString()
+
+        Catch ex As Exception
+
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+
+            Return logContentBuilder.ToString()
+
+        End Try
+
+        Return String.Empty
 
     End Function
 
@@ -774,34 +781,34 @@ Public Class S_03_01201
         ByRef refParaUtld As String _
         ) As String
 
-            If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
 
-            Try
-
-
-
-            Catch ex As XL.Common.Utils.XLException
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
-
-                'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
-
-                Return logContentBuilder.ToString()
-
-             Catch ex As Exception
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+        Try
 
 
-                Return logContentBuilder.ToString()
 
-            End Try
+        Catch ex As XL.Common.Utils.XLException
 
-        Return string.Empty
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+            'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
+
+            Return logContentBuilder.ToString()
+
+        Catch ex As Exception
+
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+
+            Return logContentBuilder.ToString()
+
+        End Try
+
+        Return String.Empty
 
     End Function
 
@@ -811,37 +818,37 @@ Public Class S_03_01201
         ByRef refParaUtld As String _
         ) As String
 
-            If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
 
-            Try
-
-
-
-            Catch ex As XL.Common.Utils.XLException
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
-
-                'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
-
-                Return logContentBuilder.ToString()
-
-             Catch ex As Exception
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+        Try
 
 
-                Return logContentBuilder.ToString()
 
-            End Try
+        Catch ex As XL.Common.Utils.XLException
 
-        Return string.Empty
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+            'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
+
+            Return logContentBuilder.ToString()
+
+        Catch ex As Exception
+
+            Dim logContentBuilder As New LineStrBuilder
+            logContentBuilder.AppendLine("Message: {0}", ex.Message)
+            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+
+            Return logContentBuilder.ToString()
+
+        End Try
+
+        Return String.Empty
 
     End Function
 
 
-    End Class
+End Class
 
