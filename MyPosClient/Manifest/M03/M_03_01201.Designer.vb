@@ -76,6 +76,7 @@
             Me.GridView_ClientPointIO = New DevExpress.XtraGrid.Views.Grid.GridView
             Me.GridColumn_IODate = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_ClientID = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.RepositoryItemLookUpEdit_ClientID = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
             Me.GridColumn_PointAmount = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_TurnoverID = New DevExpress.XtraGrid.Columns.GridColumn
             Me.RepositoryItemLookUpEdit_TurnoverID = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
@@ -84,7 +85,6 @@
             Me.GridColumn_RowSelected = New DevExpress.XtraGrid.Columns.GridColumn
             Me.RepositoryItemCheckEdit_RowSelected = New DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
             Me.GridColumn_RowHighLight = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.RepositoryItemLookUpEdit_ClientID = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
             Me.ToolStrip_Form.SuspendLayout()
             CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.PanelControl1.SuspendLayout()
@@ -95,21 +95,21 @@
             CType(Me.DateEdit_Begin.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.GridControl_ClientPointIO, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.GridView_ClientPointIO, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.RepositoryItemLookUpEdit_ClientID, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemLookUpEdit_TurnoverID, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemCheckEdit_RowSelected, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.RepositoryItemLookUpEdit_ClientID, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'DefaultLookAndFeel_Form
             '
-            Me.DefaultLookAndFeel_Form.LookAndFeel.SkinName = "Money Twins"
+            Me.DefaultLookAndFeel_Form.LookAndFeel.SkinName = ""
             '
             'Timer_Surveillant
             '
             '
             'ToolStrip_Form
             '
-            Me.ToolStrip_Form.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton_Create, Me.ToolStripButton_ShowFilter, Me.ToolStripButton_Choose, Me.ToolStripButton_Delete, Me.ToolStripButton_Refresh, Me.ToolStripButton_View, Me.ToolStripButton_Close})
+            Me.ToolStrip_Form.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton_Choose, Me.ToolStripButton_Create, Me.ToolStripButton_ShowFilter, Me.ToolStripButton_Delete, Me.ToolStripButton_Refresh, Me.ToolStripButton_View, Me.ToolStripButton_Close})
             Me.ToolStrip_Form.Location = New System.Drawing.Point(0, 0)
             Me.ToolStrip_Form.Name = "ToolStrip_Form"
             Me.ToolStrip_Form.Size = New System.Drawing.Size(700, 25)
@@ -156,6 +156,7 @@
             Me.ToolStripButton_Choose.Name = "ToolStripButton_Choose"
             Me.ToolStripButton_Choose.Size = New System.Drawing.Size(33, 22)
             Me.ToolStripButton_Choose.Text = "选择"
+            Me.ToolStripButton_Choose.Visible = False
             '
             'ToolStripButton_Delete
             '
@@ -405,7 +406,7 @@
             Me.Label2.Font = New System.Drawing.Font("Arial", 9.0!)
             Me.Label2.ForeColor = System.Drawing.Color.Black
             Me.Label2.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.Label2.Location = New System.Drawing.Point(232, 13)
+            Me.Label2.Location = New System.Drawing.Point(231, 12)
             Me.Label2.Name = "Label2"
             Me.Label2.Size = New System.Drawing.Size(21, 15)
             Me.Label2.TabIndex = 10000
@@ -442,7 +443,7 @@
             Me.Label3.Font = New System.Drawing.Font("Arial", 9.0!)
             Me.Label3.ForeColor = System.Drawing.Color.Black
             Me.Label3.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.Label3.Location = New System.Drawing.Point(8, 41)
+            Me.Label3.Location = New System.Drawing.Point(7, 40)
             Me.Label3.Name = "Label3"
             Me.Label3.Size = New System.Drawing.Size(31, 15)
             Me.Label3.TabIndex = 10000
@@ -479,7 +480,7 @@
             Me.Label1.Font = New System.Drawing.Font("Arial", 9.0!)
             Me.Label1.ForeColor = System.Drawing.Color.Black
             Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.Label1.Location = New System.Drawing.Point(8, 14)
+            Me.Label1.Location = New System.Drawing.Point(7, 13)
             Me.Label1.Name = "Label1"
             Me.Label1.Size = New System.Drawing.Size(61, 15)
             Me.Label1.TabIndex = 10000
@@ -588,6 +589,15 @@
             Me.GridColumn_ClientID.Visible = True
             Me.GridColumn_ClientID.VisibleIndex = 2
             '
+            'RepositoryItemLookUpEdit_ClientID
+            '
+            Me.RepositoryItemLookUpEdit_ClientID.AutoHeight = False
+            Me.RepositoryItemLookUpEdit_ClientID.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+            Me.RepositoryItemLookUpEdit_ClientID.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("CLIENT_NAME", "Name2", 20, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Data.ColumnSortOrder.None)})
+            Me.RepositoryItemLookUpEdit_ClientID.DisplayMember = "CLIENT_NAME"
+            Me.RepositoryItemLookUpEdit_ClientID.Name = "RepositoryItemLookUpEdit_ClientID"
+            Me.RepositoryItemLookUpEdit_ClientID.ValueMember = "CLIENT_ID"
+            '
             'GridColumn_PointAmount
             '
             Me.GridColumn_PointAmount.Caption = "出入点数"
@@ -659,15 +669,6 @@
             Me.GridColumn_RowHighLight.Name = "GridColumn_RowHighLight"
             Me.GridColumn_RowHighLight.OptionsColumn.AllowFocus = False
             '
-            'RepositoryItemLookUpEdit_ClientID
-            '
-            Me.RepositoryItemLookUpEdit_ClientID.AutoHeight = False
-            Me.RepositoryItemLookUpEdit_ClientID.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-            Me.RepositoryItemLookUpEdit_ClientID.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("CLIENT_NAME", "Name2", 20, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Data.ColumnSortOrder.None)})
-            Me.RepositoryItemLookUpEdit_ClientID.DisplayMember = "CLIENT_NAME"
-            Me.RepositoryItemLookUpEdit_ClientID.Name = "RepositoryItemLookUpEdit_ClientID"
-            Me.RepositoryItemLookUpEdit_ClientID.ValueMember = "CLIENT_ID"
-            '
             'M_03_01201
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -716,9 +717,9 @@
             CType(Me.DateEdit_Begin.Properties, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.GridControl_ClientPointIO, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.GridView_ClientPointIO, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.RepositoryItemLookUpEdit_ClientID, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemLookUpEdit_TurnoverID, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemCheckEdit_RowSelected, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.RepositoryItemLookUpEdit_ClientID, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 

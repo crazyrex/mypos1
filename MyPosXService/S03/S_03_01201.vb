@@ -38,7 +38,7 @@ Public Class S_03_01201
 
         Public Enum LCs
             None
-            Utld0002
+        Choose
             Utld0003
             Utld0004
             Utld0005
