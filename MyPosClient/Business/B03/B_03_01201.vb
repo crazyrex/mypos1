@@ -374,6 +374,8 @@ Namespace Business
 
             Try
 
+                Me._manifest.SVLM_DEFAULT_CLIENT_ID = Me._manifest.SVFR_SELECTING_ROW.CLIENT_ID
+
                 If Me._manifest.SVLM_DEFAULT_CLIENT_ID.Length > 0 Then
                     Me._manifest.ButtonEdit_ClientCode.Enabled = False
                 End If
@@ -382,7 +384,6 @@ Namespace Business
                 Dim chooseTurnoverList As New MyPosXAuto.FTs.FT_H_MP_TURNOVER
                 Dim ClientRowSE As New MyPosXAuto.FTs.FT_M_MP_CLIENTRowSEntity
 
-                Me._manifest.SVLM_DEFAULT_CLIENT_ID = Me._manifest.SVFR_SELECTING_ROW.CLIENT_ID
 
                 'Dim chooseEliminateWayList As New MyPosXAuto.FTs.FT_CIV_ELIMINATE_WAY                                     
                 'Dim chooseInAccountCredenceTextList As New MyPosXAuto.FTs.FT_CIV_IN_ACCOUNT_CREDENCE_TEXT                 
