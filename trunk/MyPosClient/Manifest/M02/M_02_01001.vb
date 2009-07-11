@@ -123,7 +123,7 @@ Namespace Manifest
 
             Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Create, AddressOf Me.TbActionCreate)
             Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Save, AddressOf Me.TbActionSave)
-            'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Remove, AddressOf Me.TbActionRemove)
+            Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Remove, AddressOf Me.TbActionRemove)
             Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Close, AddressOf Me.TbActionClose)
             'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0001, AddressOf Me.TbActionUtld0001)
             'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0002, AddressOf Me.TbActionUtld0002)
@@ -355,7 +355,8 @@ Namespace Manifest
             Select Case Me._bizAgent.AffairOf(responseResult.ResponseTitle)
 
                 Case Business.B_02_01001.Affairs.AddWare
-
+                    Me.GridView_TurnoverDtl.BestFitColumns()
+                    Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.UpdateSummary, False)
                     'Case Business.B_01_00201.Affairs.DeleteInfo
                     '    Me.UpdateDisplay()                     
 
@@ -376,7 +377,7 @@ Namespace Manifest
                     'Else                                              
                     '    Me.IA_ClearContent()                          
                     'End If                                            
-                Case Business.B_02_01001.Affairs.InitDisplay, Business.B_02_01001.Affairs.AddWare
+                Case Business.B_02_01001.Affairs.InitDisplay
                     Me.GridView_TurnoverDtl.BestFitColumns()
 
             End Select
@@ -450,6 +451,13 @@ Namespace Manifest
 
         Private Sub TbActionRemove()
 
+            If IsNothing(Me.SVFR_BINDING_TURNOVER_DTL_ROW) = True Then
+                Return
+            End If
+
+            Me.SVFR_BINDING_TURNOVER_DTL_ROW.Delete()
+            Me.DoPrivateUpdateSelectingRow()
+            Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.UpdateSummary, False)
         End Sub
 
         Private Sub TbActionClose()
@@ -836,6 +844,35 @@ Namespace Manifest
                 Me.TextEdit_ClientCode.ResetText()
                 Me.FormInputGuarder.RemoveRequiredField(Me.TextEdit_ClientCode)
             End If
+        End Sub
+
+        Private Sub TextEdit_ClientCode_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextEdit_ClientCode.KeyDown
+            If e.KeyCode = Keys.Enter Then
+                Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.LoadClientInfoByCode, False)
+            End If
+        End Sub
+
+        Private Sub SpinEdit_WareAmount_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles SpinEdit_WareAmount.KeyDown
+
+            If IsNothing(Me.SVFR_BINDING_TURNOVER_DTL_ROW) = False Then
+
+                Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_AMOUNT = Me.SpinEdit_WareAmount.Value
+                Me.SVFR_BINDING_TURNOVER_DTL_ROW.SUM_PRICE = _
+                    CommTK.FDecimal(Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_AMOUNT * Me.SVFR_BINDING_TURNOVER_DTL_ROW.UNIT_PRICE)
+                Me.SVFR_BINDING_TURNOVER_DTL_ROW.SUM_DISCOUNT = _
+                    CommTK.FDecimal(Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_AMOUNT * Me.SVFR_BINDING_TURNOVER_DTL_ROW.UNIT_DISCOUNT)
+                Me.SVFR_BINDING_TURNOVER_DTL_ROW.SUM_COST = _
+                    CommTK.FDecimal(Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_AMOUNT * Me.SVFR_BINDING_TURNOVER_DTL_ROW.UNIT_COST)
+
+            End If
+
+            Me.ButtonEdit_WareCode.SelectAll()
+            Me.ButtonEdit_WareCode.Select()
+        End Sub
+
+        Private Sub CalcEdit_Payment_EditValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CalcEdit_Payment.EditValueChanged
+            Me.Label_Change.Text = CommTK.FString(Me.CalcEdit_Payment.Value - CommTK.FDecimal(Me.Label_Payable.Text), False, "#,##0.00")
+
         End Sub
     End Class
 

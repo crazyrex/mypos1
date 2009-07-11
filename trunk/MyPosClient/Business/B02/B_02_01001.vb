@@ -13,10 +13,10 @@ Imports XL.Win.Utils
 Namespace Business
 
 
-    Public Class B_02_01001  
+    Public Class B_02_01001
         Inherits XL.Win.Component.BaseAgent
 
-#Region" 组件设计器生成的代码"
+#Region " 组件设计器生成的代码"
 
         Public Sub New(ByVal Container As System.ComponentModel.IContainer)
             MyClass.New()
@@ -59,12 +59,12 @@ Namespace Business
 #End Region
 
 
-#Region"Prerequested Inits"
+#Region "Prerequested Inits"
 
         '
         '本代理所对应的表现层实例
         '
-        Private _manifest As Manifest.M_02_01001     
+        Private _manifest As Manifest.M_02_01001
         Private _service As MyPosXService.S_02_01001
 
         Public Enum Affairs
@@ -75,7 +75,7 @@ Namespace Business
             AddWare
             UpdateSummary
             LoadClientInfoByCode
-            BizUtld0004
+            UpdateChange
             BizUtld0005
             BizUtld0006
             BizUtld0007
@@ -204,12 +204,12 @@ Namespace Business
                     '-------------------------------------------------------------------
                     functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoLoadClientInfoByCode)
 
-                Case Affairs.BizUtld0004
+                Case Affairs.UpdateChange
 
                     '
                     '取到处理函数的结果，传入返回给Manifest的AgentResponse包
                     '-------------------------------------------------------------------
-                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoBizUtld0004)
+                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoUpdateChange)
 
                 Case Affairs.BizUtld0005
 
@@ -723,18 +723,25 @@ Namespace Business
 
             Try
 
+                Dim totalPrice = CommTK.FDecimal(Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.Compute("Sum(SUM_PRICE)", String.Empty))
                 Me._manifest.Label_TotalPrice.Text = _
-                    CommTK.FString(Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.Compute("Sum(SUM_PRICE)", String.Empty), _
+                    CommTK.FString(totalPrice, _
                     False, _
                     "#,##0.00")
+
+                Dim totalDiscount = CommTK.FDecimal(Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.Compute("Sum(SUM_DISCOUNT)", String.Empty))
                 Me._manifest.Label_TotalDiscount.Text = _
-                    CommTK.FString(Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.Compute("Sum(SUM_DISCOUNT)", String.Empty), _
+                    CommTK.FString(totalDiscount, _
                     False, _
                     "#,##0.00")
 
-                Me._manifest.Label_Payable.Text = 
-                Me._manifest.Label_AquiringPoints.Text =
+                Dim pointToRMBRate = CommTK.FDecimal(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_POINTS_TO_RMB_RATE))
+                Dim rmbToPointRate = CommTK.FDecimal(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_RMB_TO_POINTS_RATE))
 
+                Dim payable = CommTK.FDecimal(totalPrice - totalDiscount - Me._manifest.CalcEdit_ExtraDiscount.Value - Me._manifest.CalcEdit_UsePoint.Value * pointToRMBRate)
+
+                Me._manifest.Label_Payable.Text = CommTK.FString(payable, False, "#,##0.00")
+                Me._manifest.Label_AquiringPoints.Text = CommTK.FString(payable / rmbToPointRate, False, "#,##0.00")
                 'Dim servResult As String = _
                 '    Me._service.ServUpdateSummary()
 
@@ -778,9 +785,9 @@ Namespace Business
 
             Try
 
-                Dim clientCondition As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_MP_CLIENT(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
-                clientCondition.Add(MyPosXAuto.Facade.AfBizMaster.M_MP_CLIENTColumns.CLIENT_CODEColumn, "=", Me._manifest.TextEdit_ClientCode.Text)
-                Dim clientRow = MyPosXAuto.Facade.AfBizMaster.GetM_MP_CLIENTRow(clientCondition)
+                Dim clientCondition As New MyPosXAuto.Facade.AfMV.ConditionOfMV_MP_CLIENT(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+                clientCondition.Add(MyPosXAuto.Facade.AfMV.MV_MP_CLIENTColumns.CLIENT_CODEColumn, "=", Me._manifest.TextEdit_ClientCode.Text)
+                Dim clientRow = MyPosXAuto.Facade.AfMV.GetMV_MP_CLIENTRow(clientCondition)
 
                 If IsNothing(clientRow) = True Then
                     Me._manifest.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0019)
@@ -791,7 +798,7 @@ Namespace Business
                 Me._manifest.ButtonEdit_WareCode.Text = clientRow.CLIENT_CODE
                 Me._manifest.Label_ClientID.Text = clientRow.CLIENT_ID
                 Me._manifest.Label_ClientName.Text = clientRow.CLIENT_NAME
-                Me._manifest.Label_HoldingPoint.Text = clientCondition.CURRENT_POINT
+                Me._manifest.Label_HoldingPoint.Text = CommTK.FString(clientRow.CURRENT_POINT, False, "#,##0.00")
 
                 'Dim servResult As String = _
                 '    Me._service.ServLoadClientInfoByCode()
@@ -831,14 +838,14 @@ Namespace Business
         '''
         '''
         '''-------------------------------------------------------------------
-        Private Function DoBizUtld0004() As String
+        Private Function DoUpdateChange() As String
 
 
             Try
 
 
                 'Dim servResult As String = _
-                '    Me._service.ServBizUtld0004()
+                '    Me._service.ServUpdateChange()
 
                 'If servResult.Length > 0 Then
                 '    Return servResult        
