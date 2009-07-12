@@ -9,6 +9,8 @@
         Public Shared IMAGE_CODE_INFO As System.Drawing.Imaging.ImageCodecInfo = Nothing
         Public Shared ENCODER_PARAMETER As New System.Drawing.Imaging.EncoderParameters
 
+        Public Const CACHE_DATA_FILE_TURNOVER As String = "CACHE_DATA_FILE_TURNOVER"
+        Public Const CACHE_DATA_FILE_TURNOVER_DETAIL As String = "CACHE_DATA_FILE_TURNOVER_DETAIL"
         Shared Sub New()
             Utils.TK.InitImageParameter()
         End Sub

@@ -3,6 +3,7 @@ Imports XL.Common.Utils
 Imports MyPosXAuto.Facade
 Imports System.Collections
 Imports System.Data
+Imports System.Collections.Generic
 
 Namespace Facade
 
@@ -588,6 +589,73 @@ Namespace Facade
         End Function
 #End Region
 
+        Public Shared Sub ImportTurnoverCacheData( _
+            ByVal turnoverCacheDataList As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER, _
+            ByVal turnoverDtlCacheDataList As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTL)
+
+
+            Dim turnoverDetailIDs As New Dictionary(Of String, ArrayList)
+            Dim detailIDs As ArrayList
+
+
+            Dim turnoverDtlCacheDataRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow
+            Dim turnoverDtlDBDataRow As MyPosXAuto.FTs.FT_H_MP_TURNOVER_DTLRow
+
+            Dim turnoverDtlCondition As New MyPosXAuto.Facade.AfBizTurnover.ConditionOfH_MP_TURNOVER_DTL(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            For Each turnoverDtlCacheDataRow In turnoverDtlCacheDataList
+
+                If turnoverDtlCacheDataRow.DETAIL_ID.Length = 0 Then
+                    Continue For
+                End If
+
+                turnoverDtlCondition.Clear()
+                turnoverDtlCondition.Add(AfBizTurnover.H_MP_TURNOVER_DTLColumns.DETAIL_IDColumn, "=", turnoverDtlCacheDataRow.DETAIL_ID)
+                turnoverDtlDBDataRow = MyPosXAuto.Facade.AfBizTurnover.GetH_MP_TURNOVER_DTLRow(turnoverDtlCondition)
+                If IsNothing(turnoverDtlDBDataRow) = True Then
+                    MyPosXAuto.Facade.AfBizTurnover.CreateH_MP_TURNOVER_DTLInfoByRow(turnoverDtlCacheDataRow)
+                Else
+                    MyPosXAuto.Facade.AfBizTurnover.ReviseH_MP_TURNOVER_DTLInfoByRow(turnoverDtlCacheDataRow)
+                End If
+
+                If turnoverDetailIDs.ContainsKey(turnoverDtlCacheDataRow.TURNOVER_ID) = False Then
+                    detailIDs = New ArrayList
+                    turnoverDetailIDs.Add(turnoverDtlCacheDataRow.TURNOVER_ID, detailIDs)
+                Else
+                    detailIDs = turnoverDetailIDs.Item(turnoverDtlCacheDataRow.TURNOVER_ID)
+                End If
+                detailIDs.Add(turnoverDtlCacheDataRow.DETAIL_ID)
+            Next
+
+            Dim turnoverDBDataRow As MyPosXAuto.FTs.FT_H_MP_TURNOVERRow
+            Dim turnoverCacheDataRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVERRow
+
+            Dim turnoverCondition As New MyPosXAuto.Facade.AfBizTurnover.ConditionOfH_MP_TURNOVER(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            For Each turnoverCacheDataRow In turnoverCacheDataList
+
+                If turnoverCacheDataRow.TURNOVER_ID.Length = 0 Then
+                    Continue For
+                End If
+
+                turnoverCondition.Clear()
+                turnoverCondition.Add(AfBizTurnover.H_MP_TURNOVERColumns.TURNOVER_IDColumn, "=", turnoverCacheDataRow.TURNOVER_ID)
+                turnoverDBDataRow = MyPosXAuto.Facade.AfBizTurnover.GetH_MP_TURNOVERRow(turnoverCondition)
+                If IsNothing(turnoverDBDataRow) = True Then
+                    MyPosXAuto.Facade.AfBizTurnover.CreateH_MP_TURNOVERInfoByRow(turnoverCacheDataRow)
+                Else
+                    MyPosXAuto.Facade.AfBizTurnover.ReviseH_MP_TURNOVERInfoByRow(turnoverCacheDataRow)
+                End If
+
+                If turnoverDetailIDs.ContainsKey(turnoverDBDataRow.TURNOVER_ID) = True Then
+                    detailIDs = turnoverDetailIDs.Item(turnoverDBDataRow.TURNOVER_ID)
+                    turnoverDtlCondition.Clear()
+                    turnoverDtlCondition.Add(AfBizTurnover.H_MP_TURNOVER_DTLColumns.DETAIL_IDColumn, False, detailIDs)
+                    MyPosXAuto.Facade.AfBizTurnover.DeleteH_MP_TURNOVER_DTLData(turnoverDtlCondition)
+                Else
+                    MyPosXAuto.Facade.AfBizTurnover.DeleteH_MP_TURNOVERInfo(turnoverDBDataRow.TURNOVER_ID)
+                End If
+
+            Next
+        End Sub
     End Class
 
 End Namespace
