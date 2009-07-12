@@ -32,7 +32,7 @@ Namespace Manifest
         'Shared Value, 用于与其它窗体交换数值的情况下, 需要自己根据需要更改命名
         '原则上所有UTLD的变量不能出现在成品中, 在确定不需要的情况下应删除UTLD
         '-------------------------------------------------------------------
-        Public SV_UTLD_0001 As String ="SV_UTLD_0001"
+        Public SV_POS_SET_ROWSE As New MyPosXAuto.FTs.FT_S_MP_POS_SETRowSEntity
         Public SV_UTLD_0002 As String ="SV_UTLD_0002"
         'Public SV_UTLD_0003 As String ="SV_UTLD_0003"
         'Public SV_UTLD_0004 As String ="SV_UTLD_0004"
@@ -116,6 +116,7 @@ Namespace Manifest
             'Me.FormInputGuarder.SetValidate(Me.TextEdit_Input, InputGuarder.ValidateClassify.Required, Nothing)
 
             Me.FormInputGuarder.SetInputLinkedLabel(Me.ButtonEdit_WareCode, Me.Label_WareInfo, Me.Label_WareID)
+            Me.FormInputGuarder.SetInputLinkedLabel(Me.TextEdit_ClientCode, Me.Label_ClientName, Me.Label_ClientID)
 
             'Me._bizAgent.SetDisableControlUnderRequest(Me.DisableControlUnderRequest)
 
@@ -165,9 +166,8 @@ Namespace Manifest
 
             'Initialize option list controls which value source isn't from the edit form content
 
-            Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.InitDisplay, False)
-
             Me.GridControl_TurnoverDtl.DataSource = Me.SVFT_BINDING_TURNOVER_DTL_LIST
+            Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.InitDisplay, False)
 
             'Me.LookupEdit_.Properties.DataSource = Me.SVFT_CHOOSE_
 
@@ -358,34 +358,12 @@ Namespace Manifest
 
             Select Case Me._bizAgent.AffairOf(responseResult.ResponseTitle)
 
-                Case Business.B_02_01001.Affairs.AddWare
-                    Me.GridView_TurnoverDtl.BestFitColumns()
+                Case Business.B_02_01001.Affairs.InitDisplay, Business.B_02_01001.Affairs.AddWare
                     Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.UpdateSummary, False)
+                    Me.GridView_TurnoverDtl.BestFitColumns()
                     Me.DoPrivateSelectRowByWareCode()
                     Me.DoPrivateUpdateCacheStatus()
-                    'Case Business.B_01_00201.Affairs.DeleteInfo
-                    '    Me.UpdateDisplay()                     
-
-                    'Case Business.B_02_00201.Affairs.LoadList             
-                    '    Me.DoPrivateUpdateSelectingRow()               
-                    '    Me.GridView_XXXXXList.BestFitColumns()         
-
-                    'Case Business.B_02_00202.Affairs.SaveInfo             
-                    'Window.XLMessageBox.ShowMessage( _                
-                    '    MyPosXService.Decls.MSG_OK_00001, _                
-                    '    Window.XLMessageBox.MessageType.Information, _
-                    '    MessageBoxButtons.OK)                         
-                    'Me.ResponseToParentForm()                         
-
-                    'If Me.SV_EDITING_TRANSFER_ID > 0 Then            
-                    '    Me.ResetSaveMode()                            
-                    '    Me.CloseForm()                                
-                    'Else                                              
-                    '    Me.IA_ClearContent()                          
-                    'End If                                            
-                Case Business.B_02_01001.Affairs.InitDisplay
-                    Me.GridView_TurnoverDtl.BestFitColumns()
-                    Me.DoPrivateUpdateCacheStatus()
+                                 
 
             End Select
         End Sub
@@ -689,9 +667,9 @@ Namespace Manifest
 
         Private Sub DoPrivateSelectRowByWareCode()
 
-            Me.TextEdit_ClientCode.Text = Me.TextEdit_ClientCode.Text.Trim
+            Me.ButtonEdit_WareCode.Text = Me.ButtonEdit_WareCode.Text.Trim.ToUpper
             For rowIndex As Integer = 0 To Me.GridView_TurnoverDtl.RowCount - 1
-                If Me.GridView_TurnoverDtl.GetRowCellDisplayText(rowIndex, Me.GridColumn_WareCode) = Me.TextEdit_ClientCode.Text Then
+                If Me.GridView_TurnoverDtl.GetRowCellDisplayText(rowIndex, Me.GridColumn_WareCode).ToUpper = Me.ButtonEdit_WareCode.Text Then
                     Me.GridView_TurnoverDtl.FocusedRowHandle = rowIndex
                     Exit For
                 End If
@@ -702,7 +680,7 @@ Namespace Manifest
 
         Private Sub DoPrivateUpdateCacheStatus()
 
-            Me.Label_CacheStatus.Text = CommTK.GetTranslatedString("缓存中有^张销售单")
+            Me.Label_CacheStatus.Text = CommTK.GetTranslatedString("缓存中有^张销售单", Me.SVFT_CACHE_DATA_TURNOVER_LIST.UndeletedRowCount)
 
         End Sub
 
@@ -797,7 +775,11 @@ Namespace Manifest
 #Region "Public Methods"
 
 
-        Public Sub DoPublicUtld0001()
+        Public Sub DoPublicDisableOperations()
+            Me.Enabled = False
+            Me.ToolStripButton_Create.Enabled = False
+            Me.ToolStripButton_Remove.Enabled = False
+            Me.ToolStripButton_Save.Enabled = False
 
         End Sub
 
