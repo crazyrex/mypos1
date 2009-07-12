@@ -336,7 +336,7 @@
             CTag2.ToolTip = ""
             CTag2.ValueType = XL.Common.ControlValueType.Character
             Me.Label_Change.Tag = CTag2
-            Me.Label_Change.Text = "总额"
+            Me.Label_Change.Text = "0.00"
             Me.Label_Change.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'Label13
@@ -792,7 +792,7 @@
             CTag13.ToolTip = ""
             CTag13.ValueType = XL.Common.ControlValueType.Character
             Me.Label_AquiringPoints.Tag = CTag13
-            Me.Label_AquiringPoints.Text = "总额"
+            Me.Label_AquiringPoints.Text = "0"
             Me.Label_AquiringPoints.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'Label_ClientID
@@ -979,7 +979,7 @@
             CTag18.ToolTip = ""
             CTag18.ValueType = XL.Common.ControlValueType.Character
             Me.Label_HoldingPoint.Tag = CTag18
-            Me.Label_HoldingPoint.Text = "总额"
+            Me.Label_HoldingPoint.Text = "0"
             Me.Label_HoldingPoint.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'Label6
@@ -1418,6 +1418,7 @@
             '
             'LinkLabel_UploadCacheData
             '
+            Me.LinkLabel_UploadCacheData.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
             Me.LinkLabel_UploadCacheData.AutoSize = True
             Me.LinkLabel_UploadCacheData.Location = New System.Drawing.Point(652, 15)
             Me.LinkLabel_UploadCacheData.Name = "LinkLabel_UploadCacheData"
@@ -1590,6 +1591,7 @@
             '
             'Label_CacheStatus
             '
+            Me.Label_CacheStatus.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
             Me.Label_CacheStatus.AutoSize = True
             Me.Label_CacheStatus.BackColor = System.Drawing.Color.White
             Me.Label_CacheStatus.Font = New System.Drawing.Font("Arial", 9.0!)

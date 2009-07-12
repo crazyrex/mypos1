@@ -401,6 +401,8 @@ Namespace Business
                     sysAttribute3, _
                     sysAttribute4, _
                     affairDescription, _
+                    SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_CURRENT_POS_ID), _
+                    Me._manifest.SV_POS_SET_ROWSE, _
                     Me._manifest.SVFT_REF_SALE_TEMPLATE_WARE_LIST)
 
                 If staffRowSE.IsNull = False Then
@@ -458,8 +460,17 @@ Namespace Business
 
                 Me._manifest.Label_AffairDescription.Text = affairDescription
 
-                Dim turnoverCacheDataFileName = WinTK.GetResourceFilePath(ResourceType.Data, Utils.Decls.CACHE_DATA_FILE_TURNOVER)
-                Dim turnoverDtlCacheDataFileName = WinTK.GetResourceFilePath(ResourceType.Data, Utils.Decls.CACHE_DATA_FILE_TURNOVER_DETAIL)
+                If Utils.Decls.LOGIN_STAFF_ID.Length = 0 Then
+                    Me._manifest.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0013)
+                    Me._manifest.DoPublicDisableOperations()
+                    Return String.Empty
+                End If
+
+                If Me._manifest.SV_POS_SET_ROWSE.POS_TYPE = MyPosXAuto.Decls.CIVALUE_POS_TYPE_WAREHOUSE Then
+                    Me._manifest.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0014)
+                    Me._manifest.DoPublicDisableOperations()
+                    Return String.Empty
+                End If
 
                 Me._manifest.SVFT_CACHE_DATA_TURNOVER_LIST.LoadXml( _
                     WinTK.GetResourceFilePath( _
@@ -823,7 +834,11 @@ Namespace Business
                 Dim payable = CommTK.FDecimal(totalPrice - totalDiscount - Me._manifest.CalcEdit_ExtraDiscount.Value - Me._manifest.CalcEdit_UsePoint.Value * pointToRMBRate)
 
                 Me._manifest.Label_Payable.Text = CommTK.FString(payable, False, "#,##0.00")
-                Me._manifest.Label_AquiringPoints.Text = CommTK.FString(payable / rmbToPointRate, False, "#,##0.00")
+                If rmbToPointRate > 0 Then
+                    Me._manifest.Label_AquiringPoints.Text = CommTK.FString(payable / rmbToPointRate, False, "#,##0.00")
+                Else
+                    Me._manifest.Label_AquiringPoints.Text = "0.00"
+                End If
                 'Dim servResult As String = _
                 '    Me._service.ServUpdateSummary()
 
