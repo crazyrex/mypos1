@@ -47,6 +47,10 @@ Namespace Manifest
         '数据列表变量
         Public SVFT_REF_SALE_TEMPLATE_WARE_LIST As New MyPosXAuto.FTs.FT_XV_T_MP_SALE_TEMPLATE_WARE
         Public SVFT_BINDING_TURNOVER_DTL_LIST As New MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTL
+
+        Public SVFT_CACHE_DATA_TURNOVER_LIST As New MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER
+        Public SVFT_CACHE_DATE_TURNOVER_DTL_LIST As New MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTL
+
         'Public SVFT_CHOOSE_XXX_LIST As New XAuto.FTs.FT_
 
         Public SVFR_BINDING_TURNOVER_DTL_ROW As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow
@@ -261,7 +265,7 @@ Namespace Manifest
         Public Overrides Sub KeyDownProcess(ByVal e As System.Windows.Forms.KeyEventArgs)
             Select Case e.KeyCode
                 Case Keys.F4
-                    Me.DoPrivateUtld0001()
+                    Me.DoPrivateFocusToAmount()
             End Select
         End Sub
 
@@ -288,7 +292,7 @@ Namespace Manifest
             '进行保存操作
             '-------------------------------------------------------------------
 
-            'Me._bizAgent.DoRequest(Business.B_0X_00XXX.Affairs.SaveInfo, False)
+            Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.SaveInfo, False)
 
 
             '
@@ -357,6 +361,8 @@ Namespace Manifest
                 Case Business.B_02_01001.Affairs.AddWare
                     Me.GridView_TurnoverDtl.BestFitColumns()
                     Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.UpdateSummary, False)
+                    Me.DoPrivateSelectRowByWareCode()
+                    Me.DoPrivateUpdateCacheStatus()
                     'Case Business.B_01_00201.Affairs.DeleteInfo
                     '    Me.UpdateDisplay()                     
 
@@ -379,6 +385,7 @@ Namespace Manifest
                     'End If                                            
                 Case Business.B_02_01001.Affairs.InitDisplay
                     Me.GridView_TurnoverDtl.BestFitColumns()
+                    Me.DoPrivateUpdateCacheStatus()
 
             End Select
         End Sub
@@ -425,6 +432,51 @@ Namespace Manifest
         '    End If                                                                                                                                                                        
         'End Sub                                                                                                                                                                           
 
+        Private Sub ButtonEdit_WareCode_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles ButtonEdit_WareCode.KeyDown
+            If e.KeyCode = Keys.Enter Then
+                Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.AddWare, False)
+            End If
+        End Sub
+
+        Private Sub CheckEdit_IsClient_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckEdit_IsClient.CheckedChanged
+            Me.TextEdit_ClientCode.Enabled = Me.CheckEdit_IsClient.Checked
+            If Me.TextEdit_ClientCode.Enabled = True Then
+                Me.TextEdit_ClientCode.Select()
+                Me.FormInputGuarder.SetValidate(Me.TextEdit_ClientCode, InputGuarder.ValidateClassify.Required, Nothing)
+            Else
+                Me.TextEdit_ClientCode.ResetText()
+                Me.FormInputGuarder.RemoveRequiredField(Me.TextEdit_ClientCode)
+            End If
+        End Sub
+
+        Private Sub TextEdit_ClientCode_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextEdit_ClientCode.KeyDown
+            If e.KeyCode = Keys.Enter Then
+                Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.LoadClientInfoByCode, False)
+            End If
+        End Sub
+
+        Private Sub SpinEdit_WareAmount_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles SpinEdit_WareAmount.KeyDown
+
+            If IsNothing(Me.SVFR_BINDING_TURNOVER_DTL_ROW) = False Then
+
+                Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_AMOUNT = Me.SpinEdit_WareAmount.Value
+                Me.SVFR_BINDING_TURNOVER_DTL_ROW.SUM_PRICE = _
+                    CommTK.FDecimal(Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_AMOUNT * Me.SVFR_BINDING_TURNOVER_DTL_ROW.UNIT_PRICE)
+                Me.SVFR_BINDING_TURNOVER_DTL_ROW.SUM_DISCOUNT = _
+                    CommTK.FDecimal(Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_AMOUNT * Me.SVFR_BINDING_TURNOVER_DTL_ROW.UNIT_DISCOUNT)
+                Me.SVFR_BINDING_TURNOVER_DTL_ROW.SUM_COST = _
+                    CommTK.FDecimal(Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_AMOUNT * Me.SVFR_BINDING_TURNOVER_DTL_ROW.UNIT_COST)
+
+            End If
+
+            Me.ButtonEdit_WareCode.SelectAll()
+            Me.ButtonEdit_WareCode.Select()
+        End Sub
+
+        Private Sub CalcEdit_Payment_EditValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CalcEdit_Payment.EditValueChanged
+            Me.Label_Change.Text = CommTK.FString(Me.CalcEdit_Payment.Value - CommTK.FDecimal(Me.Label_Payable.Text), False, "#,##0.00")
+
+        End Sub
 #End Region
 
 #Region "ToolStrip Actions"
@@ -457,7 +509,15 @@ Namespace Manifest
 
             Me.SVFR_BINDING_TURNOVER_DTL_ROW.Delete()
             Me.DoPrivateUpdateSelectingRow()
+
             Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.UpdateSummary, False)
+
+            Me.SVFT_CACHE_DATE_TURNOVER_DTL_LIST.SaveXml( _
+                WinTK.GetResourceFilePath( _
+                    ResourceType.Data, _
+                    Utils.Decls.CACHE_DATA_FILE_TURNOVER_DETAIL))
+            Me.DoPrivateUpdateCacheStatus()
+
         End Sub
 
         Private Sub TbActionClose()
@@ -615,7 +675,7 @@ Namespace Manifest
         End Sub
 
 
-        Private Sub DoPrivateUtld0001()
+        Private Sub DoPrivateFocusToAmount()
             If Me.Label_WareID.Text.Length = 0 Then
                 Me.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0020)
                 Me.ButtonEdit_WareCode.Select()
@@ -627,12 +687,22 @@ Namespace Manifest
         End Sub
 
 
-        Private Sub DoPrivateUtld0002()
+        Private Sub DoPrivateSelectRowByWareCode()
+
+            Me.TextEdit_ClientCode.Text = Me.TextEdit_ClientCode.Text.Trim
+            For rowIndex As Integer = 0 To Me.GridView_TurnoverDtl.RowCount - 1
+                If Me.GridView_TurnoverDtl.GetRowCellDisplayText(rowIndex, Me.GridColumn_WareCode) = Me.TextEdit_ClientCode.Text Then
+                    Me.GridView_TurnoverDtl.FocusedRowHandle = rowIndex
+                    Exit For
+                End If
+            Next
 
         End Sub
 
 
-        Private Sub DoPrivateUtld0003()
+        Private Sub DoPrivateUpdateCacheStatus()
+
+            Me.Label_CacheStatus.Text = CommTK.GetTranslatedString("缓存中有^张销售单")
 
         End Sub
 
@@ -829,50 +899,8 @@ Namespace Manifest
 
 #End Region
 
-        Private Sub ButtonEdit_WareCode_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles ButtonEdit_WareCode.KeyDown
-            If e.KeyCode = Keys.Enter Then
-                Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.AddWare, False)
-            End If
-        End Sub
-
-        Private Sub CheckEdit_IsClient_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckEdit_IsClient.CheckedChanged
-            Me.TextEdit_ClientCode.Enabled = Me.CheckEdit_IsClient.Checked
-            If Me.TextEdit_ClientCode.Enabled = True Then
-                Me.TextEdit_ClientCode.Select()
-                Me.FormInputGuarder.SetValidate(Me.TextEdit_ClientCode, InputGuarder.ValidateClassify.Required, Nothing)
-            Else
-                Me.TextEdit_ClientCode.ResetText()
-                Me.FormInputGuarder.RemoveRequiredField(Me.TextEdit_ClientCode)
-            End If
-        End Sub
-
-        Private Sub TextEdit_ClientCode_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextEdit_ClientCode.KeyDown
-            If e.KeyCode = Keys.Enter Then
-                Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.LoadClientInfoByCode, False)
-            End If
-        End Sub
-
-        Private Sub SpinEdit_WareAmount_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles SpinEdit_WareAmount.KeyDown
-
-            If IsNothing(Me.SVFR_BINDING_TURNOVER_DTL_ROW) = False Then
-
-                Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_AMOUNT = Me.SpinEdit_WareAmount.Value
-                Me.SVFR_BINDING_TURNOVER_DTL_ROW.SUM_PRICE = _
-                    CommTK.FDecimal(Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_AMOUNT * Me.SVFR_BINDING_TURNOVER_DTL_ROW.UNIT_PRICE)
-                Me.SVFR_BINDING_TURNOVER_DTL_ROW.SUM_DISCOUNT = _
-                    CommTK.FDecimal(Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_AMOUNT * Me.SVFR_BINDING_TURNOVER_DTL_ROW.UNIT_DISCOUNT)
-                Me.SVFR_BINDING_TURNOVER_DTL_ROW.SUM_COST = _
-                    CommTK.FDecimal(Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_AMOUNT * Me.SVFR_BINDING_TURNOVER_DTL_ROW.UNIT_COST)
-
-            End If
-
-            Me.ButtonEdit_WareCode.SelectAll()
-            Me.ButtonEdit_WareCode.Select()
-        End Sub
-
-        Private Sub CalcEdit_Payment_EditValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CalcEdit_Payment.EditValueChanged
-            Me.Label_Change.Text = CommTK.FString(Me.CalcEdit_Payment.Value - CommTK.FDecimal(Me.Label_Payable.Text), False, "#,##0.00")
-
+        Private Sub LinkLabel_UploadCacheData_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel_UploadCacheData.LinkClicked
+            Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.UploadCacheData, False)
         End Sub
     End Class
 

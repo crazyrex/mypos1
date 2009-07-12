@@ -76,7 +76,7 @@ Namespace Business
             UpdateSummary
             LoadClientInfoByCode
             UpdateChange
-            BizUtld0005
+            UploadCacheData
             BizUtld0006
             BizUtld0007
             BizUtld0008
@@ -211,12 +211,12 @@ Namespace Business
                     '-------------------------------------------------------------------
                     functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoUpdateChange)
 
-                Case Affairs.BizUtld0005
+                Case Affairs.UploadCacheData
 
                     '
                     '取到处理函数的结果，传入返回给Manifest的AgentResponse包
                     '-------------------------------------------------------------------
-                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoBizUtld0005)
+                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoUploadCacheData)
 
                 Case Affairs.BizUtld0006
 
@@ -458,6 +458,17 @@ Namespace Business
 
                 Me._manifest.Label_AffairDescription.Text = affairDescription
 
+                Dim turnoverCacheDataFileName = WinTK.GetResourceFilePath(ResourceType.Data, Utils.Decls.CACHE_DATA_FILE_TURNOVER)
+                Dim turnoverDtlCacheDataFileName = WinTK.GetResourceFilePath(ResourceType.Data, Utils.Decls.CACHE_DATA_FILE_TURNOVER_DETAIL)
+
+                Me._manifest.SVFT_CACHE_DATA_TURNOVER_LIST.LoadXml( _
+                    WinTK.GetResourceFilePath( _
+                        ResourceType.Data, _
+                        Utils.Decls.CACHE_DATA_FILE_TURNOVER))
+                Me._manifest.SVFT_CACHE_DATE_TURNOVER_DTL_LIST.LoadXml( _
+                    WinTK.GetResourceFilePath( _
+                        ResourceType.Data, _
+                        Utils.Decls.CACHE_DATA_FILE_TURNOVER_DETAIL))
 
             Catch ex As XL.Common.Utils.XLException
 
@@ -538,6 +549,77 @@ Namespace Business
 
 
             Try
+
+
+                
+                Dim turnoverCacheDataRow = Me._manifest.SVFT_CACHE_DATA_TURNOVER_LIST.AddNewXV_H_MP_TURNOVERRow( _
+                    TURNOVER_ID:=Guid.NewGuid.ToString, _
+                    TURNOVER_CODE:=String.Empty, _
+                    TURNOVER_TIME:=CommTK.GetSyncServerTime, _
+                    POS_ID:=SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_CURRENT_POS_ID), _
+                    STAFF_ID:=Utils.Decls.LOGIN_STAFF_ID, _
+                    TURNOVER_TYPE:=MyPosXAuto.Decls.CIVALUE_TURNOVER_TYPE_CHECK_OUT, _
+                    TURNOVER_STYLE:=MyPosXAuto.Decls.CIVALUE_TURNOVER_STYLE_SOLD, _
+                    SUPPLIER_ID:=String.Empty, _
+                    CLIENT_ID:=Me._manifest.Label_ClientID.Text, _
+                    TURNOVER_CONSIGN_STATUS:=MyPosXAuto.Decls.CIVALUE_TURNOVER_CONSIGN_STATUS_DONE, _
+                    BALANCE_STATUS:=MyPosXAuto.Decls.CIVALUE_BALANCE_STATUS_DONE, _
+                    REMARK:=String.Empty, _
+                    DELIVERY_DETAIL:=String.Empty, _
+                    EXTRA_DISCOUNT:=Me._manifest.CalcEdit_ExtraDiscount.Value, _
+                    DELIVERY_CHARGE:=0, _
+                    RELIEF_PAIR_ID:=String.Empty, _
+                    STAFF_SHARE_RATE:=0, _
+                    CONSIGN_DUE_DATE:=CommTK.GetSyncServerTime, _
+                    BATCH_INDEX:=0, _
+                    HEADQUATER_MERGED_CODE:=String.Empty, _
+                    REPLACE_INVENTORY_ID:=String.Empty, _
+                    ADDRESS:=String.Empty, _
+                    BALANCE_STATUS_TEXT:=String.Empty, _
+                    BRANCH_TO_POS_ENCODE:=String.Empty, _
+                    CELL_PHONE:=String.Empty, _
+                    CITY:=String.Empty, _
+                    COUNTRY:=String.Empty, _
+                    DEPARTMENT:=String.Empty, _
+                    EMAIL:=String.Empty, _
+                    FAX:=String.Empty, _
+                    HOME_PHONE:=String.Empty, _
+                    M_STAFF_EMAIL:=String.Empty, _
+                    POS_ADDRESS:=String.Empty, _
+                    POS_CODE:=String.Empty, _
+                    POS_NAME:=String.Empty, _
+                    POST_CODE:=String.Empty, _
+                    PRICE_SET_ID:=String.Empty, _
+                    REMARKS:=String.Empty, _
+                    STAFF_CODE:=String.Empty, _
+                    STAFF_NAME:=String.Empty, _
+                    STATE:=String.Empty, _
+                    TITLE:=String.Empty, _
+                    TURNOVER_CONSIGN_STATUS_TEXT:=String.Empty, _
+                    TURNOVER_STYLE_TEXT:=String.Empty, _
+                    TURNOVER_TYPE_TEXT:=String.Empty, _
+                    WORK_PHONE:=String.Empty)
+
+                Dim turnoverDtlCacheDataRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow
+                For Each bindingRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow In Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST
+
+                    turnoverDtlCacheDataRow = Me._manifest.SVFT_CACHE_DATE_TURNOVER_DTL_LIST.NewXV_H_MP_TURNOVER_DTLRow()
+                    Me._manifest.SVFT_CACHE_DATE_TURNOVER_DTL_LIST.AddXV_H_MP_TURNOVER_DTLRow(turnoverDtlCacheDataRow)
+
+                    turnoverDtlCacheDataRow.CloneDataRow(bindingRow)
+                    turnoverDtlCacheDataRow.DETAIL_ID = Guid.NewGuid.ToString
+                    turnoverDtlCacheDataRow.TURNOVER_ID = turnoverCacheDataRow.TURNOVER_ID
+                Next
+
+
+                Me._manifest.SVFT_CACHE_DATA_TURNOVER_LIST.SaveXml( _
+                    WinTK.GetResourceFilePath( _
+                        ResourceType.Data, _
+                        Utils.Decls.CACHE_DATA_FILE_TURNOVER))
+                Me._manifest.SVFT_CACHE_DATE_TURNOVER_DTL_LIST.SaveXml( _
+                    WinTK.GetResourceFilePath( _
+                        ResourceType.Data, _
+                        Utils.Decls.CACHE_DATA_FILE_TURNOVER_DETAIL))
 
 
                 'Dim servResult As String = _                                       
@@ -882,14 +964,30 @@ Namespace Business
         '''
         '''
         '''-------------------------------------------------------------------
-        Private Function DoBizUtld0005() As String
+        Private Function DoUploadCacheData() As String
 
 
             Try
 
+                MyPosXService.Facade.OpBizTurnover.ImportTurnoverCacheData( _
+                    Me._manifest.SVFT_CACHE_DATA_TURNOVER_LIST, _
+                    Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST)
+
+                Me._manifest.SVFT_CACHE_DATA_TURNOVER_LIST.Clear()
+                Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.Clear()
+
+                Me._manifest.SVFT_CACHE_DATA_TURNOVER_LIST.SaveXml( _
+                    WinTK.GetResourceFilePath( _
+                        ResourceType.Data, _
+                        Utils.Decls.CACHE_DATA_FILE_TURNOVER))
+                Me._manifest.SVFT_CACHE_DATE_TURNOVER_DTL_LIST.SaveXml( _
+                    WinTK.GetResourceFilePath( _
+                        ResourceType.Data, _
+                        Utils.Decls.CACHE_DATA_FILE_TURNOVER_DETAIL))
+
 
                 'Dim servResult As String = _
-                '    Me._service.ServBizUtld0005()
+                '    Me._service.ServUploadCacheData()
 
                 'If servResult.Length > 0 Then
                 '    Return servResult        
