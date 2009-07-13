@@ -76,13 +76,25 @@
             Me.Label2 = New System.Windows.Forms.Label
             Me.GridControl_SaleTemplateWare = New DevExpress.XtraGrid.GridControl
             Me.GridView_SaleTemplateWare = New DevExpress.XtraGrid.Views.Grid.GridView
-            Me.RepositoryItemLookUpEdit_TemplateID = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
-            Me.GridColumn_WareID = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.RepositoryItemLookUpEdit_WareID = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
+            Me.GridColumn_Select = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.RepositoryItemCheckEdit_Select = New DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
+            Me.GridColumn_WareCode = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn_CustomCode = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn_WareName = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn_Spec = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn_Model = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn_Attribute1 = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn_Attribute2 = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn_Attribute3 = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn_Attribute4 = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_DiscountType = New DevExpress.XtraGrid.Columns.GridColumn
             Me.RepositoryItemLookUpEdit_DiscountType = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
             Me.GridColumn_DiscountAmount = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_RowHighlight = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.RepositoryItemCalcEdit_LowerLimit = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
+            Me.RepositoryItemCalcEdit_IndividualDiscount = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
+            Me.RepositoryItemCalcEdit_UnitPrice = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
+            Me.RepositoryItemCalcEdit_UnitCost = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
             Me.ToolStrip_Form.SuspendLayout()
             CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.PanelControl1.SuspendLayout()
@@ -91,9 +103,12 @@
             CType(Me.TextEdit_TemplateCode.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.GridControl_SaleTemplateWare, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.GridView_SaleTemplateWare, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.RepositoryItemLookUpEdit_TemplateID, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.RepositoryItemLookUpEdit_WareID, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.RepositoryItemCheckEdit_Select, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemLookUpEdit_DiscountType, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.RepositoryItemCalcEdit_LowerLimit, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.RepositoryItemCalcEdit_IndividualDiscount, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.RepositoryItemCalcEdit_UnitPrice, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.RepositoryItemCalcEdit_UnitCost, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'DefaultLookAndFeel_Form
@@ -474,7 +489,7 @@
             Me.GridControl_SaleTemplateWare.Location = New System.Drawing.Point(0, 127)
             Me.GridControl_SaleTemplateWare.MainView = Me.GridView_SaleTemplateWare
             Me.GridControl_SaleTemplateWare.Name = "GridControl_SaleTemplateWare"
-            Me.GridControl_SaleTemplateWare.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemLookUpEdit_TemplateID, Me.RepositoryItemLookUpEdit_WareID, Me.RepositoryItemLookUpEdit_DiscountType})
+            Me.GridControl_SaleTemplateWare.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemCalcEdit_LowerLimit, Me.RepositoryItemCalcEdit_IndividualDiscount, Me.RepositoryItemCalcEdit_UnitPrice, Me.RepositoryItemCalcEdit_UnitCost, Me.RepositoryItemCheckEdit_Select, Me.RepositoryItemLookUpEdit_DiscountType})
             Me.GridControl_SaleTemplateWare.Size = New System.Drawing.Size(741, 373)
             Me.GridControl_SaleTemplateWare.TabIndex = 10003
             Me.GridControl_SaleTemplateWare.TabStop = False
@@ -482,9 +497,9 @@
             '
             'GridView_SaleTemplateWare
             '
-            Me.GridView_SaleTemplateWare.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn_WareID, Me.GridColumn_DiscountType, Me.GridColumn_DiscountAmount, Me.GridColumn_RowHighlight})
+            Me.GridView_SaleTemplateWare.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn_Select, Me.GridColumn_WareCode, Me.GridColumn_CustomCode, Me.GridColumn_WareName, Me.GridColumn_Spec, Me.GridColumn_Model, Me.GridColumn_Attribute1, Me.GridColumn_Attribute2, Me.GridColumn_Attribute3, Me.GridColumn_Attribute4, Me.GridColumn_DiscountType, Me.GridColumn_DiscountAmount, Me.GridColumn_RowHighlight})
             StyleFormatCondition1.Appearance.BackColor = System.Drawing.Color.Lime
-            StyleFormatCondition1.Appearance.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+            StyleFormatCondition1.Appearance.BackColor2 = System.Drawing.Color.White
             StyleFormatCondition1.Appearance.Options.UseBackColor = True
             StyleFormatCondition1.ApplyToRow = True
             StyleFormatCondition1.Column = Me.GridColumn_RowHighlight
@@ -497,33 +512,101 @@
             Me.GridView_SaleTemplateWare.OptionsView.ShowFooter = True
             Me.GridView_SaleTemplateWare.OptionsView.ShowGroupPanel = False
             '
-            'RepositoryItemLookUpEdit_TemplateID
+            'GridColumn_Select
             '
-            Me.RepositoryItemLookUpEdit_TemplateID.AutoHeight = False
-            Me.RepositoryItemLookUpEdit_TemplateID.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-            Me.RepositoryItemLookUpEdit_TemplateID.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("TEMPLATE_CODE", "Name1", 20, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Data.ColumnSortOrder.None)})
-            Me.RepositoryItemLookUpEdit_TemplateID.DisplayMember = "TEMPLATE_CODE"
-            Me.RepositoryItemLookUpEdit_TemplateID.Name = "RepositoryItemLookUpEdit_TemplateID"
-            Me.RepositoryItemLookUpEdit_TemplateID.ValueMember = "TEMPLATE_ID"
+            Me.GridColumn_Select.Caption = "选择"
+            Me.GridColumn_Select.ColumnEdit = Me.RepositoryItemCheckEdit_Select
+            Me.GridColumn_Select.FieldName = "DSR_FT_ROW_SELECTED"
+            Me.GridColumn_Select.Name = "GridColumn_Select"
+            Me.GridColumn_Select.Visible = True
+            Me.GridColumn_Select.VisibleIndex = 0
             '
-            'GridColumn_WareID
+            'RepositoryItemCheckEdit_Select
             '
-            Me.GridColumn_WareID.Caption = "货品名称"
-            Me.GridColumn_WareID.ColumnEdit = Me.RepositoryItemLookUpEdit_WareID
-            Me.GridColumn_WareID.FieldName = "WARE_ID"
-            Me.GridColumn_WareID.Name = "GridColumn_WareID"
-            Me.GridColumn_WareID.OptionsColumn.AllowFocus = False
-            Me.GridColumn_WareID.Visible = True
-            Me.GridColumn_WareID.VisibleIndex = 0
+            Me.RepositoryItemCheckEdit_Select.AutoHeight = False
+            Me.RepositoryItemCheckEdit_Select.Name = "RepositoryItemCheckEdit_Select"
             '
-            'RepositoryItemLookUpEdit_WareID
+            'GridColumn_WareCode
             '
-            Me.RepositoryItemLookUpEdit_WareID.AutoHeight = False
-            Me.RepositoryItemLookUpEdit_WareID.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-            Me.RepositoryItemLookUpEdit_WareID.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("WARE_NAME", "Name2", 20, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Data.ColumnSortOrder.None)})
-            Me.RepositoryItemLookUpEdit_WareID.DisplayMember = "WARE_NAME"
-            Me.RepositoryItemLookUpEdit_WareID.Name = "RepositoryItemLookUpEdit_WareID"
-            Me.RepositoryItemLookUpEdit_WareID.ValueMember = "WARE_ID"
+            Me.GridColumn_WareCode.Caption = "货品代码"
+            Me.GridColumn_WareCode.FieldName = "WARE_CODE"
+            Me.GridColumn_WareCode.Name = "GridColumn_WareCode"
+            Me.GridColumn_WareCode.OptionsColumn.AllowFocus = False
+            Me.GridColumn_WareCode.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Count
+            Me.GridColumn_WareCode.Visible = True
+            Me.GridColumn_WareCode.VisibleIndex = 1
+            '
+            'GridColumn_CustomCode
+            '
+            Me.GridColumn_CustomCode.Caption = "自定货号"
+            Me.GridColumn_CustomCode.FieldName = "CUSTOM_CODE"
+            Me.GridColumn_CustomCode.Name = "GridColumn_CustomCode"
+            Me.GridColumn_CustomCode.OptionsColumn.AllowFocus = False
+            Me.GridColumn_CustomCode.Visible = True
+            Me.GridColumn_CustomCode.VisibleIndex = 2
+            '
+            'GridColumn_WareName
+            '
+            Me.GridColumn_WareName.Caption = "货品名称"
+            Me.GridColumn_WareName.FieldName = "WARE_NAME"
+            Me.GridColumn_WareName.Name = "GridColumn_WareName"
+            Me.GridColumn_WareName.OptionsColumn.AllowFocus = False
+            Me.GridColumn_WareName.Visible = True
+            Me.GridColumn_WareName.VisibleIndex = 3
+            '
+            'GridColumn_Spec
+            '
+            Me.GridColumn_Spec.Caption = "货品规格"
+            Me.GridColumn_Spec.FieldName = "SPEC"
+            Me.GridColumn_Spec.Name = "GridColumn_Spec"
+            Me.GridColumn_Spec.OptionsColumn.AllowFocus = False
+            Me.GridColumn_Spec.Visible = True
+            Me.GridColumn_Spec.VisibleIndex = 4
+            '
+            'GridColumn_Model
+            '
+            Me.GridColumn_Model.Caption = "货品型号"
+            Me.GridColumn_Model.FieldName = "MODEL"
+            Me.GridColumn_Model.Name = "GridColumn_Model"
+            Me.GridColumn_Model.OptionsColumn.AllowFocus = False
+            Me.GridColumn_Model.Visible = True
+            Me.GridColumn_Model.VisibleIndex = 5
+            '
+            'GridColumn_Attribute1
+            '
+            Me.GridColumn_Attribute1.Caption = "属性1"
+            Me.GridColumn_Attribute1.FieldName = "ATTRIBUTE1"
+            Me.GridColumn_Attribute1.Name = "GridColumn_Attribute1"
+            Me.GridColumn_Attribute1.OptionsColumn.AllowFocus = False
+            Me.GridColumn_Attribute1.Visible = True
+            Me.GridColumn_Attribute1.VisibleIndex = 6
+            '
+            'GridColumn_Attribute2
+            '
+            Me.GridColumn_Attribute2.Caption = "属性2"
+            Me.GridColumn_Attribute2.FieldName = "ATTRIBUTE2"
+            Me.GridColumn_Attribute2.Name = "GridColumn_Attribute2"
+            Me.GridColumn_Attribute2.OptionsColumn.AllowFocus = False
+            Me.GridColumn_Attribute2.Visible = True
+            Me.GridColumn_Attribute2.VisibleIndex = 7
+            '
+            'GridColumn_Attribute3
+            '
+            Me.GridColumn_Attribute3.Caption = "属性3"
+            Me.GridColumn_Attribute3.FieldName = "ATTRIBUTE3"
+            Me.GridColumn_Attribute3.Name = "GridColumn_Attribute3"
+            Me.GridColumn_Attribute3.OptionsColumn.AllowFocus = False
+            Me.GridColumn_Attribute3.Visible = True
+            Me.GridColumn_Attribute3.VisibleIndex = 8
+            '
+            'GridColumn_Attribute4
+            '
+            Me.GridColumn_Attribute4.Caption = "属性4"
+            Me.GridColumn_Attribute4.FieldName = "ATTRIBUTE4"
+            Me.GridColumn_Attribute4.Name = "GridColumn_Attribute4"
+            Me.GridColumn_Attribute4.OptionsColumn.AllowFocus = False
+            Me.GridColumn_Attribute4.Visible = True
+            Me.GridColumn_Attribute4.VisibleIndex = 9
             '
             'GridColumn_DiscountType
             '
@@ -533,16 +616,13 @@
             Me.GridColumn_DiscountType.Name = "GridColumn_DiscountType"
             Me.GridColumn_DiscountType.OptionsColumn.AllowFocus = False
             Me.GridColumn_DiscountType.Visible = True
-            Me.GridColumn_DiscountType.VisibleIndex = 1
+            Me.GridColumn_DiscountType.VisibleIndex = 10
             '
             'RepositoryItemLookUpEdit_DiscountType
             '
             Me.RepositoryItemLookUpEdit_DiscountType.AutoHeight = False
             Me.RepositoryItemLookUpEdit_DiscountType.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-            Me.RepositoryItemLookUpEdit_DiscountType.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("ITEM_MEANING", "Name3", 20, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Data.ColumnSortOrder.None)})
-            Me.RepositoryItemLookUpEdit_DiscountType.DisplayMember = "ITEM_MEANING"
             Me.RepositoryItemLookUpEdit_DiscountType.Name = "RepositoryItemLookUpEdit_DiscountType"
-            Me.RepositoryItemLookUpEdit_DiscountType.ValueMember = "ITEM_VALUE"
             '
             'GridColumn_DiscountAmount
             '
@@ -551,7 +631,7 @@
             Me.GridColumn_DiscountAmount.Name = "GridColumn_DiscountAmount"
             Me.GridColumn_DiscountAmount.OptionsColumn.AllowFocus = False
             Me.GridColumn_DiscountAmount.Visible = True
-            Me.GridColumn_DiscountAmount.VisibleIndex = 2
+            Me.GridColumn_DiscountAmount.VisibleIndex = 11
             '
             'GridColumn_RowHighlight
             '
@@ -559,6 +639,30 @@
             Me.GridColumn_RowHighlight.FieldName = "DSR_FT_ROW_HIGHLIGHT"
             Me.GridColumn_RowHighlight.Name = "GridColumn_RowHighlight"
             Me.GridColumn_RowHighlight.OptionsColumn.AllowFocus = False
+            '
+            'RepositoryItemCalcEdit_LowerLimit
+            '
+            Me.RepositoryItemCalcEdit_LowerLimit.AutoHeight = False
+            Me.RepositoryItemCalcEdit_LowerLimit.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+            Me.RepositoryItemCalcEdit_LowerLimit.Name = "RepositoryItemCalcEdit_LowerLimit"
+            '
+            'RepositoryItemCalcEdit_IndividualDiscount
+            '
+            Me.RepositoryItemCalcEdit_IndividualDiscount.AutoHeight = False
+            Me.RepositoryItemCalcEdit_IndividualDiscount.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+            Me.RepositoryItemCalcEdit_IndividualDiscount.Name = "RepositoryItemCalcEdit_IndividualDiscount"
+            '
+            'RepositoryItemCalcEdit_UnitPrice
+            '
+            Me.RepositoryItemCalcEdit_UnitPrice.AutoHeight = False
+            Me.RepositoryItemCalcEdit_UnitPrice.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+            Me.RepositoryItemCalcEdit_UnitPrice.Name = "RepositoryItemCalcEdit_UnitPrice"
+            '
+            'RepositoryItemCalcEdit_UnitCost
+            '
+            Me.RepositoryItemCalcEdit_UnitCost.AutoHeight = False
+            Me.RepositoryItemCalcEdit_UnitCost.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+            Me.RepositoryItemCalcEdit_UnitCost.Name = "RepositoryItemCalcEdit_UnitCost"
             '
             'M_01_01002
             '
@@ -605,9 +709,12 @@
             CType(Me.TextEdit_TemplateCode.Properties, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.GridControl_SaleTemplateWare, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.GridView_SaleTemplateWare, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.RepositoryItemLookUpEdit_TemplateID, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.RepositoryItemLookUpEdit_WareID, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.RepositoryItemCheckEdit_Select, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemLookUpEdit_DiscountType, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.RepositoryItemCalcEdit_LowerLimit, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.RepositoryItemCalcEdit_IndividualDiscount, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.RepositoryItemCalcEdit_UnitPrice, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.RepositoryItemCalcEdit_UnitCost, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -615,19 +722,31 @@
         Friend WithEvents PanelControl1 As DevExpress.XtraEditors.PanelControl
         Friend WithEvents TextEdit_TemplateCode As DevExpress.XtraEditors.TextEdit
         Friend WithEvents Label2 As System.Windows.Forms.Label
-        Friend WithEvents GridControl_SaleTemplateWare As DevExpress.XtraGrid.GridControl
-        Friend WithEvents GridView_SaleTemplateWare As DevExpress.XtraGrid.Views.Grid.GridView
-        Friend WithEvents GridColumn_WareID As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn_DiscountType As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn_DiscountAmount As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn_RowHighlight As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents RepositoryItemLookUpEdit_TemplateID As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
-        Friend WithEvents RepositoryItemLookUpEdit_WareID As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
-        Friend WithEvents RepositoryItemLookUpEdit_DiscountType As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
         Friend WithEvents MemoEdit_Remark As DevExpress.XtraEditors.MemoEdit
         Friend WithEvents Label3 As System.Windows.Forms.Label
         Friend WithEvents TextEdit_TemplateName As DevExpress.XtraEditors.TextEdit
         Friend WithEvents Label1 As System.Windows.Forms.Label
+        Friend WithEvents GridControl_SaleTemplateWare As DevExpress.XtraGrid.GridControl
+        Friend WithEvents GridView_SaleTemplateWare As DevExpress.XtraGrid.Views.Grid.GridView
+        Friend WithEvents GridColumn_Select As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents RepositoryItemCheckEdit_Select As DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
+        Friend WithEvents GridColumn_WareCode As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridColumn_CustomCode As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridColumn_WareName As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridColumn_Spec As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridColumn_Model As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridColumn_Attribute1 As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridColumn_Attribute2 As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridColumn_Attribute3 As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridColumn_Attribute4 As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents RepositoryItemCalcEdit_UnitPrice As DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
+        Friend WithEvents RepositoryItemCalcEdit_UnitCost As DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
+        Friend WithEvents RepositoryItemCalcEdit_LowerLimit As DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
+        Friend WithEvents RepositoryItemCalcEdit_IndividualDiscount As DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
+        Friend WithEvents GridColumn_DiscountType As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridColumn_RowHighlight As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents RepositoryItemLookUpEdit_DiscountType As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
+        Friend WithEvents GridColumn_DiscountAmount As DevExpress.XtraGrid.Columns.GridColumn
 
 #End Region
 

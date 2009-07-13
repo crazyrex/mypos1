@@ -374,41 +374,64 @@ Namespace Business
 
             Try
 
-                Dim chooseTemplateList As New MyPosXAuto.FTs.FT_T_MP_SALE_TEMPLATE
-                Dim chooseWareList As New MyPosXAuto.FTs.FT_M_MP_WARE
+                Dim sysWareSpecModelDiscard As Boolean
+                Dim sysHideFinancials As Boolean
+                Dim sysShowCustomWareCode As Boolean
+                Dim sysAttribute1 As String = String.Empty
+                Dim sysAttribute2 As String = String.Empty
+                Dim sysAttribute3 As String = String.Empty
+                Dim sysAttribute4 As String = String.Empty
                 Dim chooseDiscountTypeList As New MyPosXAuto.FTs.FT_CIV_DISCOUNT_TYPE
 
                 Dim servResult As String = _
                 Me._service.ServInitDisplay( _
-                    chooseTemplateList, _
-                    chooseWareList, _
+                    CommDecl.CURRENT_LANGUAGE_OPTION, _
+                    sysWareSpecModelDiscard, _
+                    sysHideFinancials, _
+                    sysShowCustomWareCode, _
+                    sysAttribute1, _
+                    sysAttribute2, _
+                    sysAttribute3, _
+                    sysAttribute4, _
                     chooseDiscountTypeList)
 
                 If servResult.Length > 0 Then
                     Return servResult
                 End If
 
-                Me._manifest.RepositoryItemLookUpEdit_TemplateID.DataSource = chooseTemplateList
-                Me._manifest.RepositoryItemLookUpEdit_WareID.DataSource = chooseWareList
+                Me._manifest.GridColumn_Attribute1.Caption = sysAttribute1
+                Me._manifest.GridColumn_Attribute2.Caption = sysAttribute2
+                Me._manifest.GridColumn_Attribute3.Caption = sysAttribute3
+                Me._manifest.GridColumn_Attribute4.Caption = sysAttribute4
+
+                If sysAttribute1.Length = 0 Then
+                    Me._manifest.GridColumn_Attribute1.Visible = False
+                End If
+
+                If sysAttribute2.Length = 0 Then
+                    Me._manifest.GridColumn_Attribute2.Visible = False
+                End If
+
+                If sysAttribute3.Length = 0 Then
+                    Me._manifest.GridColumn_Attribute3.Visible = False
+                End If
+
+                If sysAttribute4.Length = 0 Then
+                    Me._manifest.GridColumn_Attribute4.Visible = False
+                End If
+
+                If sysWareSpecModelDiscard = True Then
+                    Me._manifest.GridColumn_Spec.Visible = False
+                    Me._manifest.GridColumn_Model.Visible = False
+                End If
+
+                If sysShowCustomWareCode = False Then
+                    Me._manifest.GridColumn_CustomCode.Visible = False
+                End If
+
                 Me._manifest.RepositoryItemLookUpEdit_DiscountType.DataSource = chooseDiscountTypeList
 
-
-                'If Me._manifest.SV_EDITING_ASSET_ID < 0 Then                                                         
-                '			xxxx                                                                                            
-                'End If                                                                                               
-                '                                                                                                     
-                'If sysManageFormMustConfirm = True Then                                                              
-                '    Me._manifest.ButtonEdit_CurrentDepartmentCode.Enabled = False                                    
-                'End If                                                                                               
-
-
-                'Me._manifest.SV_RPTOPT_LABEL = New XForm.ReportOption(MyPosXService.Decls.RPT_NAME_0001, XForm.ReportOption.PrintType.Label, True)
-                'Me._manifest.SV_RPTOPT_LABEL.DefaultFileName = SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_ASSET_LABEL_FILE_PATH)            
-
-                'Me._manifest.SV_RPTOPT_PRINTER = New XForm.ReportOption(MyPosXService.Decls.RPT_NAME_0001, XForm.ReportOption.PrintType.Print, True)
-                '                                                                                                                             
-                'Me._manifest.SV_RPTOPT_EXCEL = New XForm.ReportOption(MyPosXService.Decls.RPT_NAME_0002, XForm.ReportOption.PrintType.Excel, True)
-
+              
 
             Catch ex As XL.Common.Utils.XLException
 
