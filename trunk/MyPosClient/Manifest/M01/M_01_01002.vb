@@ -224,7 +224,24 @@ Namespace Manifest
 
             Select Case responseTitle
 
-                Case "TbActionAdd", "TbActionRevise"
+                Case "TbActionAdd"
+                    Dim chooseForm = TryCast(popupForm, M_01_00201)
+
+                    Dim templateWareRow As MyPosXAuto.FTs.FT_XV_T_MP_SALE_TEMPLATE_WARERow
+                    Dim templateWareCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_T_MP_SALE_TEMPLATE_WARE(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+                    For Each wareRow As MyPosXAuto.FTs.FT_XV_M_MP_WARERow In chooseForm.SVFT_BINDING_WARE_LIST.FindRowsSelecting(True)
+                        templateWareCondition.Clear()
+                        templateWareCondition.Add(MyPosXAuto.Facade.AfXV.XV_T_MP_SALE_TEMPLATE_WAREColumns.WARE_IDColumn, "=", wareRow.WARE_ID)
+                        templateWareRow = Me.SVFT_BINDING_LIST.FindRowByCondition(templateWareCondition)
+                        If IsNothing(templateWareRow) = False Then
+                            Continue For
+                        End If
+
+                        templateWareRow = Me.SVFT_BINDING_LIST.NewXV_T_MP_SALE_TEMPLATE_WARERow()
+                        Me.SVFT_BINDING_LIST.AddXV_T_MP_SALE_TEMPLATE_WARERow(templateWareRow)
+                        templateWareRow.CloneDataRow(wareRow)
+
+                    Next
                     Me.IsSaved = False
                     Me.GridView_SaleTemplateWare.BestFitColumns()
                     Me.DoPrivateUpdateSelectingRow()
@@ -438,8 +455,9 @@ Namespace Manifest
 
         Private Sub TbActionAdd()
 
-            Dim choiceForm As New M_01_01003(Me.TransactRequestHandle, Me.FormID)
-            choiceForm.SVFT_EDITING_SALE_TEMPLATE_WARE_LIST = Me.SVFT_BINDING_LIST
+            Dim choiceForm As New M_01_00201(Me.TransactRequestHandle, Me.FormID)
+            choiceForm.SVLM_MULTI_CHOICE = True
+            'choiceForm.SVFT_EDITING_SALE_TEMPLATE_WARE_LIST = Me.SVFT_BINDING_LIST
             Me.PopupForm(choiceForm, "TbActionAdd", False)
 
         End Sub

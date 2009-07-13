@@ -169,7 +169,7 @@ Public Class S_01_01002
 
 
     Public Function ServSaveInfo( _
-        ByVal valReviseTemplateID As String, _
+        ByRef refReviseTemplateID As String, _
         ByVal valTemplateCode As String, _
         ByVal valTemplateName As String, _
         ByVal valRemark As String, _
@@ -180,43 +180,77 @@ Public Class S_01_01002
 
         Try
 
-            Dim saveTemplateID As String
 
-            If valReviseTemplateID.Length > 0 Then
+            If refReviseTemplateID.Length > 0 Then
 
                 MyPosXAuto.Facade.AfBizManage.ReviseT_MP_SALE_TEMPLATEInfo( _
-                    valReviseTemplateID, _
+                    refReviseTemplateID, _
                     valRemark, _
                     valTemplateCode, _
                     valTemplateName)
 
-                saveTemplateID = valReviseTemplateID
 
             Else
 
-                Dim templateID As String = System.Guid.NewGuid.ToString
+                refReviseTemplateID = System.Guid.NewGuid.ToString
                 MyPosXAuto.Facade.AfBizManage.CreateT_MP_SALE_TEMPLATEInfo( _
                      valRemark, _
                      valTemplateCode, _
-                     templateID, _
+                     refReviseTemplateID, _
                      valTemplateName)
-
-                saveTemplateID = templateID
 
             End If
 
-            For Each templateWareRow As MyPosXAuto.FTs.FT_T_MP_SALE_TEMPLATE_WARERow In valTemplateWareList
 
-                If templateWareRow.RowState <> Data.DataRowState.Deleted Then
+            Dim dbCondition As New MyPosXAuto.Facade.AfBizManage.ConditionOfT_MP_SALE_TEMPLATE_WARE(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            dbCondition.Add(MyPosXAuto.Facade.AfBizManage.T_MP_SALE_TEMPLATE_WAREColumns.TEMPLATE_IDColumn, "=", refReviseTemplateID)
 
-                    templateWareRow.DETAIL_ID = System.Guid.NewGuid.ToString
-                    templateWareRow.TEMPLATE_ID = saveTemplateID
+            Dim dbList As New MyPosXAuto.FTs.FT_T_MP_SALE_TEMPLATE_WARE
+            MyPosXAuto.Facade.AfBizManage.FillFT_T_MP_SALE_TEMPLATE_WARE(dbCondition, dbList)
+
+            Dim dbRow As MyPosXAuto.FTs.FT_T_MP_SALE_TEMPLATE_WARERow
+            Dim existingDetailIDs As New Collections.ArrayList
+
+            For Each bindingRow As MyPosXAuto.FTs.FT_XV_T_MP_SALE_TEMPLATE_WARERow In valTemplateWareList.FindRowsUndeleted
+
+                bindingRow.TEMPLATE_ID = refReviseTemplateID
+                dbCondition.Clear()
+                dbCondition.Add(MyPosXAuto.Facade.AfBizManage.T_MP_SALE_TEMPLATE_WAREColumns.WARE_IDColumn, "=", bindingRow.WARE_ID)
+
+                dbRow = dbList.FindRowByCondition(dbCondition)
+
+                If IsNothing(dbRow) = False Then
+
+                    If dbRow.DETAIL_ID <> bindingRow.DETAIL_ID Then
+                        dbList.AddNewT_MP_SALE_TEMPLATE_WARERow( _
+                            bindingRow.DETAIL_ID, _
+                            bindingRow.DISCOUNT_AMOUNT, _
+                            bindingRow.DISCOUNT_TYPE, _
+                            bindingRow.TEMPLATE_ID, _
+                            bindingRow.WARE_ID)
+                        existingDetailIDs.Add(bindingRow.DETAIL_ID)
+                    Else
+                        existingDetailIDs.Add(dbRow.DETAIL_ID)
+                        dbRow.CloneDataRow(bindingRow)
+                    End If
+                Else
+                    dbList.AddNewT_MP_SALE_TEMPLATE_WARERow( _
+                        bindingRow.DETAIL_ID, _
+                        bindingRow.DISCOUNT_AMOUNT, _
+                        bindingRow.DISCOUNT_TYPE, _
+                        bindingRow.TEMPLATE_ID, _
+                        bindingRow.WARE_ID)
+                    existingDetailIDs.Add(bindingRow.DETAIL_ID)
 
                 End If
 
             Next
 
             MyPosXAuto.Facade.AfBizManage.SaveBatchT_MP_SALE_TEMPLATE_WAREData(valTemplateWareList)
+
+            dbCondition.Add(MyPosXAuto.Facade.AfBizManage.T_MP_SALE_TEMPLATE_WAREColumns.DETAIL_IDColumn, False, existingDetailIDs)
+            MyPosXAuto.Facade.AfBizManage.DeleteT_MP_SALE_TEMPLATE_WAREData(dbCondition)
+
 
             'Dim result As String = Facade.OpBizManage.ExecutePurchase(savePurchaseID)
             'If result.Length > 0 Then
