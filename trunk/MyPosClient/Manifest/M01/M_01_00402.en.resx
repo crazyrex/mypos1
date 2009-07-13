@@ -119,22 +119,25 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ToolStripButton_Add.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 22</value>
+    <value>27, 22</value>
   </data>
   <data name="ToolStripButton_Add.Text" xml:space="preserve">
     <value>Add</value>
+  </data>
+  <data name="ToolStripButton_Save.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 22</value>
   </data>
   <data name="ToolStripButton_Save.Text" xml:space="preserve">
     <value>Save</value>
   </data>
   <data name="ToolStripButton_Remove.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 22</value>
+    <value>45, 22</value>
   </data>
   <data name="ToolStripButton_Remove.Text" xml:space="preserve">
     <value>Remove</value>
   </data>
   <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 22</value>
+    <value>39, 22</value>
   </data>
   <data name="ToolStripButton_Close.Text" xml:space="preserve">
     <value>Close</value>
@@ -147,10 +150,6 @@
   </data>
   <data name="LookUpEdit_PosType.Location" type="System.Drawing.Point, System.Drawing">
     <value>101, 39</value>
-  </data>
-  <assembly alias="DevExpress.Utils.v8.1" name="DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
-  <data name="LookUpEdit_PosType.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
-    <value>Combo</value>
   </data>
   <data name="SpinEdit_EmployeeCommissionRate.Location" type="System.Drawing.Point, System.Drawing">
     <value>342, 5</value>
@@ -263,26 +262,14 @@
   <data name="GridColumn_UnitPrice.Caption" xml:space="preserve">
     <value>Unit price</value>
   </data>
-  <data name="RepositoryItemCalcEdit_UnitPrice.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
-    <value>Combo</value>
-  </data>
   <data name="GridColumn_Unitcost.Caption" xml:space="preserve">
     <value>Unit cost</value>
-  </data>
-  <data name="RepositoryItemCalcEdit_UnitCost.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
-    <value>Combo</value>
   </data>
   <data name="GridColumn_LowerLimit.Caption" xml:space="preserve">
     <value>Safty minimize stock Qty.</value>
   </data>
-  <data name="RepositoryItemCalcEdit_LowerLimit.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
-    <value>Combo</value>
-  </data>
   <data name="GridColumn_IndividualDiscount.Caption" xml:space="preserve">
     <value>Individual discount</value>
-  </data>
-  <data name="RepositoryItemCalcEdit_IndividualDiscount.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
-    <value>Combo</value>
   </data>
   <data name="GridColumn_Remarks.Caption" xml:space="preserve">
     <value>Remarks</value>

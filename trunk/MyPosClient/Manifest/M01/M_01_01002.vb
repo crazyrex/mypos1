@@ -870,7 +870,7 @@ Namespace Manifest
 
 #End Region
 
-        Private Sub GridView_SaleTemplateWare_FocusedRowChanged(ByVal sender As Object, ByVal e As DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs) Handles GridView_SaleTemplateWare.FocusedRowChanged
+        Private Sub GridView_SaleTemplateWare_FocusedRowChanged(ByVal sender As Object, ByVal e As DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs)
             Me.DoPrivateUpdateSelectingRow()
         End Sub
     End Class

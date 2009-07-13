@@ -96,8 +96,14 @@ Public Class S_01_01002
 
 
     Public Function ServInitDisplay( _
-        ByRef refTemplateList As MyPosXAuto.FTs.FT_T_MP_SALE_TEMPLATE, _
-        ByRef refWareList As MyPosXAuto.FTs.FT_M_MP_WARE, _
+         ByVal valLanguagOption As Integer, _
+        ByRef refSysWareSpecModelDiscard As Boolean, _
+        ByRef refSysHideFinancials As Boolean, _
+        ByRef refSysShowCustomWareCode As Boolean, _
+        ByRef refSysAttribute1 As String, _
+        ByRef refSysAttribute2 As String, _
+        ByRef refSysAttribute3 As String, _
+        ByRef refSysAttribute4 As String, _
         ByRef refDiscountTypeList As MyPosXAuto.FTs.FT_CIV_DISCOUNT_TYPE _
         ) As String
 
@@ -105,8 +111,34 @@ Public Class S_01_01002
 
         Try
 
-            MyPosXAuto.Facade.AfBizManage.FillFT_T_MP_SALE_TEMPLATE(Nothing, refTemplateList)
-            MyPosXAuto.Facade.AfBizMaster.FillFT_M_MP_WARE(Nothing, refWareList)
+
+            refSysWareSpecModelDiscard = CommTK.FBoolean(SysInfo.ReadShareSysInfo(Decls.SVN_WARE_SPEC_MODEL_DISCARD))
+            refSysHideFinancials = CommTK.FBoolean(SysInfo.ReadShareSysInfo(Decls.SVN_HIDE_FINANCIALS))
+
+            refSysAttribute1 = SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE1)
+            refSysAttribute2 = SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE2)
+            refSysAttribute3 = SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE3)
+            refSysAttribute4 = SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE4)
+
+            If CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE1_HIDDEN)) = True Then
+                refSysAttribute1 = String.Empty
+            End If
+            If CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE2_HIDDEN)) = True Then
+                refSysAttribute2 = String.Empty
+            End If
+            If CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE3_HIDDEN)) = True Then
+                refSysAttribute3 = String.Empty
+            End If
+            If CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE4_HIDDEN)) = True Then
+                refSysAttribute4 = String.Empty
+            End If
+
+            'MyPosXAuto.Facade.AfCIV.FillCI_POS_TYPEList(valLanguagOption, String.Empty, refPosTypeList, False)
+
+            refSysShowCustomWareCode = CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_SHOW_CUSTOM_WARE_CODE))
+
+            'MyPosXAuto.Facade.AfBizManage.FillFT_T_MP_SALE_TEMPLATE(Nothing, refTemplateList)
+            'MyPosXAuto.Facade.AfBizMaster.FillFT_M_MP_WARE(Nothing, refWareList)
             MyPosXAuto.Facade.AfCIV.FillFT_CIV_DISCOUNT_TYPE(Nothing, refDiscountTypeList)
 
 

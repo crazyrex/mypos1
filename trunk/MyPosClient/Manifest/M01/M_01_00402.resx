@@ -149,9 +149,6 @@
   <data name="GridColumn_Attribute3.VisibleIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="&gt;&gt;GridColumn_Model.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
-  </data>
   <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>67, 15</value>
   </data>
@@ -164,11 +161,14 @@
   <data name="Label11.Text" xml:space="preserve">
     <value>搜索</value>
   </data>
+  <data name="Label12.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 15</value>
   </data>
-  <data name="&gt;&gt;PanelControl2.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="Label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="RepositoryItemCalcEdit_UnitPrice.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -204,14 +204,17 @@
   <data name="&gt;&gt;TextEdit_Search.Name" xml:space="preserve">
     <value>TextEdit_Search</value>
   </data>
-  <data name="GridColumn_UnitName.VisibleIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+  <data name="&gt;&gt;GridColumn_Attribute1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_Unitcost.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="GridColumn_LowerLimit.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="RepositoryItemCalcEdit_IndividualDiscount.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
+  <data name="&gt;&gt;GridColumn_Attribute2.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="Panel_FinancialPart.Location" type="System.Drawing.Point, System.Drawing">
     <value>220, 36</value>
@@ -231,9 +234,6 @@
   <data name="&gt;&gt;ToolStripButton_Save.Name" xml:space="preserve">
     <value>ToolStripButton_Save</value>
   </data>
-  <data name="LinkLabel_AddItems.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="&gt;&gt;GridColumn_Attribute4.Name" xml:space="preserve">
     <value>GridColumn_Attribute4</value>
   </data>
@@ -243,8 +243,8 @@
   <data name="GridControl_WarePriceSetDtl.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 68</value>
   </data>
-  <data name="RepositoryItemCalcEdit_UnitCost.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;RepositoryItemCalcEdit_UnitCost.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="Label_WareID.Location" type="System.Drawing.Point, System.Drawing">
     <value>665, 25</value>
@@ -261,8 +261,8 @@
   <data name="&gt;&gt;Label11.Parent" xml:space="preserve">
     <value>PanelControl2</value>
   </data>
-  <data name="Label4.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>XL.Win.Component.BaseForm, XL.Win, Version=0.0.0.68, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ToolStripButton_Add.Name" xml:space="preserve">
     <value>ToolStripButton_Add</value>
@@ -294,21 +294,23 @@
   <data name="SpinEdit_EmployeeCommissionRate.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="SpinEdit_EmployeeCommissionRate.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="SpinEdit_SaftyInventoryQty.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
     <value>_</value>
   </data>
   <data name="GridColumn_UnitPrice.VisibleIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
-  <assembly alias="DevExpress.Utils.v8.1" name="DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
-  <data name="RepositoryItemCalcEdit_LowerLimit.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
-    <value>Combo</value>
-  </data>
   <data name="GridColumn_Attribute1.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="&gt;&gt;Label3.Name" xml:space="preserve">
     <value>Label3</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_ApplyQty.Parent" xml:space="preserve">
+    <value>PanelControl1</value>
   </data>
   <data name="SpinEdit_PriceScale.Properties.Mask.EditMask" xml:space="preserve">
     <value />
@@ -325,9 +327,8 @@
   <data name="TextEdit_SetCode.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
     <value>Default</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="GridControl_WarePriceSetDtl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="GridControl_WarePriceSetDtl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>706, 324</value>
   </data>
   <data name="&gt;&gt;Label5.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -368,8 +369,8 @@
   <data name="RepositoryItemCalcEdit_IndividualDiscount.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="PanelControl2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>706, 47</value>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>方案</value>
   </data>
   <data name="SpinEdit_SaftyInventoryQty.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
     <value>Numeric</value>
@@ -385,9 +386,6 @@
   </data>
   <data name="GridColumn_WareName.VisibleIndex" type="System.Int32, mscorlib">
     <value>3</value>
-  </data>
-  <data name="TextEdit_SetCode.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="SpinEdit_SaftyInventoryQty.Properties.Mask.EditMask" xml:space="preserve">
     <value />
@@ -452,6 +450,9 @@
   <data name="TextEdit_Remark.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
     <value>Default</value>
   </data>
+  <data name="RepositoryItemCalcEdit_IndividualDiscount.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;GridColumn_Unitcost.Name" xml:space="preserve">
     <value>GridColumn_Unitcost</value>
   </data>
@@ -466,9 +467,6 @@
   </data>
   <data name="TextEdit_SetCode.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="&gt;&gt;Label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="SpinEdit_EmployeeCommissionRate.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
@@ -515,6 +513,9 @@
   <data name="PanelControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 25</value>
   </data>
+  <data name="LookUpEdit_PosType.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
   <data name="Label5.Text" xml:space="preserve">
     <value>价格比例</value>
   </data>
@@ -536,11 +537,11 @@
   <data name="RepositoryItemCalcEdit_IndividualDiscount.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
     <value>Numeric</value>
   </data>
-  <data name="&gt;&gt;GridColumn_Model.Name" xml:space="preserve">
-    <value>GridColumn_Model</value>
+  <data name="SpinEdit_EmployeeCommissionRate.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="LinkLabel_ApplyQty.Location" type="System.Drawing.Point, System.Drawing">
-    <value>616, 20</value>
+  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 15</value>
@@ -548,7 +549,10 @@
   <data name="SpinEdit_PriceScale.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
-  <data name="GridColumn_Model.Visible" type="System.Boolean, mscorlib">
+  <data name="&gt;&gt;ToolStripButton_Close.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LinkLabel_AddItems.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="Label_WareID.Visible" type="System.Boolean, mscorlib">
@@ -575,6 +579,9 @@
   <data name="&gt;&gt;RepositoryItemCalcEdit_IndividualDiscount.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>安全在库量</value>
+  </data>
   <data name="GridColumn_Attribute2.VisibleIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
@@ -584,8 +591,8 @@
   <data name="SpinEdit_EmployeeCommissionRate.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;SpinEdit_EmployeeCommissionRate.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="TextEdit_Remark.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
   </data>
   <data name="SpinEdit_EmployeeCommissionRate.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
     <value>Numeric</value>
@@ -595,6 +602,9 @@
   </data>
   <data name="&gt;&gt;Label4.Name" xml:space="preserve">
     <value>Label4</value>
+  </data>
+  <data name="GridColumn_Model.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;TextEdit_Remark.Name" xml:space="preserve">
     <value>TextEdit_Remark</value>
@@ -650,20 +660,11 @@
   <data name="RepositoryItemCalcEdit_LowerLimit.Mask.EditMask" xml:space="preserve">
     <value />
   </data>
-  <data name="SpinEdit_EmployeeCommissionRate.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
-    <value>Default</value>
-  </data>
-  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;LinkLabel_AddItems.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="Label6.Location" type="System.Drawing.Point, System.Drawing">
     <value>214, 7</value>
-  </data>
-  <data name="&gt;&gt;Label_WareID.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="TextEdit_SetCode.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -740,8 +741,8 @@
   <data name="&gt;&gt;ButtonEdit_WareCode.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.ButtonEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="&gt;&gt;RepositoryItemCalcEdit_UnitCost.Name" xml:space="preserve">
-    <value>RepositoryItemCalcEdit_UnitCost</value>
+  <data name="GridColumn_UnitName.VisibleIndex" type="System.Int32, mscorlib">
+    <value>10</value>
   </data>
   <data name="RepositoryItemCalcEdit_UnitCost.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
     <value>Numeric</value>
@@ -752,14 +753,17 @@
   <data name="&gt;&gt;GridView_WarePriceSetDtl.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
+  <data name="RepositoryItemCalcEdit_IndividualDiscount.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_AddItems.Name" xml:space="preserve">
+    <value>LinkLabel_AddItems</value>
+  </data>
   <data name="GridColumn_WareCode.VisibleIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="&gt;&gt;Label_CustomCode.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ButtonEdit_WareCode.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>21, 18</value>
@@ -785,6 +789,10 @@
   <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 15</value>
   </data>
+  <data name="LinkLabel_ApplyQty.Location" type="System.Drawing.Point, System.Drawing">
+    <value>616, 20</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v8.1" name="DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
   <data name="RepositoryItemCalcEdit_UnitPrice.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
     <value>Combo</value>
   </data>
@@ -803,6 +811,12 @@
   <data name="SpinEdit_PriceScale.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
   </data>
+  <data name="PanelControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>706, 47</value>
+  </data>
+  <data name="GridColumn_WareCode.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="Label_CustomerID.Location" type="System.Drawing.Point, System.Drawing">
     <value>37, 2</value>
   </data>
@@ -818,11 +832,14 @@
   <data name="GridColumn_Select.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="LookUpEdit_PosType.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
+  <data name="LinkLabel_ApplyQty.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 15</value>
   </data>
   <data name="&gt;&gt;TextEdit_SetCode.Parent" xml:space="preserve">
     <value>PanelControl1</value>
+  </data>
+  <data name="&gt;&gt;ButtonEdit_WareCode.Name" xml:space="preserve">
+    <value>ButtonEdit_WareCode</value>
   </data>
   <data name="Label11.Location" type="System.Drawing.Point, System.Drawing">
     <value>437, 16</value>
@@ -832,9 +849,6 @@
   </data>
   <data name="SpinEdit_SaftyInventoryQty.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="&gt;&gt;DefaultLookAndFeel_Form.Name" xml:space="preserve">
-    <value>DefaultLookAndFeel_Form</value>
   </data>
   <data name="GridColumn_IndividualDiscount.SummaryItem.DisplayFormat" xml:space="preserve">
     <value />
@@ -863,8 +877,8 @@
   <data name="SpinEdit_PriceScale.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
     <value>Default</value>
   </data>
-  <data name="TextEdit_Remark.Properties.Mask.EditMask" xml:space="preserve">
-    <value />
+  <data name="Label4.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
   <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 15</value>
@@ -878,8 +892,8 @@
   <data name="&gt;&gt;GridView_WarePriceSetDtl.Name" xml:space="preserve">
     <value>GridView_WarePriceSetDtl</value>
   </data>
-  <data name="Label2.Text" xml:space="preserve">
-    <value>方案</value>
+  <data name="&gt;&gt;Label_WareID.Parent" xml:space="preserve">
+    <value>PanelControl1</value>
   </data>
   <data name="SpinEdit_PriceScale.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -899,14 +913,11 @@
   <data name="SpinEdit_PriceScale.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="TextEdit_Remark.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
+  <data name="RepositoryItemCalcEdit_UnitCost.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="Label_CustomerID.Size" type="System.Drawing.Size, System.Drawing">
     <value>19, 14</value>
-  </data>
-  <data name="&gt;&gt;PanelControl1.Name" xml:space="preserve">
-    <value>PanelControl1</value>
   </data>
   <data name="&gt;&gt;GridColumn_UnitPrice.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
@@ -917,9 +928,6 @@
   <data name="&gt;&gt;GroupControl1.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="&gt;&gt;RepositoryItemCalcEdit_UnitPrice.Name" xml:space="preserve">
-    <value>RepositoryItemCalcEdit_UnitPrice</value>
-  </data>
   <data name="LookUpEdit_PosType.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -929,8 +937,8 @@
   <data name="SpinEdit_PriceScale.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>XL.Win.Component.BaseForm, XL.Win, Version=0.0.0.68, Culture=neutral, PublicKeyToken=null</value>
+  <data name="ToolStrip_Form.Size" type="System.Drawing.Size, System.Drawing">
+    <value>710, 25</value>
   </data>
   <data name="&gt;&gt;GridColumn_Attribute1.Name" xml:space="preserve">
     <value>GridColumn_Attribute1</value>
@@ -941,23 +949,17 @@
   <data name="Label11.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="LinkLabel_ApplyQty.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 15</value>
-  </data>
   <data name="&gt;&gt;PanelControl2.Parent" xml:space="preserve">
     <value>GroupControl1</value>
   </data>
-  <data name="&gt;&gt;Panel_FinancialPart.Parent" xml:space="preserve">
-    <value>PanelControl1</value>
+  <data name="TextEdit_Remark.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
   </data>
   <data name="&gt;&gt;GridColumn_Select.Name" xml:space="preserve">
     <value>GridColumn_Select</value>
   </data>
   <data name="&gt;&gt;ButtonEdit_WareCode.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="&gt;&gt;GroupControl1.Parent" xml:space="preserve">
-    <value>$this</value>
   </data>
   <data name="SpinEdit_EmployeeCommissionRate.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
     <value>_</value>
@@ -977,8 +979,12 @@
   <data name="&gt;&gt;LinkLabel_ApplyQty.Name" xml:space="preserve">
     <value>LinkLabel_ApplyQty</value>
   </data>
-  <data name="SpinEdit_EmployeeCommissionRate.Properties.Mask.EditMask" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="PanelControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
   </data>
   <data name="&gt;&gt;Label5.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1001,8 +1007,8 @@
   <data name="Label11.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 15</value>
   </data>
-  <data name="&gt;&gt;Label_WareID.Parent" xml:space="preserve">
-    <value>PanelControl1</value>
+  <data name="GridControl_WarePriceSetDtl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="&gt;&gt;Label_WareID.Name" xml:space="preserve">
     <value>Label_WareID</value>
@@ -1034,6 +1040,9 @@
   <data name="&gt;&gt;LookUpEdit_PosType.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="TextEdit_Search.Location" type="System.Drawing.Point, System.Drawing">
+    <value>506, 12</value>
+  </data>
   <data name="RepositoryItemCalcEdit_UnitPrice.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
     <value>_</value>
   </data>
@@ -1042,9 +1051,6 @@
   </data>
   <data name="GridControl_WarePriceSetDtl.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>Inherit</value>
-  </data>
-  <data name="&gt;&gt;Timer_Surveillant.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="SpinEdit_SaftyInventoryQty.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1061,8 +1067,8 @@
   <data name="&gt;&gt;GridColumn_WareCode.Name" xml:space="preserve">
     <value>GridColumn_WareCode</value>
   </data>
-  <data name="&gt;&gt;ButtonEdit_WareCode.Name" xml:space="preserve">
-    <value>ButtonEdit_WareCode</value>
+  <data name="&gt;&gt;GridColumn_Model.Name" xml:space="preserve">
+    <value>GridColumn_Model</value>
   </data>
   <data name="GridControl_WarePriceSetDtl.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Tile</value>
@@ -1070,8 +1076,8 @@
   <data name="TextEdit_Remark.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
     <value>None</value>
   </data>
-  <data name="RepositoryItemCalcEdit_IndividualDiscount.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="&gt;&gt;DefaultLookAndFeel_Form.Name" xml:space="preserve">
+    <value>DefaultLookAndFeel_Form</value>
   </data>
   <data name="GridColumn_Model.Caption" xml:space="preserve">
     <value>货品型号</value>
@@ -1085,8 +1091,14 @@
   <data name="GridColumn_IndividualDiscount.Caption" xml:space="preserve">
     <value>单独折扣</value>
   </data>
+  <data name="&gt;&gt;Label5.Parent" xml:space="preserve">
+    <value>Panel_FinancialPart</value>
+  </data>
   <data name="TextEdit_SetCode.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
+  </data>
+  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="RepositoryItemCalcEdit_LowerLimit.Mask.BeepOnError" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1094,11 +1106,8 @@
   <data name="SpinEdit_EmployeeCommissionRate.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;GridColumn_Attribute2.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
-  </data>
-  <data name="&gt;&gt;TextEdit_SetCode.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  <data name="&gt;&gt;Label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="ButtonEdit_WareCode.Properties.Mask.EditMask" xml:space="preserve">
     <value />
@@ -1127,14 +1136,8 @@
   <data name="ButtonEdit_WareCode.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="GridColumn_WareName.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="LinkLabel_ApplyQty.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
-  </data>
-  <data name="GridColumn_IndividualDiscount.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="&gt;&gt;SpinEdit_EmployeeCommissionRate.Name" xml:space="preserve">
     <value>SpinEdit_EmployeeCommissionRate</value>
@@ -1145,11 +1148,8 @@
   <data name="&gt;&gt;Label11.Name" xml:space="preserve">
     <value>Label11</value>
   </data>
-  <data name="SpinEdit_EmployeeCommissionRate.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="TextEdit_Search.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
-    <value>Default</value>
+  <data name="&gt;&gt;RepositoryItemCalcEdit_UnitCost.Name" xml:space="preserve">
+    <value>RepositoryItemCalcEdit_UnitCost</value>
   </data>
   <data name="Label11.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1177,9 +1177,6 @@
   </data>
   <data name="&gt;&gt;RepositoryItemCalcEdit_LowerLimit.Name" xml:space="preserve">
     <value>RepositoryItemCalcEdit_LowerLimit</value>
-  </data>
-  <data name="GridColumn_Attribute3.Caption" xml:space="preserve">
-    <value>属性3</value>
   </data>
   <data name="SpinEdit_EmployeeCommissionRate.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -1217,11 +1214,14 @@
   <data name="SpinEdit_SaftyInventoryQty.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;GridColumn_LowerLimit.Name" xml:space="preserve">
-    <value>GridColumn_LowerLimit</value>
+  <data name="&gt;&gt;GridColumn_CustomCode.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="Label2.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
+  </data>
+  <data name="RepositoryItemCalcEdit_UnitCost.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="RepositoryItemCalcEdit_IndividualDiscount.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1231,9 +1231,6 @@
   </data>
   <data name="GridColumn_Attribute1.Caption" xml:space="preserve">
     <value>属性1</value>
-  </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
   </data>
   <data name="RepositoryItemCalcEdit_UnitCost.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
     <value>Combo</value>
@@ -1247,11 +1244,11 @@
   <data name="GridColumn_Attribute4.Caption" xml:space="preserve">
     <value>属性4</value>
   </data>
-  <data name="&gt;&gt;GridColumn_CustomCode.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  <data name="&gt;&gt;Timer_Surveillant.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Label3.Text" xml:space="preserve">
-    <value>安全在库量</value>
+  <data name="&gt;&gt;GridColumn_Model.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="&gt;&gt;TextEdit_Search.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
@@ -1259,11 +1256,11 @@
   <data name="Label6.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
+  <data name="&gt;&gt;GridColumn_RowHighlight.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
   <data name="RepositoryItemCalcEdit_IndividualDiscount.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
     <value>Default</value>
-  </data>
-  <data name="&gt;&gt;GridColumn_Unitcost.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="RepositoryItemCalcEdit_IndividualDiscount.Mask.EditMask" xml:space="preserve">
     <value />
@@ -1271,14 +1268,11 @@
   <data name="TextEdit_Search.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="GridControl_WarePriceSetDtl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>706, 324</value>
+  <data name="&gt;&gt;Label_WareID.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="Label5.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 7</value>
-  </data>
-  <data name="RepositoryItemCalcEdit_IndividualDiscount.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
-    <value>Combo</value>
   </data>
   <data name="&gt;&gt;SpinEdit_SaftyInventoryQty.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
@@ -1301,8 +1295,14 @@
   <data name="&gt;&gt;ToolStripButton_Close.Name" xml:space="preserve">
     <value>ToolStripButton_Close</value>
   </data>
+  <data name="&gt;&gt;Label_CustomCode.Name" xml:space="preserve">
+    <value>Label_CustomCode</value>
+  </data>
   <data name="GridColumn_UnitPrice.Caption" xml:space="preserve">
     <value>出货价</value>
+  </data>
+  <data name="Label5.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
   </data>
   <data name="&gt;&gt;RepositoryItemCalcEdit_UnitPrice.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
@@ -1316,8 +1316,8 @@
   <data name="ButtonEdit_WareCode.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
     <value>Default</value>
   </data>
-  <data name="Label4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="SpinEdit_EmployeeCommissionRate.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
   </data>
   <data name="&gt;&gt;TextEdit_Search.Parent" xml:space="preserve">
     <value>PanelControl2</value>
@@ -1327,6 +1327,9 @@
   </data>
   <data name="GridControl_WarePriceSetDtl.EmbeddedNavigator.ToolTipTitle" xml:space="preserve">
     <value />
+  </data>
+  <data name="&gt;&gt;Panel_FinancialPart.Parent" xml:space="preserve">
+    <value>PanelControl1</value>
   </data>
   <data name="Label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1340,11 +1343,8 @@
   <data name="LookUpEdit_PosType.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="TextEdit_Search.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
-    <value>None</value>
+  <data name="&gt;&gt;GridColumn_LowerLimit.Name" xml:space="preserve">
+    <value>GridColumn_LowerLimit</value>
   </data>
   <data name="TextEdit_Search.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1367,14 +1367,14 @@
   <data name="&gt;&gt;PanelControl1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="SpinEdit_EmployeeCommissionRate.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="&gt;&gt;TextEdit_SetCode.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="&gt;&gt;Label12.Parent" xml:space="preserve">
     <value>PanelControl2</value>
   </data>
-  <data name="&gt;&gt;ToolStripButton_Close.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;PanelControl2.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -1382,8 +1382,8 @@
   <data name="ToolStripButton_Remove.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 22</value>
   </data>
-  <data name="LinkLabel_AddItems.Location" type="System.Drawing.Point, System.Drawing">
-    <value>352, 16</value>
+  <data name="RepositoryItemCalcEdit_LowerLimit.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
   </data>
   <data name="GroupControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1400,8 +1400,8 @@
   <data name="&gt;&gt;Label2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;GridColumn_Attribute1.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  <data name="TextEdit_SetCode.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="LookUpEdit_PosType.Location" type="System.Drawing.Point, System.Drawing">
     <value>88, 41</value>
@@ -1412,8 +1412,8 @@
   <data name="GridColumn_CustomCode.Caption" xml:space="preserve">
     <value>自定货号</value>
   </data>
-  <data name="&gt;&gt;LinkLabel_AddItems.Name" xml:space="preserve">
-    <value>LinkLabel_AddItems</value>
+  <data name="TextEdit_Search.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
+    <value>Default</value>
   </data>
   <data name="SpinEdit_EmployeeCommissionRate.Location" type="System.Drawing.Point, System.Drawing">
     <value>288, 4</value>
@@ -1424,8 +1424,8 @@
   <data name="RepositoryItemCalcEdit_LowerLimit.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
     <value>Numeric</value>
   </data>
-  <data name="Label12.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="RepositoryItemCalcEdit_IndividualDiscount.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
   </data>
   <data name="RepositoryItemCalcEdit_IndividualDiscount.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1442,14 +1442,14 @@
   <data name="TextEdit_Remark.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;Label_CustomCode.Name" xml:space="preserve">
-    <value>Label_CustomCode</value>
+  <data name="GridColumn_Attribute3.Caption" xml:space="preserve">
+    <value>属性3</value>
   </data>
   <data name="&gt;&gt;ToolStripButton_Remove.Name" xml:space="preserve">
     <value>ToolStripButton_Remove</value>
   </data>
-  <data name="RepositoryItemCalcEdit_UnitCost.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;RepositoryItemCalcEdit_UnitPrice.Name" xml:space="preserve">
+    <value>RepositoryItemCalcEdit_UnitPrice</value>
   </data>
   <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
     <value>435, 19</value>
@@ -1475,17 +1475,17 @@
   <data name="&gt;&gt;SpinEdit_EmployeeCommissionRate.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="GridColumn_WareCode.Visible" type="System.Boolean, mscorlib">
+  <data name="&gt;&gt;PanelControl1.Name" xml:space="preserve">
+    <value>PanelControl1</value>
+  </data>
+  <data name="TextEdit_Search.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
+    <value>None</value>
+  </data>
+  <data name="GridColumn_WareName.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="TextEdit_Search.Location" type="System.Drawing.Point, System.Drawing">
-    <value>506, 12</value>
-  </data>
-  <data name="PanelControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="GridColumn_IndividualDiscount.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -1493,8 +1493,8 @@
   <data name="Panel_FinancialPart.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="&gt;&gt;GridColumn_RowHighlight.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  <data name="&gt;&gt;SpinEdit_EmployeeCommissionRate.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;TextEdit_SetCode.ZOrder" xml:space="preserve">
     <value>9</value>
@@ -1508,8 +1508,8 @@
   <data name="GridControl_WarePriceSetDtl.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v8.1">
     <value>None</value>
   </data>
-  <data name="ToolStrip_Form.Size" type="System.Drawing.Size, System.Drawing">
-    <value>710, 25</value>
+  <data name="LinkLabel_AddItems.Location" type="System.Drawing.Point, System.Drawing">
+    <value>352, 16</value>
   </data>
   <data name="TextEdit_Search.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1526,17 +1526,17 @@
   <data name="GridColumn_IndividualDiscount.VisibleIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
-  <data name="Label5.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+  <data name="&gt;&gt;GroupControl1.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="TextEdit_Search.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;RepositoryItemCalcEdit_UnitCost.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  <data name="SpinEdit_EmployeeCommissionRate.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
+    <value>Default</value>
   </data>
-  <data name="&gt;&gt;LinkLabel_ApplyQty.Parent" xml:space="preserve">
-    <value>PanelControl1</value>
+  <data name="ButtonEdit_WareCode.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="TextEdit_Search.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
     <value>_</value>
@@ -1553,22 +1553,19 @@
   <data name="&gt;&gt;GridColumn_LowerLimit.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="&gt;&gt;Label5.Parent" xml:space="preserve">
-    <value>Panel_FinancialPart</value>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <metadata name="DefaultLookAndFeel_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>266, 0</value>
+    <value>295, 0</value>
+  </metadata>
+  <metadata name="Timer_Surveillant.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>138, 0</value>
   </metadata>
   <metadata name="ToolStrip_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>English</value>
-  </metadata>
-  <metadata name="Timer_Surveillant.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>128, 0</value>
   </metadata>
 </root>
