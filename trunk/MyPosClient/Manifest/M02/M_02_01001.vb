@@ -130,7 +130,7 @@ Namespace Manifest
             Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Save, AddressOf Me.TbActionSave)
             Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Remove, AddressOf Me.TbActionRemove)
             Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Close, AddressOf Me.TbActionClose)
-            'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0001, AddressOf Me.TbActionUtld0001)
+            Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_PurchaseList, AddressOf Me.TbActionPurchaseList)
             'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0002, AddressOf Me.TbActionUtld0002)
             'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0003, AddressOf Me.TbActionUtld0003)
             'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0004, AddressOf Me.TbActionUtld0004)
@@ -505,7 +505,7 @@ Namespace Manifest
         End Sub
 
 
-        Private Sub TbActionUtld0001()
+        Private Sub TbActionPurchaseList()
 
         End Sub
 
