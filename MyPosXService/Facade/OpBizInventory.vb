@@ -206,10 +206,14 @@ Namespace Facade
                     String.Empty, _
                     0, _
                     String.Empty, _
+                    0, _
+                    0, _
+                    0, _
                     inventoryRow.POS_ID, _
                     String.Empty, _
                     String.Empty, _
                     inventoryID, _
+                    0, _
                     inventoryRow.CREATOR, _
                     0, _
                     String.Empty, _
@@ -248,10 +252,14 @@ Namespace Facade
                     String.Empty, _
                     0, _
                     String.Empty, _
+                    0, _
+                    0, _
+                    0, _
                     inventoryRow.POS_ID, _
                     String.Empty, _
                     String.Empty, _
                     inventoryID, _
+                    0, _
                     inventoryRow.CREATOR, _
                     0, _
                     String.Empty, _
