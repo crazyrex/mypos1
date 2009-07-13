@@ -45,11 +45,11 @@ Namespace Manifest
         'Public SVLM_UTLD_0002 As String ="SVLM_UTLD_0002"
 
         '数据列表变量
-        Public SVFT_EDITING_SALE_TEMPLATE_WARE_LIST As MyPosXAuto.FTs.FT_T_MP_SALE_TEMPLATE_WARE = Nothing
+        Public SVFT_EDITING_SALE_TEMPLATE_WARE_LIST As MyPosXAuto.FTs.FT_XV_T_MP_SALE_TEMPLATE_WARE = Nothing
         'Public SVFT_BINDING_XXX_LIST As New XAuto.FTs.FT_
         'Public SVFT_CHOOSE_XXX_LIST As New XAuto.FTs.FT_
 
-        Public SVFR_EDITING_SALE_TEMPLATE_WARE_ROW As MyPosXAuto.FTs.FT_T_MP_SALE_TEMPLATE_WARERow = Nothing
+        Public SVFR_EDITING_SALE_TEMPLATE_WARE_ROW As MyPosXAuto.FTs.FT_XV_T_MP_SALE_TEMPLATE_WARERow = Nothing
 
         #End Region
 

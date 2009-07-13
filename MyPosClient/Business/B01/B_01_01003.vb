@@ -515,10 +515,10 @@ Namespace Business
 
                 If IsNothing(Me._manifest.SVFR_EDITING_SALE_TEMPLATE_WARE_ROW) = True Then
 
-                    Dim saleTemplateWareRow As MyPosXAuto.FTs.FT_T_MP_SALE_TEMPLATE_WARERow
-                    saleTemplateWareRow = Me._manifest.SVFT_EDITING_SALE_TEMPLATE_WARE_LIST.NewT_MP_SALE_TEMPLATE_WARERow
+                    Dim saleTemplateWareRow As MyPosXAuto.FTs.FT_XV_T_MP_SALE_TEMPLATE_WARERow
+                    saleTemplateWareRow = Me._manifest.SVFT_EDITING_SALE_TEMPLATE_WARE_LIST.NewXV_T_MP_SALE_TEMPLATE_WARERow
 
-                    Me._manifest.SVFT_EDITING_SALE_TEMPLATE_WARE_LIST.AddT_MP_SALE_TEMPLATE_WARERow(saleTemplateWareRow)
+                    Me._manifest.SVFT_EDITING_SALE_TEMPLATE_WARE_LIST.AddXV_T_MP_SALE_TEMPLATE_WARERow(saleTemplateWareRow)
 
                     saleTemplateWareRow.DISCOUNT_AMOUNT = CommTK.FInteger(Me._manifest.CalcEdit_DisCountAmount.Value)
                     saleTemplateWareRow.DISCOUNT_TYPE = CommTK.FInteger(Me._manifest.LookUpEdit_DiscountType.EditValue)

@@ -475,7 +475,7 @@ Namespace Business
 
                 Me._manifest.SVFT_BINDING_LIST.Clear()
 
-                Dim templateRowSE As New MyPosXAuto.FTs.FT_T_MP_SALE_TEMPLATERowSEntity
+                Dim templateRowSE As New MyPosXAuto.FTs.FT_XV_T_MP_SALE_TEMPLATERowSEntity
 
                 Dim servResult As String = _
                     Me._service.ServLoadInfo( _

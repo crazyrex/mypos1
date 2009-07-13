@@ -45,10 +45,10 @@ Namespace Manifest
         'Public SVLM_UTLD_0002 As String ="SVLM_UTLD_0002"
 
         '数据列表变量
-        Public SVFT_BINDING_LIST As New MyPosXAuto.FTs.FT_T_MP_SALE_TEMPLATE_WARE
+        Public SVFT_BINDING_LIST As New MyPosXAuto.FTs.FT_XV_T_MP_SALE_TEMPLATE_WARE
         'Public SVFT_CHOOSE_XXX_LIST As New XAuto.FTs.FT_
 
-        Public SVFR_SELECTING_ROW As MyPosXAuto.FTs.FT_T_MP_SALE_TEMPLATE_WARERow
+        Public SVFR_SELECTING_ROW As MyPosXAuto.FTs.FT_XV_T_MP_SALE_TEMPLATE_WARERow
 
         #End Region
 
@@ -632,7 +632,7 @@ Namespace Manifest
                 Me.SVFR_SELECTING_ROW = _
                     CType(Me.GridView_SaleTemplateWare.GetDataRow( _
                         Me.GridView_SaleTemplateWare.FocusedRowHandle),  _
-                        MyPosXAuto.FTs.FT_T_MP_SALE_TEMPLATE_WARERow)
+                        MyPosXAuto.FTs.FT_XV_T_MP_SALE_TEMPLATE_WARERow)
 
                 Me.ToolStripButton_Remove.Enabled = True
                 Me.ToolStripButton_Revise.Enabled = True

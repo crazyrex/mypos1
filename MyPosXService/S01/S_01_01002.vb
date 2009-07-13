@@ -173,7 +173,7 @@ Public Class S_01_01002
         ByVal valTemplateCode As String, _
         ByVal valTemplateName As String, _
         ByVal valRemark As String, _
-        ByVal valTemplateWareList As MyPosXAuto.FTs.FT_T_MP_SALE_TEMPLATE_WARE _
+        ByVal valTemplateWareList As MyPosXAuto.FTs.FT_XV_T_MP_SALE_TEMPLATE_WARE _
         ) As String
 
         If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
@@ -253,25 +253,25 @@ Public Class S_01_01002
 
     Public Function ServLoadInfo( _
        ByVal valReviseTemplateID As String, _
-        ByRef refTemplateRow As MyPosXAuto.FTs.FT_T_MP_SALE_TEMPLATERowSEntity, _
-        ByRef refTemplateWareList As MyPosXAuto.FTs.FT_T_MP_SALE_TEMPLATE_WARE _
+        ByRef refTemplateRow As MyPosXAuto.FTs.FT_XV_T_MP_SALE_TEMPLATERowSEntity, _
+        ByRef refTemplateWareList As MyPosXAuto.FTs.FT_XV_T_MP_SALE_TEMPLATE_WARE _
         ) As String
         Try
 
 
-            Dim templateConditions As New MyPosXAuto.Facade.AfBizManage.ConditionOfT_MP_SALE_TEMPLATE(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
-            templateConditions.Add(MyPosXAuto.Facade.AfBizManage.T_MP_SALE_TEMPLATEColumns.TEMPLATE_IDColumn, "=", valReviseTemplateID)
+            Dim templateConditions As New MyPosXAuto.Facade.AfXV.ConditionOfXV_T_MP_SALE_TEMPLATE(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            templateConditions.Add(MyPosXAuto.Facade.AfXV.XV_T_MP_SALE_TEMPLATEColumns.TEMPLATE_IDColumn, "=", valReviseTemplateID)
 
-            MyPosXAuto.Facade.AfBizManage.FillT_MP_SALE_TEMPLATERowSEntity(refTemplateRow, templateConditions)
+            MyPosXAuto.Facade.AfXV.FillXV_T_MP_SALE_TEMPLATERowSEntity(refTemplateRow, templateConditions)
 
             If refTemplateRow.IsNull = True Then
                 Return MyPosXService.Decls.MSG_ALERT_00008
             End If
 
-            Dim templateWareConditions As New MyPosXAuto.Facade.AfBizManage.ConditionOfT_MP_SALE_TEMPLATE_WARE(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
-            templateWareConditions.Add(MyPosXAuto.Facade.AfBizManage.T_MP_SALE_TEMPLATE_WAREColumns.TEMPLATE_IDColumn, "=", valReviseTemplateID)
+            Dim templateWareConditions As New MyPosXAuto.Facade.AfXV.ConditionOfXV_T_MP_SALE_TEMPLATE_WARE(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            templateWareConditions.Add(MyPosXAuto.Facade.AfXV.XV_T_MP_SALE_TEMPLATE_WAREColumns.TEMPLATE_IDColumn, "=", valReviseTemplateID)
 
-            MyPosXAuto.Facade.AfBizManage.FillFT_T_MP_SALE_TEMPLATE_WARE(templateWareConditions, refTemplateWareList)
+            MyPosXAuto.Facade.AfXV.FillFT_XV_T_MP_SALE_TEMPLATE_WARE(templateWareConditions, refTemplateWareList)
 
 
 
