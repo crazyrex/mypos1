@@ -609,7 +609,11 @@ Namespace Business
                     TURNOVER_CONSIGN_STATUS_TEXT:=String.Empty, _
                     TURNOVER_STYLE_TEXT:=String.Empty, _
                     TURNOVER_TYPE_TEXT:=String.Empty, _
-                    WORK_PHONE:=String.Empty)
+                    WORK_PHONE:=String.Empty, _
+                    POINT_GAIN:=CommTK.FInteger(Me._manifest.Label_AquiringPoints.Text), _
+                    POINT_TO_RMB_RATE:=CommTK.FDecimal(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_POINTS_TO_RMB_RATE)), _
+                    POINT_USE:=CommTK.FInteger(Me._manifest.CalcEdit_UsePoint.Value), _
+                    RMB_TO_POINT_RATE:=CommTK.FDecimal(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_RMB_TO_POINTS_RATE)))
 
                 Dim turnoverDtlCacheDataRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow
                 For Each bindingRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow In Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST
