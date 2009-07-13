@@ -934,6 +934,12 @@
     <Compile Include="Reports\R_02_00201.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reports\R_02_01001.Designer.vb">
+      <DependentUpon>R_02_01001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\R_02_01001.vb">
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="BasicModules\Login.resx">
@@ -1554,6 +1560,9 @@
     <EmbeddedResource Include="Reports\R_02_00201.resx">
       <DependentUpon>R_02_00201.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\R_02_01001.resx">
+      <DependentUpon>R_02_01001.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
