@@ -100,6 +100,15 @@ Namespace Facade
             MPDataLayer.ExecuteMP_MP_EXECUTE_FINISH_TURNOVER_CONSIGN_BALANCE()
 
         End Sub
+
+        Public Shared Sub ExecuteMP_MP_EXECUTE_DELETE_POINT_GAIN_USE_IO_WITH_NO_TURNOVER()
+
+            Dim MPDataLayer As MyPosXAuto.DataLayer.EDLMP = MyPosXAuto.DataLayer.EDLMP.GetInstance()
+
+
+            MPDataLayer.ExecuteMP_MP_EXECUTE_DELETE_POINT_GAIN_USE_IO_WITH_NO_TURNOVER()
+
+        End Sub
     End Class
 
 End Namespace
