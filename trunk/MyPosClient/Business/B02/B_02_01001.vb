@@ -992,6 +992,8 @@ Namespace Business
                     Me._manifest.SVFT_CACHE_DATA_TURNOVER_LIST, _
                     Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST)
 
+                MyPosXService.Facade.OpBizTurnover.UpdateTurnoverPointsIO()
+
                 Me._manifest.SVFT_CACHE_DATA_TURNOVER_LIST.Clear()
                 Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.Clear()
 
