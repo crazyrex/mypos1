@@ -236,7 +236,7 @@ Namespace Manifest
                         If IsNothing(templateWareRow) = False Then
                             Continue For
                         End If
-
+                        templateWareRow.DETAIL_ID = Guid.NewGuid.ToString
                         templateWareRow = Me.SVFT_BINDING_LIST.NewXV_T_MP_SALE_TEMPLATE_WARERow()
                         Me.SVFT_BINDING_LIST.AddXV_T_MP_SALE_TEMPLATE_WARERow(templateWareRow)
                         templateWareRow.CloneDataRow(wareRow)
