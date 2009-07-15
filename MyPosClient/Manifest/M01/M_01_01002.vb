@@ -124,8 +124,8 @@ Namespace Manifest
             Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Add, AddressOf Me.TbActionAdd)
             Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_ShowFilter, AddressOf Me.TbActionShowFilter)
             Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Save, AddressOf Me.TbActionSave)
-            Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Choose, AddressOf Me.TbActionChoose)
-            Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Revise, AddressOf Me.TbActionRevise)
+            'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Choose, AddressOf Me.TbActionChoose)
+            'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Revise, AddressOf Me.TbActionRevise)
             Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Remove, AddressOf Me.TbActionRemove)
             Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Refresh, AddressOf Me.TbActionRefresh)
             Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Report, AddressOf Me.TbActionReport)
@@ -457,6 +457,8 @@ Namespace Manifest
 
             Dim choiceForm As New M_01_00201(Me.TransactRequestHandle, Me.FormID)
             choiceForm.SVLM_MULTI_CHOICE = True
+            choiceForm.SVLM_STAY_AFTER_CHOOSE = True
+            choiceForm.LAUNCH_CONDITION = MyPosXService.S_01_00201.LCs.Choose
             'choiceForm.SVFT_EDITING_SALE_TEMPLATE_WARE_LIST = Me.SVFT_BINDING_LIST
             Me.PopupForm(choiceForm, "TbActionAdd", False)
 
@@ -486,22 +488,23 @@ Namespace Manifest
 
         End Sub
 
-        Private Sub TbActionRevise()
+        'Private Sub TbActionRevise()
 
-            Dim inputForm As New M_01_01003(Me.TransactRequestHandle, Me.FormID)
-            inputForm.SVFR_EDITING_SALE_TEMPLATE_WARE_ROW = Me.SVFR_SELECTING_ROW
-            Me.PopupForm(inputForm, "TbActionRevise", False)
+        '    Dim inputForm As New M_01_01003(Me.TransactRequestHandle, Me.FormID)
+        '    inputForm.SVFR_EDITING_SALE_TEMPLATE_WARE_ROW = Me.SVFR_SELECTING_ROW
+        '    Me.PopupForm(inputForm, "TbActionRevise", False)
 
-        End Sub
+        'End Sub
 
         Private Sub TbActionRemove()
 
-            'If Window.XLMessageBox.ShowMessage( _
-            '    MyPosXService.Decls.MSG_CONFIRM_00001, _
-            '    Window.XLMessageBox.MessageType.Warning, _
-            '    MessageBoxButtons.OKCancel) = DialogResult.Cancel Then
-            '    Return
-            'End If
+            If Window.XLMessageBox.ShowMessage( _
+                MyPosXService.Decls.MSG_CONFIRM_00002, _
+                Window.XLMessageBox.MessageType.Warning, _
+                MessageBoxButtons.OKCancel) = DialogResult.Cancel Then
+                Return
+            End If
+
             Me._bizAgent.DoRequest(Business.B_01_01002.Affairs.Remove, False)
 
         End Sub
@@ -643,8 +646,7 @@ Namespace Manifest
 
             Me.SVFR_SELECTING_ROW = Nothing
 
-            Me.ToolStripButton_Remove.Enabled = False
-            Me.ToolStripButton_Revise.Enabled = False
+            'Me.ToolStripButton_Revise.Enabled = False
 
             If Me.GridView_SaleTemplateWare.RowCount > 0 Then
                 Me.SVFR_SELECTING_ROW = _
@@ -652,8 +654,7 @@ Namespace Manifest
                         Me.GridView_SaleTemplateWare.FocusedRowHandle),  _
                         MyPosXAuto.FTs.FT_XV_T_MP_SALE_TEMPLATE_WARERow)
 
-                Me.ToolStripButton_Remove.Enabled = True
-                Me.ToolStripButton_Revise.Enabled = True
+                'Me.ToolStripButton_Revise.Enabled = True
 
             End If
 
