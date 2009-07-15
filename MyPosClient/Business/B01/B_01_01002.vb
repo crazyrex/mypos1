@@ -491,7 +491,8 @@ Namespace Business
                 Me._manifest.TextEdit_TemplateName.Text = templateRowSE.TEMPLATE_NAME
                 Me._manifest.MemoEdit_Remark.Text = templateRowSE.REMARK
                 
-             
+
+                Me._manifest.GridControl_SaleTemplateWare.DataSource = Me._manifest.SVFT_BINDING_LIST
                 'Dim servResult As String = _                                       
                 '    Me._service.ServLoadInfo()                                     
 
