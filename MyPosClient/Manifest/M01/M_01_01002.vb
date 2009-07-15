@@ -236,10 +236,10 @@ Namespace Manifest
                         If IsNothing(templateWareRow) = False Then
                             Continue For
                         End If
-                        templateWareRow.DETAIL_ID = Guid.NewGuid.ToString
                         templateWareRow = Me.SVFT_BINDING_LIST.NewXV_T_MP_SALE_TEMPLATE_WARERow()
                         Me.SVFT_BINDING_LIST.AddXV_T_MP_SALE_TEMPLATE_WARERow(templateWareRow)
                         templateWareRow.CloneDataRow(wareRow)
+                        templateWareRow.DETAIL_ID = Guid.NewGuid.ToString
 
                     Next
                     Me.IsSaved = False
@@ -460,7 +460,7 @@ Namespace Manifest
             choiceForm.SVLM_STAY_AFTER_CHOOSE = True
             choiceForm.LAUNCH_CONDITION = MyPosXService.S_01_00201.LCs.Choose
             'choiceForm.SVFT_EDITING_SALE_TEMPLATE_WARE_LIST = Me.SVFT_BINDING_LIST
-            Me.PopupForm(choiceForm, "TbActionAdd", False)
+            Me.PopupForm(choiceForm, "TbActionAdd", True)
 
         End Sub
 
@@ -891,6 +891,16 @@ Namespace Manifest
 
         Private Sub GridView_SaleTemplateWare_FocusedRowChanged(ByVal sender As Object, ByVal e As DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs)
             Me.DoPrivateUpdateSelectingRow()
+        End Sub
+
+        Private Sub RepositoryItemCheckEdit_Select_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemCheckEdit_Select.EditValueChanged
+            Dim bindingRow As MyPosXAuto.FTs.FT_XV_T_MP_SALE_TEMPLATE_WARERow = _
+               CType(Me.GridView_SaleTemplateWare.GetDataRow( _
+                   Me.GridView_SaleTemplateWare.FocusedRowHandle), MyPosXAuto.FTs.FT_XV_T_MP_SALE_TEMPLATE_WARERow)
+            Dim checkEdit As DevExpress.XtraEditors.CheckEdit = _
+               CType(sender, DevExpress.XtraEditors.CheckEdit)
+
+            bindingRow.ROW_SELECTED = checkEdit.Checked
         End Sub
     End Class
 
