@@ -247,9 +247,6 @@
     <Compile Include="Business\B01\B_01_01002.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Business\B01\B_01_01003.vb">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Business\B02\B_02_00101.vb">
       <SubType>Component</SubType>
     </Compile>
@@ -557,12 +554,6 @@
       <DependentUpon>M_01_01002.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M01\M_01_01002.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Manifest\M01\M_01_01003.Designer.vb">
-      <DependentUpon>M_01_01003.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Manifest\M01\M_01_01003.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M02\M_02_00101.Designer.vb">
@@ -1154,9 +1145,6 @@
     <EmbeddedResource Include="Manifest\M01\M_01_01002.resx">
       <DependentUpon>M_01_01002.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manifest\M01\M_01_01003.resx">
-      <DependentUpon>M_01_01003.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Manifest\M02\M_02_00101.en.resx">
       <DependentUpon>M_02_00101.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -1580,6 +1568,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ModuleList.txt" />
     <Content Include="Project.ico" />
   </ItemGroup>
   <ItemGroup>

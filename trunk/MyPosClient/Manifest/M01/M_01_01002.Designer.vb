@@ -38,8 +38,6 @@
         Friend WithEvents ToolStripButton_ShowFilter As System.Windows.Forms.ToolStripButton
         Friend WithEvents ToolStripButton_Remove As System.Windows.Forms.ToolStripButton
         Friend WithEvents ToolStripButton_Save As System.Windows.Forms.ToolStripButton
-        Friend WithEvents ToolStripButton_Choose As System.Windows.Forms.ToolStripButton
-        Friend WithEvents ToolStripButton_Revise As System.Windows.Forms.ToolStripButton
         Friend WithEvents ToolStripButton_Refresh As System.Windows.Forms.ToolStripButton
         Friend WithEvents ToolStripButton_Report As System.Windows.Forms.ToolStripButton
         Friend WithEvents ToolStripButton_View As System.Windows.Forms.ToolStripButton
@@ -60,8 +58,6 @@
             Me.ToolStripButton_Add = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_ShowFilter = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_Save = New System.Windows.Forms.ToolStripButton
-            Me.ToolStripButton_Choose = New System.Windows.Forms.ToolStripButton
-            Me.ToolStripButton_Revise = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_Remove = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_Refresh = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_Report = New System.Windows.Forms.ToolStripButton
@@ -120,7 +116,7 @@
             '
             'ToolStrip_Form
             '
-            Me.ToolStrip_Form.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton_Add, Me.ToolStripButton_ShowFilter, Me.ToolStripButton_Save, Me.ToolStripButton_Choose, Me.ToolStripButton_Revise, Me.ToolStripButton_Remove, Me.ToolStripButton_Refresh, Me.ToolStripButton_Report, Me.ToolStripButton_View, Me.ToolStripButton_Close})
+            Me.ToolStrip_Form.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton_Add, Me.ToolStripButton_ShowFilter, Me.ToolStripButton_Save, Me.ToolStripButton_Remove, Me.ToolStripButton_Refresh, Me.ToolStripButton_Report, Me.ToolStripButton_View, Me.ToolStripButton_Close})
             Me.ToolStrip_Form.Location = New System.Drawing.Point(0, 0)
             Me.ToolStrip_Form.Name = "ToolStrip_Form"
             Me.ToolStrip_Form.Size = New System.Drawing.Size(741, 25)
@@ -153,66 +149,53 @@
             'ToolStripButton_Add
             '
             Me.ToolStripButton_Add.Name = "ToolStripButton_Add"
-            Me.ToolStripButton_Add.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Add.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Add.Text = "添加"
             '
             'ToolStripButton_ShowFilter
             '
             Me.ToolStripButton_ShowFilter.Name = "ToolStripButton_ShowFilter"
-            Me.ToolStripButton_ShowFilter.Size = New System.Drawing.Size(57, 22)
+            Me.ToolStripButton_ShowFilter.Size = New System.Drawing.Size(59, 22)
             Me.ToolStripButton_ShowFilter.Text = "筛选条件"
             Me.ToolStripButton_ShowFilter.Visible = False
             '
             'ToolStripButton_Save
             '
             Me.ToolStripButton_Save.Name = "ToolStripButton_Save"
-            Me.ToolStripButton_Save.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Save.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Save.Text = "保存"
-            '
-            'ToolStripButton_Choose
-            '
-            Me.ToolStripButton_Choose.Name = "ToolStripButton_Choose"
-            Me.ToolStripButton_Choose.Size = New System.Drawing.Size(33, 22)
-            Me.ToolStripButton_Choose.Text = "选择"
-            Me.ToolStripButton_Choose.Visible = False
-            '
-            'ToolStripButton_Revise
-            '
-            Me.ToolStripButton_Revise.Name = "ToolStripButton_Revise"
-            Me.ToolStripButton_Revise.Size = New System.Drawing.Size(33, 22)
-            Me.ToolStripButton_Revise.Text = "修改"
             '
             'ToolStripButton_Remove
             '
             Me.ToolStripButton_Remove.Name = "ToolStripButton_Remove"
-            Me.ToolStripButton_Remove.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Remove.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Remove.Text = "除去"
             '
             'ToolStripButton_Refresh
             '
             Me.ToolStripButton_Refresh.Name = "ToolStripButton_Refresh"
-            Me.ToolStripButton_Refresh.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Refresh.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Refresh.Text = "刷新"
             Me.ToolStripButton_Refresh.Visible = False
             '
             'ToolStripButton_Report
             '
             Me.ToolStripButton_Report.Name = "ToolStripButton_Report"
-            Me.ToolStripButton_Report.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Report.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Report.Text = "报表"
             Me.ToolStripButton_Report.Visible = False
             '
             'ToolStripButton_View
             '
             Me.ToolStripButton_View.Name = "ToolStripButton_View"
-            Me.ToolStripButton_View.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_View.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_View.Text = "查看"
             Me.ToolStripButton_View.Visible = False
             '
             'ToolStripButton_Close
             '
             Me.ToolStripButton_Close.Name = "ToolStripButton_Close"
-            Me.ToolStripButton_Close.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Close.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Close.Text = "关闭"
             '
             'PanelControl1
@@ -327,7 +310,7 @@
             Me.TextEdit_TemplateName.EditValue = ""
             Me.TextEdit_TemplateName.Location = New System.Drawing.Point(360, 13)
             Me.TextEdit_TemplateName.Name = "TextEdit_TemplateName"
-            Me.TextEdit_TemplateName.Size = New System.Drawing.Size(221, 21)
+            Me.TextEdit_TemplateName.Size = New System.Drawing.Size(221, 20)
             Me.TextEdit_TemplateName.TabIndex = 10002
             CTag4.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag4.CalculatorRequired = True
@@ -395,7 +378,7 @@
             Me.TextEdit_TemplateCode.EditValue = ""
             Me.TextEdit_TemplateCode.Location = New System.Drawing.Point(73, 13)
             Me.TextEdit_TemplateCode.Name = "TextEdit_TemplateCode"
-            Me.TextEdit_TemplateCode.Size = New System.Drawing.Size(184, 21)
+            Me.TextEdit_TemplateCode.Size = New System.Drawing.Size(184, 20)
             Me.TextEdit_TemplateCode.TabIndex = 10000
             CTag6.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag6.CalculatorRequired = True
@@ -614,7 +597,6 @@
             Me.GridColumn_DiscountType.ColumnEdit = Me.RepositoryItemLookUpEdit_DiscountType
             Me.GridColumn_DiscountType.FieldName = "DISCOUNT_TYPE"
             Me.GridColumn_DiscountType.Name = "GridColumn_DiscountType"
-            Me.GridColumn_DiscountType.OptionsColumn.AllowFocus = False
             Me.GridColumn_DiscountType.Visible = True
             Me.GridColumn_DiscountType.VisibleIndex = 10
             '
@@ -629,7 +611,6 @@
             Me.GridColumn_DiscountAmount.Caption = "折扣额度"
             Me.GridColumn_DiscountAmount.FieldName = "DISCOUNT_AMOUNT"
             Me.GridColumn_DiscountAmount.Name = "GridColumn_DiscountAmount"
-            Me.GridColumn_DiscountAmount.OptionsColumn.AllowFocus = False
             Me.GridColumn_DiscountAmount.Visible = True
             Me.GridColumn_DiscountAmount.VisibleIndex = 11
             '
