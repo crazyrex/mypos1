@@ -86,6 +86,7 @@
             Me.GridColumn_DiscountType = New DevExpress.XtraGrid.Columns.GridColumn
             Me.RepositoryItemLookUpEdit_DiscountType = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
             Me.GridColumn_DiscountAmount = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.RepositoryItemSpinEdit_DiscountAmount = New DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit
             Me.GridColumn_RowHighlight = New DevExpress.XtraGrid.Columns.GridColumn
             Me.RepositoryItemCalcEdit_LowerLimit = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
             Me.RepositoryItemCalcEdit_IndividualDiscount = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
@@ -101,6 +102,7 @@
             CType(Me.GridView_SaleTemplateWare, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemCheckEdit_Select, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemLookUpEdit_DiscountType, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.RepositoryItemSpinEdit_DiscountAmount, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemCalcEdit_LowerLimit, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemCalcEdit_IndividualDiscount, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemCalcEdit_UnitPrice, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -149,53 +151,53 @@
             'ToolStripButton_Add
             '
             Me.ToolStripButton_Add.Name = "ToolStripButton_Add"
-            Me.ToolStripButton_Add.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Add.Size = New System.Drawing.Size(33, 22)
             Me.ToolStripButton_Add.Text = "添加"
             '
             'ToolStripButton_ShowFilter
             '
             Me.ToolStripButton_ShowFilter.Name = "ToolStripButton_ShowFilter"
-            Me.ToolStripButton_ShowFilter.Size = New System.Drawing.Size(59, 22)
+            Me.ToolStripButton_ShowFilter.Size = New System.Drawing.Size(57, 22)
             Me.ToolStripButton_ShowFilter.Text = "筛选条件"
             Me.ToolStripButton_ShowFilter.Visible = False
             '
             'ToolStripButton_Save
             '
             Me.ToolStripButton_Save.Name = "ToolStripButton_Save"
-            Me.ToolStripButton_Save.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Save.Size = New System.Drawing.Size(33, 22)
             Me.ToolStripButton_Save.Text = "保存"
             '
             'ToolStripButton_Remove
             '
             Me.ToolStripButton_Remove.Name = "ToolStripButton_Remove"
-            Me.ToolStripButton_Remove.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Remove.Size = New System.Drawing.Size(33, 22)
             Me.ToolStripButton_Remove.Text = "除去"
             '
             'ToolStripButton_Refresh
             '
             Me.ToolStripButton_Refresh.Name = "ToolStripButton_Refresh"
-            Me.ToolStripButton_Refresh.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Refresh.Size = New System.Drawing.Size(33, 22)
             Me.ToolStripButton_Refresh.Text = "刷新"
             Me.ToolStripButton_Refresh.Visible = False
             '
             'ToolStripButton_Report
             '
             Me.ToolStripButton_Report.Name = "ToolStripButton_Report"
-            Me.ToolStripButton_Report.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Report.Size = New System.Drawing.Size(33, 22)
             Me.ToolStripButton_Report.Text = "报表"
             Me.ToolStripButton_Report.Visible = False
             '
             'ToolStripButton_View
             '
             Me.ToolStripButton_View.Name = "ToolStripButton_View"
-            Me.ToolStripButton_View.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_View.Size = New System.Drawing.Size(33, 22)
             Me.ToolStripButton_View.Text = "查看"
             Me.ToolStripButton_View.Visible = False
             '
             'ToolStripButton_Close
             '
             Me.ToolStripButton_Close.Name = "ToolStripButton_Close"
-            Me.ToolStripButton_Close.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Close.Size = New System.Drawing.Size(33, 22)
             Me.ToolStripButton_Close.Text = "关闭"
             '
             'PanelControl1
@@ -310,7 +312,7 @@
             Me.TextEdit_TemplateName.EditValue = ""
             Me.TextEdit_TemplateName.Location = New System.Drawing.Point(360, 13)
             Me.TextEdit_TemplateName.Name = "TextEdit_TemplateName"
-            Me.TextEdit_TemplateName.Size = New System.Drawing.Size(221, 20)
+            Me.TextEdit_TemplateName.Size = New System.Drawing.Size(221, 21)
             Me.TextEdit_TemplateName.TabIndex = 10002
             CTag4.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag4.CalculatorRequired = True
@@ -378,7 +380,7 @@
             Me.TextEdit_TemplateCode.EditValue = ""
             Me.TextEdit_TemplateCode.Location = New System.Drawing.Point(73, 13)
             Me.TextEdit_TemplateCode.Name = "TextEdit_TemplateCode"
-            Me.TextEdit_TemplateCode.Size = New System.Drawing.Size(184, 20)
+            Me.TextEdit_TemplateCode.Size = New System.Drawing.Size(184, 21)
             Me.TextEdit_TemplateCode.TabIndex = 10000
             CTag6.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag6.CalculatorRequired = True
@@ -472,7 +474,7 @@
             Me.GridControl_SaleTemplateWare.Location = New System.Drawing.Point(0, 127)
             Me.GridControl_SaleTemplateWare.MainView = Me.GridView_SaleTemplateWare
             Me.GridControl_SaleTemplateWare.Name = "GridControl_SaleTemplateWare"
-            Me.GridControl_SaleTemplateWare.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemCalcEdit_LowerLimit, Me.RepositoryItemCalcEdit_IndividualDiscount, Me.RepositoryItemCalcEdit_UnitPrice, Me.RepositoryItemCalcEdit_UnitCost, Me.RepositoryItemCheckEdit_Select, Me.RepositoryItemLookUpEdit_DiscountType})
+            Me.GridControl_SaleTemplateWare.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemCalcEdit_LowerLimit, Me.RepositoryItemCalcEdit_IndividualDiscount, Me.RepositoryItemCalcEdit_UnitPrice, Me.RepositoryItemCalcEdit_UnitCost, Me.RepositoryItemCheckEdit_Select, Me.RepositoryItemLookUpEdit_DiscountType, Me.RepositoryItemSpinEdit_DiscountAmount})
             Me.GridControl_SaleTemplateWare.Size = New System.Drawing.Size(741, 373)
             Me.GridControl_SaleTemplateWare.TabIndex = 10003
             Me.GridControl_SaleTemplateWare.TabStop = False
@@ -604,15 +606,25 @@
             '
             Me.RepositoryItemLookUpEdit_DiscountType.AutoHeight = False
             Me.RepositoryItemLookUpEdit_DiscountType.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+            Me.RepositoryItemLookUpEdit_DiscountType.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("ITEM_MEANING", "折扣类型", 20, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Data.ColumnSortOrder.None)})
+            Me.RepositoryItemLookUpEdit_DiscountType.DisplayMember = "ITEM_MEANING"
             Me.RepositoryItemLookUpEdit_DiscountType.Name = "RepositoryItemLookUpEdit_DiscountType"
+            Me.RepositoryItemLookUpEdit_DiscountType.ValueMember = "ITEM_VALUE"
             '
             'GridColumn_DiscountAmount
             '
             Me.GridColumn_DiscountAmount.Caption = "折扣额度"
+            Me.GridColumn_DiscountAmount.ColumnEdit = Me.RepositoryItemSpinEdit_DiscountAmount
             Me.GridColumn_DiscountAmount.FieldName = "DISCOUNT_AMOUNT"
             Me.GridColumn_DiscountAmount.Name = "GridColumn_DiscountAmount"
             Me.GridColumn_DiscountAmount.Visible = True
             Me.GridColumn_DiscountAmount.VisibleIndex = 11
+            '
+            'RepositoryItemSpinEdit_DiscountAmount
+            '
+            Me.RepositoryItemSpinEdit_DiscountAmount.AutoHeight = False
+            Me.RepositoryItemSpinEdit_DiscountAmount.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
+            Me.RepositoryItemSpinEdit_DiscountAmount.Name = "RepositoryItemSpinEdit_DiscountAmount"
             '
             'GridColumn_RowHighlight
             '
@@ -692,6 +704,7 @@
             CType(Me.GridView_SaleTemplateWare, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemCheckEdit_Select, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemLookUpEdit_DiscountType, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.RepositoryItemSpinEdit_DiscountAmount, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemCalcEdit_LowerLimit, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemCalcEdit_IndividualDiscount, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemCalcEdit_UnitPrice, System.ComponentModel.ISupportInitialize).EndInit()
@@ -728,6 +741,7 @@
         Friend WithEvents GridColumn_RowHighlight As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents RepositoryItemLookUpEdit_DiscountType As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
         Friend WithEvents GridColumn_DiscountAmount As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents RepositoryItemSpinEdit_DiscountAmount As DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit
 
 #End Region
 

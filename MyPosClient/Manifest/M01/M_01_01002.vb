@@ -384,9 +384,9 @@ Namespace Manifest
                 'Case Business.B_01_00201.Affairs.DeleteInfo
                 '    Me.UpdateDisplay()                     
 
-                'Case Business.B_02_00201.Affairs.LoadList             
-                '    Me.DoPrivateUpdateSelectingRow()               
-                '    Me.GridView_XXXXXList.BestFitColumns()         
+                Case Business.B_01_01002.Affairs.LoadInfo
+                    Me.DoPrivateUpdateSelectingRow()
+                    Me.GridView_SaleTemplateWare.BestFitColumns()
 
                 Case Business.B_01_01002.Affairs.SaveInfo
                     Window.XLMessageBox.ShowMessage( _
@@ -901,6 +901,22 @@ Namespace Manifest
                CType(sender, DevExpress.XtraEditors.CheckEdit)
 
             bindingRow.ROW_SELECTED = checkEdit.Checked
+        End Sub
+
+        Private Sub RepositoryItemSpinEdit_DiscountAmount_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemSpinEdit_DiscountAmount.EditValueChanged
+            Dim bindingRow As MyPosXAuto.FTs.FT_XV_T_MP_SALE_TEMPLATE_WARERow = _
+                         CType(Me.GridView_SaleTemplateWare.GetDataRow( _
+                             Me.GridView_SaleTemplateWare.FocusedRowHandle), MyPosXAuto.FTs.FT_XV_T_MP_SALE_TEMPLATE_WARERow)
+
+            Dim spinEdit As DevExpress.XtraEditors.SpinEdit = _
+             CType(sender, DevExpress.XtraEditors.SpinEdit)
+
+            bindingRow.DISCOUNT_AMOUNT = CommTK.FDecimal(spinEdit.EditValue)
+        End Sub
+
+        Private Sub GridView_SaleTemplateWare_FocusedRowChanged1(ByVal sender As Object, ByVal e As DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs) Handles GridView_SaleTemplateWare.FocusedRowChanged
+            Me.DoPrivateUpdateSelectingRow()
+
         End Sub
     End Class
 
