@@ -331,6 +331,7 @@
             Me.GridView_SaleTemplate.OptionsView.ColumnAutoWidth = False
             Me.GridView_SaleTemplate.OptionsView.ShowFooter = True
             Me.GridView_SaleTemplate.OptionsView.ShowGroupPanel = False
+            Me.GridView_SaleTemplate.SortInfo.AddRange(New DevExpress.XtraGrid.Columns.GridColumnSortInfo() {New DevExpress.XtraGrid.Columns.GridColumnSortInfo(Me.GridColumn_TemplateCode, DevExpress.Data.ColumnSortOrder.Ascending)})
             '
             'GridColumn_TemplateCode
             '
