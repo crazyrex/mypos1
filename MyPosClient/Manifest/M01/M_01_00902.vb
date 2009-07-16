@@ -184,6 +184,7 @@ Namespace Manifest
 
             'Initialize option list controls which value source is from the edit form content
             Me.DateEdit_BeginDate.DateTime = CommTK.GetSyncServerTime
+            Me.DateEdit_BeginDate.DateTime = CommTK.GetSyncServerTime.AddDays(30)
 
             Me.TextEdit_AffairName.Select()
 
@@ -819,6 +820,14 @@ Namespace Manifest
             Me.DateEdit_EndDate.DateTime = Me.DateEdit_BeginDate.DateTime.AddDays(Me.SpinEdit_AffairDays.Value)
         End Sub
 
+        Private Sub DateEdit_EndDate_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles DateEdit_EndDate.EditValueChanged
+            Me.SpinEdit_AffairDays.Value = Me.DateEdit_EndDate.DateTime.Subtract(Me.DateEdit_BeginDate.DateTime).Days
+        End Sub
+
+
+        Private Sub DateEdit_BeginDate_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles DateEdit_BeginDate.EditValueChanged
+            Me.SpinEdit_AffairDays.Value = Me.DateEdit_EndDate.DateTime.Subtract(Me.DateEdit_BeginDate.DateTime).Days
+        End Sub
     End Class
 
 
