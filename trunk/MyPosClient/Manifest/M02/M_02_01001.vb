@@ -228,10 +228,7 @@ Namespace Manifest
                 Case "ButtonEdit_WareCode_ButtonClick"
                     Dim chooseForm As M_01_00201 = CType(popupForm, M_01_00201)
                     Me.ButtonEdit_WareCode.Text = chooseForm.SVFR_SELECTING_WARE_ROW.WARE_CODE
-                    Me.Label_WareInfo.Text = chooseForm.SVFR_SELECTING_WARE_ROW.WARE_NAME
-                    Me.Label_WareID.Text = chooseForm.SVFR_SELECTING_WARE_ROW.WARE_ID
-
-                    'Me._bizAgent.DoRequest(Business.B_01_00X01.Affairs.LoadBranchInfoByCode, False)
+                    Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.AddWare, False)
 
 
                     'Case "TbActionReport"                                                                                
