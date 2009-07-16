@@ -53,6 +53,8 @@
             Dim CTag7 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag9 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim StyleFormatCondition1 As DevExpress.XtraGrid.StyleFormatCondition = New DevExpress.XtraGrid.StyleFormatCondition
+            Dim StyleFormatCondition2 As DevExpress.XtraGrid.StyleFormatCondition = New DevExpress.XtraGrid.StyleFormatCondition
+            Dim StyleFormatCondition3 As DevExpress.XtraGrid.StyleFormatCondition = New DevExpress.XtraGrid.StyleFormatCondition
             Dim CTag10 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Me.ToolStrip_Form = New System.Windows.Forms.ToolStrip
             Me.ToolStripButton_Add = New System.Windows.Forms.ToolStripButton
@@ -152,53 +154,53 @@
             'ToolStripButton_Add
             '
             Me.ToolStripButton_Add.Name = "ToolStripButton_Add"
-            Me.ToolStripButton_Add.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Add.Size = New System.Drawing.Size(36, 22)
             Me.ToolStripButton_Add.Text = "添加"
             '
             'ToolStripButton_ShowFilter
             '
             Me.ToolStripButton_ShowFilter.Name = "ToolStripButton_ShowFilter"
-            Me.ToolStripButton_ShowFilter.Size = New System.Drawing.Size(57, 22)
+            Me.ToolStripButton_ShowFilter.Size = New System.Drawing.Size(60, 22)
             Me.ToolStripButton_ShowFilter.Text = "筛选条件"
             Me.ToolStripButton_ShowFilter.Visible = False
             '
             'ToolStripButton_Save
             '
             Me.ToolStripButton_Save.Name = "ToolStripButton_Save"
-            Me.ToolStripButton_Save.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Save.Size = New System.Drawing.Size(36, 22)
             Me.ToolStripButton_Save.Text = "保存"
             '
             'ToolStripButton_Remove
             '
             Me.ToolStripButton_Remove.Name = "ToolStripButton_Remove"
-            Me.ToolStripButton_Remove.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Remove.Size = New System.Drawing.Size(36, 22)
             Me.ToolStripButton_Remove.Text = "除去"
             '
             'ToolStripButton_Refresh
             '
             Me.ToolStripButton_Refresh.Name = "ToolStripButton_Refresh"
-            Me.ToolStripButton_Refresh.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Refresh.Size = New System.Drawing.Size(36, 22)
             Me.ToolStripButton_Refresh.Text = "刷新"
             Me.ToolStripButton_Refresh.Visible = False
             '
             'ToolStripButton_Report
             '
             Me.ToolStripButton_Report.Name = "ToolStripButton_Report"
-            Me.ToolStripButton_Report.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Report.Size = New System.Drawing.Size(36, 22)
             Me.ToolStripButton_Report.Text = "报表"
             Me.ToolStripButton_Report.Visible = False
             '
             'ToolStripButton_View
             '
             Me.ToolStripButton_View.Name = "ToolStripButton_View"
-            Me.ToolStripButton_View.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_View.Size = New System.Drawing.Size(36, 22)
             Me.ToolStripButton_View.Text = "查看"
             Me.ToolStripButton_View.Visible = False
             '
             'ToolStripButton_Close
             '
             Me.ToolStripButton_Close.Name = "ToolStripButton_Close"
-            Me.ToolStripButton_Close.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Close.Size = New System.Drawing.Size(36, 22)
             Me.ToolStripButton_Close.Text = "关闭"
             '
             'PanelControl1
@@ -313,7 +315,7 @@
             Me.TextEdit_TemplateName.EditValue = ""
             Me.TextEdit_TemplateName.Location = New System.Drawing.Point(360, 13)
             Me.TextEdit_TemplateName.Name = "TextEdit_TemplateName"
-            Me.TextEdit_TemplateName.Size = New System.Drawing.Size(221, 21)
+            Me.TextEdit_TemplateName.Size = New System.Drawing.Size(221, 20)
             Me.TextEdit_TemplateName.TabIndex = 10002
             CTag4.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag4.CalculatorRequired = True
@@ -381,7 +383,7 @@
             Me.TextEdit_TemplateCode.EditValue = ""
             Me.TextEdit_TemplateCode.Location = New System.Drawing.Point(73, 13)
             Me.TextEdit_TemplateCode.Name = "TextEdit_TemplateCode"
-            Me.TextEdit_TemplateCode.Size = New System.Drawing.Size(184, 21)
+            Me.TextEdit_TemplateCode.Size = New System.Drawing.Size(184, 20)
             Me.TextEdit_TemplateCode.TabIndex = 10000
             CTag6.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag6.CalculatorRequired = True
@@ -491,7 +493,13 @@
             StyleFormatCondition1.Column = Me.GridColumn_RowHighlight
             StyleFormatCondition1.Condition = DevExpress.XtraGrid.FormatConditionEnum.Equal
             StyleFormatCondition1.Value1 = "SEARCH_MATCH"
-            Me.GridView_SaleTemplateWare.FormatConditions.AddRange(New DevExpress.XtraGrid.StyleFormatCondition() {StyleFormatCondition1})
+            StyleFormatCondition2.Column = Me.GridColumn_DiscountType
+            StyleFormatCondition2.Condition = DevExpress.XtraGrid.FormatConditionEnum.LessOrEqual
+            StyleFormatCondition2.Value1 = 0
+            StyleFormatCondition3.Column = Me.GridColumn_DiscountAmount
+            StyleFormatCondition3.Condition = DevExpress.XtraGrid.FormatConditionEnum.LessOrEqual
+            StyleFormatCondition3.Value1 = 0
+            Me.GridView_SaleTemplateWare.FormatConditions.AddRange(New DevExpress.XtraGrid.StyleFormatCondition() {StyleFormatCondition1, StyleFormatCondition2, StyleFormatCondition3})
             Me.GridView_SaleTemplateWare.GridControl = Me.GridControl_SaleTemplateWare
             Me.GridView_SaleTemplateWare.Name = "GridView_SaleTemplateWare"
             Me.GridView_SaleTemplateWare.OptionsView.ColumnAutoWidth = False
