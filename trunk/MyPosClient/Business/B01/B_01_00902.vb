@@ -474,7 +474,7 @@ Namespace Business
 
                 Me._manifest.TextEdit_AffairName.Text = saleAffairRow.AFFAIR_NAME
                 Me._manifest.DateEdit_BeginDate.DateTime = saleAffairRow.BEGIN_DATE
-                Me._manifest.DateEdit_BeginDate.DateTime = saleAffairRow.END_DATE
+                'Me._manifest.DateEdit_BeginDate.DateTime = saleAffairRow.END_DATE
                 Me._manifest.SpinEdit_AffairDays.EditValue = saleAffairRow.AFFAIR_DAYS
 
                 Dim templateConditions As New MyPosXAuto.Facade.AfBizManage.ConditionOfT_MP_SALE_TEMPLATE(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
