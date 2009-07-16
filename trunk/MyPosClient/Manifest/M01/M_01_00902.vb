@@ -814,6 +814,11 @@ Namespace Manifest
                 WinTK.SearchGridViewText(Me.GridView_Pos, Me.TextEdit_Search.Text, True)
             End If
         End Sub
+
+        Private Sub SpinEdit_AffairDays_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles SpinEdit_AffairDays.EditValueChanged
+            Me.DateEdit_EndDate.DateTime = Me.DateEdit_BeginDate.DateTime.AddDays(Me.SpinEdit_AffairDays.Value)
+        End Sub
+
     End Class
 
 
