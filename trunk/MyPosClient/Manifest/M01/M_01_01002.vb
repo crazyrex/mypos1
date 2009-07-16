@@ -104,8 +104,16 @@ Namespace Manifest
 
         Protected Overrides Sub IA_InitBeforeRC()
 
-            Me.SetKeyJumpCycle(Keys.Enter, True)
-            Me.SetValueEditControls()
+            Me.SetKeyJumpCycle(Keys.Enter, True, _
+                               Me.TextEdit_TemplateCode, _
+                               Me.TextEdit_TemplateName, _
+                               Me.MemoEdit_Remark)
+
+            Me.SetValueEditControls( _
+                               Me.TextEdit_TemplateCode, _
+                               Me.TextEdit_TemplateName, _
+                               Me.MemoEdit_Remark)
+
             'Me.SetToolStripButtonFunctionKey(Me.ToolStripButton_Close, Keys.F12)
 
             Me.FormInputGuarder.SetValidate(Me.TextEdit_TemplateCode, InputGuarder.ValidateClassify.Required, Nothing)
@@ -186,7 +194,7 @@ Namespace Manifest
                 Return
             End If
 
-            'Me.TextEdit_Input.ResetText()
+            Me.TextEdit_TemplateCode.ResetText()
 
 
             '做根据LaunchCondition判断分支的相关动作
