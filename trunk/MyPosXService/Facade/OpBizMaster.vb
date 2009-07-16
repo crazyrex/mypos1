@@ -16,7 +16,7 @@ Namespace Facade
             warePriceSetDtlConditions.Add( _
                 AfXV.XV_S_MP_POS_SET_WAREColumns.SET_IDColumn, _
                 "=", _
-                posRow.PRICE_SET_ID)
+                posRow.POS_SET_ID)
 
             warePriceSetDtlConditions.Add( _
                 AfXV.XV_S_MP_POS_SET_WAREColumns.WARE_IDColumn, _
@@ -45,7 +45,7 @@ Namespace Facade
             warePriceSetDtlConditions.Add( _
                 AfXV.XV_S_MP_POS_SET_WAREColumns.SET_IDColumn, _
                 "=", _
-                posRow.PRICE_SET_ID)
+                posRow.POS_SET_ID)
 
             warePriceSetDtlConditions.Add( _
                 AfXV.XV_S_MP_POS_SET_WAREColumns.WARE_IDColumn, _
