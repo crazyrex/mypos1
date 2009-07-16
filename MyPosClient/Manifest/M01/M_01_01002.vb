@@ -347,6 +347,13 @@ Namespace Manifest
 
         Public Overrides Function ValidateInput() As String
 
+            'For Each bindingRow As MyPosXAuto.FTs.FT_XV_T_MP_SALE_TEMPLATE_WARERow In Me.SVFT_BINDING_LIST.FindRowsByCondition(Nothing)
+            '    If bindingRow.DISCOUNT_TYPE <= 0 Then
+            '        bindingRow.ROW_HIGHLIGHT = MyPosXService.Decls.ROW_HIGHLIGHT_ROW_DATA_MISSING
+            '        bindingRow.ROW_REMARK = MyPosXService.Decls.ROW_REMARK_0001
+            '    End If
+            'Next
+
             Return String.Empty
 
         End Function
