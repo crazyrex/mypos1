@@ -373,8 +373,8 @@ Namespace Manifest
         End Sub
 
         Private Sub ButtonEdit_WareCode_ButtonClick(ByVal sender As Object, ByVal e As DevExpress.XtraEditors.Controls.ButtonPressedEventArgs) Handles ButtonEdit_WareCode.ButtonClick
-            Dim inputForm As New M_01_00101(Me.TransactRequestHandle, Me.FormID)
-            inputForm.LAUNCH_CONDITION = MyPosXService.S_01_00101.LCs.Choose
+            Dim inputForm As New M_01_00201(Me.TransactRequestHandle, Me.FormID)
+            inputForm.LAUNCH_CONDITION = MyPosXService.S_01_00201.LCs.Choose
             Me.PopupForm(inputForm, "ButtonEdit_WareCode_ButtonClick", False)
         End Sub
 
