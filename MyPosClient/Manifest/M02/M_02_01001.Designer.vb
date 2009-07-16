@@ -38,6 +38,7 @@
         Friend WithEvents ToolStripButton_Close As System.Windows.Forms.ToolStripButton
         <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
             Dim CTag1 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(M_02_01001))
             Dim CTag21 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag2 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag3 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
@@ -71,10 +72,10 @@
             Dim CTag28 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag29 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag30 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
-            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(M_02_01001))
             Dim CTag33 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Me.ToolStrip_Form = New System.Windows.Forms.ToolStrip
             Me.ToolStripButton_Create = New System.Windows.Forms.ToolStripButton
+            Me.ToolStripButton_PurchaseList = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_Save = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_Remove = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_Close = New System.Windows.Forms.ToolStripButton
@@ -140,7 +141,6 @@
             Me.Label_CacheStatus = New System.Windows.Forms.Label
             Me.Label1 = New System.Windows.Forms.Label
             Me.Label18 = New System.Windows.Forms.Label
-            Me.ToolStripButton_PurchaseList = New System.Windows.Forms.ToolStripButton
             Me.ToolStrip_Form.SuspendLayout()
             CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.PanelControl1.SuspendLayout()
@@ -211,6 +211,15 @@
             Me.ToolStripButton_Create.Name = "ToolStripButton_Create"
             Me.ToolStripButton_Create.Size = New System.Drawing.Size(33, 22)
             Me.ToolStripButton_Create.Text = "新单"
+            '
+            'ToolStripButton_PurchaseList
+            '
+            Me.ToolStripButton_PurchaseList.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+            Me.ToolStripButton_PurchaseList.Image = CType(resources.GetObject("ToolStripButton_PurchaseList.Image"), System.Drawing.Image)
+            Me.ToolStripButton_PurchaseList.ImageTransparentColor = System.Drawing.Color.White
+            Me.ToolStripButton_PurchaseList.Name = "ToolStripButton_PurchaseList"
+            Me.ToolStripButton_PurchaseList.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_PurchaseList.Text = "小票"
             '
             'ToolStripButton_Save
             '
@@ -1492,7 +1501,7 @@
             Me.Label_WareID.Font = New System.Drawing.Font("Arial", 9.0!)
             Me.Label_WareID.ForeColor = System.Drawing.Color.Black
             Me.Label_WareID.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.Label_WareID.Location = New System.Drawing.Point(401, 16)
+            Me.Label_WareID.Location = New System.Drawing.Point(370, 21)
             Me.Label_WareID.Name = "Label_WareID"
             Me.Label_WareID.Size = New System.Drawing.Size(25, 18)
             Me.Label_WareID.TabIndex = 10000
@@ -1532,7 +1541,7 @@
             Me.Label_WareInfo.ImeMode = System.Windows.Forms.ImeMode.NoControl
             Me.Label_WareInfo.Location = New System.Drawing.Point(188, 13)
             Me.Label_WareInfo.Name = "Label_WareInfo"
-            Me.Label_WareInfo.Size = New System.Drawing.Size(207, 21)
+            Me.Label_WareInfo.Size = New System.Drawing.Size(190, 21)
             Me.Label_WareInfo.TabIndex = 10000
             CTag26.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag26.CalculatorRequired = True
@@ -1636,7 +1645,7 @@
             Me.Label1.Font = New System.Drawing.Font("Arial", 9.0!)
             Me.Label1.ForeColor = System.Drawing.Color.Black
             Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.Label1.Location = New System.Drawing.Point(410, 14)
+            Me.Label1.Location = New System.Drawing.Point(401, 15)
             Me.Label1.Name = "Label1"
             Me.Label1.Size = New System.Drawing.Size(53, 15)
             Me.Label1.TabIndex = 10000
@@ -1702,15 +1711,6 @@
             CTag30.ValueType = XL.Common.ControlValueType.Character
             Me.Label18.Tag = CTag30
             Me.Label18.Text = "货品代码"
-            '
-            'ToolStripButton_PurchaseList
-            '
-            Me.ToolStripButton_PurchaseList.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-            Me.ToolStripButton_PurchaseList.Image = CType(resources.GetObject("ToolStripButton_PurchaseList.Image"), System.Drawing.Image)
-            Me.ToolStripButton_PurchaseList.ImageTransparentColor = System.Drawing.Color.White
-            Me.ToolStripButton_PurchaseList.Name = "ToolStripButton_PurchaseList"
-            Me.ToolStripButton_PurchaseList.Size = New System.Drawing.Size(33, 22)
-            Me.ToolStripButton_PurchaseList.Text = "小票"
             '
             'M_02_01001
             '
