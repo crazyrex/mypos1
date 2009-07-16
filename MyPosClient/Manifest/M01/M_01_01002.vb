@@ -408,8 +408,8 @@ Namespace Manifest
 
             Select Case Me._bizAgent.AffairOf(responseResult.ResponseTitle)
 
-                'Case Business.B_01_00201.Affairs.DeleteInfo
-                '    Me.UpdateDisplay()                     
+                Case Business.B_01_01002.Affairs.Remove
+                    Me.DoPrivateUpdateSelectingRow()
 
                 Case Business.B_01_01002.Affairs.LoadInfo
                     Me.DoPrivateUpdateSelectingRow()
