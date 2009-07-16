@@ -368,12 +368,14 @@ Namespace Manifest
 
             Select Case Me._bizAgent.AffairOf(responseResult.ResponseTitle)
 
-                'Case Business.B_01_00201.Affairs.DeleteInfo
-                '    Me.UpdateDisplay()                     
+                Case Business.B_01_00902.Affairs.InitDisplay
+                    Me.GridView_Pos.BestFitColumns()
+                    'Case Business.B_01_00201.Affairs.DeleteInfo
+                    '    Me.UpdateDisplay()                     
 
-                'Case Business.B_02_00201.Affairs.LoadList             
-                '    Me.DoPrivateUpdateSelectingRow()               
-                '    Me.GridView_XXXXXList.BestFitColumns()         
+                    'Case Business.B_02_00201.Affairs.LoadList             
+                    '    Me.DoPrivateUpdateSelectingRow()               
+                    '    Me.GridView_XXXXXList.BestFitColumns()         
 
                 Case Business.B_01_00902.Affairs.SaveInfo
                     Window.XLMessageBox.ShowMessage( _

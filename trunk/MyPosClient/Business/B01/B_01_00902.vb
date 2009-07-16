@@ -374,10 +374,18 @@ Namespace Business
 
             Try
 
-                MyPosXAuto.Facade.AfBizMaster.FillFT_M_MP_POS( _
-                    Nothing, _
-                    Me._manifest.SVFT_BINDING_POS_LIST)
+                Dim posSetCondition As New MyPosXAuto.Facade.AfBizConfig.ConditionOfS_MP_POS_SET(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_Or)
+                posSetCondition.Add(MyPosXAuto.Facade.AfBizConfig.S_MP_POS_SETColumns.POS_TYPEColumn, "=", MyPosXAuto.Decls.CIVALUE_POS_TYPE_DIRECTLY_UNDER_SHOP)
+                posSetCondition.Add(MyPosXAuto.Facade.AfBizConfig.S_MP_POS_SETColumns.POS_TYPEColumn, "=", MyPosXAuto.Decls.CIVALUE_POS_TYPE_ALLIANCE_SHOP)
 
+                Dim posSetIDs = MyPosXAuto.Facade.AfBizConfig.GetS_MP_POS_SET_CVListDistinct(posSetCondition, MyPosXAuto.Facade.AfBizConfig.S_MP_POS_SETColumns.SET_IDColumn)
+                Dim posCondition As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_MP_POS(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+                posCondition.Add(MyPosXAuto.Facade.AfBizMaster.M_MP_POSColumns.PRICE_SET_IDColumn, True, posSetIDs)
+
+                MyPosXAuto.Facade.AfBizMaster.FillFT_M_MP_POS( _
+                    posCondition, _
+                    Me._manifest.SVFT_BINDING_POS_LIST)
+                Me._manifest.GridControl_Pos.DataSource = Me._manifest.SVFT_BINDING_POS_LIST
 
                 'Dim choosePurchaseWayList As New MyPosXAuto.FTs.FT_CIV_PURCHASE_WAY                                       
                 'Dim chooseAssetAbsentTypeList As New MyPosXAuto.FTs.FT_CIV_ASSET_ABSENT_TYPE                              
