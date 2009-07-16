@@ -600,7 +600,7 @@ Namespace Business
                     POS_CODE:=String.Empty, _
                     POS_NAME:=String.Empty, _
                     POST_CODE:=String.Empty, _
-                    PRICE_SET_ID:=String.Empty, _
+                    POS_SET_ID:=String.Empty, _
                     REMARKS:=String.Empty, _
                     STAFF_CODE:=String.Empty, _
                     STAFF_NAME:=String.Empty, _
@@ -775,7 +775,7 @@ Namespace Business
 
                 dtlRow.SUM_PRICE = CommTK.FDecimal(dtlRow.UNIT_PRICE * dtlRow.WARE_AMOUNT)
                 dtlRow.SUM_DISCOUNT = CommTK.FDecimal(dtlRow.UNIT_DISCOUNT * dtlRow.WARE_AMOUNT)
-
+                Me._manifest.SpinEdit_WareAmount.Value = dtlRow.WARE_AMOUNT
 
                 'Dim servResult As String = _
                 '    Me._service.ServAddWare()

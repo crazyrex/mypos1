@@ -358,12 +358,18 @@ Namespace Manifest
 
             Select Case Me._bizAgent.AffairOf(responseResult.ResponseTitle)
 
-                Case Business.B_02_01001.Affairs.InitDisplay, Business.B_02_01001.Affairs.AddWare
+                Case Business.B_02_01001.Affairs.InitDisplay
                     Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.UpdateSummary, False)
                     Me.GridView_TurnoverDtl.BestFitColumns()
                     Me.DoPrivateSelectRowByWareCode()
                     Me.DoPrivateUpdateCacheStatus()
-                                 
+
+                Case Business.B_02_01001.Affairs.AddWare
+                    Me.ButtonEdit_WareCode.SelectAll()
+                    Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.UpdateSummary, False)
+                    Me.GridView_TurnoverDtl.BestFitColumns()
+                    Me.DoPrivateSelectRowByWareCode()
+                    Me.DoPrivateUpdateCacheStatus()
 
             End Select
         End Sub

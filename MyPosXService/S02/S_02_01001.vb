@@ -144,7 +144,7 @@ Public Class S_02_01001
             End If
 
             MyPosXService.Facade.OpBizManage.FillPosCurrentAffairInfo( _
-                SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_CURRENT_POS_ID), _
+                valCurrentPosID, _
                 refSaleTemplateWareList, _
                 refAffairDescription)
 

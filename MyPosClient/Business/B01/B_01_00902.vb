@@ -380,7 +380,7 @@ Namespace Business
 
                 Dim posSetIDs = MyPosXAuto.Facade.AfBizConfig.GetS_MP_POS_SET_CVListDistinct(posSetCondition, MyPosXAuto.Facade.AfBizConfig.S_MP_POS_SETColumns.SET_IDColumn)
                 Dim posCondition As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_MP_POS(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
-                posCondition.Add(MyPosXAuto.Facade.AfBizMaster.M_MP_POSColumns.PRICE_SET_IDColumn, True, posSetIDs)
+                posCondition.Add(MyPosXAuto.Facade.AfBizMaster.M_MP_POSColumns.POS_SET_IDColumn, True, posSetIDs)
 
                 MyPosXAuto.Facade.AfBizMaster.FillFT_M_MP_POS( _
                     posCondition, _
