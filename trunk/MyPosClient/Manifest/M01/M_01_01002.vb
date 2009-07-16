@@ -918,6 +918,13 @@ Namespace Manifest
             Me.DoPrivateUpdateSelectingRow()
 
         End Sub
+
+        Private Sub RepositoryItemLookUpEdit_DiscountType_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemLookUpEdit_DiscountType.EditValueChanged
+            Dim lookupEdit As DevExpress.XtraEditors.LookUpEdit = _
+         CType(sender, DevExpress.XtraEditors.LookUpEdit)
+
+            Me.SVFR_SELECTING_ROW.DISCOUNT_TYPE = CommTK.FInteger(lookupEdit.EditValue)
+        End Sub
     End Class
 
 
