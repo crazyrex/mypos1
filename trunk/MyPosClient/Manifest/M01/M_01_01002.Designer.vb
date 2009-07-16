@@ -92,6 +92,7 @@
             Me.RepositoryItemCalcEdit_IndividualDiscount = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
             Me.RepositoryItemCalcEdit_UnitPrice = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
             Me.RepositoryItemCalcEdit_UnitCost = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
+            Me.GridColumn_RowRemark = New DevExpress.XtraGrid.Columns.GridColumn
             Me.ToolStrip_Form.SuspendLayout()
             CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.PanelControl1.SuspendLayout()
@@ -482,9 +483,9 @@
             '
             'GridView_SaleTemplateWare
             '
-            Me.GridView_SaleTemplateWare.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn_Select, Me.GridColumn_WareCode, Me.GridColumn_CustomCode, Me.GridColumn_WareName, Me.GridColumn_Spec, Me.GridColumn_Model, Me.GridColumn_Attribute1, Me.GridColumn_Attribute2, Me.GridColumn_Attribute3, Me.GridColumn_Attribute4, Me.GridColumn_DiscountType, Me.GridColumn_DiscountAmount, Me.GridColumn_RowHighlight})
+            Me.GridView_SaleTemplateWare.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn_Select, Me.GridColumn_WareCode, Me.GridColumn_CustomCode, Me.GridColumn_WareName, Me.GridColumn_Spec, Me.GridColumn_Model, Me.GridColumn_Attribute1, Me.GridColumn_Attribute2, Me.GridColumn_Attribute3, Me.GridColumn_Attribute4, Me.GridColumn_DiscountType, Me.GridColumn_DiscountAmount, Me.GridColumn_RowHighlight, Me.GridColumn_RowRemark})
             StyleFormatCondition1.Appearance.BackColor = System.Drawing.Color.Lime
-            StyleFormatCondition1.Appearance.BackColor2 = System.Drawing.Color.White
+            StyleFormatCondition1.Appearance.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
             StyleFormatCondition1.Appearance.Options.UseBackColor = True
             StyleFormatCondition1.ApplyToRow = True
             StyleFormatCondition1.Column = Me.GridColumn_RowHighlight
@@ -657,6 +658,15 @@
             Me.RepositoryItemCalcEdit_UnitCost.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
             Me.RepositoryItemCalcEdit_UnitCost.Name = "RepositoryItemCalcEdit_UnitCost"
             '
+            'GridColumn_RowRemark
+            '
+            Me.GridColumn_RowRemark.Caption = "问题"
+            Me.GridColumn_RowRemark.FieldName = "DSR_FT_ROW_REMARK"
+            Me.GridColumn_RowRemark.Name = "GridColumn_RowRemark"
+            Me.GridColumn_RowRemark.OptionsColumn.AllowFocus = False
+            Me.GridColumn_RowRemark.Visible = True
+            Me.GridColumn_RowRemark.VisibleIndex = 12
+            '
             'M_01_01002
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -742,6 +752,7 @@
         Friend WithEvents RepositoryItemLookUpEdit_DiscountType As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
         Friend WithEvents GridColumn_DiscountAmount As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents RepositoryItemSpinEdit_DiscountAmount As DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit
+        Friend WithEvents GridColumn_RowRemark As DevExpress.XtraGrid.Columns.GridColumn
 
 #End Region
 
