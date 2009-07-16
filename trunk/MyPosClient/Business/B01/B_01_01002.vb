@@ -636,8 +636,9 @@ Namespace Business
 
             Try
 
-                Me._manifest.SVFR_SELECTING_ROW.Delete()
-
+                For Each bindingRow As MyPosXAuto.FTs.FT_XV_T_MP_SALE_TEMPLATE_WARERow In Me._manifest.SVFT_BINDING_LIST.FindRowsSelecting(True)
+                    bindingRow.Delete()
+                Next
                 'Dim servResult As String = _
                 '    Me._service.ServRemove()
 

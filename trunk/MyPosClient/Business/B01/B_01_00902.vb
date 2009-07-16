@@ -609,6 +609,8 @@ Namespace Business
 
                 End If
 
+                MyPosXAuto.Facade.AfBizManage.SaveBatchT_MP_SALE_AFFAIR_POSData(dbAffairPosList)
+
                 'Dim servResult As String = _                                       
                 '    Me._service.ServSaveInfo()                                     
 
