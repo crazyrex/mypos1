@@ -1220,6 +1220,7 @@
             Me.GridColumn_TurnoverBookStatus.ColumnEdit = Me.RepositoryItemLookUpEdit_TurnoverBookStatus
             Me.GridColumn_TurnoverBookStatus.FieldName = "TURNOVER_BOOK_STATUS"
             Me.GridColumn_TurnoverBookStatus.Name = "GridColumn_TurnoverBookStatus"
+            Me.GridColumn_TurnoverBookStatus.OptionsColumn.AllowFocus = False
             Me.GridColumn_TurnoverBookStatus.Width = 60
             '
             'RepositoryItemLookUpEdit_TurnoverBookStatus
@@ -1344,6 +1345,7 @@
             Me.GridColumn_UnitDiscount.Caption = "单件折扣"
             Me.GridColumn_UnitDiscount.FieldName = "UNIT_DISCOUNT"
             Me.GridColumn_UnitDiscount.Name = "GridColumn_UnitDiscount"
+            Me.GridColumn_UnitDiscount.OptionsColumn.AllowFocus = False
             Me.GridColumn_UnitDiscount.Visible = True
             Me.GridColumn_UnitDiscount.VisibleIndex = 12
             '
@@ -1352,6 +1354,7 @@
             Me.GridColumn_SumDiscount.Caption = "折扣小计"
             Me.GridColumn_SumDiscount.FieldName = "SUM_DISCOUNT"
             Me.GridColumn_SumDiscount.Name = "GridColumn_SumDiscount"
+            Me.GridColumn_SumDiscount.OptionsColumn.AllowFocus = False
             Me.GridColumn_SumDiscount.SummaryItem.DisplayFormat = "{0:#,##0.00}"
             Me.GridColumn_SumDiscount.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum
             Me.GridColumn_SumDiscount.Visible = True
