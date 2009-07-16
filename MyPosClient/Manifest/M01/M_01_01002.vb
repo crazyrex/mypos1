@@ -188,13 +188,13 @@ Namespace Manifest
 
             'Initialize option list controls which value source is from the edit form content
 
-            'Me.TextBox_FirstInput.Select
+            Me.TextEdit_TemplateCode.Select()
 
             If clearFields = False Then
                 Return
             End If
 
-            Me.TextEdit_TemplateCode.ResetText()
+            'Me.TextEdit_TemplateCode.ResetText()
 
 
             '做根据LaunchCondition判断分支的相关动作
