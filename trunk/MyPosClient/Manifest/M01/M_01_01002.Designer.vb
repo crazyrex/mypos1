@@ -55,6 +55,7 @@
             Dim StyleFormatCondition1 As DevExpress.XtraGrid.StyleFormatCondition = New DevExpress.XtraGrid.StyleFormatCondition
             Dim StyleFormatCondition2 As DevExpress.XtraGrid.StyleFormatCondition = New DevExpress.XtraGrid.StyleFormatCondition
             Dim StyleFormatCondition3 As DevExpress.XtraGrid.StyleFormatCondition = New DevExpress.XtraGrid.StyleFormatCondition
+            Dim StyleFormatCondition4 As DevExpress.XtraGrid.StyleFormatCondition = New DevExpress.XtraGrid.StyleFormatCondition
             Dim CTag10 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Me.ToolStrip_Form = New System.Windows.Forms.ToolStrip
             Me.ToolStripButton_Add = New System.Windows.Forms.ToolStripButton
@@ -90,11 +91,11 @@
             Me.GridColumn_DiscountAmount = New DevExpress.XtraGrid.Columns.GridColumn
             Me.RepositoryItemSpinEdit_DiscountAmount = New DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit
             Me.GridColumn_RowHighlight = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn_RowRemark = New DevExpress.XtraGrid.Columns.GridColumn
             Me.RepositoryItemCalcEdit_LowerLimit = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
             Me.RepositoryItemCalcEdit_IndividualDiscount = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
             Me.RepositoryItemCalcEdit_UnitPrice = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
             Me.RepositoryItemCalcEdit_UnitCost = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
-            Me.GridColumn_RowRemark = New DevExpress.XtraGrid.Columns.GridColumn
             Me.ToolStrip_Form.SuspendLayout()
             CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.PanelControl1.SuspendLayout()
@@ -493,13 +494,24 @@
             StyleFormatCondition1.Column = Me.GridColumn_RowHighlight
             StyleFormatCondition1.Condition = DevExpress.XtraGrid.FormatConditionEnum.Equal
             StyleFormatCondition1.Value1 = "SEARCH_MATCH"
-            StyleFormatCondition2.Column = Me.GridColumn_DiscountType
-            StyleFormatCondition2.Condition = DevExpress.XtraGrid.FormatConditionEnum.LessOrEqual
-            StyleFormatCondition2.Value1 = 0
-            StyleFormatCondition3.Column = Me.GridColumn_DiscountAmount
+            StyleFormatCondition2.Appearance.BackColor = System.Drawing.Color.Red
+            StyleFormatCondition2.Appearance.BackColor2 = System.Drawing.Color.Red
+            StyleFormatCondition2.Appearance.Options.UseBackColor = True
+            StyleFormatCondition2.ApplyToRow = True
+            StyleFormatCondition2.Column = Me.GridColumn_RowHighlight
+            StyleFormatCondition2.Condition = DevExpress.XtraGrid.FormatConditionEnum.Equal
+            StyleFormatCondition2.Value1 = "ROW_HIGHLIGHT_ROW_DATA_MISSING"
+            StyleFormatCondition3.Appearance.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+            StyleFormatCondition3.Appearance.Options.UseBackColor = True
+            StyleFormatCondition3.Column = Me.GridColumn_DiscountType
             StyleFormatCondition3.Condition = DevExpress.XtraGrid.FormatConditionEnum.LessOrEqual
             StyleFormatCondition3.Value1 = 0
-            Me.GridView_SaleTemplateWare.FormatConditions.AddRange(New DevExpress.XtraGrid.StyleFormatCondition() {StyleFormatCondition1, StyleFormatCondition2, StyleFormatCondition3})
+            StyleFormatCondition4.Appearance.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+            StyleFormatCondition4.Appearance.Options.UseBackColor = True
+            StyleFormatCondition4.Column = Me.GridColumn_DiscountAmount
+            StyleFormatCondition4.Condition = DevExpress.XtraGrid.FormatConditionEnum.LessOrEqual
+            StyleFormatCondition4.Value1 = 0
+            Me.GridView_SaleTemplateWare.FormatConditions.AddRange(New DevExpress.XtraGrid.StyleFormatCondition() {StyleFormatCondition1, StyleFormatCondition2, StyleFormatCondition3, StyleFormatCondition4})
             Me.GridView_SaleTemplateWare.GridControl = Me.GridControl_SaleTemplateWare
             Me.GridView_SaleTemplateWare.Name = "GridView_SaleTemplateWare"
             Me.GridView_SaleTemplateWare.OptionsView.ColumnAutoWidth = False
@@ -642,6 +654,15 @@
             Me.GridColumn_RowHighlight.Name = "GridColumn_RowHighlight"
             Me.GridColumn_RowHighlight.OptionsColumn.AllowFocus = False
             '
+            'GridColumn_RowRemark
+            '
+            Me.GridColumn_RowRemark.Caption = "问题"
+            Me.GridColumn_RowRemark.FieldName = "DSR_FT_ROW_REMARK"
+            Me.GridColumn_RowRemark.Name = "GridColumn_RowRemark"
+            Me.GridColumn_RowRemark.OptionsColumn.AllowFocus = False
+            Me.GridColumn_RowRemark.Visible = True
+            Me.GridColumn_RowRemark.VisibleIndex = 12
+            '
             'RepositoryItemCalcEdit_LowerLimit
             '
             Me.RepositoryItemCalcEdit_LowerLimit.AutoHeight = False
@@ -665,15 +686,6 @@
             Me.RepositoryItemCalcEdit_UnitCost.AutoHeight = False
             Me.RepositoryItemCalcEdit_UnitCost.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
             Me.RepositoryItemCalcEdit_UnitCost.Name = "RepositoryItemCalcEdit_UnitCost"
-            '
-            'GridColumn_RowRemark
-            '
-            Me.GridColumn_RowRemark.Caption = "问题"
-            Me.GridColumn_RowRemark.FieldName = "DSR_FT_ROW_REMARK"
-            Me.GridColumn_RowRemark.Name = "GridColumn_RowRemark"
-            Me.GridColumn_RowRemark.OptionsColumn.AllowFocus = False
-            Me.GridColumn_RowRemark.Visible = True
-            Me.GridColumn_RowRemark.VisibleIndex = 12
             '
             'M_01_01002
             '
