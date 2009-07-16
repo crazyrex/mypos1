@@ -225,24 +225,27 @@ Namespace Manifest
                 'Case "TbActionCreate", "TbActionRevise"
                 '    Me.UpdateDisplay()                 
 
-                'Case "ButtonEdit_BranchCode_ButtonClick"                                         
-                '    Dim chooseForm As M_01_00101 = CType(popupForm, M_01_00101)                    
-                '    Me.ButtonEdit_BranchCode.Text = chooseForm.SVFR_SELECTING_ROW.BRANCH_CODE      
-                '    Me._bizAgent.DoRequest(Business.B_01_00X01.Affairs.LoadBranchInfoByCode, False)
+                Case "ButtonEdit_WareCode_ButtonClick"
+                    Dim chooseForm As M_01_00201 = CType(popupForm, M_01_00201)
+                    Me.ButtonEdit_WareCode.Text = chooseForm.SVFR_SELECTING_WARE_ROW.WARE_CODE
+                    Me.Label_WareInfo.Text = chooseForm.SVFR_SELECTING_WARE_ROW.WARE_NAME
+                    Me.Label_WareID.Text = chooseForm.SVFR_SELECTING_WARE_ROW.WARE_ID
+
+                    'Me._bizAgent.DoRequest(Business.B_01_00X01.Affairs.LoadBranchInfoByCode, False)
 
 
-                'Case "TbActionReport"                                                                                
+                    'Case "TbActionReport"                                                                                
 
-                'Dim optionForm As XForm.Manifest.M_ReportOptions = CType(popupForm, XForm.Manifest.M_ReportOptions)
-                'Select Case optionForm.SV_SELECTING_OPTION.Type                                                    
-                '    Case XForm.ReportOption.PrintType.Label                                                        
-                '        Me._bizAgent.DoRequest(Business.B_02_00X01.Affairs.PrintLabels, False)                     
-                '    Case XForm.ReportOption.PrintType.Excel                                                        
-                '        Select Case optionForm.SV_SELECTING_OPTION.Name                                            
-                '            Case MyPosXService.Decls.RPT_NAME_0002                                                      
-                '                Me._bizAgent.DoRequest(Business.B_02_00X01.Affairs.ExportXXXListExcel, False)    
-                '        End Select                                                                                 
-                'End Select                                                                                         
+                    'Dim optionForm As XForm.Manifest.M_ReportOptions = CType(popupForm, XForm.Manifest.M_ReportOptions)
+                    'Select Case optionForm.SV_SELECTING_OPTION.Type                                                    
+                    '    Case XForm.ReportOption.PrintType.Label                                                        
+                    '        Me._bizAgent.DoRequest(Business.B_02_00X01.Affairs.PrintLabels, False)                     
+                    '    Case XForm.ReportOption.PrintType.Excel                                                        
+                    '        Select Case optionForm.SV_SELECTING_OPTION.Name                                            
+                    '            Case MyPosXService.Decls.RPT_NAME_0002                                                      
+                    '                Me._bizAgent.DoRequest(Business.B_02_00X01.Affairs.ExportXXXListExcel, False)    
+                    '        End Select                                                                                 
+                    'End Select                                                                                         
 
                 Case "ResponseTitleName1"
 
@@ -370,6 +373,12 @@ Namespace Manifest
 
         Private Sub Timer_Surveillant_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer_Surveillant.Tick
 
+        End Sub
+
+        Private Sub ButtonEdit_WareCode_ButtonClick(ByVal sender As Object, ByVal e As DevExpress.XtraEditors.Controls.ButtonPressedEventArgs) Handles ButtonEdit_WareCode.ButtonClick
+            Dim inputForm As New M_01_00101(Me.TransactRequestHandle, Me.FormID)
+            inputForm.LAUNCH_CONDITION = MyPosXService.S_01_00101.LCs.Choose
+            Me.PopupForm(inputForm, "ButtonEdit_WareCode_ButtonClick", False)
         End Sub
 
 
