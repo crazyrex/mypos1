@@ -238,6 +238,7 @@
     <Compile Include="S02\S_02_01001.vb">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="S02\S_02_01002.vb" />
     <Compile Include="S03\S_03_00101.vb">
       <SubType>Code</SubType>
     </Compile>
