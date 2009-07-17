@@ -169,7 +169,7 @@
             '
             'DefaultLookAndFeel_Form
             '
-            Me.DefaultLookAndFeel_Form.LookAndFeel.SkinName = ""
+            Me.DefaultLookAndFeel_Form.LookAndFeel.SkinName = "Money Twins"
             '
             'Timer_Surveillant
             '
@@ -209,7 +209,7 @@
             'ToolStripButton_Create
             '
             Me.ToolStripButton_Create.Name = "ToolStripButton_Create"
-            Me.ToolStripButton_Create.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Create.Size = New System.Drawing.Size(33, 22)
             Me.ToolStripButton_Create.Text = "新单"
             '
             'ToolStripButton_PurchaseList
@@ -218,25 +218,25 @@
             Me.ToolStripButton_PurchaseList.Image = CType(resources.GetObject("ToolStripButton_PurchaseList.Image"), System.Drawing.Image)
             Me.ToolStripButton_PurchaseList.ImageTransparentColor = System.Drawing.Color.White
             Me.ToolStripButton_PurchaseList.Name = "ToolStripButton_PurchaseList"
-            Me.ToolStripButton_PurchaseList.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_PurchaseList.Size = New System.Drawing.Size(33, 22)
             Me.ToolStripButton_PurchaseList.Text = "小票"
             '
             'ToolStripButton_Save
             '
             Me.ToolStripButton_Save.Name = "ToolStripButton_Save"
-            Me.ToolStripButton_Save.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Save.Size = New System.Drawing.Size(33, 22)
             Me.ToolStripButton_Save.Text = "结单"
             '
             'ToolStripButton_Remove
             '
             Me.ToolStripButton_Remove.Name = "ToolStripButton_Remove"
-            Me.ToolStripButton_Remove.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Remove.Size = New System.Drawing.Size(33, 22)
             Me.ToolStripButton_Remove.Text = "去除"
             '
             'ToolStripButton_Close
             '
             Me.ToolStripButton_Close.Name = "ToolStripButton_Close"
-            Me.ToolStripButton_Close.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Close.Size = New System.Drawing.Size(33, 22)
             Me.ToolStripButton_Close.Text = "关闭"
             '
             'PanelControl1
@@ -290,9 +290,9 @@
             Me.GroupControl3.Controls.Add(Me.Label3)
             Me.GroupControl3.Dock = System.Windows.Forms.DockStyle.Bottom
             Me.GroupControl3.FireScrollEventOnMouseWheel = True
-            Me.GroupControl3.Location = New System.Drawing.Point(2, 93)
+            Me.GroupControl3.Location = New System.Drawing.Point(3, 92)
             Me.GroupControl3.Name = "GroupControl3"
-            Me.GroupControl3.Size = New System.Drawing.Size(187, 187)
+            Me.GroupControl3.Size = New System.Drawing.Size(185, 187)
             Me.GroupControl3.TabIndex = 10006
             Me.GroupControl3.Text = "当前交易"
             '
@@ -301,7 +301,7 @@
             Me.CalcEdit_Payment.Location = New System.Drawing.Point(63, 126)
             Me.CalcEdit_Payment.Name = "CalcEdit_Payment"
             Me.CalcEdit_Payment.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-            Me.CalcEdit_Payment.Size = New System.Drawing.Size(121, 20)
+            Me.CalcEdit_Payment.Size = New System.Drawing.Size(121, 21)
             Me.CalcEdit_Payment.TabIndex = 10002
             '
             'CalcEdit_ExtraDiscount
@@ -309,7 +309,7 @@
             Me.CalcEdit_ExtraDiscount.Location = New System.Drawing.Point(61, 77)
             Me.CalcEdit_ExtraDiscount.Name = "CalcEdit_ExtraDiscount"
             Me.CalcEdit_ExtraDiscount.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-            Me.CalcEdit_ExtraDiscount.Size = New System.Drawing.Size(121, 20)
+            Me.CalcEdit_ExtraDiscount.Size = New System.Drawing.Size(121, 21)
             Me.CalcEdit_ExtraDiscount.TabIndex = 10002
             '
             'Label_Change
@@ -701,9 +701,9 @@
             Me.GroupControl2.Controls.Add(Me.Label6)
             Me.GroupControl2.Dock = System.Windows.Forms.DockStyle.Bottom
             Me.GroupControl2.FireScrollEventOnMouseWheel = True
-            Me.GroupControl2.Location = New System.Drawing.Point(2, 280)
+            Me.GroupControl2.Location = New System.Drawing.Point(3, 279)
             Me.GroupControl2.Name = "GroupControl2"
-            Me.GroupControl2.Size = New System.Drawing.Size(187, 174)
+            Me.GroupControl2.Size = New System.Drawing.Size(185, 174)
             Me.GroupControl2.TabIndex = 10004
             Me.GroupControl2.Text = "会员情况"
             '
@@ -749,7 +749,7 @@
             Me.TextEdit_ClientCode.Enabled = False
             Me.TextEdit_ClientCode.Location = New System.Drawing.Point(61, 26)
             Me.TextEdit_ClientCode.Name = "TextEdit_ClientCode"
-            Me.TextEdit_ClientCode.Size = New System.Drawing.Size(119, 20)
+            Me.TextEdit_ClientCode.Size = New System.Drawing.Size(119, 21)
             Me.TextEdit_ClientCode.TabIndex = 10003
             '
             'CalcEdit_UsePoint
@@ -757,7 +757,7 @@
             Me.CalcEdit_UsePoint.Location = New System.Drawing.Point(61, 119)
             Me.CalcEdit_UsePoint.Name = "CalcEdit_UsePoint"
             Me.CalcEdit_UsePoint.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-            Me.CalcEdit_UsePoint.Size = New System.Drawing.Size(121, 20)
+            Me.CalcEdit_UsePoint.Size = New System.Drawing.Size(121, 21)
             Me.CalcEdit_UsePoint.TabIndex = 10002
             '
             'CheckEdit_IsClient
@@ -1035,9 +1035,9 @@
             Me.GroupControl1.Controls.Add(Me.Label_AffairDescription)
             Me.GroupControl1.Dock = System.Windows.Forms.DockStyle.Fill
             Me.GroupControl1.FireScrollEventOnMouseWheel = True
-            Me.GroupControl1.Location = New System.Drawing.Point(2, 2)
+            Me.GroupControl1.Location = New System.Drawing.Point(3, 3)
             Me.GroupControl1.Name = "GroupControl1"
-            Me.GroupControl1.Size = New System.Drawing.Size(187, 452)
+            Me.GroupControl1.Size = New System.Drawing.Size(185, 450)
             Me.GroupControl1.TabIndex = 1
             Me.GroupControl1.Text = "当前活动"
             '
@@ -1049,7 +1049,7 @@
             Me.Label_AffairDescription.Font = New System.Drawing.Font("Arial", 9.0!)
             Me.Label_AffairDescription.ForeColor = System.Drawing.Color.Black
             Me.Label_AffairDescription.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.Label_AffairDescription.Location = New System.Drawing.Point(2, 20)
+            Me.Label_AffairDescription.Location = New System.Drawing.Point(2, 21)
             Me.Label_AffairDescription.Name = "Label_AffairDescription"
             Me.Label_AffairDescription.Size = New System.Drawing.Size(55, 15)
             Me.Label_AffairDescription.TabIndex = 10000
@@ -1144,11 +1144,11 @@
             CTag22.ToolTip = ""
             CTag22.ValueType = XL.Common.ControlValueType.Character
             Me.GridControl_TurnoverDtl.EmbeddedNavigator.Tag = CTag22
-            Me.GridControl_TurnoverDtl.Location = New System.Drawing.Point(2, 20)
+            Me.GridControl_TurnoverDtl.Location = New System.Drawing.Point(2, 21)
             Me.GridControl_TurnoverDtl.MainView = Me.GridView_TurnoverDtl
             Me.GridControl_TurnoverDtl.Name = "GridControl_TurnoverDtl"
             Me.GridControl_TurnoverDtl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemCheckEdit_Select, Me.RepositoryItemLookUpEdit_TurnoverBookStatus})
-            Me.GridControl_TurnoverDtl.Size = New System.Drawing.Size(727, 385)
+            Me.GridControl_TurnoverDtl.Size = New System.Drawing.Size(727, 384)
             Me.GridControl_TurnoverDtl.TabIndex = 10003
             Me.GridControl_TurnoverDtl.TabStop = False
             Me.GridControl_TurnoverDtl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView_TurnoverDtl})
@@ -1172,10 +1172,12 @@
             StyleFormatCondition2.Value1 = "ROW_HIGHLIGHT_OUT_OF_STOCK"
             Me.GridView_TurnoverDtl.FormatConditions.AddRange(New DevExpress.XtraGrid.StyleFormatCondition() {StyleFormatCondition1, StyleFormatCondition2})
             Me.GridView_TurnoverDtl.GridControl = Me.GridControl_TurnoverDtl
+            Me.GridView_TurnoverDtl.GroupCount = 1
             Me.GridView_TurnoverDtl.Name = "GridView_TurnoverDtl"
             Me.GridView_TurnoverDtl.OptionsView.ColumnAutoWidth = False
             Me.GridView_TurnoverDtl.OptionsView.ShowFooter = True
             Me.GridView_TurnoverDtl.OptionsView.ShowGroupPanel = False
+            Me.GridView_TurnoverDtl.SortInfo.AddRange(New DevExpress.XtraGrid.Columns.GridColumnSortInfo() {New DevExpress.XtraGrid.Columns.GridColumnSortInfo(Me.GridColumn_WareName, DevExpress.Data.ColumnSortOrder.Ascending)})
             '
             'GridColumn_BatchCode
             '
@@ -1240,7 +1242,7 @@
             Me.GridColumn_Spec.Name = "GridColumn_Spec"
             Me.GridColumn_Spec.OptionsColumn.AllowFocus = False
             Me.GridColumn_Spec.Visible = True
-            Me.GridColumn_Spec.VisibleIndex = 2
+            Me.GridColumn_Spec.VisibleIndex = 1
             Me.GridColumn_Spec.Width = 60
             '
             'GridColumn_Model
@@ -1250,7 +1252,7 @@
             Me.GridColumn_Model.Name = "GridColumn_Model"
             Me.GridColumn_Model.OptionsColumn.AllowFocus = False
             Me.GridColumn_Model.Visible = True
-            Me.GridColumn_Model.VisibleIndex = 3
+            Me.GridColumn_Model.VisibleIndex = 2
             Me.GridColumn_Model.Width = 60
             '
             'GridColumn_Attribute1
@@ -1260,7 +1262,7 @@
             Me.GridColumn_Attribute1.Name = "GridColumn_Attribute1"
             Me.GridColumn_Attribute1.OptionsColumn.AllowFocus = False
             Me.GridColumn_Attribute1.Visible = True
-            Me.GridColumn_Attribute1.VisibleIndex = 4
+            Me.GridColumn_Attribute1.VisibleIndex = 3
             Me.GridColumn_Attribute1.Width = 43
             '
             'GridColumn_Attribute2
@@ -1270,7 +1272,7 @@
             Me.GridColumn_Attribute2.Name = "GridColumn_Attribute2"
             Me.GridColumn_Attribute2.OptionsColumn.AllowFocus = False
             Me.GridColumn_Attribute2.Visible = True
-            Me.GridColumn_Attribute2.VisibleIndex = 5
+            Me.GridColumn_Attribute2.VisibleIndex = 4
             Me.GridColumn_Attribute2.Width = 43
             '
             'GridColumn_Attribute3
@@ -1280,7 +1282,7 @@
             Me.GridColumn_Attribute3.Name = "GridColumn_Attribute3"
             Me.GridColumn_Attribute3.OptionsColumn.AllowFocus = False
             Me.GridColumn_Attribute3.Visible = True
-            Me.GridColumn_Attribute3.VisibleIndex = 6
+            Me.GridColumn_Attribute3.VisibleIndex = 5
             Me.GridColumn_Attribute3.Width = 43
             '
             'GridColumn_Attribute4
@@ -1290,7 +1292,7 @@
             Me.GridColumn_Attribute4.Name = "GridColumn_Attribute4"
             Me.GridColumn_Attribute4.OptionsColumn.AllowFocus = False
             Me.GridColumn_Attribute4.Visible = True
-            Me.GridColumn_Attribute4.VisibleIndex = 7
+            Me.GridColumn_Attribute4.VisibleIndex = 6
             Me.GridColumn_Attribute4.Width = 43
             '
             'GridColumn_UnitName
@@ -1300,7 +1302,7 @@
             Me.GridColumn_UnitName.Name = "GridColumn_UnitName"
             Me.GridColumn_UnitName.OptionsColumn.AllowFocus = False
             Me.GridColumn_UnitName.Visible = True
-            Me.GridColumn_UnitName.VisibleIndex = 8
+            Me.GridColumn_UnitName.VisibleIndex = 7
             Me.GridColumn_UnitName.Width = 36
             '
             'GridColumn_WareAmount
@@ -1311,7 +1313,7 @@
             Me.GridColumn_WareAmount.OptionsColumn.AllowFocus = False
             Me.GridColumn_WareAmount.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum
             Me.GridColumn_WareAmount.Visible = True
-            Me.GridColumn_WareAmount.VisibleIndex = 9
+            Me.GridColumn_WareAmount.VisibleIndex = 8
             Me.GridColumn_WareAmount.Width = 36
             '
             'GridColumn_UnitPrice
@@ -1323,7 +1325,7 @@
             Me.GridColumn_UnitPrice.Name = "GridColumn_UnitPrice"
             Me.GridColumn_UnitPrice.OptionsColumn.AllowFocus = False
             Me.GridColumn_UnitPrice.Visible = True
-            Me.GridColumn_UnitPrice.VisibleIndex = 10
+            Me.GridColumn_UnitPrice.VisibleIndex = 9
             Me.GridColumn_UnitPrice.Width = 48
             '
             'GridColumn_SumPrice
@@ -1337,7 +1339,7 @@
             Me.GridColumn_SumPrice.SummaryItem.DisplayFormat = "{0:#,##0.00}"
             Me.GridColumn_SumPrice.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum
             Me.GridColumn_SumPrice.Visible = True
-            Me.GridColumn_SumPrice.VisibleIndex = 11
+            Me.GridColumn_SumPrice.VisibleIndex = 10
             Me.GridColumn_SumPrice.Width = 36
             '
             'GridColumn_UnitDiscount
@@ -1349,18 +1351,20 @@
             Me.GridColumn_UnitDiscount.Name = "GridColumn_UnitDiscount"
             Me.GridColumn_UnitDiscount.OptionsColumn.AllowFocus = False
             Me.GridColumn_UnitDiscount.Visible = True
-            Me.GridColumn_UnitDiscount.VisibleIndex = 12
+            Me.GridColumn_UnitDiscount.VisibleIndex = 11
             '
             'GridColumn_SumDiscount
             '
             Me.GridColumn_SumDiscount.Caption = "折扣小计"
+            Me.GridColumn_SumDiscount.DisplayFormat.FormatString = "{0:#,##0.00}"
+            Me.GridColumn_SumDiscount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
             Me.GridColumn_SumDiscount.FieldName = "SUM_DISCOUNT"
             Me.GridColumn_SumDiscount.Name = "GridColumn_SumDiscount"
             Me.GridColumn_SumDiscount.OptionsColumn.AllowFocus = False
             Me.GridColumn_SumDiscount.SummaryItem.DisplayFormat = "{0:#,##0.00}"
             Me.GridColumn_SumDiscount.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum
             Me.GridColumn_SumDiscount.Visible = True
-            Me.GridColumn_SumDiscount.VisibleIndex = 13
+            Me.GridColumn_SumDiscount.VisibleIndex = 12
             '
             'GridColumn_Remarks
             '
@@ -1436,7 +1440,7 @@
             '
             Me.LinkLabel_UploadCacheData.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
             Me.LinkLabel_UploadCacheData.AutoSize = True
-            Me.LinkLabel_UploadCacheData.Location = New System.Drawing.Point(652, 15)
+            Me.LinkLabel_UploadCacheData.Location = New System.Drawing.Point(651, 16)
             Me.LinkLabel_UploadCacheData.Name = "LinkLabel_UploadCacheData"
             Me.LinkLabel_UploadCacheData.Size = New System.Drawing.Size(55, 15)
             Me.LinkLabel_UploadCacheData.TabIndex = 10002
@@ -1473,7 +1477,7 @@
             Me.SpinEdit_WareAmount.Location = New System.Drawing.Point(469, 13)
             Me.SpinEdit_WareAmount.Name = "SpinEdit_WareAmount"
             Me.SpinEdit_WareAmount.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
-            Me.SpinEdit_WareAmount.Size = New System.Drawing.Size(57, 20)
+            Me.SpinEdit_WareAmount.Size = New System.Drawing.Size(57, 21)
             Me.SpinEdit_WareAmount.TabIndex = 10001
             CTag24.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag24.CalculatorRequired = True
@@ -1578,7 +1582,7 @@
             Me.ButtonEdit_WareCode.Location = New System.Drawing.Point(61, 12)
             Me.ButtonEdit_WareCode.Name = "ButtonEdit_WareCode"
             Me.ButtonEdit_WareCode.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
-            Me.ButtonEdit_WareCode.Size = New System.Drawing.Size(121, 20)
+            Me.ButtonEdit_WareCode.Size = New System.Drawing.Size(121, 21)
             Me.ButtonEdit_WareCode.TabIndex = 10000
             CTag27.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag27.CalculatorRequired = True
@@ -1613,7 +1617,7 @@
             Me.Label_CacheStatus.Font = New System.Drawing.Font("Arial", 9.0!)
             Me.Label_CacheStatus.ForeColor = System.Drawing.Color.Black
             Me.Label_CacheStatus.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.Label_CacheStatus.Location = New System.Drawing.Point(541, 14)
+            Me.Label_CacheStatus.Location = New System.Drawing.Point(540, 15)
             Me.Label_CacheStatus.Name = "Label_CacheStatus"
             Me.Label_CacheStatus.Size = New System.Drawing.Size(55, 15)
             Me.Label_CacheStatus.TabIndex = 10000
@@ -1650,7 +1654,7 @@
             Me.Label1.Font = New System.Drawing.Font("Arial", 9.0!)
             Me.Label1.ForeColor = System.Drawing.Color.Black
             Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.Label1.Location = New System.Drawing.Point(401, 15)
+            Me.Label1.Location = New System.Drawing.Point(402, 16)
             Me.Label1.Name = "Label1"
             Me.Label1.Size = New System.Drawing.Size(53, 15)
             Me.Label1.TabIndex = 10000
@@ -1687,7 +1691,7 @@
             Me.Label18.Font = New System.Drawing.Font("Arial", 9.0!)
             Me.Label18.ForeColor = System.Drawing.Color.Black
             Me.Label18.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.Label18.Location = New System.Drawing.Point(5, 12)
+            Me.Label18.Location = New System.Drawing.Point(6, 13)
             Me.Label18.Name = "Label18"
             Me.Label18.Size = New System.Drawing.Size(55, 15)
             Me.Label18.TabIndex = 10000

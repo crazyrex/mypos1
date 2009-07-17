@@ -170,13 +170,13 @@ Namespace Facade
 
                     turnoverDtlRow = increaseDtlList.NewXV_H_MP_TURNOVER_DTLRow
                     increaseDtlList.AddXV_H_MP_TURNOVER_DTLRow(turnoverDtlRow)
-                    turnoverDtlRow.WARE_AMOUNT = resultRow.INVENTORY_AMOUNT - resultRow.SYSTEM_AMOUNT
+                    turnoverDtlRow.WARE_AMOUNT = CommTK.FDecimal(resultRow.INVENTORY_AMOUNT - resultRow.SYSTEM_AMOUNT)
                     turnoverDtlRow.WARE_ID = resultRow.WARE_ID
 
                 ElseIf resultRow.SYSTEM_AMOUNT > resultRow.INVENTORY_AMOUNT Then
                     turnoverDtlRow = decreaseDtlList.NewXV_H_MP_TURNOVER_DTLRow
                     decreaseDtlList.AddXV_H_MP_TURNOVER_DTLRow(turnoverDtlRow)
-                    turnoverDtlRow.WARE_AMOUNT = resultRow.SYSTEM_AMOUNT - resultRow.INVENTORY_AMOUNT
+                    turnoverDtlRow.WARE_AMOUNT = CommTK.FDecimal(resultRow.SYSTEM_AMOUNT - resultRow.INVENTORY_AMOUNT)
                     turnoverDtlRow.WARE_ID = resultRow.WARE_ID
                 End If
 
