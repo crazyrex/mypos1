@@ -952,6 +952,15 @@ Namespace Manifest
 
             Me.SVFR_SELECTING_ROW.DISCOUNT_TYPE = CommTK.FInteger(lookupEdit.EditValue)
         End Sub
+
+        Private Sub LinkLabel_SelectAll_LinkClicked(ByVal sender As Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel_SelectAll.LinkClicked
+            Me.SVFT_BINDING_LIST.SelectAllRows()
+
+        End Sub
+
+        Private Sub LinkLabel_CancelAll_LinkClicked(ByVal sender As Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel_CancelAll.LinkClicked
+            Me.SVFT_BINDING_LIST.UnselectAllRows()
+        End Sub
     End Class
 
 
