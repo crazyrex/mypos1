@@ -77,7 +77,7 @@ Namespace Business
             LoadClientInfoByCode
             UpdateChange
             UploadCacheData
-            BizUtld0006
+            PrintTurnoverDtlList
             BizUtld0007
             BizUtld0008
             BizUtld0009
@@ -218,12 +218,12 @@ Namespace Business
                     '-------------------------------------------------------------------
                     functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoUploadCacheData)
 
-                Case Affairs.BizUtld0006
+                Case Affairs.PrintTurnoverDtlList
 
                     '
                     '取到处理函数的结果，传入返回给Manifest的AgentResponse包
                     '-------------------------------------------------------------------
-                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoBizUtld0006)
+                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoPrintTurnoverDtlList)
 
                 Case Affairs.BizUtld0007
 
@@ -411,6 +411,7 @@ Namespace Business
                     'Me._manifest.Label_EmployeeID.Text = CommTK.FString(staffRowSE.STAFF_ID)
                 End If
 
+                Me._manifest.SV_REPORT_TURNOVER_DTL_LIST = New XForm.ReportOption(MyPosXService.Decls.RPT_NAME_0001, XForm.ReportOption.PrintType.Print, True)
 
                 'If CommTK.FBoolean(SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_PRINT_SHOPPING_LIST)) = True  Then
                 '    Me._manifest.ToolStripButton_PrintPurchaseLabel.Visible = False
@@ -480,6 +481,9 @@ Namespace Business
                     WinTK.GetResourceFilePath( _
                         ResourceType.Data, _
                         Utils.Decls.CACHE_DATA_FILE_TURNOVER_DETAIL))
+
+
+
 
             Catch ex As XL.Common.Utils.XLException
 
@@ -562,7 +566,7 @@ Namespace Business
             Try
 
 
-                
+
                 Dim turnoverCacheDataRow = Me._manifest.SVFT_CACHE_DATA_TURNOVER_LIST.AddNewXV_H_MP_TURNOVERRow( _
                     TURNOVER_ID:=Guid.NewGuid.ToString, _
                     TURNOVER_CODE:=String.Empty, _
@@ -1045,14 +1049,19 @@ Namespace Business
         '''
         '''
         '''-------------------------------------------------------------------
-        Private Function DoBizUtld0006() As String
+        Private Function DoPrintTurnoverDtlList() As String
 
 
             Try
 
+                Dim report As New Reports.R_02_01001_PurchaseList
+
+                report.DataSource = Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST
+                report.CreateDataBindings()
+                report.Print()
 
                 'Dim servResult As String = _
-                '    Me._service.ServBizUtld0006()
+                '    Me._service.ServPrintTurnoverDtlList()
 
                 'If servResult.Length > 0 Then
                 '    Return servResult        

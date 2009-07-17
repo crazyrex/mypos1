@@ -38,7 +38,7 @@ Namespace Manifest
         'Public SV_UTLD_0004 As String ="SV_UTLD_0004"
         'Public SV_UTLD_0005 As String ="SV_UTLD_0005"
         'Public SV_RPTOPT_EXCEL As XForm.ReportOption = Nothing
-        'Public SV_RPTOPT_LABEL As XForm.ReportOption = Nothing
+        Public SV_REPORT_TURNOVER_DTL_LIST As XForm.ReportOption = Nothing
 
         '读取,显示数据的条件值变量
         'Public SVLM_UTLD_0001 As String ="SVLM_UTLD_0001"
@@ -242,7 +242,15 @@ Namespace Manifest
                     '            Case MyPosXService.Decls.RPT_NAME_0002                                                      
                     '                Me._bizAgent.DoRequest(Business.B_02_00X01.Affairs.ExportXXXListExcel, False)    
                     '        End Select                                                                                 
-                    'End Select                                                                                         
+                    'End Select 
+
+                Case "TbActionPurchaseList"
+                    Dim optionForm As XForm.Manifest.M_ReportOptions = CType(popupForm, XForm.Manifest.M_ReportOptions)
+                    
+                    If optionForm.SV_SELECTING_OPTION Is Me.SV_REPORT_TURNOVER_DTL_LIST Then
+                        Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.PrintTurnoverDtlList, False)
+
+                    End If
 
                 Case "ResponseTitleName1"
 
@@ -518,6 +526,11 @@ Namespace Manifest
 
 
         Private Sub TbActionPurchaseList()
+
+            Dim reportForm As New XL.Win.XForm.Manifest.M_ReportOptions(Me.TransactRequestHandle, Me.FormID)
+            reportForm.SV_OPTIONS.Add(Me.SV_REPORT_TURNOVER_DTL_LIST)
+            Me.PopupForm(reportForm, "TbActionPurchaseList", False)
+
 
         End Sub
 
