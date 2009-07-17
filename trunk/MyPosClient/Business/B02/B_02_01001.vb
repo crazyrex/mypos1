@@ -1057,6 +1057,25 @@ Namespace Business
                 Dim report As New Reports.R_02_01001_PurchaseList
 
                 report.DataSource = Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST
+
+                Dim sumPriceInT As Decimal = 0
+                Dim unitPriceInT As Decimal = 0
+                Dim wareAmountInT As Decimal = 0
+                Dim currentAmountInT As Double = 0
+
+                For Each bindingRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow In Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST
+
+                    sumPriceInT += bindingRow.SUM_PRICE
+                    unitPriceInT += bindingRow.UNIT_PRICE
+                    wareAmountInT += bindingRow.WARE_AMOUNT
+                    currentAmountInT += bindingRow.CURRENT_AMOUNT
+                Next
+
+                report.XrTableCell_SumPriceInT.Text += CommTK.FString(sumPriceInT)
+                report.XrTableCell_UnitPriceInT.Text += CommTK.FString(unitPriceInT)
+                report.XrTableCell_WareAmountInT.Text += CommTK.FString(wareAmountInT)
+                report.XrTableCell_CurrentAmountInT.Text += CommTK.FString(currentAmountInT)
+
                 report.CreateDataBindings()
                 report.Print()
 

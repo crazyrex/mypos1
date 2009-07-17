@@ -210,6 +210,48 @@
   <metadata name="PageFooter.Name" xml:space="preserve">
     <value>PageFooter</value>
   </metadata>
+  <metadata name="XrTable3.Name" xml:space="preserve">
+    <value>XrTable3</value>
+  </metadata>
+  <metadata name="XrTableRow3.Name" xml:space="preserve">
+    <value>XrTableRow3</value>
+  </metadata>
+  <metadata name="XrTableCell13.Name" xml:space="preserve">
+    <value>XrTableCell13</value>
+  </metadata>
+  <metadata name="XrTableCell14.Name" xml:space="preserve">
+    <value>XrTableCell14</value>
+  </metadata>
+  <metadata name="XrTableCell15.Name" xml:space="preserve">
+    <value>XrTableCell15</value>
+  </metadata>
+  <metadata name="XrTableCell16.Name" xml:space="preserve">
+    <value>XrTableCell16</value>
+  </metadata>
+  <metadata name="XrTableCell17.Name" xml:space="preserve">
+    <value>XrTableCell17</value>
+  </metadata>
+  <metadata name="XrTableCell18.Name" xml:space="preserve">
+    <value>XrTableCell18</value>
+  </metadata>
+  <metadata name="XrTableCell_WareAmountInT.Name" xml:space="preserve">
+    <value>XrTableCell_WareAmountInT</value>
+  </metadata>
+  <metadata name="XrTableCell_UnitPriceInT.Name" xml:space="preserve">
+    <value>XrTableCell_UnitPriceInT</value>
+  </metadata>
+  <metadata name="XrTableCell_SumPriceInT.Name" xml:space="preserve">
+    <value>XrTableCell_SumPriceInT</value>
+  </metadata>
+  <metadata name="XrTableCell22.Name" xml:space="preserve">
+    <value>XrTableCell22</value>
+  </metadata>
+  <metadata name="XrTableCell23.Name" xml:space="preserve">
+    <value>XrTableCell23</value>
+  </metadata>
+  <metadata name="XrTableCell_CurrentAmountInT.Name" xml:space="preserve">
+    <value>XrTableCell_CurrentAmountInT</value>
+  </metadata>
   <metadata name="ReportHeader.Name" xml:space="preserve">
     <value>ReportHeader</value>
   </metadata>
