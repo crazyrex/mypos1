@@ -940,6 +940,12 @@
     <Compile Include="Reports\R_02_01001.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reports\R_02_01001_PurchaseList.Designer.vb">
+      <DependentUpon>R_02_01001_PurchaseList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\R_02_01001_PurchaseList.vb">
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="BasicModules\Login.resx">
@@ -1563,6 +1569,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\R_02_01001.resx">
       <DependentUpon>R_02_01001.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\R_02_01001_PurchaseList.resx">
+      <DependentUpon>R_02_01001_PurchaseList.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

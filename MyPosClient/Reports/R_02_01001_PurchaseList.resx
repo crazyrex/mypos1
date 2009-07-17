@@ -117,47 +117,106 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="DefaultLookAndFeel_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>174, 17</value>
+  <metadata name="Detail.Name" xml:space="preserve">
+    <value>Detail</value>
   </metadata>
-  <metadata name="Timer_Surveillant.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+  <metadata name="XrTable2.Name" xml:space="preserve">
+    <value>XrTable2</value>
   </metadata>
-  <metadata name="ToolStrip_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>368, 17</value>
+  <metadata name="XrTableRow2.Name" xml:space="preserve">
+    <value>XrTableRow2</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="ToolStripButton_Return.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAgZJREFUOE+tk/tL
-        U3EYxv1HQstriQSGipckRPEGSj+IqATGamgNhik4kqEy8EYoSqGI6MQgJPbLQDMLL6XJVsxlQ02TmCKa
-        og2GIKI9nueF+R2BJOSBLwfOOc/ned7LCQm5jKtp6DuCT+PAEkw9Hhg7v0Lf5kJp42cUmuaQVTWD248m
-        kaofQ7LOjjNvio9P/px7Do9O4PMfYef3IbzbB1jZ8ON6dsPFAO5VnzhnGD/CPrMlYuuoFzFZ5n8D6Eyx
-        c3EfHcOrEpvAXvtPRGfWKQBr/ruEQGw6U5xbM4ukchvmPHvofP1DAzxVADYsGBBcM2PTmWJGn57flYZH
-        ZdQqALsdADBiTvWsHIcWnTXzGZ0pHnf+grlvEZF3nigAR0XAstcvwqG367BNbSI2vxntWnw2jOe5bQ0j
-        n7ZQ8+IbItKNCsA5U1xc7xTx/IoPg2+8qO324FaJVaK/er9Bgbx/3O5GeJpBAbgk9yxf8FJ7ybi8W6zL
-        eNDqkvHdvNuFZq3uqq4FgehaXLiWWqkAHBUdA2J+bOhwo0ADpzwcFUBYkg7phg9Iq3gnkKvJegXgeo45
-        tsWZNbPGIrNDW9sJxBf340auReu6SWLHFTyTHSDwbJW524zMw/pYEp9RHJvXJGKOLXC/El+G0MT7CsA5
-        c7fZadK5JBRwVOw2nVkzY9OZ4tCEcgX4nz/6FBsWMRav/6WAAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="ToolStripButton_PurchaseList.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAgZJREFUOE+tk/tL
-        U3EYxv1HQstriQSGipckRPEGSj+IqATGamgNhik4kqEy8EYoSqGI6MQgJPbLQDMLL6XJVsxlQ02TmCKa
-        og2GIKI9nueF+R2BJOSBLwfOOc/ned7LCQm5jKtp6DuCT+PAEkw9Hhg7v0Lf5kJp42cUmuaQVTWD248m
-        kaofQ7LOjjNvio9P/px7Do9O4PMfYef3IbzbB1jZ8ON6dsPFAO5VnzhnGD/CPrMlYuuoFzFZ5n8D6Eyx
-        c3EfHcOrEpvAXvtPRGfWKQBr/ruEQGw6U5xbM4ukchvmPHvofP1DAzxVADYsGBBcM2PTmWJGn57flYZH
-        ZdQqALsdADBiTvWsHIcWnTXzGZ0pHnf+grlvEZF3nigAR0XAstcvwqG367BNbSI2vxntWnw2jOe5bQ0j
-        n7ZQ8+IbItKNCsA5U1xc7xTx/IoPg2+8qO324FaJVaK/er9Bgbx/3O5GeJpBAbgk9yxf8FJ7ybi8W6zL
-        eNDqkvHdvNuFZq3uqq4FgehaXLiWWqkAHBUdA2J+bOhwo0ADpzwcFUBYkg7phg9Iq3gnkKvJegXgeo45
-        tsWZNbPGIrNDW9sJxBf340auReu6SWLHFTyTHSDwbJW524zMw/pYEp9RHJvXJGKOLXC/El+G0MT7CsA5
-        c7fZadK5JBRwVOw2nVkzY9OZ4tCEcgX4nz/6FBsWMRav/6WAAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>51</value>
+  <metadata name="XrTableCell_BatchCode.Name" xml:space="preserve">
+    <value>XrTableCell_BatchCode</value>
+  </metadata>
+  <metadata name="XrTableCell_WareCode.Name" xml:space="preserve">
+    <value>XrTableCell_WareCode</value>
+  </metadata>
+  <metadata name="XrTableCell_CustomCode.Name" xml:space="preserve">
+    <value>XrTableCell_CustomCode</value>
+  </metadata>
+  <metadata name="XrTableCell_WareName.Name" xml:space="preserve">
+    <value>XrTableCell_WareName</value>
+  </metadata>
+  <metadata name="XrTableCell_TurnoverBookStatus.Name" xml:space="preserve">
+    <value>XrTableCell_TurnoverBookStatus</value>
+  </metadata>
+  <metadata name="XrTableCell_Attribute1.Name" xml:space="preserve">
+    <value>XrTableCell_Attribute1</value>
+  </metadata>
+  <metadata name="XrTableCell_WareAmount.Name" xml:space="preserve">
+    <value>XrTableCell_WareAmount</value>
+  </metadata>
+  <metadata name="XrTableCell_UnitPrice.Name" xml:space="preserve">
+    <value>XrTableCell_UnitPrice</value>
+  </metadata>
+  <metadata name="XrTableCell_SumPrice.Name" xml:space="preserve">
+    <value>XrTableCell_SumPrice</value>
+  </metadata>
+  <metadata name="XrTableCell_UnitDiscount.Name" xml:space="preserve">
+    <value>XrTableCell_UnitDiscount</value>
+  </metadata>
+  <metadata name="XrTableCell_SumDiscount.Name" xml:space="preserve">
+    <value>XrTableCell_SumDiscount</value>
+  </metadata>
+  <metadata name="XrTableCell_CurrentAmount.Name" xml:space="preserve">
+    <value>XrTableCell_CurrentAmount</value>
+  </metadata>
+  <metadata name="PageHeader.Name" xml:space="preserve">
+    <value>PageHeader</value>
+  </metadata>
+  <metadata name="XrTable1.Name" xml:space="preserve">
+    <value>XrTable1</value>
+  </metadata>
+  <metadata name="XrTableRow1.Name" xml:space="preserve">
+    <value>XrTableRow1</value>
+  </metadata>
+  <metadata name="XrTableCell7.Name" xml:space="preserve">
+    <value>XrTableCell7</value>
+  </metadata>
+  <metadata name="XrTableCell4.Name" xml:space="preserve">
+    <value>XrTableCell4</value>
+  </metadata>
+  <metadata name="XrTableCell8.Name" xml:space="preserve">
+    <value>XrTableCell8</value>
+  </metadata>
+  <metadata name="XrTableCell1.Name" xml:space="preserve">
+    <value>XrTableCell1</value>
+  </metadata>
+  <metadata name="XrTableCell9.Name" xml:space="preserve">
+    <value>XrTableCell9</value>
+  </metadata>
+  <metadata name="XrTableCell5.Name" xml:space="preserve">
+    <value>XrTableCell5</value>
+  </metadata>
+  <metadata name="XrTableCell10.Name" xml:space="preserve">
+    <value>XrTableCell10</value>
+  </metadata>
+  <metadata name="XrTableCell2.Name" xml:space="preserve">
+    <value>XrTableCell2</value>
+  </metadata>
+  <metadata name="XrTableCell11.Name" xml:space="preserve">
+    <value>XrTableCell11</value>
+  </metadata>
+  <metadata name="XrTableCell6.Name" xml:space="preserve">
+    <value>XrTableCell6</value>
+  </metadata>
+  <metadata name="XrTableCell12.Name" xml:space="preserve">
+    <value>XrTableCell12</value>
+  </metadata>
+  <metadata name="XrTableCell3.Name" xml:space="preserve">
+    <value>XrTableCell3</value>
+  </metadata>
+  <metadata name="PageFooter.Name" xml:space="preserve">
+    <value>PageFooter</value>
+  </metadata>
+  <metadata name="ReportHeader.Name" xml:space="preserve">
+    <value>ReportHeader</value>
+  </metadata>
+  <metadata name="XrLabel_Title.Name" xml:space="preserve">
+    <value>XrLabel_Title</value>
+  </metadata>
+  <metadata name="$this.Name" xml:space="preserve">
+    <value>R_02_01001_PurchaseList</value>
   </metadata>
 </root>
