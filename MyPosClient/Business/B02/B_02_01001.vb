@@ -1153,6 +1153,11 @@ Namespace Business
 
                 End If
 
+                For Each bindingRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow In Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST
+                    bindingRow.ROW_REMARK = CommTK.FString(bindingRow.WARE_AMOUNT)
+                    bindingRow.WARE_AMOUNT = 0
+                Next
+
                 Me._manifest.GridControl_TurnoverDtl.DataSource = Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST
 
                 'Dim servResult As String = _
