@@ -101,7 +101,7 @@ Namespace Facade
 
         End Function
 
-        Public Shared Function GetWareInfoString(ByVal wareID As String, ByVal posID As String) As String
+        Public Shared Function GetWareInfoString(ByVal wareID As String, ByVal posID As String, ByVal breakLines As Boolean) As String
 
             Dim wareRow As MyPosXAuto.FTs.FT_M_MP_WARERow = _
                 MyPosXAuto.Facade.AfBizMaster.GetM_MP_WARERow(wareID)
@@ -112,7 +112,11 @@ Namespace Facade
                 resultBuilder.AppendLine(wareRow.CUSTOM_CODE)
             End If
 
-            resultBuilder.AppendLine("{0} {1} {2}", wareRow.WARE_NAME, wareRow.SPEC, wareRow.MODEL)
+
+            resultBuilder.AppendFormat("{0} {1} {2}", wareRow.WARE_NAME, wareRow.SPEC, wareRow.MODEL)
+            If breakLines = True Then
+                resultBuilder.AppendLine(String.Empty)
+            End If
 
             Dim labelPrintSet As String = SysInfo.ReadShareSysInfo(CommDecl.XLSSVN_LABEL_PRINT_SET).ToUpper
 
@@ -120,7 +124,6 @@ Namespace Facade
                 Case "POWER LEGEND"
                 Case Else
                     resultBuilder.AppendLine("{0} {1} {2} {3}", wareRow.ATTRIBUTE1, wareRow.ATTRIBUTE2, wareRow.ATTRIBUTE3, wareRow.ATTRIBUTE4)
-
             End Select
 
             'Dim origionPrice As Decimal

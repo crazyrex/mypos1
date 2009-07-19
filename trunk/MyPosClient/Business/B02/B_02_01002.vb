@@ -69,7 +69,7 @@ Namespace Business
 
         Public Enum Affairs
             InitDisplay
-            LoadInfo
+            LoadReliefTurnoverInfoByCode
             SaveInfo
             LoadList
         End Enum
@@ -77,22 +77,22 @@ Namespace Business
         Public Sub New(ByVal theManifest As XL.Win.Component.BaseForm)
             Me.New()
 
-            Me._manifest = CType(theManifest, Manifest.M_02_01002)     
+            Me._manifest = CType(theManifest, Manifest.M_02_01002)
 
-            Try                                                        
-                                                               
-                Me._service = MyPosXService.S_02_01002.GetInstance()     
+            Try
 
-            Catch ex As Exception                              
-                                                               
-                Window.XLMessageBox.ShowMessage( _             
-                    ex.Message, _                              
-                    Window.XLMessageBox.MessageType.Wrong, _   
-                    MessageBoxButtons.OK)                      
-                                                               
-                Me._manifest.Enabled = False                   
-                                                               
-            End Try                                            
+                Me._service = MyPosXService.S_02_01002.GetInstance()
+
+            Catch ex As Exception
+
+                Window.XLMessageBox.ShowMessage( _
+                    ex.Message, _
+                    Window.XLMessageBox.MessageType.Wrong, _
+                    MessageBoxButtons.OK)
+
+                Me._manifest.Enabled = False
+
+            End Try
         End Sub
 
 
@@ -142,22 +142,22 @@ Namespace Business
                     '-------------------------------------------------------------------
                     functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoInitDisplay)
 
-                Case Affairs.LoadInfo                                                             
-                                                                                                  
+                Case Affairs.LoadReliefTurnoverInfoByCode
+
                     '                                                                             
                     '取到处理函数的结果，传入返回给Manifest的AgentResponse包                      
                     '-------------------------------------------------------------------          
-                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoLoadInfo)
-                                                                                                  
-                Case Affairs.SaveInfo                                                             
-                                                                                                  
+                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoLoadReliefTurnoverInfoByCode)
+
+                Case Affairs.SaveInfo
+
                     '                                                                             
                     '取到处理函数的结果，传入返回给Manifest的AgentResponse包                      
                     '-------------------------------------------------------------------          
                     functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoSaveInfo)
-                                                                                                  
-                Case Affairs.LoadList                                                             
-                                                                                                  
+
+                Case Affairs.LoadList
+
                     '                                                                             
                     '取到处理函数的结果，传入返回给Manifest的AgentResponse包                      
                     '-------------------------------------------------------------------          
@@ -183,28 +183,28 @@ Namespace Business
         End Sub
 
 
-                Public Sub RequestCallback(ByVal ar As IAsyncResult)
+        Public Sub RequestCallback(ByVal ar As IAsyncResult)
 
-                    Dim affair As Affairs = CType(ar.AsyncState, Affairs)
-                    Dim result As New AgentResponse(affair)
+            Dim affair As Affairs = CType(ar.AsyncState, Affairs)
+            Dim result As New AgentResponse(affair)
 
-                    Dim operResult As String
+            Dim operResult As String
 
-                    Dim aResult As System.Runtime.Remoting.Messaging.AsyncResult = CType(ar, System.Runtime.Remoting.Messaging.AsyncResult)
-                    Dim functionHandle As XL.Win.StringFunctionTransaction = CType(aResult.AsyncDelegate, StringFunctionTransaction)
+            Dim aResult As System.Runtime.Remoting.Messaging.AsyncResult = CType(ar, System.Runtime.Remoting.Messaging.AsyncResult)
+            Dim functionHandle As XL.Win.StringFunctionTransaction = CType(aResult.AsyncDelegate, StringFunctionTransaction)
 
-                    operResult = functionHandle.EndInvoke(ar)
+            operResult = functionHandle.EndInvoke(ar)
 
-                    result.SetValue(WinDecl.RVN_SUCCEED, operResult)
-                    Me.UnmountRequestActionTitle(affair)
+            result.SetValue(WinDecl.RVN_SUCCEED, operResult)
+            Me.UnmountRequestActionTitle(affair)
 
-                    Me.DoResponse(result)
+            Me.DoResponse(result)
 
-                End Sub
+        End Sub
 
 #End Region
 
-#Region"Transaction Modules"
+#Region "Transaction Modules"
         '''Function remark:
         '''
         '''
@@ -216,7 +216,7 @@ Namespace Business
 
 
 
-                                                                                                                      
+
                 'Dim choosePurchaseWayList As New MyPosXAuto.FTs.FT_CIV_PURCHASE_WAY                                       
                 'Dim chooseAssetAbsentTypeList As New MyPosXAuto.FTs.FT_CIV_ASSET_ABSENT_TYPE                              
                 'Dim chooseAssetConformationList As New MyPosXAuto.FTs.FT_CIV_ASSET_CONFORMATION                           
@@ -262,18 +262,18 @@ Namespace Business
 
             Catch ex As XL.Common.Utils.XLException
 
-                Dim logContentBuilder As New LineStrBuilder  
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)     
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
- 
+
                 WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
- 
+
                 Return ex.Message
 
-             Catch ex As Exception
+            Catch ex As Exception
 
                 Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message) 
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
 
                 WinTK.OutputLog("Exception occured", logContentBuilder.ToString())
@@ -291,133 +291,174 @@ Namespace Business
         '''                                                                         
         '''                                                                         
         '''-------------------------------------------------------------------      
-        Private Function DoLoadInfo() As String                                     
-                                                                                    
-                                                                                    
-            Try                                                                     
-                                                                                    
-                                                                                    
-                'Dim servResult As String = _                                       
-                '    Me._service.ServLoadInfo()                                     
-                                                                                    
-                'If servResult.Length > 0 Then                                      
-                '    Return servResult                                              
-                'End If                                                             
-                                                                                    
-            Catch ex As XL.Common.Utils.XLException                                 
-                                                                                    
-                Dim logContentBuilder As New LineStrBuilder                         
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)        
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace) 
-                                                                                    
-                WinTK.OutputLog("XL Exception", logContentBuilder.ToString())     
-                                                                                    
-                Return ex.Message                                                   
-                                                                                    
-            Catch ex As Exception                                                   
-                                                                                    
-                Dim logContentBuilder As New LineStrBuilder                         
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)        
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace) 
-                                                                                    
+        Private Function DoLoadReliefTurnoverInfoByCode() As String
+
+
+            Try
+
+                Dim turnoverCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_H_MP_TURNOVER(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+                turnoverCondition.Add(MyPosXAuto.Facade.AfXV.XV_H_MP_TURNOVERColumns.TURNOVER_CODEColumn, "=", Me._manifest.TextEdit_ReliefTurnoverCode.Text)
+
+                Dim turnoverRowSEntity As New MyPosXAuto.FTs.FT_XV_H_MP_TURNOVERRowSEntity
+                MyPosXAuto.Facade.AfXV.FillXV_H_MP_TURNOVERRowSEntity( _
+                    turnoverRowSEntity, _
+                    turnoverCondition)
+
+
+                If turnoverRowSEntity.IsNull = False Then
+                    If turnoverRowSEntity.TURNOVER_STYLE <> MyPosXAuto.Decls.CIVALUE_TURNOVER_STYLE_SOLD Then
+                        Return MyPosXService.Decls.MSG_ALERT_00063
+                    End If
+                    Me._manifest.CheckEdit_IsCacheData.Checked = False
+                Else
+                    Dim cacheDataTurnoverCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_H_MP_TURNOVER(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+                    Dim cacheDataTurnoverList As New MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER
+                    Dim cacheDataTurnoverRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVERRow
+
+                    cacheDataTurnoverList.SaveXml( _
+                        WinTK.GetResourceFilePath( _
+                            ResourceType.Data, _
+                            Utils.Decls.CACHE_DATA_FILE_TURNOVER))
+
+                    cacheDataTurnoverRow = cacheDataTurnoverList.FindRowByCondition(cacheDataTurnoverCondition)
+                    If IsNothing(cacheDataTurnoverRow) = True Then
+                        Return MyPosXService.Decls.MSG_ALERT_00062
+                    End If
+
+                    cacheDataTurnoverRow.FillSEntity(turnoverRowSEntity)
+                    Me._manifest.CheckEdit_IsCacheData.Checked = True
+
+                End If
+
+                If turnoverRowSEntity.IsNull = True Then
+                    Return MyPosXService.Decls.MSG_ALERT_00062
+                End If
+
+                Me._manifest.Label_ReliefTurnoverID.Text = turnoverRowSEntity.TURNOVER_ID
+                Me._manifest.Label_ReliefTurnoverInfo.Text = _
+                    String.Format("开单时间: {0:yyyy-MM-dd}", turnoverRowSEntity.TURNOVER_TIME)
+
+                'Dim servResult As String = _                             
+                '    Me._service.ServLoadReliefTurnoverInfoByCode()
+
+                'If servResult.Length > 0 Then                 
+                '    Return servResult
+                'End If
+
+            Catch ex As XL.Common.Utils.XLException
+
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
+                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+                WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
+
+                Return ex.Message
+
+            Catch ex As Exception
+
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
+                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
                 WinTK.OutputLog("Exception occured", logContentBuilder.ToString())
-                                                                                    
-                XL.Win.Window.XLMessageBox.UseSmallFont = True                      
-                Return ex.Message & vbNewLine & ex.StackTrace.ToString()            
-                                                                                    
-            End Try                                                                 
-                                                                                    
-            Return String.Empty                                                     
-                                                                                    
-        End Function                                                                
-                                                                                    
+
+                XL.Win.Window.XLMessageBox.UseSmallFont = True
+                Return ex.Message & vbNewLine & ex.StackTrace.ToString()
+
+            End Try
+
+            Return String.Empty
+
+        End Function
+
         '''Function remark:                                                         
         '''                                                                         
         '''                                                                         
         '''-------------------------------------------------------------------      
-        Private Function DoSaveInfo() As String                                     
-                                                                                    
-                                                                                    
-            Try                                                                     
-                                                                                    
-                                                                                    
+        Private Function DoSaveInfo() As String
+
+
+            Try
+
+
                 'Dim servResult As String = _                                       
                 '    Me._service.ServSaveInfo()                                     
-                                                                                    
+
                 'If servResult.Length > 0 Then                                      
                 '    Return servResult                                              
                 'End If                                                             
-                                                                                    
-            Catch ex As XL.Common.Utils.XLException                                 
-                                                                                    
-                Dim logContentBuilder As New LineStrBuilder                         
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)        
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace) 
-                                                                                    
-                WinTK.OutputLog("XL Exception", logContentBuilder.ToString())     
-                                                                                    
-                Return ex.Message                                                   
-                                                                                    
-            Catch ex As Exception                                                   
-                                                                                    
-                Dim logContentBuilder As New LineStrBuilder                         
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)        
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace) 
-                                                                                    
+
+            Catch ex As XL.Common.Utils.XLException
+
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
+                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+                WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
+
+                Return ex.Message
+
+            Catch ex As Exception
+
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
+                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
                 WinTK.OutputLog("Exception occured", logContentBuilder.ToString())
-                                                                                    
-                XL.Win.Window.XLMessageBox.UseSmallFont = True                      
-                Return ex.Message & vbNewLine & ex.StackTrace.ToString()            
-                                                                                    
-            End Try                                                                 
-                                                                                    
-            Return String.Empty                                                     
-                                                                                    
-        End Function                                                                
-                                                                                    
+
+                XL.Win.Window.XLMessageBox.UseSmallFont = True
+                Return ex.Message & vbNewLine & ex.StackTrace.ToString()
+
+            End Try
+
+            Return String.Empty
+
+        End Function
+
         '''Function remark:                                                         
         '''                                                                         
         '''                                                                         
         '''-------------------------------------------------------------------      
-        Private Function DoLoadList() As String                                     
-                                                                                    
-                                                                                    
-            Try                                                                     
-                                                                                    
-                                                                                    
+        Private Function DoLoadList() As String
+
+
+            Try
+
+
                 'Dim servResult As String = _                                       
                 '    Me._service.ServLoadList()                                     
-                                                                                    
+
                 'If servResult.Length > 0 Then                                      
                 '    Return servResult                                              
                 'End If                                                             
-                                                                                    
-            Catch ex As XL.Common.Utils.XLException                                 
-                                                                                    
-                Dim logContentBuilder As New LineStrBuilder                         
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)        
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace) 
-                                                                                    
-                WinTK.OutputLog("XL Exception", logContentBuilder.ToString())     
-                                                                                    
-                Return ex.Message                                                   
-                                                                                    
-            Catch ex As Exception                                                   
-                                                                                    
-                Dim logContentBuilder As New LineStrBuilder                         
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)        
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace) 
-                                                                                    
+
+            Catch ex As XL.Common.Utils.XLException
+
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
+                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+                WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
+
+                Return ex.Message
+
+            Catch ex As Exception
+
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
+                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
                 WinTK.OutputLog("Exception occured", logContentBuilder.ToString())
-                                                                                    
-                XL.Win.Window.XLMessageBox.UseSmallFont = True                      
-                Return ex.Message & vbNewLine & ex.StackTrace.ToString()            
-                                                                                    
-            End Try                                                                 
-                                                                                    
-            Return String.Empty                                                     
-                                                                                    
-        End Function                                                                
+
+                XL.Win.Window.XLMessageBox.UseSmallFont = True
+                Return ex.Message & vbNewLine & ex.StackTrace.ToString()
+
+            End Try
+
+            Return String.Empty
+
+        End Function
 
 #End Region
 
