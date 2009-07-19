@@ -33,7 +33,8 @@ Namespace Manifest
         '原则上所有UTLD的变量不能出现在成品中, 在确定不需要的情况下应删除UTLD
         '-------------------------------------------------------------------
         Public SV_POS_SET_ROWSE As New MyPosXAuto.FTs.FT_S_MP_POS_SETRowSEntity
-        Public SV_UTLD_0002 As String ="SV_UTLD_0002"
+        Public SV_RETURN_RELIEF_FORM_ID As String = String.Empty
+        Public SV_RETURN_RELIEF_FORM_USING_CACHE_DATA As Boolean
         'Public SV_UTLD_0003 As String ="SV_UTLD_0003"
         'Public SV_UTLD_0004 As String ="SV_UTLD_0004"
         'Public SV_UTLD_0005 As String ="SV_UTLD_0005"
@@ -185,6 +186,18 @@ Namespace Manifest
                 Return
             End If
 
+            Me.SVFT_BINDING_TURNOVER_DTL_LIST.Clear()
+            Me.TextEdit_ClientCode.ResetText()
+            Me.CheckEdit_IsClient.Checked = False
+            Me.ButtonEdit_WareCode.ResetText()
+            Me.CalcEdit_ExtraDiscount.Value = 0
+            Me.CalcEdit_Payment.Value = 0
+            Me.CalcEdit_UsePoint.Value = 0
+            Me.Label_AquiringPoints.ResetText()
+            Me.Label_Change.ResetText()
+            Me.Label_HoldingPoint.ResetText()
+            Me.Label_TotalDiscount.ResetText()
+            Me.Label_TotalPrice.ResetText()
             'Me.TextEdit_Input.ResetText()
 
 
@@ -252,9 +265,12 @@ Namespace Manifest
 
                     End If
 
-                Case "ResponseTitleName1"
-
-
+                Case "TbActionReturn"
+                    Dim inputForm = TryCast(popupForm, M_02_01002)
+                    Me.SV_RETURN_RELIEF_FORM_ID = inputForm.Label_ReliefTurnoverID.Text
+                    Me.SV_RETURN_RELIEF_FORM_USING_CACHE_DATA = inputForm.CheckEdit_IsCacheData.Checked
+                    Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.LoadReturnReliefTurnover, False)
+                    Me.DoPrivateUpdateTitleByReturnStatus()
                 Case "ResponseTitleName2"
 
                 Case "ResponseTitleName3"
@@ -378,6 +394,14 @@ Namespace Manifest
                     Me.GridView_TurnoverDtl.BestFitColumns()
                     Me.DoPrivateSelectRowByWareCode()
                     Me.DoPrivateUpdateCacheStatus()
+                    Me.IsSaved = False
+
+                Case Business.B_02_01001.Affairs.SaveInfo
+
+                    Me.SV_RETURN_RELIEF_FORM_ID = String.Empty
+                    Me.DoPrivateUpdateCacheStatus()
+                    Me.DoPrivateUpdateTitleByReturnStatus()
+                    Me.IA_ClearContent(True)
 
             End Select
         End Sub
@@ -400,9 +424,11 @@ Namespace Manifest
 
         'End Sub                                                                                                                                                                 
 
-        'Private Sub GridView_List_FocusedRowChanged(ByVal sender As Object, ByVal e As DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs) Handles GridView_List.FocusedRowChanged
-        '    Me.DoPrivateUpdateSelectingRow()                                                                                                                                          
-        'End Sub                                                                                                                                                                          
+        Private Sub GridView_List_FocusedRowChanged(ByVal sender As Object, ByVal e As DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs) Handles GridView_TurnoverDtl.FocusedRowChanged
+
+            Me.DoPrivateUpdateSelectingRow()
+
+        End Sub
 
 
         'Private Sub GridView_List_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles GridView_List.DoubleClick                                                     
@@ -455,6 +481,10 @@ Namespace Manifest
 
         Private Sub SpinEdit_WareAmount_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles SpinEdit_WareAmount.KeyDown
 
+            If e.KeyCode <> Keys.Enter Then
+                Return
+            End If
+
             If IsNothing(Me.SVFR_BINDING_TURNOVER_DTL_ROW) = False Then
 
                 Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_AMOUNT = Me.SpinEdit_WareAmount.Value
@@ -494,6 +524,13 @@ Namespace Manifest
         End Sub
 
         Private Sub TbActionSave()
+
+            If Window.XLMessageBox.ShowMessage( _
+                 MyPosXService.Decls.MSG_ALERT_00064, _
+                 Window.XLMessageBox.MessageType.Warning, _
+                 MessageBoxButtons.OKCancel) = DialogResult.Cancel Then
+                Return
+            End If
 
             Me.SaveInfo(True)
 
@@ -641,21 +678,21 @@ Namespace Manifest
         Private Sub DoPrivateUpdateSelectingRow()
 
 
-            'Me.SVFR_SELECTING_ROW = Nothing                          
-            '                                                         
-            'Me.ToolStripButton_Delete.Enabled = False                
-            'Me.ToolStripButton_Revise.Enabled = False                
-            '                                                         
-            'If Me.GridView_BranchList.RowCount > 0 Then              
-            '    Me.SVFR_SELECTING_ROW = _                            
-            '        CType(Me.GridView_BindingList.GetDataRow( _      
-            '            Me.GridView_BindingList.FocusedRowHandle),  _
-            '            XAuto.FTs.FT_Row)                            
-            '                                                         
-            '    Me.ToolStripButton_Delete.Enabled = True             
-            '    Me.ToolStripButton_Revise.Enabled = True             
-            '                                                         
-            'End If                                                   
+            Me.SVFR_BINDING_TURNOVER_DTL_ROW = Nothing
+
+            'Me.ToolStripButton_Delete.Enabled = False
+            'Me.ToolStripButton_Revise.Enabled = False
+
+            If Me.GridView_TurnoverDtl.RowCount > 0 Then
+                Me.SVFR_BINDING_TURNOVER_DTL_ROW = _
+                    CType(Me.GridView_TurnoverDtl.GetDataRow( _
+                        Me.GridView_TurnoverDtl.FocusedRowHandle),  _
+                        MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow)
+
+                'Me.ToolStripButton_Delete.Enabled = True
+                'Me.ToolStripButton_Revise.Enabled = True
+
+            End If
 
 
 
@@ -684,6 +721,7 @@ Namespace Manifest
         Private Sub DoPrivateFocusToAmount()
             If Me.Label_WareID.Text.Length = 0 Then
                 Me.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0020)
+                Me.ButtonEdit_WareCode.SelectAll()
                 Me.ButtonEdit_WareCode.Select()
                 Return
             End If
@@ -713,8 +751,17 @@ Namespace Manifest
         End Sub
 
 
-        Private Sub DoPrivateUtld0004()
-
+        Private Sub DoPrivateUpdateTitleByReturnStatus()
+            If Me.SV_RETURN_RELIEF_FORM_ID.Length > 0 Then
+                Me.SetSubTitle("零售退货")
+                Me.CheckEdit_IsClient.Visible = True
+                Me.GridColumn_Remark.Visible = True
+            Else
+                Me.SetSubTitle("零售操作")
+                Me.CheckEdit_IsClient.Visible = False
+                Me.GridColumn_Remark.Visible = False
+            End If
+            Me.UpdateTitle()
         End Sub
 
 

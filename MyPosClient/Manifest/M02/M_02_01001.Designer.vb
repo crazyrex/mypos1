@@ -98,7 +98,6 @@
             Me.Label5 = New System.Windows.Forms.Label
             Me.TextEdit_ClientCode = New DevExpress.XtraEditors.TextEdit
             Me.CalcEdit_UsePoint = New DevExpress.XtraEditors.CalcEdit
-            Me.CheckEdit_IsClient = New DevExpress.XtraEditors.CheckEdit
             Me.Label_AquiringPoints = New System.Windows.Forms.Label
             Me.Label_ClientID = New System.Windows.Forms.Label
             Me.Label7 = New System.Windows.Forms.Label
@@ -106,6 +105,7 @@
             Me.Label_ClientName = New System.Windows.Forms.Label
             Me.Label_HoldingPoint = New System.Windows.Forms.Label
             Me.Label6 = New System.Windows.Forms.Label
+            Me.CheckEdit_IsClient = New DevExpress.XtraEditors.CheckEdit
             Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl
             Me.Label_AffairDescription = New System.Windows.Forms.Label
             Me.GroupControl_Details = New DevExpress.XtraEditors.GroupControl
@@ -129,7 +129,7 @@
             Me.GridColumn_SumPrice = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_UnitDiscount = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_SumDiscount = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn_Remarks = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn_Remark = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_CurrentAmount = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_RowHighlight = New DevExpress.XtraGrid.Columns.GridColumn
             Me.RepositoryItemCheckEdit_Select = New DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
@@ -210,19 +210,19 @@
             'ToolStripButton_Create
             '
             Me.ToolStripButton_Create.Name = "ToolStripButton_Create"
-            Me.ToolStripButton_Create.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Create.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Create.Text = "新单"
             '
             'ToolStripButton_Save
             '
             Me.ToolStripButton_Save.Name = "ToolStripButton_Save"
-            Me.ToolStripButton_Save.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Save.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Save.Text = "结单"
             '
             'ToolStripButton_Remove
             '
             Me.ToolStripButton_Remove.Name = "ToolStripButton_Remove"
-            Me.ToolStripButton_Remove.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Remove.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Remove.Text = "去除"
             '
             'ToolStripButton_Return
@@ -231,7 +231,7 @@
             Me.ToolStripButton_Return.Image = CType(resources.GetObject("ToolStripButton_Return.Image"), System.Drawing.Image)
             Me.ToolStripButton_Return.ImageTransparentColor = System.Drawing.Color.White
             Me.ToolStripButton_Return.Name = "ToolStripButton_Return"
-            Me.ToolStripButton_Return.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Return.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Return.Text = "退货"
             '
             'ToolStripButton_PurchaseList
@@ -240,13 +240,13 @@
             Me.ToolStripButton_PurchaseList.Image = CType(resources.GetObject("ToolStripButton_PurchaseList.Image"), System.Drawing.Image)
             Me.ToolStripButton_PurchaseList.ImageTransparentColor = System.Drawing.Color.White
             Me.ToolStripButton_PurchaseList.Name = "ToolStripButton_PurchaseList"
-            Me.ToolStripButton_PurchaseList.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_PurchaseList.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_PurchaseList.Text = "小票"
             '
             'ToolStripButton_Close
             '
             Me.ToolStripButton_Close.Name = "ToolStripButton_Close"
-            Me.ToolStripButton_Close.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Close.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Close.Text = "关闭"
             '
             'PanelControl1
@@ -311,7 +311,7 @@
             Me.CalcEdit_Payment.Location = New System.Drawing.Point(63, 126)
             Me.CalcEdit_Payment.Name = "CalcEdit_Payment"
             Me.CalcEdit_Payment.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-            Me.CalcEdit_Payment.Size = New System.Drawing.Size(121, 21)
+            Me.CalcEdit_Payment.Size = New System.Drawing.Size(121, 20)
             Me.CalcEdit_Payment.TabIndex = 10002
             '
             'CalcEdit_ExtraDiscount
@@ -319,7 +319,7 @@
             Me.CalcEdit_ExtraDiscount.Location = New System.Drawing.Point(61, 77)
             Me.CalcEdit_ExtraDiscount.Name = "CalcEdit_ExtraDiscount"
             Me.CalcEdit_ExtraDiscount.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-            Me.CalcEdit_ExtraDiscount.Size = New System.Drawing.Size(121, 21)
+            Me.CalcEdit_ExtraDiscount.Size = New System.Drawing.Size(121, 20)
             Me.CalcEdit_ExtraDiscount.TabIndex = 10002
             '
             'Label_Change
@@ -701,7 +701,6 @@
             Me.GroupControl2.Controls.Add(Me.Label5)
             Me.GroupControl2.Controls.Add(Me.TextEdit_ClientCode)
             Me.GroupControl2.Controls.Add(Me.CalcEdit_UsePoint)
-            Me.GroupControl2.Controls.Add(Me.CheckEdit_IsClient)
             Me.GroupControl2.Controls.Add(Me.Label_AquiringPoints)
             Me.GroupControl2.Controls.Add(Me.Label_ClientID)
             Me.GroupControl2.Controls.Add(Me.Label7)
@@ -709,6 +708,7 @@
             Me.GroupControl2.Controls.Add(Me.Label_ClientName)
             Me.GroupControl2.Controls.Add(Me.Label_HoldingPoint)
             Me.GroupControl2.Controls.Add(Me.Label6)
+            Me.GroupControl2.Controls.Add(Me.CheckEdit_IsClient)
             Me.GroupControl2.Dock = System.Windows.Forms.DockStyle.Bottom
             Me.GroupControl2.FireScrollEventOnMouseWheel = True
             Me.GroupControl2.Location = New System.Drawing.Point(2, 280)
@@ -759,7 +759,7 @@
             Me.TextEdit_ClientCode.Enabled = False
             Me.TextEdit_ClientCode.Location = New System.Drawing.Point(61, 26)
             Me.TextEdit_ClientCode.Name = "TextEdit_ClientCode"
-            Me.TextEdit_ClientCode.Size = New System.Drawing.Size(119, 21)
+            Me.TextEdit_ClientCode.Size = New System.Drawing.Size(119, 20)
             Me.TextEdit_ClientCode.TabIndex = 10003
             '
             'CalcEdit_UsePoint
@@ -767,16 +767,8 @@
             Me.CalcEdit_UsePoint.Location = New System.Drawing.Point(61, 119)
             Me.CalcEdit_UsePoint.Name = "CalcEdit_UsePoint"
             Me.CalcEdit_UsePoint.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-            Me.CalcEdit_UsePoint.Size = New System.Drawing.Size(121, 21)
+            Me.CalcEdit_UsePoint.Size = New System.Drawing.Size(121, 20)
             Me.CalcEdit_UsePoint.TabIndex = 10002
-            '
-            'CheckEdit_IsClient
-            '
-            Me.CheckEdit_IsClient.Location = New System.Drawing.Point(5, 28)
-            Me.CheckEdit_IsClient.Name = "CheckEdit_IsClient"
-            Me.CheckEdit_IsClient.Properties.Caption = "会员号"
-            Me.CheckEdit_IsClient.Size = New System.Drawing.Size(65, 19)
-            Me.CheckEdit_IsClient.TabIndex = 10001
             '
             'Label_AquiringPoints
             '
@@ -1040,6 +1032,14 @@
             Me.Label6.Tag = CTag19
             Me.Label6.Text = "使用点数"
             '
+            'CheckEdit_IsClient
+            '
+            Me.CheckEdit_IsClient.Location = New System.Drawing.Point(5, 28)
+            Me.CheckEdit_IsClient.Name = "CheckEdit_IsClient"
+            Me.CheckEdit_IsClient.Properties.Caption = "会员号"
+            Me.CheckEdit_IsClient.Size = New System.Drawing.Size(65, 19)
+            Me.CheckEdit_IsClient.TabIndex = 10001
+            '
             'GroupControl1
             '
             Me.GroupControl1.Controls.Add(Me.Label_AffairDescription)
@@ -1059,7 +1059,7 @@
             Me.Label_AffairDescription.Font = New System.Drawing.Font("Arial", 9.0!)
             Me.Label_AffairDescription.ForeColor = System.Drawing.Color.Black
             Me.Label_AffairDescription.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.Label_AffairDescription.Location = New System.Drawing.Point(2, 21)
+            Me.Label_AffairDescription.Location = New System.Drawing.Point(2, 20)
             Me.Label_AffairDescription.Name = "Label_AffairDescription"
             Me.Label_AffairDescription.Size = New System.Drawing.Size(55, 15)
             Me.Label_AffairDescription.TabIndex = 10000
@@ -1154,18 +1154,18 @@
             CTag22.ToolTip = ""
             CTag22.ValueType = XL.Common.ControlValueType.Character
             Me.GridControl_TurnoverDtl.EmbeddedNavigator.Tag = CTag22
-            Me.GridControl_TurnoverDtl.Location = New System.Drawing.Point(2, 21)
+            Me.GridControl_TurnoverDtl.Location = New System.Drawing.Point(2, 20)
             Me.GridControl_TurnoverDtl.MainView = Me.GridView_TurnoverDtl
             Me.GridControl_TurnoverDtl.Name = "GridControl_TurnoverDtl"
             Me.GridControl_TurnoverDtl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemCheckEdit_Select, Me.RepositoryItemLookUpEdit_TurnoverBookStatus})
-            Me.GridControl_TurnoverDtl.Size = New System.Drawing.Size(727, 384)
+            Me.GridControl_TurnoverDtl.Size = New System.Drawing.Size(727, 385)
             Me.GridControl_TurnoverDtl.TabIndex = 10003
             Me.GridControl_TurnoverDtl.TabStop = False
             Me.GridControl_TurnoverDtl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView_TurnoverDtl})
             '
             'GridView_TurnoverDtl
             '
-            Me.GridView_TurnoverDtl.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn_BatchCode, Me.GridColumn_WareCode, Me.GridColumn_CustomCode, Me.GridColumn_WareName, Me.GridColumn_TurnoverBookStatus, Me.GridColumn_Spec, Me.GridColumn_Model, Me.GridColumn_Attribute1, Me.GridColumn_Attribute2, Me.GridColumn_Attribute3, Me.GridColumn_Attribute4, Me.GridColumn_UnitName, Me.GridColumn_WareAmount, Me.GridColumn_UnitPrice, Me.GridColumn_SumPrice, Me.GridColumn_UnitDiscount, Me.GridColumn_SumDiscount, Me.GridColumn_Remarks, Me.GridColumn_CurrentAmount, Me.GridColumn_RowHighlight})
+            Me.GridView_TurnoverDtl.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn_BatchCode, Me.GridColumn_WareCode, Me.GridColumn_CustomCode, Me.GridColumn_WareName, Me.GridColumn_TurnoverBookStatus, Me.GridColumn_Spec, Me.GridColumn_Model, Me.GridColumn_Attribute1, Me.GridColumn_Attribute2, Me.GridColumn_Attribute3, Me.GridColumn_Attribute4, Me.GridColumn_UnitName, Me.GridColumn_WareAmount, Me.GridColumn_UnitPrice, Me.GridColumn_SumPrice, Me.GridColumn_UnitDiscount, Me.GridColumn_SumDiscount, Me.GridColumn_Remark, Me.GridColumn_CurrentAmount, Me.GridColumn_RowHighlight})
             StyleFormatCondition1.Appearance.BackColor = System.Drawing.Color.Lime
             StyleFormatCondition1.Appearance.BackColor2 = System.Drawing.Color.White
             StyleFormatCondition1.Appearance.Options.UseBackColor = True
@@ -1376,13 +1376,13 @@
             Me.GridColumn_SumDiscount.Visible = True
             Me.GridColumn_SumDiscount.VisibleIndex = 12
             '
-            'GridColumn_Remarks
+            'GridColumn_Remark
             '
-            Me.GridColumn_Remarks.Caption = "备注"
-            Me.GridColumn_Remarks.FieldName = "REMARK"
-            Me.GridColumn_Remarks.Name = "GridColumn_Remarks"
-            Me.GridColumn_Remarks.OptionsColumn.AllowFocus = False
-            Me.GridColumn_Remarks.Width = 36
+            Me.GridColumn_Remark.Caption = "可退数量"
+            Me.GridColumn_Remark.FieldName = "DSR_FT_ROW_REMARK"
+            Me.GridColumn_Remark.Name = "GridColumn_Remark"
+            Me.GridColumn_Remark.OptionsColumn.AllowFocus = False
+            Me.GridColumn_Remark.Width = 36
             '
             'GridColumn_CurrentAmount
             '
@@ -1483,11 +1483,12 @@
             '
             'SpinEdit_WareAmount
             '
+            Me.SpinEdit_WareAmount.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
             Me.SpinEdit_WareAmount.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
             Me.SpinEdit_WareAmount.Location = New System.Drawing.Point(469, 13)
             Me.SpinEdit_WareAmount.Name = "SpinEdit_WareAmount"
             Me.SpinEdit_WareAmount.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
-            Me.SpinEdit_WareAmount.Size = New System.Drawing.Size(57, 21)
+            Me.SpinEdit_WareAmount.Size = New System.Drawing.Size(57, 20)
             Me.SpinEdit_WareAmount.TabIndex = 10001
             CTag24.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag24.CalculatorRequired = True
@@ -1553,6 +1554,8 @@
             '
             'Label_WareInfo
             '
+            Me.Label_WareInfo.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                        Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
             Me.Label_WareInfo.BackColor = System.Drawing.Color.White
             Me.Label_WareInfo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
             Me.Label_WareInfo.Font = New System.Drawing.Font("Arial", 9.0!)
@@ -1560,7 +1563,7 @@
             Me.Label_WareInfo.ImeMode = System.Windows.Forms.ImeMode.NoControl
             Me.Label_WareInfo.Location = New System.Drawing.Point(188, 13)
             Me.Label_WareInfo.Name = "Label_WareInfo"
-            Me.Label_WareInfo.Size = New System.Drawing.Size(190, 21)
+            Me.Label_WareInfo.Size = New System.Drawing.Size(216, 21)
             Me.Label_WareInfo.TabIndex = 10000
             CTag26.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag26.CalculatorRequired = True
@@ -1592,7 +1595,7 @@
             Me.ButtonEdit_WareCode.Location = New System.Drawing.Point(61, 12)
             Me.ButtonEdit_WareCode.Name = "ButtonEdit_WareCode"
             Me.ButtonEdit_WareCode.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
-            Me.ButtonEdit_WareCode.Size = New System.Drawing.Size(121, 21)
+            Me.ButtonEdit_WareCode.Size = New System.Drawing.Size(121, 20)
             Me.ButtonEdit_WareCode.TabIndex = 10000
             CTag27.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag27.CalculatorRequired = True
@@ -1627,7 +1630,7 @@
             Me.Label_CacheStatus.Font = New System.Drawing.Font("Arial", 9.0!)
             Me.Label_CacheStatus.ForeColor = System.Drawing.Color.Black
             Me.Label_CacheStatus.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.Label_CacheStatus.Location = New System.Drawing.Point(541, 14)
+            Me.Label_CacheStatus.Location = New System.Drawing.Point(532, 14)
             Me.Label_CacheStatus.Name = "Label_CacheStatus"
             Me.Label_CacheStatus.Size = New System.Drawing.Size(55, 15)
             Me.Label_CacheStatus.TabIndex = 10000
@@ -1659,12 +1662,13 @@
             '
             'Label1
             '
+            Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
             Me.Label1.AutoSize = True
             Me.Label1.BackColor = System.Drawing.Color.White
             Me.Label1.Font = New System.Drawing.Font("Arial", 9.0!)
             Me.Label1.ForeColor = System.Drawing.Color.Black
             Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.Label1.Location = New System.Drawing.Point(401, 15)
+            Me.Label1.Location = New System.Drawing.Point(410, 16)
             Me.Label1.Name = "Label1"
             Me.Label1.Size = New System.Drawing.Size(53, 15)
             Me.Label1.TabIndex = 10000
@@ -1828,7 +1832,7 @@
         Friend WithEvents GridColumn_CurrentAmount As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents GridColumn_UnitName As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents GridColumn_UnitPrice As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn_Remarks As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridColumn_Remark As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents GridColumn_RowHighlight As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents RepositoryItemCheckEdit_Select As DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
         Friend WithEvents PanelControl_WareInput As DevExpress.XtraEditors.PanelControl

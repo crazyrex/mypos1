@@ -78,7 +78,7 @@ Namespace Business
             UpdateChange
             UploadCacheData
             PrintTurnoverDtlList
-            BizUtld0007
+            LoadReturnReliefTurnover
             BizUtld0008
             BizUtld0009
             BizUtld0010
@@ -225,12 +225,12 @@ Namespace Business
                     '-------------------------------------------------------------------
                     functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoPrintTurnoverDtlList)
 
-                Case Affairs.BizUtld0007
+                Case Affairs.LoadReturnReliefTurnover
 
                     '
                     '取到处理函数的结果，传入返回给Manifest的AgentResponse包
                     '-------------------------------------------------------------------
-                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoBizUtld0007)
+                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoLoadReturnReliefTurnover)
 
                 Case Affairs.BizUtld0008
 
@@ -742,7 +742,11 @@ Namespace Business
 
                 Me._manifest.ButtonEdit_WareCode.Text = wareRowSEntity.WARE_CODE
                 Me._manifest.Label_WareID.Text = wareRowSEntity.WARE_ID
-                Me._manifest.Label_WareInfo.Text = MyPosXService.Facade.OpBizMaster.GetWareInfoString(wareRowSEntity.WARE_ID, SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_CURRENT_POS_ID))
+                Me._manifest.Label_WareInfo.Text = _
+                    MyPosXService.Facade.OpBizMaster.GetWareInfoString( _
+                        wareRowSEntity.WARE_ID, _
+                        SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_CURRENT_POS_ID), _
+                        False)
 
                 Dim dtlCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_H_MP_TURNOVER_DTL(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
                 dtlCondition.Add(MyPosXAuto.Facade.AfXV.XV_H_MP_TURNOVER_DTLColumns.WARE_CODEColumn, "=", Me._manifest.ButtonEdit_WareCode.Text)
@@ -1117,14 +1121,42 @@ Namespace Business
         '''
         '''
         '''-------------------------------------------------------------------
-        Private Function DoBizUtld0007() As String
+        Private Function DoLoadReturnReliefTurnover() As String
 
 
             Try
 
 
+                Dim turnoverRowSEntity As New MyPosXAuto.FTs.FT_XV_H_MP_TURNOVERRowSEntity
+                Dim turnoverCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_H_MP_TURNOVER(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+                Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.Clear()
+                Dim turnoverDtlCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_H_MP_TURNOVER_DTL(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+                turnoverDtlCondition.Add(MyPosXAuto.Facade.AfXV.XV_H_MP_TURNOVER_DTLColumns.TURNOVER_IDColumn, "=", turnoverRowSEntity.TURNOVER_ID)
+
+                turnoverCondition.Add(MyPosXAuto.Facade.AfXV.XV_H_MP_TURNOVERColumns.TURNOVER_IDColumn, "=", Me._manifest.SV_RETURN_RELIEF_FORM_ID)
+
+                If Me._manifest.SV_RETURN_RELIEF_FORM_USING_CACHE_DATA = False Then
+                    MyPosXAuto.Facade.AfXV.FillXV_H_MP_TURNOVERRowSEntity(turnoverRowSEntity, turnoverCondition)
+                    MyPosXAuto.Facade.AfXV.FillFT_XV_H_MP_TURNOVER_DTL( _
+                        turnoverDtlCondition, _
+                        Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST)
+                Else
+                    Dim cacheTurnoverRow = Me._manifest.SVFT_CACHE_DATA_TURNOVER_LIST.FindRowByCondition(turnoverCondition)
+                    Dim cacheTurnoverDtlRows = Me._manifest.SVFT_CACHE_DATE_TURNOVER_DTL_LIST.FindRowsByCondition(turnoverDtlCondition)
+                    Dim bindingRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow
+                    cacheTurnoverRow.FillSEntity(turnoverRowSEntity)
+                    For Each cacheTurnoverDtlRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow In cacheTurnoverDtlRows
+                        bindingRow = Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.NewXV_H_MP_TURNOVER_DTLRow
+                        Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.AddXV_H_MP_TURNOVER_DTLRow(bindingRow)
+                        bindingRow.CloneDataRow(cacheTurnoverDtlRow)
+                    Next
+
+                End If
+
+                Me._manifest.GridControl_TurnoverDtl.DataSource = Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST
+
                 'Dim servResult As String = _
-                '    Me._service.ServBizUtld0007()
+                '    Me._service.ServLoadReturnReliefTurnover()
 
                 'If servResult.Length > 0 Then
                 '    Return servResult        
