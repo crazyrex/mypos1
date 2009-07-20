@@ -132,6 +132,8 @@
             Me.GridColumn_Remark = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_CurrentAmount = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_RowHighlight = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn_OrigionUntPrice = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn_OrigionSumPrice = New DevExpress.XtraGrid.Columns.GridColumn
             Me.RepositoryItemCheckEdit_Select = New DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
             Me.PanelControl_WareInput = New DevExpress.XtraEditors.PanelControl
             Me.LinkLabel_UploadCacheData = New System.Windows.Forms.LinkLabel
@@ -142,8 +144,6 @@
             Me.Label_CacheStatus = New System.Windows.Forms.Label
             Me.Label1 = New System.Windows.Forms.Label
             Me.Label18 = New System.Windows.Forms.Label
-            Me.GridColumn_OrigionUntPrice = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn_OrigionSumPrice = New DevExpress.XtraGrid.Columns.GridColumn
             Me.ToolStrip_Form.SuspendLayout()
             CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.PanelControl1.SuspendLayout()
@@ -1401,6 +1401,24 @@
             Me.GridColumn_RowHighlight.OptionsColumn.AllowFocus = False
             Me.GridColumn_RowHighlight.Width = 60
             '
+            'GridColumn_OrigionUntPrice
+            '
+            Me.GridColumn_OrigionUntPrice.Caption = "原单价"
+            Me.GridColumn_OrigionUntPrice.FieldName = "ORIGION_UNIT_PRICE"
+            Me.GridColumn_OrigionUntPrice.Name = "GridColumn_OrigionUntPrice"
+            Me.GridColumn_OrigionUntPrice.OptionsColumn.AllowFocus = False
+            Me.GridColumn_OrigionUntPrice.Visible = True
+            Me.GridColumn_OrigionUntPrice.VisibleIndex = 13
+            '
+            'GridColumn_OrigionSumPrice
+            '
+            Me.GridColumn_OrigionSumPrice.Caption = "原金额"
+            Me.GridColumn_OrigionSumPrice.FieldName = "ORIGION_SUM_PRICE"
+            Me.GridColumn_OrigionSumPrice.Name = "GridColumn_OrigionSumPrice"
+            Me.GridColumn_OrigionSumPrice.OptionsColumn.AllowFocus = False
+            Me.GridColumn_OrigionSumPrice.Visible = True
+            Me.GridColumn_OrigionSumPrice.VisibleIndex = 14
+            '
             'RepositoryItemCheckEdit_Select
             '
             Me.RepositoryItemCheckEdit_Select.AutoHeight = False
@@ -1734,24 +1752,6 @@
             CTag30.ValueType = XL.Common.ControlValueType.Character
             Me.Label18.Tag = CTag30
             Me.Label18.Text = "货品代码"
-            '
-            'GridColumn_OrigionUntPrice
-            '
-            Me.GridColumn_OrigionUntPrice.Caption = "原单价"
-            Me.GridColumn_OrigionUntPrice.FieldName = "ORIGION_UNIT_PRICE"
-            Me.GridColumn_OrigionUntPrice.Name = "GridColumn_OrigionUntPrice"
-            Me.GridColumn_OrigionUntPrice.OptionsColumn.AllowFocus = False
-            Me.GridColumn_OrigionUntPrice.Visible = True
-            Me.GridColumn_OrigionUntPrice.VisibleIndex = 13
-            '
-            'GridColumn_OrigionSumPrice
-            '
-            Me.GridColumn_OrigionSumPrice.Caption = "原金额"
-            Me.GridColumn_OrigionSumPrice.FieldName = "ORIGION_SUM_PRICE"
-            Me.GridColumn_OrigionSumPrice.Name = "GridColumn_OrigionSumPrice"
-            Me.GridColumn_OrigionSumPrice.OptionsColumn.AllowFocus = False
-            Me.GridColumn_OrigionSumPrice.Visible = True
-            Me.GridColumn_OrigionSumPrice.VisibleIndex = 14
             '
             'M_02_01001
             '
