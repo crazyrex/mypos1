@@ -348,6 +348,23 @@ Namespace Manifest
 
         Public Overrides Function ValidateInput() As String
 
+            If Me.SVFT_BINDING_TURNOVER_DTL_LIST.UndeletedRowCount = 0 Then
+                Return MyPosXService.Decls.MSG_ALERT_00065
+            End If
+
+            Dim amountExceedExists As Boolean = False
+            Me.SVFT_BINDING_TURNOVER_DTL_LIST.ResetRowHighlighting()
+            For Each bindingRow As MyPosXAuto.FTs.FT_H_MP_TURNOVER_DTLRow In Me.SVFT_BINDING_TURNOVER_DTL_LIST
+                If bindingRow.WARE_AMOUNT > CommTK.FDecimal(bindingRow.ROW_REMARK) Then
+                    bindingRow.ROW_HIGHLIGHT = MyPosXService.Decls.ROW_HIGHLIGHT_RETURN_AMOUNT_EXCEED
+                    amountExceedExists = True
+                End If
+            Next
+
+            If amountExceedExists = True Then
+                Return MyPosXService.Decls.MSG_ALERT_00007
+            End If
+
             Return String.Empty
 
         End Function
