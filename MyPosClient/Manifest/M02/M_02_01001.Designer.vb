@@ -1179,7 +1179,7 @@
             StyleFormatCondition2.ApplyToRow = True
             StyleFormatCondition2.Column = Me.GridColumn_RowHighlight
             StyleFormatCondition2.Condition = DevExpress.XtraGrid.FormatConditionEnum.Equal
-            StyleFormatCondition2.Value1 = "ROW_HIGHLIGHT_OUT_OF_STOCK"
+            StyleFormatCondition2.Value1 = "ROW_HIGHLIGHT_AMOUNT_EXCEED"
             Me.GridView_TurnoverDtl.FormatConditions.AddRange(New DevExpress.XtraGrid.StyleFormatCondition() {StyleFormatCondition1, StyleFormatCondition2})
             Me.GridView_TurnoverDtl.GridControl = Me.GridControl_TurnoverDtl
             Me.GridView_TurnoverDtl.GroupCount = 1
@@ -1396,7 +1396,7 @@
             'GridColumn_RowHighlight
             '
             Me.GridColumn_RowHighlight.Caption = "高亮显示"
-            Me.GridColumn_RowHighlight.FieldName = "DSR_FT_ROW_HIGHLIGHT"
+            Me.GridColumn_RowHighlight.FieldName = "ROW_HIGHLIGHT_RETURN_AMOUNT_EXCEED"
             Me.GridColumn_RowHighlight.Name = "GridColumn_RowHighlight"
             Me.GridColumn_RowHighlight.OptionsColumn.AllowFocus = False
             Me.GridColumn_RowHighlight.Width = 60
