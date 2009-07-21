@@ -35,7 +35,7 @@ Namespace Manifest
         Public SV_POS_SET_ROWSE As New MyPosXAuto.FTs.FT_S_MP_POS_SETRowSEntity
         Public SV_RETURN_RELIEF_FORM_ID As String = String.Empty
         Public SV_RETURN_RELIEF_FORM_USING_CACHE_DATA As Boolean
-        'Public SV_UTLD_0003 As String ="SV_UTLD_0003"
+        Public SV_IS_DB_ONLINE As Boolean = True
         'Public SV_UTLD_0004 As String ="SV_UTLD_0004"
         'Public SV_UTLD_0005 As String ="SV_UTLD_0005"
         'Public SV_RPTOPT_EXCEL As XForm.ReportOption = Nothing
@@ -415,6 +415,7 @@ Namespace Manifest
 
                 Case Business.B_02_01001.Affairs.SaveInfo
 
+                    Me.ShowStatusMessage(StatusMessageIcon.Okay, MyPosXService.Decls.MSG_STATUS_0007)
                     Me.SV_RETURN_RELIEF_FORM_ID = String.Empty
                     Me.DoPrivateUpdateCacheStatus()
                     Me.DoPrivateUpdateTitleByReturnStatus()
