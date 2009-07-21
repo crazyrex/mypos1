@@ -565,7 +565,47 @@ Namespace Business
 
             Try
 
+                If Me._manifest.SV_IS_DB_ONLINE = True Then
 
+                    Dim turnoverID = Guid.NewGuid.ToString
+                    MyPosXAuto.Facade.AfBizTurnover.CreateH_MP_TURNOVERInfo( _
+                    TURNOVER_ID:=turnoverID, _
+                    TURNOVER_CODE:=MyPosXService.Facade.OpBizTurnover.GetAutoTransferCode( _
+                        False, _
+                        SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_CURRENT_POS_ID), _
+                        MyPosXAuto.Decls.CIVALUE_TURNOVER_STYLE_SOLD), _
+                    TURNOVER_TIME:=CommTK.GetSyncServerTime, _
+                    POS_ID:=SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_CURRENT_POS_ID), _
+                    STAFF_ID:=Utils.Decls.LOGIN_STAFF_ID, _
+                    TURNOVER_TYPE:=MyPosXAuto.Decls.CIVALUE_TURNOVER_TYPE_CHECK_OUT, _
+                    TURNOVER_STYLE:=MyPosXAuto.Decls.CIVALUE_TURNOVER_STYLE_SOLD, _
+                    SUPPLIER_ID:=String.Empty, _
+                    CLIENT_ID:=Me._manifest.Label_ClientID.Text, _
+                    TURNOVER_CONSIGN_STATUS:=MyPosXAuto.Decls.CIVALUE_TURNOVER_CONSIGN_STATUS_DONE, _
+                    BALANCE_STATUS:=MyPosXAuto.Decls.CIVALUE_BALANCE_STATUS_DONE, _
+                    REMARK:=String.Empty, _
+                    DELIVERY_DETAIL:=String.Empty, _
+                    EXTRA_DISCOUNT:=Me._manifest.CalcEdit_ExtraDiscount.Value, _
+                    DELIVERY_CHARGE:=0, _
+                    RELIEF_PAIR_ID:=String.Empty, _
+                    STAFF_SHARE_RATE:=0, _
+                    CONSIGN_DUE_DATE:=CommTK.GetSyncServerTime, _
+                    BATCH_INDEX:=0, _
+                    HEADQUATER_MERGED_CODE:=String.Empty, _
+                    REPLACE_INVENTORY_ID:=String.Empty, _
+                    POINT_GAIN:=CommTK.FInteger(Me._manifest.Label_AquiringPoints.Text), _
+                    POINT_TO_RMB_RATE:=CommTK.FDecimal(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_POINTS_TO_RMB_RATE)), _
+                    POINT_USE:=CommTK.FInteger(Me._manifest.CalcEdit_UsePoint.Value), _
+                    RMB_TO_POINT_RATE:=CommTK.FDecimal(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_RMB_TO_POINTS_RATE)))
+
+                    For Each bindingRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow In Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST
+                        bindingRow.TURNOVER_ID = turnoverID
+                    Next
+
+                    MyPosXAuto.Facade.AfBizTurnover.SaveBatchH_MP_TURNOVER_DTLData( _
+                        Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST)
+                    Return String.Empty
+                End If
 
                 Dim turnoverCacheDataRow = Me._manifest.SVFT_CACHE_DATA_TURNOVER_LIST.AddNewXV_H_MP_TURNOVERRow( _
                     TURNOVER_ID:=Guid.NewGuid.ToString, _
@@ -781,8 +821,11 @@ Namespace Business
                     dtlRow.UNIT_PRICE -= dtlRow.UNIT_DISCOUNT
                 End If
 
+                dtlRow.ORIGION_UNIT_PRICE = dtlRow.UNIT_PRICE + dtlRow.UNIT_DISCOUNT
+
                 dtlRow.SUM_PRICE = CommTK.FDecimal(dtlRow.UNIT_PRICE * dtlRow.WARE_AMOUNT)
                 dtlRow.SUM_DISCOUNT = CommTK.FDecimal(dtlRow.UNIT_DISCOUNT * dtlRow.WARE_AMOUNT)
+                dtlRow.ORIGION_SUM_PRICE = dtlRow.SUM_PRICE + dtlRow.SUM_DISCOUNT
                 Me._manifest.SpinEdit_WareAmount.Value = dtlRow.WARE_AMOUNT
 
                 'Dim servResult As String = _
