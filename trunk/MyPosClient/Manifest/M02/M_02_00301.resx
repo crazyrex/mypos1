@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="DefaultLookAndFeel_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>266, 0</value>
+    <value>295, 0</value>
   </metadata>
   <metadata name="Timer_Surveillant.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>128, 0</value>
+    <value>138, 0</value>
   </metadata>
   <metadata name="ToolStrip_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
@@ -146,7 +146,7 @@
     <value>Magenta</value>
   </data>
   <data name="ToolStripButton_New.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>33, 22</value>
   </data>
   <data name="ToolStripButton_New.Text" xml:space="preserve">
     <value>新建</value>
@@ -170,25 +170,25 @@
     <value>Magenta</value>
   </data>
   <data name="ToolStripButton_Save.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>33, 22</value>
   </data>
   <data name="ToolStripButton_Save.Text" xml:space="preserve">
     <value>保存</value>
   </data>
   <data name="ToolStripButton_Add.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>33, 22</value>
   </data>
   <data name="ToolStripButton_Add.Text" xml:space="preserve">
     <value>添加</value>
   </data>
   <data name="ToolStripButton_Revise.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>33, 22</value>
   </data>
   <data name="ToolStripButton_Revise.Text" xml:space="preserve">
     <value>修改</value>
   </data>
   <data name="ToolStripButton_Remove.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>33, 22</value>
   </data>
   <data name="ToolStripButton_Remove.Text" xml:space="preserve">
     <value>去除</value>
@@ -212,13 +212,13 @@
     <value>Magenta</value>
   </data>
   <data name="ToolStripButton_ImportFromMobile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>33, 22</value>
   </data>
   <data name="ToolStripButton_ImportFromMobile.Text" xml:space="preserve">
     <value>读取</value>
   </data>
   <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>33, 22</value>
   </data>
   <data name="ToolStripButton_Close.Text" xml:space="preserve">
     <value>关闭</value>
@@ -272,6 +272,10 @@
   <data name="DateEdit_ConsignDueDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>71, 5</value>
   </data>
+  <assembly alias="DevExpress.Utils.v8.1" name="DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
+  <data name="DateEdit_ConsignDueDate.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
+  </data>
   <data name="DateEdit_ConsignDueDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 21</value>
   </data>
@@ -294,7 +298,7 @@
     <value>True</value>
   </data>
   <data name="Label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 12</value>
+    <value>13, 11</value>
   </data>
   <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 15</value>
@@ -367,6 +371,9 @@
   </data>
   <data name="DateEdit_DepositTime.Location" type="System.Drawing.Point, System.Drawing">
     <value>438, 82</value>
+  </data>
+  <data name="DateEdit_DepositTime.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
   </data>
   <data name="DateEdit_DepositTime.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 21</value>
@@ -608,6 +615,9 @@
   <data name="LookUpEdit_ToLocation.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 55</value>
   </data>
+  <data name="LookUpEdit_ToLocation.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
+  </data>
   <data name="LookUpEdit_ToLocation.Size" type="System.Drawing.Size, System.Drawing">
     <value>143, 21</value>
   </data>
@@ -655,6 +665,9 @@
   </data>
   <data name="LookUpEdit_FromLocation.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 28</value>
+  </data>
+  <data name="LookUpEdit_FromLocation.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
   </data>
   <data name="LookUpEdit_FromLocation.Size" type="System.Drawing.Size, System.Drawing">
     <value>143, 21</value>
@@ -768,6 +781,9 @@
   <data name="RepositoryItemLookUpEdit_TurnoverBookStatus.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="RepositoryItemLookUpEdit_TurnoverBookStatus.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
+  </data>
   <data name="RepositoryItemLookUpEdit_TurnoverBookStatus.NullText" xml:space="preserve">
     <value />
   </data>
@@ -837,6 +853,9 @@
   <data name="RepositoryItemCalcEdit_WareAmount.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="RepositoryItemCalcEdit_WareAmount.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
+  </data>
   <data name="GridColumn_WareAmount.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -886,7 +905,7 @@
     <value>True</value>
   </data>
   <data name="LinkLabel_AllBooking.Location" type="System.Drawing.Point, System.Drawing">
-    <value>648, 18</value>
+    <value>647, 17</value>
   </data>
   <data name="LinkLabel_AllBooking.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 15</value>
@@ -913,7 +932,7 @@
     <value>True</value>
   </data>
   <data name="LinkLabel_AllOnhand.Location" type="System.Drawing.Point, System.Drawing">
-    <value>577, 18</value>
+    <value>576, 17</value>
   </data>
   <data name="LinkLabel_AllOnhand.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 15</value>
@@ -1042,7 +1061,7 @@
     <value>Arial, 9pt</value>
   </data>
   <data name="Label18.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 18</value>
+    <value>23, 17</value>
   </data>
   <data name="Label18.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 15</value>
