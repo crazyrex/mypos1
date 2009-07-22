@@ -354,7 +354,7 @@ Namespace Manifest
 
             Dim amountExceedExists As Boolean = False
             Me.SVFT_BINDING_TURNOVER_DTL_LIST.ResetRowHighlighting()
-            For Each bindingRow As MyPosXAuto.FTs.FT_H_MP_TURNOVER_DTLRow In Me.SVFT_BINDING_TURNOVER_DTL_LIST
+            For Each bindingRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow In Me.SVFT_BINDING_TURNOVER_DTL_LIST
                 If bindingRow.WARE_AMOUNT > CommTK.FDecimal(bindingRow.ROW_REMARK) Then
                     bindingRow.ROW_HIGHLIGHT = MyPosXService.Decls.ROW_HIGHLIGHT_RETURN_AMOUNT_EXCEED
                     amountExceedExists = True
