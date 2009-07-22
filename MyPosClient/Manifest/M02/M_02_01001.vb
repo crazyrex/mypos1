@@ -267,7 +267,6 @@ Namespace Manifest
                 Case "TbActionReturn"
                     Dim inputForm = TryCast(popupForm, M_02_01002)
                     Me.SV_RETURN_RELIEF_TURNOVER_ROW_SE.TURNOVER_ID = inputForm.Label_ReliefTurnoverID.Text
-                    Me.SV_RETURN_RELIEF_FORM_USING_CACHE_DATA = inputForm.CheckEdit_IsCacheData.Checked
                     Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.LoadReturnReliefTurnover, False)
                     Me.DoPrivateUpdateTitleByReturnStatus()
                 Case "ResponseTitleName2"
@@ -615,6 +614,12 @@ Namespace Manifest
 
 
         Private Sub TbActionReturn()
+
+            If MyPosXService.Decls.IS_SYSTEM_ONLINE = False Then
+                WinTK.PlayWavSound("Error.wav")
+                Me.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_ALERT_00065)
+                Return
+            End If
 
             Dim inputForm As New M_02_01002(Me.TransactRequestHandle, Me.FormID)
             Me.PopupForm(inputForm, "TbActionReturn", False)

@@ -306,10 +306,11 @@ Namespace Business
 
 
                 If turnoverRowSEntity.IsNull = False Then
+
                     If turnoverRowSEntity.TURNOVER_STYLE <> MyPosXAuto.Decls.CIVALUE_TURNOVER_STYLE_SOLD Then
                         Return MyPosXService.Decls.MSG_ALERT_00063
                     End If
-                    Me._manifest.CheckEdit_IsCacheData.Checked = False
+
                 Else
                     Dim cacheDataTurnoverCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_H_MP_TURNOVER(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
                     Dim cacheDataTurnoverList As New MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER
@@ -326,7 +327,6 @@ Namespace Business
                     End If
 
                     cacheDataTurnoverRow.FillSEntity(turnoverRowSEntity)
-                    Me._manifest.CheckEdit_IsCacheData.Checked = True
 
                 End If
 
