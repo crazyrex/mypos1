@@ -126,8 +126,8 @@
   <metadata name="XrTableRow1.Name" xml:space="preserve">
     <value>XrTableRow1</value>
   </metadata>
-  <metadata name="XrTableCell_RowRemark.Name" xml:space="preserve">
-    <value>XrTableCell_RowRemark</value>
+  <metadata name="XrTableCell_WareName.Name" xml:space="preserve">
+    <value>XrTableCell_WareName</value>
   </metadata>
   <metadata name="XrTableCell_WareAmount.Name" xml:space="preserve">
     <value>XrTableCell_WareAmount</value>
@@ -135,29 +135,14 @@
   <metadata name="XrTableCell_UnitPrice.Name" xml:space="preserve">
     <value>XrTableCell_UnitPrice</value>
   </metadata>
+  <metadata name="XrTableCell_UnitDiscount.Name" xml:space="preserve">
+    <value>XrTableCell_UnitDiscount</value>
+  </metadata>
+  <metadata name="XrTableCell_OrigionUnitPrice.Name" xml:space="preserve">
+    <value>XrTableCell_OrigionUnitPrice</value>
+  </metadata>
   <metadata name="XrTableCell_SumPrice.Name" xml:space="preserve">
     <value>XrTableCell_SumPrice</value>
-  </metadata>
-  <metadata name="PageHeader.Name" xml:space="preserve">
-    <value>PageHeader</value>
-  </metadata>
-  <metadata name="XrLabel_DepositTime.Name" xml:space="preserve">
-    <value>XrLabel_DepositTime</value>
-  </metadata>
-  <metadata name="XrLabel_TurnoverCode.Name" xml:space="preserve">
-    <value>XrLabel_TurnoverCode</value>
-  </metadata>
-  <metadata name="XrLabel_Employee.Name" xml:space="preserve">
-    <value>XrLabel_Employee</value>
-  </metadata>
-  <metadata name="XrLabel_NEmployee.Name" xml:space="preserve">
-    <value>XrLabel_NEmployee</value>
-  </metadata>
-  <metadata name="XrLabel_Pos.Name" xml:space="preserve">
-    <value>XrLabel_Pos</value>
-  </metadata>
-  <metadata name="XrLabel_CompanyTitle.Name" xml:space="preserve">
-    <value>XrLabel_CompanyTitle</value>
   </metadata>
   <metadata name="PageFooter.Name" xml:space="preserve">
     <value>PageFooter</value>
@@ -177,11 +162,23 @@
   <metadata name="XrLabel_TotalMoney.Name" xml:space="preserve">
     <value>XrLabel_TotalMoney</value>
   </metadata>
-  <metadata name="XrLabel_TotalAmount.Name" xml:space="preserve">
-    <value>XrLabel_TotalAmount</value>
-  </metadata>
   <metadata name="XrLabel6.Name" xml:space="preserve">
     <value>XrLabel6</value>
+  </metadata>
+  <metadata name="ReportHeader.Name" xml:space="preserve">
+    <value>ReportHeader</value>
+  </metadata>
+  <metadata name="XrLabel_TurnoverCode.Name" xml:space="preserve">
+    <value>XrLabel_TurnoverCode</value>
+  </metadata>
+  <metadata name="XrLabel_Operator.Name" xml:space="preserve">
+    <value>XrLabel_Operator</value>
+  </metadata>
+  <metadata name="XrLabel4.Name" xml:space="preserve">
+    <value>XrLabel4</value>
+  </metadata>
+  <metadata name="XrLabel_BranchName.Name" xml:space="preserve">
+    <value>XrLabel_BranchName</value>
   </metadata>
   <metadata name="$this.Name" xml:space="preserve">
     <value>R_02_01001</value>
