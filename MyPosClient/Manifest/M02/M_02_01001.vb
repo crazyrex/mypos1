@@ -33,7 +33,7 @@ Namespace Manifest
         '原则上所有UTLD的变量不能出现在成品中, 在确定不需要的情况下应删除UTLD
         '-------------------------------------------------------------------
         Public SV_POS_SET_ROWSE As New MyPosXAuto.FTs.FT_S_MP_POS_SETRowSEntity
-        Public SV_RETURN_RELIEF_FORM_ID As String = String.Empty
+        Public SV_RETURN_RELIEF_TURNOVER_ROW_SE As New MyPosXAuto.FTs.FT_H_MP_TURNOVERRowSEntity
         Public SV_PRINTING_TURNOVER_CODE As String = String.Empty
         Public SV_RETURN_RELIEF_FORM_USING_CACHE_DATA As Boolean
         Public SV_IS_DB_ONLINE As Boolean = True
@@ -263,12 +263,11 @@ Namespace Manifest
                     
                     If optionForm.SV_SELECTING_OPTION Is Me.SV_REPORT_TURNOVER_DTL_LIST Then
                         Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.PrintTurnoverDtlList, False)
-
                     End If
 
                 Case "TbActionReturn"
                     Dim inputForm = TryCast(popupForm, M_02_01002)
-                    Me.SV_RETURN_RELIEF_FORM_ID = inputForm.Label_ReliefTurnoverID.Text
+                    Me.SV_RETURN_RELIEF_TURNOVER_ROW_SE.TURNOVER_ID = inputForm.Label_ReliefTurnoverID.Text
                     Me.SV_RETURN_RELIEF_FORM_USING_CACHE_DATA = inputForm.CheckEdit_IsCacheData.Checked
                     Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.LoadReturnReliefTurnover, False)
                     Me.DoPrivateUpdateTitleByReturnStatus()
@@ -350,10 +349,10 @@ Namespace Manifest
         Public Overrides Function ValidateInput() As String
 
             If Me.SVFT_BINDING_TURNOVER_DTL_LIST.UndeletedRowCount = 0 Then
-                Return MyPosXService.Decls.MSG_ALERT_00065
+                Return MyPosXService.Decls.MSG_ALERT_00023
             End If
 
-            If Me.SV_RETURN_RELIEF_FORM_ID.Length > 0 Then
+            If Me.SV_RETURN_RELIEF_TURNOVER_ROW_SE.IsNull = False Then
 
 
                 Dim amountExceedExists As Boolean = False
@@ -420,13 +419,13 @@ Namespace Manifest
                     Me.IsSaved = False
 
                 Case Business.B_02_01001.Affairs.SaveInfo
-                    Me.TbActionPurchaseList()
-                    Me.ShowStatusMessage(StatusMessageIcon.Okay, MyPosXService.Decls.MSG_STATUS_0007)
-                    Me.SV_RETURN_RELIEF_FORM_ID = String.Empty
+
+                    Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.PrintTurnoverDtlList, False)
+                    Me.ShowStatusMessage(StatusMessageIcon.Okay, MyPosXService.Decls.MSG_STATUS_0007, Me.SV_PRINTING_TURNOVER_CODE)
+                    Me.SV_RETURN_RELIEF_TURNOVER_ROW_SE.Reset()
                     Me.DoPrivateUpdateCacheStatus()
                     Me.DoPrivateUpdateTitleByReturnStatus()
                     Me.IA_ClearContent(True)
-
 
 
             End Select
@@ -445,8 +444,6 @@ Namespace Manifest
 
         'Private Sub RepositoryItemCheckEdit_Select_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemCheckEdit_Select.EditValueChanged
 
-        '    Dim checkEdit As DevExpress.XtraEditors.CheckEdit = CType(sender, DevExpress.XtraEditors.CheckEdit)                                                                 
-        '    Me.SVFR_SELECTING_ROW.ROW_SELECTED = checkEdit.Checked                                                                                                              
 
         'End Sub                                                                                                                                                                 
 
@@ -483,13 +480,31 @@ Namespace Manifest
         'End Sub                                                                                                                                                                           
 
         Private Sub ButtonEdit_WareCode_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles ButtonEdit_WareCode.KeyDown
-            If e.KeyCode = Keys.Enter Then
-                Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.AddWare, False)
+            If e.KeyCode <> Keys.Enter Then
+                Return
             End If
+
+            If Me.SV_RETURN_RELIEF_TURNOVER_ROW_SE.IsNull = True Then
+                Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.AddWare, False)
+            Else
+                For rowIndex As Integer = 0 To Me.GridView_TurnoverDtl.RowCount - 1
+                    If Me.GridView_TurnoverDtl.GetRowCellDisplayText(rowIndex, Me.GridColumn_WareCode).ToUpper = Me.ButtonEdit_WareCode.Text.Trim.ToUpper Then
+                        Me.GridView_TurnoverDtl.FocusedRowHandle = rowIndex
+                        Me.SpinEdit_WareAmount.Select()
+                        Me.SpinEdit_WareAmount.SelectAll()
+                        Exit For
+                    End If
+                Next
+
+                Me.TextEdit_ClientCode.SelectAll()
+            End If
+
         End Sub
 
         Private Sub CheckEdit_IsClient_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckEdit_IsClient.CheckedChanged
             Me.TextEdit_ClientCode.Enabled = Me.CheckEdit_IsClient.Checked
+            Me.CalcEdit_UsePoint.Enabled = Me.CheckEdit_IsClient.Checked
+
             If Me.TextEdit_ClientCode.Enabled = True Then
                 Me.TextEdit_ClientCode.Select()
                 Me.FormInputGuarder.SetValidate(Me.TextEdit_ClientCode, InputGuarder.ValidateClassify.Required, Nothing)
@@ -521,6 +536,7 @@ Namespace Manifest
                 Me.SVFR_BINDING_TURNOVER_DTL_ROW.SUM_COST = _
                     CommTK.FDecimal(Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_AMOUNT * Me.SVFR_BINDING_TURNOVER_DTL_ROW.UNIT_COST)
 
+                Me.DoPrivateRegularSelectingRowWareAmount()
             End If
 
             Me.ButtonEdit_WareCode.SelectAll()
@@ -778,20 +794,45 @@ Namespace Manifest
 
 
         Private Sub DoPrivateUpdateTitleByReturnStatus()
-            If Me.SV_RETURN_RELIEF_FORM_ID.Length > 0 Then
-                Me.SetSubTitle("零售退货")
+            Dim operationStatusBuilder As New LineStrBuilder
+
+
+            If Me.SV_RETURN_RELIEF_TURNOVER_ROW_SE.IsNull = False Then
+                operationStatusBuilder.AppendFormat("退货")
+                operationStatusBuilder.AppendFormat(Me.SV_RETURN_RELIEF_TURNOVER_ROW_SE.TURNOVER_CODE)
                 Me.CheckEdit_IsClient.Visible = True
                 Me.GridColumn_Remark.Visible = True
+                Me.GridColumn_WareAmount.OptionsColumn.AllowFocus = True
+                Me.Label_OperationStatus.Text = operationStatusBuilder.ToString
+                Me.Label_OperationStatus.Visible = True
             Else
                 Me.SetSubTitle("零售操作")
                 Me.CheckEdit_IsClient.Visible = False
                 Me.GridColumn_Remark.Visible = False
+                Me.GridColumn_WareAmount.OptionsColumn.AllowFocus = False
+                Me.Label_OperationStatus.Text = String.Empty
+                Me.Label_OperationStatus.Visible = False
             End If
-            Me.UpdateTitle()
+
         End Sub
 
 
-        Private Sub DoPrivateUtld0005()
+        Private Sub DoPrivateRegularSelectingRowWareAmount()
+            If Me.SV_RETURN_RELIEF_TURNOVER_ROW_SE.IsNull = True Then
+                Return
+            End If
+
+            If IsNothing(Me.SVFR_BINDING_TURNOVER_DTL_ROW) = True Then
+                Return
+            End If
+
+            If Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_AMOUNT > CommTK.FDecimal(Me.SVFR_BINDING_TURNOVER_DTL_ROW.ROW_REMARK) Then
+                Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_AMOUNT = CommTK.FDecimal(Me.SVFR_BINDING_TURNOVER_DTL_ROW.ROW_REMARK)
+            End If
+
+            If Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_AMOUNT < 0 Then
+                Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_AMOUNT = 0
+            End If
 
         End Sub
 
@@ -988,6 +1029,15 @@ Namespace Manifest
 
         Private Sub CalcEdit_ExtraDiscount_EditValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CalcEdit_ExtraDiscount.EditValueChanged
             Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.UpdateSummary, False)
+        End Sub
+
+        Private Sub RepositoryItemCalcEdit_WareAmount_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemCalcEdit_WareAmount.EditValueChanged
+
+            Dim calcEdit As DevExpress.XtraEditors.CalcEdit = CType(sender, DevExpress.XtraEditors.CalcEdit)
+            Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_AMOUNT = calcEdit.Value
+
+            Me.DoPrivateRegularSelectingRowWareAmount()
+            calcEdit.Value = Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_AMOUNT
         End Sub
     End Class
 
