@@ -35,7 +35,6 @@ Namespace Manifest
         Public SV_POS_SET_ROWSE As New MyPosXAuto.FTs.FT_S_MP_POS_SETRowSEntity
         Public SV_RETURN_RELIEF_TURNOVER_ROW_SE As New MyPosXAuto.FTs.FT_H_MP_TURNOVERRowSEntity
         Public SV_PRINTING_TURNOVER_CODE As String = String.Empty
-        Public SV_RETURN_RELIEF_FORM_USING_CACHE_DATA As Boolean
         Public SV_IS_DB_ONLINE As Boolean = True
         'Public SV_UTLD_0004 As String ="SV_UTLD_0004"
         'Public SV_UTLD_0005 As String ="SV_UTLD_0005"
@@ -427,7 +426,8 @@ Namespace Manifest
                     Me.DoPrivateUpdateTitleByReturnStatus()
                     Me.IA_ClearContent(True)
 
-
+                Case Business.B_02_01001.Affairs.LoadReturnReliefTurnover
+                    Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.UpdateSummary, False)
             End Select
         End Sub
 
@@ -805,6 +805,10 @@ Namespace Manifest
                 Me.GridColumn_WareAmount.OptionsColumn.AllowFocus = True
                 Me.Label_OperationStatus.Text = operationStatusBuilder.ToString
                 Me.Label_OperationStatus.Visible = True
+                Me.CalcEdit_ExtraDiscount.Enabled = False
+                Me.CalcEdit_Payment.Enabled = False
+                Me.CalcEdit_UsePoint.Enabled = False
+                Me.CheckEdit_IsClient.Enabled = False
             Else
                 Me.SetSubTitle("零售操作")
                 Me.CheckEdit_IsClient.Visible = False
@@ -812,6 +816,10 @@ Namespace Manifest
                 Me.GridColumn_WareAmount.OptionsColumn.AllowFocus = False
                 Me.Label_OperationStatus.Text = String.Empty
                 Me.Label_OperationStatus.Visible = False
+                Me.CalcEdit_ExtraDiscount.Enabled = True
+                Me.CalcEdit_Payment.Enabled = True
+                Me.CalcEdit_UsePoint.Enabled = True
+                Me.CheckEdit_IsClient.Enabled = True
             End If
 
         End Sub

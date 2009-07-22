@@ -340,6 +340,79 @@ Namespace Facade
 
 #Region "Auto code"
 
+        Public Shared Function GetAutoLocalTurnoverCode(ByVal preview As Boolean, ByVal turnoverType As Integer, ByVal posID As String) As String
+
+            Dim codeBuilder As New LineStrBuilder
+
+            Dim codeType As String
+
+            codeType = SysInfo.ReadLocalSysInfo(MyPosXService.Decls.SVN_TURNOVER_PREFIX)
+            If turnoverType = MyPosXAuto.Decls.CIVALUE_IO_TYPE_IN Then
+                codeType &= "I"
+            Else
+                codeType &= "O"
+            End If
+
+
+            Dim seedName As String = String.Format("TURNOVER_{0}", codeType)
+
+            'Dim turnoverDate As String = String.Format("{0:yyyyMMdd}", CommTK.GetsyncServerTime)
+
+            Dim posRow As MyPosXAuto.FTs.FT_M_MP_POSRow = _
+                MyPosXAuto.Facade.AfBizMaster.GetM_MP_POSRow(posID)
+
+            If IsNothing(posRow) = True Then
+                Return CommTK.GetTranslatedString(MyPosXService.Decls.MSG_ALERT_00003)
+            End If
+
+            Dim result As String = String.Empty
+
+            Dim labelPrintSet As String = SysInfo.ReadShareSysInfo(CommDecl.XLSSVN_LABEL_PRINT_SET).ToUpper
+
+            Select Case labelPrintSet
+                Case "POWER LEGEND"
+
+                    If preview = True Then
+
+                        result = String.Format("{0}XXXXXX", _
+                            codeType)
+
+                    Else
+
+                        Dim locationSeedValue As Integer = _
+                            Facade.OpSysConfig.GetNewSeedID(seedName)
+
+                        result = String.Format("{0}{1:000000}", _
+                            codeType, _
+                            locationSeedValue)
+
+                    End If
+
+                Case Else
+
+                    If preview = True Then
+
+                        result = String.Format("{0}{1}-XXXXXXXXXXXXXX", _
+                            codeType, _
+                            posRow.POS_CODE)
+
+                    Else
+
+                        result = String.Format("{0}{1}{2:yyyyMMddHHmmss}", _
+                            codeType, _
+                            posRow.POS_CODE, _
+                            CommTK.GetSyncServerTime)
+
+                    End If
+
+            End Select
+            Return result
+
+
+
+        End Function
+
+
         Public Shared Function GetAutoTurnoverCode(ByVal preview As Boolean, ByVal turnoverType As Integer, ByVal posID As String) As String
 
             Dim codeBuilder As New LineStrBuilder
