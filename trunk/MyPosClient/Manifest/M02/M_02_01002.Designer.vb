@@ -44,7 +44,6 @@
             Dim CTag4 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag5 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag6 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
-            Dim CTag7 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Me.ToolStrip_Form = New System.Windows.Forms.ToolStrip
             Me.ToolStripButton_Save = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_Close = New System.Windows.Forms.ToolStripButton
@@ -53,10 +52,8 @@
             Me.Label_ReliefTurnoverID = New System.Windows.Forms.Label
             Me.Label_ReliefTurnoverInfo = New System.Windows.Forms.Label
             Me.DefaultLookAndFeel1 = New DevExpress.LookAndFeel.DefaultLookAndFeel(Me.components)
-            Me.CheckEdit_IsCacheData = New DevExpress.XtraEditors.CheckEdit
             Me.ToolStrip_Form.SuspendLayout()
             CType(Me.TextEdit_ReliefTurnoverCode.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.CheckEdit_IsCacheData.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'DefaultLookAndFeel_Form
@@ -251,16 +248,19 @@
             CTag5.ValueType = XL.Common.ControlValueType.Character
             Me.Label_ReliefTurnoverInfo.Tag = CTag5
             '
-            'CheckEdit_IsCacheData
+            'M_02_01002
             '
-            Me.CheckEdit_IsCacheData.Location = New System.Drawing.Point(88, 187)
-            Me.CheckEdit_IsCacheData.Name = "CheckEdit_IsCacheData"
-            Me.CheckEdit_IsCacheData.Properties.Appearance.BackColor = System.Drawing.Color.Transparent
-            Me.CheckEdit_IsCacheData.Properties.Appearance.Options.UseBackColor = True
-            Me.CheckEdit_IsCacheData.Properties.Caption = "缓存数据"
-            Me.CheckEdit_IsCacheData.Size = New System.Drawing.Size(75, 19)
-            Me.CheckEdit_IsCacheData.TabIndex = 10000
-            Me.CheckEdit_IsCacheData.TabStop = False
+            Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+            Me.Controls.Add(Me.Label_ReliefTurnoverID)
+            Me.Controls.Add(Me.Label_ReliefTurnoverInfo)
+            Me.Controls.Add(Me.TextEdit_ReliefTurnoverCode)
+            Me.Controls.Add(Me.Label7)
+            Me.Controls.Add(Me.ToolStrip_Form)
+            Me.Cursor = System.Windows.Forms.Cursors.Default
+            Me.Font = New System.Drawing.Font("Arial", 9.0!)
+            Me.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
+            Me.Name = "M_02_01002"
+            Me.Size = New System.Drawing.Size(337, 202)
             CTag6.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag6.CalculatorRequired = True
             CTag6.ComboValueTextBox = Nothing
@@ -273,61 +273,21 @@
             CTag6.DisplayLinkTable = Nothing
             CTag6.FlexgridEditItem = ""
             CTag6.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
-            CTag6.FormStatus = XL.Win.Component.BaseForm.FormStatuses.BeforeLoading
+            CTag6.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
             CTag6.IsButtonCustomed = False
             CTag6.IsTextValid = True
             CTag6.KeyValueAbsentable = False
             CTag6.LeagleText = ""
             CTag6.NumericButtonTextBox = Nothing
-            CTag6.ParentControl = Me.CheckEdit_IsCacheData
+            CTag6.ParentControl = Me
             CTag6.SkipValidate = False
             CTag6.TimeButtonTextBox = Nothing
             CTag6.ToolTip = ""
             CTag6.ValueType = XL.Common.ControlValueType.Character
-            Me.CheckEdit_IsCacheData.Tag = CTag6
-            '
-            'M_02_01002
-            '
-            Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
-            Me.Controls.Add(Me.CheckEdit_IsCacheData)
-            Me.Controls.Add(Me.Label_ReliefTurnoverID)
-            Me.Controls.Add(Me.Label_ReliefTurnoverInfo)
-            Me.Controls.Add(Me.TextEdit_ReliefTurnoverCode)
-            Me.Controls.Add(Me.Label7)
-            Me.Controls.Add(Me.ToolStrip_Form)
-            Me.Cursor = System.Windows.Forms.Cursors.Default
-            Me.Font = New System.Drawing.Font("Arial", 9.0!)
-            Me.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
-            Me.Name = "M_02_01002"
-            Me.Size = New System.Drawing.Size(337, 247)
-            CTag7.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
-            CTag7.CalculatorRequired = True
-            CTag7.ComboValueTextBox = Nothing
-            CTag7.ControlRelatedCode = Nothing
-            CTag7.DateButtonTextBox = Nothing
-            CTag7.DateTimeButtonTextBox = Nothing
-            CTag7.DisplayLinkControl = Nothing
-            CTag7.DisplayLinkDisplayFieldName = Nothing
-            CTag7.DisplayLinkKeyFieldName = Nothing
-            CTag7.DisplayLinkTable = Nothing
-            CTag7.FlexgridEditItem = ""
-            CTag7.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
-            CTag7.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
-            CTag7.IsButtonCustomed = False
-            CTag7.IsTextValid = True
-            CTag7.KeyValueAbsentable = False
-            CTag7.LeagleText = ""
-            CTag7.NumericButtonTextBox = Nothing
-            CTag7.ParentControl = Me
-            CTag7.SkipValidate = False
-            CTag7.TimeButtonTextBox = Nothing
-            CTag7.ToolTip = ""
-            CTag7.ValueType = XL.Common.ControlValueType.Character
-            Me.Tag = CTag7
+            Me.Tag = CTag6
             Me.ToolStrip_Form.ResumeLayout(False)
             Me.ToolStrip_Form.PerformLayout()
             CType(Me.TextEdit_ReliefTurnoverCode.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.CheckEdit_IsCacheData.Properties, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -337,7 +297,6 @@
         Friend WithEvents Label_ReliefTurnoverID As System.Windows.Forms.Label
         Friend WithEvents DefaultLookAndFeel1 As DevExpress.LookAndFeel.DefaultLookAndFeel
         Friend WithEvents Label_ReliefTurnoverInfo As System.Windows.Forms.Label
-        Friend WithEvents CheckEdit_IsCacheData As DevExpress.XtraEditors.CheckEdit
 
 #End Region
 

@@ -607,7 +607,7 @@ Namespace Business
                         DELIVERY_DETAIL:=String.Empty, _
                         EXTRA_DISCOUNT:=extraDiscount, _
                         DELIVERY_CHARGE:=0, _
-                        RELIEF_PAIR_ID:=String.Empty, _
+                        RELIEF_PAIR_ID:=Me._manifest.SV_RETURN_RELIEF_TURNOVER_ROW_SE.TURNOVER_ID, _
                         STAFF_SHARE_RATE:=0, _
                         CONSIGN_DUE_DATE:=CommTK.GetSyncServerTime, _
                         BATCH_INDEX:=0, _
@@ -644,7 +644,7 @@ Namespace Business
                     DELIVERY_DETAIL:=String.Empty, _
                     EXTRA_DISCOUNT:=extraDiscount, _
                     DELIVERY_CHARGE:=0, _
-                    RELIEF_PAIR_ID:=String.Empty, _
+                    RELIEF_PAIR_ID:=Me._manifest.SV_RETURN_RELIEF_TURNOVER_ROW_SE.TURNOVER_ID, _
                     STAFF_SHARE_RATE:=0, _
                     CONSIGN_DUE_DATE:=CommTK.GetSyncServerTime, _
                     BATCH_INDEX:=0, _
