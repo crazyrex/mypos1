@@ -159,12 +159,14 @@
             '
             'XrLabel_BranchName
             '
-            Me.XrLabel_BranchName.Font = New System.Drawing.Font("黑体", 13.0!)
+            Me.XrLabel_BranchName.Font = New System.Drawing.Font("黑体", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
             Me.XrLabel_BranchName.Location = New System.Drawing.Point(0, 0)
             Me.XrLabel_BranchName.Name = "XrLabel_BranchName"
             Me.XrLabel_BranchName.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
             Me.XrLabel_BranchName.Size = New System.Drawing.Size(175, 25)
-            Me.XrLabel_BranchName.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+            Me.XrLabel_BranchName.StylePriority.UseFont = False
+            Me.XrLabel_BranchName.StylePriority.UseTextAlignment = False
+            Me.XrLabel_BranchName.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
             '
             'XrLabel4
             '
