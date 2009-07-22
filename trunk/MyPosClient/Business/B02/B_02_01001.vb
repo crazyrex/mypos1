@@ -565,6 +565,25 @@ Namespace Business
 
             Try
 
+                Dim turnoverType As Integer = MyPosXAuto.Decls.CIVALUE_TURNOVER_TYPE_CHECK_OUT
+                Dim turnoverStyle As Integer = MyPosXAuto.Decls.CIVALUE_TURNOVER_STYLE_SOLD
+                Dim pointGain As Integer = CommTK.FInteger(Me._manifest.Label_AquiringPoints.Text)
+                Dim pointUse As Integer = CommTK.FInteger(Me._manifest.CalcEdit_UsePoint.Value)
+                Dim extraDiscount As Decimal = Me._manifest.CalcEdit_ExtraDiscount.Value
+
+                If Me._manifest.SV_RETURN_RELIEF_TURNOVER_ROW_SE.IsNull = False Then
+                    turnoverType = MyPosXAuto.Decls.CIVALUE_TURNOVER_TYPE_CHECK_IN
+                    turnoverStyle = MyPosXAuto.Decls.CIVALUE_TURNOVER_STYLE_RETURNS
+                    pointGain = -pointGain
+                    pointUse = -pointUse
+                    extraDiscount = -extraDiscount
+
+                    Dim turnoverDtlCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_H_MP_TURNOVER_DTL(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+                    turnoverDtlCondition.Add(MyPosXAuto.Facade.AfXV.XV_H_MP_TURNOVER_DTLColumns.WARE_AMOUNTColumn, "=", 0)
+                    Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.RemoveFT_XV_H_MP_TURNOVER_DTLRows(turnoverDtlCondition)
+
+                End If
+
                 If Me._manifest.SV_IS_DB_ONLINE = True Then
 
                     Me._manifest.SV_PRINTING_TURNOVER_CODE = MyPosXService.Facade.OpBizTurnover.GetAutoTransferCode( _
@@ -578,15 +597,15 @@ Namespace Business
                         TURNOVER_TIME:=CommTK.GetSyncServerTime, _
                         POS_ID:=SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_CURRENT_POS_ID), _
                         STAFF_ID:=Utils.Decls.LOGIN_STAFF_ID, _
-                        TURNOVER_TYPE:=MyPosXAuto.Decls.CIVALUE_TURNOVER_TYPE_CHECK_OUT, _
-                        TURNOVER_STYLE:=MyPosXAuto.Decls.CIVALUE_TURNOVER_STYLE_SOLD, _
+                        TURNOVER_TYPE:=turnoverType, _
+                        TURNOVER_STYLE:=turnoverStyle, _
                         SUPPLIER_ID:=String.Empty, _
                         CLIENT_ID:=Me._manifest.Label_ClientID.Text, _
                         TURNOVER_CONSIGN_STATUS:=MyPosXAuto.Decls.CIVALUE_TURNOVER_CONSIGN_STATUS_DONE, _
                         BALANCE_STATUS:=MyPosXAuto.Decls.CIVALUE_BALANCE_STATUS_DONE, _
                         REMARK:=String.Empty, _
                         DELIVERY_DETAIL:=String.Empty, _
-                        EXTRA_DISCOUNT:=Me._manifest.CalcEdit_ExtraDiscount.Value, _
+                        EXTRA_DISCOUNT:=extraDiscount, _
                         DELIVERY_CHARGE:=0, _
                         RELIEF_PAIR_ID:=String.Empty, _
                         STAFF_SHARE_RATE:=0, _
@@ -594,9 +613,9 @@ Namespace Business
                         BATCH_INDEX:=0, _
                         HEADQUATER_MERGED_CODE:=String.Empty, _
                         REPLACE_INVENTORY_ID:=String.Empty, _
-                        POINT_GAIN:=CommTK.FInteger(Me._manifest.Label_AquiringPoints.Text), _
+                        POINT_GAIN:=pointGain, _
                         POINT_TO_RMB_RATE:=CommTK.FDecimal(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_POINTS_TO_RMB_RATE)), _
-                        POINT_USE:=CommTK.FInteger(Me._manifest.CalcEdit_UsePoint.Value), _
+                        POINT_USE:=pointUse, _
                         RMB_TO_POINT_RATE:=CommTK.FDecimal(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_RMB_TO_POINTS_RATE)))
 
                     For Each bindingRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow In Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST
@@ -611,19 +630,19 @@ Namespace Business
 
                 Dim turnoverCacheDataRow = Me._manifest.SVFT_CACHE_DATA_TURNOVER_LIST.AddNewXV_H_MP_TURNOVERRow( _
                     TURNOVER_ID:=Guid.NewGuid.ToString, _
-                    TURNOVER_CODE:=String.Empty, _
+                    TURNOVER_CODE:=MyPosXService.Facade.OpBizTurnover.GetAutoLocalTurnoverCode(False, turnoverType, SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_CURRENT_POS_ID)), _
                     TURNOVER_TIME:=CommTK.GetSyncServerTime, _
                     POS_ID:=SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_CURRENT_POS_ID), _
                     STAFF_ID:=Utils.Decls.LOGIN_STAFF_ID, _
-                    TURNOVER_TYPE:=MyPosXAuto.Decls.CIVALUE_TURNOVER_TYPE_CHECK_OUT, _
-                    TURNOVER_STYLE:=MyPosXAuto.Decls.CIVALUE_TURNOVER_STYLE_SOLD, _
+                    TURNOVER_TYPE:=turnoverType, _
+                    TURNOVER_STYLE:=turnoverStyle, _
                     SUPPLIER_ID:=String.Empty, _
                     CLIENT_ID:=Me._manifest.Label_ClientID.Text, _
                     TURNOVER_CONSIGN_STATUS:=MyPosXAuto.Decls.CIVALUE_TURNOVER_CONSIGN_STATUS_DONE, _
                     BALANCE_STATUS:=MyPosXAuto.Decls.CIVALUE_BALANCE_STATUS_DONE, _
                     REMARK:=String.Empty, _
                     DELIVERY_DETAIL:=String.Empty, _
-                    EXTRA_DISCOUNT:=Me._manifest.CalcEdit_ExtraDiscount.Value, _
+                    EXTRA_DISCOUNT:=extraDiscount, _
                     DELIVERY_CHARGE:=0, _
                     RELIEF_PAIR_ID:=String.Empty, _
                     STAFF_SHARE_RATE:=0, _
@@ -656,9 +675,9 @@ Namespace Business
                     TURNOVER_STYLE_TEXT:=String.Empty, _
                     TURNOVER_TYPE_TEXT:=String.Empty, _
                     WORK_PHONE:=String.Empty, _
-                    POINT_GAIN:=CommTK.FInteger(Me._manifest.Label_AquiringPoints.Text), _
+                    POINT_GAIN:=pointGain, _
                     POINT_TO_RMB_RATE:=CommTK.FDecimal(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_POINTS_TO_RMB_RATE)), _
-                    POINT_USE:=CommTK.FInteger(Me._manifest.CalcEdit_UsePoint.Value), _
+                    POINT_USE:=pointUse, _
                     RMB_TO_POINT_RATE:=CommTK.FDecimal(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_RMB_TO_POINTS_RATE)))
 
                 Dim turnoverDtlCacheDataRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow
@@ -1182,34 +1201,38 @@ Namespace Business
 
 
             Try
+                If MyPosXService.Decls.IS_SYSTEM_ONLINE = False Then
+                    Return MyPosXService.Decls.MSG_ALERT_00065
+                End If
 
-
-                Dim turnoverRowSEntity As New MyPosXAuto.FTs.FT_XV_H_MP_TURNOVERRowSEntity
                 Dim turnoverCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_H_MP_TURNOVER(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
                 Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.Clear()
                 Dim turnoverDtlCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_H_MP_TURNOVER_DTL(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
                 turnoverDtlCondition.Add(MyPosXAuto.Facade.AfXV.XV_H_MP_TURNOVER_DTLColumns.TURNOVER_IDColumn, "=", Me._manifest.SV_RETURN_RELIEF_TURNOVER_ROW_SE.TURNOVER_ID)
 
                 turnoverCondition.Add(MyPosXAuto.Facade.AfXV.XV_H_MP_TURNOVERColumns.TURNOVER_IDColumn, "=", Me._manifest.SV_RETURN_RELIEF_TURNOVER_ROW_SE.TURNOVER_ID)
-                MyPosXAuto.Facade.AfBizTurnover.FillH_MP_TURNOVERRowSEntity(Me._manifest.SV_RETURN_RELIEF_TURNOVER_ROW_SE, Me._manifest.SV_RETURN_RELIEF_TURNOVER_ROW_SE.TURNOVER_ID)
 
-                If Me._manifest.SV_RETURN_RELIEF_FORM_USING_CACHE_DATA = False Then
-                    MyPosXAuto.Facade.AfXV.FillXV_H_MP_TURNOVERRowSEntity(turnoverRowSEntity, turnoverCondition)
-                    MyPosXAuto.Facade.AfXV.FillFT_XV_H_MP_TURNOVER_DTL( _
+                MyPosXAuto.Facade.AfXV.FillFT_XV_H_MP_TURNOVER_DTL( _
                         turnoverDtlCondition, _
                         Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST)
-                Else
-                    Dim cacheTurnoverRow = Me._manifest.SVFT_CACHE_DATA_TURNOVER_LIST.FindRowByCondition(turnoverCondition)
-                    Dim cacheTurnoverDtlRows = Me._manifest.SVFT_CACHE_DATE_TURNOVER_DTL_LIST.FindRowsByCondition(turnoverDtlCondition)
-                    Dim bindingRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow
-                    cacheTurnoverRow.FillSEntity(turnoverRowSEntity)
-                    For Each cacheTurnoverDtlRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow In cacheTurnoverDtlRows
-                        bindingRow = Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.NewXV_H_MP_TURNOVER_DTLRow
-                        Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.AddXV_H_MP_TURNOVER_DTLRow(bindingRow)
-                        bindingRow.CloneDataRow(cacheTurnoverDtlRow)
-                    Next
 
-                End If
+                MyPosXAuto.Facade.AfBizTurnover.FillH_MP_TURNOVERRowSEntity(Me._manifest.SV_RETURN_RELIEF_TURNOVER_ROW_SE, Me._manifest.SV_RETURN_RELIEF_TURNOVER_ROW_SE.TURNOVER_ID)
+
+                Me._manifest.CalcEdit_ExtraDiscount.Value = Me._manifest.SV_RETURN_RELIEF_TURNOVER_ROW_SE.EXTRA_DISCOUNT
+                Me._manifest.CalcEdit_UsePoint.Value = Me._manifest.SV_RETURN_RELIEF_TURNOVER_ROW_SE.POINT_USE
+                Me._manifest.Label_AquiringPoints.Text = CommTK.FString(Me._manifest.SV_RETURN_RELIEF_TURNOVER_ROW_SE.POINT_GAIN, False, "#,##0.00")
+
+                'Else
+                '    Dim cacheTurnoverRow = Me._manifest.SVFT_CACHE_DATA_TURNOVER_LIST.FindRowByCondition(turnoverCondition)
+                '    Dim cacheTurnoverDtlRows = Me._manifest.SVFT_CACHE_DATE_TURNOVER_DTL_LIST.FindRowsByCondition(turnoverDtlCondition)
+                '    Dim bindingRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow
+                '    cacheTurnoverRow.FillSEntity(turnoverRowSEntity)
+                '    For Each cacheTurnoverDtlRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow In cacheTurnoverDtlRows
+                '        bindingRow = Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.NewXV_H_MP_TURNOVER_DTLRow
+                '        Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.AddXV_H_MP_TURNOVER_DTLRow(bindingRow)
+                '        bindingRow.CloneDataRow(cacheTurnoverDtlRow)
+                '    Next
+
 
                 For Each bindingRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow In Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST
                     bindingRow.ROW_REMARK = CommTK.FString(bindingRow.WARE_AMOUNT)
