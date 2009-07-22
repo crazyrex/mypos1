@@ -1188,9 +1188,10 @@ Namespace Business
                 Dim turnoverCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_H_MP_TURNOVER(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
                 Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.Clear()
                 Dim turnoverDtlCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_H_MP_TURNOVER_DTL(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
-                turnoverDtlCondition.Add(MyPosXAuto.Facade.AfXV.XV_H_MP_TURNOVER_DTLColumns.TURNOVER_IDColumn, "=", turnoverRowSEntity.TURNOVER_ID)
+                turnoverDtlCondition.Add(MyPosXAuto.Facade.AfXV.XV_H_MP_TURNOVER_DTLColumns.TURNOVER_IDColumn, "=", Me._manifest.SV_RETURN_RELIEF_TURNOVER_ROW_SE.TURNOVER_ID)
 
-                turnoverCondition.Add(MyPosXAuto.Facade.AfXV.XV_H_MP_TURNOVERColumns.TURNOVER_IDColumn, "=", Me._manifest.SV_RETURN_RELIEF_FORM_ID)
+                turnoverCondition.Add(MyPosXAuto.Facade.AfXV.XV_H_MP_TURNOVERColumns.TURNOVER_IDColumn, "=", Me._manifest.SV_RETURN_RELIEF_TURNOVER_ROW_SE.TURNOVER_ID)
+                MyPosXAuto.Facade.AfBizTurnover.FillH_MP_TURNOVERRowSEntity(Me._manifest.SV_RETURN_RELIEF_TURNOVER_ROW_SE, Me._manifest.SV_RETURN_RELIEF_TURNOVER_ROW_SE.TURNOVER_ID)
 
                 If Me._manifest.SV_RETURN_RELIEF_FORM_USING_CACHE_DATA = False Then
                     MyPosXAuto.Facade.AfXV.FillXV_H_MP_TURNOVERRowSEntity(turnoverRowSEntity, turnoverCondition)
