@@ -567,38 +567,40 @@ Namespace Business
 
                 If Me._manifest.SV_IS_DB_ONLINE = True Then
 
-                    Dim turnoverID = Guid.NewGuid.ToString
-                    MyPosXAuto.Facade.AfBizTurnover.CreateH_MP_TURNOVERInfo( _
-                    TURNOVER_ID:=turnoverID, _
-                    TURNOVER_CODE:=MyPosXService.Facade.OpBizTurnover.GetAutoTransferCode( _
+                    Me._manifest.SV_PRINTING_TURNOVER_CODE = MyPosXService.Facade.OpBizTurnover.GetAutoTransferCode( _
                         False, _
                         SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_CURRENT_POS_ID), _
-                        MyPosXAuto.Decls.CIVALUE_TURNOVER_STYLE_SOLD), _
-                    TURNOVER_TIME:=CommTK.GetSyncServerTime, _
-                    POS_ID:=SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_CURRENT_POS_ID), _
-                    STAFF_ID:=Utils.Decls.LOGIN_STAFF_ID, _
-                    TURNOVER_TYPE:=MyPosXAuto.Decls.CIVALUE_TURNOVER_TYPE_CHECK_OUT, _
-                    TURNOVER_STYLE:=MyPosXAuto.Decls.CIVALUE_TURNOVER_STYLE_SOLD, _
-                    SUPPLIER_ID:=String.Empty, _
-                    CLIENT_ID:=Me._manifest.Label_ClientID.Text, _
-                    TURNOVER_CONSIGN_STATUS:=MyPosXAuto.Decls.CIVALUE_TURNOVER_CONSIGN_STATUS_DONE, _
-                    BALANCE_STATUS:=MyPosXAuto.Decls.CIVALUE_BALANCE_STATUS_DONE, _
-                    REMARK:=String.Empty, _
-                    DELIVERY_DETAIL:=String.Empty, _
-                    EXTRA_DISCOUNT:=Me._manifest.CalcEdit_ExtraDiscount.Value, _
-                    DELIVERY_CHARGE:=0, _
-                    RELIEF_PAIR_ID:=String.Empty, _
-                    STAFF_SHARE_RATE:=0, _
-                    CONSIGN_DUE_DATE:=CommTK.GetSyncServerTime, _
-                    BATCH_INDEX:=0, _
-                    HEADQUATER_MERGED_CODE:=String.Empty, _
-                    REPLACE_INVENTORY_ID:=String.Empty, _
-                    POINT_GAIN:=CommTK.FInteger(Me._manifest.Label_AquiringPoints.Text), _
-                    POINT_TO_RMB_RATE:=CommTK.FDecimal(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_POINTS_TO_RMB_RATE)), _
-                    POINT_USE:=CommTK.FInteger(Me._manifest.CalcEdit_UsePoint.Value), _
-                    RMB_TO_POINT_RATE:=CommTK.FDecimal(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_RMB_TO_POINTS_RATE)))
+                         MyPosXAuto.Decls.CIVALUE_TURNOVER_STYLE_SOLD)
+                    Dim turnoverID = Guid.NewGuid.ToString
+                    MyPosXAuto.Facade.AfBizTurnover.CreateH_MP_TURNOVERInfo( _
+                        TURNOVER_ID:=turnoverID, _
+                        TURNOVER_CODE:=Me._manifest.SV_PRINTING_TURNOVER_CODE, _
+                        TURNOVER_TIME:=CommTK.GetSyncServerTime, _
+                        POS_ID:=SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_CURRENT_POS_ID), _
+                        STAFF_ID:=Utils.Decls.LOGIN_STAFF_ID, _
+                        TURNOVER_TYPE:=MyPosXAuto.Decls.CIVALUE_TURNOVER_TYPE_CHECK_OUT, _
+                        TURNOVER_STYLE:=MyPosXAuto.Decls.CIVALUE_TURNOVER_STYLE_SOLD, _
+                        SUPPLIER_ID:=String.Empty, _
+                        CLIENT_ID:=Me._manifest.Label_ClientID.Text, _
+                        TURNOVER_CONSIGN_STATUS:=MyPosXAuto.Decls.CIVALUE_TURNOVER_CONSIGN_STATUS_DONE, _
+                        BALANCE_STATUS:=MyPosXAuto.Decls.CIVALUE_BALANCE_STATUS_DONE, _
+                        REMARK:=String.Empty, _
+                        DELIVERY_DETAIL:=String.Empty, _
+                        EXTRA_DISCOUNT:=Me._manifest.CalcEdit_ExtraDiscount.Value, _
+                        DELIVERY_CHARGE:=0, _
+                        RELIEF_PAIR_ID:=String.Empty, _
+                        STAFF_SHARE_RATE:=0, _
+                        CONSIGN_DUE_DATE:=CommTK.GetSyncServerTime, _
+                        BATCH_INDEX:=0, _
+                        HEADQUATER_MERGED_CODE:=String.Empty, _
+                        REPLACE_INVENTORY_ID:=String.Empty, _
+                        POINT_GAIN:=CommTK.FInteger(Me._manifest.Label_AquiringPoints.Text), _
+                        POINT_TO_RMB_RATE:=CommTK.FDecimal(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_POINTS_TO_RMB_RATE)), _
+                        POINT_USE:=CommTK.FInteger(Me._manifest.CalcEdit_UsePoint.Value), _
+                        RMB_TO_POINT_RATE:=CommTK.FDecimal(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_RMB_TO_POINTS_RATE)))
 
                     For Each bindingRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow In Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST
+                        bindingRow.DETAIL_ID = Guid.NewGuid.ToString
                         bindingRow.TURNOVER_ID = turnoverID
                     Next
 
@@ -686,7 +688,8 @@ Namespace Business
 
                 'If servResult.Length > 0 Then                                      
                 '    Return servResult                                              
-                'End If                                                             
+                'End If       
+
 
             Catch ex As XL.Common.Utils.XLException
 
@@ -1103,9 +1106,7 @@ Namespace Business
 
                 Dim report As New Reports.R_02_01001
 
-                'Dim report As New Reports.R_02_01001_PurchaseList
-
-                'report.DataSource = Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST
+                report.DataSource = Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST
 
                 'Dim sumPriceInT As Decimal = 0
                 'Dim unitPriceInT As Decimal = 0
@@ -1120,10 +1121,21 @@ Namespace Business
                 '    currentAmountInT += bindingRow.CURRENT_AMOUNT
                 'Next
 
-                'report.XrTableCell_SumPriceInT.Text += CommTK.FString(sumPriceInT)
-                'report.XrTableCell_UnitPriceInT.Text += CommTK.FString(unitPriceInT)
-                'report.XrTableCell_WareAmountInT.Text += CommTK.FString(wareAmountInT)
-                'report.XrTableCell_CurrentAmountInT.Text += CommTK.FString(currentAmountInT)
+                Dim staffRow As MyPosXAuto.FTs.FT_M_STAFFRow = _
+                    MyPosXAuto.Facade.AfBasicMaster.GetM_STAFFRow(Utils.Decls.LOGIN_STAFF_ID)
+
+                If IsNothing(staffRow) = True Then
+                    Return String.Empty
+                End If
+
+                report.XrLabel_TurnoverCode.Text = Me._manifest.SV_PRINTING_TURNOVER_CODE
+                report.XrLabel_BranchName.Text = Utils.Decls.CURRENT_POS_ROW.POS_NAME
+                report.XrLabel_Operator.Text = String.Format(" <{0}> {1} ", _
+                        staffRow.STAFF_CODE, _
+                        staffRow.STAFF_NAME)
+
+                report.XrLabel_TotalMoney.Text = CommTK.FString(Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.Compute("Sum(SUM_PRICE)", String.Empty), False, "#,##0.00")
+
 
                 report.CreateDataBindings()
                 report.Print()

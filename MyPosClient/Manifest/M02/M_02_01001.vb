@@ -34,6 +34,7 @@ Namespace Manifest
         '-------------------------------------------------------------------
         Public SV_POS_SET_ROWSE As New MyPosXAuto.FTs.FT_S_MP_POS_SETRowSEntity
         Public SV_RETURN_RELIEF_FORM_ID As String = String.Empty
+        Public SV_PRINTING_TURNOVER_CODE As String = String.Empty
         Public SV_RETURN_RELIEF_FORM_USING_CACHE_DATA As Boolean
         Public SV_IS_DB_ONLINE As Boolean = True
         'Public SV_UTLD_0004 As String ="SV_UTLD_0004"
@@ -352,17 +353,22 @@ Namespace Manifest
                 Return MyPosXService.Decls.MSG_ALERT_00065
             End If
 
-            Dim amountExceedExists As Boolean = False
-            Me.SVFT_BINDING_TURNOVER_DTL_LIST.ResetRowHighlighting()
-            For Each bindingRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow In Me.SVFT_BINDING_TURNOVER_DTL_LIST
-                If bindingRow.WARE_AMOUNT > CommTK.FDecimal(bindingRow.ROW_REMARK) Then
-                    bindingRow.ROW_HIGHLIGHT = MyPosXService.Decls.ROW_HIGHLIGHT_RETURN_AMOUNT_EXCEED
-                    amountExceedExists = True
-                End If
-            Next
+            If Me.SV_RETURN_RELIEF_FORM_ID.Length > 0 Then
 
-            If amountExceedExists = True Then
-                Return MyPosXService.Decls.MSG_ALERT_00007
+
+                Dim amountExceedExists As Boolean = False
+                Me.SVFT_BINDING_TURNOVER_DTL_LIST.ResetRowHighlighting()
+                For Each bindingRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow In Me.SVFT_BINDING_TURNOVER_DTL_LIST
+                    If bindingRow.WARE_AMOUNT > CommTK.FDecimal(bindingRow.ROW_REMARK) Then
+                        bindingRow.ROW_HIGHLIGHT = MyPosXService.Decls.ROW_HIGHLIGHT_RETURN_AMOUNT_EXCEED
+                        amountExceedExists = True
+                    End If
+                Next
+
+                If amountExceedExists = True Then
+                    Return MyPosXService.Decls.MSG_ALERT_00007
+                End If
+
             End If
 
             Return String.Empty
@@ -414,12 +420,14 @@ Namespace Manifest
                     Me.IsSaved = False
 
                 Case Business.B_02_01001.Affairs.SaveInfo
-
+                    Me.TbActionPurchaseList()
                     Me.ShowStatusMessage(StatusMessageIcon.Okay, MyPosXService.Decls.MSG_STATUS_0007)
                     Me.SV_RETURN_RELIEF_FORM_ID = String.Empty
                     Me.DoPrivateUpdateCacheStatus()
                     Me.DoPrivateUpdateTitleByReturnStatus()
                     Me.IA_ClearContent(True)
+
+
 
             End Select
         End Sub
