@@ -1127,18 +1127,9 @@ Namespace Business
 
                 report.DataSource = Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST
 
-                'Dim sumPriceInT As Decimal = 0
-                'Dim unitPriceInT As Decimal = 0
-                'Dim wareAmountInT As Decimal = 0
-                'Dim currentAmountInT As Double = 0
-
-                'For Each bindingRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow In Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST
-
-                '    sumPriceInT += bindingRow.SUM_PRICE
-                '    unitPriceInT += bindingRow.UNIT_PRICE
-                '    wareAmountInT += bindingRow.WARE_AMOUNT
-                '    currentAmountInT += bindingRow.CURRENT_AMOUNT
-                'Next
+                If IsDBNull(Me._manifest.SV_RETURN_RELIEF_TURNOVER_ROW_SE) = False Then
+                    report.XrLabel_ReturnTurnoverCode.Text = Me._manifest.SV_RETURN_RELIEF_TURNOVER_ROW_SE.TURNOVER_CODE
+                End If
 
                 Dim staffRow As MyPosXAuto.FTs.FT_M_STAFFRow = _
                     MyPosXAuto.Facade.AfBasicMaster.GetM_STAFFRow(Utils.Decls.LOGIN_STAFF_ID)
@@ -1154,7 +1145,6 @@ Namespace Business
                         staffRow.STAFF_NAME)
 
                 report.XrLabel_TotalMoney.Text = CommTK.FString(Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.Compute("Sum(SUM_PRICE)", String.Empty), False, "#,##0.00")
-
 
                 report.CreateDataBindings()
                 report.Print()
