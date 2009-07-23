@@ -364,7 +364,7 @@ Namespace Manifest
                 Dim amountExists As Boolean = False
                 Me.SVFT_BINDING_TURNOVER_DTL_LIST.ResetRowHighlighting()
 
-                For Each bindingRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow In Me.SVFT_BINDING_TURNOVER_DTL_LIST
+                For Each bindingRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow In Me.SVFT_BINDING_TURNOVER_DTL_LIST.FindRowsByCondition(Nothing)
                     If bindingRow.WARE_AMOUNT > 0 Then
                         amountExists = True
                     End If

@@ -56,9 +56,9 @@
             Dim StyleFormatCondition1 As DevExpress.XtraGrid.StyleFormatCondition = New DevExpress.XtraGrid.StyleFormatCondition
             Dim CTag12 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Me.ToolStrip_Form = New System.Windows.Forms.ToolStrip
+            Me.ToolStripButton_Choose = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_Create = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_ShowFilter = New System.Windows.Forms.ToolStripButton
-            Me.ToolStripButton_Choose = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_Delete = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_Refresh = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_View = New System.Windows.Forms.ToolStripButton
@@ -102,7 +102,7 @@
             '
             'DefaultLookAndFeel_Form
             '
-            Me.DefaultLookAndFeel_Form.LookAndFeel.SkinName = ""
+            Me.DefaultLookAndFeel_Form.LookAndFeel.SkinName = "Money Twins"
             '
             'Timer_Surveillant
             '
@@ -139,6 +139,13 @@
             CTag1.ValueType = XL.Common.ControlValueType.Character
             Me.ToolStrip_Form.Tag = CTag1
             '
+            'ToolStripButton_Choose
+            '
+            Me.ToolStripButton_Choose.Name = "ToolStripButton_Choose"
+            Me.ToolStripButton_Choose.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Choose.Text = "选择"
+            Me.ToolStripButton_Choose.Visible = False
+            '
             'ToolStripButton_Create
             '
             Me.ToolStripButton_Create.Name = "ToolStripButton_Create"
@@ -150,13 +157,6 @@
             Me.ToolStripButton_ShowFilter.Name = "ToolStripButton_ShowFilter"
             Me.ToolStripButton_ShowFilter.Size = New System.Drawing.Size(57, 22)
             Me.ToolStripButton_ShowFilter.Text = "筛选条件"
-            '
-            'ToolStripButton_Choose
-            '
-            Me.ToolStripButton_Choose.Name = "ToolStripButton_Choose"
-            Me.ToolStripButton_Choose.Size = New System.Drawing.Size(33, 22)
-            Me.ToolStripButton_Choose.Text = "选择"
-            Me.ToolStripButton_Choose.Visible = False
             '
             'ToolStripButton_Delete
             '
@@ -406,7 +406,7 @@
             Me.Label2.Font = New System.Drawing.Font("Arial", 9.0!)
             Me.Label2.ForeColor = System.Drawing.Color.Black
             Me.Label2.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.Label2.Location = New System.Drawing.Point(231, 12)
+            Me.Label2.Location = New System.Drawing.Point(232, 13)
             Me.Label2.Name = "Label2"
             Me.Label2.Size = New System.Drawing.Size(21, 15)
             Me.Label2.TabIndex = 10000
@@ -443,7 +443,7 @@
             Me.Label3.Font = New System.Drawing.Font("Arial", 9.0!)
             Me.Label3.ForeColor = System.Drawing.Color.Black
             Me.Label3.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.Label3.Location = New System.Drawing.Point(7, 40)
+            Me.Label3.Location = New System.Drawing.Point(8, 41)
             Me.Label3.Name = "Label3"
             Me.Label3.Size = New System.Drawing.Size(31, 15)
             Me.Label3.TabIndex = 10000
@@ -480,7 +480,7 @@
             Me.Label1.Font = New System.Drawing.Font("Arial", 9.0!)
             Me.Label1.ForeColor = System.Drawing.Color.Black
             Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.Label1.Location = New System.Drawing.Point(7, 13)
+            Me.Label1.Location = New System.Drawing.Point(8, 14)
             Me.Label1.Name = "Label1"
             Me.Label1.Size = New System.Drawing.Size(61, 15)
             Me.Label1.TabIndex = 10000
