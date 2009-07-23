@@ -261,7 +261,7 @@ Namespace Manifest
                     Dim optionForm As XForm.Manifest.M_ReportOptions = CType(popupForm, XForm.Manifest.M_ReportOptions)
                     
                     If optionForm.SV_SELECTING_OPTION Is Me.SV_REPORT_TURNOVER_DTL_LIST Then
-                        Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.PrintTurnoverDtlList, False)
+                        Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.PrintPurchaseList, False)
                     End If
 
                 Case "TbActionReturn"
@@ -361,18 +361,17 @@ Namespace Manifest
 
             If Me.SV_RETURN_RELIEF_TURNOVER_ROW_SE.IsNull = False Then
 
-
-                Dim amountExceedExists As Boolean = False
+                Dim amountExists As Boolean = False
                 Me.SVFT_BINDING_TURNOVER_DTL_LIST.ResetRowHighlighting()
+
                 For Each bindingRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow In Me.SVFT_BINDING_TURNOVER_DTL_LIST
-                    If bindingRow.WARE_AMOUNT > CommTK.FDecimal(bindingRow.ROW_REMARK) Then
-                        bindingRow.ROW_HIGHLIGHT = MyPosXService.Decls.ROW_HIGHLIGHT_RETURN_AMOUNT_EXCEED
-                        amountExceedExists = True
+                    If bindingRow.WARE_AMOUNT > 0 Then
+                        amountExists = True
                     End If
                 Next
 
-                If amountExceedExists = True Then
-                    Return MyPosXService.Decls.MSG_ALERT_00007
+                If amountExists = False Then
+                    Return MyPosXService.Decls.MSG_ALERT_00066
                 End If
 
             End If
@@ -427,7 +426,7 @@ Namespace Manifest
 
                 Case Business.B_02_01001.Affairs.SaveInfo
 
-                    Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.PrintTurnoverDtlList, False)
+                    Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.PrintPurchaseList, False)
                     Me.ShowStatusMessage(StatusMessageIcon.Okay, MyPosXService.Decls.MSG_STATUS_0007, Me.SV_PRINTING_TURNOVER_CODE)
                     Me.SV_RETURN_RELIEF_TURNOVER_ROW_SE.Reset()
                     Me.DoPrivateUpdateCacheStatus()
