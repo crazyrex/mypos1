@@ -182,6 +182,7 @@ Namespace Manifest
 
             Me.ButtonEdit_WareCode.Select()
 
+
             If clearFields = False Then
                 Return
             End If
@@ -195,6 +196,7 @@ Namespace Manifest
             Me.CalcEdit_UsePoint.Value = 0
             Me.Label_AquiringPoints.ResetText()
             Me.Label_Change.ResetText()
+            Me.Label_Payable.ResetText()
             Me.Label_HoldingPoint.ResetText()
             Me.Label_TotalDiscount.ResetText()
             Me.Label_TotalPrice.ResetText()
@@ -281,11 +283,11 @@ Namespace Manifest
         Protected Overrides Sub IA_SavedModeChanged(ByVal savedMode As Boolean)
 
             If Me.IsSaved = True Then
-                Me.ToolStripButton_PurchaseList.Enabled = False
+                Me.ToolStripButton_PurchaseList.Enabled = True
                 Me.ToolStripButton_Return.Enabled = False
                 Me.ToolStripButton_Save.Enabled = False
             Else
-                Me.ToolStripButton_PurchaseList.Enabled = True
+                Me.ToolStripButton_PurchaseList.Enabled = False
                 Me.ToolStripButton_Return.Enabled = True
                 Me.ToolStripButton_Save.Enabled = True
             End If
@@ -569,6 +571,13 @@ Namespace Manifest
                 Return
             End If
 
+            Me.SV_RETURN_RELIEF_TURNOVER_ROW_SE.Reset()
+            Me.CheckEdit_IsClient.Enabled = True
+            Me.CheckEdit_IsClient.Checked = False
+            Me.CalcEdit_ExtraDiscount.Enabled = True
+            Me.CalcEdit_Payment.Enabled = True
+
+
             Me.IA_ClearContent(True)
         End Sub
 
@@ -814,6 +823,7 @@ Namespace Manifest
                 operationStatusBuilder.AppendFormat("退货")
                 operationStatusBuilder.AppendFormat(Me.SV_RETURN_RELIEF_TURNOVER_ROW_SE.TURNOVER_CODE)
                 Me.CheckEdit_IsClient.Enabled = False
+                Me.TextEdit_ClientCode.Properties.ReadOnly = False
                 Me.GridColumn_Remark.Visible = True
                 Me.GridColumn_WareAmount.OptionsColumn.AllowFocus = True
                 Me.Label_OperationStatus.Text = operationStatusBuilder.ToString
@@ -825,6 +835,7 @@ Namespace Manifest
             Else
                 Me.SetSubTitle("零售操作")
                 Me.CheckEdit_IsClient.Enabled = True
+                Me.TextEdit_ClientCode.Enabled = True
                 Me.GridColumn_Remark.Visible = False
                 Me.GridColumn_WareAmount.OptionsColumn.AllowFocus = False
                 Me.Label_OperationStatus.Text = String.Empty
