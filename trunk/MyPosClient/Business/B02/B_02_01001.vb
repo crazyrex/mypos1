@@ -1132,7 +1132,7 @@ Namespace Business
                 End If
 
                 Dim staffRow As MyPosXAuto.FTs.FT_M_STAFFRow = _
-                    MyPosXAuto.Facade.AfBasicMaster.GetM_STAFFRow(Utils.Decls.LOGIN_STAFF_ID)
+                    MyPosXAuto.Facade.AfBizMaster.GetM_STAFFRow(Utils.Decls.LOGIN_STAFF_ID)
 
                 If IsNothing(staffRow) = True Then
                     Return String.Empty

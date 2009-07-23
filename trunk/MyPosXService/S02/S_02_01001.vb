@@ -118,7 +118,7 @@ Public Class S_02_01001
 
             XL.Common.Utils.SysInfo.SetShareTRSysInfo(AddressOf Facade.OpSysConfig.GetSysValue, AddressOf Facade.OpSysConfig.SetSysValue)
 
-            MyPosXAuto.Facade.AfBasicMaster.FillM_STAFFRowSEntity(refStaffRowSE, valLoginStaffID)
+            MyPosXAuto.Facade.AfBizMaster.FillM_STAFFRowSEntity(refStaffRowSE, valLoginStaffID)
 
 
             refSysWareSpecModelDiscard = CommTK.FBoolean(SysInfo.ReadShareSysInfo(Decls.SVN_WARE_SPEC_MODEL_DISCARD))
