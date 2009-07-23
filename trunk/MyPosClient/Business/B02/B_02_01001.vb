@@ -1238,9 +1238,23 @@ Namespace Business
                 '        bindingRow.CloneDataRow(cacheTurnoverDtlRow)
                 '    Next
 
+                Dim returnTotalCondition As New MyPosXAuto.Facade.AfMV.ConditionOfMV_MP_TURNOVER_WARE_RETURN_TOTAL(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+                returnTotalCondition.Add(MyPosXAuto.Facade.AfMV.MV_MP_TURNOVER_WARE_RETURN_TOTALColumns.TURNOVER_IDColumn, "=", Me._manifest.SV_RETURN_RELIEF_TURNOVER_ROW_SE.TURNOVER_ID)
+                Dim returnTotalList As New MyPosXAuto.FTs.FT_MV_MP_TURNOVER_WARE_RETURN_TOTAL
+                Dim returnTotalRow As MyPosXAuto.FTs.FT_MV_MP_TURNOVER_WARE_RETURN_TOTALRow
+                MyPosXAuto.Facade.AfMV.FillFT_MV_MP_TURNOVER_WARE_RETURN_TOTAL(returnTotalCondition, returnTotalList)
 
+                Dim returnTotalWareAmount As Decimal
                 For Each bindingRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow In Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST
-                    bindingRow.ROW_REMARK = CommTK.FString(bindingRow.WARE_AMOUNT)
+                    returnTotalCondition.Clear()
+                    returnTotalCondition.Add(MyPosXAuto.Facade.AfMV.MV_MP_TURNOVER_WARE_RETURN_TOTALColumns.WARE_IDColumn, "=", bindingRow.WARE_ID)
+
+                    returnTotalRow = returnTotalList.FindRowByCondition(returnTotalCondition)
+                    returnTotalWareAmount = 0
+                    If IsNothing(returnTotalRow) = False Then
+                        returnTotalWareAmount = returnTotalRow.WARE_AMOUNT
+                    End If
+                    bindingRow.ROW_REMARK = CommTK.FString(bindingRow.WARE_AMOUNT - returnTotalWareAmount)
                     bindingRow.WARE_AMOUNT = 0
                 Next
 
