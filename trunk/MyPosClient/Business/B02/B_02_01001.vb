@@ -618,15 +618,19 @@ Namespace Business
                         POINT_USE:=pointUse, _
                         RMB_TO_POINT_RATE:=CommTK.FDecimal(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_RMB_TO_POINTS_RATE)))
 
+                    Dim dbTurnoverDtlList As New MyPosXAuto.FTs.FT_H_MP_TURNOVER_DTL
+                    Dim dbTurnoverDtlRow As MyPosXAuto.FTs.FT_H_MP_TURNOVER_DTLRow
+
                     For Each bindingRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow In Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.FindRowsByCondition(Nothing)
-                        bindingRow.DETAIL_ID = Guid.NewGuid.ToString
-                        bindingRow.TURNOVER_ID = turnoverID
+                        dbTurnoverDtlRow = dbTurnoverDtlList.NewH_MP_TURNOVER_DTLRow
+                        dbTurnoverDtlList.AddH_MP_TURNOVER_DTLRow(dbTurnoverDtlRow)
+
+                        dbTurnoverDtlRow.CloneDataRow(bindingRow)
+                        dbTurnoverDtlRow.DETAIL_ID = Guid.NewGuid.ToString
+                        dbTurnoverDtlRow.TURNOVER_ID = turnoverID
                     Next
 
-                    MyPosXAuto.Facade.AfBizTurnover.SaveBatchH_MP_TURNOVER_DTLData( _
-                        Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST)
-
-
+                    MyPosXAuto.Facade.AfBizTurnover.SaveBatchH_MP_TURNOVER_DTLData(dbTurnoverDtlList)
                     MyPosXService.Facade.OpBizTurnover.UpdateTurnoverPointsIO()
 
                     Return String.Empty
