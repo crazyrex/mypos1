@@ -912,10 +912,11 @@ Namespace Business
                 Dim pointToRMBRate = CommTK.FDecimal(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_POINTS_TO_RMB_RATE))
                 Dim rmbToPointRate = CommTK.FDecimal(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_RMB_TO_POINTS_RATE))
 
-                Dim payable = CommTK.FDecimal(totalPrice - totalDiscount - Me._manifest.CalcEdit_ExtraDiscount.Value - Me._manifest.CalcEdit_UsePoint.Value * pointToRMBRate)
+                Dim payable = _
+                    CommTK.FDecimal(totalPrice - totalDiscount - Me._manifest.CalcEdit_ExtraDiscount.Value - Me._manifest.CalcEdit_UsePoint.Value * pointToRMBRate)
 
                 Me._manifest.Label_Payable.Text = CommTK.FString(payable, False, "#,##0.00")
-                If rmbToPointRate > 0 Then
+                If rmbToPointRate > 0 AndAlso Me._manifest.CheckEdit_IsClient.Checked = True Then
                     Me._manifest.Label_AquiringPoints.Text = CommTK.FString(payable / rmbToPointRate, False, "#,##0.00")
                 Else
                     Me._manifest.Label_AquiringPoints.Text = "0.00"
