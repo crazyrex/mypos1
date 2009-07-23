@@ -625,6 +625,10 @@ Namespace Business
 
                     MyPosXAuto.Facade.AfBizTurnover.SaveBatchH_MP_TURNOVER_DTLData( _
                         Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST)
+
+
+                    MyPosXService.Facade.OpBizTurnover.UpdateTurnoverPointsIO()
+
                     Return String.Empty
                 End If
 
