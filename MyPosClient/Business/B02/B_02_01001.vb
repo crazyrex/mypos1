@@ -77,7 +77,7 @@ Namespace Business
             LoadClientInfoByCode
             UpdateChange
             UploadCacheData
-            PrintTurnoverDtlList
+            PrintPurchaseList
             LoadReturnReliefTurnover
             BizUtld0008
             BizUtld0009
@@ -218,12 +218,12 @@ Namespace Business
                     '-------------------------------------------------------------------
                     functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoUploadCacheData)
 
-                Case Affairs.PrintTurnoverDtlList
+                Case Affairs.PrintPurchaseList
 
                     '
                     '取到处理函数的结果，传入返回给Manifest的AgentResponse包
                     '-------------------------------------------------------------------
-                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoPrintTurnoverDtlList)
+                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoPrintPurchaseList)
 
                 Case Affairs.LoadReturnReliefTurnover
 
@@ -1118,7 +1118,7 @@ Namespace Business
         '''
         '''
         '''-------------------------------------------------------------------
-        Private Function DoPrintTurnoverDtlList() As String
+        Private Function DoPrintPurchaseList() As String
 
 
             Try
@@ -1128,7 +1128,8 @@ Namespace Business
                 report.DataSource = Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST
 
                 If IsDBNull(Me._manifest.SV_RETURN_RELIEF_TURNOVER_ROW_SE) = False Then
-                    report.XrLabel_ReturnTurnoverCode.Text = Me._manifest.SV_RETURN_RELIEF_TURNOVER_ROW_SE.TURNOVER_CODE
+                    report.XrLabel_ReturnTurnoverCode.Text = _
+                        String.Format("退货抵冲:", Me._manifest.SV_RETURN_RELIEF_TURNOVER_ROW_SE.TURNOVER_CODE)
                 End If
 
                 Dim staffRow As MyPosXAuto.FTs.FT_M_STAFFRow = _
@@ -1150,7 +1151,7 @@ Namespace Business
                 report.Print()
 
                 'Dim servResult As String = _
-                '    Me._service.ServPrintTurnoverDtlList()
+                '    Me._service.ServPrintPurchaseList()
 
                 'If servResult.Length > 0 Then
                 '    Return servResult        
