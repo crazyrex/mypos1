@@ -618,7 +618,7 @@ Namespace Business
                         POINT_USE:=pointUse, _
                         RMB_TO_POINT_RATE:=CommTK.FDecimal(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_RMB_TO_POINTS_RATE)))
 
-                    For Each bindingRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow In Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST
+                    For Each bindingRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow In Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.FindRowsByCondition(Nothing)
                         bindingRow.DETAIL_ID = Guid.NewGuid.ToString
                         bindingRow.TURNOVER_ID = turnoverID
                     Next
@@ -685,7 +685,7 @@ Namespace Business
                     RMB_TO_POINT_RATE:=CommTK.FDecimal(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_RMB_TO_POINTS_RATE)))
 
                 Dim turnoverDtlCacheDataRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow
-                For Each bindingRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow In Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST
+                For Each bindingRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow In Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.FindRowsByCondition(Nothing)
 
                     turnoverDtlCacheDataRow = Me._manifest.SVFT_CACHE_DATE_TURNOVER_DTL_LIST.NewXV_H_MP_TURNOVER_DTLRow()
                     Me._manifest.SVFT_CACHE_DATE_TURNOVER_DTL_LIST.AddXV_H_MP_TURNOVER_DTLRow(turnoverDtlCacheDataRow)

@@ -41,7 +41,7 @@ Namespace Manifest
         'Public SV_RPTOPT_LABEL As XForm.ReportOption = Nothing
 
         '读取,显示数据的条件值变量
-        Public SVLM_DEFAULT_CLIENT_ID As String = "SVLM_DEFAULT_CLIENT_ID"
+        Public SVLM_DEFAULT_CLIENT_ID As String = String.Empty
         'Public SVLM_UTLD_0002 As String ="SVLM_UTLD_0002"
 
         '数据列表变量
@@ -360,11 +360,11 @@ Namespace Manifest
                 'Case Business.B_01_00201.Affairs.DeleteInfo
                 '    Me.UpdateDisplay()                     
 
-                'Case Business.B_02_00201.Affairs.LoadList             
-                '    Me.DoPrivateUpdateSelectingRow()               
-                '    Me.GridView_XXXXXList.BestFitColumns()         
+                Case Business.B_03_01201.Affairs.LoadList
+                    Me.DoPrivateUpdateSelectingRow()
+                    Me.GridView_ClientPointIO.BestFitColumns()
 
-                'Case Business.B_02_00202.Affairs.SaveInfo             
+                    'Case Business.B_02_00202.Affairs.SaveInfo             
                     'Window.XLMessageBox.ShowMessage( _                
                     '    MyPosXService.Decls.MSG_OK_00001, _                
                     '    Window.XLMessageBox.MessageType.Information, _

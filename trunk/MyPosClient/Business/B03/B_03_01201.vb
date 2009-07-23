@@ -374,7 +374,8 @@ Namespace Business
 
             Try
 
-                Me._manifest.SVLM_DEFAULT_CLIENT_ID = Me._manifest.SVFR_SELECTING_ROW.CLIENT_ID
+
+
 
                 If Me._manifest.SVLM_DEFAULT_CLIENT_ID.Length > 0 Then
                     Me._manifest.ButtonEdit_ClientCode.Enabled = False
