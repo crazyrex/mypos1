@@ -1217,6 +1217,16 @@ Namespace Business
                 Me._manifest.CalcEdit_UsePoint.Value = Me._manifest.SV_RETURN_RELIEF_TURNOVER_ROW_SE.POINT_USE
                 Me._manifest.Label_AquiringPoints.Text = CommTK.FString(Me._manifest.SV_RETURN_RELIEF_TURNOVER_ROW_SE.POINT_GAIN, False, "#,##0.00")
 
+                If Me._manifest.SV_RETURN_RELIEF_TURNOVER_ROW_SE.CLIENT_ID.Length > 0 Then
+                    Me._manifest.CheckEdit_IsClient.Checked = True
+
+                    Dim clientRowSE As New MyPosXAuto.FTs.FT_M_MP_CLIENTRowSEntity
+                    MyPosXAuto.Facade.AfBizMaster.FillM_MP_CLIENTRowSEntity(clientRowSE, Me._manifest.SV_RETURN_RELIEF_TURNOVER_ROW_SE.CLIENT_ID)
+
+                    Me._manifest.TextEdit_ClientCode.Text = clientRowSE.CLIENT_CODE
+                    Me._manifest.Label_ClientName.Text = clientRowSE.CLIENT_NAME
+                    Me._manifest.Label_ClientID.Text = clientRowSE.CLIENT_ID
+                End If
                 'Else
                 '    Dim cacheTurnoverRow = Me._manifest.SVFT_CACHE_DATA_TURNOVER_LIST.FindRowByCondition(turnoverCondition)
                 '    Dim cacheTurnoverDtlRows = Me._manifest.SVFT_CACHE_DATE_TURNOVER_DTL_LIST.FindRowsByCondition(turnoverDtlCondition)

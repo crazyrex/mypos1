@@ -813,7 +813,7 @@ Namespace Manifest
             If Me.SV_RETURN_RELIEF_TURNOVER_ROW_SE.IsNull = False Then
                 operationStatusBuilder.AppendFormat("退货")
                 operationStatusBuilder.AppendFormat(Me.SV_RETURN_RELIEF_TURNOVER_ROW_SE.TURNOVER_CODE)
-                Me.CheckEdit_IsClient.Visible = True
+                Me.CheckEdit_IsClient.Enabled = False
                 Me.GridColumn_Remark.Visible = True
                 Me.GridColumn_WareAmount.OptionsColumn.AllowFocus = True
                 Me.Label_OperationStatus.Text = operationStatusBuilder.ToString
@@ -824,7 +824,7 @@ Namespace Manifest
                 Me.CheckEdit_IsClient.Enabled = False
             Else
                 Me.SetSubTitle("零售操作")
-                Me.CheckEdit_IsClient.Visible = False
+                Me.CheckEdit_IsClient.Enabled = True
                 Me.GridColumn_Remark.Visible = False
                 Me.GridColumn_WareAmount.OptionsColumn.AllowFocus = False
                 Me.Label_OperationStatus.Text = String.Empty
