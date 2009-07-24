@@ -102,7 +102,7 @@
             '
             'DefaultLookAndFeel_Form
             '
-            Me.DefaultLookAndFeel_Form.LookAndFeel.SkinName = "Money Twins"
+            Me.DefaultLookAndFeel_Form.LookAndFeel.SkinName = ""
             '
             'Timer_Surveillant
             '
