@@ -710,7 +710,7 @@
     <value>2</value>
   </data>
   <metadata name="ContextMenuStrip_Grid.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>701, 0</value>
+    <value>17, 37</value>
   </metadata>
   <data name="ToolStripMenuItem_CopyTurnoverCode.Size" type="System.Drawing.Size, System.Drawing">
     <value>118, 22</value>

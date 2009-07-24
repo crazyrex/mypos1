@@ -563,6 +563,7 @@
             Me.GridView_ClientPointIO.OptionsView.ColumnAutoWidth = False
             Me.GridView_ClientPointIO.OptionsView.ShowFooter = True
             Me.GridView_ClientPointIO.OptionsView.ShowGroupPanel = False
+            Me.GridView_ClientPointIO.SortInfo.AddRange(New DevExpress.XtraGrid.Columns.GridColumnSortInfo() {New DevExpress.XtraGrid.Columns.GridColumnSortInfo(Me.GridColumn_TurnoverID, DevExpress.Data.ColumnSortOrder.Ascending)})
             '
             'GridColumn_IODate
             '
