@@ -153,6 +153,12 @@
   <metadata name="ReportFooter.Name" xml:space="preserve">
     <value>ReportFooter</value>
   </metadata>
+  <metadata name="XrLabel_Extradiscount.Name" xml:space="preserve">
+    <value>XrLabel_Extradiscount</value>
+  </metadata>
+  <metadata name="XrLabel1.Name" xml:space="preserve">
+    <value>XrLabel1</value>
+  </metadata>
   <metadata name="XrLabel_WelcomeBack.Name" xml:space="preserve">
     <value>XrLabel_WelcomeBack</value>
   </metadata>
@@ -162,8 +168,8 @@
   <metadata name="XrLabel_NTel.Name" xml:space="preserve">
     <value>XrLabel_NTel</value>
   </metadata>
-  <metadata name="XrLabel_TotalMoney.Name" xml:space="preserve">
-    <value>XrLabel_TotalMoney</value>
+  <metadata name="XrLabel_Payable.Name" xml:space="preserve">
+    <value>XrLabel_Payable</value>
   </metadata>
   <metadata name="XrLabel6.Name" xml:space="preserve">
     <value>XrLabel6</value>

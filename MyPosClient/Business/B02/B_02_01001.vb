@@ -1155,6 +1155,8 @@ Namespace Business
                         staffRow.STAFF_CODE, _
                         staffRow.STAFF_NAME)
 
+                report.XrLabel_Extradiscount.Text = CommTK.FString(Me._manifest.CalcEdit_ExtraDiscount.Value)
+
                 report.XrLabel_Payable.Text = Me._manifest.Label_Payable.Text
 
                 report.CreateDataBindings()
