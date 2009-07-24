@@ -296,7 +296,6 @@
             CTag3.ToolTip = ""
             CTag3.ValueType = XL.Common.ControlValueType.Character
             Me.Label_ClientName.Tag = CTag3
-            Me.Label_ClientName.Text = "客户"
             '
             'ButtonEdit_ClientCode
             '
