@@ -284,11 +284,11 @@ Namespace Manifest
 
             If Me.IsSaved = True Then
                 Me.ToolStripButton_PurchaseList.Enabled = True
-                Me.ToolStripButton_Return.Enabled = False
+                Me.ToolStripButton_Return.Enabled = True
                 Me.ToolStripButton_Save.Enabled = False
             Else
                 Me.ToolStripButton_PurchaseList.Enabled = False
-                Me.ToolStripButton_Return.Enabled = True
+                Me.ToolStripButton_Return.Enabled = False
                 Me.ToolStripButton_Save.Enabled = True
             End If
 
