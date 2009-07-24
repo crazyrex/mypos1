@@ -175,10 +175,10 @@
     <value>275, 6</value>
   </data>
   <data name="CheckEdit_DeleteWareAllowed.Properties.Caption" xml:space="preserve">
-    <value>可删除货品信息</value>
+    <value>可删除货品信息及出入单数据</value>
   </data>
   <data name="CheckEdit_DeleteWareAllowed.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 19</value>
+    <value>198, 19</value>
   </data>
   <data name="CheckEdit_DeleteWareAllowed.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -244,7 +244,7 @@
     <value>1</value>
   </data>
   <data name="CheckEdit_FinancialForbiddened.Location" type="System.Drawing.Point, System.Drawing">
-    <value>390, 8</value>
+    <value>9, 31</value>
   </data>
   <data name="CheckEdit_FinancialForbiddened.Properties.Caption" xml:space="preserve">
     <value>禁止财务操作</value>
