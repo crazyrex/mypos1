@@ -907,7 +907,7 @@ Namespace Business
                     False, _
                     "#,##0.00")
 
-                Dim totalDiscount = CommTK.FDecimal(Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.Compute("Sum(SUM_DISCOUNT)", String.Empty))
+                Dim totalDiscount = CommTK.FDecimal(Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.Compute("Sum(SUM_DISCOUNT)", String.Empty)) + Me._manifest.CalcEdit_ExtraDiscount.Value
                 Me._manifest.Label_TotalDiscount.Text = _
                     CommTK.FString(totalDiscount, _
                     False, _
