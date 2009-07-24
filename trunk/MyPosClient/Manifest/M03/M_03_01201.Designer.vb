@@ -259,6 +259,7 @@
             CTag2.ValueType = XL.Common.ControlValueType.Character
             Me.Label_ClientID.Tag = CTag2
             Me.Label_ClientID.Text = "ClientID"
+            Me.Label_ClientID.Visible = False
             '
             'Label_ClientName
             '
@@ -408,7 +409,7 @@
             Me.Label2.ImeMode = System.Windows.Forms.ImeMode.NoControl
             Me.Label2.Location = New System.Drawing.Point(232, 13)
             Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(21, 15)
+            Me.Label2.Size = New System.Drawing.Size(19, 15)
             Me.Label2.TabIndex = 10000
             CTag7.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag7.CalculatorRequired = True
@@ -434,7 +435,7 @@
             CTag7.ToolTip = ""
             CTag7.ValueType = XL.Common.ControlValueType.Character
             Me.Label2.Tag = CTag7
-            Me.Label2.Text = "To"
+            Me.Label2.Text = "至"
             '
             'Label3
             '
@@ -482,7 +483,7 @@
             Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
             Me.Label1.Location = New System.Drawing.Point(8, 14)
             Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(61, 15)
+            Me.Label1.Size = New System.Drawing.Size(43, 15)
             Me.Label1.TabIndex = 10000
             CTag9.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag9.CalculatorRequired = True
@@ -508,7 +509,7 @@
             CTag9.ToolTip = ""
             CTag9.ValueType = XL.Common.ControlValueType.Character
             Me.Label1.Tag = CTag9
-            Me.Label1.Text = "Date form"
+            Me.Label1.Text = "日期从"
             '
             'GridControl_ClientPointIO
             '
@@ -650,7 +651,7 @@
             '
             'GridColumn_RowSelected
             '
-            Me.GridColumn_RowSelected.Caption = "Selected"
+            Me.GridColumn_RowSelected.Caption = "选择"
             Me.GridColumn_RowSelected.ColumnEdit = Me.RepositoryItemCheckEdit_RowSelected
             Me.GridColumn_RowSelected.FieldName = "DSR_FT_ROW_SELECTED"
             Me.GridColumn_RowSelected.Name = "GridColumn_RowSelected"
