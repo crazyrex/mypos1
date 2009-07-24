@@ -829,7 +829,6 @@ Namespace Manifest
                 Me.GridColumn_WareAmount.OptionsColumn.AllowFocus = True
                 Me.Label_OperationStatus.Text = operationStatusBuilder.ToString
                 Me.Label_OperationStatus.Visible = True
-                Me.CalcEdit_ExtraDiscount.Enabled = False
                 Me.CalcEdit_Payment.Enabled = False
                 Me.CalcEdit_UsePoint.Enabled = False
                 Me.CheckEdit_IsClient.Enabled = False
@@ -841,7 +840,6 @@ Namespace Manifest
                 Me.GridColumn_WareAmount.OptionsColumn.AllowFocus = False
                 Me.Label_OperationStatus.Text = String.Empty
                 Me.Label_OperationStatus.Visible = False
-                Me.CalcEdit_ExtraDiscount.Enabled = True
                 Me.CalcEdit_Payment.Enabled = True
                 Me.CalcEdit_UsePoint.Enabled = True
                 Me.CheckEdit_IsClient.Enabled = True
@@ -1074,6 +1072,8 @@ Namespace Manifest
 
             Me.DoPrivateRegularSelectingRowWareAmount()
             calcEdit.Value = Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_AMOUNT
+
+            Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.UpdateSummary, False)
         End Sub
 
         Private Sub Label_ClientID_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles Label_ClientID.TextChanged
