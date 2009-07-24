@@ -437,6 +437,7 @@ Namespace Manifest
 
                 Case Business.B_02_01001.Affairs.LoadReturnReliefTurnover
                     Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.UpdateSummary, False)
+
             End Select
         End Sub
 
@@ -1070,6 +1071,16 @@ Namespace Manifest
 
             Me.DoPrivateRegularSelectingRowWareAmount()
             calcEdit.Value = Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_AMOUNT
+        End Sub
+
+        Private Sub Label_ClientID_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles Label_ClientID.TextChanged
+
+            If Me.FormStatus <> FormStatuses.Loading_IA_AfterFormLoaded Then
+                Return
+            End If
+
+            Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.UpdateSummary, False)
+
         End Sub
     End Class
 
