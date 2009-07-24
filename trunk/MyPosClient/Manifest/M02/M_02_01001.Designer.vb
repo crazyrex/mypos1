@@ -96,9 +96,9 @@
             Me.Label_TotalPrice = New System.Windows.Forms.Label
             Me.Label15 = New System.Windows.Forms.Label
             Me.Label4 = New System.Windows.Forms.Label
-            Me.Label3 = New System.Windows.Forms.Label
+            Me.Label_HintExtraDiscount = New System.Windows.Forms.Label
             Me.GroupControl2 = New DevExpress.XtraEditors.GroupControl
-            Me.Label5 = New System.Windows.Forms.Label
+            Me.Label_HintGainPoint = New System.Windows.Forms.Label
             Me.TextEdit_ClientCode = New DevExpress.XtraEditors.TextEdit
             Me.CalcEdit_UsePoint = New DevExpress.XtraEditors.CalcEdit
             Me.Label_AquiringPoints = New System.Windows.Forms.Label
@@ -353,7 +353,7 @@
             Me.GroupControl3.Controls.Add(Me.Label_TotalPrice)
             Me.GroupControl3.Controls.Add(Me.Label15)
             Me.GroupControl3.Controls.Add(Me.Label4)
-            Me.GroupControl3.Controls.Add(Me.Label3)
+            Me.GroupControl3.Controls.Add(Me.Label_HintExtraDiscount)
             Me.GroupControl3.Dock = System.Windows.Forms.DockStyle.Bottom
             Me.GroupControl3.FireScrollEventOnMouseWheel = True
             Me.GroupControl3.Location = New System.Drawing.Point(2, 93)
@@ -715,17 +715,17 @@
             Me.Label4.Tag = CTag11
             Me.Label4.Text = "总额"
             '
-            'Label3
+            'Label_HintExtraDiscount
             '
-            Me.Label3.AutoSize = True
-            Me.Label3.BackColor = System.Drawing.Color.White
-            Me.Label3.Font = New System.Drawing.Font("Arial", 9.0!)
-            Me.Label3.ForeColor = System.Drawing.Color.Black
-            Me.Label3.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.Label3.Location = New System.Drawing.Point(5, 80)
-            Me.Label3.Name = "Label3"
-            Me.Label3.Size = New System.Drawing.Size(43, 15)
-            Me.Label3.TabIndex = 10000
+            Me.Label_HintExtraDiscount.AutoSize = True
+            Me.Label_HintExtraDiscount.BackColor = System.Drawing.Color.White
+            Me.Label_HintExtraDiscount.Font = New System.Drawing.Font("Arial", 9.0!)
+            Me.Label_HintExtraDiscount.ForeColor = System.Drawing.Color.Black
+            Me.Label_HintExtraDiscount.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.Label_HintExtraDiscount.Location = New System.Drawing.Point(5, 80)
+            Me.Label_HintExtraDiscount.Name = "Label_HintExtraDiscount"
+            Me.Label_HintExtraDiscount.Size = New System.Drawing.Size(43, 15)
+            Me.Label_HintExtraDiscount.TabIndex = 10000
             CTag12.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag12.CalculatorRequired = True
             CTag12.ComboValueTextBox = Nothing
@@ -744,17 +744,17 @@
             CTag12.KeyValueAbsentable = False
             CTag12.LeagleText = ""
             CTag12.NumericButtonTextBox = Nothing
-            CTag12.ParentControl = Me.Label3
+            CTag12.ParentControl = Me.Label_HintExtraDiscount
             CTag12.SkipValidate = False
             CTag12.TimeButtonTextBox = Nothing
             CTag12.ToolTip = ""
             CTag12.ValueType = XL.Common.ControlValueType.Character
-            Me.Label3.Tag = CTag12
-            Me.Label3.Text = "额外折"
+            Me.Label_HintExtraDiscount.Tag = CTag12
+            Me.Label_HintExtraDiscount.Text = "额外折"
             '
             'GroupControl2
             '
-            Me.GroupControl2.Controls.Add(Me.Label5)
+            Me.GroupControl2.Controls.Add(Me.Label_HintGainPoint)
             Me.GroupControl2.Controls.Add(Me.TextEdit_ClientCode)
             Me.GroupControl2.Controls.Add(Me.CalcEdit_UsePoint)
             Me.GroupControl2.Controls.Add(Me.Label_AquiringPoints)
@@ -773,17 +773,17 @@
             Me.GroupControl2.TabIndex = 10004
             Me.GroupControl2.Text = "会员情况"
             '
-            'Label5
+            'Label_HintGainPoint
             '
-            Me.Label5.AutoSize = True
-            Me.Label5.BackColor = System.Drawing.Color.White
-            Me.Label5.Font = New System.Drawing.Font("Arial", 9.0!)
-            Me.Label5.ForeColor = System.Drawing.Color.Black
-            Me.Label5.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.Label5.Location = New System.Drawing.Point(5, 146)
-            Me.Label5.Name = "Label5"
-            Me.Label5.Size = New System.Drawing.Size(55, 15)
-            Me.Label5.TabIndex = 10001
+            Me.Label_HintGainPoint.AutoSize = True
+            Me.Label_HintGainPoint.BackColor = System.Drawing.Color.White
+            Me.Label_HintGainPoint.Font = New System.Drawing.Font("Arial", 9.0!)
+            Me.Label_HintGainPoint.ForeColor = System.Drawing.Color.Black
+            Me.Label_HintGainPoint.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.Label_HintGainPoint.Location = New System.Drawing.Point(5, 146)
+            Me.Label_HintGainPoint.Name = "Label_HintGainPoint"
+            Me.Label_HintGainPoint.Size = New System.Drawing.Size(55, 15)
+            Me.Label_HintGainPoint.TabIndex = 10001
             CTag13.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag13.CalculatorRequired = True
             CTag13.ComboValueTextBox = Nothing
@@ -802,13 +802,13 @@
             CTag13.KeyValueAbsentable = False
             CTag13.LeagleText = ""
             CTag13.NumericButtonTextBox = Nothing
-            CTag13.ParentControl = Me.Label5
+            CTag13.ParentControl = Me.Label_HintGainPoint
             CTag13.SkipValidate = False
             CTag13.TimeButtonTextBox = Nothing
             CTag13.ToolTip = ""
             CTag13.ValueType = XL.Common.ControlValueType.Character
-            Me.Label5.Tag = CTag13
-            Me.Label5.Text = "获得点数"
+            Me.Label_HintGainPoint.Tag = CTag13
+            Me.Label_HintGainPoint.Text = "获得点数"
             '
             'TextEdit_ClientCode
             '
@@ -1917,7 +1917,7 @@
         Friend WithEvents GridColumn_SumDiscount As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents CalcEdit_UsePoint As DevExpress.XtraEditors.CalcEdit
         Friend WithEvents Label6 As System.Windows.Forms.Label
-        Friend WithEvents Label5 As System.Windows.Forms.Label
+        Friend WithEvents Label_HintGainPoint As System.Windows.Forms.Label
         Friend WithEvents Label_AquiringPoints As System.Windows.Forms.Label
         Friend WithEvents ToolStripButton_Create As System.Windows.Forms.ToolStripButton
         Friend WithEvents Label_ClientID As System.Windows.Forms.Label
@@ -1936,7 +1936,7 @@
         Friend WithEvents Label_TotalPrice As System.Windows.Forms.Label
         Friend WithEvents Label15 As System.Windows.Forms.Label
         Friend WithEvents Label4 As System.Windows.Forms.Label
-        Friend WithEvents Label3 As System.Windows.Forms.Label
+        Friend WithEvents Label_HintExtraDiscount As System.Windows.Forms.Label
         Friend WithEvents Label_CacheStatus As System.Windows.Forms.Label
         Friend WithEvents LinkLabel_UploadCacheData As System.Windows.Forms.LinkLabel
         Friend WithEvents ToolStripButton_PurchaseList As System.Windows.Forms.ToolStripButton
