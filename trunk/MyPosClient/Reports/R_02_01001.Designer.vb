@@ -37,7 +37,7 @@
             Me.XrLabel_WelcomeBack = New DevExpress.XtraReports.UI.XRLabel
             Me.XrLabel_ServiceTel = New DevExpress.XtraReports.UI.XRLabel
             Me.XrLabel_NTel = New DevExpress.XtraReports.UI.XRLabel
-            Me.XrLabel_TotalMoney = New DevExpress.XtraReports.UI.XRLabel
+            Me.XrLabel_Payable = New DevExpress.XtraReports.UI.XRLabel
             Me.XrLabel6 = New DevExpress.XtraReports.UI.XRLabel
             Me.ReportHeader = New DevExpress.XtraReports.UI.ReportHeaderBand
             Me.XrLabel_TurnoverCode = New DevExpress.XtraReports.UI.XRLabel
@@ -159,7 +159,7 @@
             '
             'ReportFooter
             '
-            Me.ReportFooter.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel_WelcomeBack, Me.XrLabel_ServiceTel, Me.XrLabel_NTel, Me.XrLabel_TotalMoney, Me.XrLabel6})
+            Me.ReportFooter.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel_WelcomeBack, Me.XrLabel_ServiceTel, Me.XrLabel_NTel, Me.XrLabel_Payable, Me.XrLabel6})
             Me.ReportFooter.Name = "ReportFooter"
             '
             'XrLabel_WelcomeBack
@@ -190,12 +190,12 @@
             '
             'XrLabel_TotalMoney
             '
-            Me.XrLabel_TotalMoney.Font = New System.Drawing.Font("Century Gothic", 8.0!)
-            Me.XrLabel_TotalMoney.Location = New System.Drawing.Point(117, 8)
-            Me.XrLabel_TotalMoney.Name = "XrLabel_TotalMoney"
-            Me.XrLabel_TotalMoney.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-            Me.XrLabel_TotalMoney.Size = New System.Drawing.Size(58, 17)
-            Me.XrLabel_TotalMoney.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
+            Me.XrLabel_Payable.Font = New System.Drawing.Font("Century Gothic", 8.0!)
+            Me.XrLabel_Payable.Location = New System.Drawing.Point(117, 8)
+            Me.XrLabel_Payable.Name = "XrLabel_TotalMoney"
+            Me.XrLabel_Payable.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+            Me.XrLabel_Payable.Size = New System.Drawing.Size(58, 17)
+            Me.XrLabel_Payable.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
             '
             'XrLabel6
             '
@@ -387,7 +387,7 @@
         Friend WithEvents XrLabel_WelcomeBack As DevExpress.XtraReports.UI.XRLabel
         Friend WithEvents XrLabel_ServiceTel As DevExpress.XtraReports.UI.XRLabel
         Friend WithEvents XrLabel_NTel As DevExpress.XtraReports.UI.XRLabel
-        Friend WithEvents XrLabel_TotalMoney As DevExpress.XtraReports.UI.XRLabel
+        Friend WithEvents XrLabel_Payable As DevExpress.XtraReports.UI.XRLabel
         Friend WithEvents XrLabel6 As DevExpress.XtraReports.UI.XRLabel
         Friend WithEvents ReportHeader As DevExpress.XtraReports.UI.ReportHeaderBand
         Friend WithEvents XrLabel_Operator As DevExpress.XtraReports.UI.XRLabel

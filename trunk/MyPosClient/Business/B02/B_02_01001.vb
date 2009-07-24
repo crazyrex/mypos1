@@ -1138,7 +1138,7 @@ Namespace Business
 
                 If IsDBNull(Me._manifest.SV_RETURN_RELIEF_TURNOVER_ROW_SE) = False Then
                     report.XrLabel_ReturnTurnoverCode.Text = _
-                        String.Format("退货抵冲:", Me._manifest.SV_RETURN_RELIEF_TURNOVER_ROW_SE.TURNOVER_CODE)
+                        String.Format("退货抵冲:{0}", Me._manifest.SV_RETURN_RELIEF_TURNOVER_ROW_SE.TURNOVER_CODE)
                 End If
 
                 Dim staffRow As MyPosXAuto.FTs.FT_M_STAFFRow = _
@@ -1155,7 +1155,7 @@ Namespace Business
                         staffRow.STAFF_CODE, _
                         staffRow.STAFF_NAME)
 
-                report.XrLabel_TotalMoney.Text = CommTK.FString(Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.Compute("Sum(SUM_PRICE)", String.Empty), False, "#,##0.00")
+                report.XrLabel_Payable.Text = Me._manifest.Label_Payable.Text
 
                 report.CreateDataBindings()
                 report.Print()
@@ -1262,6 +1262,9 @@ Namespace Business
                     End If
                     bindingRow.ROW_REMARK = CommTK.FString(bindingRow.WARE_AMOUNT - returnTotalWareAmount)
                     bindingRow.WARE_AMOUNT = 0
+                    bindingRow.SUM_PRICE = 0
+                    bindingRow.SUM_DISCOUNT = 0
+                    bindingRow.ORIGION_SUM_PRICE = 0
                 Next
 
                 Me._manifest.GridControl_TurnoverDtl.DataSource = Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST
