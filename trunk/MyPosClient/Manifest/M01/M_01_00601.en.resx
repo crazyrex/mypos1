@@ -134,31 +134,31 @@
 </value>
   </data>
   <data name="ToolStripButton_Choose.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 22</value>
+    <value>45, 22</value>
   </data>
   <data name="ToolStripButton_Choose.Text" xml:space="preserve">
     <value>Choose</value>
   </data>
   <data name="ToolStripButton_Create.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 22</value>
+    <value>27, 22</value>
   </data>
   <data name="ToolStripButton_Create.Text" xml:space="preserve">
     <value>New</value>
   </data>
   <data name="ToolStripButton_Revise.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 22</value>
+    <value>33, 22</value>
   </data>
   <data name="ToolStripButton_Revise.Text" xml:space="preserve">
     <value>Edit</value>
   </data>
   <data name="ToolStripButton_Delete.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 22</value>
+    <value>45, 22</value>
   </data>
   <data name="ToolStripButton_Delete.Text" xml:space="preserve">
     <value>Delete</value>
   </data>
   <data name="ToolStripButton_Refresh.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 22</value>
+    <value>51, 22</value>
   </data>
   <data name="ToolStripButton_Refresh.Text" xml:space="preserve">
     <value>Refresh</value>
@@ -189,7 +189,7 @@
 </value>
   </data>
   <data name="ToolStripButton_Import.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 22</value>
+    <value>45, 22</value>
   </data>
   <data name="ToolStripButton_Import.Text" xml:space="preserve">
     <value>Import</value>
@@ -210,13 +210,13 @@
 </value>
   </data>
   <data name="ToolStripButton_ExportExcel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 22</value>
+    <value>45, 22</value>
   </data>
   <data name="ToolStripButton_ExportExcel.Text" xml:space="preserve">
     <value>Export</value>
   </data>
   <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 22</value>
+    <value>39, 22</value>
   </data>
   <data name="ToolStripButton_Close.Text" xml:space="preserve">
     <value>Close</value>
@@ -225,7 +225,7 @@
     <value>67, 12</value>
   </data>
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 15</value>
+    <value>14, 14</value>
   </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 15</value>

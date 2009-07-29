@@ -134,19 +134,19 @@
 </value>
   </data>
   <data name="ToolStripButton_Import.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 22</value>
+    <value>45, 22</value>
   </data>
   <data name="ToolStripButton_Import.Text" xml:space="preserve">
     <value>Import</value>
   </data>
   <data name="ToolStripButton_Remove.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 22</value>
+    <value>45, 22</value>
   </data>
   <data name="ToolStripButton_Remove.Text" xml:space="preserve">
     <value>Remove</value>
   </data>
   <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 22</value>
+    <value>39, 22</value>
   </data>
   <data name="ToolStripButton_Close.Text" xml:space="preserve">
     <value>Close</value>
@@ -160,8 +160,21 @@
   <data name="CheckEdit_AutoSupplierCode.Size" type="System.Drawing.Size, System.Drawing">
     <value>127, 19</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="RadioGroup_DistinguishBy.Properties.Items" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="RadioGroup_DistinguishBy.Properties.Items1" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RadioGroup_DistinguishBy.Properties.Items2" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="RadioGroup_DistinguishBy.Properties.Items3" xml:space="preserve">
+    <value>Name</value>
+  </data>
   <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 54</value>
+    <value>8, 53</value>
   </data>
   <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 15</value>
@@ -170,7 +183,7 @@
     <value>Distinguish</value>
   </data>
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 21</value>
+    <value>9, 20</value>
   </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 15</value>
@@ -184,7 +197,6 @@
   <data name="GridColumn_SupplierCode.Caption" xml:space="preserve">
     <value>Supplier ID</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="GridColumn_SupplierCode.VisibleIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
