@@ -122,7 +122,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 22</value>
+    <value>40, 22</value>
   </data>
   <data name="ToolStripButton_Close.Text" xml:space="preserve">
     <value>Close</value>
@@ -211,7 +211,7 @@
     <value>False</value>
   </data>
   <data name="TextEdit_CustomCode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 21</value>
+    <value>133, 20</value>
   </data>
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 6</value>
@@ -256,7 +256,7 @@
     <value>False</value>
   </data>
   <data name="TextEdit_WareName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>476, 21</value>
+    <value>476, 20</value>
   </data>
   <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>66, 15</value>
@@ -376,7 +376,7 @@
     <value>False</value>
   </data>
   <data name="TextEdit_WareNameEn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>476, 21</value>
+    <value>476, 20</value>
   </data>
   <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 6</value>
