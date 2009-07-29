@@ -118,23 +118,23 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="DefaultLookAndFeel_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>278, 0</value>
+    <value>295, 0</value>
   </metadata>
   <metadata name="Timer_Surveillant.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>134, 0</value>
+    <value>138, 0</value>
   </metadata>
   <metadata name="ToolStrip_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ToolStripButton_Save.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>33, 22</value>
   </data>
   <data name="ToolStripButton_Save.Text" xml:space="preserve">
     <value>保存</value>
   </data>
   <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>33, 22</value>
   </data>
   <data name="ToolStripButton_Close.Text" xml:space="preserve">
     <value>关闭</value>
@@ -168,7 +168,7 @@
     <value>118, 51</value>
   </data>
   <data name="TextEdit_WareCode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 20</value>
+    <value>142, 21</value>
   </data>
   <data name="TextEdit_WareCode.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -246,7 +246,7 @@
     <value>73, 9</value>
   </data>
   <data name="TextEdit_CustomCode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 20</value>
+    <value>142, 21</value>
   </data>
   <data name="TextEdit_CustomCode.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -321,7 +321,7 @@
     <value>118, 110</value>
   </data>
   <data name="TextEdit_WareName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>465, 20</value>
+    <value>465, 21</value>
   </data>
   <data name="TextEdit_WareName.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -375,7 +375,7 @@
     <value>344, 5</value>
   </data>
   <data name="TextEdit_Model.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 20</value>
+    <value>142, 21</value>
   </data>
   <data name="TextEdit_Model.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -429,7 +429,7 @@
     <value>115, 5</value>
   </data>
   <data name="TextEdit_Spec.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 20</value>
+    <value>142, 21</value>
   </data>
   <data name="TextEdit_Spec.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -504,7 +504,7 @@
     <value>115, 5</value>
   </data>
   <data name="TextEdit_WareNameEn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>465, 20</value>
+    <value>465, 21</value>
   </data>
   <data name="TextEdit_WareNameEn.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -579,7 +579,7 @@
     <value>344, 5</value>
   </data>
   <data name="TextEdit_ModelEn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 20</value>
+    <value>142, 21</value>
   </data>
   <data name="TextEdit_ModelEn.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -633,7 +633,7 @@
     <value>115, 4</value>
   </data>
   <data name="TextEdit_SpecEn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 20</value>
+    <value>142, 21</value>
   </data>
   <data name="TextEdit_SpecEn.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -709,7 +709,7 @@
     <value>Combo</value>
   </data>
   <data name="CalcEdit_UnitCost.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 20</value>
+    <value>142, 21</value>
   </data>
   <data name="CalcEdit_UnitCost.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -733,7 +733,7 @@
     <value>Combo</value>
   </data>
   <data name="CalcEdit_UnitPrice.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 20</value>
+    <value>142, 21</value>
   </data>
   <data name="CalcEdit_UnitPrice.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -838,7 +838,7 @@
     <value>115, 5</value>
   </data>
   <data name="TextEdit_Attribute1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 20</value>
+    <value>208, 21</value>
   </data>
   <data name="TextEdit_Attribute1.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -916,7 +916,7 @@
     <value>115, 5</value>
   </data>
   <data name="TextEdit_Attribute2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 20</value>
+    <value>208, 21</value>
   </data>
   <data name="TextEdit_Attribute2.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -994,7 +994,7 @@
     <value>115, 5</value>
   </data>
   <data name="TextEdit_Attribute3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 20</value>
+    <value>208, 21</value>
   </data>
   <data name="TextEdit_Attribute3.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -1072,7 +1072,7 @@
     <value>115, 5</value>
   </data>
   <data name="TextEdit_Attribute4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 20</value>
+    <value>208, 21</value>
   </data>
   <data name="TextEdit_Attribute4.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -1174,7 +1174,7 @@
     <value>328, 5</value>
   </data>
   <data name="SpinEdit_GuaranteeDays.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 20</value>
+    <value>53, 21</value>
   </data>
   <data name="SpinEdit_GuaranteeDays.TabIndex" type="System.Int32, mscorlib">
     <value>10002</value>
@@ -1249,7 +1249,7 @@
     <value>115, 4</value>
   </data>
   <data name="TextEdit_UnitName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 20</value>
+    <value>142, 21</value>
   </data>
   <data name="TextEdit_UnitName.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -1388,7 +1388,7 @@
     <value>118, 81</value>
   </data>
   <data name="ButtonEdit_SupplierCode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 20</value>
+    <value>142, 21</value>
   </data>
   <data name="ButtonEdit_SupplierCode.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -1412,7 +1412,7 @@
     <value>NoControl</value>
   </data>
   <data name="Label_SupplierName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>270, 81</value>
+    <value>268, 81</value>
   </data>
   <data name="Label_SupplierName.Size" type="System.Drawing.Size, System.Drawing">
     <value>219, 24</value>
@@ -1445,7 +1445,7 @@
     <value>NoControl</value>
   </data>
   <data name="Label_SupplierID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>438, 81</value>
+    <value>496, 81</value>
   </data>
   <data name="Label_SupplierID.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 15</value>
