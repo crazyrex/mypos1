@@ -118,23 +118,23 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="DefaultLookAndFeel_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>295, 0</value>
+    <value>278, 0</value>
   </metadata>
   <metadata name="Timer_Surveillant.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>138, 0</value>
+    <value>134, 0</value>
   </metadata>
   <metadata name="ToolStrip_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ToolStripButton_Save.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 22</value>
+    <value>35, 22</value>
   </data>
   <data name="ToolStripButton_Save.Text" xml:space="preserve">
     <value>保存</value>
   </data>
   <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 22</value>
+    <value>35, 22</value>
   </data>
   <data name="ToolStripButton_Close.Text" xml:space="preserve">
     <value>关闭</value>
@@ -669,6 +669,111 @@
   <data name="&gt;&gt;Label18.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="CheckEdit1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>207, 85</value>
+  </data>
+  <data name="CheckEdit1.Properties.Caption" xml:space="preserve">
+    <value>+日</value>
+  </data>
+  <data name="CheckEdit1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 19</value>
+  </data>
+  <data name="CheckEdit1.TabIndex" type="System.Int32, mscorlib">
+    <value>10007</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit1.Name" xml:space="preserve">
+    <value>CheckEdit1</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit1.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="CheckEdit3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 85</value>
+  </data>
+  <data name="CheckEdit3.Properties.Caption" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="CheckEdit3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 19</value>
+  </data>
+  <data name="CheckEdit3.TabIndex" type="System.Int32, mscorlib">
+    <value>10008</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit3.Name" xml:space="preserve">
+    <value>CheckEdit3</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit3.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit3.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CheckEdit2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>138, 85</value>
+  </data>
+  <data name="CheckEdit2.Properties.Caption" xml:space="preserve">
+    <value>+年月</value>
+  </data>
+  <data name="CheckEdit2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 19</value>
+  </data>
+  <data name="CheckEdit2.TabIndex" type="System.Int32, mscorlib">
+    <value>10008</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit2.Name" xml:space="preserve">
+    <value>CheckEdit2</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit2.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="Label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>43, 87</value>
+  </data>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 15</value>
+  </data>
+  <data name="Label2.TabIndex" type="System.Int32, mscorlib">
+    <value>10004</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>类别编号</value>
+  </data>
+  <data name="&gt;&gt;Label2.Name" xml:space="preserve">
+    <value>Label2</value>
+  </data>
+  <data name="&gt;&gt;Label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="CheckEdit_OperationLimitedHere.Location" type="System.Drawing.Point, System.Drawing">
     <value>273, 31</value>
   </data>
@@ -694,7 +799,7 @@
     <value>GroupControl1</value>
   </data>
   <data name="&gt;&gt;CheckEdit_OperationLimitedHere.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>4</value>
   </data>
   <data name="TextEdit_ServiceTel.Location" type="System.Drawing.Point, System.Drawing">
     <value>354, 150</value>
@@ -727,7 +832,7 @@
     <value>GroupControl1</value>
   </data>
   <data name="&gt;&gt;TextEdit_ServiceTel.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>5</value>
   </data>
   <data name="TextEdit_CompanyAddress.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 176</value>
@@ -760,7 +865,7 @@
     <value>GroupControl1</value>
   </data>
   <data name="&gt;&gt;TextEdit_CompanyAddress.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>6</value>
   </data>
   <data name="TextEdit_CompanyTitle.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 150</value>
@@ -793,7 +898,7 @@
     <value>GroupControl1</value>
   </data>
   <data name="&gt;&gt;TextEdit_CompanyTitle.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>7</value>
   </data>
   <data name="Label13.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -823,7 +928,7 @@
     <value>GroupControl1</value>
   </data>
   <data name="&gt;&gt;Label13.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>8</value>
   </data>
   <data name="Label14.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -853,40 +958,7 @@
     <value>GroupControl1</value>
   </data>
   <data name="&gt;&gt;Label14.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="TextEdit_MobileSmapPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>284, 92</value>
-  </data>
-  <data name="TextEdit_MobileSmapPath.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="TextEdit_MobileSmapPath.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="TextEdit_MobileSmapPath.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="TextEdit_MobileSmapPath.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="TextEdit_MobileSmapPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 21</value>
-  </data>
-  <data name="TextEdit_MobileSmapPath.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;TextEdit_MobileSmapPath.Name" xml:space="preserve">
-    <value>TextEdit_MobileSmapPath</value>
-  </data>
-  <data name="&gt;&gt;TextEdit_MobileSmapPath.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
-  </data>
-  <data name="&gt;&gt;TextEdit_MobileSmapPath.Parent" xml:space="preserve">
-    <value>GroupControl1</value>
-  </data>
-  <data name="&gt;&gt;TextEdit_MobileSmapPath.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
   </data>
   <data name="Label12.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -917,37 +989,10 @@
     <value>GroupControl1</value>
   </data>
   <data name="&gt;&gt;Label12.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>223, 95</value>
-  </data>
-  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 15</value>
-  </data>
-  <data name="Label2.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="Label2.Text" xml:space="preserve">
-    <value>交互路径</value>
-  </data>
-  <data name="&gt;&gt;Label2.Name" xml:space="preserve">
-    <value>Label2</value>
-  </data>
-  <data name="&gt;&gt;Label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
-    <value>GroupControl1</value>
-  </data>
-  <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="CheckEdit_KeepOrigionWareCodeToRemark.Location" type="System.Drawing.Point, System.Drawing">
-    <value>222, 71</value>
+    <value>222, 60</value>
   </data>
   <data name="CheckEdit_KeepOrigionWareCodeToRemark.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -971,10 +1016,10 @@
     <value>GroupControl1</value>
   </data>
   <data name="&gt;&gt;CheckEdit_KeepOrigionWareCodeToRemark.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="SimpleButton_SaveMobileWareList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 92</value>
+    <value>215, 117</value>
   </data>
   <data name="SimpleButton_SaveMobileWareList.Size" type="System.Drawing.Size, System.Drawing">
     <value>179, 23</value>
@@ -995,7 +1040,7 @@
     <value>GroupControl1</value>
   </data>
   <data name="&gt;&gt;SimpleButton_SaveMobileWareList.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="SimpleButton_SaveMobilePosLocationList.Location" type="System.Drawing.Point, System.Drawing">
     <value>20, 117</value>
@@ -1019,10 +1064,10 @@
     <value>GroupControl1</value>
   </data>
   <data name="&gt;&gt;SimpleButton_SaveMobilePosLocationList.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="SimpleButton_AutomateWareCodes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 67</value>
+    <value>20, 56</value>
   </data>
   <data name="SimpleButton_AutomateWareCodes.Size" type="System.Drawing.Size, System.Drawing">
     <value>179, 23</value>
@@ -1031,7 +1076,7 @@
     <value>2</value>
   </data>
   <data name="SimpleButton_AutomateWareCodes.Text" xml:space="preserve">
-    <value>条码编号</value>
+    <value>进行条码自动编号</value>
   </data>
   <data name="&gt;&gt;SimpleButton_AutomateWareCodes.Name" xml:space="preserve">
     <value>SimpleButton_AutomateWareCodes</value>
@@ -1043,7 +1088,7 @@
     <value>GroupControl1</value>
   </data>
   <data name="&gt;&gt;SimpleButton_AutomateWareCodes.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="LookUpEdit_CurrentPOS.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 29</value>
@@ -1080,7 +1125,7 @@
     <value>GroupControl1</value>
   </data>
   <data name="&gt;&gt;LookUpEdit_CurrentPOS.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
   </data>
   <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1107,7 +1152,7 @@
     <value>GroupControl1</value>
   </data>
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>16</value>
   </data>
   <data name="GroupControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -1140,7 +1185,7 @@
     <value>42, 24</value>
   </data>
   <data name="TextEdit_PractWareCodePrefix.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 21</value>
+    <value>41, 20</value>
   </data>
   <data name="TextEdit_PractWareCodePrefix.TabIndex" type="System.Int32, mscorlib">
     <value>10007</value>
@@ -1212,7 +1257,7 @@
     <value>231, 25</value>
   </data>
   <data name="SpinEdit_PractWareCodeDigitLength.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 21</value>
+    <value>36, 20</value>
   </data>
   <data name="SpinEdit_PractWareCodeDigitLength.TabIndex" type="System.Int32, mscorlib">
     <value>10004</value>
@@ -1276,7 +1321,7 @@
     <value>Application</value>
   </data>
   <data name="GridControl_RecipientTypeBarcode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 21</value>
+    <value>2, 20</value>
   </data>
   <data name="GridColumn_RecipientType.Caption" xml:space="preserve">
     <value>包装类型</value>
@@ -1336,7 +1381,7 @@
     <value>2</value>
   </data>
   <data name="GridControl_RecipientTypeBarcode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>597, 114</value>
+    <value>597, 115</value>
   </data>
   <data name="GridControl_RecipientTypeBarcode.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -3007,10 +3052,10 @@
     <value>459, 33</value>
   </data>
   <data name="CalcEdit_RMBToPointsRate.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
-    <value>Combo</value>
+    <value>Glyph</value>
   </data>
   <data name="CalcEdit_RMBToPointsRate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 21</value>
+    <value>65, 20</value>
   </data>
   <data name="CalcEdit_RMBToPointsRate.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -3031,10 +3076,10 @@
     <value>204, 34</value>
   </data>
   <data name="CalcEdit_PointsToRMBRate.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
-    <value>Combo</value>
+    <value>Glyph</value>
   </data>
   <data name="CalcEdit_PointsToRMBRate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 21</value>
+    <value>65, 20</value>
   </data>
   <data name="CalcEdit_PointsToRMBRate.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -3115,7 +3160,7 @@
     <value>351, 34</value>
   </data>
   <data name="CheckEdit_CanRMBToPoints.Properties.Caption" xml:space="preserve">
-    <value>消费人民币, 每</value>
+    <value />
   </data>
   <data name="CheckEdit_CanRMBToPoints.Size" type="System.Drawing.Size, System.Drawing">
     <value>103, 19</value>
@@ -3139,7 +3184,7 @@
     <value>18, 33</value>
   </data>
   <data name="CheckEdit_CanPointsToRMB.Properties.Caption" xml:space="preserve">
-    <value>使用点数, 兑换人民币, 每点换</value>
+    <value />
   </data>
   <data name="CheckEdit_CanPointsToRMB.Size" type="System.Drawing.Size, System.Drawing">
     <value>183, 19</value>
