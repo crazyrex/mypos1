@@ -245,7 +245,11 @@ Namespace Facade
 
         End Function
 
-        Public Shared Function GetAutoWareCode(ByVal preview As Boolean, ByVal classifyID As String) As String
+        Public Shared Function GetAutoWareCode( _
+            ByVal preview As Boolean, _
+            ByVal classifyID As String, _
+            ByVal supplierCode As String, _
+            ByVal surfix As String) As String
 
             Dim classifyRow As MyPosXAuto.FTs.FT_M_MP_WARE_CLASSIFYRow = _
                 MyPosXAuto.Facade.AfBizMaster.GetM_MP_WARE_CLASSIFYRow(classifyID)
@@ -257,15 +261,30 @@ Namespace Facade
             Dim resultBuilder As New LineStrBuilder
             resultBuilder.AppendFormat(classifyRow.WARE_CLASSIFY_CODE)
 
+            If CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_AUTO_WARE_CODE_HYPHON)) = True Then
+                resultBuilder.AppendFormat("-")
+            End If
+
+            If CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_AUTO_WARE_CODE_SUPPLIER_CODE)) = True Then
+                resultBuilder.AppendFormat(supplierCode)
+            End If
+
             If preview = True Then
-                resultBuilder.AppendFormat("-XXXX")
+                resultBuilder.AppendFormat("XXXX")
+                If CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_AUTO_WARE_CODE_REMARK)) = True Then
+                    resultBuilder.AppendFormat(surfix)
+                End If
+
                 Return resultBuilder.ToString
             End If
 
             Dim seedName As String = String.Format("{0}_{1}", MyPosXService.Decls.SPX_WARE_CODE, classifyID)
             Dim seedValue As Integer = Facade.OpSysConfig.GetNewSeedID(seedName)
 
-            resultBuilder.AppendFormat("-{0:0000}", seedValue)
+            resultBuilder.AppendFormat("{0:0000}", seedValue)
+            If CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_AUTO_WARE_CODE_REMARK)) = True Then
+                resultBuilder.AppendFormat(surfix)
+            End If
 
             Return resultBuilder.ToString
 

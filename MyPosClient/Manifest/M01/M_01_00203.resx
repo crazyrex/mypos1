@@ -118,23 +118,23 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="DefaultLookAndFeel_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>295, 0</value>
+    <value>278, 0</value>
   </metadata>
   <metadata name="Timer_Surveillant.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>138, 0</value>
+    <value>134, 0</value>
   </metadata>
   <metadata name="ToolStrip_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ToolStripButton_Save.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 22</value>
+    <value>35, 22</value>
   </data>
   <data name="ToolStripButton_Save.Text" xml:space="preserve">
     <value>保存</value>
   </data>
   <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 22</value>
+    <value>35, 22</value>
   </data>
   <data name="ToolStripButton_Close.Text" xml:space="preserve">
     <value>关闭</value>
@@ -159,7 +159,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ToolStrip_Form.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>21</value>
   </data>
   <data name="TextEdit_WareCode.EditValue" xml:space="preserve">
     <value />
@@ -168,7 +168,7 @@
     <value>118, 51</value>
   </data>
   <data name="TextEdit_WareCode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 21</value>
+    <value>142, 20</value>
   </data>
   <data name="TextEdit_WareCode.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -183,7 +183,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TextEdit_WareCode.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="Label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -213,7 +213,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>20</value>
   </data>
   <data name="CheckEdit_ManualCode.Location" type="System.Drawing.Point, System.Drawing">
     <value>266, 51</value>
@@ -246,7 +246,7 @@
     <value>73, 9</value>
   </data>
   <data name="TextEdit_CustomCode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 21</value>
+    <value>142, 20</value>
   </data>
   <data name="TextEdit_CustomCode.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -321,7 +321,7 @@
     <value>118, 110</value>
   </data>
   <data name="TextEdit_WareName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>465, 21</value>
+    <value>465, 20</value>
   </data>
   <data name="TextEdit_WareName.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -336,7 +336,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TextEdit_WareName.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -375,7 +375,7 @@
     <value>344, 5</value>
   </data>
   <data name="TextEdit_Model.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 21</value>
+    <value>142, 20</value>
   </data>
   <data name="TextEdit_Model.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -429,7 +429,7 @@
     <value>115, 5</value>
   </data>
   <data name="TextEdit_Spec.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 21</value>
+    <value>142, 20</value>
   </data>
   <data name="TextEdit_Spec.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -495,7 +495,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Panel_SpecModel.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="TextEdit_WareNameEn.EditValue" xml:space="preserve">
     <value />
@@ -504,7 +504,7 @@
     <value>115, 5</value>
   </data>
   <data name="TextEdit_WareNameEn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>465, 21</value>
+    <value>465, 20</value>
   </data>
   <data name="TextEdit_WareNameEn.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -570,7 +570,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Panel_WareNameEn.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="TextEdit_ModelEn.EditValue" xml:space="preserve">
     <value />
@@ -579,7 +579,7 @@
     <value>344, 5</value>
   </data>
   <data name="TextEdit_ModelEn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 21</value>
+    <value>142, 20</value>
   </data>
   <data name="TextEdit_ModelEn.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -633,7 +633,7 @@
     <value>115, 4</value>
   </data>
   <data name="TextEdit_SpecEn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 21</value>
+    <value>142, 20</value>
   </data>
   <data name="TextEdit_SpecEn.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -699,7 +699,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Panel_SpecModelEn.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="CalcEdit_UnitCost.Location" type="System.Drawing.Point, System.Drawing">
     <value>115, 5</value>
@@ -709,7 +709,7 @@
     <value>Combo</value>
   </data>
   <data name="CalcEdit_UnitCost.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 21</value>
+    <value>142, 20</value>
   </data>
   <data name="CalcEdit_UnitCost.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -733,7 +733,7 @@
     <value>Combo</value>
   </data>
   <data name="CalcEdit_UnitPrice.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 21</value>
+    <value>142, 20</value>
   </data>
   <data name="CalcEdit_UnitPrice.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -829,7 +829,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Panel_FinacialPart.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="TextEdit_Attribute1.EditValue" xml:space="preserve">
     <value />
@@ -838,7 +838,7 @@
     <value>115, 5</value>
   </data>
   <data name="TextEdit_Attribute1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 21</value>
+    <value>208, 20</value>
   </data>
   <data name="TextEdit_Attribute1.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -907,7 +907,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Panel_Attribute1.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="TextEdit_Attribute2.EditValue" xml:space="preserve">
     <value />
@@ -916,7 +916,7 @@
     <value>115, 5</value>
   </data>
   <data name="TextEdit_Attribute2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 21</value>
+    <value>208, 20</value>
   </data>
   <data name="TextEdit_Attribute2.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -985,7 +985,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Panel_Attribute2.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="TextEdit_Attribute3.EditValue" xml:space="preserve">
     <value />
@@ -994,7 +994,7 @@
     <value>115, 5</value>
   </data>
   <data name="TextEdit_Attribute3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 21</value>
+    <value>208, 20</value>
   </data>
   <data name="TextEdit_Attribute3.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -1063,7 +1063,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Panel_Attribute3.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="TextEdit_Attribute4.EditValue" xml:space="preserve">
     <value />
@@ -1072,7 +1072,7 @@
     <value>115, 5</value>
   </data>
   <data name="TextEdit_Attribute4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 21</value>
+    <value>208, 20</value>
   </data>
   <data name="TextEdit_Attribute4.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -1141,7 +1141,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Panel_Attribute4.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="CheckEdit_PractCodeRequired.Location" type="System.Drawing.Point, System.Drawing">
     <value>403, 5</value>
@@ -1174,7 +1174,7 @@
     <value>328, 5</value>
   </data>
   <data name="SpinEdit_GuaranteeDays.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 21</value>
+    <value>53, 20</value>
   </data>
   <data name="SpinEdit_GuaranteeDays.TabIndex" type="System.Int32, mscorlib">
     <value>10002</value>
@@ -1249,7 +1249,7 @@
     <value>115, 4</value>
   </data>
   <data name="TextEdit_UnitName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 21</value>
+    <value>142, 20</value>
   </data>
   <data name="TextEdit_UnitName.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -1349,7 +1349,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Panel_Misc.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="Label12.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1361,7 +1361,7 @@
     <value>NoControl</value>
   </data>
   <data name="Label12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 84</value>
+    <value>283, 82</value>
   </data>
   <data name="Label12.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 15</value>
@@ -1385,10 +1385,10 @@
     <value>13</value>
   </data>
   <data name="ButtonEdit_SupplierCode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>118, 81</value>
+    <value>331, 79</value>
   </data>
   <data name="ButtonEdit_SupplierCode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 21</value>
+    <value>104, 20</value>
   </data>
   <data name="ButtonEdit_SupplierCode.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -1403,7 +1403,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ButtonEdit_SupplierCode.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="Label_SupplierName.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9pt</value>
@@ -1412,10 +1412,10 @@
     <value>NoControl</value>
   </data>
   <data name="Label_SupplierName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>268, 81</value>
+    <value>441, 77</value>
   </data>
   <data name="Label_SupplierName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 24</value>
+    <value>142, 24</value>
   </data>
   <data name="Label_SupplierName.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -1433,7 +1433,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label_SupplierName.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="Label_SupplierID.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1445,16 +1445,16 @@
     <value>NoControl</value>
   </data>
   <data name="Label_SupplierID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>496, 81</value>
+    <value>528, 82</value>
   </data>
   <data name="Label_SupplierID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 15</value>
+    <value>55, 15</value>
   </data>
   <data name="Label_SupplierID.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
   </data>
   <data name="Label_SupplierID.Text" xml:space="preserve">
-    <value>供应商</value>
+    <value>供应商ID</value>
   </data>
   <data name="&gt;&gt;Label_SupplierID.Name" xml:space="preserve">
     <value>Label_SupplierID</value>
@@ -1466,7 +1466,64 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label_SupplierID.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>0</value>
+  </data>
+  <data name="TextEdit_WareCodeSurfix.EditValue" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextEdit_WareCodeSurfix.Location" type="System.Drawing.Point, System.Drawing">
+    <value>118, 79</value>
+  </data>
+  <data name="TextEdit_WareCodeSurfix.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 20</value>
+  </data>
+  <data name="TextEdit_WareCodeSurfix.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_WareCodeSurfix.Name" xml:space="preserve">
+    <value>TextEdit_WareCodeSurfix</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_WareCodeSurfix.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_WareCodeSurfix.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TextEdit_WareCodeSurfix.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="Label_HintWareCodeSurfix.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label_HintWareCodeSurfix.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="Label_HintWareCodeSurfix.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label_HintWareCodeSurfix.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 82</value>
+  </data>
+  <data name="Label_HintWareCodeSurfix.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 15</value>
+  </data>
+  <data name="Label_HintWareCodeSurfix.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
+  </data>
+  <data name="Label_HintWareCodeSurfix.Text" xml:space="preserve">
+    <value>条码后缀</value>
+  </data>
+  <data name="&gt;&gt;Label_HintWareCodeSurfix.Name" xml:space="preserve">
+    <value>Label_HintWareCodeSurfix</value>
+  </data>
+  <data name="&gt;&gt;Label_HintWareCodeSurfix.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label_HintWareCodeSurfix.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Label_HintWareCodeSurfix.ZOrder" xml:space="preserve">
+    <value>19</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
