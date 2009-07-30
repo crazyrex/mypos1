@@ -736,7 +736,7 @@
     <value>4</value>
   </data>
   <data name="SpinEdit_AutoWareCodeIDLenth.EditValue" type="System.Decimal, mscorlib">
-    <value>0</value>
+    <value>3</value>
   </data>
   <data name="SpinEdit_AutoWareCodeIDLenth.Location" type="System.Drawing.Point, System.Drawing">
     <value>200, 85</value>
