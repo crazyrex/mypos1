@@ -239,6 +239,9 @@
   <data name="GridColumn_SupplierName.Caption" xml:space="preserve">
     <value>Supplier name</value>
   </data>
+  <data name="GridColumn_SupplierName.Width" type="System.Int32, mscorlib">
+    <value>113</value>
+  </data>
   <data name="GridColumn_Address.Caption" xml:space="preserve">
     <value>Address</value>
   </data>
