@@ -176,6 +176,7 @@ Namespace Facade
 
                     consignDtlRow = consignDtlList.NewH_MP_TURNOVER_CONSIGN_DTLRow
                     consignDtlList.AddH_MP_TURNOVER_CONSIGN_DTLRow(consignDtlRow)
+                    consignDtlRow.DETAIL_ID = Guid.NewGuid.ToString
                     consignDtlRow.WARE_ID = turnoverDtlRow.WARE_ID
                     consignDtlRow.CONSIGN_ID = consignID
                 End If
