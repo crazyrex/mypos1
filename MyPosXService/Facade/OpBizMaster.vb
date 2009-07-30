@@ -271,7 +271,7 @@ Namespace Facade
 
             If preview = True Then
                 resultBuilder.AppendFormat("XXXX")
-                If CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_AUTO_WARE_CODE_REMARK)) = True Then
+                If CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_AUTO_WARE_CODE_SURFIX)) = True Then
                     resultBuilder.AppendFormat(surfix)
                 End If
 
@@ -282,7 +282,7 @@ Namespace Facade
             Dim seedValue As Integer = Facade.OpSysConfig.GetNewSeedID(seedName)
 
             resultBuilder.AppendFormat("{0:0000}", seedValue)
-            If CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_AUTO_WARE_CODE_REMARK)) = True Then
+            If CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_AUTO_WARE_CODE_SURFIX)) = True Then
                 resultBuilder.AppendFormat(surfix)
             End If
 
