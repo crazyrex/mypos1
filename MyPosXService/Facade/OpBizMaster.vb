@@ -258,6 +258,13 @@ Namespace Facade
                 Return String.Empty
             End If
 
+            Dim idLength = CommTK.FInteger(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_AUTO_WARE_CODE_ID_LENTH))
+            If idLength <= 3 Or idLength > 9 Then
+                idLength = 4
+                SysInfo.WriteShareSysInfo(MyPosXService.Decls.SVN_AUTO_WARE_CODE_ID_LENTH, CommTK.FString(idLength))
+            End If
+
+
             Dim resultBuilder As New LineStrBuilder
             resultBuilder.AppendFormat(classifyRow.WARE_CLASSIFY_CODE)
 
@@ -270,7 +277,7 @@ Namespace Facade
             End If
 
             If preview = True Then
-                resultBuilder.AppendFormat("XXXX")
+                resultBuilder.AppendFormat(StrDup(idLength, "X"))
                 If CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_AUTO_WARE_CODE_SURFIX)) = True Then
                     resultBuilder.AppendFormat(surfix)
                 End If
@@ -281,7 +288,7 @@ Namespace Facade
             Dim seedName As String = String.Format("{0}_{1}", MyPosXService.Decls.SPX_WARE_CODE, classifyID)
             Dim seedValue As Integer = Facade.OpSysConfig.GetNewSeedID(seedName)
 
-            resultBuilder.AppendFormat("{0:0000}", seedValue)
+            resultBuilder.AppendFormat("{0:" + StrDup(idLength, "0") + "}", seedValue)
             If CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_AUTO_WARE_CODE_SURFIX)) = True Then
                 resultBuilder.AppendFormat(surfix)
             End If
