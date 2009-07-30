@@ -259,7 +259,7 @@ Namespace Facade
             End If
 
             Dim idLength = CommTK.FInteger(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_AUTO_WARE_CODE_ID_LENTH))
-            If idLength <= 3 Or idLength > 9 Then
+            If idLength < 3 Or idLength > 9 Then
                 idLength = 4
                 SysInfo.WriteShareSysInfo(MyPosXService.Decls.SVN_AUTO_WARE_CODE_ID_LENTH, CommTK.FString(idLength))
             End If
@@ -285,7 +285,12 @@ Namespace Facade
                 Return resultBuilder.ToString
             End If
 
-            Dim seedName As String = String.Format("{0}_{1}", MyPosXService.Decls.SPX_WARE_CODE, classifyID)
+            Dim supplierRowSE As New MyPosXAuto.FTs.FT_M_MP_SUPPLIERRowSEntity
+            Dim supplierCondition As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_MP_SUPPLIER(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            supplierCondition.Add(AfBizMaster.M_MP_SUPPLIERColumns.SUPPLIER_CODEColumn, "=", supplierCode)
+            MyPosXAuto.Facade.AfBizMaster.FillM_MP_SUPPLIERRowSEntity(supplierRowSE, supplierCondition)
+
+            Dim seedName As String = String.Format("{0}_{1}_{2}", MyPosXService.Decls.SPX_WARE_CODE, classifyID, supplierRowSE.SUPPLIER_ID)
             Dim seedValue As Integer = Facade.OpSysConfig.GetNewSeedID(seedName)
 
             resultBuilder.AppendFormat("{0:" + StrDup(idLength, "0") + "}", seedValue)
