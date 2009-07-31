@@ -291,14 +291,26 @@ Namespace Facade
             MyPosXAuto.Facade.AfBizMaster.FillM_MP_SUPPLIERRowSEntity(supplierRowSE, supplierCondition)
 
             Dim seedName As String = String.Format("{0}_{1}_{2}", MyPosXService.Decls.SPX_WARE_CODE, classifyID, supplierRowSE.SUPPLIER_ID)
-            Dim seedValue As Integer = Facade.OpSysConfig.GetNewSeedID(seedName)
+            Dim seedValue As Integer
+            Dim wareCondition As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_MP_WARE(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim result As New LineStrBuilder
 
-            resultBuilder.AppendFormat("{0:" + StrDup(idLength, "0") + "}", seedValue)
-            If CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_AUTO_WARE_CODE_SURFIX)) = True Then
-                resultBuilder.AppendFormat(surfix)
-            End If
+            Do
+                seedValue = Facade.OpSysConfig.GetNewSeedID(seedName)
 
-            Return resultBuilder.ToString
+                result.Clear()
+                result.AppendFormat(resultBuilder.ToString)
+                result.AppendFormat("{0:" + StrDup(idLength, "0") + "}", seedValue)
+                If CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_AUTO_WARE_CODE_SURFIX)) = True Then
+                    result.AppendFormat(surfix)
+                End If
+
+                wareCondition.Clear()
+                wareCondition.Add(AfBizMaster.M_MP_WAREColumns.WARE_CODEColumn, "=", result.ToString)
+
+            Loop While MyPosXAuto.Facade.AfBizMaster.GetM_MP_WARECount(wareCondition) > 0
+
+            Return result.ToString
 
 
         End Function
