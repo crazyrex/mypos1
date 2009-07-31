@@ -1064,6 +1064,8 @@ Namespace Manifest
 
         Private Sub RepositoryItemCalcEdit_WareAmount_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemCalcEdit_WareAmount.EditValueChanged
 
+            Me.IsSaved = False
+
             Dim calcEdit As DevExpress.XtraEditors.CalcEdit = CType(sender, DevExpress.XtraEditors.CalcEdit)
             Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_AMOUNT = calcEdit.Value
             Me.SVFR_BINDING_TURNOVER_DTL_ROW.SUM_PRICE = Me.SVFR_BINDING_TURNOVER_DTL_ROW.UNIT_PRICE * Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_AMOUNT

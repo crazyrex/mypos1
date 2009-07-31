@@ -216,19 +216,19 @@
             'ToolStripButton_Create
             '
             Me.ToolStripButton_Create.Name = "ToolStripButton_Create"
-            Me.ToolStripButton_Create.Size = New System.Drawing.Size(36, 22)
+            Me.ToolStripButton_Create.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Create.Text = "新单"
             '
             'ToolStripButton_Save
             '
             Me.ToolStripButton_Save.Name = "ToolStripButton_Save"
-            Me.ToolStripButton_Save.Size = New System.Drawing.Size(36, 22)
+            Me.ToolStripButton_Save.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Save.Text = "结单"
             '
             'ToolStripButton_Remove
             '
             Me.ToolStripButton_Remove.Name = "ToolStripButton_Remove"
-            Me.ToolStripButton_Remove.Size = New System.Drawing.Size(36, 22)
+            Me.ToolStripButton_Remove.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Remove.Text = "去除"
             '
             'ToolStripButton_Return
@@ -237,7 +237,7 @@
             Me.ToolStripButton_Return.Image = CType(resources.GetObject("ToolStripButton_Return.Image"), System.Drawing.Image)
             Me.ToolStripButton_Return.ImageTransparentColor = System.Drawing.Color.White
             Me.ToolStripButton_Return.Name = "ToolStripButton_Return"
-            Me.ToolStripButton_Return.Size = New System.Drawing.Size(36, 22)
+            Me.ToolStripButton_Return.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Return.Text = "退货"
             '
             'ToolStripButton_PurchaseList
@@ -246,13 +246,13 @@
             Me.ToolStripButton_PurchaseList.Image = CType(resources.GetObject("ToolStripButton_PurchaseList.Image"), System.Drawing.Image)
             Me.ToolStripButton_PurchaseList.ImageTransparentColor = System.Drawing.Color.White
             Me.ToolStripButton_PurchaseList.Name = "ToolStripButton_PurchaseList"
-            Me.ToolStripButton_PurchaseList.Size = New System.Drawing.Size(36, 22)
+            Me.ToolStripButton_PurchaseList.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_PurchaseList.Text = "小票"
             '
             'ToolStripButton_Close
             '
             Me.ToolStripButton_Close.Name = "ToolStripButton_Close"
-            Me.ToolStripButton_Close.Size = New System.Drawing.Size(36, 22)
+            Me.ToolStripButton_Close.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Close.Text = "关闭"
             '
             'PanelControl1
