@@ -116,7 +116,7 @@ Namespace Manifest
 
             'Me.FormInputGuarder.SetValidate(Me.TextEdit_Input, InputGuarder.ValidateClassify.Required, Nothing)
 
-            Me.FormInputGuarder.SetInputLinkedLabel(Me.ButtonEdit_WareCode, Me.Label_WareInfo, Me.Label_WareID)
+            Me.FormInputGuarder.SetInputLinkedLabel(Me.ButtonEdit_WareCode, Me.ButtonEdit_WareCode, Me.Label_WareID)
             Me.FormInputGuarder.SetInputLinkedLabel(Me.TextEdit_ClientCode, Me.Label_ClientName, Me.Label_ClientID)
 
             'Me._bizAgent.SetDisableControlUnderRequest(Me.DisableControlUnderRequest)
@@ -747,13 +747,22 @@ Namespace Manifest
 
             'Me.ToolStripButton_Delete.Enabled = False
             'Me.ToolStripButton_Revise.Enabled = False
+            Me.Panel_DetailDiscount.Enabled = False
 
             If Me.GridView_TurnoverDtl.RowCount > 0 Then
+
                 Me.SVFR_BINDING_TURNOVER_DTL_ROW = _
                     CType(Me.GridView_TurnoverDtl.GetDataRow( _
                         Me.GridView_TurnoverDtl.FocusedRowHandle),  _
                         MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow)
 
+
+                Dim saleTemplateCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_T_MP_SALE_TEMPLATE_WARE(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+                saleTemplateCondition.Add(MyPosXAuto.Facade.AfXV.XV_T_MP_SALE_TEMPLATE_WAREColumns.WARE_IDColumn, "=", Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_ID)
+
+                If Me.SVFT_REF_SALE_TEMPLATE_WARE_LIST.FindRowsByCondition(saleTemplateCondition).Length = 0 Then
+                    Me.Panel_DetailDiscount.Enabled = True
+                End If
                 'Me.ToolStripButton_Delete.Enabled = True
                 'Me.ToolStripButton_Revise.Enabled = True
 
@@ -832,6 +841,7 @@ Namespace Manifest
                 Me.CalcEdit_Payment.Enabled = False
                 Me.CalcEdit_UsePoint.Enabled = False
                 Me.CheckEdit_IsClient.Enabled = False
+                Me.Panel_DetailDiscount.Visible = True
             Else
                 Me.SetSubTitle("零售操作")
                 Me.CheckEdit_IsClient.Enabled = True
@@ -843,6 +853,7 @@ Namespace Manifest
                 Me.CalcEdit_Payment.Enabled = True
                 Me.CalcEdit_UsePoint.Enabled = True
                 Me.CheckEdit_IsClient.Enabled = True
+                Me.Panel_DetailDiscount.Visible = False
             End If
 
         End Sub
@@ -868,7 +879,14 @@ Namespace Manifest
         End Sub
 
 
-        Private Sub DoPrivateUtld0006()
+        Private Sub DoPrivateUpdateListPrice()
+
+            For Each bindingRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow In Me.SVFT_BINDING_TURNOVER_DTL_LIST.FindRowsByCondition(Nothing)
+                bindingRow.UNIT_PRICE = bindingRow.ORIGION_UNIT_PRICE - bindingRow.UNIT_DISCOUNT
+                bindingRow.ORIGION_SUM_PRICE = CommTK.FDecimal(bindingRow.ORIGION_UNIT_PRICE + bindingRow.WARE_AMOUNT)
+                bindingRow.SUM_PRICE = CommTK.FDecimal(bindingRow.UNIT_PRICE * bindingRow.WARE_AMOUNT)
+                bindingRow.SUM_DISCOUNT = CommTK.FDecimal(bindingRow.UNIT_DISCOUNT * bindingRow.WARE_AMOUNT)
+            Next
 
         End Sub
 
@@ -1068,13 +1086,9 @@ Namespace Manifest
 
             Dim calcEdit As DevExpress.XtraEditors.CalcEdit = CType(sender, DevExpress.XtraEditors.CalcEdit)
             Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_AMOUNT = calcEdit.Value
-            Me.SVFR_BINDING_TURNOVER_DTL_ROW.SUM_PRICE = Me.SVFR_BINDING_TURNOVER_DTL_ROW.UNIT_PRICE * Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_AMOUNT
-            Me.SVFR_BINDING_TURNOVER_DTL_ROW.SUM_DISCOUNT = Me.SVFR_BINDING_TURNOVER_DTL_ROW.UNIT_DISCOUNT * Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_AMOUNT
-            Me.SVFR_BINDING_TURNOVER_DTL_ROW.ORIGION_SUM_PRICE = Me.SVFR_BINDING_TURNOVER_DTL_ROW.ORIGION_UNIT_PRICE * Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_AMOUNT
-
             Me.DoPrivateRegularSelectingRowWareAmount()
+            Me.DoPrivateUpdateListPrice()
             calcEdit.Value = Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_AMOUNT
-
             Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.UpdateSummary, False)
         End Sub
 
@@ -1086,6 +1100,38 @@ Namespace Manifest
 
             Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.UpdateSummary, False)
 
+        End Sub
+
+        Private Sub RadioGroup_UnitDiscountType_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioGroup_UnitDiscountType.Click
+            Me.CalcEdit_DiscountAmount.SelectAll()
+            Me.CalcEdit_DiscountAmount.Select()
+        End Sub
+
+        Private Sub CalcEdit_DiscountAmount_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles CalcEdit_DiscountAmount.KeyDown
+            If e.KeyCode <> Keys.Enter Then
+                Return
+            End If
+
+            If Me.CalcEdit_DiscountAmount.Value < 0 Then
+                Me.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0021)
+                Return
+            End If
+
+            If CommTK.FInteger(Me.RadioGroup_UnitDiscountType.EditValue) = 1 Then
+                If Me.CalcEdit_DiscountAmount.Value >= 1 Then
+                    Me.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0021)
+                    Return
+                End If
+                Me.SVFR_BINDING_TURNOVER_DTL_ROW.UNIT_DISCOUNT = Me.SVFR_BINDING_TURNOVER_DTL_ROW.ORIGION_UNIT_PRICE * Me.CalcEdit_DiscountAmount.Value
+            Else
+                If Me.CalcEdit_DiscountAmount.Value >= Me.SVFR_BINDING_TURNOVER_DTL_ROW.ORIGION_UNIT_PRICE Then
+                    Me.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0021)
+                    Return
+                End If
+                Me.SVFR_BINDING_TURNOVER_DTL_ROW.UNIT_DISCOUNT = Me.CalcEdit_DiscountAmount.Value
+            End If
+
+            Me.DoPrivateUpdateListPrice()
         End Sub
     End Class
 
