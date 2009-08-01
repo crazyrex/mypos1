@@ -812,11 +812,11 @@ Namespace Business
 
                 Me._manifest.ButtonEdit_WareCode.Text = wareRowSEntity.WARE_CODE
                 Me._manifest.Label_WareID.Text = wareRowSEntity.WARE_ID
-                Me._manifest.Label_WareInfo.Text = _
-                    MyPosXService.Facade.OpBizMaster.GetWareInfoString( _
-                        wareRowSEntity.WARE_ID, _
-                        SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_CURRENT_POS_ID), _
-                        False)
+                'Me._manifest.Label_WareInfo.Text = _
+                '    MyPosXService.Facade.OpBizMaster.GetWareInfoString( _
+                '        wareRowSEntity.WARE_ID, _
+                '        SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_CURRENT_POS_ID), _
+                '        False)
 
                 Dim dtlCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_H_MP_TURNOVER_DTL(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
                 dtlCondition.Add(MyPosXAuto.Facade.AfXV.XV_H_MP_TURNOVER_DTLColumns.WARE_CODEColumn, "=", Me._manifest.ButtonEdit_WareCode.Text)
@@ -837,9 +837,9 @@ Namespace Business
                     dtlRow.ATTRIBUTE3 = wareRowSEntity.ATTRIBUTE3
                     dtlRow.ATTRIBUTE4 = wareRowSEntity.ATTRIBUTE4
                     dtlRow.TURNOVER_BOOK_STATUS = MyPosXAuto.Decls.CIVALUE_TURNOVER_BOOK_STATUS_ON_HAND
+                    dtlRow.ORIGION_UNIT_PRICE = wareRowSEntity.UNIT_PRICE
                 End If
 
-                dtlRow.UNIT_PRICE = wareRowSEntity.UNIT_PRICE
 
                 dtlRow.WARE_AMOUNT += 1
                 Dim saleTemplateWareCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_T_MP_SALE_TEMPLATE_WARE(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
@@ -848,14 +848,8 @@ Namespace Business
                 Dim saleTemplateWareRow = Me._manifest.SVFT_REF_SALE_TEMPLATE_WARE_LIST.FindRowByCondition(saleTemplateWareCondition)
                 If IsNothing(saleTemplateWareRow) = False Then
                     dtlRow.UNIT_DISCOUNT = Utils.TK.CalcWareSaleUnitDiscount(dtlRow.UNIT_PRICE, saleTemplateWareRow)
-                    dtlRow.UNIT_PRICE -= dtlRow.UNIT_DISCOUNT
                 End If
 
-                dtlRow.ORIGION_UNIT_PRICE = dtlRow.UNIT_PRICE + dtlRow.UNIT_DISCOUNT
-
-                dtlRow.SUM_PRICE = CommTK.FDecimal(dtlRow.UNIT_PRICE * dtlRow.WARE_AMOUNT)
-                dtlRow.SUM_DISCOUNT = CommTK.FDecimal(dtlRow.UNIT_DISCOUNT * dtlRow.WARE_AMOUNT)
-                dtlRow.ORIGION_SUM_PRICE = dtlRow.SUM_PRICE + dtlRow.SUM_DISCOUNT
                 Me._manifest.SpinEdit_WareAmount.Value = dtlRow.WARE_AMOUNT
 
                 'Dim servResult As String = _
