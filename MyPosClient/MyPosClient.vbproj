@@ -154,6 +154,12 @@
     <Compile Include="BasicModules\Decls.vb" />
     <Compile Include="BasicModules\Entry.vb" />
     <Compile Include="BasicModules\ExcelTK.vb" />
+    <Compile Include="BasicModules\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BasicModules\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BasicModules\Login.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -948,6 +954,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="BasicModules\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BasicModules\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
       <SubType>Designer</SubType>
