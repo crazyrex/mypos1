@@ -883,7 +883,7 @@ Namespace Manifest
 
             For Each bindingRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow In Me.SVFT_BINDING_TURNOVER_DTL_LIST.FindRowsByCondition(Nothing)
                 bindingRow.UNIT_PRICE = bindingRow.ORIGION_UNIT_PRICE - bindingRow.UNIT_DISCOUNT
-                bindingRow.ORIGION_SUM_PRICE = CommTK.FDecimal(bindingRow.ORIGION_UNIT_PRICE + bindingRow.WARE_AMOUNT)
+                bindingRow.ORIGION_SUM_PRICE = CommTK.FDecimal(bindingRow.ORIGION_UNIT_PRICE * bindingRow.WARE_AMOUNT)
                 bindingRow.SUM_PRICE = CommTK.FDecimal(bindingRow.UNIT_PRICE * bindingRow.WARE_AMOUNT)
                 bindingRow.SUM_DISCOUNT = CommTK.FDecimal(bindingRow.UNIT_DISCOUNT * bindingRow.WARE_AMOUNT)
             Next
@@ -1102,10 +1102,6 @@ Namespace Manifest
 
         End Sub
 
-        Private Sub RadioGroup_UnitDiscountType_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioGroup_UnitDiscountType.Click
-            Me.CalcEdit_DiscountAmount.SelectAll()
-            Me.CalcEdit_DiscountAmount.Select()
-        End Sub
 
         Private Sub CalcEdit_DiscountAmount_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles CalcEdit_DiscountAmount.KeyDown
             If e.KeyCode <> Keys.Enter Then
@@ -1118,7 +1114,7 @@ Namespace Manifest
             End If
 
             If CommTK.FInteger(Me.RadioGroup_UnitDiscountType.EditValue) = 1 Then
-                If Me.CalcEdit_DiscountAmount.Value >= 1 Then
+                If Me.CalcEdit_DiscountAmount.Value > 1 Then
                     Me.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0021)
                     Return
                 End If
@@ -1132,6 +1128,11 @@ Namespace Manifest
             End If
 
             Me.DoPrivateUpdateListPrice()
+        End Sub
+
+        Private Sub RadioGroup_UnitDiscountType_EditValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioGroup_UnitDiscountType.EditValueChanged
+            Me.CalcEdit_DiscountAmount.SelectAll()
+            Me.CalcEdit_DiscountAmount.Select()
         End Sub
     End Class
 
