@@ -520,6 +520,12 @@
   <data name="GridColumn_LackAmount.Caption" xml:space="preserve">
     <value>缺货数量</value>
   </data>
+  <data name="GridColumn_LackAmount.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn_LackAmount.VisibleIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
   <data name="GridColumn_ConsignOutRemains.Caption" xml:space="preserve">
     <value>出货缺交货量</value>
   </data>
@@ -1126,6 +1132,9 @@
   <data name="SaveFileDialog_ExportExcel.Filter" xml:space="preserve">
     <value>Excel文档|*.xls</value>
   </data>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>English</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
