@@ -243,10 +243,10 @@
     <value>14</value>
   </data>
   <data name="GridControl_PosLocationIODtlList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>894, 390</value>
+    <value>894, 389</value>
   </data>
   <data name="XtraTabPage_Detail.Size" type="System.Drawing.Size, System.Drawing">
-    <value>894, 390</value>
+    <value>894, 389</value>
   </data>
   <data name="XtraTabPage_Detail.Text" xml:space="preserve">
     <value>Details</value>
