@@ -130,9 +130,6 @@
   <data name="GridColumn_LocationStockAmount.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;GridColumn_ShelfAttribute1.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
-  </data>
   <data name="GridColumn_Remarks.Caption" xml:space="preserve">
     <value>备注</value>
   </data>
@@ -152,6 +149,12 @@
   <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 18</value>
   </data>
+  <data name="GridColumn_Attribute3.VisibleIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_Model.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
   <data name="&gt;&gt;GridColumn_BWareCode.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
@@ -163,9 +166,6 @@
   </data>
   <data name="ToolStripButton_Choose.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
-  </data>
-  <data name="GridColumn_DifferenceAmount.SummaryItem.DisplayFormat" xml:space="preserve">
-    <value />
   </data>
   <data name="&gt;&gt;GridColumn_ShelfCode.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
@@ -188,14 +188,12 @@
   <data name="GridColumn_SAttribute3.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="GridControl_NormalList.EmbeddedNavigator.ToolTipTitle" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;GridColumn_SRowHighlight.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
-  </data>
   <data name="&gt;&gt;GridView_NormalList.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="GridControl_ShelfStockDifference.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="&gt;&gt;XtraTabControl_Lists.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -206,8 +204,8 @@
   <data name="&gt;&gt;GridColumn_SAttribute3.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="TextEdit_Search.TabIndex" type="System.Int32, mscorlib">
-    <value>10000</value>
+  <data name="&gt;&gt;XtraTabPage_ShelfAmount.Name" xml:space="preserve">
+    <value>XtraTabPage_ShelfAmount</value>
   </data>
   <data name="&gt;&gt;GridColumn_LackAmount.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
@@ -245,22 +243,17 @@
   <data name="&gt;&gt;GridColumn_ShelfAttribute3.Name" xml:space="preserve">
     <value>GridColumn_ShelfAttribute3</value>
   </data>
-  <assembly alias="DevExpress.XtraEditors.v8.1" name="DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
-  <data name="LookUpEdit_Pos.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
-    <value>None</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="GridControl_ShelfAmount.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left</value>
-  </data>
-  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
+  <data name="GridColumn_SRemark.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_BAtrribute2.Name" xml:space="preserve">
+    <value>GridColumn_BAtrribute2</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_BCurrentAmount.Name" xml:space="preserve">
+    <value>GridColumn_BCurrentAmount</value>
   </data>
   <data name="PanelControl_Filter.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 25</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>XL.Win.Component.BaseForm, XL.Win, Version=0.0.0.68, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;GridControl_ShelfStockDifference.Name" xml:space="preserve">
     <value>GridControl_ShelfStockDifference</value>
@@ -268,14 +261,14 @@
   <data name="&gt;&gt;GridColumn_Attribute4.Name" xml:space="preserve">
     <value>GridColumn_Attribute4</value>
   </data>
-  <data name="LookUpEdit_Pos.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
+  <data name="LookUpEdit_Pos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>84, 16</value>
   </data>
   <data name="GridColumn_BUnitName.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="GridControl_ShelfStockDifference.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="GridColumn_LocationStockAmount.Caption" xml:space="preserve">
+    <value>储位货品数量</value>
   </data>
   <data name="&gt;&gt;GridColumn_Attribute3.Name" xml:space="preserve">
     <value>GridColumn_Attribute3</value>
@@ -295,8 +288,14 @@
   <data name="GridColumn_BCurrentAmount.VisibleIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
+  <data name="&gt;&gt;GridColumn_SWareCode.Name" xml:space="preserve">
+    <value>GridColumn_SWareCode</value>
+  </data>
   <data name="GridColumn_PosAmount.SummaryItem.DisplayFormat" xml:space="preserve">
     <value />
+  </data>
+  <data name="&gt;&gt;GridColumn_ShelfRemark.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="GridControl_BatchWareList.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -304,17 +303,14 @@
   <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 22</value>
   </data>
-  <data name="&gt;&gt;GridColumn_SWareCode.Name" xml:space="preserve">
-    <value>GridColumn_SWareCode</value>
+  <data name="GridColumn_ShelfAttribute2.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="GridColumn_BatchCode.VisibleIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="ToolStripButton_View.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 22</value>
-  </data>
-  <data name="GridControl_ShelfStockDifference.EmbeddedNavigator.ToolTipTitle" xml:space="preserve">
-    <value />
   </data>
   <data name="GridColumn_SCustomCode.Caption" xml:space="preserve">
     <value>自定货号</value>
@@ -325,8 +321,11 @@
   <data name="GridControl_NormalList.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Tile</value>
   </data>
-  <data name="GridColumn_ShelfCode.Caption" xml:space="preserve">
-    <value>货架编码</value>
+  <data name="&gt;&gt;GridColumn_SRemark.Name" xml:space="preserve">
+    <value>GridColumn_SRemark</value>
+  </data>
+  <data name="&gt;&gt;XtraTabPage_BatchList.Name" xml:space="preserve">
+    <value>XtraTabPage_BatchList</value>
   </data>
   <data name="GridColumn_ShelfWareName.VisibleIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -336,9 +335,6 @@
   </data>
   <data name="GridControl_ShelfAmount.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
-  </data>
-  <data name="&gt;&gt;GridColumn_ShelfWareCode.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="GridColumn_CurrentAmount.VisibleIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -367,8 +363,11 @@
   <data name="&gt;&gt;LookUpEdit_Pos.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="&gt;&gt;GridColumn_WareName.Name" xml:space="preserve">
-    <value>GridColumn_WareName</value>
+  <data name="GridColumn_PosAmount.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn_SUnitName.VisibleIndex" type="System.Int32, mscorlib">
+    <value>12</value>
   </data>
   <data name="&gt;&gt;GridColumn_SAttribute4.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
@@ -382,11 +381,14 @@
   <data name="GridColumn_Attribute3.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="ToolStripButton_Refresh.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 22</value>
+  </data>
   <data name="&gt;&gt;GridColumn_ShelfAttribute2.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="GridColumn_SWareName.VisibleIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="LookUpEdit_Pos.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="GridColumn_SModel.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -397,8 +399,8 @@
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 15</value>
   </data>
-  <data name="GridControl_ShelfStockDifference.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left</value>
+  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
   </data>
   <data name="&gt;&gt;Label1.Name" xml:space="preserve">
     <value>Label1</value>
@@ -412,14 +414,27 @@
   <data name="&gt;&gt;CheckEdit_SingleWareLocations.Parent" xml:space="preserve">
     <value>PanelControl_Filter</value>
   </data>
-  <data name="&gt;&gt;GridColumn_ShelfAttribute1.Name" xml:space="preserve">
-    <value>GridColumn_ShelfAttribute1</value>
-  </data>
   <data name="&gt;&gt;GridControl_BatchWareList.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="GridColumn_Attribute4.VisibleIndex" type="System.Int32, mscorlib">
     <value>8</value>
+  </data>
+  <data name="ToolStripButton_ExportExcel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAOwQAA
+        DsEBuJFr7QAAAgxJREFUOE+lkvtLU2EYx+0PEbtpFwnBKPGKiJImGP0gYhIYs1E5GF5gIxkpA00JRSmM
+        EF0ohMh+GaRWYlqabMVcNdS2QpaIVqiDIYhk397vA6fXhCjyhYdzeM/5fp7vczkAdeL2cwho7v/wWzT1
+        zcN+Pwhr51uY2/y41PQaF+wzKKiZQvaN58g0jyLd5KEUcQbg+84P/Cm2tncQjW3j68YWIqubCC3FcOJc
+        478BAuGoZM6zvoRnakXEruEIjhc4/g5gZop9c+voGAyLbQIfeBZxLL9BA1jzXvuGbWamuKh+GmmVbswE
+        19A59FEBbmoAG7YbsLtm2mZmiml9cvabNDwpz6YB7LYBoMXCumkJr7LOmnnHzBQ/9X2Bo2cOibm1GsBR
+        EbAQiYmw/8lnuCeWkVzcgnZlnw1j3HV/wuNXK6i/9x5Hc6wawDlTXHbLJ+LZUBQPRyKwdQdxutwl1h+N
+        LXHh5Ht1ewBHsiwawCW57HyDAfWRdvl0uhZQ1eqX8aVc7EKLqrum651ATLf9OJx5XQM4KmY0xPzZ0hFA
+        iQJnXB0WwME0E3IsL5B17ZlADqWbNYDrOepdlcysmTWWOrxqbceRWtaLk0VO1XW72D5Vckd2gMBfq8zd
+        pmUG62NJvKM4+XyziDk24xmfWoGEs1c0gHPmbrPTpHNJKOCo2G1mZs20zcwUJ5yp1AB5+8/zEwgF5GMV
+        Dxh4AAAAAElFTkSuQmCC
+</value>
   </data>
   <data name="GridColumn_SAttribute2.VisibleIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -432,9 +447,6 @@
   </data>
   <data name="LookUpEdit_Pos.Size" type="System.Drawing.Size, System.Drawing">
     <value>127, 20</value>
-  </data>
-  <data name="&gt;&gt;XtraTabPage_ShelfAmount.Name" xml:space="preserve">
-    <value>XtraTabPage_ShelfAmount</value>
   </data>
   <data name="GridColumn_ShelfAttribute3.Caption" xml:space="preserve">
     <value>属性3</value>
@@ -454,8 +466,8 @@
   <data name="GridColumn_WareName.Caption" xml:space="preserve">
     <value>货品名称</value>
   </data>
-  <data name="&gt;&gt;GridColumn_BAtrribute1.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  <data name="&gt;&gt;GridControl_ShelfStockDifference.Parent" xml:space="preserve">
+    <value>XtraTabPage_ShelfPosDifference</value>
   </data>
   <data name="GridControl_ShelfStockDifference.EmbeddedNavigator.ToolTip" xml:space="preserve">
     <value />
@@ -463,21 +475,19 @@
   <data name="&gt;&gt;GridColumn_Attribute4.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="GridControl_BatchWareList.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>Inherit</value>
+  <data name="GridColumn_CurrentAmount.SummaryItem.DisplayFormat" xml:space="preserve">
+    <value />
   </data>
-  <data name="GridColumn_LackAmount.VisibleIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="LookUpEdit_Pos.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="GridControl_ShelfStockDifference.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left</value>
   </data>
   <data name="GridColumn_ShelfWareCode.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="XtraTabPage_NormalList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>691, 392</value>
+  <data name="&gt;&gt;PanelControl_Filter.Name" xml:space="preserve">
+    <value>PanelControl_Filter</value>
   </data>
+  <assembly alias="DevExpress.XtraEditors.v8.1" name="DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
   <data name="GridControl_BatchWareList.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v8.1">
     <value>Center</value>
   </data>
@@ -504,6 +514,9 @@
   </data>
   <data name="&gt;&gt;GridColumn_BRowHighlight.Name" xml:space="preserve">
     <value>GridColumn_BRowHighlight</value>
+  </data>
+  <data name="GridColumn_SWareName.Caption" xml:space="preserve">
+    <value>货品名称</value>
   </data>
   <data name="GridColumn_DifferenceAmount.VisibleIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -535,23 +548,23 @@
   <data name="&gt;&gt;GridControl_BatchWareList.Name" xml:space="preserve">
     <value>GridControl_BatchWareList</value>
   </data>
-  <data name="&gt;&gt;GridColumn_BAtrribute3.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
-  </data>
-  <data name="&gt;&gt;GridColumn_ShelfModel.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
-  </data>
   <data name="GridColumn_SWareName.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="XtraTabPage_ShelfAmount.Text" xml:space="preserve">
-    <value>储位数量</value>
+  <data name="TextEdit_Search.EditValue" xml:space="preserve">
+    <value />
   </data>
   <data name="GridColumn_WareCode.SummaryItem.DisplayFormat" xml:space="preserve">
     <value />
   </data>
   <data name="&gt;&gt;XtraTabPage_ShelfPosDifference.Parent" xml:space="preserve">
     <value>XtraTabControl_Lists</value>
+  </data>
+  <data name="&gt;&gt;XtraTabPage_ShelfAmount.Parent" xml:space="preserve">
+    <value>XtraTabControl_Lists</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_CurrentAmount.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="GridColumn_CurrentCost.VisibleIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -562,11 +575,11 @@
   <data name="ToolStripButton_Choose.Text" xml:space="preserve">
     <value>选择</value>
   </data>
+  <data name="TextEdit_Search.Location" type="System.Drawing.Point, System.Drawing">
+    <value>286, 16</value>
+  </data>
   <data name="GridColumn_BAtrribute1.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="GridControl_NormalList.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>Inherit</value>
   </data>
   <data name="&gt;&gt;GridView_ShelfStockDifference.Name" xml:space="preserve">
     <value>GridView_ShelfStockDifference</value>
@@ -577,8 +590,8 @@
   <data name="CheckEdit_SingleWareLocations.Location" type="System.Drawing.Point, System.Drawing">
     <value>476, 16</value>
   </data>
-  <data name="GridColumn_ShelfAttribute2.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;GridColumn_BAtrribute1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="&gt;&gt;XtraTabPage_ShelfAmount.Type" xml:space="preserve">
     <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
@@ -588,6 +601,9 @@
   </data>
   <data name="&gt;&gt;GridColumn_BatchCode.Name" xml:space="preserve">
     <value>GridColumn_BatchCode</value>
+  </data>
+  <data name="GridColumn_SAttribute2.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="GridColumn_ShelfAttribute1.Caption" xml:space="preserve">
     <value>属性1</value>
@@ -607,20 +623,14 @@
   <data name="GridColumn_BAtrribute4.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;PanelControl_Filter.Name" xml:space="preserve">
-    <value>PanelControl_Filter</value>
-  </data>
   <data name="GridControl_BatchWareList.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Tile</value>
   </data>
   <data name="GridColumn_ShelfSpec.Caption" xml:space="preserve">
     <value>货品规格</value>
   </data>
-  <data name="GridControl_ShelfAmount.EmbeddedNavigator.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="GridColumn_SRemark.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;GridColumn_Remarks.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="PanelControl_Filter.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -631,6 +641,9 @@
   <data name="&gt;&gt;GridColumn_ShelfAttribute4.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
+  <data name="&gt;&gt;GridColumn_PosAmount.Name" xml:space="preserve">
+    <value>GridColumn_PosAmount</value>
+  </data>
   <data name="GridColumn_SelfAmount.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -639,6 +652,9 @@
   </data>
   <data name="GridColumn_ConsignInRemains.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="GridColumn_ShelfAttribute2.VisibleIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
   <data name="GridColumn_DifferenceAmount.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -649,32 +665,20 @@
   <data name="GridColumn_LocationCode.Caption" xml:space="preserve">
     <value>储位编码</value>
   </data>
-  <data name="TextEdit_Search.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="GridControl_ShelfStockDifference.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;GridColumn_Remarks.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="&gt;&gt;GridColumn_BCustomCode.Name" xml:space="preserve">
     <value>GridColumn_BCustomCode</value>
   </data>
-  <data name="&gt;&gt;GridColumn_BAtrribute2.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
-  </data>
   <data name="ToolStripButton_ViewTurnoverDtl.Text" xml:space="preserve">
     <value>明细查询</value>
-  </data>
-  <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
-    <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;ToolStripButton_ViewTurnoverDtl.Name" xml:space="preserve">
     <value>ToolStripButton_ViewTurnoverDtl</value>
   </data>
-  <data name="LookUpEdit_Pos.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;ToolStrip_Form.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="GridColumn_Spec.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -691,17 +695,14 @@
   <data name="GridControl_ShelfAmount.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="GridColumn_LocationStockAmount.Caption" xml:space="preserve">
-    <value>储位货品数量</value>
-  </data>
   <data name="GridColumn_ShelfUnitName.VisibleIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
   <data name="GridControl_NormalList.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="&gt;&gt;XtraTabControl_Lists.Name" xml:space="preserve">
-    <value>XtraTabControl_Lists</value>
+  <data name="&gt;&gt;Timer_Surveillant.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="GridColumn_ShelfUnitName.Caption" xml:space="preserve">
     <value>单位</value>
@@ -709,14 +710,8 @@
   <data name="GridColumn_SModel.Caption" xml:space="preserve">
     <value>货品型号</value>
   </data>
-  <data name="&gt;&gt;GridControl_ShelfAmount.Name" xml:space="preserve">
-    <value>GridControl_ShelfAmount</value>
-  </data>
   <data name="ToolStripButton_ExportExcel.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 22</value>
-  </data>
-  <data name="TextEdit_Search.Properties.Mask.EditMask" xml:space="preserve">
-    <value />
   </data>
   <data name="XtraTabPage_BatchList.Size" type="System.Drawing.Size, System.Drawing">
     <value>691, 392</value>
@@ -724,14 +719,8 @@
   <data name="&gt;&gt;GridColumn_ShelfWareName.Name" xml:space="preserve">
     <value>GridColumn_ShelfWareName</value>
   </data>
-  <data name="GridColumn_CurrentAmount.SummaryItem.DisplayFormat" xml:space="preserve">
-    <value />
-  </data>
   <data name="GridColumn_BModel.VisibleIndex" type="System.Int32, mscorlib">
     <value>5</value>
-  </data>
-  <data name="ToolStripButton_Choose.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
   </data>
   <data name="PanelControl_Filter.Size" type="System.Drawing.Size, System.Drawing">
     <value>700, 52</value>
@@ -739,11 +728,11 @@
   <data name="GridColumn_BCurrentAmount.SummaryItem.DisplayFormat" xml:space="preserve">
     <value />
   </data>
-  <data name="&gt;&gt;GridColumn_SUnitName.Name" xml:space="preserve">
-    <value>GridColumn_SUnitName</value>
-  </data>
   <data name="&gt;&gt;GridColumn_ShelfSpec.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="TextEdit_Search.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="GridColumn_BRemark.VisibleIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -751,14 +740,17 @@
   <data name="GridColumn_DifferenceAmount.Caption" xml:space="preserve">
     <value>偏差数量</value>
   </data>
-  <data name="&gt;&gt;GridColumn_SRemark.Name" xml:space="preserve">
-    <value>GridColumn_SRemark</value>
+  <data name="GridControl_ShelfStockDifference.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9pt</value>
   </data>
   <data name="GridColumn_Remarks.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="GridColumn_SelfAmount.Caption" xml:space="preserve">
+    <value>储位货品数量</value>
   </data>
   <data name="GridColumn_BCustomCode.VisibleIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -769,8 +761,8 @@
   <data name="GridColumn_SModel.VisibleIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="LookUpEdit_Pos.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="GridColumn_ConsignInRemains.SummaryItem.DisplayFormat" xml:space="preserve">
+    <value />
   </data>
   <data name="&gt;&gt;GridColumn_Remarks.Name" xml:space="preserve">
     <value>GridColumn_Remarks</value>
@@ -789,9 +781,6 @@
   </data>
   <data name="GridColumn_UnitName.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="&gt;&gt;GridColumn_ShelfCustomCode.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="Label2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9pt</value>
@@ -814,15 +803,12 @@
   <data name="GridColumn_LocationStockAmount.VisibleIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
-  <data name="GridColumn_PosAmount.Caption" xml:space="preserve">
-    <value>在库数量</value>
+  <data name="&gt;&gt;GridColumn_Model.Name" xml:space="preserve">
+    <value>GridColumn_Model</value>
   </data>
   <assembly alias="DevExpress.Utils.v8.1" name="DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
   <data name="LookUpEdit_Pos.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
     <value>Combo</value>
-  </data>
-  <data name="GridColumn_BCurrentAmount.Caption" xml:space="preserve">
-    <value>当前数量</value>
   </data>
   <data name="GridColumn_SelfAmount.VisibleIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -845,26 +831,23 @@
   <data name="GridColumn_UnitName.VisibleIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
-  <data name="&gt;&gt;GridColumn_BAtrribute2.Name" xml:space="preserve">
-    <value>GridColumn_BAtrribute2</value>
-  </data>
-  <data name="&gt;&gt;GridColumn_PosAmount.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
-  </data>
   <data name="&gt;&gt;XtraTabControl_Lists.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="GridColumn_BCustomCode.Caption" xml:space="preserve">
     <value>自定货号</value>
   </data>
-  <data name="&gt;&gt;GridColumn_BWareName.Name" xml:space="preserve">
-    <value>GridColumn_BWareName</value>
+  <data name="LookUpEdit_Pos.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;GridColumn_LocationCode.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="GridColumn_WareCode.VisibleIndex" type="System.Int32, mscorlib">
     <value>0</value>
+  </data>
+  <data name="&gt;&gt;ToolStripButton_PrintReport.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="GridColumn_SUnitName.Caption" xml:space="preserve">
     <value>单位</value>
@@ -875,14 +858,17 @@
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>233, 18</value>
   </data>
-  <data name="&gt;&gt;GridColumn_LowerLimit.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  <data name="&gt;&gt;GridControl_ShelfAmount.Name" xml:space="preserve">
+    <value>GridControl_ShelfAmount</value>
   </data>
   <data name="ToolStripButton_PrintReport.Text" xml:space="preserve">
     <value>打印</value>
   </data>
-  <data name="GridColumn_BRemark.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
+    <value>PanelControl_Filter</value>
+  </data>
+  <data name="&gt;&gt;XtraTabControl_Lists.Name" xml:space="preserve">
+    <value>XtraTabControl_Lists</value>
   </data>
   <data name="GridColumn_CustomCode.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -905,8 +891,8 @@
   <data name="&gt;&gt;GridControl_NormalList.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="&gt;&gt;GridColumn_ConsignOutRemains.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  <data name="&gt;&gt;GridControl_ShelfAmount.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="GridColumn_BWareCode.VisibleIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -920,23 +906,29 @@
   <data name="CheckEdit_SingleWareLocations.Properties.Caption" xml:space="preserve">
     <value>仅显示此货品储位</value>
   </data>
-  <data name="GridControl_BatchWareList.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left</value>
+  <data name="GridColumn_BModel.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="GridColumn_BAtrribute4.Caption" xml:space="preserve">
     <value>属性4</value>
   </data>
-  <data name="&gt;&gt;GridColumn_CurrentAmount.Type" xml:space="preserve">
+  <data name="GridColumn_SWareName.VisibleIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_ConsignOutRemains.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="GridColumn_SRemark.VisibleIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+  <data name="GridControl_BatchWareList.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
   </data>
   <data name="GridColumn_BWareName.VisibleIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="&gt;&gt;GridColumn_SRemark.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="GridColumn_SRemark.Caption" xml:space="preserve">
+    <value>备注</value>
   </data>
   <data name="&gt;&gt;Label2.Name" xml:space="preserve">
     <value>Label2</value>
@@ -953,8 +945,8 @@
   <data name="GridControl_BatchWareList.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v8.1">
     <value>None</value>
   </data>
-  <data name="&gt;&gt;GridColumn_BRowHighlight.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  <data name="&gt;&gt;XtraTabControl_Lists.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabControl, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="GridControl_NormalList.Size" type="System.Drawing.Size, System.Drawing">
     <value>691, 392</value>
@@ -974,9 +966,6 @@
   <data name="&gt;&gt;GridControl_ShelfStockDifference.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="LookUpEdit_Pos.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="GridColumn_LocationCode.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -986,8 +975,8 @@
   <data name="GridColumn_SAttribute1.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;GridColumn_SCustomCode.Name" xml:space="preserve">
-    <value>GridColumn_SCustomCode</value>
+  <data name="TextEdit_Search.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
   </data>
   <data name="ToolStripButton_Refresh.Text" xml:space="preserve">
     <value>刷新</value>
@@ -995,7 +984,13 @@
   <data name="ToolStrip_Form.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="ToolStripButton_ExportExcel.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
   <data name="&gt;&gt;GridColumn_SSpec.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_LowerLimit.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="&gt;&gt;GridColumn_BSpec.Type" xml:space="preserve">
@@ -1004,14 +999,17 @@
   <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 15</value>
   </data>
+  <data name="ToolStripButton_PrintReport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 22</value>
+  </data>
   <data name="GridColumn_ShelfSpec.VisibleIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="GridColumn_ShelfWareName.Caption" xml:space="preserve">
     <value>货品名称</value>
   </data>
-  <data name="&gt;&gt;XtraTabPage_ShelfAmount.Parent" xml:space="preserve">
-    <value>XtraTabControl_Lists</value>
+  <data name="&gt;&gt;GridColumn_ShelfAttribute1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="&gt;&gt;GridColumn_SModel.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
@@ -1052,14 +1050,17 @@
   <data name="GridColumn_BAtrribute3.VisibleIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="&gt;&gt;GridColumn_ShelfCode.Name" xml:space="preserve">
-    <value>GridColumn_ShelfCode</value>
+  <data name="GridColumn_SAttribute4.VisibleIndex" type="System.Int32, mscorlib">
+    <value>8</value>
   </data>
   <data name="GridControl_ShelfAmount.Size" type="System.Drawing.Size, System.Drawing">
     <value>691, 392</value>
   </data>
   <data name="Label1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9pt</value>
+  </data>
+  <data name="ToolStripButton_ExportExcel.Text" xml:space="preserve">
+    <value>导出Excel</value>
   </data>
   <data name="&gt;&gt;GridView_BatchWareList.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
@@ -1070,11 +1071,14 @@
   <data name="&gt;&gt;GridControl_NormalList.Parent" xml:space="preserve">
     <value>XtraTabPage_NormalList</value>
   </data>
+  <data name="GridColumn_Spec.VisibleIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
   <data name="GridColumn_LackAmount.SummaryItem.DisplayFormat" xml:space="preserve">
     <value />
   </data>
-  <data name="ToolStrip_Form.Size" type="System.Drawing.Size, System.Drawing">
-    <value>700, 25</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>XL.Win.Component.BaseForm, XL.Win, Version=0.0.0.68, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;GridColumn_Attribute1.Name" xml:space="preserve">
     <value>GridColumn_Attribute1</value>
@@ -1093,9 +1097,6 @@
   </data>
   <data name="TextEdit_Search.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>False</value>
-  </data>
-  <data name="&gt;&gt;ToolStripButton_View.Name" xml:space="preserve">
-    <value>ToolStripButton_View</value>
   </data>
   <data name="GridColumn_BAtrribute1.VisibleIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -1127,9 +1128,6 @@
   <data name="GridColumn_SWareCode.SummaryItem.DisplayFormat" xml:space="preserve">
     <value />
   </data>
-  <data name="&gt;&gt;GridColumn_ConsignInRemains.Name" xml:space="preserve">
-    <value>GridColumn_ConsignInRemains</value>
-  </data>
   <data name="GridColumn_CurrentAmount.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1145,20 +1143,17 @@
   <data name="&gt;&gt;GridColumn_UnitName.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="TextEdit_Search.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
-    <value>None</value>
-  </data>
   <data name="&gt;&gt;GridColumn_LackAmount.Name" xml:space="preserve">
     <value>GridColumn_LackAmount</value>
   </data>
   <data name="GridColumn_CurrentCost.Caption" xml:space="preserve">
     <value>当前成本</value>
   </data>
-  <data name="&gt;&gt;GridControl_ShelfAmount.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  <data name="GridColumn_Model.Caption" xml:space="preserve">
+    <value>货品型号</value>
   </data>
-  <data name="&gt;&gt;GridColumn_SAttribute3.Name" xml:space="preserve">
-    <value>GridColumn_SAttribute3</value>
+  <data name="GridControl_ShelfAmount.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left</value>
   </data>
   <data name="GridColumn_SSpec.VisibleIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1178,14 +1173,14 @@
   <data name="&gt;&gt;GridColumn_SelfAmount.Name" xml:space="preserve">
     <value>GridColumn_SelfAmount</value>
   </data>
-  <data name="TextEdit_Search.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
   <data name="GridControl_ShelfAmount.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Tile</value>
   </data>
   <data name="&gt;&gt;GridColumn_WareCode.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;XtraTabPage_NormalList.Parent" xml:space="preserve">
+    <value>XtraTabControl_Lists</value>
   </data>
   <data name="&gt;&gt;GridColumn_BWareName.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
@@ -1214,23 +1209,17 @@
   <data name="GridColumn_BModel.Caption" xml:space="preserve">
     <value>货品型号</value>
   </data>
-  <data name="&gt;&gt;GridColumn_SAttribute2.Name" xml:space="preserve">
-    <value>GridColumn_SAttribute2</value>
+  <data name="GridColumn_Attribute1.Caption" xml:space="preserve">
+    <value>属性1</value>
   </data>
   <data name="&gt;&gt;GridColumn_WareCode.Name" xml:space="preserve">
     <value>GridColumn_WareCode</value>
   </data>
-  <data name="&gt;&gt;GridColumn_Model.Name" xml:space="preserve">
-    <value>GridColumn_Model</value>
-  </data>
   <data name="GridColumn_ShelfAttribute1.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;GridColumn_BatchCode.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
-  </data>
-  <data name="&gt;&gt;XtraTabPage_NormalList.Parent" xml:space="preserve">
-    <value>XtraTabControl_Lists</value>
+  <data name="ToolStripButton_Choose.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 22</value>
   </data>
   <data name="GridColumn_BUnitName.VisibleIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -1241,14 +1230,14 @@
   <data name="&gt;&gt;DefaultLookAndFeel_Form.Name" xml:space="preserve">
     <value>DefaultLookAndFeel_Form</value>
   </data>
-  <data name="GridColumn_Model.Caption" xml:space="preserve">
-    <value>货品型号</value>
+  <data name="&gt;&gt;CheckEdit_SingleWareLocations.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="GridColumn_SAttribute3.VisibleIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
-  <data name="&gt;&gt;GridControl_ShelfStockDifference.Parent" xml:space="preserve">
-    <value>XtraTabPage_ShelfPosDifference</value>
+  <data name="&gt;&gt;GridColumn_BAtrribute2.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="&gt;&gt;GridControl_BatchWareList.Parent" xml:space="preserve">
     <value>XtraTabPage_BatchList</value>
@@ -1256,17 +1245,14 @@
   <data name="&gt;&gt;GridColumn_Spec.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="GridColumn_ShelfAttribute3.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="GridColumn_ConsignInRemains.SummaryItem.DisplayFormat" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;ToolStripButton_View.Name" xml:space="preserve">
+    <value>ToolStripButton_View</value>
   </data>
   <data name="&gt;&gt;GridColumn_ShelfWareName.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="&gt;&gt;ToolStripButton_ExportExcel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="LookUpEdit_Pos.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
   </data>
   <data name="&gt;&gt;GridColumn_ShelfUnitName.Name" xml:space="preserve">
     <value>GridColumn_ShelfUnitName</value>
@@ -1283,20 +1269,20 @@
   <data name="GridColumn_ShelfRowHighlight.Caption" xml:space="preserve">
     <value>高亮显示</value>
   </data>
-  <data name="GridColumn_SRemark.Caption" xml:space="preserve">
-    <value>备注</value>
+  <data name="&gt;&gt;GridColumn_BWareName.Name" xml:space="preserve">
+    <value>GridColumn_BWareName</value>
   </data>
   <data name="GridControl_NormalList.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="ToolStripButton_ExportExcel.Text" xml:space="preserve">
-    <value>导出Excel</value>
+  <data name="&gt;&gt;GridColumn_ShelfWareCode.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="GridColumn_SAttribute1.VisibleIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="GridColumn_SAttribute4.VisibleIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+  <data name="GridControl_NormalList.EmbeddedNavigator.ToolTipTitle" xml:space="preserve">
+    <value />
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>7, 15</value>
@@ -1306,6 +1292,9 @@
   </data>
   <data name="GridColumn_LocationStockAmount.SummaryItem.DisplayFormat" xml:space="preserve">
     <value />
+  </data>
+  <data name="&gt;&gt;GridColumn_ShelfWareCode.Name" xml:space="preserve">
+    <value>GridColumn_ShelfWareCode</value>
   </data>
   <data name="GridColumn_BRemark.Caption" xml:space="preserve">
     <value>备注</value>
@@ -1325,35 +1314,32 @@
   <data name="GridColumn_SAttribute2.Caption" xml:space="preserve">
     <value>属性2</value>
   </data>
+  <data name="GridColumn_LowerLimit.VisibleIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
   <data name="GridColumn_SUnitName.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="&gt;&gt;GridColumn_CurrentCost.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="TextEdit_Search.EditValue" xml:space="preserve">
-    <value />
+  <data name="GridControl_NormalList.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
   </data>
   <data name="&gt;&gt;PanelControl_Filter.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;GridView_ShelfStockDifference.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  <data name="&gt;&gt;GridColumn_ShelfCode.Name" xml:space="preserve">
+    <value>GridColumn_ShelfCode</value>
   </data>
   <data name="&gt;&gt;GridColumn_ShelfRowHighlight.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="GridControl_ShelfStockDifference.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v8.1">
-    <value>None</value>
-  </data>
   <data name="GridColumn_Attribute1.VisibleIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;ToolStripButton_PrintReport.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GridColumn_CustomCode.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  <data name="GridControl_ShelfStockDifference.EmbeddedNavigator.ToolTipTitle" xml:space="preserve">
+    <value />
   </data>
   <data name="GridColumn_CustomCode.VisibleIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1361,8 +1347,8 @@
   <data name="&gt;&gt;ToolStripButton_View.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="GridColumn_SAttribute2.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;GridColumn_ConsignInRemains.Name" xml:space="preserve">
+    <value>GridColumn_ConsignInRemains</value>
   </data>
   <data name="GridColumn_RowHighlight.Caption" xml:space="preserve">
     <value>高亮显示</value>
@@ -1373,8 +1359,8 @@
   <data name="&gt;&gt;GridView_ShelfList.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="&gt;&gt;ToolStrip_Form.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;GridColumn_BAtrribute3.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="ToolStripButton_Close.Text" xml:space="preserve">
     <value>关闭</value>
@@ -1385,6 +1371,9 @@
   <data name="&gt;&gt;GridColumn_BSpec.Name" xml:space="preserve">
     <value>GridColumn_BSpec</value>
   </data>
+  <data name="&gt;&gt;ToolStripButton_Choose.Name" xml:space="preserve">
+    <value>ToolStripButton_Choose</value>
+  </data>
   <data name="&gt;&gt;GridControl_NormalList.Name" xml:space="preserve">
     <value>GridControl_NormalList</value>
   </data>
@@ -1394,11 +1383,14 @@
   <data name="&gt;&gt;ToolStrip_Form.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="GridColumn_LowerLimit.VisibleIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+  <data name="&gt;&gt;GridColumn_SAttribute3.Name" xml:space="preserve">
+    <value>GridColumn_SAttribute3</value>
   </data>
-  <data name="GridColumn_LowerLimit.Caption" xml:space="preserve">
-    <value>最低库存限制</value>
+  <data name="&gt;&gt;GridColumn_SUnitName.Name" xml:space="preserve">
+    <value>GridColumn_SUnitName</value>
+  </data>
+  <data name="GridColumn_PosAmount.Caption" xml:space="preserve">
+    <value>在库数量</value>
   </data>
   <data name="GridColumn_BAtrribute3.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1406,23 +1398,26 @@
   <data name="&gt;&gt;GridColumn_LocationStockAmount.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="Label2.TabIndex" type="System.Int32, mscorlib">
-    <value>10005</value>
+  <data name="TextEdit_Search.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
   </data>
   <data name="GridColumn_ShelfAttribute4.VisibleIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="&gt;&gt;XtraTabControl_Lists.Type" xml:space="preserve">
-    <value>DevExpress.XtraTab.XtraTabControl, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  <data name="&gt;&gt;GridColumn_BatchCode.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="&gt;&gt;GridView_BatchWareList.Name" xml:space="preserve">
     <value>GridView_BatchWareList</value>
   </data>
-  <data name="GridColumn_Attribute1.Caption" xml:space="preserve">
-    <value>属性1</value>
+  <data name="XtraTabPage_NormalList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>691, 392</value>
   </data>
-  <data name="GridColumn_SWareName.Caption" xml:space="preserve">
-    <value>货品名称</value>
+  <data name="LookUpEdit_Pos.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="GridControl_NormalList.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v8.1">
     <value>Center</value>
@@ -1448,11 +1443,11 @@
   <data name="GridColumn_Attribute4.Caption" xml:space="preserve">
     <value>属性4</value>
   </data>
-  <data name="&gt;&gt;Timer_Surveillant.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GridColumn_Model.Type" xml:space="preserve">
+  <data name="&gt;&gt;GridColumn_CustomCode.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_SAttribute2.Name" xml:space="preserve">
+    <value>GridColumn_SAttribute2</value>
   </data>
   <data name="&gt;&gt;TextEdit_Search.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
@@ -1460,8 +1455,8 @@
   <data name="&gt;&gt;CheckEdit_SingleWareLocations.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;GridColumn_ShelfRemark.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  <data name="GridColumn_SRemark.VisibleIndex" type="System.Int32, mscorlib">
+    <value>13</value>
   </data>
   <data name="&gt;&gt;GridColumn_RowHighlight.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
@@ -1469,14 +1464,20 @@
   <data name="GridControl_ShelfAmount.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v8.1">
     <value>Center</value>
   </data>
+  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="XtraTabControl_Lists.Size" type="System.Drawing.Size, System.Drawing">
     <value>700, 423</value>
   </data>
   <data name="TextEdit_Search.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;CheckEdit_SingleWareLocations.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  <data name="&gt;&gt;GridColumn_WareName.Name" xml:space="preserve">
+    <value>GridColumn_WareName</value>
+  </data>
+  <data name="GridColumn_ShelfCode.Caption" xml:space="preserve">
+    <value>货架编码</value>
   </data>
   <data name="&gt;&gt;XtraTabPage_BatchList.Type" xml:space="preserve">
     <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
@@ -1484,14 +1485,11 @@
   <data name="GridColumn_SAttribute1.Caption" xml:space="preserve">
     <value>属性1</value>
   </data>
-  <data name="&gt;&gt;GridColumn_LowerLimit.Name" xml:space="preserve">
-    <value>GridColumn_LowerLimit</value>
-  </data>
   <data name="GridColumn_ShelfCustomCode.VisibleIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="GridColumn_Spec.VisibleIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="XtraTabPage_ShelfAmount.Text" xml:space="preserve">
+    <value>储位数量</value>
   </data>
   <data name="&gt;&gt;GridColumn_BUnitName.Name" xml:space="preserve">
     <value>GridColumn_BUnitName</value>
@@ -1502,8 +1500,14 @@
   <data name="&gt;&gt;ToolStripButton_Close.Name" xml:space="preserve">
     <value>ToolStripButton_Close</value>
   </data>
+  <data name="GridControl_NormalList.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
   <data name="&gt;&gt;GridColumn_ShelfSpec.Name" xml:space="preserve">
     <value>GridColumn_ShelfSpec</value>
+  </data>
+  <data name="GridColumn_LowerLimit.Caption" xml:space="preserve">
+    <value>最低库存限制</value>
   </data>
   <data name="&gt;&gt;GridColumn_SWareName.Name" xml:space="preserve">
     <value>GridColumn_SWareName</value>
@@ -1520,14 +1524,14 @@
   <data name="&gt;&gt;GridColumn_Spec.Name" xml:space="preserve">
     <value>GridColumn_Spec</value>
   </data>
-  <data name="GridColumn_ConsignInRemains.Caption" xml:space="preserve">
-    <value>入货缺交货量</value>
+  <data name="LookUpEdit_Pos.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
+    <value>None</value>
   </data>
   <data name="&gt;&gt;GridColumn_SelfAmount.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="GridColumn_Attribute3.VisibleIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+  <data name="LookUpEdit_Pos.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;TextEdit_Search.Parent" xml:space="preserve">
     <value>PanelControl_Filter</value>
@@ -1544,8 +1548,8 @@
   <data name="GridColumn_BWareName.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="TextEdit_Search.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="GridControl_BatchWareList.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left</value>
   </data>
   <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1553,17 +1557,17 @@
   <data name="&gt;&gt;GridColumn_SModel.Name" xml:space="preserve">
     <value>GridColumn_SModel</value>
   </data>
-  <data name="GridColumn_BModel.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;GridColumn_LowerLimit.Name" xml:space="preserve">
+    <value>GridColumn_LowerLimit</value>
   </data>
-  <data name="&gt;&gt;GridColumn_BAtrribute4.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  <data name="GridColumn_ConsignInRemains.Caption" xml:space="preserve">
+    <value>入货缺交货量</value>
   </data>
   <data name="&gt;&gt;GridColumn_WareName.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="&gt;&gt;ToolStripButton_Choose.Name" xml:space="preserve">
-    <value>ToolStripButton_Choose</value>
+  <data name="&gt;&gt;GridColumn_BRowHighlight.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="GridColumn_BWareCode.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1571,8 +1575,8 @@
   <data name="GridColumn_SWareCode.Caption" xml:space="preserve">
     <value>货品代码</value>
   </data>
-  <data name="GridColumn_SelfAmount.Caption" xml:space="preserve">
-    <value>储位货品数量</value>
+  <data name="&gt;&gt;GridColumn_SCustomCode.Name" xml:space="preserve">
+    <value>GridColumn_SCustomCode</value>
   </data>
   <data name="GridColumn_ShelfModel.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1583,21 +1587,8 @@
   <data name="&gt;&gt;GridColumn_ShelfRowHighlight.Name" xml:space="preserve">
     <value>GridColumn_ShelfRowHighlight</value>
   </data>
-  <data name="ToolStripButton_ExportExcel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAOwgAA
-        DsIBFShKgAAAAgxJREFUOE+lkvtLU2EYx+0PEbtpFwnBKPGKiJImGP0gYhIYs1E5GF5gIxkpA00JRSmM
-        EF0ohMh+GaRWYlqabMVcNdS2QpaIVqiDIYhk397vA6fXhCjyhYdzeM/5fp7vczkAdeL2cwho7v/wWzT1
-        zcN+Pwhr51uY2/y41PQaF+wzKKiZQvaN58g0jyLd5KEUcQbg+84P/Cm2tncQjW3j68YWIqubCC3FcOJc
-        478BAuGoZM6zvoRnakXEruEIjhc4/g5gZop9c+voGAyLbQIfeBZxLL9BA1jzXvuGbWamuKh+GmmVbswE
-        19A59FEBbmoAG7YbsLtm2mZmiml9cvabNDwpz6YB7LYBoMXCumkJr7LOmnnHzBQ/9X2Bo2cOibm1GsBR
-        EbAQiYmw/8lnuCeWkVzcgnZlnw1j3HV/wuNXK6i/9x5Hc6wawDlTXHbLJ+LZUBQPRyKwdQdxutwl1h+N
-        LXHh5Ht1ewBHsiwawCW57HyDAfWRdvl0uhZQ1eqX8aVc7EKLqrum651ATLf9OJx5XQM4KmY0xPzZ0hFA
-        iQJnXB0WwME0E3IsL5B17ZlADqWbNYDrOepdlcysmTWWOrxqbceRWtaLk0VO1XW72D5Vckd2gMBfq8zd
-        pmUG62NJvKM4+XyziDk24xmfWoGEs1c0gHPmbrPTpHNJKOCo2G1mZs20zcwUJ5yp1AB5+8/zEwgF5GMV
-        Dxh4AAAAAElFTkSuQmCC
-</value>
+  <data name="GridControl_ShelfAmount.EmbeddedNavigator.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="GridControl_ShelfAmount.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -1605,11 +1596,14 @@
   <data name="&gt;&gt;XtraTabPage_NormalList.Type" xml:space="preserve">
     <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="ToolStripButton_PrintReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+  <data name="&gt;&gt;GridColumn_BAtrribute4.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="GridControl_ShelfStockDifference.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="&gt;&gt;GridView_ShelfStockDifference.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="GridColumn_LackAmount.VisibleIndex" type="System.Int32, mscorlib">
+    <value>16</value>
   </data>
   <data name="CheckEdit_SingleWareLocations.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1620,42 +1614,23 @@
   <data name="GridControl_ShelfStockDifference.Size" type="System.Drawing.Size, System.Drawing">
     <value>691, 392</value>
   </data>
-  <data name="&gt;&gt;XtraTabPage_ShelfPosDifference.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="&gt;&gt;ToolStripButton_Close.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;GridColumn_PosAmount.Name" xml:space="preserve">
-    <value>GridColumn_PosAmount</value>
+  <data name="&gt;&gt;GridColumn_ShelfAttribute1.Name" xml:space="preserve">
+    <value>GridColumn_ShelfAttribute1</value>
   </data>
   <data name="&gt;&gt;GridColumn_BRemark.Name" xml:space="preserve">
     <value>GridColumn_BRemark</value>
   </data>
-  <data name="GridColumn_ShelfAttribute2.VisibleIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="&gt;&gt;ToolStripButton_ExportExcel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="PanelControl_Filter.TabIndex" type="System.Int32, mscorlib">
     <value>10001</value>
   </data>
   <data name="&gt;&gt;ToolStrip_Form.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="ToolStripButton_Choose.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAOwgAA
-        DsIBFShKgAAAAgxJREFUOE+lkvtLU2EYx+0PEbtpFwnBKPGKiJImGP0gYhIYs1E5GF5gIxkpA00JRSmM
-        EF0ohMh+GaRWYlqabMVcNdS2QpaIVqiDIYhk397vA6fXhCjyhYdzeM/5fp7vczkAdeL2cwho7v/wWzT1
-        zcN+Pwhr51uY2/y41PQaF+wzKKiZQvaN58g0jyLd5KEUcQbg+84P/Cm2tncQjW3j68YWIqubCC3FcOJc
-        478BAuGoZM6zvoRnakXEruEIjhc4/g5gZop9c+voGAyLbQIfeBZxLL9BA1jzXvuGbWamuKh+GmmVbswE
-        19A59FEBbmoAG7YbsLtm2mZmiml9cvabNDwpz6YB7LYBoMXCumkJr7LOmnnHzBQ/9X2Bo2cOibm1GsBR
-        EbAQiYmw/8lnuCeWkVzcgnZlnw1j3HV/wuNXK6i/9x5Hc6wawDlTXHbLJ+LZUBQPRyKwdQdxutwl1h+N
-        LXHh5Ht1ewBHsiwawCW57HyDAfWRdvl0uhZQ1eqX8aVc7EKLqrum651ATLf9OJx5XQM4KmY0xPzZ0hFA
-        iQJnXB0WwME0E3IsL5B17ZlADqWbNYDrOepdlcysmTWWOrxqbceRWtaLk0VO1XW72D5Vckd2gMBfq8zd
-        pmUG62NJvKM4+XyziDk24xmfWoGEs1c0gHPmbrPTpHNJKOCo2G1mZs20zcwUJ5yp1AB5+8/zEwgF5GMV
-        Dxh4AAAAAElFTkSuQmCC
-</value>
   </data>
   <data name="GridControl_ShelfStockDifference.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v8.1">
     <value>Center</value>
@@ -1675,11 +1650,14 @@
   <data name="TextEdit_Search.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
     <value>Default</value>
   </data>
-  <data name="GridColumn_BRowHighlight.Caption" xml:space="preserve">
-    <value>高亮显示</value>
+  <data name="LookUpEdit_Pos.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;GridColumn_BCurrentAmount.Name" xml:space="preserve">
-    <value>GridColumn_BCurrentAmount</value>
+  <data name="&gt;&gt;XtraTabPage_ShelfPosDifference.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GridControl_ShelfStockDifference.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v8.1">
+    <value>None</value>
   </data>
   <data name="&gt;&gt;GridControl_BatchWareList.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -1696,20 +1674,23 @@
   <data name="GridColumn_Attribute2.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;XtraTabPage_BatchList.Name" xml:space="preserve">
-    <value>XtraTabPage_BatchList</value>
+  <data name="GridColumn_DifferenceAmount.SummaryItem.DisplayFormat" xml:space="preserve">
+    <value />
   </data>
   <data name="GridControl_NormalList.EmbeddedNavigator.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="ToolStripButton_ExportExcel.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
+  <data name="GridColumn_BCurrentAmount.Caption" xml:space="preserve">
+    <value>当前数量</value>
   </data>
-  <data name="ToolStripButton_Refresh.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+  <data name="&gt;&gt;GridColumn_ShelfModel.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="&gt;&gt;GridControl_ShelfStockDifference.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="Label2.TabIndex" type="System.Int32, mscorlib">
+    <value>10005</value>
   </data>
   <data name="GridColumn_ConsignOutRemains.SummaryItem.DisplayFormat" xml:space="preserve">
     <value />
@@ -1717,14 +1698,30 @@
   <data name="GridColumn_WareCode.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="TextEdit_Search.Location" type="System.Drawing.Point, System.Drawing">
-    <value>286, 16</value>
+  <data name="TextEdit_Search.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
+    <value>None</value>
   </data>
   <data name="GridColumn_WareName.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
-    <value>10000</value>
+  <data name="GridColumn_ShelfAttribute3.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ToolStripButton_Choose.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAOwQAA
+        DsEBuJFr7QAAAgxJREFUOE+lkvtLU2EYx+0PEbtpFwnBKPGKiJImGP0gYhIYs1E5GF5gIxkpA00JRSmM
+        EF0ohMh+GaRWYlqabMVcNdS2QpaIVqiDIYhk397vA6fXhCjyhYdzeM/5fp7vczkAdeL2cwho7v/wWzT1
+        zcN+Pwhr51uY2/y41PQaF+wzKKiZQvaN58g0jyLd5KEUcQbg+84P/Cm2tncQjW3j68YWIqubCC3FcOJc
+        478BAuGoZM6zvoRnakXEruEIjhc4/g5gZop9c+voGAyLbQIfeBZxLL9BA1jzXvuGbWamuKh+GmmVbswE
+        19A59FEBbmoAG7YbsLtm2mZmiml9cvabNDwpz6YB7LYBoMXCumkJr7LOmnnHzBQ/9X2Bo2cOibm1GsBR
+        EbAQiYmw/8lnuCeWkVzcgnZlnw1j3HV/wuNXK6i/9x5Hc6wawDlTXHbLJ+LZUBQPRyKwdQdxutwl1h+N
+        LXHh5Ht1ewBHsiwawCW57HyDAfWRdvl0uhZQ1eqX8aVc7EKLqrum651ATLf9OJx5XQM4KmY0xPzZ0hFA
+        iQJnXB0WwME0E3IsL5B17ZlADqWbNYDrOepdlcysmTWWOrxqbceRWtaLk0VO1XW72D5Vckd2gMBfq8zd
+        pmUG62NJvKM4+XyziDk24xmfWoGEs1c0gHPmbrPTpHNJKOCo2G1mZs20zcwUJ5yp1AB5+8/zEwgF5GMV
+        Dxh4AAAAAElFTkSuQmCC
+</value>
   </data>
   <data name="&gt;&gt;GridColumn_DifferenceAmount.Name" xml:space="preserve">
     <value>GridColumn_DifferenceAmount</value>
@@ -1732,35 +1729,38 @@
   <data name="&gt;&gt;GridColumn_SAttribute2.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="&gt;&gt;GridColumn_SAttribute4.Name" xml:space="preserve">
-    <value>GridColumn_SAttribute4</value>
-  </data>
-  <data name="LookUpEdit_Pos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>84, 16</value>
-  </data>
-  <data name="GridColumn_PosAmount.Visible" type="System.Boolean, mscorlib">
+  <data name="GridColumn_BRemark.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_SRowHighlight.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="GridControl_ShelfAmount.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v8.1">
     <value>None</value>
   </data>
+  <data name="ToolStrip_Form.Size" type="System.Drawing.Size, System.Drawing">
+    <value>700, 25</value>
+  </data>
   <data name="GridColumn_ShelfCustomCode.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;GridColumn_ShelfWareCode.Name" xml:space="preserve">
-    <value>GridColumn_ShelfWareCode</value>
+  <data name="XtraTabPage_NormalList.Text" xml:space="preserve">
+    <value>货品总量</value>
+  </data>
+  <data name="TextEdit_Search.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;XtraTabPage_NormalList.Name" xml:space="preserve">
     <value>XtraTabPage_NormalList</value>
   </data>
-  <data name="GridControl_NormalList.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="&gt;&gt;GridColumn_SAttribute4.Name" xml:space="preserve">
+    <value>GridColumn_SAttribute4</value>
   </data>
   <data name="GridColumn_ConsignOutRemains.VisibleIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
-  <data name="GridColumn_SUnitName.VisibleIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+  <data name="TextEdit_Search.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
   </data>
   <data name="GridColumn_BatchCode.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1768,20 +1768,20 @@
   <data name="&gt;&gt;SaveFileDialog_ExportExcel.Type" xml:space="preserve">
     <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="LookUpEdit_Pos.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="GridColumn_BRowHighlight.Caption" xml:space="preserve">
+    <value>高亮显示</value>
   </data>
   <data name="&gt;&gt;LookUpEdit_Pos.Name" xml:space="preserve">
     <value>LookUpEdit_Pos</value>
   </data>
-  <data name="XtraTabPage_NormalList.Text" xml:space="preserve">
-    <value>货品总量</value>
+  <data name="&gt;&gt;GridColumn_PosAmount.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="GridColumn_BAtrribute3.Caption" xml:space="preserve">
     <value>属性3</value>
   </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+  <data name="&gt;&gt;GridColumn_ShelfCustomCode.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="GridColumn_ShelfWareName.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1789,19 +1789,19 @@
   <metadata name="DefaultLookAndFeel_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>295, 0</value>
   </metadata>
+  <metadata name="Timer_Surveillant.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>138, 0</value>
+  </metadata>
   <metadata name="ToolStrip_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>English</value>
-  </metadata>
   <metadata name="SaveFileDialog_ExportExcel.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>489, 0</value>
   </metadata>
-  <metadata name="Timer_Surveillant.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>138, 0</value>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>English</value>
   </metadata>
 </root>
