@@ -259,8 +259,14 @@
   <data name="GridColumn_SumAmount.Caption" xml:space="preserve">
     <value>Sum amount</value>
   </data>
+  <data name="GridControl_WareSalesReport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>691, 346</value>
+  </data>
   <data name="CheckEdit2.Properties.Caption" xml:space="preserve">
     <value>Only this item</value>
+  </data>
+  <data name="XtraTabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>691, 378</value>
   </data>
   <data name="XtraTabPage2.Text" xml:space="preserve">
     <value>Item  Collect</value>
