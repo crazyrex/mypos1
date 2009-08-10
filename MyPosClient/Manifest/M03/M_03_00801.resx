@@ -118,17 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="DefaultLookAndFeel_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>266, 0</value>
+    <value>295, 0</value>
   </metadata>
   <metadata name="Timer_Surveillant.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>128, 0</value>
+    <value>138, 0</value>
   </metadata>
   <metadata name="ToolStrip_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ToolStripButton_Refresh.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>33, 22</value>
   </data>
   <data name="ToolStripButton_Refresh.Text" xml:space="preserve">
     <value>刷新</value>
@@ -152,13 +152,13 @@
     <value>Magenta</value>
   </data>
   <data name="ToolStripButton_ViewTurnover.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 22</value>
+    <value>69, 22</value>
   </data>
   <data name="ToolStripButton_ViewTurnover.Text" xml:space="preserve">
     <value>查看出入单</value>
   </data>
   <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>33, 22</value>
   </data>
   <data name="ToolStripButton_Close.Text" xml:space="preserve">
     <value>关闭</value>
@@ -190,6 +190,10 @@
   </data>
   <data name="LookUpEdit_Pos.Location" type="System.Drawing.Point, System.Drawing">
     <value>79, 13</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v8.1" name="DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
+  <data name="LookUpEdit_Pos.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
   </data>
   <data name="LookUpEdit_Pos.Properties.NullText" xml:space="preserve">
     <value />
@@ -344,6 +348,9 @@
   </data>
   <data name="RepositoryItemLookUpEdit_TurnoverType.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="RepositoryItemLookUpEdit_TurnoverType.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
   </data>
   <data name="GridColumn_TurnoverType.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -522,6 +529,9 @@
   <data name="RepositoryItemLookUpEdit_Client.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="RepositoryItemLookUpEdit_Client.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
+  </data>
   <data name="GridColumn_Client.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -536,6 +546,9 @@
   </data>
   <data name="RepositoryItemLookUpEdit_Supplier.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="RepositoryItemLookUpEdit_Supplier.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
   </data>
   <data name="GridColumn_Supplier.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
