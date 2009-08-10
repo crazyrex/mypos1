@@ -166,53 +166,53 @@
             'ToolStripButton_Add
             '
             Me.ToolStripButton_Add.Name = "ToolStripButton_Add"
-            Me.ToolStripButton_Add.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Add.Size = New System.Drawing.Size(33, 22)
             Me.ToolStripButton_Add.Text = "添加"
             '
             'ToolStripButton_ShowFilter
             '
             Me.ToolStripButton_ShowFilter.Name = "ToolStripButton_ShowFilter"
-            Me.ToolStripButton_ShowFilter.Size = New System.Drawing.Size(59, 22)
+            Me.ToolStripButton_ShowFilter.Size = New System.Drawing.Size(57, 22)
             Me.ToolStripButton_ShowFilter.Text = "筛选条件"
             Me.ToolStripButton_ShowFilter.Visible = False
             '
             'ToolStripButton_Save
             '
             Me.ToolStripButton_Save.Name = "ToolStripButton_Save"
-            Me.ToolStripButton_Save.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Save.Size = New System.Drawing.Size(33, 22)
             Me.ToolStripButton_Save.Text = "保存"
             '
             'ToolStripButton_Remove
             '
             Me.ToolStripButton_Remove.Name = "ToolStripButton_Remove"
-            Me.ToolStripButton_Remove.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Remove.Size = New System.Drawing.Size(33, 22)
             Me.ToolStripButton_Remove.Text = "去除"
             '
             'ToolStripButton_Refresh
             '
             Me.ToolStripButton_Refresh.Name = "ToolStripButton_Refresh"
-            Me.ToolStripButton_Refresh.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Refresh.Size = New System.Drawing.Size(33, 22)
             Me.ToolStripButton_Refresh.Text = "刷新"
             Me.ToolStripButton_Refresh.Visible = False
             '
             'ToolStripButton_Report
             '
             Me.ToolStripButton_Report.Name = "ToolStripButton_Report"
-            Me.ToolStripButton_Report.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Report.Size = New System.Drawing.Size(33, 22)
             Me.ToolStripButton_Report.Text = "报表"
             Me.ToolStripButton_Report.Visible = False
             '
             'ToolStripButton_View
             '
             Me.ToolStripButton_View.Name = "ToolStripButton_View"
-            Me.ToolStripButton_View.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_View.Size = New System.Drawing.Size(33, 22)
             Me.ToolStripButton_View.Text = "查看"
             Me.ToolStripButton_View.Visible = False
             '
             'ToolStripButton_Close
             '
             Me.ToolStripButton_Close.Name = "ToolStripButton_Close"
-            Me.ToolStripButton_Close.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Close.Size = New System.Drawing.Size(33, 22)
             Me.ToolStripButton_Close.Text = "关闭"
             '
             'PanelControl1
@@ -436,7 +436,7 @@
             Me.TextEdit_Search.EditValue = ""
             Me.TextEdit_Search.Location = New System.Drawing.Point(86, 98)
             Me.TextEdit_Search.Name = "TextEdit_Search"
-            Me.TextEdit_Search.Size = New System.Drawing.Size(221, 20)
+            Me.TextEdit_Search.Size = New System.Drawing.Size(221, 21)
             Me.TextEdit_Search.TabIndex = 10002
             CTag7.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag7.CalculatorRequired = True
@@ -504,7 +504,7 @@
             Me.TextEdit_TemplateName.EditValue = ""
             Me.TextEdit_TemplateName.Location = New System.Drawing.Point(86, 41)
             Me.TextEdit_TemplateName.Name = "TextEdit_TemplateName"
-            Me.TextEdit_TemplateName.Size = New System.Drawing.Size(221, 20)
+            Me.TextEdit_TemplateName.Size = New System.Drawing.Size(221, 21)
             Me.TextEdit_TemplateName.TabIndex = 10002
             CTag9.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag9.CalculatorRequired = True
@@ -572,7 +572,7 @@
             Me.TextEdit_TemplateCode.EditValue = ""
             Me.TextEdit_TemplateCode.Location = New System.Drawing.Point(86, 13)
             Me.TextEdit_TemplateCode.Name = "TextEdit_TemplateCode"
-            Me.TextEdit_TemplateCode.Size = New System.Drawing.Size(221, 20)
+            Me.TextEdit_TemplateCode.Size = New System.Drawing.Size(221, 21)
             Me.TextEdit_TemplateCode.TabIndex = 10000
             CTag11.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag11.CalculatorRequired = True
@@ -824,6 +824,8 @@
             '
             Me.GridColumn_DiscountAmount.Caption = "降价额度"
             Me.GridColumn_DiscountAmount.ColumnEdit = Me.RepositoryItemSpinEdit_DiscountAmount
+            Me.GridColumn_DiscountAmount.DisplayFormat.FormatString = "{0:#,##0.00}"
+            Me.GridColumn_DiscountAmount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
             Me.GridColumn_DiscountAmount.FieldName = "DISCOUNT_AMOUNT"
             Me.GridColumn_DiscountAmount.Name = "GridColumn_DiscountAmount"
             Me.GridColumn_DiscountAmount.Visible = True
