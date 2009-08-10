@@ -117,10 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ToolStripButton_Save.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 22</value>
+  </data>
   <data name="ToolStripButton_Save.Text" xml:space="preserve">
     <value>Save</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ToolStripButton_Recipient.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -137,31 +140,35 @@
 </value>
   </data>
   <data name="ToolStripButton_Recipient.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 22</value>
+    <value>63, 22</value>
   </data>
   <data name="ToolStripButton_Recipient.Text" xml:space="preserve">
     <value>Recipient</value>
   </data>
   <data name="ToolStripButton_Add.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 22</value>
+    <value>27, 22</value>
   </data>
   <data name="ToolStripButton_Add.Text" xml:space="preserve">
     <value>Add</value>
   </data>
   <data name="ToolStripButton_Remove.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 22</value>
+    <value>45, 22</value>
   </data>
   <data name="ToolStripButton_Remove.Text" xml:space="preserve">
     <value>Remove</value>
   </data>
   <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 22</value>
+    <value>39, 22</value>
   </data>
   <data name="ToolStripButton_Close.Text" xml:space="preserve">
     <value>Close</value>
   </data>
   <data name="CheckEdit_ConfirmOnSave.Location" type="System.Drawing.Point, System.Drawing">
     <value>364, 76</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="CheckEdit_ConfirmOnSave.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="CheckEdit_ConfirmOnSave.Properties.Caption" xml:space="preserve">
     <value>Save Affirm</value>
@@ -171,6 +178,37 @@
   </data>
   <data name="ButtonEdit_EmployeeCode.Location" type="System.Drawing.Point, System.Drawing">
     <value>99, 76</value>
+  </data>
+  <data name="ButtonEdit_EmployeeCode.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="DevExpress.XtraEditors.v8.1" name="DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
+  <data name="ButtonEdit_EmployeeCode.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
+    <value>Default</value>
+  </data>
+  <data name="ButtonEdit_EmployeeCode.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ButtonEdit_EmployeeCode.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ButtonEdit_EmployeeCode.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ButtonEdit_EmployeeCode.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
+    <value>None</value>
+  </data>
+  <data name="ButtonEdit_EmployeeCode.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="ButtonEdit_EmployeeCode.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ButtonEdit_EmployeeCode.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ButtonEdit_EmployeeCode.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 79</value>
@@ -202,6 +240,70 @@
   <data name="DateEdit_ConsignDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>496, 48</value>
   </data>
+  <data name="DateEdit_ConsignDate.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v8.1" name="DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
+  <data name="DateEdit_ConsignDate.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
+  </data>
+  <data name="DateEdit_ConsignDate.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
+    <value>Default</value>
+  </data>
+  <data name="DateEdit_ConsignDate.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="DateEdit_ConsignDate.Properties.Mask.EditMask" xml:space="preserve">
+    <value>d</value>
+  </data>
+  <data name="DateEdit_ConsignDate.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DateEdit_ConsignDate.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
+    <value>DateTime</value>
+  </data>
+  <data name="DateEdit_ConsignDate.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="DateEdit_ConsignDate.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DateEdit_ConsignDate.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DateEdit_ConsignDate.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="DateEdit_ConsignDate.Properties.VistaTimeProperties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DateEdit_ConsignDate.Properties.VistaTimeProperties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
+    <value>Default</value>
+  </data>
+  <data name="DateEdit_ConsignDate.Properties.VistaTimeProperties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="DateEdit_ConsignDate.Properties.VistaTimeProperties.Mask.EditMask" xml:space="preserve">
+    <value>T</value>
+  </data>
+  <data name="DateEdit_ConsignDate.Properties.VistaTimeProperties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DateEdit_ConsignDate.Properties.VistaTimeProperties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
+    <value>DateTime</value>
+  </data>
+  <data name="DateEdit_ConsignDate.Properties.VistaTimeProperties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="DateEdit_ConsignDate.Properties.VistaTimeProperties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DateEdit_ConsignDate.Properties.VistaTimeProperties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DateEdit_ConsignDate.Properties.VistaTimeProperties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
     <value>409, 51</value>
   </data>
@@ -211,8 +313,33 @@
   <data name="Label3.Text" xml:space="preserve">
     <value>Consign date</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="GridControl_ConsignDtl.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left</value>
+  </data>
+  <data name="GridControl_ConsignDtl.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Tile</value>
+  </data>
+  <data name="GridControl_ConsignDtl.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
+  </data>
+  <data name="GridControl_ConsignDtl.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v8.1">
+    <value>Center</value>
+  </data>
+  <data name="GridControl_ConsignDtl.EmbeddedNavigator.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GridControl_ConsignDtl.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v8.1">
+    <value>None</value>
+  </data>
+  <data name="GridControl_ConsignDtl.EmbeddedNavigator.ToolTipTitle" xml:space="preserve">
+    <value />
+  </data>
   <data name="GridColumn_WareCode.Caption" xml:space="preserve">
     <value>Barcode</value>
+  </data>
+  <data name="GridColumn_WareCode.SummaryItem.DisplayFormat" xml:space="preserve">
+    <value />
   </data>
   <data name="GridColumn_CustomCode.Caption" xml:space="preserve">
     <value>Item code</value>
@@ -229,21 +356,74 @@
   <data name="GridColumn_WareAmount.Caption" xml:space="preserve">
     <value>Qty.</value>
   </data>
+  <data name="RepositoryItemCalcEdit_WareAmount.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
+  </data>
+  <data name="RepositoryItemCalcEdit_WareAmount.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
+    <value>Default</value>
+  </data>
+  <data name="RepositoryItemCalcEdit_WareAmount.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RepositoryItemCalcEdit_WareAmount.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RepositoryItemCalcEdit_WareAmount.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RepositoryItemCalcEdit_WareAmount.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
+    <value>Numeric</value>
+  </data>
+  <data name="RepositoryItemCalcEdit_WareAmount.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="RepositoryItemCalcEdit_WareAmount.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RepositoryItemCalcEdit_WareAmount.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RepositoryItemCalcEdit_WareAmount.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="GridColumn_WareAmount.SummaryItem.DisplayFormat" xml:space="preserve">
+    <value />
+  </data>
   <data name="GridColumn_UnitName.Caption" xml:space="preserve">
     <value>Unit</value>
   </data>
   <data name="GridColumn_Remarks.Caption" xml:space="preserve">
     <value>Remarks</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="GridColumn_Remarks.VisibleIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
   <data name="XtraTabPage1.Text" xml:space="preserve">
     <value>No packing</value>
   </data>
+  <data name="GridControl_RecpConsign.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left</value>
+  </data>
+  <data name="GridControl_RecpConsign.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Tile</value>
+  </data>
+  <data name="GridControl_RecpConsign.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
+  </data>
+  <data name="GridControl_RecpConsign.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v8.1">
+    <value>Center</value>
+  </data>
+  <data name="GridControl_RecpConsign.EmbeddedNavigator.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GridControl_RecpConsign.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v8.1">
+    <value>None</value>
+  </data>
+  <data name="GridControl_RecpConsign.EmbeddedNavigator.ToolTipTitle" xml:space="preserve">
+    <value />
+  </data>
   <data name="GridColumn_PWareCode.Caption" xml:space="preserve">
     <value>Barcode</value>
+  </data>
+  <data name="GridColumn_PWareCode.SummaryItem.DisplayFormat" xml:space="preserve">
+    <value />
   </data>
   <data name="GridColumn_PCustomCode.Caption" xml:space="preserve">
     <value>Item code</value>
@@ -260,20 +440,74 @@
   <data name="GridColumn_PWareAmount.Caption" xml:space="preserve">
     <value>Qty.</value>
   </data>
+  <data name="RepositoryItemCalcEdit_PAmount.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
+  </data>
+  <data name="RepositoryItemCalcEdit_PAmount.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
+    <value>Default</value>
+  </data>
+  <data name="RepositoryItemCalcEdit_PAmount.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RepositoryItemCalcEdit_PAmount.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RepositoryItemCalcEdit_PAmount.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RepositoryItemCalcEdit_PAmount.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
+    <value>Numeric</value>
+  </data>
+  <data name="RepositoryItemCalcEdit_PAmount.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="RepositoryItemCalcEdit_PAmount.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RepositoryItemCalcEdit_PAmount.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RepositoryItemCalcEdit_PAmount.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="GridColumn_PWareAmount.SummaryItem.DisplayFormat" xml:space="preserve">
+    <value />
+  </data>
   <data name="GridColumn_PUnitName.Caption" xml:space="preserve">
     <value>Unit</value>
   </data>
   <data name="GridColumn_PRemarks.Caption" xml:space="preserve">
     <value>Remarks</value>
   </data>
-  <data name="GridColumn_PRemarks.VisibleIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
   <data name="XtraTabPage2.Text" xml:space="preserve">
     <value>Packing</value>
   </data>
+  <data name="GridControl_TotalConsign.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left</value>
+  </data>
+  <data name="GridControl_TotalConsign.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Tile</value>
+  </data>
+  <data name="GridControl_TotalConsign.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
+  </data>
+  <data name="GridControl_TotalConsign.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v8.1">
+    <value>Center</value>
+  </data>
+  <data name="GridControl_TotalConsign.EmbeddedNavigator.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GridControl_TotalConsign.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v8.1">
+    <value>None</value>
+  </data>
+  <data name="GridControl_TotalConsign.EmbeddedNavigator.ToolTipTitle" xml:space="preserve">
+    <value />
+  </data>
   <data name="GridColumn_TWareCode.Caption" xml:space="preserve">
     <value>Barcode</value>
+  </data>
+  <data name="GridColumn_TWareCode.SummaryItem.DisplayFormat" xml:space="preserve">
+    <value />
   </data>
   <data name="GridColumn_TCustomCode.Caption" xml:space="preserve">
     <value>Item code</value>
@@ -290,14 +524,44 @@
   <data name="GridColumn_TWareAmount.Caption" xml:space="preserve">
     <value>Qty.</value>
   </data>
+  <data name="RepositoryItemCalcEdit_TAmount.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
+  </data>
+  <data name="RepositoryItemCalcEdit_TAmount.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
+    <value>Default</value>
+  </data>
+  <data name="RepositoryItemCalcEdit_TAmount.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RepositoryItemCalcEdit_TAmount.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RepositoryItemCalcEdit_TAmount.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RepositoryItemCalcEdit_TAmount.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
+    <value>Numeric</value>
+  </data>
+  <data name="RepositoryItemCalcEdit_TAmount.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="RepositoryItemCalcEdit_TAmount.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RepositoryItemCalcEdit_TAmount.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RepositoryItemCalcEdit_TAmount.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="GridColumn_TWareAmount.SummaryItem.DisplayFormat" xml:space="preserve">
+    <value />
+  </data>
   <data name="GridColumn_TUnitName.Caption" xml:space="preserve">
     <value>Unit</value>
   </data>
   <data name="GridColumn_TRemarks.Caption" xml:space="preserve">
     <value>Remarks</value>
-  </data>
-  <data name="GridColumn_TRemarks.VisibleIndex" type="System.Int32, mscorlib">
-    <value>11</value>
   </data>
   <data name="XtraTabPage3.Text" xml:space="preserve">
     <value>Total</value>
