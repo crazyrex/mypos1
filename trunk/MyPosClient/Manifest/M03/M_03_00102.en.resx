@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ToolStripButton_Refresh.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 22</value>
+    <value>51, 22</value>
   </data>
   <data name="ToolStripButton_Refresh.Text" xml:space="preserve">
     <value>Refresh</value>
@@ -140,51 +140,19 @@
 </value>
   </data>
   <data name="ToolStripButton_ExportExcel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 22</value>
+    <value>45, 22</value>
   </data>
   <data name="ToolStripButton_ExportExcel.Text" xml:space="preserve">
     <value>Export</value>
   </data>
   <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 22</value>
+    <value>39, 22</value>
   </data>
   <data name="ToolStripButton_Close.Text" xml:space="preserve">
     <value>Close</value>
   </data>
   <data name="LookUpEdit_Pos.Location" type="System.Drawing.Point, System.Drawing">
     <value>547, 41</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="LookUpEdit_Pos.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <assembly alias="DevExpress.XtraEditors.v8.1" name="DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
-  <data name="LookUpEdit_Pos.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
-    <value>Default</value>
-  </data>
-  <data name="LookUpEdit_Pos.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="LookUpEdit_Pos.Properties.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="LookUpEdit_Pos.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="LookUpEdit_Pos.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
-    <value>None</value>
-  </data>
-  <data name="LookUpEdit_Pos.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="LookUpEdit_Pos.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="LookUpEdit_Pos.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="LookUpEdit_Pos.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="Label_CustomCode.Location" type="System.Drawing.Point, System.Drawing">
     <value>72, 43</value>
@@ -200,36 +168,6 @@
   </data>
   <data name="LookUpEdit_TurnoverType.Location" type="System.Drawing.Point, System.Drawing">
     <value>547, 14</value>
-  </data>
-  <data name="LookUpEdit_TurnoverType.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="LookUpEdit_TurnoverType.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
-    <value>Default</value>
-  </data>
-  <data name="LookUpEdit_TurnoverType.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="LookUpEdit_TurnoverType.Properties.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="LookUpEdit_TurnoverType.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="LookUpEdit_TurnoverType.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
-    <value>None</value>
-  </data>
-  <data name="LookUpEdit_TurnoverType.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="LookUpEdit_TurnoverType.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="LookUpEdit_TurnoverType.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="LookUpEdit_TurnoverType.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
     <value>422, 44</value>
@@ -252,36 +190,6 @@
   <data name="TextEdit_Search.Location" type="System.Drawing.Point, System.Drawing">
     <value>282, 41</value>
   </data>
-  <data name="TextEdit_Search.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="TextEdit_Search.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
-    <value>Default</value>
-  </data>
-  <data name="TextEdit_Search.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="TextEdit_Search.Properties.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TextEdit_Search.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="TextEdit_Search.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
-    <value>None</value>
-  </data>
-  <data name="TextEdit_Search.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="TextEdit_Search.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="TextEdit_Search.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="TextEdit_Search.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>224, 44</value>
   </data>
@@ -293,66 +201,6 @@
   </data>
   <data name="DateEdit_ToDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>282, 14</value>
-  </data>
-  <data name="DateEdit_ToDate.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="DateEdit_ToDate.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
-    <value>Default</value>
-  </data>
-  <data name="DateEdit_ToDate.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="DateEdit_ToDate.Properties.Mask.EditMask" xml:space="preserve">
-    <value>d</value>
-  </data>
-  <data name="DateEdit_ToDate.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="DateEdit_ToDate.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
-    <value>DateTime</value>
-  </data>
-  <data name="DateEdit_ToDate.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="DateEdit_ToDate.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="DateEdit_ToDate.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="DateEdit_ToDate.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="DateEdit_ToDate.Properties.VistaTimeProperties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="DateEdit_ToDate.Properties.VistaTimeProperties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
-    <value>Default</value>
-  </data>
-  <data name="DateEdit_ToDate.Properties.VistaTimeProperties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="DateEdit_ToDate.Properties.VistaTimeProperties.Mask.EditMask" xml:space="preserve">
-    <value>T</value>
-  </data>
-  <data name="DateEdit_ToDate.Properties.VistaTimeProperties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="DateEdit_ToDate.Properties.VistaTimeProperties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
-    <value>DateTime</value>
-  </data>
-  <data name="DateEdit_ToDate.Properties.VistaTimeProperties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="DateEdit_ToDate.Properties.VistaTimeProperties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="DateEdit_ToDate.Properties.VistaTimeProperties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="DateEdit_ToDate.Properties.VistaTimeProperties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
     <value>224, 17</value>
@@ -366,66 +214,6 @@
   <data name="DateEdit_FromDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>71, 14</value>
   </data>
-  <data name="DateEdit_FromDate.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="DateEdit_FromDate.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
-    <value>Default</value>
-  </data>
-  <data name="DateEdit_FromDate.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="DateEdit_FromDate.Properties.Mask.EditMask" xml:space="preserve">
-    <value>d</value>
-  </data>
-  <data name="DateEdit_FromDate.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="DateEdit_FromDate.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
-    <value>DateTime</value>
-  </data>
-  <data name="DateEdit_FromDate.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="DateEdit_FromDate.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="DateEdit_FromDate.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="DateEdit_FromDate.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="DateEdit_FromDate.Properties.VistaTimeProperties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="DateEdit_FromDate.Properties.VistaTimeProperties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
-    <value>Default</value>
-  </data>
-  <data name="DateEdit_FromDate.Properties.VistaTimeProperties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="DateEdit_FromDate.Properties.VistaTimeProperties.Mask.EditMask" xml:space="preserve">
-    <value>T</value>
-  </data>
-  <data name="DateEdit_FromDate.Properties.VistaTimeProperties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="DateEdit_FromDate.Properties.VistaTimeProperties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
-    <value>DateTime</value>
-  </data>
-  <data name="DateEdit_FromDate.Properties.VistaTimeProperties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="DateEdit_FromDate.Properties.VistaTimeProperties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="DateEdit_FromDate.Properties.VistaTimeProperties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="DateEdit_FromDate.Properties.VistaTimeProperties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 17</value>
   </data>
@@ -438,70 +226,17 @@
   <data name="PanelControl_Filter.Size" type="System.Drawing.Size, System.Drawing">
     <value>700, 75</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="GridControl_TurnoverDtl.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left</value>
-  </data>
-  <data name="GridControl_TurnoverDtl.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Tile</value>
-  </data>
-  <data name="GridControl_TurnoverDtl.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>Inherit</value>
-  </data>
-  <data name="GridControl_TurnoverDtl.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v8.1">
-    <value>Center</value>
-  </data>
-  <data name="GridControl_TurnoverDtl.EmbeddedNavigator.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <assembly alias="DevExpress.Utils.v8.1" name="DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
-  <data name="GridControl_TurnoverDtl.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v8.1">
-    <value>None</value>
-  </data>
-  <data name="GridControl_TurnoverDtl.EmbeddedNavigator.ToolTipTitle" xml:space="preserve">
-    <value />
-  </data>
   <data name="GridControl_TurnoverDtl.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 100</value>
   </data>
   <data name="GridColumn_TurnoverCode.Caption" xml:space="preserve">
     <value>Check-in/out Ref. No.</value>
   </data>
-  <data name="GridColumn_TurnoverCode.SummaryItem.DisplayFormat" xml:space="preserve">
-    <value />
-  </data>
   <data name="GridColumn_TurnoverTime.Caption" xml:space="preserve">
     <value>Date</value>
   </data>
   <data name="GridColumn_TurnoverType.Caption" xml:space="preserve">
     <value>Check-in / out</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_TurnoverType.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
-    <value>Default</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_TurnoverType.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_TurnoverType.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RepositoryItemLookUpEdit_TurnoverType.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_TurnoverType.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
-    <value>None</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_TurnoverType.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_TurnoverType.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_TurnoverType.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_TurnoverType.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="GridColumn_PosName.Caption" xml:space="preserve">
     <value>Location</value>
@@ -518,47 +253,14 @@
   <data name="GridColumn_WareAmount.Caption" xml:space="preserve">
     <value>Check-in / out Qty.</value>
   </data>
-  <data name="GridColumn_WareAmount.SummaryItem.DisplayFormat" xml:space="preserve">
-    <value />
-  </data>
   <data name="GridColumn_CurrentAmount.Caption" xml:space="preserve">
     <value>Current Qty.</value>
-  </data>
-  <data name="GridColumn_CurrentAmount.SummaryItem.DisplayFormat" xml:space="preserve">
-    <value />
   </data>
   <data name="GridColumn_Model.Caption" xml:space="preserve">
     <value>Model</value>
   </data>
   <data name="GridColumn_Unit.Caption" xml:space="preserve">
     <value>Unit</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_TurnoverStyle.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
-    <value>Default</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_TurnoverStyle.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_TurnoverStyle.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RepositoryItemLookUpEdit_TurnoverStyle.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_TurnoverStyle.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
-    <value>None</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_TurnoverStyle.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_TurnoverStyle.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_TurnoverStyle.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_TurnoverStyle.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="GridControl_TurnoverDtl.Size" type="System.Drawing.Size, System.Drawing">
     <value>700, 400</value>
