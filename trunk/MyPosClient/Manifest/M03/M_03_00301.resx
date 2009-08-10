@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="DefaultLookAndFeel_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>266, 0</value>
+    <value>295, 0</value>
   </metadata>
   <metadata name="Timer_Surveillant.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>128, 0</value>
+    <value>138, 0</value>
   </metadata>
   <metadata name="ToolStrip_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
@@ -146,19 +146,19 @@
     <value>Magenta</value>
   </data>
   <data name="ToolStripButton_General.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>33, 22</value>
   </data>
   <data name="ToolStripButton_General.Text" xml:space="preserve">
     <value>求和</value>
   </data>
   <data name="ToolStripButton_Refresh.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>33, 22</value>
   </data>
   <data name="ToolStripButton_Refresh.Text" xml:space="preserve">
     <value>刷新</value>
   </data>
   <data name="ToolStripButton_View.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>33, 22</value>
   </data>
   <data name="ToolStripButton_View.Text" xml:space="preserve">
     <value>查看</value>
@@ -182,13 +182,13 @@
     <value>Magenta</value>
   </data>
   <data name="ToolStripButton_ExportExcel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 22</value>
+    <value>63, 22</value>
   </data>
   <data name="ToolStripButton_ExportExcel.Text" xml:space="preserve">
     <value>导出Excel</value>
   </data>
   <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>33, 22</value>
   </data>
   <data name="ToolStripButton_Close.Text" xml:space="preserve">
     <value>关闭</value>
@@ -245,6 +245,10 @@
   <data name="LookUpEdit_ConsignStatus.Location" type="System.Drawing.Point, System.Drawing">
     <value>74, 6</value>
   </data>
+  <assembly alias="DevExpress.Utils.v8.1" name="DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
+  <data name="LookUpEdit_ConsignStatus.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
+  </data>
   <data name="LookUpEdit_ConsignStatus.Size" type="System.Drawing.Size, System.Drawing">
     <value>134, 21</value>
   </data>
@@ -286,6 +290,9 @@
   </data>
   <data name="LookUpEdit_TurnoverStyle.Location" type="System.Drawing.Point, System.Drawing">
     <value>273, 40</value>
+  </data>
+  <data name="LookUpEdit_TurnoverStyle.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
   </data>
   <data name="LookUpEdit_TurnoverStyle.Size" type="System.Drawing.Size, System.Drawing">
     <value>134, 21</value>
@@ -334,6 +341,9 @@
   </data>
   <data name="LookUpEdit_TurnoverType.Location" type="System.Drawing.Point, System.Drawing">
     <value>72, 40</value>
+  </data>
+  <data name="LookUpEdit_TurnoverType.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
   </data>
   <data name="LookUpEdit_TurnoverType.Size" type="System.Drawing.Size, System.Drawing">
     <value>134, 21</value>
@@ -681,6 +691,9 @@
   <data name="LookUpEdit_Pos.Location" type="System.Drawing.Point, System.Drawing">
     <value>501, 14</value>
   </data>
+  <data name="LookUpEdit_Pos.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
+  </data>
   <data name="LookUpEdit_Pos.Properties.NullText" xml:space="preserve">
     <value />
   </data>
@@ -789,6 +802,9 @@
   <data name="DateEdit_ToDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>273, 14</value>
   </data>
+  <data name="DateEdit_ToDate.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
+  </data>
   <data name="DateEdit_ToDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>134, 21</value>
   </data>
@@ -839,6 +855,9 @@
   </data>
   <data name="DateEdit_FromDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>72, 14</value>
+  </data>
+  <data name="DateEdit_FromDate.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
   </data>
   <data name="DateEdit_FromDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>134, 21</value>
@@ -916,13 +935,13 @@
     <value>17, 37</value>
   </metadata>
   <data name="ToolStripMenuItem_CopyTurnoverCode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>118, 22</value>
   </data>
   <data name="ToolStripMenuItem_CopyTurnoverCode.Text" xml:space="preserve">
     <value>复制单号</value>
   </data>
   <data name="ContextMenuStrip_Grid.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 48</value>
+    <value>119, 26</value>
   </data>
   <data name="&gt;&gt;ContextMenuStrip_Grid.Name" xml:space="preserve">
     <value>ContextMenuStrip_Grid</value>
@@ -969,6 +988,9 @@
   <data name="RepositoryItemLookUpEdit_TurnoverType.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="RepositoryItemLookUpEdit_TurnoverType.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
+  </data>
   <data name="GridColumn_TurnoverType.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -980,6 +1002,9 @@
   </data>
   <data name="RepositoryItemLookUpEdit_TurnoverStyle.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="RepositoryItemLookUpEdit_TurnoverStyle.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
   </data>
   <data name="GridColumn_TurnoverStyle.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1138,7 +1163,7 @@
     <value>1</value>
   </data>
   <metadata name="SaveFileDialog_ExportExcel.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>448, 0</value>
+    <value>489, 0</value>
   </metadata>
   <data name="SaveFileDialog_ExportExcel.Filter" xml:space="preserve">
     <value>Excel文档|*.xls</value>
@@ -1199,6 +1224,12 @@
   </data>
   <data name="&gt;&gt;ToolStripButton_Close.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_CopyTurnoverCode.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_CopyTurnoverCode</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_CopyTurnoverCode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;GridView_TurnoverDtl.Name" xml:space="preserve">
     <value>GridView_TurnoverDtl</value>
@@ -1343,12 +1374,6 @@
   </data>
   <data name="&gt;&gt;SaveFileDialog_ExportExcel.Type" xml:space="preserve">
     <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_CopyTurnoverCode.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_CopyTurnoverCode</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_CopyTurnoverCode.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>M_03_00301</value>
