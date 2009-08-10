@@ -382,6 +382,12 @@
   <data name="GridColumn_VRemarks.Caption" xml:space="preserve">
     <value>Remarks</value>
   </data>
+  <data name="GridControl_ViewCurrentStock.Size" type="System.Drawing.Size, System.Drawing">
+    <value>691, 361</value>
+  </data>
+  <data name="XtraTabPage_StoringPlaceDtl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>691, 361</value>
+  </data>
   <data name="XtraTabPage_StoringPlaceDtl.Text" xml:space="preserve">
     <value>Details</value>
   </data>
@@ -426,6 +432,9 @@
   </data>
   <data name="GridControl_ShelfStockDifference.Size" type="System.Drawing.Size, System.Drawing">
     <value>691, 362</value>
+  </data>
+  <data name="XtraTabPage_InventoryDifference.Size" type="System.Drawing.Size, System.Drawing">
+    <value>691, 361</value>
   </data>
   <data name="XtraTabPage_InventoryDifference.Text" xml:space="preserve">
     <value>Differences</value>
