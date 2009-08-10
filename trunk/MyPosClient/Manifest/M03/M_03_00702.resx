@@ -148,9 +148,6 @@
   <data name="Label_EmployeeInfo.Location" type="System.Drawing.Point, System.Drawing">
     <value>83, 13</value>
   </data>
-  <data name="&gt;&gt;ToolStrip_Form.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="&gt;&gt;ToolStripButton_Close.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -163,8 +160,12 @@
   <data name="&gt;&gt;ToolStrip_Form.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="ToolStripButton_Close.Text" xml:space="preserve">
-    <value>关闭</value>
+  <data name="&gt;&gt;GridColumn_ShareEmployeeCount.Name" xml:space="preserve">
+    <value>GridColumn_ShareEmployeeCount</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="GridColumn_TurnoverCode.VisibleIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;GridColumn_DeliveryCharge.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
@@ -193,19 +194,14 @@
   <data name="&gt;&gt;PanelControl_Filter.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Label1.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="GridControl_TurnoverCommission.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
   </data>
   <data name="ToolStrip_Form.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="GridColumn_RowHighlight.Caption" xml:space="preserve">
-    <value>高亮显示</value>
+  <data name="GridColumn_ShareEmployeeCount.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="GridColumn_ED.VisibleIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -216,6 +212,7 @@
   <data name="GridControl_TurnoverCommission.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 74</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
@@ -240,11 +237,17 @@
   <data name="GridColumn_DeliveryCharge.Caption" xml:space="preserve">
     <value>运费</value>
   </data>
+  <data name="GridControl_TurnoverCommission.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left</value>
+  </data>
   <data name="&gt;&gt;ToolStripButton_Close.Name" xml:space="preserve">
     <value>ToolStripButton_Close</value>
   </data>
-  <data name="GridColumn_ShareEmployeeCount.Visible" type="System.Boolean, mscorlib">
+  <data name="GridColumn_ED.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="&gt;&gt;ToolStripButton_Edit.Name" xml:space="preserve">
+    <value>ToolStripButton_Edit</value>
   </data>
   <data name="GridColumn_ShareEmployeeCount.VisibleIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -252,14 +255,8 @@
   <data name="GridControl_TurnoverCommission.EmbeddedNavigator.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="&gt;&gt;ToolStripButton_Edit.Name" xml:space="preserve">
-    <value>ToolStripButton_Edit</value>
-  </data>
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9pt</value>
-  </data>
-  <assembly alias="DevExpress.XtraEditors.v7.3" name="DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
-  <data name="GridControl_TurnoverCommission.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v7.3">
+  <assembly alias="DevExpress.XtraEditors.v8.1" name="DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
+  <data name="GridControl_TurnoverCommission.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v8.1">
     <value>Center</value>
   </data>
   <data name="PanelControl_Filter.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -271,6 +268,9 @@
   <data name="PanelControl_Filter.Size" type="System.Drawing.Size, System.Drawing">
     <value>846, 49</value>
   </data>
+  <data name="PanelControl_Filter.TabIndex" type="System.Int32, mscorlib">
+    <value>10001</value>
+  </data>
   <data name="&gt;&gt;GridColumn_ED.Name" xml:space="preserve">
     <value>GridColumn_ED</value>
   </data>
@@ -280,11 +280,17 @@
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="GridColumn_RowHighlight.Caption" xml:space="preserve">
+    <value>高亮显示</value>
+  </data>
   <data name="GridColumn_DeliveryCharge.VisibleIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;ToolStripButton_Edit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;GridColumn_ShareEmployeeCount.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="GridColumn_SumPrice.VisibleIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
   <data name="&gt;&gt;Timer_Surveillant.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -298,8 +304,8 @@
   <data name="GridControl_TurnoverCommission.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Tile</value>
   </data>
-  <data name="GridColumn_ED.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;ToolStrip_Form.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="ToolStripButton_Edit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -319,9 +325,6 @@
   <data name="ToolStrip_Form.Size" type="System.Drawing.Size, System.Drawing">
     <value>846, 25</value>
   </data>
-  <data name="&gt;&gt;GridView_TurnoverCommission.Name" xml:space="preserve">
-    <value>GridView_TurnoverCommission</value>
-  </data>
   <data name="&gt;&gt;GridColumn_RowHighlight.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
@@ -330,9 +333,6 @@
   </data>
   <data name="&gt;&gt;GridColumn_TurnoverCode.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
-  </data>
-  <data name="&gt;&gt;ToolStrip_Form.Name" xml:space="preserve">
-    <value>ToolStrip_Form</value>
   </data>
   <data name="&gt;&gt;GridColumn_SumPrice.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
@@ -349,17 +349,14 @@
   <data name="&gt;&gt;ToolStripButton_Refresh.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;GridColumn_EmployeeCommission.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
-  </data>
   <data name="ToolStripButton_Refresh.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 22</value>
   </data>
   <data name="Label1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9pt</value>
   </data>
-  <assembly alias="DevExpress.Utils.v7.3" name="DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
-  <data name="GridControl_TurnoverCommission.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v7.3">
+  <assembly alias="DevExpress.Utils.v8.1" name="DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
+  <data name="GridControl_TurnoverCommission.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v8.1">
     <value>None</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
@@ -380,11 +377,8 @@
   <data name="Label_EmployeeInfo.Size" type="System.Drawing.Size, System.Drawing">
     <value>246, 20</value>
   </data>
-  <data name="PanelControl_Filter.TabIndex" type="System.Int32, mscorlib">
-    <value>10001</value>
-  </data>
-  <data name="GridControl_TurnoverCommission.TabIndex" type="System.Int32, mscorlib">
-    <value>10002</value>
+  <data name="&gt;&gt;ToolStripButton_Edit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="GridColumn_ShareEmployeeCount.SummaryItem.DisplayFormat" xml:space="preserve">
     <value />
@@ -404,17 +398,20 @@
   <data name="ToolStripButton_Edit.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 22</value>
   </data>
+  <data name="GridColumn_DeliveryCharge.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="&gt;&gt;GridColumn_RowHighlight.Name" xml:space="preserve">
     <value>GridColumn_RowHighlight</value>
   </data>
-  <data name="GridColumn_DeliveryCharge.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;GridView_TurnoverCommission.Name" xml:space="preserve">
+    <value>GridView_TurnoverCommission</value>
   </data>
   <data name="&gt;&gt;DefaultLookAndFeel_Form.Name" xml:space="preserve">
     <value>DefaultLookAndFeel_Form</value>
   </data>
-  <data name="GridControl_TurnoverCommission.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left</value>
+  <data name="GridControl_TurnoverCommission.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="GridColumn_SumPrice.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -422,7 +419,7 @@
   <data name="&gt;&gt;GridView_TurnoverCommission.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="&gt;&gt;GridColumn_ShareEmployeeCount.Type" xml:space="preserve">
+  <data name="&gt;&gt;GridColumn_EmployeeCommission.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="PanelControl_Filter.Location" type="System.Drawing.Point, System.Drawing">
@@ -436,6 +433,9 @@
   </data>
   <data name="GridControl_TurnoverCommission.Size" type="System.Drawing.Size, System.Drawing">
     <value>846, 458</value>
+  </data>
+  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
+    <value>Label1</value>
   </data>
   <data name="&gt;&gt;Label_EmployeeInfo.Name" xml:space="preserve">
     <value>Label_EmployeeInfo</value>
@@ -458,14 +458,14 @@
   <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;GridColumn_ShareEmployeeCount.Name" xml:space="preserve">
-    <value>GridColumn_ShareEmployeeCount</value>
+  <data name="ToolStripButton_Close.Text" xml:space="preserve">
+    <value>关闭</value>
   </data>
   <data name="&gt;&gt;ContextMenu_Paragraph.Name" xml:space="preserve">
     <value>ContextMenu_Paragraph</value>
   </data>
-  <data name="GridColumn_SumPrice.VisibleIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="&gt;&gt;ToolStrip_Form.Name" xml:space="preserve">
+    <value>ToolStrip_Form</value>
   </data>
   <data name="ToolStripButton_Edit.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -479,8 +479,8 @@
   <data name="&gt;&gt;Timer_Surveillant.Name" xml:space="preserve">
     <value>Timer_Surveillant</value>
   </data>
-  <data name="GridColumn_TurnoverCode.VisibleIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
   </data>
   <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
     <value>PanelControl_Filter</value>
@@ -491,8 +491,8 @@
   <data name="&gt;&gt;Label_EmployeeInfo.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
-    <value>Label1</value>
+  <data name="GridControl_TurnoverCommission.TabIndex" type="System.Int32, mscorlib">
+    <value>10002</value>
   </data>
   <data name="GridColumn_TurnoverTime.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -500,19 +500,19 @@
   <metadata name="ContextMenu_Paragraph.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>337, 17</value>
   </metadata>
-  <metadata name="Timer_Surveillant.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <metadata name="ToolStrip_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>337, 17</value>
+    <value>0, 0</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="DefaultLookAndFeel_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>155, 17</value>
-  </metadata>
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>English</value>
+  </metadata>
+  <metadata name="DefaultLookAndFeel_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>295, 0</value>
+  </metadata>
+  <metadata name="Timer_Surveillant.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>138, 0</value>
   </metadata>
 </root>
