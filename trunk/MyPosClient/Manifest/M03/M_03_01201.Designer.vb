@@ -642,6 +642,8 @@
             'GridColumn_MoneyAmount
             '
             Me.GridColumn_MoneyAmount.Caption = "对应金额"
+            Me.GridColumn_MoneyAmount.DisplayFormat.FormatString = "{0:#,##0.00}"
+            Me.GridColumn_MoneyAmount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
             Me.GridColumn_MoneyAmount.FieldName = "MONEY_AMOUNT"
             Me.GridColumn_MoneyAmount.Name = "GridColumn_MoneyAmount"
             Me.GridColumn_MoneyAmount.OptionsColumn.AllowEdit = False
