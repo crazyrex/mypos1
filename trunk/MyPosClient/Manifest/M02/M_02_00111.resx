@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="DefaultLookAndFeel_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>266, 0</value>
+    <value>295, 0</value>
   </metadata>
   <metadata name="Timer_Surveillant.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>128, 0</value>
+    <value>138, 0</value>
   </metadata>
   <metadata name="ToolStrip_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
@@ -146,7 +146,7 @@
     <value>Magenta</value>
   </data>
   <data name="ToolStripButton_New.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 22</value>
+    <value>57, 22</value>
   </data>
   <data name="ToolStripButton_New.Text" xml:space="preserve">
     <value>新交货单</value>
@@ -170,19 +170,19 @@
     <value>Magenta</value>
   </data>
   <data name="ToolStripButton_DeliveryQuery.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 22</value>
+    <value>57, 22</value>
   </data>
   <data name="ToolStripButton_DeliveryQuery.Text" xml:space="preserve">
     <value>到货记录</value>
   </data>
   <data name="ToolStripButton_Refresh.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>33, 22</value>
   </data>
   <data name="ToolStripButton_Refresh.Text" xml:space="preserve">
     <value>刷新</value>
   </data>
   <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>33, 22</value>
   </data>
   <data name="ToolStripButton_Close.Text" xml:space="preserve">
     <value>关闭</value>
