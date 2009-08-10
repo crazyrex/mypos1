@@ -117,9 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="DateEdit_ToDate.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
   </data>
   <data name="GridColumn_IOTime1.Caption" xml:space="preserve">
     <value>时间</value>
@@ -128,6 +128,7 @@
   <data name="DateEdit_FromDate.Properties.VistaTimeProperties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
     <value>DateTime</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="DateEdit_ToDate.Properties.VistaTimeProperties.AutoHeight" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -137,12 +138,14 @@
   <data name="GridColumn_CustomCode.VisibleIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;GridColumn_WareName.Name" xml:space="preserve">
-    <value>GridColumn_WareName</value>
+  <data name="GridColumn_WareName.Caption" xml:space="preserve">
+    <value>货品名称</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="XtraTabPage_WareTurnover.Size" type="System.Drawing.Size, System.Drawing">
     <value>805, 390</value>
+  </data>
+  <data name="XtraTabControl1.Text" xml:space="preserve">
+    <value>XtraTabControl1</value>
   </data>
   <data name="GridColumn_Attribute3.VisibleIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -162,17 +165,20 @@
   <data name="&gt;&gt;Label_LocationID.Parent" xml:space="preserve">
     <value>PanelControl_Filter</value>
   </data>
+  <data name="GridColumn_Attribute1.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>19, 15</value>
   </data>
   <data name="&gt;&gt;DateEdit_ToDate.Parent" xml:space="preserve">
     <value>PanelControl_Filter</value>
   </data>
+  <data name="GridColumn_WareCode.VisibleIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;ButtonEdit_LocationCode.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.ButtonEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
-  </data>
-  <data name="&gt;&gt;XtraTabPage_Detail.Name" xml:space="preserve">
-    <value>XtraTabPage_Detail</value>
   </data>
   <data name="GridColumn_UnitName.Caption" xml:space="preserve">
     <value>单位</value>
@@ -189,17 +195,23 @@
   <data name="GridColumn_Attribute2.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;DateEdit_FromDate.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
   <data name="DateEdit_FromDate.Properties.VistaTimeProperties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;GridColumn_Operator.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  <data name="&gt;&gt;GridColumn_CustomCode.Name" xml:space="preserve">
+    <value>GridColumn_CustomCode</value>
+  </data>
+  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_DtlIOType.Name" xml:space="preserve">
+    <value>GridColumn_DtlIOType</value>
   </data>
   <data name="&gt;&gt;ToolStrip_Form.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="&gt;&gt;DateEdit_ToDate.Name" xml:space="preserve">
+    <value>DateEdit_ToDate</value>
   </data>
   <data name="&gt;&gt;GridColumn_UnitPrice.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
@@ -219,6 +231,10 @@
   <data name="DateEdit_ToDate.Properties.Mask.EditMask" xml:space="preserve">
     <value>d</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="GridControl_PosLocationIOList.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Tile</value>
+  </data>
   <data name="GridColumn_Attribute3.Caption" xml:space="preserve">
     <value>属性3</value>
   </data>
@@ -231,11 +247,11 @@
   <data name="GridColumn_DtlIODate.VisibleIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
+  <data name="&gt;&gt;PanelControl_Filter.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="DateEdit_ToDate.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
     <value>False</value>
-  </data>
-  <data name="GridColumn_WareCode.SummaryItem.DisplayFormat" xml:space="preserve">
-    <value />
   </data>
   <data name="DateEdit_ToDate.Properties.VistaTimeProperties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
     <value>DateTime</value>
@@ -246,8 +262,8 @@
   <data name="&gt;&gt;ToolStripButton_Revise.Name" xml:space="preserve">
     <value>ToolStripButton_Revise</value>
   </data>
-  <data name="&gt;&gt;GridColumn_Attribute2.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  <data name="DateEdit_FromDate.Properties.VistaTimeProperties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;ButtonEdit_LocationCode.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -267,7 +283,6 @@
   <data name="GridControl_PosLocationIOList.EmbeddedNavigator.ToolTipTitle" xml:space="preserve">
     <value />
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="GridControl_PosLocationIODtlList.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -284,17 +299,14 @@
   <data name="&gt;&gt;ButtonEdit_LocationCode.Parent" xml:space="preserve">
     <value>PanelControl_Filter</value>
   </data>
-  <data name="DateEdit_ToDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>224, 15</value>
-  </data>
   <data name="&gt;&gt;Label_LocationInfo.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;GridControl_PosLocationIODtlList.Name" xml:space="preserve">
     <value>GridControl_PosLocationIODtlList</value>
   </data>
-  <data name="ButtonEdit_LocationCode.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
-    <value>Default</value>
+  <data name="GridColumn_IODate.VisibleIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="GridColumn_DtlIOType.Caption" xml:space="preserve">
     <value>出/入</value>
@@ -344,6 +356,9 @@
   <data name="DateEdit_FromDate.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
     <value>DateTime</value>
   </data>
+  <data name="&gt;&gt;CheckEdit_SingleIODtl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="Label3.Text" xml:space="preserve">
     <value>至</value>
   </data>
@@ -361,6 +376,9 @@
   </data>
   <data name="&gt;&gt;ToolStripButton_Refresh.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="GridControl_PosLocationIODtlList.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
   </data>
   <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -386,17 +404,11 @@
   <data name="RepositoryItemLookUpEdit_DtlIOType.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="DateEdit_ToDate.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="GridColumn_IOAmount.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="GridColumn_Model.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>357, 18</value>
   </data>
   <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>22, 18</value>
@@ -407,14 +419,17 @@
   <data name="&gt;&gt;XtraTabPage_WareTurnover.Type" xml:space="preserve">
     <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
+  <data name="&gt;&gt;XtraTabControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="ButtonEdit_LocationCode.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="&gt;&gt;Label_LocationInfo.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="CheckEdit_SingleIODtl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 19</value>
+  <data name="DateEdit_ToDate.Properties.VistaTimeProperties.Mask.EditMask" xml:space="preserve">
+    <value>T</value>
   </data>
   <data name="XtraTabControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -434,6 +449,9 @@
   <data name="DateEdit_ToDate.Properties.VistaTimeProperties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
     <value>_</value>
   </data>
+  <data name="&gt;&gt;GridColumn_UnitCost.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
   <data name="&gt;&gt;Label1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -446,11 +464,8 @@
   <data name="&gt;&gt;DateEdit_FromDate.Name" xml:space="preserve">
     <value>DateEdit_FromDate</value>
   </data>
-  <data name="CheckEdit_SingleIODtl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>683, 15</value>
-  </data>
-  <data name="GridColumn_IOType.VisibleIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="&gt;&gt;RepositoryItemLookUpEdit_IOType.Name" xml:space="preserve">
+    <value>RepositoryItemLookUpEdit_IOType</value>
   </data>
   <data name="GridColumn_IOTime1.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -458,20 +473,23 @@
   <data name="RepositoryItemLookUpEdit_IOType.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="Label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9pt</value>
-  </data>
   <data name="PanelControl_Filter.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 25</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_Attribute3.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="&gt;&gt;GridColumn_IOAmount.Name" xml:space="preserve">
     <value>GridColumn_IOAmount</value>
   </data>
-  <data name="GridColumn_UnitCost.Caption" xml:space="preserve">
-    <value>成本</value>
+  <data name="CheckEdit_SingleIODtl.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="Label1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9pt</value>
+  </data>
+  <data name="RepositoryItemLookUpEdit_DtlIOType.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
   </data>
   <data name="RepositoryItemLookUpEdit_IOType.Mask.BeepOnError" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -485,17 +503,11 @@
   <data name="DateEdit_FromDate.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="DateEdit_ToDate.Properties.VistaTimeProperties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="GridColumn_DtlIODate.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="DateEdit_FromDate.Properties.VistaTimeProperties.Mask.BeepOnError" type="System.Boolean, mscorlib">
     <value>False</value>
-  </data>
-  <data name="GridControl_PosLocationIODtlList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
   </data>
   <data name="Label_LocationInfo.TabIndex" type="System.Int32, mscorlib">
     <value>10012</value>
@@ -521,9 +533,6 @@
   <data name="RepositoryItemLookUpEdit_DtlIOType.Mask.SaveLiteral" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
-    <value>10010</value>
-  </data>
   <data name="CheckEdit_SingleIODtl.Properties.Caption" xml:space="preserve">
     <value>单个储位明细</value>
   </data>
@@ -545,9 +554,6 @@
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>XL.Win.Component.BaseForm, XL.Win, Version=0.0.0.68, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;GridColumn_RowHighlight.Name" xml:space="preserve">
-    <value>GridColumn_RowHighlight</value>
-  </data>
   <data name="Label3.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9pt</value>
   </data>
@@ -557,8 +563,8 @@
   <data name="&gt;&gt;XtraTabPage_WareTurnover.Parent" xml:space="preserve">
     <value>XtraTabControl1</value>
   </data>
-  <data name="GridColumn_WareCode.Caption" xml:space="preserve">
-    <value>货品代码</value>
+  <data name="&gt;&gt;GridColumn_UnitName.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="Label_LocationID.TabIndex" type="System.Int32, mscorlib">
     <value>10011</value>
@@ -596,12 +602,6 @@
   <data name="&gt;&gt;GridControl_PosLocationIOList.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="Label_LocationID.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9pt</value>
-  </data>
-  <data name="DateEdit_FromDate.Properties.Mask.EditMask" xml:space="preserve">
-    <value>d</value>
-  </data>
   <data name="&gt;&gt;GridColumn_Attribute2.Name" xml:space="preserve">
     <value>GridColumn_Attribute2</value>
   </data>
@@ -613,6 +613,9 @@
   </data>
   <data name="&gt;&gt;GridColumn_Attribute1.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_IODate.Name" xml:space="preserve">
+    <value>GridColumn_IODate</value>
   </data>
   <data name="&gt;&gt;Label1.Name" xml:space="preserve">
     <value>Label1</value>
@@ -632,11 +635,14 @@
   <data name="GridColumn_DtlIOTime.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="GridControl_PosLocationIODtlList.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>Inherit</value>
+  <data name="GridColumn_WareCode.Caption" xml:space="preserve">
+    <value>货品代码</value>
   </data>
   <data name="GridColumn_CustomCode.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="&gt;&gt;Timer_Surveillant.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="DateEdit_ToDate.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -647,14 +653,11 @@
   <data name="Label_LocationID.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 18</value>
   </data>
-  <data name="ButtonEdit_LocationCode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 21</value>
+  <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 22</value>
   </data>
   <data name="&gt;&gt;XtraTabPage_WareTurnover.Name" xml:space="preserve">
     <value>XtraTabPage_WareTurnover</value>
-  </data>
-  <data name="&gt;&gt;GridColumn_Spec.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="&gt;&gt;XtraTabControl1.Type" xml:space="preserve">
     <value>DevExpress.XtraTab.XtraTabControl, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
@@ -662,20 +665,29 @@
   <data name="&gt;&gt;GridView_PosLocationIOList.Name" xml:space="preserve">
     <value>GridView_PosLocationIOList</value>
   </data>
+  <data name="ButtonEdit_LocationCode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>418, 15</value>
+  </data>
   <data name="&gt;&gt;GridColumn_IOType.Name" xml:space="preserve">
     <value>GridColumn_IOType</value>
   </data>
   <data name="DateEdit_FromDate.Properties.VistaTimeProperties.Mask.EditMask" xml:space="preserve">
     <value>T</value>
   </data>
+  <data name="&gt;&gt;GridColumn_WareName.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
   <data name="ButtonEdit_LocationCode.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="&gt;&gt;Label3.Parent" xml:space="preserve">
+    <value>PanelControl_Filter</value>
   </data>
   <data name="XtraTabControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 79</value>
   </data>
-  <data name="GridColumn_IODate.VisibleIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="GridControl_PosLocationIODtlList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
   <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
     <value>PanelControl_Filter</value>
@@ -689,35 +701,29 @@
   <data name="PanelControl_Filter.TabIndex" type="System.Int32, mscorlib">
     <value>10001</value>
   </data>
-  <data name="RepositoryItemLookUpEdit_IOType.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
   <data name="&gt;&gt;PanelControl_Filter.Name" xml:space="preserve">
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;GridColumn_WareCode.Name" xml:space="preserve">
     <value>GridColumn_WareCode</value>
   </data>
-  <data name="&gt;&gt;ToolStrip_Form.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_IOType.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
-    <value>Default</value>
+  <data name="GridColumn_Operator.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="GridColumn_DtlIOTime.Caption" xml:space="preserve">
     <value>时间</value>
   </data>
-  <data name="&gt;&gt;GridControl_PosLocationIOList.Name" xml:space="preserve">
-    <value>GridControl_PosLocationIOList</value>
-  </data>
   <data name="GridControl_PosLocationIODtlList.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Tile</value>
+  </data>
+  <data name="GridControl_PosLocationIOList.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>19, 15</value>
   </data>
-  <data name="&gt;&gt;GridColumn_UnitCost.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  <data name="DateEdit_ToDate.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
   </data>
   <data name="GridControl_PosLocationIOList.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -731,14 +737,20 @@
   <data name="&gt;&gt;XtraTabPage_Detail.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="GridControl_PosLocationIODtlList.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="CheckEdit_SingleIODtl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 19</value>
   </data>
-  <data name="&gt;&gt;GridColumn_IOTime1.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  <data name="GridColumn_DtlIOType.VisibleIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="Label_LocationInfo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
   </data>
   <data name="GridColumn_Spec.VisibleIndex" type="System.Int32, mscorlib">
     <value>6</value>
+  </data>
+  <data name="GridColumn_Attribute4.VisibleIndex" type="System.Int32, mscorlib">
+    <value>11</value>
   </data>
   <data name="&gt;&gt;GridColumn_Remarks.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
@@ -749,17 +761,14 @@
   <data name="&gt;&gt;XtraTabControl1.Name" xml:space="preserve">
     <value>XtraTabControl1</value>
   </data>
-  <data name="&gt;&gt;GridColumn_Spec.Name" xml:space="preserve">
-    <value>GridColumn_Spec</value>
-  </data>
   <data name="&gt;&gt;DateEdit_ToDate.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.DateEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="&gt;&gt;GridColumn_Attribute4.Name" xml:space="preserve">
     <value>GridColumn_Attribute4</value>
   </data>
-  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>814, 500</value>
+  <data name="&gt;&gt;ToolStripButton_Close.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;GridColumn_WareCode.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
@@ -800,14 +809,14 @@
   <data name="RepositoryItemLookUpEdit_IOType.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
     <value>None</value>
   </data>
-  <data name="DateEdit_ToDate.Properties.VistaTimeProperties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;GridColumn_DtlIOType.Type" xml:space="preserve">
+  <data name="&gt;&gt;GridColumn_Attribute2.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
-    <value>8</value>
+  <data name="DateEdit_ToDate.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
+    <value>DateTime</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_WareName.Name" xml:space="preserve">
+    <value>GridColumn_WareName</value>
   </data>
   <data name="&gt;&gt;GridColumn_IOTime1.Name" xml:space="preserve">
     <value>GridColumn_IOTime1</value>
@@ -833,17 +842,20 @@
   <data name="DateEdit_ToDate.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9pt</value>
+  <data name="DateEdit_ToDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>224, 15</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_Remarks.Name" xml:space="preserve">
+    <value>GridColumn_Remarks</value>
   </data>
   <data name="Label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="GridControl_PosLocationIOList.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Tile</value>
+  <data name="DateEdit_ToDate.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;GridColumn_WareName.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  <data name="GridColumn_WareCode.SummaryItem.DisplayFormat" xml:space="preserve">
+    <value />
   </data>
   <data name="&gt;&gt;PanelControl_Filter.Parent" xml:space="preserve">
     <value>$this</value>
@@ -851,11 +863,8 @@
   <data name="GridColumn_WareName.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
-  </data>
-  <data name="&gt;&gt;GridColumn_IODate.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  <data name="&gt;&gt;DateEdit_FromDate.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="RepositoryItemLookUpEdit_DtlIOType.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
     <value>Default</value>
@@ -866,8 +875,8 @@
   <data name="GridColumn_IOAmount.VisibleIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
-  <data name="GridControl_PosLocationIODtlList.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v8.1">
-    <value>None</value>
+  <data name="GridColumn_IODate.Caption" xml:space="preserve">
+    <value>日期</value>
   </data>
   <data name="&gt;&gt;DateEdit_ToDate.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -878,29 +887,32 @@
   <data name="GridColumn_Attribute3.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="&gt;&gt;GridView_PosLocationIODtlList.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
   <data name="&gt;&gt;ContextMenu_Paragraph.Type" xml:space="preserve">
     <value>System.Windows.Forms.ContextMenu, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="DateEdit_FromDate.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="DateEdit_FromDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 21</value>
-  </data>
   <data name="&gt;&gt;GridColumn_CustomCode.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="ToolStripButton_Refresh.Text" xml:space="preserve">
-    <value>刷新</value>
-  </data>
-  <data name="&gt;&gt;GridColumn_DtlIOType.Name" xml:space="preserve">
-    <value>GridColumn_DtlIOType</value>
-  </data>
-  <data name="&gt;&gt;GridColumn_Attribute3.Type" xml:space="preserve">
+  <data name="&gt;&gt;GridColumn_Operator.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="ButtonEdit_LocationCode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 21</value>
+  </data>
+  <data name="GridColumn_UnitCost.Caption" xml:space="preserve">
+    <value>成本</value>
   </data>
   <data name="GridColumn_Remarks.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="PanelControl_Filter.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
   </data>
   <data name="&gt;&gt;ToolStripButton_Close.Name" xml:space="preserve">
     <value>ToolStripButton_Close</value>
@@ -919,12 +931,6 @@
   </data>
   <data name="ButtonEdit_LocationCode.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
     <value>_</value>
-  </data>
-  <data name="ToolStripButton_Delete.Text" xml:space="preserve">
-    <value>删除</value>
-  </data>
-  <data name="ButtonEdit_LocationCode.Properties.Mask.EditMask" xml:space="preserve">
-    <value />
   </data>
   <data name="GridColumn_IOAmount.SummaryItem.DisplayFormat" xml:space="preserve">
     <value />
@@ -947,14 +953,11 @@
   <data name="RepositoryItemLookUpEdit_IOType.Mask.SaveLiteral" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;Label3.Parent" xml:space="preserve">
-    <value>PanelControl_Filter</value>
+  <data name="DateEdit_FromDate.Properties.Mask.EditMask" xml:space="preserve">
+    <value>d</value>
   </data>
   <data name="&gt;&gt;GridColumn_Attribute4.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
-  </data>
-  <data name="GridColumn_UnitPrice.VisibleIndex" type="System.Int32, mscorlib">
-    <value>14</value>
   </data>
   <data name="DateEdit_FromDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>61, 15</value>
@@ -962,17 +965,17 @@
   <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="DateEdit_FromDate.Properties.VistaTimeProperties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>357, 18</value>
   </data>
-  <data name="&gt;&gt;XtraTabControl1.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="ToolStripButton_Delete.Text" xml:space="preserve">
+    <value>删除</value>
   </data>
   <data name="&gt;&gt;Label_LocationID.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Label_LocationInfo.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9pt</value>
+  <data name="DateEdit_ToDate.Properties.VistaTimeProperties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="GridControl_PosLocationIODtlList.Size" type="System.Drawing.Size, System.Drawing">
     <value>805, 390</value>
@@ -992,9 +995,6 @@
   <data name="&gt;&gt;GridControl_PosLocationIODtlList.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="GridControl_PosLocationIOList.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v8.1">
-    <value>None</value>
-  </data>
   <data name="&gt;&gt;DefaultLookAndFeel_Form.Type" xml:space="preserve">
     <value>DevExpress.LookAndFeel.DefaultLookAndFeel, DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
@@ -1013,20 +1013,20 @@
   <data name="RepositoryItemLookUpEdit_IOType.Mask.EditMask" xml:space="preserve">
     <value />
   </data>
-  <data name="DateEdit_ToDate.Properties.VistaTimeProperties.Mask.EditMask" xml:space="preserve">
-    <value>T</value>
+  <data name="&gt;&gt;GridControl_PosLocationIODtlList.Parent" xml:space="preserve">
+    <value>XtraTabPage_Detail</value>
   </data>
   <data name="GridColumn_Spec.Caption" xml:space="preserve">
     <value>货品规格</value>
   </data>
-  <data name="PanelControl_Filter.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
+  <data name="GridColumn_IOType.VisibleIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
   <data name="GridColumn_Remarks.VisibleIndex" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
-  <data name="&gt;&gt;CheckEdit_SingleIODtl.Name" xml:space="preserve">
-    <value>CheckEdit_SingleIODtl</value>
+  <data name="DateEdit_FromDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 21</value>
   </data>
   <data name="DateEdit_FromDate.Properties.VistaTimeProperties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
     <value>Default</value>
@@ -1034,17 +1034,17 @@
   <data name="GridControl_PosLocationIODtlList.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v8.1">
     <value>Center</value>
   </data>
-  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;CheckEdit_SingleIODtl.Name" xml:space="preserve">
+    <value>CheckEdit_SingleIODtl</value>
   </data>
-  <data name="GridColumn_WareName.Caption" xml:space="preserve">
-    <value>货品名称</value>
+  <data name="Label_LocationID.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
   </data>
   <data name="DateEdit_ToDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>112, 21</value>
   </data>
-  <data name="&gt;&gt;CheckEdit_SingleIODtl.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;GridControl_PosLocationIOList.Name" xml:space="preserve">
+    <value>GridControl_PosLocationIOList</value>
   </data>
   <data name="&gt;&gt;GridView_PosLocationIOList.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
@@ -1055,8 +1055,8 @@
   <data name="Label_LocationID.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="GridColumn_Attribute1.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="RepositoryItemLookUpEdit_IOType.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
+    <value>Default</value>
   </data>
   <data name="GridColumn_Attribute4.Caption" xml:space="preserve">
     <value>属性4</value>
@@ -1064,8 +1064,8 @@
   <data name="DateEdit_FromDate.Properties.VistaTimeProperties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;Timer_Surveillant.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;GridColumn_IOTime1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="&gt;&gt;Label_LocationID.Name" xml:space="preserve">
     <value>Label_LocationID</value>
@@ -1073,26 +1073,26 @@
   <data name="&gt;&gt;ButtonEdit_LocationCode.Name" xml:space="preserve">
     <value>ButtonEdit_LocationCode</value>
   </data>
-  <data name="&gt;&gt;ToolStripButton_Close.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_DtlIOType.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
-    <value>Combo</value>
-  </data>
-  <data name="&gt;&gt;GridColumn_Remarks.Name" xml:space="preserve">
-    <value>GridColumn_Remarks</value>
-  </data>
-  <data name="CheckEdit_SingleIODtl.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;GridColumn_UnitName.Type" xml:space="preserve">
+  <data name="&gt;&gt;GridColumn_Spec.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;XtraTabPage_Detail.Name" xml:space="preserve">
+    <value>XtraTabPage_Detail</value>
+  </data>
+  <data name="GridControl_PosLocationIODtlList.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="DateEdit_ToDate.Properties.VistaTimeProperties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
   </data>
   <data name="&gt;&gt;Label_LocationInfo.Parent" xml:space="preserve">
     <value>PanelControl_Filter</value>
   </data>
-  <data name="GridColumn_DtlIOType.VisibleIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="&gt;&gt;GridColumn_IODate.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -1103,20 +1103,20 @@
   <data name="ButtonEdit_LocationCode.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="GridColumn_Attribute4.VisibleIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+  <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
+    <value>8</value>
   </data>
   <data name="XtraTabPage_Detail.Text" xml:space="preserve">
     <value>货品出入明细</value>
   </data>
-  <data name="XtraTabControl1.Text" xml:space="preserve">
-    <value>XtraTabControl1</value>
+  <data name="ButtonEdit_LocationCode.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
+    <value>Default</value>
   </data>
   <data name="&gt;&gt;GridView_PosLocationIODtlList.Name" xml:space="preserve">
     <value>GridView_PosLocationIODtlList</value>
   </data>
-  <data name="&gt;&gt;PanelControl_Filter.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="CheckEdit_SingleIODtl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>683, 15</value>
   </data>
   <data name="Label_LocationID.Location" type="System.Drawing.Point, System.Drawing">
     <value>509, 36</value>
@@ -1133,8 +1133,8 @@
   <data name="&gt;&gt;GridColumn_UnitName.Name" xml:space="preserve">
     <value>GridColumn_UnitName</value>
   </data>
-  <data name="GridColumn_IODate.Caption" xml:space="preserve">
-    <value>日期</value>
+  <data name="&gt;&gt;ToolStrip_Form.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;GridColumn_DtlIOTime.Name" xml:space="preserve">
     <value>GridColumn_DtlIOTime</value>
@@ -1142,8 +1142,8 @@
   <data name="DateEdit_FromDate.Properties.VistaTimeProperties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
     <value>_</value>
   </data>
-  <data name="&gt;&gt;GridControl_PosLocationIODtlList.Parent" xml:space="preserve">
-    <value>XtraTabPage_Detail</value>
+  <data name="ToolStripButton_Refresh.Text" xml:space="preserve">
+    <value>刷新</value>
   </data>
   <data name="Label_LocationInfo.Location" type="System.Drawing.Point, System.Drawing">
     <value>540, 17</value>
@@ -1151,8 +1151,8 @@
   <data name="DateEdit_ToDate.Properties.VistaTimeProperties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="GridColumn_WareCode.VisibleIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="&gt;&gt;GridColumn_RowHighlight.Name" xml:space="preserve">
+    <value>GridColumn_RowHighlight</value>
   </data>
   <data name="DateEdit_FromDate.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
     <value>_</value>
@@ -1160,26 +1160,26 @@
   <data name="ButtonEdit_LocationCode.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;DateEdit_ToDate.Name" xml:space="preserve">
-    <value>DateEdit_ToDate</value>
+  <data name="&gt;&gt;GridColumn_DtlIOType.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="Label2.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
   </data>
-  <data name="&gt;&gt;GridColumn_CustomCode.Name" xml:space="preserve">
-    <value>GridColumn_CustomCode</value>
+  <data name="GridControl_PosLocationIOList.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v8.1">
+    <value>None</value>
   </data>
   <data name="GridColumn_IOType.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;GridView_PosLocationIODtlList.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  <data name="ButtonEdit_LocationCode.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
   </data>
   <data name="GridColumn_CustomCode.Caption" xml:space="preserve">
     <value>自定货号</value>
   </data>
-  <data name="&gt;&gt;GridColumn_IODate.Name" xml:space="preserve">
-    <value>GridColumn_IODate</value>
+  <data name="&gt;&gt;GridColumn_Spec.Name" xml:space="preserve">
+    <value>GridColumn_Spec</value>
   </data>
   <data name="DateEdit_FromDate.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1187,8 +1187,8 @@
   <data name="DateEdit_ToDate.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="ButtonEdit_LocationCode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>418, 15</value>
+  <data name="RepositoryItemLookUpEdit_IOType.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
   </data>
   <data name="GridColumn_Attribute2.VisibleIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -1196,20 +1196,23 @@
   <data name="Label3.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
   </data>
-  <data name="GridControl_PosLocationIOList.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
+    <value>10010</value>
   </data>
-  <data name="&gt;&gt;RepositoryItemLookUpEdit_IOType.Name" xml:space="preserve">
-    <value>RepositoryItemLookUpEdit_IOType</value>
+  <data name="GridControl_PosLocationIODtlList.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v8.1">
+    <value>None</value>
   </data>
-  <data name="DateEdit_ToDate.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
-    <value>DateTime</value>
+  <data name="GridColumn_UnitPrice.VisibleIndex" type="System.Int32, mscorlib">
+    <value>14</value>
   </data>
-  <data name="GridColumn_Operator.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>814, 500</value>
   </data>
   <metadata name="ContextMenu_Paragraph.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>283, 17</value>
+  </metadata>
+  <metadata name="Timer_Surveillant.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>138, 0</value>
   </metadata>
   <metadata name="ToolStrip_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
@@ -1217,13 +1220,10 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>English</value>
-  </metadata>
   <metadata name="DefaultLookAndFeel_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>295, 0</value>
   </metadata>
-  <metadata name="Timer_Surveillant.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>138, 0</value>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>English</value>
   </metadata>
 </root>
