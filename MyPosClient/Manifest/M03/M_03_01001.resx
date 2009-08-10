@@ -189,11 +189,14 @@
   <data name="&gt;&gt;TextEdit_Search.Name" xml:space="preserve">
     <value>TextEdit_Search</value>
   </data>
+  <data name="GridColumn_ClientAttr3.Caption" xml:space="preserve">
+    <value>ClientAttr3</value>
+  </data>
   <data name="GridControl_WareSalesReport.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 32</value>
   </data>
-  <data name="&gt;&gt;GridColumn_Unitcost.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  <data name="&gt;&gt;DateEdit_End.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="GridColumn_ClientAttr2.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -201,11 +204,17 @@
   <data name="&gt;&gt;XtraTabControl1.Name" xml:space="preserve">
     <value>XtraTabControl1</value>
   </data>
-  <data name="&gt;&gt;GridControl_ClientSalesReport.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn_RowHighlight.Caption" xml:space="preserve">
+    <value>GridColumn9</value>
   </data>
   <data name="CheckEdit1.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 6</value>
+  </data>
+  <data name="GridControl_WareSalesReport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>691, 347</value>
   </data>
   <data name="&gt;&gt;GridColumn_Attribute4.Name" xml:space="preserve">
     <value>GridColumn_Attribute4</value>
@@ -229,11 +238,11 @@
   <data name="&gt;&gt;Label3.Parent" xml:space="preserve">
     <value>PanelControl1</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>XL.Win.Component.BaseForm, XL.Win, Version=0.0.0.68, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;GridControl_WareSalesReport.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="GridColumn_RowSelected.Caption" xml:space="preserve">
-    <value>选择</value>
+  <data name="ToolStripButton_Search.Text" xml:space="preserve">
+    <value>查找</value>
   </data>
   <data name="&gt;&gt;CheckEdit2.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
@@ -258,6 +267,9 @@
   </data>
   <data name="DateEdit_End.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_Linkman.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="GridColumn_SumPrice.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -312,9 +324,6 @@
   </data>
   <data name="DateEdit_End.Properties.VistaTimeProperties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="&gt;&gt;DateEdit_End.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.DateEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="DateEdit_End.Properties.Mask.EditMask" xml:space="preserve">
     <value>d</value>
@@ -419,14 +428,17 @@
   <data name="DateEdit_Begin.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
     <value>Combo</value>
   </data>
+  <data name="DateEdit_Begin.Properties.VistaTimeProperties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="PanelControl2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="&gt;&gt;XtraTabControl1.Type" xml:space="preserve">
     <value>DevExpress.XtraTab.XtraTabControl, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="GridColumn_ClientAttr3.Caption" xml:space="preserve">
-    <value>ClientAttr3</value>
+  <data name="GridColumn_RowSelected.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="GridColumn_Model.VisibleIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -494,8 +506,8 @@
   <data name="&gt;&gt;GridColumn_Remarks.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="&gt;&gt;PanelControl2.Parent" xml:space="preserve">
-    <value>XtraTabPage1</value>
+  <data name="&gt;&gt;DateEdit_End.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.DateEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="&gt;&gt;XtraTabPage1.Parent" xml:space="preserve">
     <value>XtraTabControl1</value>
@@ -509,17 +521,14 @@
   <data name="GridColumn_ClientAttr1.Caption" xml:space="preserve">
     <value>ClientAttr1</value>
   </data>
-  <data name="DateEdit_Begin.Properties.VistaTimeProperties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="&gt;&gt;GridColumn_Email.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="&gt;&gt;RepositoryItemCheckEdit_RowSelected.Name" xml:space="preserve">
     <value>RepositoryItemCheckEdit_RowSelected</value>
   </data>
   <data name="&gt;&gt;GridColumn_ClientAttr5.Name" xml:space="preserve">
     <value>GridColumn_ClientAttr5</value>
-  </data>
-  <data name="&gt;&gt;DateEdit_End.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="&gt;&gt;PanelControl1.Name" xml:space="preserve">
     <value>PanelControl1</value>
@@ -547,6 +556,9 @@
   </data>
   <data name="GridColumn_SumPrice.VisibleIndex" type="System.Int32, mscorlib">
     <value>2</value>
+  </data>
+  <data name="ToolStrip_Form.Size" type="System.Drawing.Size, System.Drawing">
+    <value>700, 25</value>
   </data>
   <data name="&gt;&gt;ToolStrip_Form.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -650,17 +662,14 @@
   <data name="Label3.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="&gt;&gt;CheckEdit1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="TextEdit_Search.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 13</value>
+  <data name="GridColumn_Spec.VisibleIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
   <data name="CheckEdit1.Properties.Caption" xml:space="preserve">
     <value>仅此客户货品</value>
@@ -682,6 +691,9 @@
   </data>
   <data name="PanelControl2.Size" type="System.Drawing.Size, System.Drawing">
     <value>691, 30</value>
+  </data>
+  <data name="GridControl_WareSalesReport.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v8.1">
+    <value>Center</value>
   </data>
   <data name="GridColumn_CellPhone.Caption" xml:space="preserve">
     <value>手机</value>
@@ -715,6 +727,9 @@
   </data>
   <data name="GridColumn_WorkPhone.VisibleIndex" type="System.Int32, mscorlib">
     <value>4</value>
+  </data>
+  <data name="GridControl_ClientSalesReport.EmbeddedNavigator.ToolTipTitle" xml:space="preserve">
+    <value />
   </data>
   <data name="TextEdit_Search.Properties.Mask.EditMask" xml:space="preserve">
     <value />
@@ -764,9 +779,6 @@
   <data name="&gt;&gt;PanelControl2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;GridColumn_Email.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
-  </data>
   <data name="&gt;&gt;GridControl_WareSalesReport.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
@@ -800,8 +812,8 @@
   <data name="GridControl_WareSalesReport.EmbeddedNavigator.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="ToolStrip_Form.Size" type="System.Drawing.Size, System.Drawing">
-    <value>700, 25</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>XL.Win.Component.BaseForm, XL.Win, Version=0.0.0.68, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;GridColumn_Attribute1.Name" xml:space="preserve">
     <value>GridColumn_Attribute1</value>
@@ -809,14 +821,11 @@
   <data name="GridColumn_Spec.Caption" xml:space="preserve">
     <value>货品规格</value>
   </data>
-  <data name="DateEdit_Begin.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="ToolStripButton_SellDiscount.Size" type="System.Drawing.Size, System.Drawing">
     <value>83, 22</value>
   </data>
-  <data name="GridControl_WareSalesReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>691, 347</value>
+  <data name="&gt;&gt;PanelControl2.Parent" xml:space="preserve">
+    <value>XtraTabPage1</value>
   </data>
   <data name="&gt;&gt;GridColumn_CustomerName.Name" xml:space="preserve">
     <value>GridColumn_CustomerName</value>
@@ -835,6 +844,9 @@
   </data>
   <data name="GridColumn_ClientAttr2.Caption" xml:space="preserve">
     <value>ClientAttr2</value>
+  </data>
+  <data name="PanelControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
   </data>
   <data name="GridColumn_Email.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -929,17 +941,8 @@
   <data name="&gt;&gt;GridColumn_Spec.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;GridControl_WareSalesReport.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
-  </data>
   <data name="GridColumn_Attribute2.Caption" xml:space="preserve">
     <value>属性2</value>
-  </data>
-  <data name="GridColumn_RowSelected.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="&gt;&gt;GridColumn_Attribute2.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
@@ -956,9 +959,6 @@
   <data name="XtraTabPage2.Size" type="System.Drawing.Size, System.Drawing">
     <value>691, 379</value>
   </data>
-  <data name="DateEdit_Begin.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
-    <value>Default</value>
-  </data>
   <data name="GridColumn_Linkman.Caption" xml:space="preserve">
     <value>联系人</value>
   </data>
@@ -966,9 +966,6 @@
     <value>True</value>
   </data>
   <data name="GridColumn_CustomerCode.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="GridColumn_WareName.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="XtraTabControl1.Text" xml:space="preserve">
@@ -1004,11 +1001,14 @@
   <data name="DateEdit_End.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="GridColumn_RowHighlight.Caption" xml:space="preserve">
-    <value>GridColumn9</value>
+  <data name="&gt;&gt;GridControl_ClientSalesReport.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="GridColumn1.Caption" xml:space="preserve">
     <value>高亮显示</value>
+  </data>
+  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 13</value>
   </data>
   <data name="GridColumn_CustomerName.VisibleIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1067,7 +1067,7 @@
   <data name="&gt;&gt;TextEdit_Search.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="&gt;&gt;GridColumn_RowHighlight.Type" xml:space="preserve">
+  <data name="&gt;&gt;GridColumn_Unitcost.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="&gt;&gt;GridControl_ClientSalesReport.Parent" xml:space="preserve">
@@ -1088,8 +1088,8 @@
   <data name="XtraTabControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="GridColumn_Spec.VisibleIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="DateEdit_Begin.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
+    <value>Default</value>
   </data>
   <data name="GridColumn_WareCode.VisibleIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1154,9 +1154,6 @@
   <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="ToolStripButton_Search.Text" xml:space="preserve">
-    <value>查找</value>
-  </data>
   <data name="TextEdit_Search.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
     <value>None</value>
   </data>
@@ -1184,10 +1181,13 @@
   <data name="PanelControl3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
+  <data name="DateEdit_End.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="&gt;&gt;GridColumn_SumAmount.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="DateEdit_End.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+  <data name="DateEdit_Begin.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="&gt;&gt;ToolStripButton_Close.Type" xml:space="preserve">
@@ -1259,11 +1259,11 @@
   <data name="TextEdit_Search.Location" type="System.Drawing.Point, System.Drawing">
     <value>53, 34</value>
   </data>
-  <data name="PanelControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
+  <data name="GridColumn_WareName.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="GridControl_ClientSalesReport.EmbeddedNavigator.ToolTipTitle" xml:space="preserve">
-    <value />
+  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="DateEdit_End.Properties.VistaTimeProperties.Mask.BeepOnError" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1274,7 +1274,7 @@
   <data name="ToolStripButton_SellDiscount.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="&gt;&gt;GridColumn_Linkman.Type" xml:space="preserve">
+  <data name="&gt;&gt;GridColumn_RowHighlight.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="GridColumn_ClientAttr3.VisibleIndex" type="System.Int32, mscorlib">
@@ -1286,8 +1286,8 @@
   <data name="GridColumn_ClientAttr4.VisibleIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
-  <data name="GridControl_WareSalesReport.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v8.1">
-    <value>Center</value>
+  <data name="GridColumn_RowSelected.Caption" xml:space="preserve">
+    <value>选择</value>
   </data>
   <data name="GridColumn_CellPhone.VisibleIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -1310,9 +1310,6 @@
   <metadata name="DefaultLookAndFeel_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>295, 0</value>
   </metadata>
-  <metadata name="Timer_Surveillant.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>138, 0</value>
-  </metadata>
   <metadata name="ToolStrip_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
   </metadata>
@@ -1321,5 +1318,8 @@
   </metadata>
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>English</value>
+  </metadata>
+  <metadata name="Timer_Surveillant.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>138, 0</value>
   </metadata>
 </root>
