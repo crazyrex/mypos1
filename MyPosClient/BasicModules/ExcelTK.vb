@@ -164,14 +164,14 @@ Namespace Utils
 
         End Sub
 
-        Public Sub InsertPicture(ByVal row As Integer, ByVal column As Integer, ByVal picturePath As String, ByVal offsetX As Integer, ByVal offsetY As Integer)
-
-            If IO.File.Exists(picturePath) = False Then
-                Return
-            End If
+        Public Sub InsertPicture(ByVal row As Integer, ByVal column As Integer, pictureImage As Image , ByVal offsetX As Integer, ByVal offsetY As Integer)
 
             Me._opRange = Me._openSheet.Range(Me._openExcel.Cells(row, column), Me._openExcel.Cells(row, column))
-            Dim picImage As Image = CommTK.GetImageFromFile(picturePath)
+            Dim picturePath As String = WinTK.GetResourceFilePath(ResourceType.TempFile, "ExportPicturePic")
+            If IO.File.Exists(picturePath) = True Then
+                IO.File.Delete(picturePath)
+            End If
+            pictureImage.Save(picturePath)
 
             Me._opRange.Select()
 
@@ -189,8 +189,8 @@ Namespace Utils
                 Microsoft.Office.Core.MsoTriState.msoTrue, _
                 CommTK.FInteger(Me._opRange.Left) + offsetX, _
                 CommTK.FInteger(Me._opRange.Top) + offsetY, _
-                CommTK.FDecimal(picImage.Width * 4 / 5), _
-                CommTK.FDecimal(picImage.Height * 4 / 5))
+                pictureImage.Width, _
+                pictureImage.Height)
 
         End Sub
 
