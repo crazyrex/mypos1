@@ -269,23 +269,50 @@
   <data name="GridColumn_CurrentCost.Caption" xml:space="preserve">
     <value>Book inventory cost</value>
   </data>
+  <data name="GridColumn_CurrentOrigionSumPrice.Caption" xml:space="preserve">
+    <value>原价</value>
+  </data>
+  <data name="GridColumn_CurrentOrigionSumPrice.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn_CurrentOrigionSumPrice.VisibleIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
   <data name="GridColumn_LowerLimit.Caption" xml:space="preserve">
     <value>Safty inventory Qty.</value>
+  </data>
+  <data name="GridColumn_LowerLimit.VisibleIndex" type="System.Int32, mscorlib">
+    <value>12</value>
   </data>
   <data name="GridColumn_LackAmount.Caption" xml:space="preserve">
     <value>OOS Qty.</value>
   </data>
+  <data name="GridColumn_LackAmount.VisibleIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
   <data name="GridColumn_ConsignOutRemains.Caption" xml:space="preserve">
     <value>Consign out remains</value>
+  </data>
+  <data name="GridColumn_ConsignOutRemains.VisibleIndex" type="System.Int32, mscorlib">
+    <value>13</value>
   </data>
   <data name="GridColumn_ConsignInRemains.Caption" xml:space="preserve">
     <value>Consign in remains</value>
   </data>
+  <data name="GridColumn_ConsignInRemains.VisibleIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
   <data name="GridColumn_UnitName.Caption" xml:space="preserve">
     <value>Unit</value>
   </data>
+  <data name="GridColumn_UnitName.VisibleIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
   <data name="GridColumn_Remarks.Caption" xml:space="preserve">
     <value>Remarks</value>
+  </data>
+  <data name="GridColumn_Remarks.VisibleIndex" type="System.Int32, mscorlib">
+    <value>16</value>
   </data>
   <data name="GridControl_NormalList.Size" type="System.Drawing.Size, System.Drawing">
     <value>691, 391</value>
