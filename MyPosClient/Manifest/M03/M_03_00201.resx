@@ -550,6 +550,15 @@
   <data name="GridColumn_EndAmount.VisibleIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
+  <data name="GridColumn_BeginOrigionSumPrice.Caption" xml:space="preserve">
+    <value>期初原成本</value>
+  </data>
+  <data name="GridColumn_BeginOrigionSumPrice.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn_BeginOrigionSumPrice.VisibleIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
   <data name="GridColumn_BeginCost.Caption" xml:space="preserve">
     <value>期初成本</value>
   </data>
@@ -557,7 +566,16 @@
     <value>True</value>
   </data>
   <data name="GridColumn_BeginCost.VisibleIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+    <value>14</value>
+  </data>
+  <data name="GridColumn_OutOrigionSumPrice.Caption" xml:space="preserve">
+    <value>出货原成本</value>
+  </data>
+  <data name="GridColumn_OutOrigionSumPrice.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn_OutOrigionSumPrice.VisibleIndex" type="System.Int32, mscorlib">
+    <value>15</value>
   </data>
   <data name="GridColumn_OutCost.Caption" xml:space="preserve">
     <value>出货成本</value>
@@ -566,7 +584,16 @@
     <value>True</value>
   </data>
   <data name="GridColumn_OutCost.VisibleIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+    <value>16</value>
+  </data>
+  <data name="GridColumn_InOrigionSumPrice.Caption" xml:space="preserve">
+    <value>入货原成本</value>
+  </data>
+  <data name="GridColumn_InOrigionSumPrice.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn_InOrigionSumPrice.VisibleIndex" type="System.Int32, mscorlib">
+    <value>17</value>
   </data>
   <data name="GridColumn_InCost.Caption" xml:space="preserve">
     <value>入货成本</value>
@@ -575,7 +602,16 @@
     <value>True</value>
   </data>
   <data name="GridColumn_InCost.VisibleIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+    <value>18</value>
+  </data>
+  <data name="GridColumn_EndOrigionSumPrice.Caption" xml:space="preserve">
+    <value>期末原成本</value>
+  </data>
+  <data name="GridColumn_EndOrigionSumPrice.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn_EndOrigionSumPrice.VisibleIndex" type="System.Int32, mscorlib">
+    <value>19</value>
   </data>
   <data name="GridColumn_EndCost.Caption" xml:space="preserve">
     <value>期末成本</value>
@@ -584,7 +620,7 @@
     <value>True</value>
   </data>
   <data name="GridColumn_EndCost.VisibleIndex" type="System.Int32, mscorlib">
-    <value>16</value>
+    <value>20</value>
   </data>
   <data name="GridColumn_UnitName.Caption" xml:space="preserve">
     <value>单位</value>
@@ -593,7 +629,7 @@
     <value>True</value>
   </data>
   <data name="GridColumn_UnitName.VisibleIndex" type="System.Int32, mscorlib">
-    <value>17</value>
+    <value>21</value>
   </data>
   <data name="GridColumn_Remarks.Caption" xml:space="preserve">
     <value>备注</value>
@@ -602,7 +638,7 @@
     <value>True</value>
   </data>
   <data name="GridColumn_Remarks.VisibleIndex" type="System.Int32, mscorlib">
-    <value>18</value>
+    <value>22</value>
   </data>
   <data name="GridColumn_RowHighlight.Caption" xml:space="preserve">
     <value>高亮显示</value>
@@ -1167,6 +1203,30 @@
   </data>
   <data name="&gt;&gt;SaveFileDialog_ExportExcel.Type" xml:space="preserve">
     <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_BeginOrigionSumPrice.Name" xml:space="preserve">
+    <value>GridColumn_BeginOrigionSumPrice</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_BeginOrigionSumPrice.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_OutOrigionSumPrice.Name" xml:space="preserve">
+    <value>GridColumn_OutOrigionSumPrice</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_OutOrigionSumPrice.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_InOrigionSumPrice.Name" xml:space="preserve">
+    <value>GridColumn_InOrigionSumPrice</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_InOrigionSumPrice.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_EndOrigionSumPrice.Name" xml:space="preserve">
+    <value>GridColumn_EndOrigionSumPrice</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_EndOrigionSumPrice.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>M_03_00201</value>
