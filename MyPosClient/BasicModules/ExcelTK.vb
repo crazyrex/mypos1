@@ -164,25 +164,26 @@ Namespace Utils
 
         End Sub
 
-        Public Sub InsertPicture(ByVal row As Integer, ByVal column As Integer, pictureImage As Image , ByVal offsetX As Integer, ByVal offsetY As Integer)
+        Public Sub InsertPicture( _
+            ByVal row As Integer, _
+            ByVal column As Integer, _
+            ByVal pictureImage As Image, _
+            ByVal offsetX As Integer, _
+            ByVal offsetY As Integer, _
+            Optional ByVal width As Integer = 0, _
+            Optional ByVal height As Integer = 0)
 
             Me._opRange = Me._openSheet.Range(Me._openExcel.Cells(row, column), Me._openExcel.Cells(row, column))
             Dim picturePath As String = WinTK.GetResourceFilePath(ResourceType.TempFile, "ExportPicturePic")
             If IO.File.Exists(picturePath) = True Then
                 IO.File.Delete(picturePath)
             End If
+            If width > 0 And height > 0 Then
+                pictureImage = CommTK.GetThumbnail(pictureImage, width, height)
+            End If
             pictureImage.Save(picturePath)
 
             Me._opRange.Select()
-
-            'Me._openSheet.Shapes.AddPicture( _
-            '    picturePath, _
-            '     Microsoft.Office.Core.MsoTriState.msoFalse, _
-            '    Microsoft.Office.Core.MsoTriState.msoTrue, _
-            '    CommTK.FInteger(Me._opRange.Left) + offsetX, _
-            '    CommTK.FInteger(Me._opRange.Top) + offsetY, _
-            '    CommTK.FDecimal(picImage.Width * 4 / 5), _
-            '    CommTK.FDecimal(picImage.Height * 4 / 5))
             Me._openSheet.Shapes.AddPicture( _
                 picturePath, _
                 Microsoft.Office.Core.MsoTriState.msoFalse, _
