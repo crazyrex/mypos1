@@ -378,8 +378,8 @@ Namespace Business
                 Dim chooseSaleTemplateList As New MyPosXAuto.FTs.FT_T_MP_SALE_TEMPLATE
 
                 Dim servResult As String = _
-                Me._service.ServInitDisplay( _
-                    chooseSaleTemplateList)
+                    Me._service.ServInitDisplay( _
+                        chooseSaleTemplateList)
 
                 If servResult.Length > 0 Then
                     Return servResult
