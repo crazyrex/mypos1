@@ -821,6 +821,7 @@ Namespace Business
                 Dim dtlCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_H_MP_TURNOVER_DTL(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
                 dtlCondition.Add(MyPosXAuto.Facade.AfXV.XV_H_MP_TURNOVER_DTLColumns.WARE_CODEColumn, "=", Me._manifest.ButtonEdit_WareCode.Text)
 
+                Dim priceWithoutPosSetDiscount As Decimal
                 Dim dtlRow = Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.FindRowByCondition(dtlCondition)
                 If IsNothing(dtlRow) = True Then
                     dtlRow = Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.NewXV_H_MP_TURNOVER_DTLRow()
@@ -837,7 +838,11 @@ Namespace Business
                     dtlRow.ATTRIBUTE3 = wareRowSEntity.ATTRIBUTE3
                     dtlRow.ATTRIBUTE4 = wareRowSEntity.ATTRIBUTE4
                     dtlRow.TURNOVER_BOOK_STATUS = MyPosXAuto.Decls.CIVALUE_TURNOVER_BOOK_STATUS_ON_HAND
-                    dtlRow.ORIGION_UNIT_PRICE = wareRowSEntity.UNIT_PRICE
+                    dtlRow.ORIGION_UNIT_PRICE = _
+                        MyPosXService.Facade.OpBizMaster.GetPosWarePrice( _
+                            wareRowSEntity.WARE_ID, _
+                            Utils.Decls.CURRENT_POS_ROW.POS_ID, _
+                            priceWithoutPosSetDiscount)
                 End If
 
 
@@ -847,9 +852,10 @@ Namespace Business
 
                 Dim saleTemplateWareRow = Me._manifest.SVFT_REF_SALE_TEMPLATE_WARE_LIST.FindRowByCondition(saleTemplateWareCondition)
                 If IsNothing(saleTemplateWareRow) = False Then
-                    dtlRow.UNIT_DISCOUNT = Utils.TK.CalcWareSaleUnitDiscount(dtlRow.UNIT_PRICE, saleTemplateWareRow)
+                    dtlRow.UNIT_DISCOUNT = Utils.TK.CalcWareSaleUnitDiscount(dtlRow.ORIGION_UNIT_PRICE, saleTemplateWareRow)
                 End If
 
+                dtlRow.UNIT_PRICE = dtlRow.ORIGION_UNIT_PRICE - dtlRow.UNIT_DISCOUNT
                 Me._manifest.SpinEdit_WareAmount.Value = dtlRow.WARE_AMOUNT
 
                 'Dim servResult As String = _
@@ -895,15 +901,30 @@ Namespace Business
 
             Try
 
-                Dim totalPrice = CommTK.FDecimal(Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.Compute("Sum(SUM_PRICE)", String.Empty))
+                Dim totalSumPrice As Decimal = 0
+                Dim totalSumDiscount As Decimal = 0
+
+                For Each bindingRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow In Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST
+
+                    bindingRow.UNIT_PRICE = bindingRow.ORIGION_UNIT_PRICE - bindingRow.UNIT_DISCOUNT
+
+                    bindingRow.SUM_COST = bindingRow.UNIT_PRICE * bindingRow.WARE_AMOUNT
+                    bindingRow.SUM_PRICE = bindingRow.UNIT_PRICE * bindingRow.WARE_AMOUNT
+                    bindingRow.SUM_DISCOUNT = bindingRow.SUM_DISCOUNT * bindingRow.WARE_AMOUNT
+                    bindingRow.ORIGION_SUM_PRICE = bindingRow.ORIGION_UNIT_PRICE * bindingRow.WARE_AMOUNT
+
+                    totalSumPrice += bindingRow.SUM_PRICE
+                    totalSumDiscount += bindingRow.SUM_DISCOUNT
+
+                Next
+
                 Me._manifest.Label_TotalPrice.Text = _
-                    CommTK.FString(totalPrice, _
+                    CommTK.FString(totalSumPrice, _
                     False, _
                     "#,##0.00")
 
-                Dim totalDiscount = CommTK.FDecimal(Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.Compute("Sum(SUM_DISCOUNT)", String.Empty)) + Me._manifest.CalcEdit_ExtraDiscount.Value
                 Me._manifest.Label_TotalDiscount.Text = _
-                    CommTK.FString(totalDiscount, _
+                    CommTK.FString(totalSumDiscount, _
                     False, _
                     "#,##0.00")
 
@@ -911,7 +932,7 @@ Namespace Business
                 Dim rmbToPointRate = CommTK.FDecimal(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_RMB_TO_POINTS_RATE))
 
                 Dim payable = _
-                    CommTK.FDecimal(totalPrice - Me._manifest.CalcEdit_ExtraDiscount.Value - Me._manifest.CalcEdit_UsePoint.Value * pointToRMBRate)
+                    CommTK.FDecimal(totalSumPrice - Me._manifest.CalcEdit_ExtraDiscount.Value - Me._manifest.CalcEdit_UsePoint.Value * pointToRMBRate)
 
                 Me._manifest.Label_Payable.Text = CommTK.FString(payable, False, "#,##0.00")
                 If rmbToPointRate > 0 AndAlso Me._manifest.Label_ClientID.Text.Length > 0 Then
