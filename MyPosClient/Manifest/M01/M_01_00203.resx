@@ -1143,6 +1143,30 @@
   <data name="&gt;&gt;Panel_Attribute4.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="CheckEdit_IsRetired.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 64</value>
+  </data>
+  <data name="CheckEdit1.Properties.Caption" xml:space="preserve">
+    <value>已过期</value>
+  </data>
+  <data name="CheckEdit_IsRetired.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 19</value>
+  </data>
+  <data name="CheckEdit_IsRetired.TabIndex" type="System.Int32, mscorlib">
+    <value>10004</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_IsRetired.Name" xml:space="preserve">
+    <value>CheckEdit_IsRetired</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_IsRetired.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_IsRetired.Parent" xml:space="preserve">
+    <value>Panel_Misc</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_IsRetired.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="CheckEdit_PractCodeRequired.Location" type="System.Drawing.Point, System.Drawing">
     <value>403, 5</value>
   </data>
@@ -1165,7 +1189,7 @@
     <value>Panel_Misc</value>
   </data>
   <data name="&gt;&gt;CheckEdit_PractCodeRequired.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="SpinEdit_GuaranteeDays.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
@@ -1189,7 +1213,7 @@
     <value>Panel_Misc</value>
   </data>
   <data name="&gt;&gt;SpinEdit_GuaranteeDays.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="MemoEdit_Remarks.Location" type="System.Drawing.Point, System.Drawing">
     <value>115, 35</value>
@@ -1210,7 +1234,7 @@
     <value>Panel_Misc</value>
   </data>
   <data name="&gt;&gt;MemoEdit_Remarks.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="Label15.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1240,7 +1264,7 @@
     <value>Panel_Misc</value>
   </data>
   <data name="&gt;&gt;Label15.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="TextEdit_UnitName.EditValue" xml:space="preserve">
     <value />
@@ -1264,7 +1288,7 @@
     <value>Panel_Misc</value>
   </data>
   <data name="&gt;&gt;TextEdit_UnitName.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="Label11.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1298,7 +1322,7 @@
     <value>Panel_Misc</value>
   </data>
   <data name="&gt;&gt;Label11.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="Label16.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1328,7 +1352,7 @@
     <value>Panel_Misc</value>
   </data>
   <data name="&gt;&gt;Label16.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="Panel_Misc.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 387</value>
