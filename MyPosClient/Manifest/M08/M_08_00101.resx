@@ -700,7 +700,7 @@
     <value>GroupControl1</value>
   </data>
   <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="Label22.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -733,7 +733,31 @@
     <value>GroupControl1</value>
   </data>
   <data name="&gt;&gt;Label22.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
+  </data>
+  <data name="SpinEdit_PurchasaeListCopies.EditValue" type="System.Decimal, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="SpinEdit_PurchasaeListCopies.Location" type="System.Drawing.Point, System.Drawing">
+    <value>491, 120</value>
+  </data>
+  <data name="SpinEdit_PurchasaeListCopies.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 20</value>
+  </data>
+  <data name="SpinEdit_PurchasaeListCopies.TabIndex" type="System.Int32, mscorlib">
+    <value>10009</value>
+  </data>
+  <data name="&gt;&gt;SpinEdit_PurchasaeListCopies.Name" xml:space="preserve">
+    <value>SpinEdit_PurchasaeListCopies</value>
+  </data>
+  <data name="&gt;&gt;SpinEdit_PurchasaeListCopies.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;SpinEdit_PurchasaeListCopies.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;SpinEdit_PurchasaeListCopies.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="SpinEdit_AutoWareCodeIDLenth.EditValue" type="System.Decimal, mscorlib">
     <value>3</value>
@@ -757,12 +781,12 @@
     <value>GroupControl1</value>
   </data>
   <data name="&gt;&gt;SpinEdit_AutoWareCodeIDLenth.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="CheckEdit_AutoWareCodeSurfix.Location" type="System.Drawing.Point, System.Drawing">
     <value>292, 86</value>
   </data>
-  <data name="CheckEdit_AutoWareCodeRemark.Properties.Caption" xml:space="preserve">
+  <data name="CheckEdit_AutoWareCodeSurfix.Properties.Caption" xml:space="preserve">
     <value>备注码段</value>
   </data>
   <data name="CheckEdit_AutoWareCodeSurfix.Size" type="System.Drawing.Size, System.Drawing">
@@ -781,7 +805,7 @@
     <value>GroupControl1</value>
   </data>
   <data name="&gt;&gt;CheckEdit_AutoWareCodeSurfix.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="CheckEdit_AutoWareCodeHyphon.Location" type="System.Drawing.Point, System.Drawing">
     <value>83, 86</value>
@@ -805,7 +829,7 @@
     <value>GroupControl1</value>
   </data>
   <data name="&gt;&gt;CheckEdit_AutoWareCodeHyphon.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="CheckEdit_AutoWareCodeSupplierCode.Location" type="System.Drawing.Point, System.Drawing">
     <value>109, 86</value>
@@ -829,7 +853,40 @@
     <value>GroupControl1</value>
   </data>
   <data name="&gt;&gt;CheckEdit_AutoWareCodeSupplierCode.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
+  </data>
+  <data name="Label23.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label23.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="Label23.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label23.Location" type="System.Drawing.Point, System.Drawing">
+    <value>406, 122</value>
+  </data>
+  <data name="Label23.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 15</value>
+  </data>
+  <data name="Label23.TabIndex" type="System.Int32, mscorlib">
+    <value>10004</value>
+  </data>
+  <data name="Label23.Text" xml:space="preserve">
+    <value>小票打印张数</value>
+  </data>
+  <data name="&gt;&gt;Label23.Name" xml:space="preserve">
+    <value>Label23</value>
+  </data>
+  <data name="&gt;&gt;Label23.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label23.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;Label23.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="CheckEdit_OperationLimitedHere.Location" type="System.Drawing.Point, System.Drawing">
     <value>273, 31</value>
@@ -856,7 +913,7 @@
     <value>GroupControl1</value>
   </data>
   <data name="&gt;&gt;CheckEdit_OperationLimitedHere.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="TextEdit_ServiceTel.Location" type="System.Drawing.Point, System.Drawing">
     <value>354, 150</value>
@@ -889,7 +946,7 @@
     <value>GroupControl1</value>
   </data>
   <data name="&gt;&gt;TextEdit_ServiceTel.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="TextEdit_CompanyAddress.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 176</value>
@@ -922,7 +979,7 @@
     <value>GroupControl1</value>
   </data>
   <data name="&gt;&gt;TextEdit_CompanyAddress.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="TextEdit_CompanyTitle.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 150</value>
@@ -955,7 +1012,7 @@
     <value>GroupControl1</value>
   </data>
   <data name="&gt;&gt;TextEdit_CompanyTitle.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="Label13.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -985,7 +1042,7 @@
     <value>GroupControl1</value>
   </data>
   <data name="&gt;&gt;Label13.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="Label14.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1015,7 +1072,7 @@
     <value>GroupControl1</value>
   </data>
   <data name="&gt;&gt;Label14.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="Label12.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1046,7 +1103,7 @@
     <value>GroupControl1</value>
   </data>
   <data name="&gt;&gt;Label12.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="CheckEdit_KeepOrigionWareCodeToRemark.Location" type="System.Drawing.Point, System.Drawing">
     <value>222, 60</value>
@@ -1073,7 +1130,7 @@
     <value>GroupControl1</value>
   </data>
   <data name="&gt;&gt;CheckEdit_KeepOrigionWareCodeToRemark.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
   </data>
   <data name="SimpleButton_SaveMobileWareList.Location" type="System.Drawing.Point, System.Drawing">
     <value>215, 117</value>
@@ -1097,7 +1154,7 @@
     <value>GroupControl1</value>
   </data>
   <data name="&gt;&gt;SimpleButton_SaveMobileWareList.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>16</value>
   </data>
   <data name="SimpleButton_SaveMobilePosLocationList.Location" type="System.Drawing.Point, System.Drawing">
     <value>20, 117</value>
@@ -1121,7 +1178,7 @@
     <value>GroupControl1</value>
   </data>
   <data name="&gt;&gt;SimpleButton_SaveMobilePosLocationList.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>17</value>
   </data>
   <data name="SimpleButton_AutomateWareCodes.Location" type="System.Drawing.Point, System.Drawing">
     <value>20, 56</value>
@@ -1145,7 +1202,7 @@
     <value>GroupControl1</value>
   </data>
   <data name="&gt;&gt;SimpleButton_AutomateWareCodes.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>18</value>
   </data>
   <data name="LookUpEdit_CurrentPOS.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 29</value>
@@ -1182,7 +1239,7 @@
     <value>GroupControl1</value>
   </data>
   <data name="&gt;&gt;LookUpEdit_CurrentPOS.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>19</value>
   </data>
   <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1209,7 +1266,7 @@
     <value>GroupControl1</value>
   </data>
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>20</value>
   </data>
   <data name="GroupControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
