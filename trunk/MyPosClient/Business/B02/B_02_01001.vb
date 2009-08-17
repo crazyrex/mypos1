@@ -812,16 +812,21 @@ Namespace Business
 
                 Me._manifest.ButtonEdit_WareCode.Text = wareRowSEntity.WARE_CODE
                 Me._manifest.Label_WareID.Text = wareRowSEntity.WARE_ID
-                'Me._manifest.Label_WareInfo.Text = _
-                '    MyPosXService.Facade.OpBizMaster.GetWareInfoString( _
-                '        wareRowSEntity.WARE_ID, _
-                '        SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_CURRENT_POS_ID), _
-                '        False)
+
+                Dim priceWithoutPosSetDiscount As Decimal
+                Dim origionPrice = MyPosXService.Facade.OpBizMaster.GetPosWarePrice( _
+                    wareRowSEntity.WARE_ID, _
+                    Utils.Decls.CURRENT_POS_ROW.POS_ID, _
+                    priceWithoutPosSetDiscount)
+
+                If origionPrice <= 0 Then
+                    Me._manifest.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0006)
+                    Return String.Empty
+                End If
 
                 Dim dtlCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_H_MP_TURNOVER_DTL(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
                 dtlCondition.Add(MyPosXAuto.Facade.AfXV.XV_H_MP_TURNOVER_DTLColumns.WARE_CODEColumn, "=", Me._manifest.ButtonEdit_WareCode.Text)
 
-                Dim priceWithoutPosSetDiscount As Decimal
                 Dim dtlRow = Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.FindRowByCondition(dtlCondition)
                 If IsNothing(dtlRow) = True Then
                     dtlRow = Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.NewXV_H_MP_TURNOVER_DTLRow()
@@ -838,11 +843,7 @@ Namespace Business
                     dtlRow.ATTRIBUTE3 = wareRowSEntity.ATTRIBUTE3
                     dtlRow.ATTRIBUTE4 = wareRowSEntity.ATTRIBUTE4
                     dtlRow.TURNOVER_BOOK_STATUS = MyPosXAuto.Decls.CIVALUE_TURNOVER_BOOK_STATUS_ON_HAND
-                    dtlRow.ORIGION_UNIT_PRICE = _
-                        MyPosXService.Facade.OpBizMaster.GetPosWarePrice( _
-                            wareRowSEntity.WARE_ID, _
-                            Utils.Decls.CURRENT_POS_ROW.POS_ID, _
-                            priceWithoutPosSetDiscount)
+                    dtlRow.ORIGION_UNIT_PRICE = origionPrice
                 End If
 
 
