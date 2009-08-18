@@ -1176,7 +1176,15 @@ Namespace Business
                 report.XrLabel_Payable.Text = Me._manifest.Label_Payable.Text
 
                 report.CreateDataBindings()
-                report.Print()
+                Dim copies As Integer = CommTK.FInteger(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_PURCHASE_LIST_COPIES))
+                If copies <= 0 Then
+                    copies = 1
+                End If
+
+                For counter As Integer = 1 To copies
+                    report.Print()
+                Next
+
 
                 'Dim servResult As String = _
                 '    Me._service.ServPrintPurchaseList()
