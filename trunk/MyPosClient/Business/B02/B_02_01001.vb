@@ -813,11 +813,11 @@ Namespace Business
                 Me._manifest.ButtonEdit_WareCode.Text = wareRowSEntity.WARE_CODE
                 Me._manifest.Label_WareID.Text = wareRowSEntity.WARE_ID
 
-                Dim priceWithoutPosSetDiscount As Decimal
+                Dim priceNoDiscount As Decimal
                 Dim origionPrice = MyPosXService.Facade.OpBizMaster.GetPosWarePrice( _
                     wareRowSEntity.WARE_ID, _
                     Utils.Decls.CURRENT_POS_ROW.POS_ID, _
-                    priceWithoutPosSetDiscount)
+                    priceNoDiscount)
 
                 If origionPrice <= 0 Then
                     Me._manifest.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0006)
@@ -843,7 +843,9 @@ Namespace Business
                     dtlRow.ATTRIBUTE3 = wareRowSEntity.ATTRIBUTE3
                     dtlRow.ATTRIBUTE4 = wareRowSEntity.ATTRIBUTE4
                     dtlRow.TURNOVER_BOOK_STATUS = MyPosXAuto.Decls.CIVALUE_TURNOVER_BOOK_STATUS_ON_HAND
-                    dtlRow.ORIGION_UNIT_PRICE = origionPrice
+                    dtlRow.ORIGION_UNIT_PRICE = priceNoDiscount
+                    dtlRow.UNIT_PRICE = origionPrice
+
                 End If
 
 

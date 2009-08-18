@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="DefaultLookAndFeel_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>294, 0</value>
+    <value>278, 0</value>
   </metadata>
   <metadata name="Timer_Surveillant.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>141, 0</value>
+    <value>134, 0</value>
   </metadata>
   <metadata name="ToolStrip_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
@@ -146,19 +146,19 @@
     <value>Magenta</value>
   </data>
   <data name="ToolStripButton_New.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 22</value>
+    <value>35, 22</value>
   </data>
   <data name="ToolStripButton_New.Text" xml:space="preserve">
     <value>新单</value>
   </data>
   <data name="ToolStripButton_Add.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 22</value>
+    <value>35, 22</value>
   </data>
   <data name="ToolStripButton_Add.Text" xml:space="preserve">
     <value>添加</value>
   </data>
   <data name="ToolStripButton_Save.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 22</value>
+    <value>35, 22</value>
   </data>
   <data name="ToolStripButton_Save.Text" xml:space="preserve">
     <value>保存</value>
@@ -182,13 +182,13 @@
     <value>Magenta</value>
   </data>
   <data name="ToolStripButton_Revise.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 22</value>
+    <value>35, 22</value>
   </data>
   <data name="ToolStripButton_Revise.Text" xml:space="preserve">
     <value>修改</value>
   </data>
   <data name="ToolStripButton_Remove.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 22</value>
+    <value>35, 22</value>
   </data>
   <data name="ToolStripButton_Remove.Text" xml:space="preserve">
     <value>去除</value>
@@ -212,7 +212,7 @@
     <value>Magenta</value>
   </data>
   <data name="ToolStripButton_ShareDtl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 22</value>
+    <value>59, 22</value>
   </data>
   <data name="ToolStripButton_ShareDtl.Text" xml:space="preserve">
     <value>提成设置</value>
@@ -236,7 +236,7 @@
     <value>Magenta</value>
   </data>
   <data name="ToolStripButton_PrintBatchLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 22</value>
+    <value>83, 22</value>
   </data>
   <data name="ToolStripButton_PrintBatchLabel.Text" xml:space="preserve">
     <value>打印批号标签</value>
@@ -264,7 +264,7 @@
     <value>Magenta</value>
   </data>
   <data name="ToolStripButton_PrintPurchaseLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 22</value>
+    <value>59, 22</value>
   </data>
   <data name="ToolStripButton_PrintPurchaseLabel.Text" xml:space="preserve">
     <value>打印小票</value>
@@ -294,7 +294,7 @@
     <value>Magenta</value>
   </data>
   <data name="ToolStripButton_PayLog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 22</value>
+    <value>59, 22</value>
   </data>
   <data name="ToolStripButton_PayLog.Text" xml:space="preserve">
     <value>支付记录</value>
@@ -318,7 +318,7 @@
     <value>Magenta</value>
   </data>
   <data name="ToolStripButton_ConsignLog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 22</value>
+    <value>59, 22</value>
   </data>
   <data name="ToolStripButton_ConsignLog.Text" xml:space="preserve">
     <value>到货确认</value>
@@ -342,7 +342,7 @@
     <value>Magenta</value>
   </data>
   <data name="ToolStripButton_ImportFromMobile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 22</value>
+    <value>59, 22</value>
   </data>
   <data name="ToolStripButton_ImportFromMobile.Text" xml:space="preserve">
     <value>导入手持</value>
@@ -366,13 +366,13 @@
     <value>Magenta</value>
   </data>
   <data name="ToolStripButton_ExportExcel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 22</value>
+    <value>61, 22</value>
   </data>
   <data name="ToolStripButton_ExportExcel.Text" xml:space="preserve">
     <value>导出Excel</value>
   </data>
   <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 22</value>
+    <value>35, 22</value>
   </data>
   <data name="ToolStripButton_Close.Text" xml:space="preserve">
     <value>关闭</value>
@@ -1844,7 +1844,7 @@
     <value>0</value>
   </data>
   <metadata name="SaveFileDialog_ExportExcel.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>502, 0</value>
+    <value>473, 0</value>
   </metadata>
   <data name="SaveFileDialog_ExportExcel.Filter" xml:space="preserve">
     <value>Excel文档|*.xls</value>
@@ -2071,6 +2071,12 @@
   <data name="&gt;&gt;GridColumn_UnitCost.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
+  <data name="&gt;&gt;GridColumn_OrigionalPrice.Name" xml:space="preserve">
+    <value>GridColumn_OrigionalPrice</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_OrigionalPrice.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
   <data name="&gt;&gt;GridColumn_Remarks.Name" xml:space="preserve">
     <value>GridColumn_Remarks</value>
   </data>
@@ -2094,12 +2100,6 @@
   </data>
   <data name="&gt;&gt;SaveFileDialog_ExportExcel.Type" xml:space="preserve">
     <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GridColumn_OrigionalPrice.Name" xml:space="preserve">
-    <value>GridColumn_OrigionalPrice</value>
-  </data>
-  <data name="&gt;&gt;GridColumn_OrigionalPrice.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>M_02_00102</value>
