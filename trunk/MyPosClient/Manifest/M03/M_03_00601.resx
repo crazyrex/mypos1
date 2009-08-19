@@ -592,6 +592,15 @@
   <data name="GridColumn_UnitDiscount.VisibleIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
+  <data name="GridColumn_UnitDiscountPercent.Caption" xml:space="preserve">
+    <value>折扣比例</value>
+  </data>
+  <data name="GridColumn_UnitDiscountPercent.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn_UnitDiscountPercent.VisibleIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
   <data name="GridColumn_ExtraDiscount.Caption" xml:space="preserve">
     <value>额外折扣</value>
   </data>
@@ -599,7 +608,7 @@
     <value>True</value>
   </data>
   <data name="GridColumn_ExtraDiscount.VisibleIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="GridColumn_TotalSumCost.Caption" xml:space="preserve">
     <value>总成本</value>
@@ -611,7 +620,7 @@
     <value>True</value>
   </data>
   <data name="GridColumn_TotalSumCost.VisibleIndex" type="System.Int32, mscorlib">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="GridColumn_UnitCost.Caption" xml:space="preserve">
     <value>成本</value>
@@ -623,7 +632,7 @@
     <value>True</value>
   </data>
   <data name="GridColumn_UnitCost.VisibleIndex" type="System.Int32, mscorlib">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="GridColumn_GrossProfit.Caption" xml:space="preserve">
     <value>毛利</value>
@@ -635,7 +644,7 @@
     <value>True</value>
   </data>
   <data name="GridColumn_GrossProfit.VisibleIndex" type="System.Int32, mscorlib">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="GridColumn_DeliveryCharge.Caption" xml:space="preserve">
     <value>运费</value>
@@ -647,7 +656,7 @@
     <value>True</value>
   </data>
   <data name="GridColumn_DeliveryCharge.VisibleIndex" type="System.Int32, mscorlib">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="GridColumn_Total.Caption" xml:space="preserve">
     <value>收款总额</value>
@@ -656,7 +665,7 @@
     <value>True</value>
   </data>
   <data name="GridColumn_Total.VisibleIndex" type="System.Int32, mscorlib">
-    <value>20</value>
+    <value>21</value>
   </data>
   <data name="GridColumn_CC.Caption" xml:space="preserve">
     <value>拉卡</value>
@@ -668,7 +677,7 @@
     <value>True</value>
   </data>
   <data name="GridColumn_CC.VisibleIndex" type="System.Int32, mscorlib">
-    <value>21</value>
+    <value>22</value>
   </data>
   <data name="GridColumn_CashAmount.Caption" xml:space="preserve">
     <value>现金</value>
@@ -680,7 +689,7 @@
     <value>True</value>
   </data>
   <data name="GridColumn_CashAmount.VisibleIndex" type="System.Int32, mscorlib">
-    <value>22</value>
+    <value>23</value>
   </data>
   <data name="GridColumn_TT.Caption" xml:space="preserve">
     <value>电汇</value>
@@ -692,7 +701,7 @@
     <value>True</value>
   </data>
   <data name="GridColumn_TT.VisibleIndex" type="System.Int32, mscorlib">
-    <value>23</value>
+    <value>24</value>
   </data>
   <data name="GridColumn_OtherAmount.Caption" xml:space="preserve">
     <value>其他</value>
@@ -704,7 +713,7 @@
     <value>True</value>
   </data>
   <data name="GridColumn_OtherAmount.VisibleIndex" type="System.Int32, mscorlib">
-    <value>24</value>
+    <value>25</value>
   </data>
   <data name="GridColumn_Remaining.Caption" xml:space="preserve">
     <value>余额</value>
@@ -716,7 +725,7 @@
     <value>True</value>
   </data>
   <data name="GridColumn_Remaining.VisibleIndex" type="System.Int32, mscorlib">
-    <value>25</value>
+    <value>26</value>
   </data>
   <data name="GridColumn_Invoice.Caption" xml:space="preserve">
     <value>发票</value>
@@ -725,7 +734,7 @@
     <value>True</value>
   </data>
   <data name="GridColumn_Invoice.VisibleIndex" type="System.Int32, mscorlib">
-    <value>26</value>
+    <value>27</value>
   </data>
   <data name="GridColumn_Sales.Caption" xml:space="preserve">
     <value>销售</value>
@@ -734,7 +743,7 @@
     <value>True</value>
   </data>
   <data name="GridColumn_Sales.VisibleIndex" type="System.Int32, mscorlib">
-    <value>27</value>
+    <value>28</value>
   </data>
   <data name="GridColumn_Commission.Caption" xml:space="preserve">
     <value>提成</value>
@@ -746,7 +755,7 @@
     <value>True</value>
   </data>
   <data name="GridColumn_Commission.VisibleIndex" type="System.Int32, mscorlib">
-    <value>28</value>
+    <value>29</value>
   </data>
   <data name="GridColumn_UnitName.Caption" xml:space="preserve">
     <value>单位</value>
@@ -755,7 +764,7 @@
     <value>True</value>
   </data>
   <data name="GridColumn_UnitName.VisibleIndex" type="System.Int32, mscorlib">
-    <value>29</value>
+    <value>30</value>
   </data>
   <data name="GridColumn_Remarks.Caption" xml:space="preserve">
     <value>备注</value>
@@ -764,7 +773,7 @@
     <value>True</value>
   </data>
   <data name="GridColumn_Remarks.VisibleIndex" type="System.Int32, mscorlib">
-    <value>30</value>
+    <value>31</value>
   </data>
   <data name="GridColumn_RowHighlight.Caption" xml:space="preserve">
     <value>高亮显示</value>
@@ -1059,6 +1068,12 @@
   </data>
   <data name="&gt;&gt;SaveFileDialog_ExportToExcel.Type" xml:space="preserve">
     <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_UnitDiscountPercent.Name" xml:space="preserve">
+    <value>GridColumn_UnitDiscountPercent</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_UnitDiscountPercent.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>M_03_00601</value>
