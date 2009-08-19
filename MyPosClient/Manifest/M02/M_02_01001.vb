@@ -420,15 +420,14 @@ Namespace Manifest
 
                 Case Business.B_02_01001.Affairs.AddWare
                     Me.ButtonEdit_WareCode.SelectAll()
-                    Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.UpdateSummary, False)
                     Me.GridView_TurnoverDtl.BestFitColumns()
                     Me.DoPrivateSelectRowByWareCode()
                     Me.DoPrivateUpdateCacheStatus()
+                    Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.UpdateSummary, False)
                     Me.IsSaved = False
 
                 Case Business.B_02_01001.Affairs.SaveInfo
 
-                    Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.PrintPurchaseList, False)
                     Me.ShowStatusMessage(StatusMessageIcon.Okay, MyPosXService.Decls.MSG_STATUS_0007, Me.SV_PRINTING_TURNOVER_CODE)
                     Me.SV_RETURN_RELIEF_TURNOVER_ROW_SE.Reset()
                     Me.DoPrivateUpdateCacheStatus()
@@ -841,7 +840,7 @@ Namespace Manifest
                 Me.CalcEdit_Payment.Enabled = False
                 Me.CalcEdit_UsePoint.Enabled = False
                 Me.CheckEdit_IsClient.Enabled = False
-                Me.Panel_DetailDiscount.Visible = True
+                Me.Panel_DetailDiscount.Visible = False
             Else
                 Me.SetSubTitle("零售操作")
                 Me.CheckEdit_IsClient.Enabled = True
@@ -853,7 +852,7 @@ Namespace Manifest
                 Me.CalcEdit_Payment.Enabled = True
                 Me.CalcEdit_UsePoint.Enabled = True
                 Me.CheckEdit_IsClient.Enabled = True
-                Me.Panel_DetailDiscount.Visible = False
+                Me.Panel_DetailDiscount.Visible = True
             End If
 
         End Sub

@@ -590,6 +590,8 @@ Namespace Business
                         False, _
                         SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_CURRENT_POS_ID), _
                          MyPosXAuto.Decls.CIVALUE_TURNOVER_STYLE_SOLD)
+
+                    Me._manifest.InvokeBizRequest(Affairs.PrintPurchaseList, False)
                     Dim turnoverID = Guid.NewGuid.ToString
                     MyPosXAuto.Facade.AfBizTurnover.CreateH_MP_TURNOVERInfo( _
                         TURNOVER_ID:=turnoverID, _
