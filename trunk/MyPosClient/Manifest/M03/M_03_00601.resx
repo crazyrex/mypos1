@@ -616,7 +616,7 @@
   <data name="GridColumn_UnitCost.Caption" xml:space="preserve">
     <value>成本</value>
   </data>
-  <data name="GridColumn_Unitcost.SummaryItem.DisplayFormat" xml:space="preserve">
+  <data name="GridColumn_UnitCost.SummaryItem.DisplayFormat" xml:space="preserve">
     <value>{0:#,##0.00}</value>
   </data>
   <data name="GridColumn_UnitCost.Visible" type="System.Boolean, mscorlib">
