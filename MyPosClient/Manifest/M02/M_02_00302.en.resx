@@ -122,7 +122,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 22</value>
+    <value>40, 22</value>
   </data>
   <data name="ToolStripButton_Close.Text" xml:space="preserve">
     <value>Close</value>
@@ -146,7 +146,7 @@
     <value>Barcode</value>
   </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 23</value>
+    <value>47, 23</value>
   </data>
   <data name="Label1.Text" xml:space="preserve">
     <value>Qty.</value>
@@ -154,8 +154,12 @@
   <data name="CalcEdit_WareAmount.Location" type="System.Drawing.Point, System.Drawing">
     <value>217, 84</value>
   </data>
+  <assembly alias="DevExpress.Utils.v8.1" name="DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
+  <data name="CalcEdit_WareAmount.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
+  </data>
   <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>183, 23</value>
+    <value>182, 23</value>
   </data>
   <data name="Label2.Text" xml:space="preserve">
     <value>Book inventory Qty.</value>
@@ -179,13 +183,16 @@
     <value>6, 37</value>
   </data>
   <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 23</value>
+    <value>95, 23</value>
   </data>
   <data name="Label5.Text" xml:space="preserve">
     <value>Total cost</value>
   </data>
   <data name="CalcEdit_UnitCost.Location" type="System.Drawing.Point, System.Drawing">
     <value>110, 3</value>
+  </data>
+  <data name="CalcEdit_UnitCost.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
   </data>
   <data name="Panel_FinancialPart.Location" type="System.Drawing.Point, System.Drawing">
     <value>367, 85</value>
@@ -195,6 +202,9 @@
   </data>
   <data name="LookUpEdit_TurnoverBookStatus.Location" type="System.Drawing.Point, System.Drawing">
     <value>214, 11</value>
+  </data>
+  <data name="LookUpEdit_TurnoverBookStatus.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
   </data>
   <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
     <value>27, 13</value>
