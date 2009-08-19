@@ -886,6 +886,7 @@ Namespace Manifest
                 bindingRow.SUM_PRICE = CommTK.FDecimal(bindingRow.UNIT_PRICE * bindingRow.WARE_AMOUNT)
                 bindingRow.SUM_DISCOUNT = CommTK.FDecimal(bindingRow.UNIT_DISCOUNT * bindingRow.WARE_AMOUNT)
             Next
+            Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.UpdateSummary, False)
 
         End Sub
 

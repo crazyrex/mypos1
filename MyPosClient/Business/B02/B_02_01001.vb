@@ -913,7 +913,7 @@ Namespace Business
 
                     bindingRow.UNIT_PRICE = bindingRow.ORIGION_UNIT_PRICE - bindingRow.UNIT_DISCOUNT
 
-                    bindingRow.SUM_COST = bindingRow.UNIT_PRICE * bindingRow.WARE_AMOUNT
+                    bindingRow.SUM_COST = bindingRow.UNIT_COST * bindingRow.WARE_AMOUNT
                     bindingRow.SUM_PRICE = bindingRow.UNIT_PRICE * bindingRow.WARE_AMOUNT
                     bindingRow.SUM_DISCOUNT = bindingRow.SUM_DISCOUNT * bindingRow.WARE_AMOUNT
                     bindingRow.ORIGION_SUM_PRICE = bindingRow.ORIGION_UNIT_PRICE * bindingRow.WARE_AMOUNT
