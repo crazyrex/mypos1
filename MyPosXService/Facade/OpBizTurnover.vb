@@ -764,7 +764,7 @@ Namespace Facade
                     Guid.NewGuid.ToString, _
                     usingPointsRow.TURNOVER_TIME, _
                     CommTK.FDecimal(usingPointsRow.POINT_TO_RMB_RATE * usingPointsRow.POINT_USE), _
-                    usingPointsRow.POINT_GAIN, _
+                    usingPointsRow.POINT_USE, _
                     MyPosXAuto.Decls.CIVALUE_POINT_IO_TYPE_OUT_CONSUME, _
                     String.Empty, _
                     usingPointsRow.TURNOVER_ID)

@@ -998,7 +998,7 @@ Namespace Business
                     Return String.Empty
                 End If
 
-                Me._manifest.ButtonEdit_WareCode.Text = clientRow.CLIENT_CODE
+                Me._manifest.TextEdit_ClientCode.Text = clientRow.CLIENT_CODE
                 Me._manifest.Label_ClientID.Text = clientRow.CLIENT_ID
                 Me._manifest.Label_ClientName.Text = clientRow.CLIENT_NAME
                 Me._manifest.Label_HoldingPoint.Text = CommTK.FString(clientRow.CURRENT_POINT, False, "#,##0.00")

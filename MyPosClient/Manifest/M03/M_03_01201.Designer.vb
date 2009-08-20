@@ -145,44 +145,44 @@
             'ToolStripButton_Choose
             '
             Me.ToolStripButton_Choose.Name = "ToolStripButton_Choose"
-            Me.ToolStripButton_Choose.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Choose.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Choose.Text = "选择"
             Me.ToolStripButton_Choose.Visible = False
             '
             'ToolStripButton_Create
             '
             Me.ToolStripButton_Create.Name = "ToolStripButton_Create"
-            Me.ToolStripButton_Create.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Create.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Create.Text = "新建"
             '
             'ToolStripButton_ShowFilter
             '
             Me.ToolStripButton_ShowFilter.Name = "ToolStripButton_ShowFilter"
-            Me.ToolStripButton_ShowFilter.Size = New System.Drawing.Size(57, 22)
+            Me.ToolStripButton_ShowFilter.Size = New System.Drawing.Size(59, 22)
             Me.ToolStripButton_ShowFilter.Text = "筛选条件"
             '
             'ToolStripButton_Delete
             '
             Me.ToolStripButton_Delete.Name = "ToolStripButton_Delete"
-            Me.ToolStripButton_Delete.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Delete.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Delete.Text = "删除"
             '
             'ToolStripButton_Refresh
             '
             Me.ToolStripButton_Refresh.Name = "ToolStripButton_Refresh"
-            Me.ToolStripButton_Refresh.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Refresh.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Refresh.Text = "刷新"
             '
             'ToolStripButton_View
             '
             Me.ToolStripButton_View.Name = "ToolStripButton_View"
-            Me.ToolStripButton_View.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_View.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_View.Text = "查看"
             '
             'ToolStripButton_Close
             '
             Me.ToolStripButton_Close.Name = "ToolStripButton_Close"
-            Me.ToolStripButton_Close.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Close.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Close.Text = "关闭"
             '
             'PanelControl1
@@ -271,9 +271,9 @@
             Me.Label_ClientName.Font = New System.Drawing.Font("Arial", 9.0!)
             Me.Label_ClientName.ForeColor = System.Drawing.Color.Black
             Me.Label_ClientName.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.Label_ClientName.Location = New System.Drawing.Point(229, 41)
+            Me.Label_ClientName.Location = New System.Drawing.Point(230, 37)
             Me.Label_ClientName.Name = "Label_ClientName"
-            Me.Label_ClientName.Size = New System.Drawing.Size(129, 15)
+            Me.Label_ClientName.Size = New System.Drawing.Size(129, 25)
             Me.Label_ClientName.TabIndex = 10002
             CTag3.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag3.CalculatorRequired = True
@@ -305,7 +305,7 @@
             Me.ButtonEdit_ClientCode.Location = New System.Drawing.Point(75, 38)
             Me.ButtonEdit_ClientCode.Name = "ButtonEdit_ClientCode"
             Me.ButtonEdit_ClientCode.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
-            Me.ButtonEdit_ClientCode.Size = New System.Drawing.Size(149, 21)
+            Me.ButtonEdit_ClientCode.Size = New System.Drawing.Size(149, 20)
             Me.ButtonEdit_ClientCode.TabIndex = 10001
             CTag4.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag4.CalculatorRequired = True
@@ -340,7 +340,7 @@
             Me.DateEdit_End.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
             Me.DateEdit_End.Properties.NullDate = New Date(1753, 1, 1, 12, 0, 0, 0)
             Me.DateEdit_End.Properties.VistaTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
-            Me.DateEdit_End.Size = New System.Drawing.Size(149, 21)
+            Me.DateEdit_End.Size = New System.Drawing.Size(149, 20)
             Me.DateEdit_End.TabIndex = 10000
             CTag5.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag5.CalculatorRequired = True
@@ -375,7 +375,7 @@
             Me.DateEdit_Begin.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
             Me.DateEdit_Begin.Properties.NullDate = New Date(1753, 1, 1, 12, 0, 0, 0)
             Me.DateEdit_Begin.Properties.VistaTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
-            Me.DateEdit_Begin.Size = New System.Drawing.Size(149, 21)
+            Me.DateEdit_Begin.Size = New System.Drawing.Size(149, 20)
             Me.DateEdit_Begin.TabIndex = 10000
             CTag6.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag6.CalculatorRequired = True
