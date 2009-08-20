@@ -120,7 +120,7 @@ Namespace Manifest
             '指定需要备份值的控件
             'Me.SetValueBackupControl(Me.ControlToBeBackup)
 
-                Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_ShowFilter, AddressOf Me.TbActionShowFilter)
+            Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Refresh, AddressOf Me.TbActionRefresh)
                 Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Close, AddressOf Me.TbActionClose)
                 'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0001, AddressOf Me.TbActionUtld0001)
                 'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0002, AddressOf Me.TbActionUtld0002)
@@ -299,7 +299,7 @@ Namespace Manifest
         Public Overrides Sub UpdateDisplay()
 
             'Me._bizAgent.DoRequest(Business.B_0X_00XXX.Affairs.LoadInfo, False)
-            'Me._bizAgent.DoRequest(Business.B_0X_00XXX.Affairs.LoadList, False)
+            Me._bizAgent.DoRequest(Business.B_03_01401.Affairs.LoadList, False)
 
         End Sub
 
@@ -423,9 +423,9 @@ Namespace Manifest
 
 
 
-        Private Sub TbActionShowFilter()
+        Private Sub TbActionRefresh()
 
-            'Me.PanelControl_Filter.Visible = Me.ToolStripButton_ShowFilter.Pushed
+            Me.UpdateDisplay()
 
         End Sub
 

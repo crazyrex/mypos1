@@ -516,6 +516,15 @@ Namespace Business
 
             Try
 
+                Dim posWareAmountOfUnitCostOrigionpriceConditions As New MyPosXAuto.Facade.AfMV.ConditionOfMV_MP_POS_WARE_AMOUNT_OF_UNIT_COST_ORIGION_PRICE(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_Or)
+                posWareAmountOfUnitCostOrigionpriceConditions.Add(MyPosXAuto.Facade.AfMV.MV_MP_POS_WARE_AMOUNT_OF_UNIT_COST_ORIGION_PRICEColumns.POS_IDColumn, "=", Me._manifest.LookUpEdit_Pos.EditValue)
+                posWareAmountOfUnitCostOrigionpriceConditions.Add(MyPosXAuto.Facade.AfMV.MV_MP_POS_WARE_AMOUNT_OF_UNIT_COST_ORIGION_PRICEColumns.WARE_IDColumn, "=", Me._manifest.Label_WareID.Text)
+
+                Me._manifest.SVFT_BINDING_LIST.Clear()
+
+                MyPosXAuto.Facade.AfMV.FillFT_MV_MP_POS_WARE_AMOUNT_OF_UNIT_COST_ORIGION_PRICE(posWareAmountOfUnitCostOrigionpriceConditions, Me._manifest.SVFT_BINDING_LIST)
+
+                Me._manifest.GridControl_PosWareAmountOfUnitCostOrigionPrice.DataSource = Me._manifest.SVFT_BINDING_LIST
 
                 'Dim servResult As String = _                                       
                 '    Me._service.ServLoadList()                                     
