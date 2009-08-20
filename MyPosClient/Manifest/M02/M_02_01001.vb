@@ -546,10 +546,13 @@ Namespace Manifest
                     CommTK.FDecimal(Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_AMOUNT * Me.SVFR_BINDING_TURNOVER_DTL_ROW.UNIT_COST)
 
                 Me.DoPrivateRegularSelectingRowWareAmount()
+
             End If
 
             Me.ButtonEdit_WareCode.SelectAll()
             Me.ButtonEdit_WareCode.Select()
+            Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.UpdateSummary, False)
+
         End Sub
 
         Private Sub CalcEdit_Payment_EditValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CalcEdit_Payment.EditValueChanged
@@ -1103,11 +1106,8 @@ Namespace Manifest
 
         End Sub
 
+        Private Sub CalcEdit_DiscountAmount_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles CalcEdit_DiscountAmount.EditValueChanged
 
-        Private Sub CalcEdit_DiscountAmount_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles CalcEdit_DiscountAmount.KeyDown
-            If e.KeyCode <> Keys.Enter Then
-                Return
-            End If
 
             If Me.CalcEdit_DiscountAmount.Value < 0 Then
                 Me.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0021)
@@ -1130,6 +1130,8 @@ Namespace Manifest
 
             Me.DoPrivateUpdateListPrice()
         End Sub
+
+
 
         Private Sub RadioGroup_UnitDiscountType_EditValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioGroup_UnitDiscountType.EditValueChanged
             Me.CalcEdit_DiscountAmount.SelectAll()
