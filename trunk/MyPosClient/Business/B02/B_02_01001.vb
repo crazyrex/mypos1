@@ -933,8 +933,8 @@ Namespace Business
                     False, _
                     "#,##0.00")
 
-                Dim pointToRMBRate = CommTK.FDecimal(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_POINTS_TO_RMB_RATE))
-                Dim rmbToPointRate = CommTK.FDecimal(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_RMB_TO_POINTS_RATE))
+                Dim pointToRMBRate = CommTK.FDecimal(SysInfo.ReadLocalSysInfo(MyPosXService.Decls.SVN_POINTS_TO_RMB_RATE))
+                Dim rmbToPointRate = CommTK.FDecimal(SysInfo.ReadLocalSysInfo(MyPosXService.Decls.SVN_RMB_TO_POINTS_RATE))
 
                 Dim payable = _
                     CommTK.FDecimal(totalSumPrice - Me._manifest.CalcEdit_ExtraDiscount.Value - Me._manifest.CalcEdit_UsePoint.Value * pointToRMBRate)

@@ -609,6 +609,7 @@ Namespace Manifest
                 WinTK.GetResourceFilePath( _
                     ResourceType.Data, _
                     Utils.Decls.CACHE_DATA_FILE_TURNOVER_DETAIL))
+
             Me.DoPrivateUpdateCacheStatus()
 
         End Sub
