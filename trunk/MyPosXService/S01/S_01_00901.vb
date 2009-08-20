@@ -95,41 +95,41 @@ Public Class S_01_00901
     'End Function
 
 
-    Public Function ServInitDisplay( _
-        ByRef refSaleTemplate As MyPosXAuto.FTs.FT_T_MP_SALE_TEMPLATE _
-        ) As String
+    'Public Function ServInitDisplay( _
+    '    ByRef refSaleTemplate As MyPosXAuto.FTs.FT_T_MP_SALE_TEMPLATE _
+    '    ) As String
 
-        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+    '    If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
 
-        Try
-
-
-            MyPosXAuto.Facade.AfBizManage.FillFT_T_MP_SALE_TEMPLATE(Nothing, refSaleTemplate)
-
-        Catch ex As XL.Common.Utils.XLException
-
-            Dim logContentBuilder As New LineStrBuilder
-            logContentBuilder.AppendLine("Message: {0}", ex.Message)
-            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
-
-            'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
-
-            Return logContentBuilder.ToString()
-
-        Catch ex As Exception
-
-            Dim logContentBuilder As New LineStrBuilder
-            logContentBuilder.AppendLine("Message: {0}", ex.Message)
-            logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+    '    Try
 
 
-            Return logContentBuilder.ToString()
+    '        MyPosXAuto.Facade.AfBizManage.FillFT_T_MP_SALE_TEMPLATE(Nothing, refSaleTemplate)
 
-        End Try
+    '    Catch ex As XL.Common.Utils.XLException
 
-        Return String.Empty
+    '        Dim logContentBuilder As New LineStrBuilder
+    '        logContentBuilder.AppendLine("Message: {0}", ex.Message)
+    '        logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
 
-    End Function
+    '        'WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
+
+    '        Return logContentBuilder.ToString()
+
+    '    Catch ex As Exception
+
+    '        Dim logContentBuilder As New LineStrBuilder
+    '        logContentBuilder.AppendLine("Message: {0}", ex.Message)
+    '        logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+
+    '        Return logContentBuilder.ToString()
+
+    '    End Try
+
+    '    Return String.Empty
+
+    'End Function
 
 
     Public Function ServBizUtld0002( _

@@ -392,8 +392,7 @@ Namespace Business
                     sysAttribute1, _
                     sysAttribute2, _
                     sysAttribute3, _
-                    sysAttribute4, _
-                    chooseDiscountTypeList)
+                    sysAttribute4)
 
                 If servResult.Length > 0 Then
                     Return servResult
@@ -428,6 +427,8 @@ Namespace Business
                 If sysShowCustomWareCode = False Then
                     Me._manifest.GridColumn_CustomCode.Visible = False
                 End If
+
+                MyPosXAuto.Facade.AfCIV.FillFT_CIV_DISCOUNT_TYPE(Nothing, chooseDiscountTypeList)
 
                 Me._manifest.RepositoryItemLookUpEdit_DiscountType.DataSource = chooseDiscountTypeList
 

@@ -377,13 +377,15 @@ Namespace Business
 
                 Dim chooseSaleTemplateList As New MyPosXAuto.FTs.FT_T_MP_SALE_TEMPLATE
 
-                Dim servResult As String = _
-                    Me._service.ServInitDisplay( _
-                        chooseSaleTemplateList)
+                'Dim servResult As String = _
+                '    Me._service.ServInitDisplay( _
+                '        chooseSaleTemplateList)
 
-                If servResult.Length > 0 Then
-                    Return servResult
-                End If
+                'If servResult.Length > 0 Then
+                '    Return servResult
+                'End If
+
+                MyPosXAuto.Facade.AfBizManage.FillFT_T_MP_SALE_TEMPLATE(Nothing, chooseSaleTemplateList)
 
                 Me._manifest.RepositoryItemLookUpEdit_TemplateID.DataSource = chooseSaleTemplateList
 
