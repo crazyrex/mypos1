@@ -85,6 +85,8 @@
             Me.GridColumn_RowSelected = New DevExpress.XtraGrid.Columns.GridColumn
             Me.RepositoryItemCheckEdit_RowSelected = New DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
             Me.GridColumn_RowHighLight = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn_PointIOType = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.RepositoryItemLookUpEdit_PointIOType = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
             Me.ToolStrip_Form.SuspendLayout()
             CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.PanelControl1.SuspendLayout()
@@ -98,6 +100,7 @@
             CType(Me.RepositoryItemLookUpEdit_ClientID, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemLookUpEdit_TurnoverID, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemCheckEdit_RowSelected, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.RepositoryItemLookUpEdit_PointIOType, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'DefaultLookAndFeel_Form
@@ -541,7 +544,7 @@
             Me.GridControl_ClientPointIO.Location = New System.Drawing.Point(0, 90)
             Me.GridControl_ClientPointIO.MainView = Me.GridView_ClientPointIO
             Me.GridControl_ClientPointIO.Name = "GridControl_ClientPointIO"
-            Me.GridControl_ClientPointIO.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemCheckEdit_RowSelected, Me.RepositoryItemLookUpEdit_TurnoverID, Me.RepositoryItemLookUpEdit_ClientID})
+            Me.GridControl_ClientPointIO.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemCheckEdit_RowSelected, Me.RepositoryItemLookUpEdit_TurnoverID, Me.RepositoryItemLookUpEdit_ClientID, Me.RepositoryItemLookUpEdit_PointIOType})
             Me.GridControl_ClientPointIO.Size = New System.Drawing.Size(700, 410)
             Me.GridControl_ClientPointIO.TabIndex = 10002
             Me.GridControl_ClientPointIO.TabStop = False
@@ -549,7 +552,7 @@
             '
             'GridView_ClientPointIO
             '
-            Me.GridView_ClientPointIO.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn_IODate, Me.GridColumn_ClientID, Me.GridColumn_PointAmount, Me.GridColumn_TurnoverID, Me.GridColumn_Remark, Me.GridColumn_MoneyAmount, Me.GridColumn_RowSelected, Me.GridColumn_RowHighLight})
+            Me.GridView_ClientPointIO.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn_IODate, Me.GridColumn_ClientID, Me.GridColumn_PointAmount, Me.GridColumn_TurnoverID, Me.GridColumn_Remark, Me.GridColumn_MoneyAmount, Me.GridColumn_PointIOType, Me.GridColumn_RowSelected, Me.GridColumn_RowHighLight})
             StyleFormatCondition1.Appearance.BackColor = System.Drawing.Color.Lime
             StyleFormatCondition1.Appearance.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
             StyleFormatCondition1.Appearance.Options.UseBackColor = True
@@ -672,6 +675,25 @@
             Me.GridColumn_RowHighLight.Name = "GridColumn_RowHighLight"
             Me.GridColumn_RowHighLight.OptionsColumn.AllowFocus = False
             '
+            'GridColumn_PointIOType
+            '
+            Me.GridColumn_PointIOType.Caption = "点数出入类型"
+            Me.GridColumn_PointIOType.ColumnEdit = Me.RepositoryItemLookUpEdit_PointIOType
+            Me.GridColumn_PointIOType.FieldName = "POINT_IO_TYPE"
+            Me.GridColumn_PointIOType.Name = "GridColumn_PointIOType"
+            Me.GridColumn_PointIOType.OptionsColumn.AllowFocus = False
+            Me.GridColumn_PointIOType.Visible = True
+            Me.GridColumn_PointIOType.VisibleIndex = 7
+            '
+            'RepositoryItemLookUpEdit_PointIOType
+            '
+            Me.RepositoryItemLookUpEdit_PointIOType.AutoHeight = False
+            Me.RepositoryItemLookUpEdit_PointIOType.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+            Me.RepositoryItemLookUpEdit_PointIOType.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("ITEM_MEANING", "Name3", 20, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Data.ColumnSortOrder.None)})
+            Me.RepositoryItemLookUpEdit_PointIOType.DisplayMember = "ITEM_MEANING"
+            Me.RepositoryItemLookUpEdit_PointIOType.Name = "RepositoryItemLookUpEdit_PointIOType"
+            Me.RepositoryItemLookUpEdit_PointIOType.ValueMember = "ITEM_VALUE"
+            '
             'M_03_01201
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -723,6 +745,7 @@
             CType(Me.RepositoryItemLookUpEdit_ClientID, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemLookUpEdit_TurnoverID, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemCheckEdit_RowSelected, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.RepositoryItemLookUpEdit_PointIOType, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -749,6 +772,8 @@
         Friend WithEvents Label_ClientID As System.Windows.Forms.Label
         Friend WithEvents Label_ClientName As System.Windows.Forms.Label
         Friend WithEvents RepositoryItemLookUpEdit_ClientID As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
+        Friend WithEvents GridColumn_PointIOType As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents RepositoryItemLookUpEdit_PointIOType As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
 
 #End Region
 
