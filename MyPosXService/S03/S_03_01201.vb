@@ -99,6 +99,7 @@ Public Class S_03_01201
         ByVal valClinetID As String, _
         ByRef refClientList As MyPosXAuto.FTs.FT_M_MP_CLIENT, _
         ByRef refTurnoverList As MyPosXAuto.FTs.FT_H_MP_TURNOVER, _
+        ByRef refClientPointIOList As MyPosXAuto.FTs.FT_H_MP_CLIENT_POINT_IO, _
         ByRef refClientRowSE As MyPosXAuto.FTs.FT_M_MP_CLIENTRowSEntity _
         ) As String
 
@@ -111,6 +112,7 @@ Public Class S_03_01201
 
             MyPosXAuto.Facade.AfBizMaster.FillFT_M_MP_CLIENT(Nothing, refClientList)
             MyPosXAuto.Facade.AfBizTurnover.FillFT_H_MP_TURNOVER(Nothing, refTurnoverList)
+            MyPosXAuto.Facade.AfBizManage.FillFT_H_MP_CLIENT_POINT_IO(Nothing, refClientPointIOList)
             MyPosXAuto.Facade.AfBizMaster.FillM_MP_CLIENTRowSEntity(refClientRowSE, clientConditions)
 
 
