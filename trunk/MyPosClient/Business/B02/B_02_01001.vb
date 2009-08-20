@@ -482,7 +482,11 @@ Namespace Business
                         ResourceType.Data, _
                         Utils.Decls.CACHE_DATA_FILE_TURNOVER_DETAIL))
 
-
+                If IsNothing(Utils.Decls.CURRENT_POS_ROW) = True Then
+                    Me._manifest.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0008)
+                    Me._manifest.Enabled = False
+                    Return String.Empty
+                End If
 
 
             Catch ex As XL.Common.Utils.XLException
@@ -915,7 +919,7 @@ Namespace Business
 
                     bindingRow.SUM_COST = bindingRow.UNIT_COST * bindingRow.WARE_AMOUNT
                     bindingRow.SUM_PRICE = bindingRow.UNIT_PRICE * bindingRow.WARE_AMOUNT
-                    bindingRow.SUM_DISCOUNT = bindingRow.SUM_DISCOUNT * bindingRow.WARE_AMOUNT
+                    bindingRow.SUM_DISCOUNT = bindingRow.UNIT_DISCOUNT * bindingRow.WARE_AMOUNT
                     bindingRow.ORIGION_SUM_PRICE = bindingRow.ORIGION_UNIT_PRICE * bindingRow.WARE_AMOUNT
 
                     totalSumPrice += bindingRow.SUM_PRICE
