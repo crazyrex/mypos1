@@ -383,7 +383,7 @@ Namespace Business
 
                 Dim chooseClientList As New MyPosXAuto.FTs.FT_M_MP_CLIENT
                 Dim chooseTurnoverList As New MyPosXAuto.FTs.FT_H_MP_TURNOVER
-                Dim chooseClientPointIOList As New MyPosXAuto.FTs.FT_H_MP_CLIENT_POINT_IO
+                Dim chooseClientPointIOTypeList As New MyPosXAuto.FTs.FT_CIV_POINT_IO_TYPE
                 Dim ClientRowSE As New MyPosXAuto.FTs.FT_M_MP_CLIENTRowSEntity
 
 
@@ -396,12 +396,12 @@ Namespace Business
                     Me._manifest.SVLM_DEFAULT_CLIENT_ID, _
                     chooseClientList, _
                     chooseTurnoverList, _
-                    chooseClientPointIOList, _
+                    chooseClientPointIOTypeList, _
                     ClientRowSE)
 
                 Me._manifest.RepositoryItemLookUpEdit_ClientID.DataSource = chooseClientList
                 Me._manifest.RepositoryItemLookUpEdit_TurnoverID.DataSource = chooseTurnoverList
-                Me._manifest.RepositoryItemLookUpEdit_PointIOType.DataSource = chooseClientPointIOList
+                Me._manifest.RepositoryItemLookUpEdit_PointIOType.DataSource = chooseClientPointIOTypeList
 
                 Me._manifest.ButtonEdit_ClientCode.Text = ClientRowSE.CLIENT_CODE
                 Me._manifest.Label_ClientName.Text = ClientRowSE.CLIENT_NAME
