@@ -118,23 +118,23 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="DefaultLookAndFeel_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>278, 0</value>
+    <value>295, 0</value>
   </metadata>
   <metadata name="Timer_Surveillant.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>134, 0</value>
+    <value>138, 0</value>
   </metadata>
   <metadata name="ToolStrip_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ToolStripButton_Refresh.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>33, 22</value>
   </data>
   <data name="ToolStripButton_Refresh.Text" xml:space="preserve">
     <value>刷新</value>
   </data>
   <data name="ToolStripButton_Print.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>33, 22</value>
   </data>
   <data name="ToolStripButton_Print.Text" xml:space="preserve">
     <value>打印</value>
@@ -143,13 +143,13 @@
     <value>Magenta</value>
   </data>
   <data name="ToolStripButton_ExportExcel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 22</value>
+    <value>63, 22</value>
   </data>
   <data name="ToolStripButton_ExportExcel.Text" xml:space="preserve">
     <value>导出Excel</value>
   </data>
   <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>33, 22</value>
   </data>
   <data name="ToolStripButton_Close.Text" xml:space="preserve">
     <value>关闭</value>
@@ -187,7 +187,7 @@
     <value />
   </data>
   <data name="LookUpEdit_Pos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 20</value>
+    <value>127, 21</value>
   </data>
   <data name="LookUpEdit_Pos.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -241,7 +241,7 @@
     <value>56, 35</value>
   </data>
   <data name="TextEdit_Search.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 20</value>
+    <value>184, 21</value>
   </data>
   <data name="TextEdit_Search.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -295,7 +295,7 @@
     <value>Combo</value>
   </data>
   <data name="DateEdit_ToDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 20</value>
+    <value>134, 21</value>
   </data>
   <data name="DateEdit_ToDate.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -349,7 +349,7 @@
     <value>Combo</value>
   </data>
   <data name="DateEdit_FromDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 20</value>
+    <value>134, 21</value>
   </data>
   <data name="DateEdit_FromDate.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -644,7 +644,7 @@
     <value>高亮显示</value>
   </data>
   <data name="GridControl_WithdrawDtl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>691, 382</value>
+    <value>691, 381</value>
   </data>
   <data name="GridControl_WithdrawDtl.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -662,7 +662,7 @@
     <value>0</value>
   </data>
   <data name="XtraTabPage_WithdrawDtl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>691, 382</value>
+    <value>691, 381</value>
   </data>
   <data name="XtraTabPage_WithdrawDtl.Text" xml:space="preserve">
     <value>货品出入汇总</value>
@@ -845,7 +845,7 @@
     <value>高亮显示</value>
   </data>
   <data name="GridControl_PosWare.Size" type="System.Drawing.Size, System.Drawing">
-    <value>691, 382</value>
+    <value>691, 381</value>
   </data>
   <data name="GridControl_PosWare.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -863,7 +863,7 @@
     <value>0</value>
   </data>
   <data name="XtraTabPage_PosWare.Size" type="System.Drawing.Size, System.Drawing">
-    <value>691, 382</value>
+    <value>691, 381</value>
   </data>
   <data name="XtraTabPage_PosWare.Text" xml:space="preserve">
     <value>货品出入形式汇总</value>
@@ -896,7 +896,7 @@
     <value>0</value>
   </data>
   <metadata name="SaveFileDialog_ExportExcel.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>473, 0</value>
+    <value>489, 0</value>
   </metadata>
   <data name="SaveFileDialog_ExportExcel.Filter" xml:space="preserve">
     <value>Excel文档|*.xls</value>
