@@ -559,11 +559,14 @@ Namespace Business
                 Me._manifest.SVFT_BINDING_LIST.Clear()
 
                 Dim clientPointIOConditions As New MyPosXAuto.Facade.AfBizManage.ConditionOfH_MP_CLIENT_POINT_IO(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
-                clientPointIOConditions.Add(MyPosXAuto.Facade.AfBizManage.H_MP_CLIENT_POINT_IOColumns.IO_DATEColumn, ">=", CommTK.GetBeginOfDate(Me._manifest.DateEdit_Begin.DateTime))
-                clientPointIOConditions.Add(MyPosXAuto.Facade.AfBizManage.H_MP_CLIENT_POINT_IOColumns.IO_DATEColumn, "<=", CommTK.GetEndOfDate(Me._manifest.DateEdit_End.DateTime))
+                If Me._manifest.DateEdit_Begin.Text.Length > 0 Then
+                    clientPointIOConditions.Add(MyPosXAuto.Facade.AfBizManage.H_MP_CLIENT_POINT_IOColumns.IO_DATEColumn, ">=", CommTK.GetBeginOfDate(Me._manifest.DateEdit_Begin.DateTime))
+                End If
+                If Me._manifest.DateEdit_End.Text.Length > 0 Then
+                    clientPointIOConditions.Add(MyPosXAuto.Facade.AfBizManage.H_MP_CLIENT_POINT_IOColumns.IO_DATEColumn, "<=", CommTK.GetEndOfDate(Me._manifest.DateEdit_End.DateTime))
+                End If
 
                 If Me._manifest.Label_ClientID.Text.Length > 0 Then
-                    clientPointIOConditions.Clear()
                     clientPointIOConditions.Add(MyPosXAuto.Facade.AfBizManage.H_MP_CLIENT_POINT_IOColumns.CLIENT_IDColumn, "=", Me._manifest.Label_ClientID.Text)
                 End If
 
