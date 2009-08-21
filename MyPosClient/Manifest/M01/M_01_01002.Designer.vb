@@ -106,6 +106,8 @@
             Me.RepositoryItemCalcEdit_IndividualDiscount = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
             Me.RepositoryItemCalcEdit_UnitPrice = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
             Me.RepositoryItemCalcEdit_UnitCost = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
+            Me.GridColumn_ExchangePoitsAmount = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.RepositoryItemSpinEdit_ExchangePoitsAmount = New DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit
             Me.ToolStrip_Form.SuspendLayout()
             CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.PanelControl1.SuspendLayout()
@@ -122,6 +124,7 @@
             CType(Me.RepositoryItemCalcEdit_IndividualDiscount, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemCalcEdit_UnitPrice, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemCalcEdit_UnitCost, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.RepositoryItemSpinEdit_ExchangePoitsAmount, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'DefaultLookAndFeel_Form
@@ -666,7 +669,7 @@
             Me.GridControl_SaleTemplateWare.Location = New System.Drawing.Point(0, 153)
             Me.GridControl_SaleTemplateWare.MainView = Me.GridView_SaleTemplateWare
             Me.GridControl_SaleTemplateWare.Name = "GridControl_SaleTemplateWare"
-            Me.GridControl_SaleTemplateWare.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemCalcEdit_LowerLimit, Me.RepositoryItemCalcEdit_IndividualDiscount, Me.RepositoryItemCalcEdit_UnitPrice, Me.RepositoryItemCalcEdit_UnitCost, Me.RepositoryItemCheckEdit_Select, Me.RepositoryItemLookUpEdit_DiscountType, Me.RepositoryItemSpinEdit_DiscountAmount})
+            Me.GridControl_SaleTemplateWare.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemCalcEdit_LowerLimit, Me.RepositoryItemCalcEdit_IndividualDiscount, Me.RepositoryItemCalcEdit_UnitPrice, Me.RepositoryItemCalcEdit_UnitCost, Me.RepositoryItemCheckEdit_Select, Me.RepositoryItemLookUpEdit_DiscountType, Me.RepositoryItemSpinEdit_DiscountAmount, Me.RepositoryItemSpinEdit_ExchangePoitsAmount})
             Me.GridControl_SaleTemplateWare.Size = New System.Drawing.Size(741, 347)
             Me.GridControl_SaleTemplateWare.TabIndex = 10003
             Me.GridControl_SaleTemplateWare.TabStop = False
@@ -674,7 +677,7 @@
             '
             'GridView_SaleTemplateWare
             '
-            Me.GridView_SaleTemplateWare.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn_Select, Me.GridColumn_WareCode, Me.GridColumn_CustomCode, Me.GridColumn_WareName, Me.GridColumn_Spec, Me.GridColumn_Model, Me.GridColumn_Attribute1, Me.GridColumn_Attribute2, Me.GridColumn_Attribute3, Me.GridColumn_Attribute4, Me.GridColumn_DiscountType, Me.GridColumn_DiscountAmount, Me.GridColumn_RowHighlight, Me.GridColumn_RowRemark})
+            Me.GridView_SaleTemplateWare.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn_Select, Me.GridColumn_WareCode, Me.GridColumn_CustomCode, Me.GridColumn_WareName, Me.GridColumn_Spec, Me.GridColumn_Model, Me.GridColumn_Attribute1, Me.GridColumn_Attribute2, Me.GridColumn_Attribute3, Me.GridColumn_Attribute4, Me.GridColumn_DiscountType, Me.GridColumn_DiscountAmount, Me.GridColumn_ExchangePoitsAmount, Me.GridColumn_RowHighlight, Me.GridColumn_RowRemark})
             StyleFormatCondition1.Appearance.BackColor = System.Drawing.Color.Lime
             StyleFormatCondition1.Appearance.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
             StyleFormatCondition1.Appearance.Options.UseBackColor = True
@@ -877,6 +880,22 @@
             Me.RepositoryItemCalcEdit_UnitCost.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
             Me.RepositoryItemCalcEdit_UnitCost.Name = "RepositoryItemCalcEdit_UnitCost"
             '
+            'GridColumn_ExchangePoitsAmount
+            '
+            Me.GridColumn_ExchangePoitsAmount.Caption = "可交换点数"
+            Me.GridColumn_ExchangePoitsAmount.ColumnEdit = Me.RepositoryItemSpinEdit_ExchangePoitsAmount
+            Me.GridColumn_ExchangePoitsAmount.FieldName = "EXCHANGE_POINTS_AMOUNT"
+            Me.GridColumn_ExchangePoitsAmount.Name = "GridColumn_ExchangePoitsAmount"
+            Me.GridColumn_ExchangePoitsAmount.OptionsColumn.AllowFocus = False
+            Me.GridColumn_ExchangePoitsAmount.Visible = True
+            Me.GridColumn_ExchangePoitsAmount.VisibleIndex = 13
+            '
+            'RepositoryItemSpinEdit_ExchangePoitsAmount
+            '
+            Me.RepositoryItemSpinEdit_ExchangePoitsAmount.AutoHeight = False
+            Me.RepositoryItemSpinEdit_ExchangePoitsAmount.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
+            Me.RepositoryItemSpinEdit_ExchangePoitsAmount.Name = "RepositoryItemSpinEdit_ExchangePoitsAmount"
+            '
             'M_01_01002
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -931,6 +950,7 @@
             CType(Me.RepositoryItemCalcEdit_IndividualDiscount, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemCalcEdit_UnitPrice, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemCalcEdit_UnitCost, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.RepositoryItemSpinEdit_ExchangePoitsAmount, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -970,6 +990,8 @@
         Friend WithEvents Label4 As System.Windows.Forms.Label
         Friend WithEvents TextEdit_Search As DevExpress.XtraEditors.TextEdit
         Friend WithEvents Label5 As System.Windows.Forms.Label
+        Friend WithEvents GridColumn_ExchangePoitsAmount As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents RepositoryItemSpinEdit_ExchangePoitsAmount As DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit
 
 #End Region
 
