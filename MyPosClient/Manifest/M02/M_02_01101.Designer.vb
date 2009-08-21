@@ -58,14 +58,15 @@
             Dim CTag14 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag15 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag16 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
+            Dim CTag17 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag18 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag19 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag20 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
+            Dim CTag21 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag22 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag23 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag24 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
-            Dim CTag21 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
-            Dim CTag17 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(M_02_01101))
             Dim CTag26 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Me.ToolStrip_Form = New System.Windows.Forms.ToolStrip
             Me.ToolStripButton_Create = New System.Windows.Forms.ToolStripButton
@@ -116,14 +117,15 @@
             Me.TextEdit_ClientCode = New DevExpress.XtraEditors.TextEdit
             Me.Label_AquiringPoints = New System.Windows.Forms.Label
             Me.Label_ClientID = New System.Windows.Forms.Label
+            Me.Label2 = New System.Windows.Forms.Label
             Me.Label7 = New System.Windows.Forms.Label
             Me.Label8 = New System.Windows.Forms.Label
             Me.Label_ClientName = New System.Windows.Forms.Label
+            Me.Label_UsePoint = New System.Windows.Forms.Label
             Me.Label_HoldingPoint = New System.Windows.Forms.Label
             Me.Label6 = New System.Windows.Forms.Label
             Me.Label_OperationStatus = New System.Windows.Forms.Label
-            Me.Label_UsePoint = New System.Windows.Forms.Label
-            Me.Label2 = New System.Windows.Forms.Label
+            Me.ToolStripButton_Refresh = New System.Windows.Forms.ToolStripButton
             Me.ToolStrip_Form.SuspendLayout()
             CType(Me.GroupControl_Details, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.GroupControl_Details.SuspendLayout()
@@ -154,7 +156,7 @@
             '
             'ToolStrip_Form
             '
-            Me.ToolStrip_Form.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton_Create, Me.ToolStripButton_Add, Me.ToolStripButton_Remove, Me.ToolStripButton_Close})
+            Me.ToolStrip_Form.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton_Create, Me.ToolStripButton_Add, Me.ToolStripButton_Refresh, Me.ToolStripButton_Remove, Me.ToolStripButton_Close})
             Me.ToolStrip_Form.Location = New System.Drawing.Point(0, 0)
             Me.ToolStrip_Form.Name = "ToolStrip_Form"
             Me.ToolStrip_Form.Size = New System.Drawing.Size(700, 25)
@@ -187,25 +189,25 @@
             'ToolStripButton_Create
             '
             Me.ToolStripButton_Create.Name = "ToolStripButton_Create"
-            Me.ToolStripButton_Create.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Create.Size = New System.Drawing.Size(33, 22)
             Me.ToolStripButton_Create.Text = "新建"
             '
             'ToolStripButton_Add
             '
             Me.ToolStripButton_Add.Name = "ToolStripButton_Add"
-            Me.ToolStripButton_Add.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Add.Size = New System.Drawing.Size(33, 22)
             Me.ToolStripButton_Add.Text = "添加"
             '
             'ToolStripButton_Remove
             '
             Me.ToolStripButton_Remove.Name = "ToolStripButton_Remove"
-            Me.ToolStripButton_Remove.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Remove.Size = New System.Drawing.Size(33, 22)
             Me.ToolStripButton_Remove.Text = "去除"
             '
             'ToolStripButton_Close
             '
             Me.ToolStripButton_Close.Name = "ToolStripButton_Close"
-            Me.ToolStripButton_Close.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Close.Size = New System.Drawing.Size(33, 22)
             Me.ToolStripButton_Close.Text = "关闭"
             '
             'GroupControl_Details
@@ -273,11 +275,11 @@
             CTag2.ToolTip = ""
             CTag2.ValueType = XL.Common.ControlValueType.Character
             Me.GridControl_TurnoverDtl.EmbeddedNavigator.Tag = CTag2
-            Me.GridControl_TurnoverDtl.Location = New System.Drawing.Point(2, 20)
+            Me.GridControl_TurnoverDtl.Location = New System.Drawing.Point(2, 21)
             Me.GridControl_TurnoverDtl.MainView = Me.GridView_TurnoverDtl
             Me.GridControl_TurnoverDtl.Name = "GridControl_TurnoverDtl"
             Me.GridControl_TurnoverDtl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemCheckEdit_Select, Me.RepositoryItemLookUpEdit_TurnoverBookStatus, Me.RepositoryItemCalcEdit_WareAmount})
-            Me.GridControl_TurnoverDtl.Size = New System.Drawing.Size(505, 386)
+            Me.GridControl_TurnoverDtl.Size = New System.Drawing.Size(505, 385)
             Me.GridControl_TurnoverDtl.TabIndex = 10000
             Me.GridControl_TurnoverDtl.TabStop = False
             Me.GridControl_TurnoverDtl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView_TurnoverDtl})
@@ -608,6 +610,7 @@
             Me.LinkLabel_UploadCacheData.Name = "LinkLabel_UploadCacheData"
             Me.LinkLabel_UploadCacheData.Size = New System.Drawing.Size(55, 15)
             Me.LinkLabel_UploadCacheData.TabIndex = 10000
+            Me.LinkLabel_UploadCacheData.TabStop = True
             CTag3.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag3.CalculatorRequired = True
             CTag3.ComboValueTextBox = Nothing
@@ -640,7 +643,7 @@
             Me.SpinEdit_WareAmount.Location = New System.Drawing.Point(285, 11)
             Me.SpinEdit_WareAmount.Name = "SpinEdit_WareAmount"
             Me.SpinEdit_WareAmount.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
-            Me.SpinEdit_WareAmount.Size = New System.Drawing.Size(83, 20)
+            Me.SpinEdit_WareAmount.Size = New System.Drawing.Size(83, 21)
             Me.SpinEdit_WareAmount.TabIndex = 10000
             CTag4.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag4.CalculatorRequired = True
@@ -672,7 +675,7 @@
             Me.ButtonEdit_WareCode.Location = New System.Drawing.Point(87, 10)
             Me.ButtonEdit_WareCode.Name = "ButtonEdit_WareCode"
             Me.ButtonEdit_WareCode.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
-            Me.ButtonEdit_WareCode.Size = New System.Drawing.Size(121, 20)
+            Me.ButtonEdit_WareCode.Size = New System.Drawing.Size(121, 21)
             Me.ButtonEdit_WareCode.TabIndex = 10000
             CTag5.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag5.CalculatorRequired = True
@@ -903,7 +906,7 @@
             Me.Label_AffairDescription.Font = New System.Drawing.Font("Arial", 9.0!)
             Me.Label_AffairDescription.ForeColor = System.Drawing.Color.Black
             Me.Label_AffairDescription.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.Label_AffairDescription.Location = New System.Drawing.Point(2, 20)
+            Me.Label_AffairDescription.Location = New System.Drawing.Point(2, 21)
             Me.Label_AffairDescription.Name = "Label_AffairDescription"
             Me.Label_AffairDescription.Size = New System.Drawing.Size(55, 15)
             Me.Label_AffairDescription.TabIndex = 10000
@@ -996,7 +999,7 @@
             Me.TextEdit_ClientCode.Enabled = False
             Me.TextEdit_ClientCode.Location = New System.Drawing.Point(61, 26)
             Me.TextEdit_ClientCode.Name = "TextEdit_ClientCode"
-            Me.TextEdit_ClientCode.Size = New System.Drawing.Size(119, 20)
+            Me.TextEdit_ClientCode.Size = New System.Drawing.Size(119, 21)
             Me.TextEdit_ClientCode.TabIndex = 10000
             CTag14.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag14.CalculatorRequired = True
@@ -1097,6 +1100,43 @@
             CTag16.ValueType = XL.Common.ControlValueType.Character
             Me.Label_ClientID.Tag = CTag16
             Me.Label_ClientID.Text = "会员ID"
+            '
+            'Label2
+            '
+            Me.Label2.AutoSize = True
+            Me.Label2.BackColor = System.Drawing.Color.White
+            Me.Label2.Font = New System.Drawing.Font("Arial", 9.0!)
+            Me.Label2.ForeColor = System.Drawing.Color.Black
+            Me.Label2.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.Label2.Location = New System.Drawing.Point(5, 29)
+            Me.Label2.Name = "Label2"
+            Me.Label2.Size = New System.Drawing.Size(43, 15)
+            Me.Label2.TabIndex = 10000
+            CTag17.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
+            CTag17.CalculatorRequired = True
+            CTag17.ComboValueTextBox = Nothing
+            CTag17.ControlRelatedCode = Nothing
+            CTag17.DateButtonTextBox = Nothing
+            CTag17.DateTimeButtonTextBox = Nothing
+            CTag17.DisplayLinkControl = Nothing
+            CTag17.DisplayLinkDisplayFieldName = Nothing
+            CTag17.DisplayLinkKeyFieldName = Nothing
+            CTag17.DisplayLinkTable = Nothing
+            CTag17.FlexgridEditItem = ""
+            CTag17.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
+            CTag17.FormStatus = XL.Win.Component.BaseForm.FormStatuses.BeforeLoading
+            CTag17.IsButtonCustomed = False
+            CTag17.IsTextValid = True
+            CTag17.KeyValueAbsentable = False
+            CTag17.LeagleText = ""
+            CTag17.NumericButtonTextBox = Nothing
+            CTag17.ParentControl = Me.Label2
+            CTag17.SkipValidate = False
+            CTag17.TimeButtonTextBox = Nothing
+            CTag17.ToolTip = ""
+            CTag17.ValueType = XL.Common.ControlValueType.Character
+            Me.Label2.Tag = CTag17
+            Me.Label2.Text = "会员号"
             '
             'Label7
             '
@@ -1210,6 +1250,44 @@
             Me.Label_ClientName.Text = "总额"
             Me.Label_ClientName.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
+            'Label_UsePoint
+            '
+            Me.Label_UsePoint.BackColor = System.Drawing.Color.White
+            Me.Label_UsePoint.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+            Me.Label_UsePoint.Font = New System.Drawing.Font("Arial", 9.0!)
+            Me.Label_UsePoint.ForeColor = System.Drawing.Color.Black
+            Me.Label_UsePoint.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.Label_UsePoint.Location = New System.Drawing.Point(61, 117)
+            Me.Label_UsePoint.Name = "Label_UsePoint"
+            Me.Label_UsePoint.Size = New System.Drawing.Size(119, 23)
+            Me.Label_UsePoint.TabIndex = 10000
+            CTag21.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
+            CTag21.CalculatorRequired = True
+            CTag21.ComboValueTextBox = Nothing
+            CTag21.ControlRelatedCode = Nothing
+            CTag21.DateButtonTextBox = Nothing
+            CTag21.DateTimeButtonTextBox = Nothing
+            CTag21.DisplayLinkControl = Nothing
+            CTag21.DisplayLinkDisplayFieldName = Nothing
+            CTag21.DisplayLinkKeyFieldName = Nothing
+            CTag21.DisplayLinkTable = Nothing
+            CTag21.FlexgridEditItem = ""
+            CTag21.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
+            CTag21.FormStatus = XL.Win.Component.BaseForm.FormStatuses.BeforeLoading
+            CTag21.IsButtonCustomed = False
+            CTag21.IsTextValid = True
+            CTag21.KeyValueAbsentable = False
+            CTag21.LeagleText = ""
+            CTag21.NumericButtonTextBox = Nothing
+            CTag21.ParentControl = Me.Label_UsePoint
+            CTag21.SkipValidate = False
+            CTag21.TimeButtonTextBox = Nothing
+            CTag21.ToolTip = ""
+            CTag21.ValueType = XL.Common.ControlValueType.Character
+            Me.Label_UsePoint.Tag = CTag21
+            Me.Label_UsePoint.Text = "0"
+            Me.Label_UsePoint.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+            '
             'Label_HoldingPoint
             '
             Me.Label_HoldingPoint.BackColor = System.Drawing.Color.White
@@ -1322,80 +1400,14 @@
             Me.Label_OperationStatus.Tag = CTag24
             Me.Label_OperationStatus.Visible = False
             '
-            'Label_UsePoint
+            'ToolStripButton_Refresh
             '
-            Me.Label_UsePoint.BackColor = System.Drawing.Color.White
-            Me.Label_UsePoint.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-            Me.Label_UsePoint.Font = New System.Drawing.Font("Arial", 9.0!)
-            Me.Label_UsePoint.ForeColor = System.Drawing.Color.Black
-            Me.Label_UsePoint.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.Label_UsePoint.Location = New System.Drawing.Point(61, 117)
-            Me.Label_UsePoint.Name = "Label_UsePoint"
-            Me.Label_UsePoint.Size = New System.Drawing.Size(119, 23)
-            Me.Label_UsePoint.TabIndex = 10000
-            CTag21.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
-            CTag21.CalculatorRequired = True
-            CTag21.ComboValueTextBox = Nothing
-            CTag21.ControlRelatedCode = Nothing
-            CTag21.DateButtonTextBox = Nothing
-            CTag21.DateTimeButtonTextBox = Nothing
-            CTag21.DisplayLinkControl = Nothing
-            CTag21.DisplayLinkDisplayFieldName = Nothing
-            CTag21.DisplayLinkKeyFieldName = Nothing
-            CTag21.DisplayLinkTable = Nothing
-            CTag21.FlexgridEditItem = ""
-            CTag21.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
-            CTag21.FormStatus = XL.Win.Component.BaseForm.FormStatuses.BeforeLoading
-            CTag21.IsButtonCustomed = False
-            CTag21.IsTextValid = True
-            CTag21.KeyValueAbsentable = False
-            CTag21.LeagleText = ""
-            CTag21.NumericButtonTextBox = Nothing
-            CTag21.ParentControl = Me.Label_UsePoint
-            CTag21.SkipValidate = False
-            CTag21.TimeButtonTextBox = Nothing
-            CTag21.ToolTip = ""
-            CTag21.ValueType = XL.Common.ControlValueType.Character
-            Me.Label_UsePoint.Tag = CTag21
-            Me.Label_UsePoint.Text = "0"
-            Me.Label_UsePoint.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-            '
-            'Label2
-            '
-            Me.Label2.AutoSize = True
-            Me.Label2.BackColor = System.Drawing.Color.White
-            Me.Label2.Font = New System.Drawing.Font("Arial", 9.0!)
-            Me.Label2.ForeColor = System.Drawing.Color.Black
-            Me.Label2.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.Label2.Location = New System.Drawing.Point(5, 29)
-            Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(43, 15)
-            Me.Label2.TabIndex = 10000
-            CTag17.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
-            CTag17.CalculatorRequired = True
-            CTag17.ComboValueTextBox = Nothing
-            CTag17.ControlRelatedCode = Nothing
-            CTag17.DateButtonTextBox = Nothing
-            CTag17.DateTimeButtonTextBox = Nothing
-            CTag17.DisplayLinkControl = Nothing
-            CTag17.DisplayLinkDisplayFieldName = Nothing
-            CTag17.DisplayLinkKeyFieldName = Nothing
-            CTag17.DisplayLinkTable = Nothing
-            CTag17.FlexgridEditItem = ""
-            CTag17.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
-            CTag17.FormStatus = XL.Win.Component.BaseForm.FormStatuses.BeforeLoading
-            CTag17.IsButtonCustomed = False
-            CTag17.IsTextValid = True
-            CTag17.KeyValueAbsentable = False
-            CTag17.LeagleText = ""
-            CTag17.NumericButtonTextBox = Nothing
-            CTag17.ParentControl = Me.Label2
-            CTag17.SkipValidate = False
-            CTag17.TimeButtonTextBox = Nothing
-            CTag17.ToolTip = ""
-            CTag17.ValueType = XL.Common.ControlValueType.Character
-            Me.Label2.Tag = CTag17
-            Me.Label2.Text = "会员号"
+            Me.ToolStripButton_Refresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+            Me.ToolStripButton_Refresh.Image = CType(resources.GetObject("ToolStripButton_Refresh.Image"), System.Drawing.Image)
+            Me.ToolStripButton_Refresh.ImageTransparentColor = System.Drawing.Color.Magenta
+            Me.ToolStripButton_Refresh.Name = "ToolStripButton_Refresh"
+            Me.ToolStripButton_Refresh.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Refresh.Text = "刷新"
             '
             'M_02_01101
             '
@@ -1406,6 +1418,7 @@
             Me.Cursor = System.Windows.Forms.Cursors.Default
             Me.Font = New System.Drawing.Font("Arial", 9.0!)
             Me.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
+            Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
             Me.Name = "M_02_01101"
             Me.Size = New System.Drawing.Size(700, 500)
             CTag26.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
@@ -1511,6 +1524,7 @@
         Friend WithEvents Label_OperationStatus As System.Windows.Forms.Label
         Friend WithEvents Label2 As System.Windows.Forms.Label
         Friend WithEvents Label_UsePoint As System.Windows.Forms.Label
+        Friend WithEvents ToolStripButton_Refresh As System.Windows.Forms.ToolStripButton
 
 #End Region
 
