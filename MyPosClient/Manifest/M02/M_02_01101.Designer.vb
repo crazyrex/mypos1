@@ -40,6 +40,7 @@
         Friend WithEvents ToolStripButton_Close As System.Windows.Forms.ToolStripButton
         <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
             Dim CTag1 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(M_02_01101))
             Dim CTag11 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag2 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim StyleFormatCondition1 As DevExpress.XtraGrid.StyleFormatCondition = New DevExpress.XtraGrid.StyleFormatCondition
@@ -66,11 +67,11 @@
             Dim CTag22 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag23 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag24 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
-            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(M_02_01101))
             Dim CTag26 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Me.ToolStrip_Form = New System.Windows.Forms.ToolStrip
             Me.ToolStripButton_Create = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_Add = New System.Windows.Forms.ToolStripButton
+            Me.ToolStripButton_Refresh = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_Remove = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_Close = New System.Windows.Forms.ToolStripButton
             Me.GroupControl_Details = New DevExpress.XtraEditors.GroupControl
@@ -125,7 +126,6 @@
             Me.Label_HoldingPoint = New System.Windows.Forms.Label
             Me.Label6 = New System.Windows.Forms.Label
             Me.Label_OperationStatus = New System.Windows.Forms.Label
-            Me.ToolStripButton_Refresh = New System.Windows.Forms.ToolStripButton
             Me.ToolStrip_Form.SuspendLayout()
             CType(Me.GroupControl_Details, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.GroupControl_Details.SuspendLayout()
@@ -197,6 +197,15 @@
             Me.ToolStripButton_Add.Name = "ToolStripButton_Add"
             Me.ToolStripButton_Add.Size = New System.Drawing.Size(33, 22)
             Me.ToolStripButton_Add.Text = "添加"
+            '
+            'ToolStripButton_Refresh
+            '
+            Me.ToolStripButton_Refresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+            Me.ToolStripButton_Refresh.Image = CType(resources.GetObject("ToolStripButton_Refresh.Image"), System.Drawing.Image)
+            Me.ToolStripButton_Refresh.ImageTransparentColor = System.Drawing.Color.Magenta
+            Me.ToolStripButton_Refresh.Name = "ToolStripButton_Refresh"
+            Me.ToolStripButton_Refresh.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Refresh.Text = "刷新"
             '
             'ToolStripButton_Remove
             '
@@ -1399,15 +1408,6 @@
             CTag24.ValueType = XL.Common.ControlValueType.Character
             Me.Label_OperationStatus.Tag = CTag24
             Me.Label_OperationStatus.Visible = False
-            '
-            'ToolStripButton_Refresh
-            '
-            Me.ToolStripButton_Refresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-            Me.ToolStripButton_Refresh.Image = CType(resources.GetObject("ToolStripButton_Refresh.Image"), System.Drawing.Image)
-            Me.ToolStripButton_Refresh.ImageTransparentColor = System.Drawing.Color.Magenta
-            Me.ToolStripButton_Refresh.Name = "ToolStripButton_Refresh"
-            Me.ToolStripButton_Refresh.Size = New System.Drawing.Size(33, 22)
-            Me.ToolStripButton_Refresh.Text = "刷新"
             '
             'M_02_01101
             '
