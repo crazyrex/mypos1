@@ -73,7 +73,7 @@ Namespace Business
             SaveInfo
             LoadList
             LoadClientInfoByCode
-            BizUtld0002
+            AquiringPoints
             BizUtld0003
             BizUtld0004
             BizUtld0005
@@ -190,12 +190,12 @@ Namespace Business
                     '-------------------------------------------------------------------
                     functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoLoadClientInfoByCode)
 
-                Case Affairs.BizUtld0002
+                Case Affairs.AquiringPoints
 
                     '
                     '取到处理函数的结果，传入返回给Manifest的AgentResponse包
                     '-------------------------------------------------------------------
-                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoBizUtld0002)
+                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoAquiringPoints)
 
                 Case Affairs.BizUtld0003
 
@@ -592,12 +592,13 @@ Namespace Business
                     Return String.Empty
                 End If
 
-                Dim clientRowSE As New MyPosXAuto.FTs.FT_M_MP_CLIENTRowSEntity
-                Dim clientConditions As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_MP_CLIENT(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_Or)
-                clientConditions.Add(MyPosXAuto.Facade.AfBizMaster.M_MP_CLIENTColumns.CLIENT_CODEColumn, "=", Me._manifest.TextEdit_ClientCode.Text)
-                clientConditions.Add(MyPosXAuto.Facade.AfBizMaster.M_MP_CLIENTColumns.CLIENT_NAMEColumn, "=", Me._manifest.TextEdit_ClientCode.Text)
+                Dim clientRowSE As New MyPosXAuto.FTs.FT_MV_MP_CLIENTRowSEntity
+                Dim clientConditions As New MyPosXAuto.Facade.AfMV.ConditionOfMV_MP_CLIENT(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_Or)
+                clientConditions.Add(MyPosXAuto.Facade.AfMV.MV_MP_CLIENTColumns.CLIENT_CODEColumn, "=", Me._manifest.TextEdit_ClientCode.Text)
+                clientConditions.Add(MyPosXAuto.Facade.AfMV.MV_MP_CLIENTColumns.CLIENT_NAMEColumn, "=", Me._manifest.TextEdit_ClientCode.Text)
+                clientConditions.Add(MyPosXAuto.Facade.AfMV.MV_MP_CLIENTColumns.CELL_PHONEColumn, "=", Me._manifest.TextEdit_ClientCode.Text)
 
-                MyPosXAuto.Facade.AfBizMaster.FillM_MP_CLIENTRowSEntity(clientRowSE, clientConditions)
+                MyPosXAuto.Facade.AfMV.FillMV_MP_CLIENTRowSEntity(clientRowSE, clientConditions)
 
                 If clientRowSE.IsNull = True Then
                     Return MyPosXService.Decls.MSG_ALERT_00008
@@ -606,6 +607,8 @@ Namespace Business
                 Me._manifest.TextEdit_ClientCode.Text = clientRowSE.CLIENT_CODE
                 Me._manifest.Label_ClientName.Text = clientRowSE.CLIENT_NAME
                 Me._manifest.Label_ClientID.Text = clientRowSE.CLIENT_ID
+                Me._manifest.Label_HoldingPoint.Text = CommTK.FString(clientRowSE.CURRENT_POINT, False, "#,##0.00")
+                Me._manifest.Label_RMBToPointsRate.Text = SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_RMB_TO_POINTS_RATE)
 
                 'Dim servResult As String = _
                 '    Me._service.ServLoadClientInfoByCode()
@@ -645,14 +648,16 @@ Namespace Business
         '''
         '''
         '''-------------------------------------------------------------------
-        Private Function DoBizUtld0002() As String
+        Private Function DoAquiringPoints() As String
 
 
             Try
 
 
+                Me._manifest.Label_AquiringPoints.Text = CommTK.FString(CommTK.FDecimal(Me._manifest.CalcEdit_UsePoint.EditValue) / CommTK.FDecimal(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_RMB_TO_POINTS_RATE)))
+
                 'Dim servResult As String = _
-                '    Me._service.ServBizUtld0002()
+                '    Me._service.ServAquiringPoints()
 
                 'If servResult.Length > 0 Then
                 '    Return servResult        

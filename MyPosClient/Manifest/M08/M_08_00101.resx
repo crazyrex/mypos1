@@ -118,23 +118,23 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="DefaultLookAndFeel_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>278, 0</value>
+    <value>295, 0</value>
   </metadata>
   <metadata name="Timer_Surveillant.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>134, 0</value>
+    <value>138, 0</value>
   </metadata>
   <metadata name="ToolStrip_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ToolStripButton_Save.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>33, 22</value>
   </data>
   <data name="ToolStripButton_Save.Text" xml:space="preserve">
     <value>保存</value>
   </data>
   <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>33, 22</value>
   </data>
   <data name="ToolStripButton_Close.Text" xml:space="preserve">
     <value>关闭</value>
@@ -735,6 +735,39 @@
   <data name="&gt;&gt;Label22.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="Label23.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label23.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="Label23.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label23.Location" type="System.Drawing.Point, System.Drawing">
+    <value>406, 122</value>
+  </data>
+  <data name="Label23.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 15</value>
+  </data>
+  <data name="Label23.TabIndex" type="System.Int32, mscorlib">
+    <value>10004</value>
+  </data>
+  <data name="Label23.Text" xml:space="preserve">
+    <value>小票打印张数</value>
+  </data>
+  <data name="&gt;&gt;Label23.Name" xml:space="preserve">
+    <value>Label23</value>
+  </data>
+  <data name="&gt;&gt;Label23.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label23.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;Label23.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
   <data name="SpinEdit_PurchasaeListCopies.EditValue" type="System.Decimal, mscorlib">
     <value>1</value>
   </data>
@@ -742,7 +775,7 @@
     <value>491, 120</value>
   </data>
   <data name="SpinEdit_PurchasaeListCopies.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 20</value>
+    <value>33, 21</value>
   </data>
   <data name="SpinEdit_PurchasaeListCopies.TabIndex" type="System.Int32, mscorlib">
     <value>10009</value>
@@ -766,7 +799,7 @@
     <value>200, 85</value>
   </data>
   <data name="SpinEdit_AutoWareCodeIDLenth.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 20</value>
+    <value>33, 21</value>
   </data>
   <data name="SpinEdit_AutoWareCodeIDLenth.TabIndex" type="System.Int32, mscorlib">
     <value>10009</value>
@@ -854,39 +887,6 @@
   </data>
   <data name="&gt;&gt;CheckEdit_AutoWareCodeSupplierCode.ZOrder" xml:space="preserve">
     <value>4</value>
-  </data>
-  <data name="Label23.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label23.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9pt</value>
-  </data>
-  <data name="Label23.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label23.Location" type="System.Drawing.Point, System.Drawing">
-    <value>406, 122</value>
-  </data>
-  <data name="Label23.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 15</value>
-  </data>
-  <data name="Label23.TabIndex" type="System.Int32, mscorlib">
-    <value>10004</value>
-  </data>
-  <data name="Label23.Text" xml:space="preserve">
-    <value>小票打印张数</value>
-  </data>
-  <data name="&gt;&gt;Label23.Name" xml:space="preserve">
-    <value>Label23</value>
-  </data>
-  <data name="&gt;&gt;Label23.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label23.Parent" xml:space="preserve">
-    <value>GroupControl1</value>
-  </data>
-  <data name="&gt;&gt;Label23.ZOrder" xml:space="preserve">
-    <value>6</value>
   </data>
   <data name="CheckEdit_OperationLimitedHere.Location" type="System.Drawing.Point, System.Drawing">
     <value>273, 31</value>
@@ -1299,7 +1299,7 @@
     <value>42, 24</value>
   </data>
   <data name="TextEdit_PractWareCodePrefix.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 20</value>
+    <value>41, 21</value>
   </data>
   <data name="TextEdit_PractWareCodePrefix.TabIndex" type="System.Int32, mscorlib">
     <value>10007</value>
@@ -1371,7 +1371,7 @@
     <value>231, 25</value>
   </data>
   <data name="SpinEdit_PractWareCodeDigitLength.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 20</value>
+    <value>36, 21</value>
   </data>
   <data name="SpinEdit_PractWareCodeDigitLength.TabIndex" type="System.Int32, mscorlib">
     <value>10004</value>
@@ -1435,7 +1435,7 @@
     <value>Application</value>
   </data>
   <data name="GridControl_RecipientTypeBarcode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 20</value>
+    <value>2, 21</value>
   </data>
   <data name="GridColumn_RecipientType.Caption" xml:space="preserve">
     <value>包装类型</value>
@@ -1495,7 +1495,7 @@
     <value>2</value>
   </data>
   <data name="GridControl_RecipientTypeBarcode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>597, 115</value>
+    <value>597, 114</value>
   </data>
   <data name="GridControl_RecipientTypeBarcode.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -3169,7 +3169,7 @@
     <value>Glyph</value>
   </data>
   <data name="CalcEdit_RMBToPointsRate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 20</value>
+    <value>65, 21</value>
   </data>
   <data name="CalcEdit_RMBToPointsRate.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -3193,7 +3193,7 @@
     <value>Glyph</value>
   </data>
   <data name="CalcEdit_PointsToRMBRate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 20</value>
+    <value>65, 21</value>
   </data>
   <data name="CalcEdit_PointsToRMBRate.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>

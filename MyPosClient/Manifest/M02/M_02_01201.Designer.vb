@@ -68,7 +68,7 @@
             Me.Label_HoldingPoint = New System.Windows.Forms.Label
             Me.CalcEdit_UsePoint = New DevExpress.XtraEditors.CalcEdit
             Me.Label6 = New System.Windows.Forms.Label
-            Me.Label1 = New System.Windows.Forms.Label
+            Me.Label_RMBToPointsRate = New System.Windows.Forms.Label
             Me.Label3 = New System.Windows.Forms.Label
             Me.ToolStrip_Form.SuspendLayout()
             CType(Me.TextEdit_ClientCode.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -117,19 +117,19 @@
             'ToolStripButton_Create
             '
             Me.ToolStripButton_Create.Name = "ToolStripButton_Create"
-            Me.ToolStripButton_Create.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Create.Size = New System.Drawing.Size(33, 22)
             Me.ToolStripButton_Create.Text = "新建"
             '
             'ToolStripButton_Save
             '
             Me.ToolStripButton_Save.Name = "ToolStripButton_Save"
-            Me.ToolStripButton_Save.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Save.Size = New System.Drawing.Size(33, 22)
             Me.ToolStripButton_Save.Text = "保存"
             '
             'ToolStripButton_Close
             '
             Me.ToolStripButton_Close.Name = "ToolStripButton_Close"
-            Me.ToolStripButton_Close.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Close.Size = New System.Drawing.Size(33, 22)
             Me.ToolStripButton_Close.Text = "关闭"
             '
             'Label_HintGainPoint
@@ -174,7 +174,7 @@
             Me.TextEdit_ClientCode.Enabled = False
             Me.TextEdit_ClientCode.Location = New System.Drawing.Point(65, 47)
             Me.TextEdit_ClientCode.Name = "TextEdit_ClientCode"
-            Me.TextEdit_ClientCode.Size = New System.Drawing.Size(119, 20)
+            Me.TextEdit_ClientCode.Size = New System.Drawing.Size(119, 21)
             Me.TextEdit_ClientCode.TabIndex = 10000
             CTag3.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag3.CalculatorRequired = True
@@ -188,7 +188,7 @@
             CTag3.DisplayLinkTable = Nothing
             CTag3.FlexgridEditItem = ""
             CTag3.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
-            CTag3.FormStatus = XL.Win.Component.BaseForm.FormStatuses.BeforeLoading
+            CTag3.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
             CTag3.IsButtonCustomed = False
             CTag3.IsTextValid = True
             CTag3.KeyValueAbsentable = False
@@ -469,7 +469,7 @@
             Me.CalcEdit_UsePoint.Location = New System.Drawing.Point(65, 112)
             Me.CalcEdit_UsePoint.Name = "CalcEdit_UsePoint"
             Me.CalcEdit_UsePoint.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-            Me.CalcEdit_UsePoint.Size = New System.Drawing.Size(121, 20)
+            Me.CalcEdit_UsePoint.Size = New System.Drawing.Size(121, 21)
             Me.CalcEdit_UsePoint.TabIndex = 10000
             CTag11.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag11.CalculatorRequired = True
@@ -483,7 +483,7 @@
             CTag11.DisplayLinkTable = Nothing
             CTag11.FlexgridEditItem = ""
             CTag11.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
-            CTag11.FormStatus = XL.Win.Component.BaseForm.FormStatuses.BeforeLoading
+            CTag11.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
             CTag11.IsButtonCustomed = False
             CTag11.IsTextValid = True
             CTag11.KeyValueAbsentable = False
@@ -533,17 +533,17 @@
             Me.Label6.Tag = CTag12
             Me.Label6.Text = "充值金额"
             '
-            'Label1
+            'Label_RMBToPointsRate
             '
-            Me.Label1.BackColor = System.Drawing.Color.White
-            Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-            Me.Label1.Font = New System.Drawing.Font("Arial", 9.0!)
-            Me.Label1.ForeColor = System.Drawing.Color.Black
-            Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.Label1.Location = New System.Drawing.Point(281, 78)
-            Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(119, 23)
-            Me.Label1.TabIndex = 10000
+            Me.Label_RMBToPointsRate.BackColor = System.Drawing.Color.White
+            Me.Label_RMBToPointsRate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+            Me.Label_RMBToPointsRate.Font = New System.Drawing.Font("Arial", 9.0!)
+            Me.Label_RMBToPointsRate.ForeColor = System.Drawing.Color.Black
+            Me.Label_RMBToPointsRate.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.Label_RMBToPointsRate.Location = New System.Drawing.Point(281, 78)
+            Me.Label_RMBToPointsRate.Name = "Label_RMBToPointsRate"
+            Me.Label_RMBToPointsRate.Size = New System.Drawing.Size(119, 23)
+            Me.Label_RMBToPointsRate.TabIndex = 10000
             CTag13.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag13.CalculatorRequired = True
             CTag13.ComboValueTextBox = Nothing
@@ -562,14 +562,14 @@
             CTag13.KeyValueAbsentable = False
             CTag13.LeagleText = ""
             CTag13.NumericButtonTextBox = Nothing
-            CTag13.ParentControl = Me.Label1
+            CTag13.ParentControl = Me.Label_RMBToPointsRate
             CTag13.SkipValidate = False
             CTag13.TimeButtonTextBox = Nothing
             CTag13.ToolTip = ""
             CTag13.ValueType = XL.Common.ControlValueType.Character
-            Me.Label1.Tag = CTag13
-            Me.Label1.Text = "0"
-            Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+            Me.Label_RMBToPointsRate.Tag = CTag13
+            Me.Label_RMBToPointsRate.Text = "0"
+            Me.Label_RMBToPointsRate.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
             'Label3
             '
@@ -619,7 +619,7 @@
             Me.Controls.Add(Me.TextEdit_ClientCode)
             Me.Controls.Add(Me.Label_HoldingPoint)
             Me.Controls.Add(Me.Label_AquiringPoints)
-            Me.Controls.Add(Me.Label1)
+            Me.Controls.Add(Me.Label_RMBToPointsRate)
             Me.Controls.Add(Me.Label_ClientID)
             Me.Controls.Add(Me.Label_ClientName)
             Me.Controls.Add(Me.Label8)
@@ -628,6 +628,7 @@
             Me.Cursor = System.Windows.Forms.Cursors.Default
             Me.Font = New System.Drawing.Font("Arial", 9.0!)
             Me.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
+            Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
             Me.Name = "M_02_01201"
             Me.Size = New System.Drawing.Size(435, 192)
             CTag15.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
@@ -674,7 +675,7 @@
         Friend WithEvents CalcEdit_UsePoint As DevExpress.XtraEditors.CalcEdit
         Friend WithEvents Label6 As System.Windows.Forms.Label
         Friend WithEvents Label3 As System.Windows.Forms.Label
-        Friend WithEvents Label1 As System.Windows.Forms.Label
+        Friend WithEvents Label_RMBToPointsRate As System.Windows.Forms.Label
 
 #End Region
 
