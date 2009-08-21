@@ -1005,7 +1005,6 @@
             '
             'TextEdit_ClientCode
             '
-            Me.TextEdit_ClientCode.Enabled = False
             Me.TextEdit_ClientCode.Location = New System.Drawing.Point(61, 26)
             Me.TextEdit_ClientCode.Name = "TextEdit_ClientCode"
             Me.TextEdit_ClientCode.Size = New System.Drawing.Size(119, 21)
