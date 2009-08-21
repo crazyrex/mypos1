@@ -541,7 +541,9 @@ Namespace Manifest
 
         Private Sub CheckEdit_IsClient_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckEdit_IsClient.CheckedChanged
             Me.TextEdit_ClientCode.Enabled = Me.CheckEdit_IsClient.Checked
-            Me.CalcEdit_UsePoint.Enabled = Me.CheckEdit_IsClient.Checked
+            If CommTK.FBoolean(SysInfo.ReadLocalSysInfo(MyPosXService.Decls.SVN_CAN_POINTS_TO_RMB)) = True Then
+                Me.CalcEdit_UsePoint.Enabled = Me.CheckEdit_IsClient.Checked
+            End If
 
             If Me.TextEdit_ClientCode.Enabled = True Then
                 Me.TextEdit_ClientCode.Select()
@@ -871,7 +873,7 @@ Namespace Manifest
                 Me.Label_OperationStatus.Text = String.Empty
                 Me.Label_OperationStatus.Visible = False
                 Me.CalcEdit_Payment.Enabled = True
-                Me.CalcEdit_UsePoint.Enabled = True
+                Me.CalcEdit_UsePoint.Enabled = False
                 Me.CheckEdit_IsClient.Enabled = True
                 Me.Panel_DetailDiscount.Visible = True
             End If
