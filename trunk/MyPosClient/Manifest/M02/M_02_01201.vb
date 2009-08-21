@@ -284,7 +284,7 @@ Namespace Manifest
             '进行保存操作
             '-------------------------------------------------------------------
 
-            'Me._bizAgent.DoRequest(Business.B_0X_00XXX.Affairs.SaveInfo, False)
+            Me._bizAgent.DoRequest(Business.B_02_01201.Affairs.SaveInfo, False)
 
 
             '

@@ -500,6 +500,17 @@ Namespace Business
 
             Try
 
+                Dim historyID As String = Guid.NewGuid.ToString
+
+                MyPosXAuto.Facade.AfBizManage.CreateH_MP_CLIENT_POINT_IOInfo( _
+                    Me._manifest.Label_ClientID.Text, _
+                    historyID, _
+                    CommTK.GetSyncServerTime, _
+                    CommTK.FDecimal(Me._manifest.CalcEdit_UsePoint.EditValue), _
+                    CommTK.FInteger(Me._manifest.Label_AquiringPoints.Text), _
+                    MyPosXAuto.Decls.CIVALUE_POINT_IO_TYPE_IN_RECHARGE, _
+                    String.Empty, _
+                    String.Empty)
 
                 'Dim servResult As String = _                                       
                 '    Me._service.ServSaveInfo()                                     

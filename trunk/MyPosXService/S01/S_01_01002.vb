@@ -224,6 +224,7 @@ Public Class S_01_01002
                             bindingRow.DETAIL_ID, _
                             bindingRow.DISCOUNT_AMOUNT, _
                             bindingRow.DISCOUNT_TYPE, _
+                            bindingRow.EXCHANGE_POINTS_AMOUNT, _
                             bindingRow.TEMPLATE_ID, _
                             bindingRow.WARE_ID)
                         existingDetailIDs.Add(bindingRow.DETAIL_ID)
@@ -236,6 +237,7 @@ Public Class S_01_01002
                         bindingRow.DETAIL_ID, _
                         bindingRow.DISCOUNT_AMOUNT, _
                         bindingRow.DISCOUNT_TYPE, _
+                        bindingRow.EXCHANGE_POINTS_AMOUNT, _
                         bindingRow.TEMPLATE_ID, _
                         bindingRow.WARE_ID)
                     existingDetailIDs.Add(bindingRow.DETAIL_ID)

@@ -171,7 +171,6 @@
             '
             'TextEdit_ClientCode
             '
-            Me.TextEdit_ClientCode.Enabled = False
             Me.TextEdit_ClientCode.Location = New System.Drawing.Point(65, 47)
             Me.TextEdit_ClientCode.Name = "TextEdit_ClientCode"
             Me.TextEdit_ClientCode.Size = New System.Drawing.Size(119, 21)
@@ -465,7 +464,6 @@
             '
             'CalcEdit_UsePoint
             '
-            Me.CalcEdit_UsePoint.Enabled = False
             Me.CalcEdit_UsePoint.Location = New System.Drawing.Point(65, 112)
             Me.CalcEdit_UsePoint.Name = "CalcEdit_UsePoint"
             Me.CalcEdit_UsePoint.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
