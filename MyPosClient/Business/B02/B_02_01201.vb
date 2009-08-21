@@ -665,7 +665,7 @@ Namespace Business
             Try
 
 
-                Me._manifest.Label_AquiringPoints.Text = CommTK.FString(CommTK.FDecimal(Me._manifest.CalcEdit_UsePoint.EditValue) / CommTK.FDecimal(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_RMB_TO_POINTS_RATE)))
+                Me._manifest.Label_AquiringPoints.Text = CommTK.FString(CommTK.FDecimal(Me._manifest.CalcEdit_UsePoint.EditValue) / CommTK.FDecimal(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_POINTS_TO_RMB_RATE)))
 
                 'Dim servResult As String = _
                 '    Me._service.ServAquiringPoints()
