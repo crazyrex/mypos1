@@ -111,7 +111,8 @@ Namespace Manifest
 
             'Me.FormInputGuarder.SetValidate(Me.TextEdit_Input, InputGuarder.ValidateClassify.Required, Nothing)
 
-            'Me.FormInputGuarder.SetInputLinkedLabel(Me.ButtonEdit_Code, Me.Label_Name, Me.Label_ID)
+            Me.FormInputGuarder.SetInputLinkedLabel(Me.TextEdit_ClientCode, Me.Label_ClientName, Me.Label_ClientID)
+            'Me.FormInputGuarder.SetInputLinkedLabel(Me.ButtonEdit_WareCode, Me.Label_ClietName, Me.Label_WareID)
 
             'Me._bizAgent.SetDisableControlUnderRequest(Me.DisableControlUnderRequest)
 
@@ -807,6 +808,12 @@ Namespace Manifest
         Private Sub GridView_TurnoverDtl_FocusedRowChanged(ByVal sender As Object, ByVal e As DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs) Handles GridView_TurnoverDtl.FocusedRowChanged
             Me.DoPrivateUpdateSelectingRow()
 
+        End Sub
+
+        Private Sub TextEdit_ClientCode_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextEdit_ClientCode.KeyDown
+            If e.KeyCode = Keys.Enter Then
+                Me._bizAgent.DoRequest(Business.B_02_01101.Affairs.LoadClientInfoByCode, False)
+            End If
         End Sub
     End Class
 

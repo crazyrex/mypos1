@@ -72,7 +72,7 @@ Namespace Business
             LoadInfo
             SaveInfo
             LoadList
-            BizUtld0001
+            LoadClientInfoByCode
             BizUtld0002
             BizUtld0003
             BizUtld0004
@@ -97,22 +97,22 @@ Namespace Business
         Public Sub New(ByVal theManifest As XL.Win.Component.BaseForm)
             Me.New()
 
-            Me._manifest = CType(theManifest, Manifest.M_02_01101)     
+            Me._manifest = CType(theManifest, Manifest.M_02_01101)
 
-            Try                                                        
-                                                               
-                Me._service = MyPosXService.S_02_01101.GetInstance()     
+            Try
 
-            Catch ex As Exception                              
-                                                               
-                Window.XLMessageBox.ShowMessage( _             
-                    ex.Message, _                              
-                    Window.XLMessageBox.MessageType.Wrong, _   
-                    MessageBoxButtons.OK)                      
-                                                               
-                Me._manifest.Enabled = False                   
-                                                               
-            End Try                                            
+                Me._service = MyPosXService.S_02_01101.GetInstance()
+
+            Catch ex As Exception
+
+                Window.XLMessageBox.ShowMessage( _
+                    ex.Message, _
+                    Window.XLMessageBox.MessageType.Wrong, _
+                    MessageBoxButtons.OK)
+
+                Me._manifest.Enabled = False
+
+            End Try
         End Sub
 
 
@@ -162,33 +162,33 @@ Namespace Business
                     '-------------------------------------------------------------------
                     functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoInitDisplay)
 
-                Case Affairs.LoadInfo                                                             
-                                                                                                  
+                Case Affairs.LoadInfo
+
                     '                                                                             
                     '取到处理函数的结果，传入返回给Manifest的AgentResponse包                      
                     '-------------------------------------------------------------------          
                     functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoLoadInfo)
-                                                                                                  
-                Case Affairs.SaveInfo                                                             
-                                                                                                  
+
+                Case Affairs.SaveInfo
+
                     '                                                                             
                     '取到处理函数的结果，传入返回给Manifest的AgentResponse包                      
                     '-------------------------------------------------------------------          
                     functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoSaveInfo)
-                                                                                                  
-                Case Affairs.LoadList                                                             
-                                                                                                  
+
+                Case Affairs.LoadList
+
                     '                                                                             
                     '取到处理函数的结果，传入返回给Manifest的AgentResponse包                      
                     '-------------------------------------------------------------------          
                     functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoLoadList)
 
-                Case Affairs.BizUtld0001
+                Case Affairs.LoadClientInfoByCode
 
                     '
                     '取到处理函数的结果，传入返回给Manifest的AgentResponse包
                     '-------------------------------------------------------------------
-                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoBizUtld0001)
+                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoLoadClientInfoByCode)
 
                 Case Affairs.BizUtld0002
 
@@ -343,28 +343,28 @@ Namespace Business
         End Sub
 
 
-                Public Sub RequestCallback(ByVal ar As IAsyncResult)
+        Public Sub RequestCallback(ByVal ar As IAsyncResult)
 
-                    Dim affair As Affairs = CType(ar.AsyncState, Affairs)
-                    Dim result As New AgentResponse(affair)
+            Dim affair As Affairs = CType(ar.AsyncState, Affairs)
+            Dim result As New AgentResponse(affair)
 
-                    Dim operResult As String
+            Dim operResult As String
 
-                    Dim aResult As System.Runtime.Remoting.Messaging.AsyncResult = CType(ar, System.Runtime.Remoting.Messaging.AsyncResult)
-                    Dim functionHandle As XL.Win.StringFunctionTransaction = CType(aResult.AsyncDelegate, StringFunctionTransaction)
+            Dim aResult As System.Runtime.Remoting.Messaging.AsyncResult = CType(ar, System.Runtime.Remoting.Messaging.AsyncResult)
+            Dim functionHandle As XL.Win.StringFunctionTransaction = CType(aResult.AsyncDelegate, StringFunctionTransaction)
 
-                    operResult = functionHandle.EndInvoke(ar)
+            operResult = functionHandle.EndInvoke(ar)
 
-                    result.SetValue(WinDecl.RVN_SUCCEED, operResult)
-                    Me.UnmountRequestActionTitle(affair)
+            result.SetValue(WinDecl.RVN_SUCCEED, operResult)
+            Me.UnmountRequestActionTitle(affair)
 
-                    Me.DoResponse(result)
+            Me.DoResponse(result)
 
-                End Sub
+        End Sub
 
 #End Region
 
-#Region"Transaction Modules"
+#Region "Transaction Modules"
         '''Function remark:
         '''
         '''
@@ -376,7 +376,7 @@ Namespace Business
 
 
 
-                                                                                                                      
+
                 'Dim choosePurchaseWayList As New MyPosXAuto.FTs.FT_CIV_PURCHASE_WAY                                       
                 'Dim chooseAssetAbsentTypeList As New MyPosXAuto.FTs.FT_CIV_ASSET_ABSENT_TYPE                              
                 'Dim chooseAssetConformationList As New MyPosXAuto.FTs.FT_CIV_ASSET_CONFORMATION                           
@@ -422,18 +422,18 @@ Namespace Business
 
             Catch ex As XL.Common.Utils.XLException
 
-                Dim logContentBuilder As New LineStrBuilder  
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)     
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
- 
+
                 WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
- 
+
                 Return ex.Message
 
-             Catch ex As Exception
+            Catch ex As Exception
 
                 Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message) 
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
 
                 WinTK.OutputLog("Exception occured", logContentBuilder.ToString())
@@ -451,99 +451,99 @@ Namespace Business
         '''                                                                         
         '''                                                                         
         '''-------------------------------------------------------------------      
-        Private Function DoLoadInfo() As String                                     
-                                                                                    
-                                                                                    
-            Try                                                                     
-                                                                                    
-                                                                                    
+        Private Function DoLoadInfo() As String
+
+
+            Try
+
+
                 'Dim servResult As String = _                                       
                 '    Me._service.ServLoadInfo()                                     
-                                                                                    
+
                 'If servResult.Length > 0 Then                                      
                 '    Return servResult                                              
                 'End If                                                             
-                                                                                    
-            Catch ex As XL.Common.Utils.XLException                                 
-                                                                                    
-                Dim logContentBuilder As New LineStrBuilder                         
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)        
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace) 
-                                                                                    
-                WinTK.OutputLog("XL Exception", logContentBuilder.ToString())     
-                                                                                    
-                Return ex.Message                                                   
-                                                                                    
-            Catch ex As Exception                                                   
-                                                                                    
-                Dim logContentBuilder As New LineStrBuilder                         
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)        
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace) 
-                                                                                    
+
+            Catch ex As XL.Common.Utils.XLException
+
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
+                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+                WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
+
+                Return ex.Message
+
+            Catch ex As Exception
+
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
+                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
                 WinTK.OutputLog("Exception occured", logContentBuilder.ToString())
-                                                                                    
-                XL.Win.Window.XLMessageBox.UseSmallFont = True                      
-                Return ex.Message & vbNewLine & ex.StackTrace.ToString()            
-                                                                                    
-            End Try                                                                 
-                                                                                    
-            Return String.Empty                                                     
-                                                                                    
-        End Function                                                                
-                                                                                    
+
+                XL.Win.Window.XLMessageBox.UseSmallFont = True
+                Return ex.Message & vbNewLine & ex.StackTrace.ToString()
+
+            End Try
+
+            Return String.Empty
+
+        End Function
+
         '''Function remark:                                                         
         '''                                                                         
         '''                                                                         
         '''-------------------------------------------------------------------      
-        Private Function DoSaveInfo() As String                                     
-                                                                                    
-                                                                                    
-            Try                                                                     
-                                                                                    
-                                                                                    
+        Private Function DoSaveInfo() As String
+
+
+            Try
+
+
                 'Dim servResult As String = _                                       
                 '    Me._service.ServSaveInfo()                                     
-                                                                                    
+
                 'If servResult.Length > 0 Then                                      
                 '    Return servResult                                              
                 'End If                                                             
-                                                                                    
-            Catch ex As XL.Common.Utils.XLException                                 
-                                                                                    
-                Dim logContentBuilder As New LineStrBuilder                         
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)        
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace) 
-                                                                                    
-                WinTK.OutputLog("XL Exception", logContentBuilder.ToString())     
-                                                                                    
-                Return ex.Message                                                   
-                                                                                    
-            Catch ex As Exception                                                   
-                                                                                    
-                Dim logContentBuilder As New LineStrBuilder                         
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)        
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace) 
-                                                                                    
+
+            Catch ex As XL.Common.Utils.XLException
+
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
+                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+                WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
+
+                Return ex.Message
+
+            Catch ex As Exception
+
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
+                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
                 WinTK.OutputLog("Exception occured", logContentBuilder.ToString())
-                                                                                    
-                XL.Win.Window.XLMessageBox.UseSmallFont = True                      
-                Return ex.Message & vbNewLine & ex.StackTrace.ToString()            
-                                                                                    
-            End Try                                                                 
-                                                                                    
-            Return String.Empty                                                     
-                                                                                    
-        End Function                                                                
-                                                                                    
+
+                XL.Win.Window.XLMessageBox.UseSmallFont = True
+                Return ex.Message & vbNewLine & ex.StackTrace.ToString()
+
+            End Try
+
+            Return String.Empty
+
+        End Function
+
         '''Function remark:                                                         
         '''                                                                         
         '''                                                                         
         '''-------------------------------------------------------------------      
-        Private Function DoLoadList() As String                                     
-                                                                                    
-                                                                                    
-            Try                                                                     
-                                                                                    
+        Private Function DoLoadList() As String
+
+
+            Try
+
                 Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.Clear()
 
                 MyPosXAuto.Facade.AfXV.FillFT_XV_H_MP_TURNOVER_DTL(Nothing, Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST)
@@ -552,69 +552,88 @@ Namespace Business
 
                 'Dim servResult As String = _                                       
                 '    Me._service.ServLoadList()                                     
-                                                                                    
+
                 'If servResult.Length > 0 Then                                      
                 '    Return servResult                                              
                 'End If                                                             
-                                                                                    
-            Catch ex As XL.Common.Utils.XLException                                 
-                                                                                    
-                Dim logContentBuilder As New LineStrBuilder                         
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)        
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace) 
-                                                                                    
-                WinTK.OutputLog("XL Exception", logContentBuilder.ToString())     
-                                                                                    
-                Return ex.Message                                                   
-                                                                                    
-            Catch ex As Exception                                                   
-                                                                                    
-                Dim logContentBuilder As New LineStrBuilder                         
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)        
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace) 
-                                                                                    
+
+            Catch ex As XL.Common.Utils.XLException
+
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
+                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+                WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
+
+                Return ex.Message
+
+            Catch ex As Exception
+
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
+                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
                 WinTK.OutputLog("Exception occured", logContentBuilder.ToString())
-                                                                                    
-                XL.Win.Window.XLMessageBox.UseSmallFont = True                      
-                Return ex.Message & vbNewLine & ex.StackTrace.ToString()            
-                                                                                    
-            End Try                                                                 
-                                                                                    
-            Return String.Empty                                                     
-                                                                                    
-        End Function                                                                
+
+                XL.Win.Window.XLMessageBox.UseSmallFont = True
+                Return ex.Message & vbNewLine & ex.StackTrace.ToString()
+
+            End Try
+
+            Return String.Empty
+
+        End Function
 
         '''Function remark:
         '''
         '''
         '''-------------------------------------------------------------------
-        Private Function DoBizUtld0001() As String
+        Private Function DoLoadClientInfoByCode() As String
 
 
             Try
 
+                If Me._manifest.TextEdit_ClientCode.Text.Trim.Length = 0 Then
+                    Return String.Empty
+                End If
 
-            'Dim servResult As String = _
-            '    Me._service.ServBizUtld0001()
+                Dim clientRowSE As New MyPosXAuto.FTs.FT_M_MP_CLIENTRowSEntity
+                Dim clientConditions As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_MP_CLIENT(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_Or)
+                clientConditions.Add(MyPosXAuto.Facade.AfBizMaster.M_MP_CLIENTColumns.CLIENT_CODEColumn, "=", Me._manifest.TextEdit_ClientCode.Text)
+                clientConditions.Add(MyPosXAuto.Facade.AfBizMaster.M_MP_CLIENTColumns.CLIENT_NAMEColumn, "=", Me._manifest.TextEdit_ClientCode.Text)
 
-            'If servResult.Length > 0 Then
-            '    Return servResult        
-            'End If                       
+                MyPosXAuto.Facade.AfBizMaster.FillM_MP_CLIENTRowSEntity(clientRowSE, clientConditions)
+
+                If clientRowSE.IsNull = True Then
+                    Return MyPosXService.Decls.MSG_ALERT_00008
+                End If
+
+                Me._manifest.TextEdit_ClientCode.Text = clientRowSE.CLIENT_CODE
+                Me._manifest.Label_ClientName.Text = clientRowSE.CLIENT_NAME
+                Me._manifest.Label_ClientID.Text = clientRowSE.CLIENT_ID
+
+
+                'Dim servResult As String = _
+                '    Me._service.ServLoadClientInfoByCode()
+
+                'If servResult.Length > 0 Then
+                '    Return servResult        
+                'End If                       
 
             Catch ex As XL.Common.Utils.XLException
 
-                Dim logContentBuilder As New LineStrBuilder  
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)     
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
- 
+
                 WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
- 
+
                 Return ex.Message
 
-             Catch ex As Exception
+            Catch ex As Exception
 
                 Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message) 
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
 
                 WinTK.OutputLog("Exception occured", logContentBuilder.ToString())
@@ -638,27 +657,27 @@ Namespace Business
             Try
 
 
-            'Dim servResult As String = _
-            '    Me._service.ServBizUtld0002()
+                'Dim servResult As String = _
+                '    Me._service.ServBizUtld0002()
 
-            'If servResult.Length > 0 Then
-            '    Return servResult        
-            'End If                       
+                'If servResult.Length > 0 Then
+                '    Return servResult        
+                'End If                       
 
             Catch ex As XL.Common.Utils.XLException
 
-                Dim logContentBuilder As New LineStrBuilder  
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)     
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
- 
+
                 WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
- 
+
                 Return ex.Message
 
-             Catch ex As Exception
+            Catch ex As Exception
 
                 Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message) 
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
 
                 WinTK.OutputLog("Exception occured", logContentBuilder.ToString())
@@ -682,27 +701,27 @@ Namespace Business
             Try
 
 
-            'Dim servResult As String = _
-            '    Me._service.ServBizUtld0003()
+                'Dim servResult As String = _
+                '    Me._service.ServBizUtld0003()
 
-            'If servResult.Length > 0 Then
-            '    Return servResult        
-            'End If                       
+                'If servResult.Length > 0 Then
+                '    Return servResult        
+                'End If                       
 
             Catch ex As XL.Common.Utils.XLException
 
-                Dim logContentBuilder As New LineStrBuilder  
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)     
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
- 
+
                 WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
- 
+
                 Return ex.Message
 
-             Catch ex As Exception
+            Catch ex As Exception
 
                 Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message) 
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
 
                 WinTK.OutputLog("Exception occured", logContentBuilder.ToString())
@@ -726,27 +745,27 @@ Namespace Business
             Try
 
 
-            'Dim servResult As String = _
-            '    Me._service.ServBizUtld0004()
+                'Dim servResult As String = _
+                '    Me._service.ServBizUtld0004()
 
-            'If servResult.Length > 0 Then
-            '    Return servResult        
-            'End If                       
+                'If servResult.Length > 0 Then
+                '    Return servResult        
+                'End If                       
 
             Catch ex As XL.Common.Utils.XLException
 
-                Dim logContentBuilder As New LineStrBuilder  
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)     
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
- 
+
                 WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
- 
+
                 Return ex.Message
 
-             Catch ex As Exception
+            Catch ex As Exception
 
                 Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message) 
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
 
                 WinTK.OutputLog("Exception occured", logContentBuilder.ToString())
@@ -770,27 +789,27 @@ Namespace Business
             Try
 
 
-            'Dim servResult As String = _
-            '    Me._service.ServBizUtld0005()
+                'Dim servResult As String = _
+                '    Me._service.ServBizUtld0005()
 
-            'If servResult.Length > 0 Then
-            '    Return servResult        
-            'End If                       
+                'If servResult.Length > 0 Then
+                '    Return servResult        
+                'End If                       
 
             Catch ex As XL.Common.Utils.XLException
 
-                Dim logContentBuilder As New LineStrBuilder  
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)     
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
- 
+
                 WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
- 
+
                 Return ex.Message
 
-             Catch ex As Exception
+            Catch ex As Exception
 
                 Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message) 
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
 
                 WinTK.OutputLog("Exception occured", logContentBuilder.ToString())
@@ -814,27 +833,27 @@ Namespace Business
             Try
 
 
-            'Dim servResult As String = _
-            '    Me._service.ServBizUtld0006()
+                'Dim servResult As String = _
+                '    Me._service.ServBizUtld0006()
 
-            'If servResult.Length > 0 Then
-            '    Return servResult        
-            'End If                       
+                'If servResult.Length > 0 Then
+                '    Return servResult        
+                'End If                       
 
             Catch ex As XL.Common.Utils.XLException
 
-                Dim logContentBuilder As New LineStrBuilder  
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)     
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
- 
+
                 WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
- 
+
                 Return ex.Message
 
-             Catch ex As Exception
+            Catch ex As Exception
 
                 Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message) 
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
 
                 WinTK.OutputLog("Exception occured", logContentBuilder.ToString())
@@ -858,27 +877,27 @@ Namespace Business
             Try
 
 
-            'Dim servResult As String = _
-            '    Me._service.ServBizUtld0007()
+                'Dim servResult As String = _
+                '    Me._service.ServBizUtld0007()
 
-            'If servResult.Length > 0 Then
-            '    Return servResult        
-            'End If                       
+                'If servResult.Length > 0 Then
+                '    Return servResult        
+                'End If                       
 
             Catch ex As XL.Common.Utils.XLException
 
-                Dim logContentBuilder As New LineStrBuilder  
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)     
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
- 
+
                 WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
- 
+
                 Return ex.Message
 
-             Catch ex As Exception
+            Catch ex As Exception
 
                 Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message) 
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
 
                 WinTK.OutputLog("Exception occured", logContentBuilder.ToString())
@@ -902,27 +921,27 @@ Namespace Business
             Try
 
 
-            'Dim servResult As String = _
-            '    Me._service.ServBizUtld0008()
+                'Dim servResult As String = _
+                '    Me._service.ServBizUtld0008()
 
-            'If servResult.Length > 0 Then
-            '    Return servResult        
-            'End If                       
+                'If servResult.Length > 0 Then
+                '    Return servResult        
+                'End If                       
 
             Catch ex As XL.Common.Utils.XLException
 
-                Dim logContentBuilder As New LineStrBuilder  
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)     
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
- 
+
                 WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
- 
+
                 Return ex.Message
 
-             Catch ex As Exception
+            Catch ex As Exception
 
                 Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message) 
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
 
                 WinTK.OutputLog("Exception occured", logContentBuilder.ToString())
@@ -946,27 +965,27 @@ Namespace Business
             Try
 
 
-            'Dim servResult As String = _
-            '    Me._service.ServBizUtld0009()
+                'Dim servResult As String = _
+                '    Me._service.ServBizUtld0009()
 
-            'If servResult.Length > 0 Then
-            '    Return servResult        
-            'End If                       
+                'If servResult.Length > 0 Then
+                '    Return servResult        
+                'End If                       
 
             Catch ex As XL.Common.Utils.XLException
 
-                Dim logContentBuilder As New LineStrBuilder  
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)     
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
- 
+
                 WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
- 
+
                 Return ex.Message
 
-             Catch ex As Exception
+            Catch ex As Exception
 
                 Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message) 
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
 
                 WinTK.OutputLog("Exception occured", logContentBuilder.ToString())
@@ -990,27 +1009,27 @@ Namespace Business
             Try
 
 
-            'Dim servResult As String = _
-            '    Me._service.ServBizUtld0010()
+                'Dim servResult As String = _
+                '    Me._service.ServBizUtld0010()
 
-            'If servResult.Length > 0 Then
-            '    Return servResult        
-            'End If                       
+                'If servResult.Length > 0 Then
+                '    Return servResult        
+                'End If                       
 
             Catch ex As XL.Common.Utils.XLException
 
-                Dim logContentBuilder As New LineStrBuilder  
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)     
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
- 
+
                 WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
- 
+
                 Return ex.Message
 
-             Catch ex As Exception
+            Catch ex As Exception
 
                 Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message) 
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
 
                 WinTK.OutputLog("Exception occured", logContentBuilder.ToString())
@@ -1034,27 +1053,27 @@ Namespace Business
             Try
 
 
-            'Dim servResult As String = _
-            '    Me._service.ServBizUtld0011()
+                'Dim servResult As String = _
+                '    Me._service.ServBizUtld0011()
 
-            'If servResult.Length > 0 Then
-            '    Return servResult        
-            'End If                       
+                'If servResult.Length > 0 Then
+                '    Return servResult        
+                'End If                       
 
             Catch ex As XL.Common.Utils.XLException
 
-                Dim logContentBuilder As New LineStrBuilder  
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)     
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
- 
+
                 WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
- 
+
                 Return ex.Message
 
-             Catch ex As Exception
+            Catch ex As Exception
 
                 Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message) 
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
 
                 WinTK.OutputLog("Exception occured", logContentBuilder.ToString())
@@ -1078,27 +1097,27 @@ Namespace Business
             Try
 
 
-            'Dim servResult As String = _
-            '    Me._service.ServBizUtld0012()
+                'Dim servResult As String = _
+                '    Me._service.ServBizUtld0012()
 
-            'If servResult.Length > 0 Then
-            '    Return servResult        
-            'End If                       
+                'If servResult.Length > 0 Then
+                '    Return servResult        
+                'End If                       
 
             Catch ex As XL.Common.Utils.XLException
 
-                Dim logContentBuilder As New LineStrBuilder  
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)     
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
- 
+
                 WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
- 
+
                 Return ex.Message
 
-             Catch ex As Exception
+            Catch ex As Exception
 
                 Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message) 
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
 
                 WinTK.OutputLog("Exception occured", logContentBuilder.ToString())
@@ -1122,27 +1141,27 @@ Namespace Business
             Try
 
 
-            'Dim servResult As String = _
-            '    Me._service.ServBizUtld0013()
+                'Dim servResult As String = _
+                '    Me._service.ServBizUtld0013()
 
-            'If servResult.Length > 0 Then
-            '    Return servResult        
-            'End If                       
+                'If servResult.Length > 0 Then
+                '    Return servResult        
+                'End If                       
 
             Catch ex As XL.Common.Utils.XLException
 
-                Dim logContentBuilder As New LineStrBuilder  
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)     
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
- 
+
                 WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
- 
+
                 Return ex.Message
 
-             Catch ex As Exception
+            Catch ex As Exception
 
                 Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message) 
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
 
                 WinTK.OutputLog("Exception occured", logContentBuilder.ToString())
@@ -1166,27 +1185,27 @@ Namespace Business
             Try
 
 
-            'Dim servResult As String = _
-            '    Me._service.ServBizUtld0014()
+                'Dim servResult As String = _
+                '    Me._service.ServBizUtld0014()
 
-            'If servResult.Length > 0 Then
-            '    Return servResult        
-            'End If                       
+                'If servResult.Length > 0 Then
+                '    Return servResult        
+                'End If                       
 
             Catch ex As XL.Common.Utils.XLException
 
-                Dim logContentBuilder As New LineStrBuilder  
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)     
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
- 
+
                 WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
- 
+
                 Return ex.Message
 
-             Catch ex As Exception
+            Catch ex As Exception
 
                 Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message) 
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
 
                 WinTK.OutputLog("Exception occured", logContentBuilder.ToString())
@@ -1210,27 +1229,27 @@ Namespace Business
             Try
 
 
-            'Dim servResult As String = _
-            '    Me._service.ServBizUtld0015()
+                'Dim servResult As String = _
+                '    Me._service.ServBizUtld0015()
 
-            'If servResult.Length > 0 Then
-            '    Return servResult        
-            'End If                       
+                'If servResult.Length > 0 Then
+                '    Return servResult        
+                'End If                       
 
             Catch ex As XL.Common.Utils.XLException
 
-                Dim logContentBuilder As New LineStrBuilder  
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)     
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
- 
+
                 WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
- 
+
                 Return ex.Message
 
-             Catch ex As Exception
+            Catch ex As Exception
 
                 Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message) 
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
 
                 WinTK.OutputLog("Exception occured", logContentBuilder.ToString())
@@ -1254,27 +1273,27 @@ Namespace Business
             Try
 
 
-            'Dim servResult As String = _
-            '    Me._service.ServBizUtld0016()
+                'Dim servResult As String = _
+                '    Me._service.ServBizUtld0016()
 
-            'If servResult.Length > 0 Then
-            '    Return servResult        
-            'End If                       
+                'If servResult.Length > 0 Then
+                '    Return servResult        
+                'End If                       
 
             Catch ex As XL.Common.Utils.XLException
 
-                Dim logContentBuilder As New LineStrBuilder  
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)     
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
- 
+
                 WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
- 
+
                 Return ex.Message
 
-             Catch ex As Exception
+            Catch ex As Exception
 
                 Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message) 
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
 
                 WinTK.OutputLog("Exception occured", logContentBuilder.ToString())
@@ -1298,27 +1317,27 @@ Namespace Business
             Try
 
 
-            'Dim servResult As String = _
-            '    Me._service.ServBizUtld0017()
+                'Dim servResult As String = _
+                '    Me._service.ServBizUtld0017()
 
-            'If servResult.Length > 0 Then
-            '    Return servResult        
-            'End If                       
+                'If servResult.Length > 0 Then
+                '    Return servResult        
+                'End If                       
 
             Catch ex As XL.Common.Utils.XLException
 
-                Dim logContentBuilder As New LineStrBuilder  
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)     
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
- 
+
                 WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
- 
+
                 Return ex.Message
 
-             Catch ex As Exception
+            Catch ex As Exception
 
                 Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message) 
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
 
                 WinTK.OutputLog("Exception occured", logContentBuilder.ToString())
@@ -1342,27 +1361,27 @@ Namespace Business
             Try
 
 
-            'Dim servResult As String = _
-            '    Me._service.ServBizUtld0018()
+                'Dim servResult As String = _
+                '    Me._service.ServBizUtld0018()
 
-            'If servResult.Length > 0 Then
-            '    Return servResult        
-            'End If                       
+                'If servResult.Length > 0 Then
+                '    Return servResult        
+                'End If                       
 
             Catch ex As XL.Common.Utils.XLException
 
-                Dim logContentBuilder As New LineStrBuilder  
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)     
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
- 
+
                 WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
- 
+
                 Return ex.Message
 
-             Catch ex As Exception
+            Catch ex As Exception
 
                 Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message) 
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
 
                 WinTK.OutputLog("Exception occured", logContentBuilder.ToString())
@@ -1386,27 +1405,27 @@ Namespace Business
             Try
 
 
-            'Dim servResult As String = _
-            '    Me._service.ServBizUtld0019()
+                'Dim servResult As String = _
+                '    Me._service.ServBizUtld0019()
 
-            'If servResult.Length > 0 Then
-            '    Return servResult        
-            'End If                       
+                'If servResult.Length > 0 Then
+                '    Return servResult        
+                'End If                       
 
             Catch ex As XL.Common.Utils.XLException
 
-                Dim logContentBuilder As New LineStrBuilder  
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)     
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
- 
+
                 WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
- 
+
                 Return ex.Message
 
-             Catch ex As Exception
+            Catch ex As Exception
 
                 Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message) 
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
 
                 WinTK.OutputLog("Exception occured", logContentBuilder.ToString())
@@ -1430,27 +1449,27 @@ Namespace Business
             Try
 
 
-            'Dim servResult As String = _
-            '    Me._service.ServBizUtld0020()
+                'Dim servResult As String = _
+                '    Me._service.ServBizUtld0020()
 
-            'If servResult.Length > 0 Then
-            '    Return servResult        
-            'End If                       
+                'If servResult.Length > 0 Then
+                '    Return servResult        
+                'End If                       
 
             Catch ex As XL.Common.Utils.XLException
 
-                Dim logContentBuilder As New LineStrBuilder  
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)     
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
- 
+
                 WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
- 
+
                 Return ex.Message
 
-             Catch ex As Exception
+            Catch ex As Exception
 
                 Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message) 
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
                 logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
 
                 WinTK.OutputLog("Exception occured", logContentBuilder.ToString())
