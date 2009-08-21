@@ -544,7 +544,12 @@ Namespace Business
                                                                                     
             Try                                                                     
                                                                                     
-                                                                                    
+                Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.Clear()
+
+                MyPosXAuto.Facade.AfXV.FillFT_XV_H_MP_TURNOVER_DTL(Nothing, Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST)
+
+                Me._manifest.GridControl_TurnoverDtl.DataSource = Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST
+
                 'Dim servResult As String = _                                       
                 '    Me._service.ServLoadList()                                     
                                                                                     

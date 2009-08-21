@@ -45,10 +45,11 @@ Namespace Manifest
         'Public SVLM_UTLD_0002 As String ="SVLM_UTLD_0002"
 
         '数据列表变量
+        Public SVFT_BINDING_TURNOVER_DTL_LIST As New MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTL
         'Public SVFT_BINDING_XXX_LIST As New XAuto.FTs.FT_
         'Public SVFT_CHOOSE_XXX_LIST As New XAuto.FTs.FT_
 
-        'Public SVFR_SELECTING_XXX_ROW As XAuto.FTs.FT_ Row
+        Public SVFR_SELECTING_ROW As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow
 
         #End Region
 
@@ -124,7 +125,7 @@ Namespace Manifest
                 Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Add, AddressOf Me.TbActionAdd)
                 Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Remove, AddressOf Me.TbActionRemove)
                 Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Close, AddressOf Me.TbActionClose)
-                'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0001, AddressOf Me.TbActionUtld0001)
+            Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Refresh, AddressOf Me.TbActionRefresh)
                 'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0002, AddressOf Me.TbActionUtld0002)
                 'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0003, AddressOf Me.TbActionUtld0003)
                 'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0004, AddressOf Me.TbActionUtld0004)
@@ -300,7 +301,7 @@ Namespace Manifest
         Public Overrides Sub UpdateDisplay()
 
             'Me._bizAgent.DoRequest(Business.B_0X_00XXX.Affairs.LoadInfo, False)
-            'Me._bizAgent.DoRequest(Business.B_0X_00XXX.Affairs.LoadList, False)
+            Me._bizAgent.DoRequest(Business.B_02_01101.Affairs.LoadList, False)
 
         End Sub
 
@@ -354,11 +355,11 @@ Namespace Manifest
                 'Case Business.B_01_00201.Affairs.DeleteInfo
                 '    Me.UpdateDisplay()                     
 
-                'Case Business.B_02_00201.Affairs.LoadList             
-                '    Me.DoPrivateUpdateSelectingRow()               
-                '    Me.GridView_XXXXXList.BestFitColumns()         
+                Case Business.B_02_01101.Affairs.LoadList
+                    Me.DoPrivateUpdateSelectingRow()
+                    Me.GridView_TurnoverDtl.BestFitColumns()
 
-                'Case Business.B_02_00202.Affairs.SaveInfo             
+                    'Case Business.B_02_00202.Affairs.SaveInfo             
                     'Window.XLMessageBox.ShowMessage( _                
                     '    MyPosXService.Decls.MSG_OK_00001, _                
                     '    Window.XLMessageBox.MessageType.Information, _
@@ -447,7 +448,8 @@ Namespace Manifest
         End Sub
 
 
-        Private Sub TbActionUtld0001()
+        Private Sub TbActionRefresh()
+            Me.UpdateDisplay()
 
         End Sub
 
@@ -555,21 +557,21 @@ Namespace Manifest
         Private Sub DoPrivateUpdateSelectingRow()
 
 
-            'Me.SVFR_SELECTING_ROW = Nothing                          
-            '                                                         
-            'Me.ToolStripButton_Delete.Enabled = False                
-            'Me.ToolStripButton_Revise.Enabled = False                
-            '                                                         
-            'If Me.GridView_BranchList.RowCount > 0 Then              
-            '    Me.SVFR_SELECTING_ROW = _                            
-            '        CType(Me.GridView_BindingList.GetDataRow( _      
-            '            Me.GridView_BindingList.FocusedRowHandle),  _
-            '            XAuto.FTs.FT_Row)                            
-            '                                                         
-            '    Me.ToolStripButton_Delete.Enabled = True             
-            '    Me.ToolStripButton_Revise.Enabled = True             
-            '                                                         
-            'End If                                                   
+            Me.SVFR_SELECTING_ROW = Nothing
+
+            'Me.ToolStripButton_Delete.Enabled = False
+            'Me.ToolStripButton_Revise.Enabled = False
+
+            If Me.GridView_TurnoverDtl.RowCount > 0 Then
+                Me.SVFR_SELECTING_ROW = _
+                    CType(Me.GridView_TurnoverDtl.GetDataRow( _
+                        Me.GridView_TurnoverDtl.FocusedRowHandle),  _
+                        MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow)
+
+                'Me.ToolStripButton_Delete.Enabled = True
+                'Me.ToolStripButton_Revise.Enabled = True
+
+            End If
 
 
 
@@ -802,6 +804,10 @@ Namespace Manifest
 
 #End Region
 
+        Private Sub GridView_TurnoverDtl_FocusedRowChanged(ByVal sender As Object, ByVal e As DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs) Handles GridView_TurnoverDtl.FocusedRowChanged
+            Me.DoPrivateUpdateSelectingRow()
+
+        End Sub
     End Class
 
 
