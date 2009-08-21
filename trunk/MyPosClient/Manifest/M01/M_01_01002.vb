@@ -961,6 +961,14 @@ Namespace Manifest
         Private Sub LinkLabel_CancelAll_LinkClicked(ByVal sender As Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel_CancelAll.LinkClicked
             Me.SVFT_BINDING_LIST.UnselectAllRows()
         End Sub
+
+        Private Sub RepositoryItemSpinEdit_ExchangePoitsAmount_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemSpinEdit_ExchangePoitsAmount.EditValueChanged
+         
+            Dim spinEdit As DevExpress.XtraEditors.SpinEdit = CType(sender, DevExpress.XtraEditors.SpinEdit)
+
+            Me.SVFR_SELECTING_ROW.EXCHANGE_POINTS_AMOUNT = CommTK.FInteger(spinEdit.Value)
+
+        End Sub
     End Class
 
 
