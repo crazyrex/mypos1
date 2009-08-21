@@ -109,8 +109,22 @@ Namespace Manifest
 #Region "Basic overrides"
 
         Protected Overrides Sub IA_InitBeforeRC()
+            'Me.SetKeyJumpCycle( _
+            '    Keys.F3, _
+            '    False, _
+            '    Me.CalcEdit_ExtraDiscount, _
+            '    Me.CalcEdit_Payment, _
+            '    Me.CheckEdit_IsClient, _
+            '    Me.TextEdit_ClientCode, _
+            '    Me.CalcEdit_UsePoint)
 
-            Me.SetKeyJumpCycle(Keys.Enter, True)
+            Me.SetKeyDownJumpSequence(Keys.F3, _
+                Me.CalcEdit_ExtraDiscount, _
+                Me.CalcEdit_Payment, _
+                Me.CheckEdit_IsClient, _
+                Me.TextEdit_ClientCode, _
+                Me.CalcEdit_UsePoint)
+
             Me.SetValueEditControls()
             'Me.SetToolStripButtonFunctionKey(Me.ToolStripButton_Close, Keys.F12)
 
@@ -297,8 +311,23 @@ Namespace Manifest
 
         Public Overrides Sub KeyDownProcess(ByVal e As System.Windows.Forms.KeyEventArgs)
             Select Case e.KeyCode
-                Case Keys.F4
-                    Me.DoPrivateFocusToAmount()
+                Case Keys.F1
+                    Me.ButtonEdit_WareCode.Select()
+
+                Case Keys.F2
+                    Me.SpinEdit_WareAmount.Select()
+
+                Case Keys.F3
+                    Me.CalcEdit_ExtraDiscount.Select()
+
+                Case Keys.F7
+                    Me.RadioGroup_UnitDiscountType.EditValue = 1
+                    Me.CalcEdit_DiscountAmount.Select()
+
+                Case Keys.F8
+                    Me.RadioGroup_UnitDiscountType.EditValue = 2
+                    Me.CalcEdit_DiscountAmount.Select()
+
             End Select
         End Sub
 
@@ -794,18 +823,6 @@ Namespace Manifest
 
         End Sub
 
-
-        Private Sub DoPrivateFocusToAmount()
-            If Me.Label_WareID.Text.Length = 0 Then
-                Me.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0020)
-                Me.ButtonEdit_WareCode.SelectAll()
-                Me.ButtonEdit_WareCode.Select()
-                Return
-            End If
-
-            Me.SpinEdit_WareAmount.Select()
-
-        End Sub
 
 
         Private Sub DoPrivateSelectRowByWareCode()

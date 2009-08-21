@@ -369,7 +369,7 @@
             Me.GroupControl3.Name = "GroupControl3"
             Me.GroupControl3.Size = New System.Drawing.Size(187, 187)
             Me.GroupControl3.TabIndex = 10006
-            Me.GroupControl3.Text = "当前交易"
+            Me.GroupControl3.Text = "当前交易(F3)"
             '
             'CalcEdit_Payment
             '
@@ -780,7 +780,7 @@
             Me.GroupControl2.Name = "GroupControl2"
             Me.GroupControl2.Size = New System.Drawing.Size(187, 174)
             Me.GroupControl2.TabIndex = 10004
-            Me.GroupControl2.Text = "会员情况"
+            Me.GroupControl2.Text = "会员情况(F3)"
             '
             'Label_HintGainPoint
             '
@@ -1606,10 +1606,10 @@
             '
             'RadioGroup_UnitDiscountType
             '
-            Me.RadioGroup_UnitDiscountType.Location = New System.Drawing.Point(59, 3)
+            Me.RadioGroup_UnitDiscountType.Location = New System.Drawing.Point(86, 3)
             Me.RadioGroup_UnitDiscountType.Name = "RadioGroup_UnitDiscountType"
-            Me.RadioGroup_UnitDiscountType.Properties.Items.AddRange(New DevExpress.XtraEditors.Controls.RadioGroupItem() {New DevExpress.XtraEditors.Controls.RadioGroupItem(1, "按比例"), New DevExpress.XtraEditors.Controls.RadioGroupItem(2, "按金额")})
-            Me.RadioGroup_UnitDiscountType.Size = New System.Drawing.Size(180, 24)
+            Me.RadioGroup_UnitDiscountType.Properties.Items.AddRange(New DevExpress.XtraEditors.Controls.RadioGroupItem() {New DevExpress.XtraEditors.Controls.RadioGroupItem(1, "按比例(F7)"), New DevExpress.XtraEditors.Controls.RadioGroupItem(2, "按金额(F8)")})
+            Me.RadioGroup_UnitDiscountType.Size = New System.Drawing.Size(192, 24)
             Me.RadioGroup_UnitDiscountType.TabIndex = 10005
             CTag25.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag25.CalculatorRequired = True
@@ -1638,10 +1638,10 @@
             '
             'CalcEdit_DiscountAmount
             '
-            Me.CalcEdit_DiscountAmount.Location = New System.Drawing.Point(245, 5)
+            Me.CalcEdit_DiscountAmount.Location = New System.Drawing.Point(284, 5)
             Me.CalcEdit_DiscountAmount.Name = "CalcEdit_DiscountAmount"
             Me.CalcEdit_DiscountAmount.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-            Me.CalcEdit_DiscountAmount.Size = New System.Drawing.Size(121, 20)
+            Me.CalcEdit_DiscountAmount.Size = New System.Drawing.Size(82, 20)
             Me.CalcEdit_DiscountAmount.TabIndex = 10004
             CTag26.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag26.CalculatorRequired = True
@@ -1706,10 +1706,10 @@
             'SpinEdit_WareAmount
             '
             Me.SpinEdit_WareAmount.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
-            Me.SpinEdit_WareAmount.Location = New System.Drawing.Point(247, 11)
+            Me.SpinEdit_WareAmount.Location = New System.Drawing.Point(285, 11)
             Me.SpinEdit_WareAmount.Name = "SpinEdit_WareAmount"
             Me.SpinEdit_WareAmount.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
-            Me.SpinEdit_WareAmount.Size = New System.Drawing.Size(121, 20)
+            Me.SpinEdit_WareAmount.Size = New System.Drawing.Size(83, 20)
             Me.SpinEdit_WareAmount.TabIndex = 10001
             CTag29.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag29.CalculatorRequired = True
@@ -1738,7 +1738,7 @@
             '
             'ButtonEdit_WareCode
             '
-            Me.ButtonEdit_WareCode.Location = New System.Drawing.Point(61, 12)
+            Me.ButtonEdit_WareCode.Location = New System.Drawing.Point(87, 10)
             Me.ButtonEdit_WareCode.Name = "ButtonEdit_WareCode"
             Me.ButtonEdit_WareCode.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
             Me.ButtonEdit_WareCode.Size = New System.Drawing.Size(121, 20)
@@ -1851,7 +1851,7 @@
             Me.Label1.Font = New System.Drawing.Font("Arial", 9.0!)
             Me.Label1.ForeColor = System.Drawing.Color.Black
             Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.Label1.Location = New System.Drawing.Point(188, 14)
+            Me.Label1.Location = New System.Drawing.Point(226, 13)
             Me.Label1.Name = "Label1"
             Me.Label1.Size = New System.Drawing.Size(53, 15)
             Me.Label1.TabIndex = 10000
@@ -1879,7 +1879,7 @@
             CTag33.ToolTip = ""
             CTag33.ValueType = XL.Common.ControlValueType.Character
             Me.Label1.Tag = CTag33
-            Me.Label1.Text = "数量(F4)"
+            Me.Label1.Text = "数量(F2)"
             '
             'Label18
             '
@@ -1890,7 +1890,7 @@
             Me.Label18.ImeMode = System.Windows.Forms.ImeMode.NoControl
             Me.Label18.Location = New System.Drawing.Point(5, 12)
             Me.Label18.Name = "Label18"
-            Me.Label18.Size = New System.Drawing.Size(55, 15)
+            Me.Label18.Size = New System.Drawing.Size(77, 15)
             Me.Label18.TabIndex = 10000
             CTag34.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag34.CalculatorRequired = True
@@ -1916,7 +1916,7 @@
             CTag34.ToolTip = ""
             CTag34.ValueType = XL.Common.ControlValueType.Character
             Me.Label18.Tag = CTag34
-            Me.Label18.Text = "货品代码"
+            Me.Label18.Text = "货品代码(F1)"
             '
             'M_02_01001
             '
