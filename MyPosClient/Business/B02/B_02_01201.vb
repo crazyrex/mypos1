@@ -74,7 +74,7 @@ Namespace Business
             LoadList
             LoadClientInfoByCode
             AquiringPoints
-            BizUtld0003
+            RechargeByImportExcel
             BizUtld0004
             BizUtld0005
             BizUtld0006
@@ -197,12 +197,12 @@ Namespace Business
                     '-------------------------------------------------------------------
                     functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoAquiringPoints)
 
-                Case Affairs.BizUtld0003
+                Case Affairs.RechargeByImportExcel
 
                     '
                     '取到处理函数的结果，传入返回给Manifest的AgentResponse包
                     '-------------------------------------------------------------------
-                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoBizUtld0003)
+                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoRechargeByImportExcel)
 
                 Case Affairs.BizUtld0004
 
@@ -705,14 +705,80 @@ Namespace Business
         '''
         '''
         '''-------------------------------------------------------------------
-        Private Function DoBizUtld0003() As String
+        Private Function DoRechargeByImportExcel() As String
 
 
             Try
+                Dim toExcel As New Utils.ExcelTK
+                toExcel.Open(Me._manifest.SV_READING_FILENAME)
 
+                Dim rowCounter As Integer = 1
+
+                Dim clientCodeText As String
+                Dim pointAmountText As String
+                Dim pointIOList As New MyPosXAuto.FTs.FT_H_MP_CLIENT_POINT_IO
+                Dim clientList As New MyPosXAuto.FTs.FT_M_MP_CLIENT
+                Dim clientRow As MyPosXAuto.FTs.FT_M_MP_CLIENTRow
+                Dim clientCondition As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_MP_CLIENT(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+                MyPosXAuto.Facade.AfBizMaster.FillFT_M_MP_CLIENT(Nothing, clientList)
+
+                Dim succeededCount As Integer = 0
+                Dim failedCount As Integer = 0
+
+                Do
+
+                    Me._manifest.ShowStatusMessage( _
+                        StatusMessageIcon.Progressing, _
+                        MyPosXService.Decls.MSG_STATUS_0009, _
+                        rowCounter, _
+                        succeededCount, _
+                        failedCount)
+
+                    clientCodeText = toExcel.GetCellText(rowCounter, 1)
+                    pointAmountText = toExcel.GetCellText(rowCounter, 2)
+                    If clientCodeText.Trim.Length = 0 AndAlso pointAmountText.Trim.Length = 0 Then
+                        Exit Do
+                    End If
+
+                    If CommTK.FInteger(pointAmountText) <= 0 Then
+                        toExcel.BackColor(rowCounter, 2, rowCounter, 2) = Color.Orange
+                        failedCount += 1
+                        rowCounter += 1
+                        Continue Do
+                    End If
+
+                    clientCondition.Clear()
+                    clientCondition.Add(MyPosXAuto.Facade.AfBizMaster.M_MP_CLIENTColumns.CLIENT_CODEColumn, "=", clientCodeText)
+
+                    clientRow = clientList.FindRowByCondition(clientCondition)
+
+                    If IsNothing(clientRow) = True Then
+                        toExcel.BackColor(rowCounter, 1, rowCounter, 1) = Color.Orange
+                        failedCount += 1
+                        rowCounter += 1
+                        Continue Do
+                    End If
+
+                    pointIOList.AddNewH_MP_CLIENT_POINT_IORow( _
+                        clientRow.CLIENT_ID, _
+                        Guid.NewGuid.ToString, _
+                        CommTK.GetSyncServerTime, _
+                        0, _
+                        CommTK.FInteger(pointAmountText), _
+                        MyPosXAuto.Decls.CIVALUE_POINT_IO_TYPE_IN_RECHARGE, _
+                        String.Empty, _
+                        String.Empty)
+
+                    succeededCount += 1
+                    rowCounter += 1
+                Loop
+
+                toExcel.SaveAndClose()
+
+                MyPosXAuto.Facade.AfBizManage.SaveBatchH_MP_CLIENT_POINT_IOData(pointIOList)
 
                 'Dim servResult As String = _
-                '    Me._service.ServBizUtld0003()
+                '    Me._service.ServRechargeByImportExcel()
 
                 'If servResult.Length > 0 Then
                 '    Return servResult        

@@ -70,6 +70,8 @@
             Me.Label6 = New System.Windows.Forms.Label
             Me.Label_RMBToPointsRate = New System.Windows.Forms.Label
             Me.Label3 = New System.Windows.Forms.Label
+            Me.ToolStripButton_RechargeByExcel = New System.Windows.Forms.ToolStripButton
+            Me.OpenFileDialog_ImportFile = New System.Windows.Forms.OpenFileDialog
             Me.ToolStrip_Form.SuspendLayout()
             CType(Me.TextEdit_ClientCode.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.CalcEdit_UsePoint.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -84,7 +86,7 @@
             '
             'ToolStrip_Form
             '
-            Me.ToolStrip_Form.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton_Create, Me.ToolStripButton_Save, Me.ToolStripButton_Close})
+            Me.ToolStrip_Form.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton_Create, Me.ToolStripButton_Save, Me.ToolStripButton_RechargeByExcel, Me.ToolStripButton_Close})
             Me.ToolStrip_Form.Location = New System.Drawing.Point(0, 0)
             Me.ToolStrip_Form.Name = "ToolStrip_Form"
             Me.ToolStrip_Form.Size = New System.Drawing.Size(435, 25)
@@ -117,19 +119,19 @@
             'ToolStripButton_Create
             '
             Me.ToolStripButton_Create.Name = "ToolStripButton_Create"
-            Me.ToolStripButton_Create.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Create.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Create.Text = "新建"
             '
             'ToolStripButton_Save
             '
             Me.ToolStripButton_Save.Name = "ToolStripButton_Save"
-            Me.ToolStripButton_Save.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Save.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Save.Text = "保存"
             '
             'ToolStripButton_Close
             '
             Me.ToolStripButton_Close.Name = "ToolStripButton_Close"
-            Me.ToolStripButton_Close.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Close.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Close.Text = "关闭"
             '
             'Label_HintGainPoint
@@ -173,7 +175,7 @@
             '
             Me.TextEdit_ClientCode.Location = New System.Drawing.Point(65, 47)
             Me.TextEdit_ClientCode.Name = "TextEdit_ClientCode"
-            Me.TextEdit_ClientCode.Size = New System.Drawing.Size(119, 21)
+            Me.TextEdit_ClientCode.Size = New System.Drawing.Size(119, 20)
             Me.TextEdit_ClientCode.TabIndex = 10000
             CTag3.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag3.CalculatorRequired = True
@@ -467,7 +469,7 @@
             Me.CalcEdit_UsePoint.Location = New System.Drawing.Point(65, 112)
             Me.CalcEdit_UsePoint.Name = "CalcEdit_UsePoint"
             Me.CalcEdit_UsePoint.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-            Me.CalcEdit_UsePoint.Size = New System.Drawing.Size(121, 21)
+            Me.CalcEdit_UsePoint.Size = New System.Drawing.Size(121, 20)
             Me.CalcEdit_UsePoint.TabIndex = 10000
             CTag11.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag11.CalculatorRequired = True
@@ -606,6 +608,16 @@
             Me.Label3.Tag = CTag14
             Me.Label3.Text = "当前兑换率"
             '
+            'ToolStripButton_RechargeByExcel
+            '
+            Me.ToolStripButton_RechargeByExcel.Name = "ToolStripButton_RechargeByExcel"
+            Me.ToolStripButton_RechargeByExcel.Size = New System.Drawing.Size(85, 22)
+            Me.ToolStripButton_RechargeByExcel.Text = "导入Excel充值"
+            '
+            'OpenFileDialog_ImportFile
+            '
+            Me.OpenFileDialog_ImportFile.Filter = "Excel文件|*.xls;*.xlsx"
+            '
             'M_02_01201
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -674,6 +686,8 @@
         Friend WithEvents Label6 As System.Windows.Forms.Label
         Friend WithEvents Label3 As System.Windows.Forms.Label
         Friend WithEvents Label_RMBToPointsRate As System.Windows.Forms.Label
+        Friend WithEvents ToolStripButton_RechargeByExcel As System.Windows.Forms.ToolStripButton
+        Friend WithEvents OpenFileDialog_ImportFile As System.Windows.Forms.OpenFileDialog
 
 #End Region
 

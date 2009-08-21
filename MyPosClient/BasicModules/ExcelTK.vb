@@ -328,16 +328,25 @@ Namespace Utils
 
         End Sub
 
-        Public Property BackColor(ByVal startColumn As Integer, ByVal startRow As Integer, ByVal endColumn As Integer, ByVal endRow As Integer) As Integer
+        Public Property BackColor(ByVal startRow As Integer, ByVal startColumn As Integer, Optional ByVal endRow As Integer = 0, Optional ByVal endColumn As Integer = 0) As Color
             Get
+                If endRow = 0 Then
+                    endRow = startRow
+                End If
+
+                If endColumn = 0 Then
+                    endColumn = startColumn
+                End If
+
                 Me._openExcel.Range(Me._openExcel.Cells(startRow, startColumn), Me._openExcel.Cells(endRow, endColumn)).Select()
-                Return CommTK.FInteger(Me._opRange.Interior.ColorIndex)
+                Return Color.FromArgb(CommTK.FInteger(Me._opRange.Interior.ColorIndex))
             End Get
-            Set(ByVal Value As Integer)
-                Me._openExcel.Range(Me._openExcel.Cells(startRow, startColumn), Me._openExcel.Cells(endRow, endColumn)).Select()
-                Me._opRange.Interior.Color = Value
+            Set(ByVal Value As Color)
+                Me._opRange = Me._openExcel.Range(Me._openExcel.Cells(startRow, startColumn), Me._openExcel.Cells(endRow, endColumn))
+                Me._opRange.Interior.Color = CommTK.GetColorRGB(Value)
             End Set
         End Property
+
 
         Public Sub SetHyperLink( _
             ByVal startColumn As Integer, _
