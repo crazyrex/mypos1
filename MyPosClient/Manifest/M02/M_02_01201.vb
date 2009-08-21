@@ -424,8 +424,8 @@ Namespace Manifest
 
         Private Sub TbActionCreate()
 
-            Dim inputForm As New M_(Me.TransactRequestHandle, Me.FormID)
-            Me.PopupForm(inputForm,"TbActionCreate", False)
+            'Dim inputForm As New M_(Me.TransactRequestHandle, Me.FormID)
+            'Me.PopupForm(inputForm,"TbActionCreate", False)
 
         End Sub
         Private Sub TbActionSave()
