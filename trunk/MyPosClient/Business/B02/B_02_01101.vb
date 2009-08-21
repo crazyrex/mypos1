@@ -612,7 +612,7 @@ Namespace Business
                 Me._manifest.TextEdit_ClientCode.Text = clientRowSE.CLIENT_CODE
                 Me._manifest.Label_ClientName.Text = clientRowSE.CLIENT_NAME
                 Me._manifest.Label_ClientID.Text = clientRowSE.CLIENT_ID
-                Me._manifest.Label_HoldingPoint.Text = clientRowSE.CURRENT_POINT
+                Me._manifest.Label_HoldingPoint.Text = CommTK.FString(clientRowSE.CURRENT_POINT, False, "#,##0.00")
 
 
                 'Dim servResult As String = _
