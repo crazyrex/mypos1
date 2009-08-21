@@ -801,6 +801,12 @@ Namespace Manifest
                 Me._bizAgent.DoRequest(Business.B_02_01201.Affairs.LoadClientInfoByCode, False)
             End If
         End Sub
+
+        Private Sub CalcEdit_UsePoint_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles CalcEdit_UsePoint.KeyDown
+            If e.KeyCode = Keys.Enter Then
+                Me._bizAgent.DoRequest(Business.B_02_01201.Affairs.AquiringPoints, False)
+            End If
+        End Sub
     End Class
 
 
