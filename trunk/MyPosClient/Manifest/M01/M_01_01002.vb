@@ -237,7 +237,7 @@ Namespace Manifest
 
                     Dim templateWareRow As MyPosXAuto.FTs.FT_XV_T_MP_SALE_TEMPLATE_WARERow
                     Dim templateWareCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_T_MP_SALE_TEMPLATE_WARE(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
-                    For Each wareRow As MyPosXAuto.FTs.FT_XV_M_MP_WARERow In chooseForm.SVFT_BINDING_WARE_LIST.FindRowsSelecting(True)
+                    For Each wareRow As MyPosXAuto.FTs.FT_M_MP_WARERow In chooseForm.SVFT_BINDING_WARE_LIST.FindRowsSelecting(True)
                         templateWareCondition.Clear()
                         templateWareCondition.Add(MyPosXAuto.Facade.AfXV.XV_T_MP_SALE_TEMPLATE_WAREColumns.WARE_IDColumn, "=", wareRow.WARE_ID)
                         templateWareRow = Me.SVFT_BINDING_LIST.FindRowByCondition(templateWareCondition)
