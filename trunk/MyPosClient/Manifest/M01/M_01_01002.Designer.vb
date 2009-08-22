@@ -100,14 +100,14 @@
             Me.RepositoryItemLookUpEdit_DiscountType = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
             Me.GridColumn_DiscountAmount = New DevExpress.XtraGrid.Columns.GridColumn
             Me.RepositoryItemSpinEdit_DiscountAmount = New DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit
+            Me.GridColumn_ExchangePoitsAmount = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.RepositoryItemSpinEdit_ExchangePoitsAmount = New DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit
             Me.GridColumn_RowHighlight = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_RowRemark = New DevExpress.XtraGrid.Columns.GridColumn
             Me.RepositoryItemCalcEdit_LowerLimit = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
             Me.RepositoryItemCalcEdit_IndividualDiscount = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
             Me.RepositoryItemCalcEdit_UnitPrice = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
             Me.RepositoryItemCalcEdit_UnitCost = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
-            Me.GridColumn_ExchangePoitsAmount = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.RepositoryItemSpinEdit_ExchangePoitsAmount = New DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit
             Me.ToolStrip_Form.SuspendLayout()
             CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.PanelControl1.SuspendLayout()
@@ -120,11 +120,11 @@
             CType(Me.RepositoryItemCheckEdit_Select, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemLookUpEdit_DiscountType, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemSpinEdit_DiscountAmount, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.RepositoryItemSpinEdit_ExchangePoitsAmount, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemCalcEdit_LowerLimit, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemCalcEdit_IndividualDiscount, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemCalcEdit_UnitPrice, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemCalcEdit_UnitCost, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.RepositoryItemSpinEdit_ExchangePoitsAmount, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'DefaultLookAndFeel_Form
@@ -169,53 +169,53 @@
             'ToolStripButton_Add
             '
             Me.ToolStripButton_Add.Name = "ToolStripButton_Add"
-            Me.ToolStripButton_Add.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Add.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Add.Text = "添加"
             '
             'ToolStripButton_ShowFilter
             '
             Me.ToolStripButton_ShowFilter.Name = "ToolStripButton_ShowFilter"
-            Me.ToolStripButton_ShowFilter.Size = New System.Drawing.Size(57, 22)
+            Me.ToolStripButton_ShowFilter.Size = New System.Drawing.Size(59, 22)
             Me.ToolStripButton_ShowFilter.Text = "筛选条件"
             Me.ToolStripButton_ShowFilter.Visible = False
             '
             'ToolStripButton_Save
             '
             Me.ToolStripButton_Save.Name = "ToolStripButton_Save"
-            Me.ToolStripButton_Save.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Save.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Save.Text = "保存"
             '
             'ToolStripButton_Remove
             '
             Me.ToolStripButton_Remove.Name = "ToolStripButton_Remove"
-            Me.ToolStripButton_Remove.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Remove.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Remove.Text = "去除"
             '
             'ToolStripButton_Refresh
             '
             Me.ToolStripButton_Refresh.Name = "ToolStripButton_Refresh"
-            Me.ToolStripButton_Refresh.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Refresh.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Refresh.Text = "刷新"
             Me.ToolStripButton_Refresh.Visible = False
             '
             'ToolStripButton_Report
             '
             Me.ToolStripButton_Report.Name = "ToolStripButton_Report"
-            Me.ToolStripButton_Report.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Report.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Report.Text = "报表"
             Me.ToolStripButton_Report.Visible = False
             '
             'ToolStripButton_View
             '
             Me.ToolStripButton_View.Name = "ToolStripButton_View"
-            Me.ToolStripButton_View.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_View.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_View.Text = "查看"
             Me.ToolStripButton_View.Visible = False
             '
             'ToolStripButton_Close
             '
             Me.ToolStripButton_Close.Name = "ToolStripButton_Close"
-            Me.ToolStripButton_Close.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Close.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Close.Text = "关闭"
             '
             'PanelControl1
@@ -267,9 +267,9 @@
             '
             Me.Label4.AutoSize = True
             Me.Label4.ForeColor = System.Drawing.Color.Red
-            Me.Label4.Location = New System.Drawing.Point(136, 78)
+            Me.Label4.Location = New System.Drawing.Point(17, 78)
             Me.Label4.Name = "Label4"
-            Me.Label4.Size = New System.Drawing.Size(478, 15)
+            Me.Label4.Size = New System.Drawing.Size(427, 15)
             Me.Label4.TabIndex = 10010
             CTag2.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag2.CalculatorRequired = True
@@ -295,7 +295,7 @@
             CTag2.ToolTip = ""
             CTag2.ValueType = XL.Common.ControlValueType.Character
             Me.Label4.Tag = CTag2
-            Me.Label4.Text = "注:列表中的折扣量,为下降额度, 如果按比例则为下降百分比, 系统会在计算时自动除以100"
+            Me.Label4.Text = "注:列表中的降价额度, 如果按比例则为下降百分比, 系统会在计算时自动除以100"
             '
             'LinkLabel_CancelAll
             '
@@ -439,7 +439,7 @@
             Me.TextEdit_Search.EditValue = ""
             Me.TextEdit_Search.Location = New System.Drawing.Point(86, 98)
             Me.TextEdit_Search.Name = "TextEdit_Search"
-            Me.TextEdit_Search.Size = New System.Drawing.Size(221, 21)
+            Me.TextEdit_Search.Size = New System.Drawing.Size(221, 20)
             Me.TextEdit_Search.TabIndex = 10002
             CTag7.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag7.CalculatorRequired = True
@@ -507,7 +507,7 @@
             Me.TextEdit_TemplateName.EditValue = ""
             Me.TextEdit_TemplateName.Location = New System.Drawing.Point(86, 41)
             Me.TextEdit_TemplateName.Name = "TextEdit_TemplateName"
-            Me.TextEdit_TemplateName.Size = New System.Drawing.Size(221, 21)
+            Me.TextEdit_TemplateName.Size = New System.Drawing.Size(221, 20)
             Me.TextEdit_TemplateName.TabIndex = 10002
             CTag9.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag9.CalculatorRequired = True
@@ -575,7 +575,7 @@
             Me.TextEdit_TemplateCode.EditValue = ""
             Me.TextEdit_TemplateCode.Location = New System.Drawing.Point(86, 13)
             Me.TextEdit_TemplateCode.Name = "TextEdit_TemplateCode"
-            Me.TextEdit_TemplateCode.Size = New System.Drawing.Size(221, 21)
+            Me.TextEdit_TemplateCode.Size = New System.Drawing.Size(221, 20)
             Me.TextEdit_TemplateCode.TabIndex = 10000
             CTag11.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag11.CalculatorRequired = True
@@ -840,6 +840,21 @@
             Me.RepositoryItemSpinEdit_DiscountAmount.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
             Me.RepositoryItemSpinEdit_DiscountAmount.Name = "RepositoryItemSpinEdit_DiscountAmount"
             '
+            'GridColumn_ExchangePoitsAmount
+            '
+            Me.GridColumn_ExchangePoitsAmount.Caption = "可交换点数"
+            Me.GridColumn_ExchangePoitsAmount.ColumnEdit = Me.RepositoryItemSpinEdit_ExchangePoitsAmount
+            Me.GridColumn_ExchangePoitsAmount.FieldName = "EXCHANGE_POINTS_AMOUNT"
+            Me.GridColumn_ExchangePoitsAmount.Name = "GridColumn_ExchangePoitsAmount"
+            Me.GridColumn_ExchangePoitsAmount.Visible = True
+            Me.GridColumn_ExchangePoitsAmount.VisibleIndex = 12
+            '
+            'RepositoryItemSpinEdit_ExchangePoitsAmount
+            '
+            Me.RepositoryItemSpinEdit_ExchangePoitsAmount.AutoHeight = False
+            Me.RepositoryItemSpinEdit_ExchangePoitsAmount.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
+            Me.RepositoryItemSpinEdit_ExchangePoitsAmount.Name = "RepositoryItemSpinEdit_ExchangePoitsAmount"
+            '
             'GridColumn_RowHighlight
             '
             Me.GridColumn_RowHighlight.Caption = "高亮显示"
@@ -854,7 +869,7 @@
             Me.GridColumn_RowRemark.Name = "GridColumn_RowRemark"
             Me.GridColumn_RowRemark.OptionsColumn.AllowFocus = False
             Me.GridColumn_RowRemark.Visible = True
-            Me.GridColumn_RowRemark.VisibleIndex = 12
+            Me.GridColumn_RowRemark.VisibleIndex = 13
             '
             'RepositoryItemCalcEdit_LowerLimit
             '
@@ -879,22 +894,6 @@
             Me.RepositoryItemCalcEdit_UnitCost.AutoHeight = False
             Me.RepositoryItemCalcEdit_UnitCost.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
             Me.RepositoryItemCalcEdit_UnitCost.Name = "RepositoryItemCalcEdit_UnitCost"
-            '
-            'GridColumn_ExchangePoitsAmount
-            '
-            Me.GridColumn_ExchangePoitsAmount.Caption = "可交换点数"
-            Me.GridColumn_ExchangePoitsAmount.ColumnEdit = Me.RepositoryItemSpinEdit_ExchangePoitsAmount
-            Me.GridColumn_ExchangePoitsAmount.FieldName = "EXCHANGE_POINTS_AMOUNT"
-            Me.GridColumn_ExchangePoitsAmount.Name = "GridColumn_ExchangePoitsAmount"
-            Me.GridColumn_ExchangePoitsAmount.OptionsColumn.AllowFocus = False
-            Me.GridColumn_ExchangePoitsAmount.Visible = True
-            Me.GridColumn_ExchangePoitsAmount.VisibleIndex = 13
-            '
-            'RepositoryItemSpinEdit_ExchangePoitsAmount
-            '
-            Me.RepositoryItemSpinEdit_ExchangePoitsAmount.AutoHeight = False
-            Me.RepositoryItemSpinEdit_ExchangePoitsAmount.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
-            Me.RepositoryItemSpinEdit_ExchangePoitsAmount.Name = "RepositoryItemSpinEdit_ExchangePoitsAmount"
             '
             'M_01_01002
             '
@@ -946,11 +945,11 @@
             CType(Me.RepositoryItemCheckEdit_Select, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemLookUpEdit_DiscountType, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemSpinEdit_DiscountAmount, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.RepositoryItemSpinEdit_ExchangePoitsAmount, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemCalcEdit_LowerLimit, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemCalcEdit_IndividualDiscount, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemCalcEdit_UnitPrice, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemCalcEdit_UnitCost, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.RepositoryItemSpinEdit_ExchangePoitsAmount, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 

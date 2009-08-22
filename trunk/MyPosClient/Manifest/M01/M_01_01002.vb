@@ -916,7 +916,7 @@ Namespace Manifest
 
 #End Region
 
-        Private Sub GridView_SaleTemplateWare_FocusedRowChanged(ByVal sender As Object, ByVal e As DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs)
+        Private Sub GridView_SaleTemplateWare_FocusedRowChanged(ByVal sender As Object, ByVal e As DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs) Handles GridView_SaleTemplateWare.FocusedRowChanged
             Me.DoPrivateUpdateSelectingRow()
         End Sub
 
@@ -939,11 +939,6 @@ Namespace Manifest
              CType(sender, DevExpress.XtraEditors.SpinEdit)
 
             bindingRow.DISCOUNT_AMOUNT = CommTK.FDecimal(spinEdit.EditValue)
-        End Sub
-
-        Private Sub GridView_SaleTemplateWare_FocusedRowChanged1(ByVal sender As Object, ByVal e As DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs) Handles GridView_SaleTemplateWare.FocusedRowChanged
-            Me.DoPrivateUpdateSelectingRow()
-
         End Sub
 
         Private Sub RepositoryItemLookUpEdit_DiscountType_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemLookUpEdit_DiscountType.EditValueChanged
