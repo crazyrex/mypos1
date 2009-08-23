@@ -1238,7 +1238,7 @@ Namespace Business
 
 
             Try
-                If MyPosXService.Decls.IS_SYSTEM_ONLINE = False Then
+                If CommDecl.SYSTEM_IS_ONLINE = False Then
                     Return MyPosXService.Decls.MSG_ALERT_00065
                 End If
 
