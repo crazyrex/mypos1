@@ -14,22 +14,22 @@ Public Class S_01_01002
     Public Shared Function GetInstance() As S_01_01002                                           
 
         Dim result As S_01_01002                                                                 
-        If MyPosXAuto.Decls.CURRENT_DB_TYPE = XL.DB.DBDecl.DBType.Remoting Then
+        If MyPosXAuto.Decls.CURRENT_DB_TYPE = XL.DB.DBDecl.DBType.Remoting AndAlso CommDecl.SYSTEM_IS_ONLINE Then
 
-            result = CType(Activator.GetObject(GetType(S_01_01002), _                            
-                String.Format("tcp://{0}/S_01_01002.remote", _                                
+            result = CType(Activator.GetObject(GetType(S_01_01002), _
+                String.Format("tcp://{0}/S_01_01002.remote", _
                     SysInfo.ReadLocalSysInfo(CommDecl.XLSLVN_SYSTEM_REMOTE_SERVICE_URL))),  _
-                S_01_01002)                                                                      
+                S_01_01002)
 
             If result.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then
-                Dim ex As New XLException(XLException.ErrorClassify.ReadDataError)                  
-                ex.SetMessage(CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED)                                
-                Throw ex                                                                            
-            End If                                                                                  
+                Dim ex As New XLException(XLException.ErrorClassify.ReadDataError)
+                ex.SetMessage(CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED)
+                Throw ex
+            End If
 
         Else
 
-            result = New S_01_01002                                                              
+            result = New S_01_01002
         End If
 
         Return result

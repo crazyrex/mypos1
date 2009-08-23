@@ -667,7 +667,7 @@ Namespace Manifest
 
         Private Sub TbActionReturn()
 
-            If MyPosXService.Decls.IS_SYSTEM_ONLINE = False Then
+            If CommDecl.SYSTEM_IS_ONLINE = False Then
                 WinTK.PlayWavSound("Error.wav")
                 Me.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_ALERT_00065)
                 Return
@@ -1105,6 +1105,10 @@ Namespace Manifest
 
         Private Sub RepositoryItemCalcEdit_WareAmount_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemCalcEdit_WareAmount.EditValueChanged
 
+            If IsNothing(Me.SVFR_BINDING_TURNOVER_DTL_ROW) = True Then
+                Return
+            End If
+
             Me.IsSaved = False
 
             Dim calcEdit As DevExpress.XtraEditors.CalcEdit = CType(sender, DevExpress.XtraEditors.CalcEdit)
@@ -1126,7 +1130,9 @@ Namespace Manifest
         End Sub
 
         Private Sub CalcEdit_DiscountAmount_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles CalcEdit_DiscountAmount.EditValueChanged
-
+            If IsNothing(Me.SVFR_BINDING_TURNOVER_DTL_ROW) = True Then
+                Return
+            End If
 
             If Me.CalcEdit_DiscountAmount.Value < 0 Then
                 Me.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0021)

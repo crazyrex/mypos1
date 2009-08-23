@@ -719,7 +719,7 @@
     <value>True</value>
   </data>
   <data name="CheckEdit_RemotingMode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>257, 13</value>
+    <value>269, 13</value>
   </data>
   <data name="CheckEdit_RemotingMode.Properties.Caption" xml:space="preserve">
     <value>在线模式</value>
@@ -769,6 +769,45 @@
   <data name="&gt;&gt;CheckEdit_ExportPictureToExcel.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="LinkLabel_DownloadImages.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="LinkLabel_DownloadImages.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LinkLabel_DownloadImages.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="LinkLabel_DownloadImages.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LinkLabel_DownloadImages.Location" type="System.Drawing.Point, System.Drawing">
+    <value>423, 43</value>
+  </data>
+  <data name="LinkLabel_DownloadImages.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 15</value>
+  </data>
+  <data name="LinkLabel_DownloadImages.TabIndex" type="System.Int32, mscorlib">
+    <value>10004</value>
+  </data>
+  <data name="LinkLabel_DownloadImages.Text" xml:space="preserve">
+    <value>下载图片</value>
+  </data>
+  <data name="LinkLabel_DownloadImages.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_DownloadImages.Name" xml:space="preserve">
+    <value>LinkLabel_DownloadImages</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_DownloadImages.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_DownloadImages.Parent" xml:space="preserve">
+    <value>PanelControl_Filter</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_DownloadImages.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="LinkLabel_SaveCostPriceModify.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -803,7 +842,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;LinkLabel_SaveCostPriceModify.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="LinkLabel_CancelAll.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -833,7 +872,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;LinkLabel_CancelAll.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="LinkLabel_SelectAll.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -860,7 +899,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;LinkLabel_SelectAll.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="LinkLabel_AllWareList.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -887,7 +926,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;LinkLabel_AllWareList.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="LinkLabel_AllWareExportExcel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -914,7 +953,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;LinkLabel_AllWareExportExcel.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="TextEdit_Search.EditValue" xml:space="preserve">
     <value />
@@ -938,7 +977,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;TextEdit_Search.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -968,7 +1007,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="PanelControl_Filter.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -1007,7 +1046,7 @@
     <value>Excel文件|*.xls;*.xlsx</value>
   </data>
   <metadata name="OpenFileDialog_SetImage.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 39</value>
+    <value>867, 0</value>
   </metadata>
   <data name="OpenFileDialog_SetImage.Filter" xml:space="preserve">
     <value>图片文件|*.jpg;*.png</value>
