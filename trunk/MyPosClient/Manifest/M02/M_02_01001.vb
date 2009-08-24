@@ -204,6 +204,7 @@ Namespace Manifest
             Me.TextEdit_ClientCode.ResetText()
             Me.CheckEdit_IsClient.Checked = False
             Me.ButtonEdit_WareCode.ResetText()
+            Me.CalcEdit_DiscountAmount.Value = 0
             Me.CalcEdit_ExtraDiscount.Value = 0
             Me.CalcEdit_Payment.Value = 0
             Me.CalcEdit_UsePoint.Value = 0

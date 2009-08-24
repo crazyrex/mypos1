@@ -189,13 +189,13 @@
             'ToolStripButton_Create
             '
             Me.ToolStripButton_Create.Name = "ToolStripButton_Create"
-            Me.ToolStripButton_Create.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Create.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Create.Text = "新建"
             '
             'ToolStripButton_Add
             '
             Me.ToolStripButton_Add.Name = "ToolStripButton_Add"
-            Me.ToolStripButton_Add.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Add.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Add.Text = "添加"
             '
             'ToolStripButton_Refresh
@@ -204,19 +204,19 @@
             Me.ToolStripButton_Refresh.Image = CType(resources.GetObject("ToolStripButton_Refresh.Image"), System.Drawing.Image)
             Me.ToolStripButton_Refresh.ImageTransparentColor = System.Drawing.Color.Magenta
             Me.ToolStripButton_Refresh.Name = "ToolStripButton_Refresh"
-            Me.ToolStripButton_Refresh.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Refresh.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Refresh.Text = "刷新"
             '
             'ToolStripButton_Remove
             '
             Me.ToolStripButton_Remove.Name = "ToolStripButton_Remove"
-            Me.ToolStripButton_Remove.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Remove.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Remove.Text = "去除"
             '
             'ToolStripButton_Close
             '
             Me.ToolStripButton_Close.Name = "ToolStripButton_Close"
-            Me.ToolStripButton_Close.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Close.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Close.Text = "关闭"
             '
             'GroupControl_Details
@@ -284,11 +284,11 @@
             CTag2.ToolTip = ""
             CTag2.ValueType = XL.Common.ControlValueType.Character
             Me.GridControl_TurnoverDtl.EmbeddedNavigator.Tag = CTag2
-            Me.GridControl_TurnoverDtl.Location = New System.Drawing.Point(2, 21)
+            Me.GridControl_TurnoverDtl.Location = New System.Drawing.Point(2, 20)
             Me.GridControl_TurnoverDtl.MainView = Me.GridView_TurnoverDtl
             Me.GridControl_TurnoverDtl.Name = "GridControl_TurnoverDtl"
             Me.GridControl_TurnoverDtl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemCheckEdit_Select, Me.RepositoryItemLookUpEdit_TurnoverBookStatus, Me.RepositoryItemCalcEdit_WareAmount})
-            Me.GridControl_TurnoverDtl.Size = New System.Drawing.Size(505, 385)
+            Me.GridControl_TurnoverDtl.Size = New System.Drawing.Size(505, 386)
             Me.GridControl_TurnoverDtl.TabIndex = 10000
             Me.GridControl_TurnoverDtl.TabStop = False
             Me.GridControl_TurnoverDtl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView_TurnoverDtl})
@@ -652,7 +652,7 @@
             Me.SpinEdit_WareAmount.Location = New System.Drawing.Point(285, 11)
             Me.SpinEdit_WareAmount.Name = "SpinEdit_WareAmount"
             Me.SpinEdit_WareAmount.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
-            Me.SpinEdit_WareAmount.Size = New System.Drawing.Size(83, 21)
+            Me.SpinEdit_WareAmount.Size = New System.Drawing.Size(83, 20)
             Me.SpinEdit_WareAmount.TabIndex = 10000
             CTag4.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag4.CalculatorRequired = True
@@ -684,7 +684,7 @@
             Me.ButtonEdit_WareCode.Location = New System.Drawing.Point(87, 10)
             Me.ButtonEdit_WareCode.Name = "ButtonEdit_WareCode"
             Me.ButtonEdit_WareCode.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
-            Me.ButtonEdit_WareCode.Size = New System.Drawing.Size(121, 21)
+            Me.ButtonEdit_WareCode.Size = New System.Drawing.Size(121, 20)
             Me.ButtonEdit_WareCode.TabIndex = 10000
             CTag5.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag5.CalculatorRequired = True
@@ -915,7 +915,7 @@
             Me.Label_AffairDescription.Font = New System.Drawing.Font("Arial", 9.0!)
             Me.Label_AffairDescription.ForeColor = System.Drawing.Color.Black
             Me.Label_AffairDescription.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.Label_AffairDescription.Location = New System.Drawing.Point(2, 21)
+            Me.Label_AffairDescription.Location = New System.Drawing.Point(2, 20)
             Me.Label_AffairDescription.Name = "Label_AffairDescription"
             Me.Label_AffairDescription.Size = New System.Drawing.Size(55, 15)
             Me.Label_AffairDescription.TabIndex = 10000
@@ -1007,7 +1007,7 @@
             '
             Me.TextEdit_ClientCode.Location = New System.Drawing.Point(61, 26)
             Me.TextEdit_ClientCode.Name = "TextEdit_ClientCode"
-            Me.TextEdit_ClientCode.Size = New System.Drawing.Size(119, 21)
+            Me.TextEdit_ClientCode.Size = New System.Drawing.Size(119, 20)
             Me.TextEdit_ClientCode.TabIndex = 10000
             CTag14.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag14.CalculatorRequired = True
