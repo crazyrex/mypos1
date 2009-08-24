@@ -269,6 +269,73 @@
   <data name="&gt;&gt;ToolStrip_Form.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="LinkLabel_UnselectAll.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="LinkLabel_UnselectAll.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LinkLabel_UnselectAll.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="LinkLabel_UnselectAll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>642, 29</value>
+  </data>
+  <data name="LinkLabel_UnselectAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 15</value>
+  </data>
+  <data name="LinkLabel_UnselectAll.TabIndex" type="System.Int32, mscorlib">
+    <value>10004</value>
+  </data>
+  <data name="LinkLabel_UnselectAll.Text" xml:space="preserve">
+    <value>全不选</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_UnselectAll.Name" xml:space="preserve">
+    <value>LinkLabel_UnselectAll</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_UnselectAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_UnselectAll.Parent" xml:space="preserve">
+    <value>PanelControl_Filter</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_UnselectAll.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="LinkLabel_SelectAll.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="LinkLabel_SelectAll.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LinkLabel_SelectAll.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="LinkLabel_SelectAll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>605, 29</value>
+  </data>
+  <data name="LinkLabel_SelectAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 15</value>
+  </data>
+  <data name="LinkLabel_SelectAll.TabIndex" type="System.Int32, mscorlib">
+    <value>10003</value>
+  </data>
+  <data name="LinkLabel_SelectAll.Text" xml:space="preserve">
+    <value>全选</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_SelectAll.Name" xml:space="preserve">
+    <value>LinkLabel_SelectAll</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_SelectAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_SelectAll.Parent" xml:space="preserve">
+    <value>PanelControl_Filter</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_SelectAll.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="TextEdit_Search.EditValue" xml:space="preserve">
     <value />
   </data>
@@ -291,7 +358,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;TextEdit_Search.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -321,9 +388,8 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="PanelControl_Filter.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
