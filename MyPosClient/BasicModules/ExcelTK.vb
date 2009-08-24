@@ -1,13 +1,11 @@
 Imports System.Reflection
 Imports XL.Common
 Imports XL.Common.Utils
-Imports XL.Win
-Imports XL.Win.Utils
-Imports MyPosXAuto.Facade
 Imports Microsoft.Office.Interop
 
 
 Namespace Utils
+
     Public Class ExcelTK
 
         Private _openExcel As New Excel.Application
@@ -27,19 +25,25 @@ Namespace Utils
             Horizonal = 32
         End Enum
 
-
         Public Sub New(Optional ByVal fileName As String = "")
 
-            Me._openExcel = CType(CreateObject("Excel.Application"), Excel.Application)
-            Me._openBook = CType(_openExcel.Workbooks.Add, Excel.Workbook)
-            Me._openSheet = CType(_openBook.Worksheets(1), Excel.Worksheet)
+            'Me._openExcel = New Excel.Application
+
+            If IO.File.Exists(fileName) = True Then
+                Me._openBook = CType(Me._openExcel.Workbooks.Open(fileName), Excel.Workbook)
+            Else
+                Me._openBook = Me._openExcel.Workbooks.Add()
+            End If
+            Me._openSheet = CType(Me._openBook.ActiveSheet, Excel.Worksheet)
             Me._fileName = fileName
 
         End Sub
 
         Public Sub Open(ByVal fileName As String)
 
-            Me._openExcel.Workbooks.Open(fileName)
+            If IO.File.Exists(fileName) = True Then
+                Me._openExcel.Workbooks.Open(fileName)
+            End If
             Me._fileName = fileName
 
         End Sub
@@ -67,6 +71,10 @@ Namespace Utils
 
         End Sub
 
+        Public Sub AutoFitColumns()
+            Me._openSheet.Columns.AutoFit()
+        End Sub
+
         Public Sub SetRowHeight(ByVal rowCounter As Integer, ByVal rowHight As Double)
             Me._opRange = CType(Me._openExcel.Rows(rowCounter), Excel.Range)
             Me._opRange.RowHeight = rowHight
@@ -86,19 +94,37 @@ Namespace Utils
 
         End Sub
 
+        Public Sub InsertIndent(ByVal row As Integer, ByVal column As Integer, ByVal indentCount As Integer)
+            Me._opRange = CType(Me._openSheet.Cells(row, column), Excel.Range)
+            Me._opRange.InsertIndent(indentCount)
+        End Sub
+
+        Public Sub SetRangeAlign( _
+            ByVal startRow As Integer, _
+            ByVal startColumn As Integer, _
+            ByVal endRow As Integer, _
+            ByVal endColumn As Integer, _
+            ByVal hAlign As Excel.XlHAlign, _
+            ByVal vAlign As Excel.XlVAlign)
+
+            Me._opRange = Me._openSheet.Range(Me._openSheet.Cells(startRow, startColumn), Me._openSheet.Cells(endRow, endColumn))
+            Me._opRange.HorizontalAlignment = hAlign
+            Me._opRange.VerticalAlignment = vAlign
+
+        End Sub
+
         Public Sub SetCellText( _
             ByVal rowCell As Integer, _
             ByVal columnCell As Integer, _
             ByVal writeText As String, _
-            ByVal align As Excel.XlHAlign, _
             ByVal font As Font, _
             ByVal color As Color, _
             ByVal backColor As Color, _
-            Optional ByVal numberFormat As String = "G/通用格式")
+            Optional ByVal numberFormat As String = "@通用格式")
 
             Me._opRange = CType(Me._openSheet.Cells(rowCell, columnCell), Excel.Range)
             Me._opRange.WrapText = True
-            Me._opRange.NumberFormatLocal = numberFormat
+            'Me._opRange.NumberFormatLocal = numberFormat
 
             Dim fontStyle As String = String.Empty
             If (font.Style And Drawing.FontStyle.Bold) > 0 Then
@@ -112,12 +138,11 @@ Namespace Utils
             Me._opRange.Characters.Font.FontStyle = fontStyle.Trim
 
 
-            Me._opRange.HorizontalAlignment = align
 
             Me._opRange.Font.Name = font.Name
             Me._opRange.Characters.Font.Size = font.Size
             Me._opRange.Font.Color = CommTK.GetColorRGB(color)
-            Me._opRange.FormulaR1C1 = CommTK.GetTranslatedString(writeText)
+            Me._opRange.Value2 = CommTK.GetTranslatedString(writeText)
             Me._opRange.Interior.Color = CommTK.GetColorRGB(backColor)
 
         End Sub
@@ -164,34 +189,33 @@ Namespace Utils
 
         End Sub
 
-        Public Sub InsertPicture( _
-            ByVal row As Integer, _
-            ByVal column As Integer, _
-            ByVal pictureImage As Image, _
-            ByVal offsetX As Integer, _
-            ByVal offsetY As Integer, _
-            Optional ByVal width As Integer = 0, _
-            Optional ByVal height As Integer = 0)
+        Public Sub InsertPicture(ByVal row As Integer, ByVal column As Integer, ByVal picturePath As String, ByVal offsetX As Integer, ByVal offsetY As Integer)
+
+            If IO.File.Exists(picturePath) = False Then
+                Return
+            End If
 
             Me._opRange = Me._openSheet.Range(Me._openExcel.Cells(row, column), Me._openExcel.Cells(row, column))
-            Dim picturePath As String = WinTK.GetResourceFilePath(ResourceType.TempFile, "ExportPicturePic")
-            If IO.File.Exists(picturePath) = True Then
-                IO.File.Delete(picturePath)
-            End If
-            If width > 0 And height > 0 Then
-                pictureImage = CommTK.GetThumbnail(pictureImage, width, height)
-            End If
-            pictureImage.Save(picturePath)
+            Dim picImage As Image = CommTK.GetImageFromFile(picturePath)
 
             Me._opRange.Select()
+
+            'Me._openSheet.Shapes.AddPicture( _
+            '    picturePath, _
+            '     Microsoft.Office.Core.MsoTriState.msoFalse, _
+            '    Microsoft.Office.Core.MsoTriState.msoTrue, _
+            '    CommTK.FInteger(Me._opRange.Left) + offsetX, _
+            '    CommTK.FInteger(Me._opRange.Top) + offsetY, _
+            '    CommTK.FDecimal(picImage.Width * 4 / 5), _
+            '    CommTK.FDecimal(picImage.Height * 4 / 5))
             Me._openSheet.Shapes.AddPicture( _
                 picturePath, _
                 Microsoft.Office.Core.MsoTriState.msoFalse, _
                 Microsoft.Office.Core.MsoTriState.msoTrue, _
                 CommTK.FInteger(Me._opRange.Left) + offsetX, _
                 CommTK.FInteger(Me._opRange.Top) + offsetY, _
-                pictureImage.Width, _
-                pictureImage.Height)
+                CommTK.FDecimal(picImage.Width * 4 / 5), _
+                CommTK.FDecimal(picImage.Height * 4 / 5))
 
         End Sub
 
@@ -253,6 +277,15 @@ Namespace Utils
             System.GC.Collect()
         End Sub
 
+        Public Sub SetComment(ByVal rowStart As Integer, ByVal colStart As Integer, ByVal rowEnd As Integer, ByVal colEnd As Integer, ByVal commentText As String)
+
+            Me._opRange = Me._openSheet.Range(Me._openSheet.Cells(rowStart, colStart), Me._openSheet.Cells(rowEnd, colEnd))
+
+            Me._opRange.AddComment()
+            Me._opRange.Comment.Text(commentText)
+
+        End Sub
+
         Public Sub SaveAndClose()
             If IO.File.Exists(Me._fileName) = False Then
                 Me._openBook.SaveAs(Me._fileName)
@@ -290,7 +323,7 @@ Namespace Utils
         End Function
 
         Public Sub RemoveRow(ByVal row As Integer)
-            Me._opRange = CType(Me._openSheet.Rows(Row), Excel.Range)
+            Me._opRange = CType(Me._openSheet.Rows(row), Excel.Range)
             Me._opRange.Delete(Shift:=-4162)
         End Sub
 
@@ -307,24 +340,45 @@ Namespace Utils
 
         End Sub
 
-        Public Sub DeleteSheets(ByVal sheetName As String)
-            Me._openSheet = CType(Me._openExcel.Sheets(sheetName), Excel.Worksheet)
-            Me._openSheet.Delete()
+        Public Sub DeleteSheets(ByVal sheetNameList As String)
+            Dim sheetNames As String() = sheetNameList.Split(";"c)
+            For Each sheetName As String In sheetNames
+                DirectCast(Me._openExcel.Sheets(sheetName), Excel.Worksheet).Delete()
+            Next
+        End Sub
+
+        Public Sub DeleteDefaultSheets()
+            Me.DeleteSheets("Sheet1")
+            Me.DeleteSheets("Sheet2")
+            Me.DeleteSheets("Sheet3")
+        End Sub
+
+        Public Sub SetSheetName(ByVal sheetName As String, Optional ByVal replacingSheetName As String = "")
+            If replacingSheetName.Length = 0 Then
+                Me._openSheet.Name = sheetName
+                Return
+            End If
+
+            DirectCast(Me._openExcel.Sheets(replacingSheetName), Excel.Worksheet).Name = sheetName
         End Sub
 
         Public Sub AddSheet(ByVal sheetName As String, Optional ByVal isExist As Boolean = False)
-            Me._openExcel.Sheets().Add()
-            Me._sheetsCount += 1
+            'Dim lastSheet As Excel.Worksheet = DirectCast(Me._openBook.Sheets.Item(), Excel.Worksheet)
+            'Me._openSheet = DirectCast(Me._openExcel.Sheets().Add(After:=lastSheet), Excel.Worksheet)
+            'Me._sheetsCount += 1
+            Me._openSheet = DirectCast( _
+                Me._openBook.Sheets.Add(After:=Me._openBook.Sheets(Me._openBook.Sheets.Count)),  _
+                Excel.Worksheet)
 
-            If isExist = False Then
-                Me._openSheet = CType(Me._openExcel.Sheets("Sheet" & Me._openExcel.Sheets.Count), Excel.Worksheet)
-            Else
-                Me._openSheet = CType(Me._openExcel.Sheets("Sheet" & Me._sheetsCount), Excel.Worksheet)
-            End If
+            'If isExist = False Then
+            '    Me._openSheet = CType(Me._openExcel.Sheets("Sheet" & Me._openExcel.Sheets.Count), Excel.Worksheet)
+            'Else
+            '    Me._openSheet = CType(Me._openExcel.Sheets("Sheet" & Me._sheetsCount), Excel.Worksheet)
+            'End If
 
             Me._openSheet.Name = sheetName
 
-            Me._openSheet.Move(Me._openExcel.Sheets.Item(Me._openExcel.Sheets.Count - 3))
+            'Me._openSheet.Move(Me._openExcel.Sheets.Item(Me._openExcel.Sheets.Count - 1))
 
         End Sub
 
@@ -349,18 +403,16 @@ Namespace Utils
 
 
         Public Sub SetHyperLink( _
-            ByVal startColumn As Integer, _
-            ByVal startRow As Integer, _
-            ByVal endColumn As Integer, _
-            ByVal endRow As Integer, _
+            ByVal row As Integer, _
+            ByVal column As Integer, _
             ByVal sheetName As String, _
             ByVal displayText As String, _
             Optional ByVal targetSheetRow As Integer = 1, _
             Optional ByVal targetSheetColumn As Integer = 1)
 
-            Me._openExcel.Range( _
-                Me._openExcel.Cells(startRow, startColumn), _
-                Me._openExcel.Cells(endRow, endColumn)).Select()
+            Me._opRange = Me._openExcel.Range( _
+                Me._openExcel.Cells(row, column), _
+                Me._openExcel.Cells(row, column))
 
             Dim columnNo As String = _
                 CommTK.GetXNaryNumber("ABCDEFGHIJKLMNOPQRSTUVWXYZ", 1)
@@ -413,12 +465,11 @@ Namespace Utils
 
         End Sub
 
-
         Public Function GetCellText(ByVal rowCounter As Integer, ByVal columnCounter As Integer) As String
-            Me._opRange = CType(Me._openExcel.Cells(rowCounter, columnCounter), Excel.Range)
+            Me._opRange = CType(Me._openSheet.Cells(rowCounter, columnCounter), Excel.Range)
             Me._opRange.Select()
 
-            Return CommTK.FString(Me._openExcel.ActiveCell.FormulaR1C1).Trim
+            Return CommTK.FString(Me._opRange.Text)
 
         End Function
 
@@ -432,14 +483,48 @@ Namespace Utils
             Return Me._openExcel.Sheets.Count
         End Function
 
+        Public Sub SetTitleRows(ByVal rows As Integer)
+            Me._openSheet.PageSetup.PrintTitleRows = String.Format("$1:${0}", rows)
+        End Sub
+
+        Public Sub SetViewZoom(ByVal zoomValue As Integer)
+            Me._openExcel.ActiveWindow.Zoom = zoomValue
+        End Sub
+
         Public Sub SetSheetZoom(ByVal zoomValue As Integer)
+
             Me._openSheet.PageSetup.Zoom = zoomValue
+
         End Sub
 
         Public Sub SetSheetOritation(ByVal ori As Excel.XlPageOrientation)
             Me._openSheet.PageSetup.Orientation = ori
         End Sub
 
+        Public Sub WriteQueryTable(ByVal row As Integer, ByVal column As Integer, ByVal sql As String)
+            Dim connectionString = _
+                XL.DB.DBTK.GetConnectionStringForExcelQueryTabled( _
+                    MyPosXAuto.Decls.CURRENT_DB_TYPE, _
+                    SysInfo.ReadLocalSysInfo(XL.Common.CommDecl.XLSLVN_SQL_SERVER), _
+                    SysInfo.ReadLocalSysInfo(XL.Common.CommDecl.XLSLVN_SQL_SERVER_DB), _
+                    SysInfo.ReadLocalSysInfo(XL.Common.CommDecl.XLSLVN_SQL_SERVER_USER), _
+                    SysInfo.ReadLocalSysInfo(XL.Common.CommDecl.XLSLVN_SQL_SERVER_PASSWORD))
 
+            Dim queryTable As Excel.QueryTable = _
+                Me._openSheet.QueryTables.Add( _
+                    connectionString, _
+                    Me._openSheet.Range(Me._openSheet.Cells(row, column), Me._openSheet.Cells(row, column)), _
+                    sql)
+
+            queryTable.RowNumbers = False
+            queryTable.FillAdjacentFormulas = False
+            queryTable.PreserveFormatting = False
+            queryTable.BackgroundQuery = True
+            queryTable.AdjustColumnWidth = True
+            queryTable.RefreshPeriod = 0
+            queryTable.PreserveColumnInfo = True
+            queryTable.Refresh(queryTable.BackgroundQuery)
+
+        End Sub
     End Class
 End Namespace
