@@ -35,7 +35,6 @@ Namespace Manifest
         Public SV_POS_SET_ROWSE As New MyPosXAuto.FTs.FT_S_MP_POS_SETRowSEntity
         Public SV_RETURN_RELIEF_TURNOVER_ROW_SE As New MyPosXAuto.FTs.FT_H_MP_TURNOVERRowSEntity
         Public SV_PRINTING_TURNOVER_CODE As String = String.Empty
-        Public SV_IS_DB_ONLINE As Boolean = True
         'Public SV_UTLD_0004 As String ="SV_UTLD_0004"
         'Public SV_UTLD_0005 As String ="SV_UTLD_0005"
         'Public SV_RPTOPT_EXCEL As XForm.ReportOption = Nothing
@@ -590,6 +589,78 @@ Namespace Manifest
             Me.Label_Change.Text = CommTK.FString(Me.CalcEdit_Payment.Value - CommTK.FDecimal(Me.Label_Payable.Text), False, "#,##0.00")
 
         End Sub
+
+
+        Private Sub LinkLabel_UploadCacheData_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel_UploadCacheData.LinkClicked
+            Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.UploadCacheData, False)
+        End Sub
+
+        Private Sub CalcEdit_ExtraDiscount_EditValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CalcEdit_ExtraDiscount.EditValueChanged
+            Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.UpdateSummary, False)
+        End Sub
+
+        Private Sub RepositoryItemCalcEdit_WareAmount_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemCalcEdit_WareAmount.EditValueChanged
+
+            If IsNothing(Me.SVFR_BINDING_TURNOVER_DTL_ROW) = True Then
+                Return
+            End If
+
+            Me.IsSaved = False
+
+            Dim calcEdit As DevExpress.XtraEditors.CalcEdit = CType(sender, DevExpress.XtraEditors.CalcEdit)
+            Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_AMOUNT = calcEdit.Value
+            Me.DoPrivateRegularSelectingRowWareAmount()
+            Me.DoPrivateUpdateListPrice()
+            calcEdit.Value = Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_AMOUNT
+            Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.UpdateSummary, False)
+        End Sub
+
+        Private Sub Label_ClientID_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles Label_ClientID.TextChanged
+
+            If Me.FormStatus <> FormStatuses.Loading_IA_AfterFormLoaded Then
+                Return
+            End If
+
+            Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.UpdateSummary, False)
+
+        End Sub
+
+        Private Sub CalcEdit_DiscountAmount_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles CalcEdit_DiscountAmount.EditValueChanged
+            If IsNothing(Me.SVFR_BINDING_TURNOVER_DTL_ROW) = True Then
+                Return
+            End If
+
+            If Me.CalcEdit_DiscountAmount.Value < 0 Then
+                Me.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0021)
+                Return
+            End If
+
+            If CommTK.FInteger(Me.RadioGroup_UnitDiscountType.EditValue) = 1 Then
+                If Me.CalcEdit_DiscountAmount.Value > 1 Then
+                    Me.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0021)
+                    Return
+                End If
+                Me.SVFR_BINDING_TURNOVER_DTL_ROW.UNIT_DISCOUNT = Me.SVFR_BINDING_TURNOVER_DTL_ROW.ORIGION_UNIT_PRICE * Me.CalcEdit_DiscountAmount.Value
+            Else
+                If Me.CalcEdit_DiscountAmount.Value >= Me.SVFR_BINDING_TURNOVER_DTL_ROW.ORIGION_UNIT_PRICE Then
+                    Me.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0021)
+                    Return
+                End If
+                Me.SVFR_BINDING_TURNOVER_DTL_ROW.UNIT_DISCOUNT = Me.CalcEdit_DiscountAmount.Value
+            End If
+
+            Me.DoPrivateUpdateListPrice()
+        End Sub
+
+        Private Sub RadioGroup_UnitDiscountType_EditValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioGroup_UnitDiscountType.EditValueChanged
+            Me.CalcEdit_DiscountAmount.SelectAll()
+            Me.CalcEdit_DiscountAmount.Select()
+        End Sub
+
+        Private Sub CheckEdit_IsOnLine_CheckedChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckEdit_IsOnLine.CheckedChanged
+            Me.LinkLabel_UploadCacheData.Enabled = Me.CheckEdit_IsOnLine.Checked
+        End Sub
+
 #End Region
 
 #Region "ToolStrip Actions"
@@ -674,6 +745,7 @@ Namespace Manifest
             End If
 
             Dim inputForm As New M_02_01002(Me.TransactRequestHandle, Me.FormID)
+            inputForm.SV_IS_ONLINE = Me.CheckEdit_IsOnLine.Checked
             Me.PopupForm(inputForm, "TbActionReturn", False)
 
         End Sub
@@ -1095,73 +1167,6 @@ Namespace Manifest
 
 #End Region
 
-        Private Sub LinkLabel_UploadCacheData_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel_UploadCacheData.LinkClicked
-            Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.UploadCacheData, False)
-        End Sub
-
-        Private Sub CalcEdit_ExtraDiscount_EditValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CalcEdit_ExtraDiscount.EditValueChanged
-            Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.UpdateSummary, False)
-        End Sub
-
-        Private Sub RepositoryItemCalcEdit_WareAmount_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemCalcEdit_WareAmount.EditValueChanged
-
-            If IsNothing(Me.SVFR_BINDING_TURNOVER_DTL_ROW) = True Then
-                Return
-            End If
-
-            Me.IsSaved = False
-
-            Dim calcEdit As DevExpress.XtraEditors.CalcEdit = CType(sender, DevExpress.XtraEditors.CalcEdit)
-            Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_AMOUNT = calcEdit.Value
-            Me.DoPrivateRegularSelectingRowWareAmount()
-            Me.DoPrivateUpdateListPrice()
-            calcEdit.Value = Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_AMOUNT
-            Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.UpdateSummary, False)
-        End Sub
-
-        Private Sub Label_ClientID_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles Label_ClientID.TextChanged
-
-            If Me.FormStatus <> FormStatuses.Loading_IA_AfterFormLoaded Then
-                Return
-            End If
-
-            Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.UpdateSummary, False)
-
-        End Sub
-
-        Private Sub CalcEdit_DiscountAmount_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles CalcEdit_DiscountAmount.EditValueChanged
-            If IsNothing(Me.SVFR_BINDING_TURNOVER_DTL_ROW) = True Then
-                Return
-            End If
-
-            If Me.CalcEdit_DiscountAmount.Value < 0 Then
-                Me.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0021)
-                Return
-            End If
-
-            If CommTK.FInteger(Me.RadioGroup_UnitDiscountType.EditValue) = 1 Then
-                If Me.CalcEdit_DiscountAmount.Value > 1 Then
-                    Me.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0021)
-                    Return
-                End If
-                Me.SVFR_BINDING_TURNOVER_DTL_ROW.UNIT_DISCOUNT = Me.SVFR_BINDING_TURNOVER_DTL_ROW.ORIGION_UNIT_PRICE * Me.CalcEdit_DiscountAmount.Value
-            Else
-                If Me.CalcEdit_DiscountAmount.Value >= Me.SVFR_BINDING_TURNOVER_DTL_ROW.ORIGION_UNIT_PRICE Then
-                    Me.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0021)
-                    Return
-                End If
-                Me.SVFR_BINDING_TURNOVER_DTL_ROW.UNIT_DISCOUNT = Me.CalcEdit_DiscountAmount.Value
-            End If
-
-            Me.DoPrivateUpdateListPrice()
-        End Sub
-
-
-
-        Private Sub RadioGroup_UnitDiscountType_EditValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioGroup_UnitDiscountType.EditValueChanged
-            Me.CalcEdit_DiscountAmount.SelectAll()
-            Me.CalcEdit_DiscountAmount.Select()
-        End Sub
     End Class
 
 
