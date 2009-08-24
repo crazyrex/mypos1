@@ -506,7 +506,7 @@ Namespace Business
                     Me._manifest.Label_ClientID.Text, _
                     historyID, _
                     CommTK.GetSyncServerTime, _
-                    CommTK.FDecimal(Me._manifest.CalcEdit_UsePoint.EditValue), _
+                    CommTK.FDecimal(Me._manifest.CalcEdit_ChargeAmount.EditValue), _
                     CommTK.FInteger(Me._manifest.Label_AquiringPoints.Text), _
                     MyPosXAuto.Decls.CIVALUE_POINT_IO_TYPE_IN_RECHARGE, _
                     String.Empty, _
@@ -665,7 +665,8 @@ Namespace Business
             Try
 
 
-                Me._manifest.Label_AquiringPoints.Text = CommTK.FString(CommTK.FDecimal(Me._manifest.CalcEdit_UsePoint.EditValue) / CommTK.FDecimal(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_POINTS_TO_RMB_RATE)))
+                Me._manifest.Label_AquiringPoints.Text = _
+                    CommTK.FString(CommTK.FDecimal(Me._manifest.CalcEdit_ChargeAmount.EditValue) / CommTK.FDecimal(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_POINTS_TO_RMB_RATE)))
 
                 'Dim servResult As String = _
                 '    Me._service.ServAquiringPoints()
@@ -712,7 +713,7 @@ Namespace Business
                 Dim toExcel As New Utils.ExcelTK
                 toExcel.Open(Me._manifest.SV_READING_FILENAME)
 
-                Dim rowCounter As Integer = 1
+                Dim rowCounter As Integer = 2
 
                 Dim clientCodeText As String
                 Dim pointAmountText As String

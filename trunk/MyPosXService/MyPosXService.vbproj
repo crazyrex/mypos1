@@ -304,7 +304,7 @@
     <Compile Include="S08\S_08_00401.vb">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="TK.vb" />
+    <Compile Include="ServiceTK.vb" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="CompressionSink, Version=1.0.3133.37520, Culture=neutral, processorArchitecture=MSIL">
