@@ -172,13 +172,14 @@ Namespace Manifest
 
             'Initialize option list controls which value source is from the edit form content
 
-            'Me.TextBox_FirstInput.Select
+            Me.TextEdit_ClientCode.Select()
 
             If clearFields = False Then
                 Return
             End If
 
-            'Me.TextEdit_Input.ResetText()
+            Me.TextEdit_ClientCode.ResetText()
+            Me.CalcEdit_ChargeAmount.ResetText()
 
 
             '做根据LaunchCondition判断分支的相关动作
@@ -357,19 +358,9 @@ Namespace Manifest
                 '    Me.DoPrivateUpdateSelectingRow()               
                 '    Me.GridView_XXXXXList.BestFitColumns()         
 
-                'Case Business.B_02_00202.Affairs.SaveInfo             
-                'Window.XLMessageBox.ShowMessage( _                
-                '    MyPosXService.Decls.MSG_OK_00001, _                
-                '    Window.XLMessageBox.MessageType.Information, _
-                '    MessageBoxButtons.OK)                         
-                'Me.ResponseToParentForm()                         
+                Case Business.B_02_01201.Affairs.SaveInfo
 
-                'If Me.SV_EDITING_TRANSFER_ID > 0 Then            
-                '    Me.ResetSaveMode()                            
-                '    Me.CloseForm()                                
-                'Else                                              
-                '    Me.IA_ClearContent()                          
-                'End If                                            
+                    Me.IA_ClearContent(True)
 
 
             End Select
@@ -810,7 +801,7 @@ Namespace Manifest
             End If
         End Sub
 
-        Private Sub CalcEdit_UsePoint_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles CalcEdit_UsePoint.KeyDown
+        Private Sub CalcEdit_UsePoint_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles CalcEdit_ChargeAmount.KeyDown
             If e.KeyCode = Keys.Enter Then
                 Me._bizAgent.DoRequest(Business.B_02_01201.Affairs.AquiringPoints, False)
             End If

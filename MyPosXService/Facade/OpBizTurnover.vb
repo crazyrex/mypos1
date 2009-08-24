@@ -676,10 +676,14 @@ Namespace Facade
             Dim turnoverDtlDBDataRow As MyPosXAuto.FTs.FT_H_MP_TURNOVER_DTLRow
 
             Dim turnoverDtlCondition As New MyPosXAuto.Facade.AfBizTurnover.ConditionOfH_MP_TURNOVER_DTL(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
-            For Each turnoverDtlCacheDataRow In turnoverDtlCacheDataList
+            For Each turnoverDtlCacheDataRow In turnoverDtlCacheDataList.FindRowsByCondition(Nothing)
+
+                If turnoverDtlCacheDataRow.WARE_AMOUNT = 0 Then
+                    Continue For
+                End If
 
                 If turnoverDtlCacheDataRow.DETAIL_ID.Length = 0 Then
-                    Continue For
+                    turnoverDtlCacheDataRow.DETAIL_ID = Guid.NewGuid.ToString()
                 End If
 
                 turnoverDtlCondition.Clear()
@@ -719,15 +723,18 @@ Namespace Facade
                     MyPosXAuto.Facade.AfBizTurnover.ReviseH_MP_TURNOVERInfoByRow(turnoverCacheDataRow)
                 End If
 
-                If turnoverDetailIDs.ContainsKey(turnoverDBDataRow.TURNOVER_ID) = True Then
-                    detailIDs = turnoverDetailIDs.Item(turnoverDBDataRow.TURNOVER_ID)
+                If turnoverDetailIDs.ContainsKey(turnoverCacheDataRow.TURNOVER_ID) = True Then
+                    detailIDs = turnoverDetailIDs.Item(turnoverCacheDataRow.TURNOVER_ID)
                     turnoverDtlCondition.Clear()
                     turnoverDtlCondition.Add(AfBizTurnover.H_MP_TURNOVER_DTLColumns.DETAIL_IDColumn, False, detailIDs)
+                    turnoverDtlCondition.Add(AfBizTurnover.H_MP_TURNOVER_DTLColumns.TURNOVER_IDColumn, "=", turnoverCacheDataRow.TURNOVER_ID)
+
                     MyPosXAuto.Facade.AfBizTurnover.DeleteH_MP_TURNOVER_DTLData(turnoverDtlCondition)
                 Else
-                    MyPosXAuto.Facade.AfBizTurnover.DeleteH_MP_TURNOVERInfo(turnoverDBDataRow.TURNOVER_ID)
+                    MyPosXAuto.Facade.AfBizTurnover.DeleteH_MP_TURNOVERInfo(turnoverCacheDataRow.TURNOVER_ID)
                 End If
 
+                'MyPosXAuto.Facade.AfBizTurnover.SaveBatchH_MP_TURNOVER_DTLData(turnoverDtlCacheDataList)
             Next
         End Sub
 

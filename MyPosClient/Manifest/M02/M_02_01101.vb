@@ -175,13 +175,14 @@ Namespace Manifest
 
             'Initialize option list controls which value source is from the edit form content
 
-            'Me.TextBox_FirstInput.Select
+            Me.TextEdit_ClientCode.Select()
 
             If clearFields = False Then
                 Return
             End If
 
-            'Me.TextEdit_Input.ResetText()
+            Me.TextEdit_ClientCode.ResetText()
+            Me.SpinEdit_WareAmount.ResetText()
 
 
             '做根据LaunchCondition判断分支的相关动作
@@ -575,25 +576,17 @@ Namespace Manifest
             End If
 
 
+        End Sub
 
-            'If IsNothing(Me.TreeList_XXXX.FocusedNode) = False Then  
-            '                                                         
-            '    Me.SVFR_SELECTING_ROW = _                            
-            '         CType(CType( _                                  
-            '             Me.TreeList_XXXX.GetDataRecordByNode( _     
-            '                 Me.TreeList_XXXX.FocusedNode),  _       
-            '             DataRowView).Row, XAuto.FTs.FT_M_AV_XXXXRow)
-            '                                                         
-            '    If Me.SVFR_SELECTING_ROW.XXXX_ID > 0 Then            
-            '        Me.ToolStripButton_Choose.Enabled = True         
-            '    End If                                               
-            '                                                         
-            '    Me.ToolStripButton_DeleteXXXX.Enabled = True         
-            '    Me.ToolStripButton_ReviseXXXX.Enabled = True         
-            '                                                         
-            'End If                                                   
+        Private Sub DoPrivateSelectRowByWareCode()
 
-
+            Me.ButtonEdit_WareCode.Text = Me.ButtonEdit_WareCode.Text.Trim.ToUpper
+            For rowIndex As Integer = 0 To Me.GridView_TurnoverDtl.RowCount - 1
+                If Me.GridView_TurnoverDtl.GetRowCellDisplayText(rowIndex, Me.GridColumn_WareCode).ToUpper = Me.ButtonEdit_WareCode.Text Then
+                    Me.GridView_TurnoverDtl.FocusedRowHandle = rowIndex
+                    Exit For
+                End If
+            Next
 
         End Sub
 
@@ -814,6 +807,18 @@ Namespace Manifest
             If e.KeyCode = Keys.Enter Then
                 Me._bizAgent.DoRequest(Business.B_02_01101.Affairs.LoadClientInfoByCode, False)
             End If
+        End Sub
+
+        Private Sub ButtonEdit_WareCode_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles ButtonEdit_WareCode.KeyDown
+
+            If e.KeyCode <> Keys.Enter Then
+                Return
+            End If
+
+            Me.DoPrivateSelectRowByWareCode()
+            Me.SpinEdit_WareAmount.Select()
+            Me.SpinEdit_WareAmount.SelectAll()
+
         End Sub
     End Class
 

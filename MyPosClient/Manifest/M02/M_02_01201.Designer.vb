@@ -56,6 +56,7 @@
             Me.ToolStrip_Form = New System.Windows.Forms.ToolStrip
             Me.ToolStripButton_Create = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_Save = New System.Windows.Forms.ToolStripButton
+            Me.ToolStripButton_RechargeByExcel = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_Close = New System.Windows.Forms.ToolStripButton
             Me.Label_HintGainPoint = New System.Windows.Forms.Label
             Me.TextEdit_ClientCode = New DevExpress.XtraEditors.TextEdit
@@ -66,15 +67,14 @@
             Me.Label8 = New System.Windows.Forms.Label
             Me.Label_ClientName = New System.Windows.Forms.Label
             Me.Label_HoldingPoint = New System.Windows.Forms.Label
-            Me.CalcEdit_UsePoint = New DevExpress.XtraEditors.CalcEdit
+            Me.CalcEdit_ChargeAmount = New DevExpress.XtraEditors.CalcEdit
             Me.Label6 = New System.Windows.Forms.Label
             Me.Label_RMBToPointsRate = New System.Windows.Forms.Label
             Me.Label3 = New System.Windows.Forms.Label
-            Me.ToolStripButton_RechargeByExcel = New System.Windows.Forms.ToolStripButton
             Me.OpenFileDialog_ImportFile = New System.Windows.Forms.OpenFileDialog
             Me.ToolStrip_Form.SuspendLayout()
             CType(Me.TextEdit_ClientCode.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.CalcEdit_UsePoint.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.CalcEdit_ChargeAmount.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'DefaultLookAndFeel_Form
@@ -127,6 +127,12 @@
             Me.ToolStripButton_Save.Name = "ToolStripButton_Save"
             Me.ToolStripButton_Save.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Save.Text = "保存"
+            '
+            'ToolStripButton_RechargeByExcel
+            '
+            Me.ToolStripButton_RechargeByExcel.Name = "ToolStripButton_RechargeByExcel"
+            Me.ToolStripButton_RechargeByExcel.Size = New System.Drawing.Size(85, 22)
+            Me.ToolStripButton_RechargeByExcel.Text = "导入Excel充值"
             '
             'ToolStripButton_Close
             '
@@ -464,13 +470,13 @@
             Me.Label_HoldingPoint.Text = "0"
             Me.Label_HoldingPoint.TextAlign = System.Drawing.ContentAlignment.MiddleRight
             '
-            'CalcEdit_UsePoint
+            'CalcEdit_ChargeAmount
             '
-            Me.CalcEdit_UsePoint.Location = New System.Drawing.Point(65, 112)
-            Me.CalcEdit_UsePoint.Name = "CalcEdit_UsePoint"
-            Me.CalcEdit_UsePoint.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-            Me.CalcEdit_UsePoint.Size = New System.Drawing.Size(121, 20)
-            Me.CalcEdit_UsePoint.TabIndex = 10000
+            Me.CalcEdit_ChargeAmount.Location = New System.Drawing.Point(65, 112)
+            Me.CalcEdit_ChargeAmount.Name = "CalcEdit_ChargeAmount"
+            Me.CalcEdit_ChargeAmount.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+            Me.CalcEdit_ChargeAmount.Size = New System.Drawing.Size(121, 20)
+            Me.CalcEdit_ChargeAmount.TabIndex = 10000
             CTag11.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag11.CalculatorRequired = True
             CTag11.ComboValueTextBox = Nothing
@@ -489,12 +495,12 @@
             CTag11.KeyValueAbsentable = False
             CTag11.LeagleText = ""
             CTag11.NumericButtonTextBox = Nothing
-            CTag11.ParentControl = Me.CalcEdit_UsePoint
+            CTag11.ParentControl = Me.CalcEdit_ChargeAmount
             CTag11.SkipValidate = False
             CTag11.TimeButtonTextBox = Nothing
             CTag11.ToolTip = ""
             CTag11.ValueType = XL.Common.ControlValueType.Character
-            Me.CalcEdit_UsePoint.Tag = CTag11
+            Me.CalcEdit_ChargeAmount.Tag = CTag11
             '
             'Label6
             '
@@ -608,12 +614,6 @@
             Me.Label3.Tag = CTag14
             Me.Label3.Text = "当前兑换率"
             '
-            'ToolStripButton_RechargeByExcel
-            '
-            Me.ToolStripButton_RechargeByExcel.Name = "ToolStripButton_RechargeByExcel"
-            Me.ToolStripButton_RechargeByExcel.Size = New System.Drawing.Size(85, 22)
-            Me.ToolStripButton_RechargeByExcel.Text = "导入Excel充值"
-            '
             'OpenFileDialog_ImportFile
             '
             Me.OpenFileDialog_ImportFile.Filter = "Excel文件|*.xls;*.xlsx"
@@ -621,7 +621,7 @@
             'M_02_01201
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
-            Me.Controls.Add(Me.CalcEdit_UsePoint)
+            Me.Controls.Add(Me.CalcEdit_ChargeAmount)
             Me.Controls.Add(Me.Label6)
             Me.Controls.Add(Me.ToolStrip_Form)
             Me.Controls.Add(Me.Label_HintGainPoint)
@@ -668,7 +668,7 @@
             Me.ToolStrip_Form.ResumeLayout(False)
             Me.ToolStrip_Form.PerformLayout()
             CType(Me.TextEdit_ClientCode.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.CalcEdit_UsePoint.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.CalcEdit_ChargeAmount.Properties, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -682,7 +682,7 @@
         Friend WithEvents Label8 As System.Windows.Forms.Label
         Friend WithEvents Label_ClientName As System.Windows.Forms.Label
         Friend WithEvents Label_HoldingPoint As System.Windows.Forms.Label
-        Friend WithEvents CalcEdit_UsePoint As DevExpress.XtraEditors.CalcEdit
+        Friend WithEvents CalcEdit_ChargeAmount As DevExpress.XtraEditors.CalcEdit
         Friend WithEvents Label6 As System.Windows.Forms.Label
         Friend WithEvents Label3 As System.Windows.Forms.Label
         Friend WithEvents Label_RMBToPointsRate As System.Windows.Forms.Label

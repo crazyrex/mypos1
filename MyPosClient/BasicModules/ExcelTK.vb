@@ -468,8 +468,8 @@ Namespace Utils
         End Sub
 
         Public Function GetCellText(ByVal rowCounter As Integer, ByVal columnCounter As Integer) As String
-            Me._opRange = CType(Me._openSheet.Cells(rowCounter, columnCounter), Excel.Range)
-            Me._opRange.Select()
+            Me._opRange = Me._openSheet.Range(Me._openSheet.Cells(rowCounter, columnCounter), Me._openSheet.Cells(rowCounter, columnCounter))
+            'Me._opRange.Select()
 
             Return CommTK.FString(Me._opRange.Text)
 

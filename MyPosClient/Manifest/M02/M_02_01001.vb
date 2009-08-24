@@ -49,7 +49,7 @@ Namespace Manifest
         Public SVFT_BINDING_TURNOVER_DTL_LIST As New MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTL
 
         Public SVFT_CACHE_DATA_TURNOVER_LIST As New MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER
-        Public SVFT_CACHE_DATE_TURNOVER_DTL_LIST As New MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTL
+        Public SVFT_CACHE_DATA_TURNOVER_DTL_LIST As New MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTL
 
         'Public SVFT_CHOOSE_XXX_LIST As New XAuto.FTs.FT_
 
@@ -204,6 +204,7 @@ Namespace Manifest
             Me.TextEdit_ClientCode.ResetText()
             Me.CheckEdit_IsClient.Checked = False
             Me.ButtonEdit_WareCode.ResetText()
+            Me.SpinEdit_WareAmount.Value = 0
             Me.CalcEdit_DiscountAmount.Value = 0
             Me.CalcEdit_ExtraDiscount.Value = 0
             Me.CalcEdit_Payment.Value = 0
@@ -427,7 +428,9 @@ Namespace Manifest
 
                 Select Case Me._bizAgent.AffairOf(responseResult.ResponseTitle)              'transaction cases under error
 
-
+                    Case Business.B_02_01001.Affairs.ValidateOnline
+                        Me.CheckEdit_IsOnLine.Checked = False
+                        Me.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0015)
                 End Select
 
                 XL.Win.Window.XLMessageBox.ShowMessage(operResult, Window.XLMessageBox.MessageType.Wrong, MessageBoxButtons.OK)
@@ -450,7 +453,6 @@ Namespace Manifest
                 Case Business.B_02_01001.Affairs.AddWare
                     Me.ButtonEdit_WareCode.SelectAll()
                     Me.GridView_TurnoverDtl.BestFitColumns()
-                    Me.DoPrivateSelectRowByWareCode()
                     Me.DoPrivateUpdateCacheStatus()
                     Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.UpdateSummary, False)
                     Me.IsSaved = False
@@ -465,6 +467,10 @@ Namespace Manifest
 
                 Case Business.B_02_01001.Affairs.LoadReturnReliefTurnover
                     Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.UpdateSummary, False)
+
+                Case Business.B_02_01001.Affairs.UploadCacheData
+                    Me.ShowStatusMessage(StatusMessageIcon.Okay, MyPosXService.Decls.MSG_STATUS_0011)
+                    Me.DoPrivateUpdateCacheStatus()
 
             End Select
         End Sub
@@ -522,20 +528,23 @@ Namespace Manifest
                 Return
             End If
 
-            If Me.SV_RETURN_RELIEF_TURNOVER_ROW_SE.IsNull = True Then
-                Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.AddWare, False)
-            Else
-                For rowIndex As Integer = 0 To Me.GridView_TurnoverDtl.RowCount - 1
-                    If Me.GridView_TurnoverDtl.GetRowCellDisplayText(rowIndex, Me.GridColumn_WareCode).ToUpper = Me.ButtonEdit_WareCode.Text.Trim.ToUpper Then
-                        Me.GridView_TurnoverDtl.FocusedRowHandle = rowIndex
-                        Me.SpinEdit_WareAmount.Select()
-                        Me.SpinEdit_WareAmount.SelectAll()
-                        Exit For
-                    End If
-                Next
+            Me.DoPrivateSelectRowByWareCode()
+            'Me.SpinEdit_WareAmount.Select()
+            'Me.SpinEdit_WareAmount.SelectAll()
 
-                Me.TextEdit_ClientCode.SelectAll()
-            End If
+            'If Me.SV_RETURN_RELIEF_TURNOVER_ROW_SE.IsNull = True Then
+            Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.AddWare, False)
+            'Else
+            '    For rowIndex As Integer = 0 To Me.GridView_TurnoverDtl.RowCount - 1
+            '        If Me.GridView_TurnoverDtl.GetRowCellDisplayText(rowIndex, Me.GridColumn_WareCode).ToUpper = Me.ButtonEdit_WareCode.Text.Trim.ToUpper Then
+            '            Me.GridView_TurnoverDtl.FocusedRowHandle = rowIndex
+            '            Me.SpinEdit_WareAmount.Select()
+            '            Me.SpinEdit_WareAmount.SelectAll()
+            '            Exit For
+            '        End If
+            '    Next
+
+            'End If
 
         End Sub
 
@@ -587,7 +596,7 @@ Namespace Manifest
         End Sub
 
         Private Sub CalcEdit_Payment_EditValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CalcEdit_Payment.EditValueChanged
-            Me.Label_Change.Text = CommTK.FString(Me.CalcEdit_Payment.Value - CommTK.FDecimal(Me.Label_Payable.Text), False, "#,##0.00")
+            Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.UpdateSummary, False)
 
         End Sub
 
@@ -660,6 +669,9 @@ Namespace Manifest
 
         Private Sub CheckEdit_IsOnLine_CheckedChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckEdit_IsOnLine.CheckedChanged
             Me.LinkLabel_UploadCacheData.Enabled = Me.CheckEdit_IsOnLine.Checked
+            If Me.CheckEdit_IsOnLine.Checked = True Then
+                Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.ValidateOnline, False)
+            End If
         End Sub
 
 #End Region
@@ -711,7 +723,7 @@ Namespace Manifest
 
             Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.UpdateSummary, False)
 
-            Me.SVFT_CACHE_DATE_TURNOVER_DTL_LIST.SaveXml( _
+            Me.SVFT_CACHE_DATA_TURNOVER_DTL_LIST.SaveXml( _
                 WinTK.GetResourceFilePath( _
                     ResourceType.Data, _
                     Utils.Decls.CACHE_DATA_FILE_TURNOVER_DETAIL))
@@ -906,6 +918,7 @@ Namespace Manifest
             For rowIndex As Integer = 0 To Me.GridView_TurnoverDtl.RowCount - 1
                 If Me.GridView_TurnoverDtl.GetRowCellDisplayText(rowIndex, Me.GridColumn_WareCode).ToUpper = Me.ButtonEdit_WareCode.Text Then
                     Me.GridView_TurnoverDtl.FocusedRowHandle = rowIndex
+                    Me.SpinEdit_WareAmount.Value = Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_AMOUNT
                     Exit For
                 End If
             Next
