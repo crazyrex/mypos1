@@ -32,7 +32,7 @@ Namespace Manifest
         'Shared Value, 用于与其它窗体交换数值的情况下, 需要自己根据需要更改命名
         '原则上所有UTLD的变量不能出现在成品中, 在确定不需要的情况下应删除UTLD
         '-------------------------------------------------------------------
-        Public SV_UTLD_0002 As String = "SV_UTLD_0002"
+        Public SV_IS_ONLINE As Boolean = False
         'Public SV_UTLD_0003 As String ="SV_UTLD_0003"
         'Public SV_UTLD_0004 As String ="SV_UTLD_0004"
         'Public SV_UTLD_0005 As String ="SV_UTLD_0005"

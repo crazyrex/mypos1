@@ -588,7 +588,7 @@ Namespace Business
 
                 End If
 
-                If Me._manifest.SV_IS_DB_ONLINE = True Then
+                If Me._manifest.CheckEdit_IsOnLine.Checked = True Then
 
                     Me._manifest.SV_PRINTING_TURNOVER_CODE = MyPosXService.Facade.OpBizTurnover.GetAutoTransferCode( _
                         False, _
@@ -597,6 +597,7 @@ Namespace Business
 
                     Me._manifest.InvokeBizRequest(Affairs.PrintPurchaseList, False)
                     Dim turnoverID = Guid.NewGuid.ToString
+
                     MyPosXAuto.Facade.AfBizTurnover.CreateH_MP_TURNOVERInfo( _
                         TURNOVER_ID:=turnoverID, _
                         TURNOVER_CODE:=Me._manifest.SV_PRINTING_TURNOVER_CODE, _
@@ -1095,6 +1096,7 @@ Namespace Business
 
 
             Try
+
 
                 MyPosXService.Facade.OpBizTurnover.ImportTurnoverCacheData( _
                     Me._manifest.SVFT_CACHE_DATA_TURNOVER_LIST, _
