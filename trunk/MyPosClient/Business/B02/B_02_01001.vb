@@ -1021,7 +1021,6 @@ Namespace Business
 
                 Dim clientCondition As New MyPosXAuto.Facade.AfMV.ConditionOfMV_MP_CLIENT(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_Or)
                 clientCondition.Add(MyPosXAuto.Facade.AfMV.MV_MP_CLIENTColumns.CLIENT_CODEColumn, "=", Me._manifest.TextEdit_ClientCode.Text)
-                clientCondition.Add(MyPosXAuto.Facade.AfMV.MV_MP_CLIENTColumns.CLIENT_NAMEColumn, "=", Me._manifest.TextEdit_ClientCode.Text)
                 clientCondition.Add(MyPosXAuto.Facade.AfMV.MV_MP_CLIENTColumns.CELL_PHONEColumn, "=", Me._manifest.TextEdit_ClientCode.Text)
                 Dim clientRow = MyPosXAuto.Facade.AfMV.GetMV_MP_CLIENTRow(clientCondition)
 
@@ -1123,12 +1122,16 @@ Namespace Business
 
             Try
 
+                Dim servResult As String = _
+                    Me._service.ServUploadCacheData( _
+                        Me._manifest.SVFT_CACHE_DATA_TURNOVER_LIST, _
+                        Me._manifest.SVFT_CACHE_DATA_TURNOVER_DTL_LIST)
 
-                MyPosXService.Facade.OpBizTurnover.ImportTurnoverCacheData( _
-                    Me._manifest.SVFT_CACHE_DATA_TURNOVER_LIST, _
-                    Me._manifest.SVFT_CACHE_DATA_TURNOVER_DTL_LIST)
+                If servResult.Length > 0 Then
+                    Return servResult
+                End If
 
-                MyPosXService.Facade.OpBizTurnover.UpdateTurnoverPointsIO()
+                MyPosXAuto.DataCache.DCHMV.OverwriteMV_MP_CLIENTFromDB()
 
                 Me._manifest.SVFT_CACHE_DATA_TURNOVER_LIST.Clear()
                 Me._manifest.SVFT_CACHE_DATA_TURNOVER_DTL_LIST.Clear()
@@ -1142,13 +1145,6 @@ Namespace Business
                         ResourceType.Data, _
                         Utils.Decls.CACHE_DATA_FILE_TURNOVER_DETAIL))
 
-
-                'Dim servResult As String = _
-                '    Me._service.ServUploadCacheData()
-
-                'If servResult.Length > 0 Then
-                '    Return servResult        
-                'End If                       
 
             Catch ex As XL.Common.Utils.XLException
 

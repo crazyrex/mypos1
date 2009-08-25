@@ -453,7 +453,7 @@ Namespace Manifest
                 Case Business.B_02_01001.Affairs.AddWare
                     Me.ButtonEdit_WareCode.SelectAll()
                     Me.GridView_TurnoverDtl.BestFitColumns()
-                    Me.DoPrivateUpdateCacheStatus()
+                    Me.DoPrivateSelectRowByWareCode()
                     Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.UpdateSummary, False)
                     Me.IsSaved = False
 
@@ -528,7 +528,6 @@ Namespace Manifest
                 Return
             End If
 
-            Me.DoPrivateSelectRowByWareCode()
             'Me.SpinEdit_WareAmount.Select()
             'Me.SpinEdit_WareAmount.SelectAll()
 
@@ -723,13 +722,7 @@ Namespace Manifest
 
             Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.UpdateSummary, False)
 
-            Me.SVFT_CACHE_DATA_TURNOVER_DTL_LIST.SaveXml( _
-                WinTK.GetResourceFilePath( _
-                    ResourceType.Data, _
-                    Utils.Decls.CACHE_DATA_FILE_TURNOVER_DETAIL))
-
-            Me.DoPrivateUpdateCacheStatus()
-
+         
         End Sub
 
         Private Sub TbActionClose()

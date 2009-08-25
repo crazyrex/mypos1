@@ -74,9 +74,9 @@ Namespace Business
             LoadList
             LoadClientInfoByCode
             AddWare
-            BizUtld0003
-            BizUtld0004
-            BizUtld0005
+            UploadCacheData
+            UpdateSummary
+            ValidateOnline
             BizUtld0006
             BizUtld0007
             BizUtld0008
@@ -197,26 +197,26 @@ Namespace Business
                     '-------------------------------------------------------------------
                     functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoAddWare)
 
-                Case Affairs.BizUtld0003
+                Case Affairs.UploadCacheData
 
                     '
                     '取到处理函数的结果，传入返回给Manifest的AgentResponse包
                     '-------------------------------------------------------------------
-                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoBizUtld0003)
+                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoUploadCacheData)
 
-                Case Affairs.BizUtld0004
-
-                    '
-                    '取到处理函数的结果，传入返回给Manifest的AgentResponse包
-                    '-------------------------------------------------------------------
-                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoBizUtld0004)
-
-                Case Affairs.BizUtld0005
+                Case Affairs.UpdateSummary
 
                     '
                     '取到处理函数的结果，传入返回给Manifest的AgentResponse包
                     '-------------------------------------------------------------------
-                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoBizUtld0005)
+                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoUpdateSummary)
+
+                Case Affairs.ValidateOnline
+
+                    '
+                    '取到处理函数的结果，传入返回给Manifest的AgentResponse包
+                    '-------------------------------------------------------------------
+                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoValidateOnline)
 
                 Case Affairs.BizUtld0006
 
@@ -376,40 +376,110 @@ Namespace Business
 
 
 
+                Dim staffRowSE As New MyPosXAuto.FTs.FT_M_STAFFRowSEntity
 
-                'Dim choosePurchaseWayList As New MyPosXAuto.FTs.FT_CIV_PURCHASE_WAY                                       
-                'Dim chooseAssetAbsentTypeList As New MyPosXAuto.FTs.FT_CIV_ASSET_ABSENT_TYPE                              
-                'Dim chooseAssetConformationList As New MyPosXAuto.FTs.FT_CIV_ASSET_CONFORMATION                           
-                'Dim chooseEliminateWayList As New MyPosXAuto.FTs.FT_CIV_ELIMINATE_WAY                                     
-                'Dim chooseInAccountCredenceTextList As New MyPosXAuto.FTs.FT_CIV_IN_ACCOUNT_CREDENCE_TEXT                 
-                '                                                                                                     
-                'Dim sysManageFormMustConfirm As Boolean                                                              
-                '                                                                                                     
-                'Me._service.ServInitDisplay( _                                                                       
-                '    CommDecl.CURRENT_LANGUAGE_OPTION, _                                                              
-                '    choosePurchaseWayList, _                                                                         
-                '    chooseAssetAbsentTypeList, _                                                                     
-                '    chooseAssetConformationList, _                                                                   
-                '    chooseEliminateWayList, _                                                                        
-                '    chooseInAccountCredenceTextList, _                                                               
-                '    sysManageFormMustConfirm)                                                                        
-                '                                                                                                     
-                'Me._manifest.LookUpEdit_AssetAbsentType.Properties.DataSource = chooseAssetAbsentTypeList            
-                'Me._manifest.LookUpEdit_Conformation.Properties.DataSource = chooseAssetConformationList             
-                'Me._manifest.LookUpEdit_EliminateWay.Properties.DataSource = chooseEliminateWayList                  
-                'Me._manifest.LookUpEdit_PurchaseWay.Properties.DataSource = choosePurchaseWayList                    
-                'Me._manifest.LookUpEdit_InAccountCredenceText.Properties.DataSource = chooseInAccountCredenceTextList
-                '                                                                                                     
-                'Me._manifest.LookUpEdit_AssetAbsentType.EditValue = XAuto.Decls.CIVALUE_ASSET_ABSENT_TYPE_NONE       
-                'Me._manifest.LookUpEdit_EliminateWay.EditValue = MyPosXService.Decls.DEFAULT_CI_ELIMINATE_WAY_VALUE_NONE  
-                '                                                                                                     
-                'If Me._manifest.SV_EDITING_ASSET_ID < 0 Then                                                         
-                '			xxxx                                                                                            
-                'End If                                                                                               
-                '                                                                                                     
-                'If sysManageFormMustConfirm = True Then                                                              
-                '    Me._manifest.ButtonEdit_CurrentDepartmentCode.Enabled = False                                    
-                'End If                                                                                               
+                Dim sysWareSpecModelDiscard As Boolean
+                Dim sysHideFinancials As Boolean
+                Dim sysShowCustomWareCode As Boolean
+                Dim affairDescription As String = String.Empty
+
+                Dim sysAttribute1 As String = String.Empty
+                Dim sysAttribute2 As String = String.Empty
+                Dim sysAttribute3 As String = String.Empty
+                Dim sysAttribute4 As String = String.Empty
+
+                Dim wareBatchPrefix As String = String.Empty
+
+                Me._service.ServInitDisplay( _
+                    CommDecl.CURRENT_LANGUAGE_OPTION, _
+                    Utils.Decls.LOGIN_STAFF_ID, _
+                    staffRowSE, _
+                    sysWareSpecModelDiscard, _
+                    sysHideFinancials, _
+                    sysShowCustomWareCode, _
+                    sysAttribute1, _
+                    sysAttribute2, _
+                    sysAttribute3, _
+                    sysAttribute4, _
+                    affairDescription, _
+                    SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_CURRENT_POS_ID), _
+                    Me._manifest.SV_POS_SET_ROWSE, _
+                    Me._manifest.SVFT_REF_SALE_TEMPLATE_WARE_LIST)
+
+                If staffRowSE.IsNull = False Then
+                    'Me._manifest.ButtonEdit_EmployeeCode.Text = staffRowSE.STAFF_CODE
+                    'Me._manifest.Label_EmployeeName.Text = staffRowSE.STAFF_NAME
+                    'Me._manifest.Label_EmployeeID.Text = CommTK.FString(staffRowSE.STAFF_ID)
+                End If
+
+                'Me._manifest.SV_REPORT_TURNOVER_DTL_LIST = New XForm.ReportOption(MyPosXService.Decls.RPT_NAME_0001, XForm.ReportOption.PrintType.Print, True)
+
+                'If CommTK.FBoolean(SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_PRINT_SHOPPING_LIST)) = True  Then
+                '    Me._manifest.ToolStripButton_PrintPurchaseLabel.Visible = False
+                'End If
+
+                If sysHideFinancials = True Then
+                    Me._manifest.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0005)
+                End If
+
+                Me._manifest.GridColumn_Attribute1.Caption = sysAttribute1
+                Me._manifest.GridColumn_Attribute2.Caption = sysAttribute2
+                Me._manifest.GridColumn_Attribute3.Caption = sysAttribute3
+                Me._manifest.GridColumn_Attribute4.Caption = sysAttribute4
+
+                If sysAttribute1.Length = 0 Then
+                    Me._manifest.GridColumn_Attribute1.Visible = False
+                End If
+
+                If sysAttribute2.Length = 0 Then
+                    Me._manifest.GridColumn_Attribute2.Visible = False
+                End If
+
+                If sysAttribute3.Length = 0 Then
+                    Me._manifest.GridColumn_Attribute3.Visible = False
+                End If
+
+                If sysAttribute4.Length = 0 Then
+                    Me._manifest.GridColumn_Attribute4.Visible = False
+                End If
+
+                If sysWareSpecModelDiscard = True Then
+                    Me._manifest.GridColumn_Spec.Visible = False
+                    Me._manifest.GridColumn_Model.Visible = False
+                End If
+
+                If sysShowCustomWareCode = False Then
+                    Me._manifest.GridColumn_CustomCode.Visible = False
+                End If
+
+                Me._manifest.Label_AffairDescription.Text = affairDescription
+
+                If Utils.Decls.LOGIN_STAFF_ID.Length = 0 Then
+                    Me._manifest.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0013)
+                    Me._manifest.DoPublicDisableOperations()
+                    Return String.Empty
+                End If
+
+                If Me._manifest.SV_POS_SET_ROWSE.POS_TYPE = MyPosXAuto.Decls.CIVALUE_POS_TYPE_WAREHOUSE Then
+                    Me._manifest.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0014)
+                    Me._manifest.DoPublicDisableOperations()
+                    Return String.Empty
+                End If
+
+                Me._manifest.SVFT_CACHE_DATA_TURNOVER_LIST.LoadXml( _
+                    WinTK.GetResourceFilePath( _
+                        ResourceType.Data, _
+                        Utils.Decls.CACHE_DATA_FILE_TURNOVER))
+                Me._manifest.SVFT_CACHE_DATA_TURNOVER_DTL_LIST.LoadXml( _
+                    WinTK.GetResourceFilePath( _
+                        ResourceType.Data, _
+                        Utils.Decls.CACHE_DATA_FILE_TURNOVER_DETAIL))
+
+                If IsNothing(Utils.Decls.CURRENT_POS_ROW) = True Then
+                    Me._manifest.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0008)
+                    Me._manifest.Enabled = False
+                    Return String.Empty
+                End If
 
 
                 'Me._manifest.SV_RPTOPT_LABEL = New XForm.ReportOption(MyPosXService.Decls.RPT_NAME_0001, XForm.ReportOption.PrintType.Label, True)
@@ -501,6 +571,152 @@ Namespace Business
             Try
 
 
+                Dim turnoverType As Integer = MyPosXAuto.Decls.CIVALUE_TURNOVER_TYPE_CHECK_OUT
+                Dim turnoverStyle As Integer = MyPosXAuto.Decls.CIVALUE_TURNOVER_STYLE_OTHERS
+                Dim pointUse As Integer = CommTK.FInteger(Me._manifest.Label_UsePoint.Text)
+
+                If Me._manifest.CheckEdit_IsOnLine.Checked = True Then
+
+                    Me._manifest.SV_PRINTING_TURNOVER_CODE = MyPosXService.Facade.OpBizTurnover.GetAutoTransferCode( _
+                        False, _
+                        SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_CURRENT_POS_ID), _
+                         MyPosXAuto.Decls.CIVALUE_TURNOVER_STYLE_OTHERS)
+
+                    'Me._manifest.InvokeBizRequest(Affairs.PrintPurchaseList, False)
+                    Dim turnoverID = Guid.NewGuid.ToString
+
+                    MyPosXAuto.Facade.AfBizTurnover.CreateH_MP_TURNOVERInfo( _
+                        TURNOVER_ID:=turnoverID, _
+                        TURNOVER_CODE:=Me._manifest.SV_PRINTING_TURNOVER_CODE, _
+                        TURNOVER_TIME:=CommTK.GetSyncServerTime, _
+                        POS_ID:=SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_CURRENT_POS_ID), _
+                        STAFF_ID:=Utils.Decls.LOGIN_STAFF_ID, _
+                        TURNOVER_TYPE:=turnoverType, _
+                        TURNOVER_STYLE:=turnoverStyle, _
+                        SUPPLIER_ID:=String.Empty, _
+                        CLIENT_ID:=Me._manifest.Label_ClientID.Text, _
+                        TURNOVER_CONSIGN_STATUS:=MyPosXAuto.Decls.CIVALUE_TURNOVER_CONSIGN_STATUS_DONE, _
+                        BALANCE_STATUS:=MyPosXAuto.Decls.CIVALUE_BALANCE_STATUS_DONE, _
+                        REMARK:=String.Empty, _
+                        DELIVERY_DETAIL:=String.Empty, _
+                        EXTRA_DISCOUNT:=0, _
+                        DELIVERY_CHARGE:=0, _
+                        RELIEF_PAIR_ID:=String.Empty, _
+                        STAFF_SHARE_RATE:=0, _
+                        CONSIGN_DUE_DATE:=CommTK.GetSyncServerTime, _
+                        BATCH_INDEX:=0, _
+                        HEADQUATER_MERGED_CODE:=String.Empty, _
+                        REPLACE_INVENTORY_ID:=String.Empty, _
+                        POINT_GAIN:=0, _
+                        POINT_TO_RMB_RATE:=CommTK.FDecimal(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_POINTS_TO_RMB_RATE)), _
+                        POINT_USE:=pointUse, _
+                        RMB_TO_POINT_RATE:=CommTK.FDecimal(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_RMB_TO_POINTS_RATE)))
+
+                    Dim dbTurnoverDtlList As New MyPosXAuto.FTs.FT_H_MP_TURNOVER_DTL
+                    Dim dbTurnoverDtlRow As MyPosXAuto.FTs.FT_H_MP_TURNOVER_DTLRow
+
+                    For Each bindingRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow In Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.FindRowsByCondition(Nothing)
+                        dbTurnoverDtlRow = dbTurnoverDtlList.NewH_MP_TURNOVER_DTLRow
+                        dbTurnoverDtlList.AddH_MP_TURNOVER_DTLRow(dbTurnoverDtlRow)
+
+                        dbTurnoverDtlRow.UNIT_DISCOUNT = 0
+                        dbTurnoverDtlRow.SUM_DISCOUNT = 0
+                        dbTurnoverDtlRow.CloneDataRow(bindingRow)
+                        dbTurnoverDtlRow.DETAIL_ID = Guid.NewGuid.ToString
+                        dbTurnoverDtlRow.TURNOVER_ID = turnoverID
+                    Next
+
+                    MyPosXAuto.Facade.AfBizTurnover.SaveBatchH_MP_TURNOVER_DTLData(dbTurnoverDtlList)
+                    MyPosXService.Facade.OpBizTurnover.UpdateTurnoverPointsIO()
+
+                    Return String.Empty
+                End If
+
+
+                Me._manifest.SV_PRINTING_TURNOVER_CODE = _
+                    MyPosXService.Facade.OpBizTurnover.GetAutoLocalTurnoverCode( _
+                    False, _
+                    turnoverType, _
+                    SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_CURRENT_POS_ID))
+
+
+                Dim turnoverCacheDataRow = Me._manifest.SVFT_CACHE_DATA_TURNOVER_LIST.AddNewXV_H_MP_TURNOVERRow( _
+                    TURNOVER_ID:=Guid.NewGuid.ToString, _
+                    TURNOVER_CODE:=Me._manifest.SV_PRINTING_TURNOVER_CODE, _
+                    TURNOVER_TIME:=CommTK.GetSyncServerTime, _
+                    POS_ID:=SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_CURRENT_POS_ID), _
+                    STAFF_ID:=Utils.Decls.LOGIN_STAFF_ID, _
+                    TURNOVER_TYPE:=turnoverType, _
+                    TURNOVER_STYLE:=turnoverStyle, _
+                    SUPPLIER_ID:=String.Empty, _
+                    CLIENT_ID:=Me._manifest.Label_ClientID.Text, _
+                    TURNOVER_CONSIGN_STATUS:=MyPosXAuto.Decls.CIVALUE_TURNOVER_CONSIGN_STATUS_DONE, _
+                    BALANCE_STATUS:=MyPosXAuto.Decls.CIVALUE_BALANCE_STATUS_DONE, _
+                    REMARK:=String.Empty, _
+                    DELIVERY_DETAIL:=String.Empty, _
+                    EXTRA_DISCOUNT:=0, _
+                    DELIVERY_CHARGE:=0, _
+                    RELIEF_PAIR_ID:=String.Empty, _
+                    STAFF_SHARE_RATE:=0, _
+                    CONSIGN_DUE_DATE:=CommTK.GetSyncServerTime, _
+                    BATCH_INDEX:=0, _
+                    HEADQUATER_MERGED_CODE:=String.Empty, _
+                    REPLACE_INVENTORY_ID:=String.Empty, _
+                    ADDRESS:=String.Empty, _
+                    BALANCE_STATUS_TEXT:=String.Empty, _
+                    BRANCH_TO_POS_ENCODE:=String.Empty, _
+                    CELL_PHONE:=String.Empty, _
+                    CITY:=String.Empty, _
+                    COUNTRY:=String.Empty, _
+                    DEPARTMENT:=String.Empty, _
+                    EMAIL:=String.Empty, _
+                    FAX:=String.Empty, _
+                    HOME_PHONE:=String.Empty, _
+                    M_STAFF_EMAIL:=String.Empty, _
+                    POS_ADDRESS:=String.Empty, _
+                    POS_CODE:=String.Empty, _
+                    POS_NAME:=String.Empty, _
+                    POST_CODE:=String.Empty, _
+                    POS_SET_ID:=String.Empty, _
+                    REMARKS:=String.Empty, _
+                    STAFF_CODE:=String.Empty, _
+                    STAFF_NAME:=String.Empty, _
+                    STATE:=String.Empty, _
+                    TITLE:=String.Empty, _
+                    TURNOVER_CONSIGN_STATUS_TEXT:=String.Empty, _
+                    TURNOVER_STYLE_TEXT:=String.Empty, _
+                    TURNOVER_TYPE_TEXT:=String.Empty, _
+                    WORK_PHONE:=String.Empty, _
+                    POINT_GAIN:=0, _
+                    POINT_TO_RMB_RATE:=CommTK.FDecimal(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_POINTS_TO_RMB_RATE)), _
+                    POINT_USE:=pointUse, _
+                    RMB_TO_POINT_RATE:=CommTK.FDecimal(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_RMB_TO_POINTS_RATE)))
+
+                Dim turnoverDtlCacheDataRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow
+                For Each bindingRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow In Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.FindRowsByCondition(Nothing)
+
+                    turnoverDtlCacheDataRow = Me._manifest.SVFT_CACHE_DATA_TURNOVER_DTL_LIST.NewXV_H_MP_TURNOVER_DTLRow()
+                    Me._manifest.SVFT_CACHE_DATA_TURNOVER_DTL_LIST.AddXV_H_MP_TURNOVER_DTLRow(turnoverDtlCacheDataRow)
+
+                    turnoverDtlCacheDataRow.CloneDataRow(bindingRow)
+                    turnoverDtlCacheDataRow.DETAIL_ID = Guid.NewGuid.ToString
+                    turnoverDtlCacheDataRow.TURNOVER_ID = turnoverCacheDataRow.TURNOVER_ID
+                    turnoverDtlCacheDataRow.UNIT_DISCOUNT = 0
+                    turnoverDtlCacheDataRow.SUM_DISCOUNT = 0
+                Next
+
+                'Me._manifest.InvokeBizRequest(Affairs.PrintPurchaseList, False)
+
+
+                Me._manifest.SVFT_CACHE_DATA_TURNOVER_LIST.SaveXml( _
+                    WinTK.GetResourceFilePath( _
+                        ResourceType.Data, _
+                        Utils.Decls.CACHE_DATA_FILE_TURNOVER))
+                Me._manifest.SVFT_CACHE_DATA_TURNOVER_DTL_LIST.SaveXml( _
+                    WinTK.GetResourceFilePath( _
+                        ResourceType.Data, _
+                        Utils.Decls.CACHE_DATA_FILE_TURNOVER_DETAIL))
+
                 'Dim servResult As String = _                                       
                 '    Me._service.ServSaveInfo()                                     
 
@@ -544,11 +760,11 @@ Namespace Business
 
             Try
 
-                Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.Clear()
+                'Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.Clear()
 
-                MyPosXAuto.Facade.AfXV.FillFT_XV_H_MP_TURNOVER_DTL(Nothing, Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST)
+                'MyPosXAuto.Facade.AfXV.FillFT_XV_H_MP_TURNOVER_DTL(Nothing, Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST)
 
-                Me._manifest.GridControl_TurnoverDtl.DataSource = Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST
+                'Me._manifest.GridControl_TurnoverDtl.DataSource = Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST
 
                 'Dim servResult As String = _                                       
                 '    Me._service.ServLoadList()                                     
@@ -600,7 +816,6 @@ Namespace Business
                 Dim clientRowSE As New MyPosXAuto.FTs.FT_MV_MP_CLIENTRowSEntity
                 Dim clientConditions As New MyPosXAuto.Facade.AfMV.ConditionOfMV_MP_CLIENT(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_Or)
                 clientConditions.Add(MyPosXAuto.Facade.AfMV.MV_MP_CLIENTColumns.CLIENT_CODEColumn, "=", Me._manifest.TextEdit_ClientCode.Text)
-                clientConditions.Add(MyPosXAuto.Facade.AfMV.MV_MP_CLIENTColumns.CLIENT_NAMEColumn, "=", Me._manifest.TextEdit_ClientCode.Text)
                 clientConditions.Add(MyPosXAuto.Facade.AfMV.MV_MP_CLIENTColumns.CELL_PHONEColumn, "=", Me._manifest.TextEdit_ClientCode.Text)
 
                 MyPosXAuto.Facade.AfMV.FillMV_MP_CLIENTRowSEntity(clientRowSE, clientConditions)
@@ -670,6 +885,15 @@ Namespace Business
                     Return String.Empty
                 End If
 
+                Dim saleTemplateWareCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_T_MP_SALE_TEMPLATE_WARE(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+                saleTemplateWareCondition.Add(MyPosXAuto.Facade.AfXV.XV_T_MP_SALE_TEMPLATE_WAREColumns.WARE_IDColumn, "=", wareRowSEntity.WARE_ID)
+
+                Dim saleTemplateWareRow = Me._manifest.SVFT_REF_SALE_TEMPLATE_WARE_LIST.FindRowByCondition(saleTemplateWareCondition)
+                If IsNothing(saleTemplateWareRow) = True OrElse saleTemplateWareRow.EXCHANGE_POINTS_AMOUNT <= 0 Then
+                    Me._manifest.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0022)
+                    Return String.Empty
+                End If
+
                 Me._manifest.ButtonEdit_WareCode.Text = wareRowSEntity.WARE_CODE
                 Me._manifest.Label_WareID.Text = wareRowSEntity.WARE_ID
 
@@ -705,7 +929,7 @@ Namespace Business
                     dtlRow.ATTRIBUTE4 = wareRowSEntity.ATTRIBUTE4
                     dtlRow.TURNOVER_BOOK_STATUS = MyPosXAuto.Decls.CIVALUE_TURNOVER_BOOK_STATUS_ON_HAND
                     dtlRow.ORIGION_UNIT_PRICE = priceNoDiscount
-                    dtlRow.UNIT_PRICE = 0
+                    dtlRow.UNIT_DISCOUNT = saleTemplateWareRow.EXCHANGE_POINTS_AMOUNT
 
                 End If
 
@@ -750,14 +974,102 @@ Namespace Business
         '''
         '''
         '''-------------------------------------------------------------------
-        Private Function DoBizUtld0003() As String
+        Private Function DoUploadCacheData() As String
 
 
             Try
 
+                Dim servResult As String = _
+                    Me._service.ServUploadCacheData( _
+                        Me._manifest.SVFT_CACHE_DATA_TURNOVER_LIST, _
+                        Me._manifest.SVFT_CACHE_DATA_TURNOVER_DTL_LIST)
+
+                If servResult.Length > 0 Then
+                    Return servResult
+                End If
+
+                MyPosXAuto.DataCache.DCHMV.OverwriteMV_MP_CLIENTFromDB()
+
+                Me._manifest.SVFT_CACHE_DATA_TURNOVER_LIST.Clear()
+                Me._manifest.SVFT_CACHE_DATA_TURNOVER_DTL_LIST.Clear()
+
+                Me._manifest.SVFT_CACHE_DATA_TURNOVER_LIST.SaveXml( _
+                    WinTK.GetResourceFilePath( _
+                        ResourceType.Data, _
+                        Utils.Decls.CACHE_DATA_FILE_TURNOVER))
+                Me._manifest.SVFT_CACHE_DATA_TURNOVER_DTL_LIST.SaveXml( _
+                    WinTK.GetResourceFilePath( _
+                        ResourceType.Data, _
+                        Utils.Decls.CACHE_DATA_FILE_TURNOVER_DETAIL))
 
                 'Dim servResult As String = _
-                '    Me._service.ServBizUtld0003()
+                '    Me._service.ServUploadCacheData()
+
+                'If servResult.Length > 0 Then
+                '    Return servResult        
+                'End If                       
+
+            Catch ex As XL.Common.Utils.XLException
+
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
+                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+                WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
+
+                Return ex.Message
+
+            Catch ex As Exception
+
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
+                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+                WinTK.OutputLog("Exception occured", logContentBuilder.ToString())
+
+                XL.Win.Window.XLMessageBox.UseSmallFont = True
+                Return ex.Message & vbNewLine & ex.StackTrace.ToString()
+
+            End Try
+
+            Return String.Empty
+
+        End Function
+
+
+
+        '''Function remark:
+        '''
+        '''
+        '''-------------------------------------------------------------------
+        Private Function DoUpdateSummary() As String
+
+
+            Try
+
+                Dim totalPoint As Decimal = 0
+
+                For Each bindingRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow In Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST
+
+                    bindingRow.UNIT_PRICE = bindingRow.ORIGION_UNIT_PRICE - bindingRow.UNIT_DISCOUNT
+
+                    bindingRow.SUM_COST = bindingRow.UNIT_COST * bindingRow.WARE_AMOUNT
+                    bindingRow.SUM_PRICE = bindingRow.UNIT_PRICE * bindingRow.WARE_AMOUNT
+                    bindingRow.SUM_DISCOUNT = bindingRow.UNIT_DISCOUNT * bindingRow.WARE_AMOUNT
+                    bindingRow.ORIGION_SUM_PRICE = bindingRow.ORIGION_UNIT_PRICE * bindingRow.WARE_AMOUNT
+
+                    totalPoint += bindingRow.SUM_DISCOUNT
+
+                Next
+
+                Me._manifest.Label_UsePoint.Text = CommTK.FString(totalPoint, False, "#,##0.00")
+
+                Dim pointToRMBRate = CommTK.FDecimal(SysInfo.ReadLocalSysInfo(MyPosXService.Decls.SVN_POINTS_TO_RMB_RATE))
+                Dim rmbToPointRate = CommTK.FDecimal(SysInfo.ReadLocalSysInfo(MyPosXService.Decls.SVN_RMB_TO_POINTS_RATE))
+
+
+                'Dim servResult As String = _
+                '    Me._service.ServUpdateSummary()
 
                 'If servResult.Length > 0 Then
                 '    Return servResult        
@@ -794,58 +1106,15 @@ Namespace Business
         '''
         '''
         '''-------------------------------------------------------------------
-        Private Function DoBizUtld0004() As String
+        Private Function DoValidateOnline() As String
 
 
             Try
 
+                MyPosXService.Facade.OpSysConfig.GetServerTime()
 
                 'Dim servResult As String = _
-                '    Me._service.ServBizUtld0004()
-
-                'If servResult.Length > 0 Then
-                '    Return servResult        
-                'End If                       
-
-            Catch ex As XL.Common.Utils.XLException
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
-
-                WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
-
-                Return ex.Message
-
-            Catch ex As Exception
-
-                Dim logContentBuilder As New LineStrBuilder
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
-
-                WinTK.OutputLog("Exception occured", logContentBuilder.ToString())
-
-                XL.Win.Window.XLMessageBox.UseSmallFont = True
-                Return ex.Message & vbNewLine & ex.StackTrace.ToString()
-
-            End Try
-
-            Return String.Empty
-
-        End Function
-
-        '''Function remark:
-        '''
-        '''
-        '''-------------------------------------------------------------------
-        Private Function DoBizUtld0005() As String
-
-
-            Try
-
-
-                'Dim servResult As String = _
-                '    Me._service.ServBizUtld0005()
+                '    Me._service.ServValidateOnline()
 
                 'If servResult.Length > 0 Then
                 '    Return servResult        

@@ -174,14 +174,20 @@ Public Class S_02_01001
     End Function
 
 
-    Public Function ServBizUtld0002( _
-        ByVal valParaUtld As String, _
-        ByRef refParaUtld As String _
+    Public Function ServUploadCacheData( _
+        ByVal refCacheDataTurnoverList As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER, _
+        ByRef refCacheDataTurnoverDtlList As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTL _
         ) As String
 
         If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
 
         Try
+
+            MyPosXService.Facade.OpBizTurnover.ImportTurnoverCacheData( _
+                refCacheDataTurnoverList, _
+                refCacheDataTurnoverDtlList)
+
+            MyPosXService.Facade.OpBizTurnover.UpdateTurnoverPointsIO()
 
 
 
