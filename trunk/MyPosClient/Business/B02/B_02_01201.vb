@@ -710,10 +710,9 @@ Namespace Business
 
 
             Try
-                Dim toExcel As New Utils.ExcelTK
-                toExcel.Open(Me._manifest.SV_READING_FILENAME)
+                Dim toExcel As New Utils.ExcelTK(Me._manifest.SV_READING_FILENAME)
 
-                Dim rowCounter As Integer = 2
+                Dim rowCounter As Integer = 1
 
                 Dim clientCodeText As String
                 Dim pointAmountText As String
@@ -731,7 +730,7 @@ Namespace Business
                     Me._manifest.ShowStatusMessage( _
                         StatusMessageIcon.Progressing, _
                         MyPosXService.Decls.MSG_STATUS_0009, _
-                        rowCounter, _
+                        succeededCount + failedCount, _
                         succeededCount, _
                         failedCount)
 
@@ -775,6 +774,13 @@ Namespace Business
                 Loop
 
                 toExcel.SaveAndClose()
+                Me._manifest.ShowStatusMessage( _
+                    StatusMessageIcon.Progressing, _
+                    MyPosXService.Decls.MSG_STATUS_0009, _
+                    succeededCount + failedCount, _
+                    succeededCount, _
+                    failedCount)
+
 
                 MyPosXAuto.Facade.AfBizManage.SaveBatchH_MP_CLIENT_POINT_IOData(pointIOList)
 
