@@ -92,16 +92,10 @@
             Me.GridColumn_UnitName = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_WareAmount = New DevExpress.XtraGrid.Columns.GridColumn
             Me.RepositoryItemCalcEdit_WareAmount = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
-            Me.GridColumn_UnitPrice = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn_SumPrice = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn_UnitDiscount = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn_SumDiscount = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn_Remark = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_CurrentAmount = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_RowHighlight = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_OrigionUntPrice = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_OrigionSumPrice = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.RepositoryItemCheckEdit_Select = New DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
             Me.PanelControl_WareInput = New DevExpress.XtraEditors.PanelControl
             Me.LinkLabel_UploadCacheData = New System.Windows.Forms.LinkLabel
             Me.SpinEdit_WareAmount = New DevExpress.XtraEditors.SpinEdit
@@ -133,7 +127,6 @@
             CType(Me.GridView_TurnoverDtl, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemLookUpEdit_TurnoverBookStatus, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemCalcEdit_WareAmount, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.RepositoryItemCheckEdit_Select, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.PanelControl_WareInput, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.PanelControl_WareInput.SuspendLayout()
             CType(Me.SpinEdit_WareAmount.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -189,13 +182,13 @@
             'ToolStripButton_Create
             '
             Me.ToolStripButton_Create.Name = "ToolStripButton_Create"
-            Me.ToolStripButton_Create.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Create.Size = New System.Drawing.Size(36, 22)
             Me.ToolStripButton_Create.Text = "新建"
             '
             'ToolStripButton_Add
             '
             Me.ToolStripButton_Add.Name = "ToolStripButton_Add"
-            Me.ToolStripButton_Add.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Add.Size = New System.Drawing.Size(36, 22)
             Me.ToolStripButton_Add.Text = "添加"
             '
             'ToolStripButton_Refresh
@@ -204,19 +197,19 @@
             Me.ToolStripButton_Refresh.Image = CType(resources.GetObject("ToolStripButton_Refresh.Image"), System.Drawing.Image)
             Me.ToolStripButton_Refresh.ImageTransparentColor = System.Drawing.Color.Magenta
             Me.ToolStripButton_Refresh.Name = "ToolStripButton_Refresh"
-            Me.ToolStripButton_Refresh.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Refresh.Size = New System.Drawing.Size(36, 22)
             Me.ToolStripButton_Refresh.Text = "刷新"
             '
             'ToolStripButton_Remove
             '
             Me.ToolStripButton_Remove.Name = "ToolStripButton_Remove"
-            Me.ToolStripButton_Remove.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Remove.Size = New System.Drawing.Size(36, 22)
             Me.ToolStripButton_Remove.Text = "去除"
             '
             'ToolStripButton_Close
             '
             Me.ToolStripButton_Close.Name = "ToolStripButton_Close"
-            Me.ToolStripButton_Close.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Close.Size = New System.Drawing.Size(36, 22)
             Me.ToolStripButton_Close.Text = "关闭"
             '
             'GroupControl_Details
@@ -287,7 +280,7 @@
             Me.GridControl_TurnoverDtl.Location = New System.Drawing.Point(2, 20)
             Me.GridControl_TurnoverDtl.MainView = Me.GridView_TurnoverDtl
             Me.GridControl_TurnoverDtl.Name = "GridControl_TurnoverDtl"
-            Me.GridControl_TurnoverDtl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemCheckEdit_Select, Me.RepositoryItemLookUpEdit_TurnoverBookStatus, Me.RepositoryItemCalcEdit_WareAmount})
+            Me.GridControl_TurnoverDtl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemLookUpEdit_TurnoverBookStatus, Me.RepositoryItemCalcEdit_WareAmount})
             Me.GridControl_TurnoverDtl.Size = New System.Drawing.Size(505, 386)
             Me.GridControl_TurnoverDtl.TabIndex = 10000
             Me.GridControl_TurnoverDtl.TabStop = False
@@ -295,7 +288,7 @@
             '
             'GridView_TurnoverDtl
             '
-            Me.GridView_TurnoverDtl.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn_BatchCode, Me.GridColumn_WareCode, Me.GridColumn_CustomCode, Me.GridColumn_WareName, Me.GridColumn_TurnoverBookStatus, Me.GridColumn_Spec, Me.GridColumn_Model, Me.GridColumn_Attribute1, Me.GridColumn_Attribute2, Me.GridColumn_Attribute3, Me.GridColumn_Attribute4, Me.GridColumn_UnitName, Me.GridColumn_WareAmount, Me.GridColumn_UnitPrice, Me.GridColumn_SumPrice, Me.GridColumn_UnitDiscount, Me.GridColumn_SumDiscount, Me.GridColumn_Remark, Me.GridColumn_CurrentAmount, Me.GridColumn_RowHighlight, Me.GridColumn_OrigionUntPrice, Me.GridColumn_OrigionSumPrice})
+            Me.GridView_TurnoverDtl.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn_BatchCode, Me.GridColumn_WareCode, Me.GridColumn_CustomCode, Me.GridColumn_WareName, Me.GridColumn_TurnoverBookStatus, Me.GridColumn_Spec, Me.GridColumn_Model, Me.GridColumn_Attribute1, Me.GridColumn_Attribute2, Me.GridColumn_Attribute3, Me.GridColumn_Attribute4, Me.GridColumn_UnitName, Me.GridColumn_WareAmount, Me.GridColumn_CurrentAmount, Me.GridColumn_RowHighlight, Me.GridColumn_OrigionUntPrice, Me.GridColumn_OrigionSumPrice})
             StyleFormatCondition1.Appearance.BackColor = System.Drawing.Color.Lime
             StyleFormatCondition1.Appearance.BackColor2 = System.Drawing.Color.White
             StyleFormatCondition1.Appearance.Options.UseBackColor = True
@@ -463,66 +456,6 @@
             Me.RepositoryItemCalcEdit_WareAmount.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
             Me.RepositoryItemCalcEdit_WareAmount.Name = "RepositoryItemCalcEdit_WareAmount"
             '
-            'GridColumn_UnitPrice
-            '
-            Me.GridColumn_UnitPrice.Caption = "单价"
-            Me.GridColumn_UnitPrice.DisplayFormat.FormatString = "{0:#,##0.00}"
-            Me.GridColumn_UnitPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
-            Me.GridColumn_UnitPrice.FieldName = "UNIT_PRICE"
-            Me.GridColumn_UnitPrice.Name = "GridColumn_UnitPrice"
-            Me.GridColumn_UnitPrice.OptionsColumn.AllowFocus = False
-            Me.GridColumn_UnitPrice.Visible = True
-            Me.GridColumn_UnitPrice.VisibleIndex = 10
-            Me.GridColumn_UnitPrice.Width = 48
-            '
-            'GridColumn_SumPrice
-            '
-            Me.GridColumn_SumPrice.Caption = "小计"
-            Me.GridColumn_SumPrice.DisplayFormat.FormatString = "{0:#,##0.00}"
-            Me.GridColumn_SumPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
-            Me.GridColumn_SumPrice.FieldName = "SUM_PRICE"
-            Me.GridColumn_SumPrice.Name = "GridColumn_SumPrice"
-            Me.GridColumn_SumPrice.OptionsColumn.AllowFocus = False
-            Me.GridColumn_SumPrice.SummaryItem.DisplayFormat = "{0:#,##0.00}"
-            Me.GridColumn_SumPrice.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum
-            Me.GridColumn_SumPrice.Visible = True
-            Me.GridColumn_SumPrice.VisibleIndex = 11
-            Me.GridColumn_SumPrice.Width = 36
-            '
-            'GridColumn_UnitDiscount
-            '
-            Me.GridColumn_UnitDiscount.Caption = "单件折扣"
-            Me.GridColumn_UnitDiscount.DisplayFormat.FormatString = "{0:#,##0.00}"
-            Me.GridColumn_UnitDiscount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
-            Me.GridColumn_UnitDiscount.FieldName = "UNIT_DISCOUNT"
-            Me.GridColumn_UnitDiscount.Name = "GridColumn_UnitDiscount"
-            Me.GridColumn_UnitDiscount.OptionsColumn.AllowFocus = False
-            Me.GridColumn_UnitDiscount.Visible = True
-            Me.GridColumn_UnitDiscount.VisibleIndex = 12
-            '
-            'GridColumn_SumDiscount
-            '
-            Me.GridColumn_SumDiscount.Caption = "折扣小计"
-            Me.GridColumn_SumDiscount.DisplayFormat.FormatString = "{0:#,##0.00}"
-            Me.GridColumn_SumDiscount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
-            Me.GridColumn_SumDiscount.FieldName = "SUM_DISCOUNT"
-            Me.GridColumn_SumDiscount.Name = "GridColumn_SumDiscount"
-            Me.GridColumn_SumDiscount.OptionsColumn.AllowFocus = False
-            Me.GridColumn_SumDiscount.SummaryItem.DisplayFormat = "{0:#,##0.00}"
-            Me.GridColumn_SumDiscount.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum
-            Me.GridColumn_SumDiscount.Visible = True
-            Me.GridColumn_SumDiscount.VisibleIndex = 13
-            '
-            'GridColumn_Remark
-            '
-            Me.GridColumn_Remark.Caption = "可退数量"
-            Me.GridColumn_Remark.DisplayFormat.FormatString = "{0:#,##0.00}"
-            Me.GridColumn_Remark.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
-            Me.GridColumn_Remark.FieldName = "DSR_FT_ROW_REMARK"
-            Me.GridColumn_Remark.Name = "GridColumn_Remark"
-            Me.GridColumn_Remark.OptionsColumn.AllowFocus = False
-            Me.GridColumn_Remark.Width = 36
-            '
             'GridColumn_CurrentAmount
             '
             Me.GridColumn_CurrentAmount.Caption = "当前在库数量"
@@ -551,7 +484,7 @@
             Me.GridColumn_OrigionUntPrice.Name = "GridColumn_OrigionUntPrice"
             Me.GridColumn_OrigionUntPrice.OptionsColumn.AllowFocus = False
             Me.GridColumn_OrigionUntPrice.Visible = True
-            Me.GridColumn_OrigionUntPrice.VisibleIndex = 14
+            Me.GridColumn_OrigionUntPrice.VisibleIndex = 10
             '
             'GridColumn_OrigionSumPrice
             '
@@ -562,12 +495,7 @@
             Me.GridColumn_OrigionSumPrice.Name = "GridColumn_OrigionSumPrice"
             Me.GridColumn_OrigionSumPrice.OptionsColumn.AllowFocus = False
             Me.GridColumn_OrigionSumPrice.Visible = True
-            Me.GridColumn_OrigionSumPrice.VisibleIndex = 15
-            '
-            'RepositoryItemCheckEdit_Select
-            '
-            Me.RepositoryItemCheckEdit_Select.AutoHeight = False
-            Me.RepositoryItemCheckEdit_Select.Name = "RepositoryItemCheckEdit_Select"
+            Me.GridColumn_OrigionSumPrice.VisibleIndex = 11
             '
             'PanelControl_WareInput
             '
@@ -1452,7 +1380,6 @@
             CType(Me.GridView_TurnoverDtl, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemLookUpEdit_TurnoverBookStatus, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemCalcEdit_WareAmount, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.RepositoryItemCheckEdit_Select, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.PanelControl_WareInput, System.ComponentModel.ISupportInitialize).EndInit()
             Me.PanelControl_WareInput.ResumeLayout(False)
             Me.PanelControl_WareInput.PerformLayout()
@@ -1489,16 +1416,10 @@
         Friend WithEvents GridColumn_UnitName As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents GridColumn_WareAmount As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents RepositoryItemCalcEdit_WareAmount As DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
-        Friend WithEvents GridColumn_UnitPrice As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn_SumPrice As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn_UnitDiscount As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn_SumDiscount As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn_Remark As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents GridColumn_CurrentAmount As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents GridColumn_RowHighlight As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents GridColumn_OrigionUntPrice As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents GridColumn_OrigionSumPrice As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents RepositoryItemCheckEdit_Select As DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
         Friend WithEvents PanelControl_WareInput As DevExpress.XtraEditors.PanelControl
         Friend WithEvents LinkLabel_UploadCacheData As System.Windows.Forms.LinkLabel
         Friend WithEvents SpinEdit_WareAmount As DevExpress.XtraEditors.SpinEdit
