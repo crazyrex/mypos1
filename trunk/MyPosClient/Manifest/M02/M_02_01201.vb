@@ -172,7 +172,7 @@ Namespace Manifest
 
             'Initialize option list controls which value source is from the edit form content
 
-            Me.TextEdit_ClientCode.Select()
+            'Me.TextEdit_ClientCode.Select()
 
             If clearFields = False Then
                 Return
@@ -180,7 +180,14 @@ Namespace Manifest
 
             Me.TextEdit_ClientCode.ResetText()
             Me.CalcEdit_ChargeAmount.ResetText()
+            Me.TextEdit_ClientCode.Select()
 
+            Me.Label_AquiringPoints.ResetText()
+            Me.Label_ClientID.ResetText()
+            Me.Label_ClientName.ResetText()
+            Me.Label_HintGainPoint.ResetText()
+            Me.Label_HoldingPoint.ResetText()
+            Me.Label_RMBToPointsRate.ResetText()
 
             '做根据LaunchCondition判断分支的相关动作
 
