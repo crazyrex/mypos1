@@ -104,8 +104,13 @@ Namespace Manifest
 
         Protected Overrides Sub IA_InitBeforeRC()
 
-            Me.SetKeyJumpCycle(Keys.Enter, True)
-            Me.SetValueEditControls()
+            Me.SetKeyJumpCycle(Keys.Enter, True, _
+                               Me.TextEdit_ClientCode, _
+                               Me.CalcEdit_ChargeAmount)
+
+            Me.SetValueEditControls( _
+                               Me.TextEdit_ClientCode, _
+                               Me.CalcEdit_ChargeAmount)
             'Me.SetToolStripButtonFunctionKey(Me.ToolStripButton_Close, Keys.F12)
 
             'Me.FormInputGuarder.SetValidate(Me.TextEdit_Input, InputGuarder.ValidateClassify.Required, Nothing)
