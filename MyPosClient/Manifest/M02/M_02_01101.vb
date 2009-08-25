@@ -816,9 +816,7 @@ Namespace Manifest
             End If
 
             Me.DoPrivateSelectRowByWareCode()
-            Me.SpinEdit_WareAmount.Select()
-            Me.SpinEdit_WareAmount.SelectAll()
-
+            Me._bizAgent.DoRequest(Business.B_02_01101.Affairs.AddWare, False)
         End Sub
     End Class
 
