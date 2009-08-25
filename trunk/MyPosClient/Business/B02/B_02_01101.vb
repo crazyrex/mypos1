@@ -73,7 +73,7 @@ Namespace Business
             SaveInfo
             LoadList
             LoadClientInfoByCode
-            BizUtld0002
+            AddWare
             BizUtld0003
             BizUtld0004
             BizUtld0005
@@ -190,12 +190,12 @@ Namespace Business
                     '-------------------------------------------------------------------
                     functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoLoadClientInfoByCode)
 
-                Case Affairs.BizUtld0002
+                Case Affairs.AddWare
 
                     '
                     '取到处理函数的结果，传入返回给Manifest的AgentResponse包
                     '-------------------------------------------------------------------
-                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoBizUtld0002)
+                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoAddWare)
 
                 Case Affairs.BizUtld0003
 
@@ -653,14 +653,67 @@ Namespace Business
         '''
         '''
         '''-------------------------------------------------------------------
-        Private Function DoBizUtld0002() As String
+        Private Function DoAddWare() As String
 
 
             Try
 
+                Dim wareCondition As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_MP_WARE(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+                wareCondition.Add(MyPosXAuto.Facade.AfBizMaster.M_MP_WAREColumns.WARE_CODEColumn, "=", Me._manifest.ButtonEdit_WareCode.Text)
+
+                Dim wareRowSEntity As New MyPosXAuto.FTs.FT_M_MP_WARERowSEntity
+                MyPosXAuto.Facade.AfBizMaster.FillM_MP_WARERowSEntity(wareRowSEntity, wareCondition)
+
+                If wareRowSEntity.IsNull = True Then
+                    WinTK.PlayWavSound("Error.wmv")
+                    Me._manifest.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0023)
+                    Return String.Empty
+                End If
+
+                Me._manifest.ButtonEdit_WareCode.Text = wareRowSEntity.WARE_CODE
+                Me._manifest.Label_WareID.Text = wareRowSEntity.WARE_ID
+
+                Dim priceNoDiscount As Decimal
+                Dim origionPrice = MyPosXService.Facade.OpBizMaster.GetPosWarePrice( _
+                    wareRowSEntity.WARE_ID, _
+                    Utils.Decls.CURRENT_POS_ROW.POS_ID, _
+                    priceNoDiscount)
+
+                If origionPrice <= 0 Then
+                    Me._manifest.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0006)
+                    Return String.Empty
+                End If
+
+
+                Dim dtlCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_H_MP_TURNOVER_DTL(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+                dtlCondition.Add(MyPosXAuto.Facade.AfXV.XV_H_MP_TURNOVER_DTLColumns.WARE_CODEColumn, "=", Me._manifest.ButtonEdit_WareCode.Text)
+
+                Dim dtlRow = Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.FindRowByCondition(dtlCondition)
+                If IsNothing(dtlRow) = True Then
+                    dtlRow = Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.NewXV_H_MP_TURNOVER_DTLRow()
+                    Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.AddXV_H_MP_TURNOVER_DTLRow(dtlRow)
+                    dtlRow.WARE_ID = wareRowSEntity.WARE_ID
+                    dtlRow.WARE_CODE = wareRowSEntity.WARE_CODE
+                    dtlRow.WARE_NAME = wareRowSEntity.WARE_NAME
+                    dtlRow.SPEC = wareRowSEntity.SPEC
+                    dtlRow.SPEC_EN = wareRowSEntity.SPEC_EN
+                    dtlRow.MODEL = wareRowSEntity.MODEL
+                    dtlRow.MODEL_EN = wareRowSEntity.MODEL_EN
+                    dtlRow.ATTRIBUTE1 = wareRowSEntity.ATTRIBUTE1
+                    dtlRow.ATTRIBUTE2 = wareRowSEntity.ATTRIBUTE2
+                    dtlRow.ATTRIBUTE3 = wareRowSEntity.ATTRIBUTE3
+                    dtlRow.ATTRIBUTE4 = wareRowSEntity.ATTRIBUTE4
+                    dtlRow.TURNOVER_BOOK_STATUS = MyPosXAuto.Decls.CIVALUE_TURNOVER_BOOK_STATUS_ON_HAND
+                    dtlRow.ORIGION_UNIT_PRICE = priceNoDiscount
+                    dtlRow.UNIT_PRICE = 0
+
+                End If
+
+
+                dtlRow.WARE_AMOUNT += 1
 
                 'Dim servResult As String = _
-                '    Me._service.ServBizUtld0002()
+                '    Me._service.ServAddWare()
 
                 'If servResult.Length > 0 Then
                 '    Return servResult        
