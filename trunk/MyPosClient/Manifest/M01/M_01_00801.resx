@@ -274,7 +274,7 @@
     <value>10002</value>
   </data>
   <data name="LinkLabel_UnselectAll.Text" xml:space="preserve">
-    <value>全不选</value>
+    <value>全取消</value>
   </data>
   <data name="&gt;&gt;LinkLabel_UnselectAll.Name" xml:space="preserve">
     <value>LinkLabel_UnselectAll</value>

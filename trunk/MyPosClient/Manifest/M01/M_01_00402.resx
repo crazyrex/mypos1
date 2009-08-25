@@ -155,7 +155,7 @@
     <value>0, 0</value>
   </data>
   <data name="ToolStrip_Form.Size" type="System.Drawing.Size, System.Drawing">
-    <value>710, 25</value>
+    <value>800, 25</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="ToolStrip_Form.TabIndex" type="System.Int32, mscorlib">
@@ -560,7 +560,7 @@
     <value>0, 25</value>
   </data>
   <data name="PanelControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>710, 81</value>
+    <value>800, 81</value>
   </data>
   <data name="PanelControl1.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -758,7 +758,7 @@
     <value>高亮显示</value>
   </data>
   <data name="GridControl_WarePriceSetDtl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>706, 324</value>
+    <value>796, 324</value>
   </data>
   <data name="GridControl_WarePriceSetDtl.TabIndex" type="System.Int32, mscorlib">
     <value>10002</value>
@@ -774,6 +774,66 @@
   </data>
   <data name="&gt;&gt;GridControl_WarePriceSetDtl.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="LinkLabel_UnselectAll.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LinkLabel_UnselectAll.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LinkLabel_UnselectAll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>748, 18</value>
+  </data>
+  <data name="LinkLabel_UnselectAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 15</value>
+  </data>
+  <data name="LinkLabel_UnselectAll.TabIndex" type="System.Int32, mscorlib">
+    <value>10004</value>
+  </data>
+  <data name="LinkLabel_UnselectAll.Text" xml:space="preserve">
+    <value>全取消</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_UnselectAll.Name" xml:space="preserve">
+    <value>LinkLabel_UnselectAll</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_UnselectAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_UnselectAll.Parent" xml:space="preserve">
+    <value>PanelControl2</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_UnselectAll.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="LinkLabel_SelectAll.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LinkLabel_SelectAll.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LinkLabel_SelectAll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>711, 18</value>
+  </data>
+  <data name="LinkLabel_SelectAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 15</value>
+  </data>
+  <data name="LinkLabel_SelectAll.TabIndex" type="System.Int32, mscorlib">
+    <value>10003</value>
+  </data>
+  <data name="LinkLabel_SelectAll.Text" xml:space="preserve">
+    <value>全选</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_SelectAll.Name" xml:space="preserve">
+    <value>LinkLabel_SelectAll</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_SelectAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_SelectAll.Parent" xml:space="preserve">
+    <value>PanelControl2</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_SelectAll.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="Label_CustomerID.Location" type="System.Drawing.Point, System.Drawing">
     <value>37, 2</value>
@@ -800,7 +860,7 @@
     <value>PanelControl2</value>
   </data>
   <data name="&gt;&gt;Label_CustomerID.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="Label_CustomCode.Location" type="System.Drawing.Point, System.Drawing">
     <value>222, 14</value>
@@ -821,7 +881,7 @@
     <value>PanelControl2</value>
   </data>
   <data name="&gt;&gt;Label_CustomCode.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="ButtonEdit_WareCode.Location" type="System.Drawing.Point, System.Drawing">
     <value>86, 12</value>
@@ -842,7 +902,7 @@
     <value>PanelControl2</value>
   </data>
   <data name="&gt;&gt;ButtonEdit_WareCode.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="LinkLabel_AddItems.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -869,7 +929,7 @@
     <value>PanelControl2</value>
   </data>
   <data name="&gt;&gt;LinkLabel_AddItems.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="TextEdit_Search.Location" type="System.Drawing.Point, System.Drawing">
     <value>506, 12</value>
@@ -890,7 +950,7 @@
     <value>PanelControl2</value>
   </data>
   <data name="&gt;&gt;TextEdit_Search.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="Label11.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -917,7 +977,7 @@
     <value>PanelControl2</value>
   </data>
   <data name="&gt;&gt;Label11.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="Label12.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -944,7 +1004,7 @@
     <value>PanelControl2</value>
   </data>
   <data name="&gt;&gt;Label12.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="PanelControl2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -953,7 +1013,7 @@
     <value>2, 21</value>
   </data>
   <data name="PanelControl2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>706, 47</value>
+    <value>796, 47</value>
   </data>
   <data name="PanelControl2.TabIndex" type="System.Int32, mscorlib">
     <value>10001</value>
@@ -977,7 +1037,7 @@
     <value>0, 106</value>
   </data>
   <data name="GroupControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>710, 394</value>
+    <value>800, 394</value>
   </data>
   <data name="GroupControl1.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -1010,7 +1070,7 @@
     <value>3, 4, 3, 4</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>710, 500</value>
+    <value>800, 500</value>
   </data>
   <data name="&gt;&gt;DefaultLookAndFeel_Form.Name" xml:space="preserve">
     <value>DefaultLookAndFeel_Form</value>
