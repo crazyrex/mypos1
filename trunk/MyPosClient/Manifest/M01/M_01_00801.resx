@@ -265,7 +265,7 @@
     <value>NoControl</value>
   </data>
   <data name="LinkLabel_UnselectAll.Location" type="System.Drawing.Point, System.Drawing">
-    <value>647, 19</value>
+    <value>646, 18</value>
   </data>
   <data name="LinkLabel_UnselectAll.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 15</value>
@@ -292,7 +292,7 @@
     <value>True</value>
   </data>
   <data name="LinkLabel_SelectAll.Location" type="System.Drawing.Point, System.Drawing">
-    <value>610, 19</value>
+    <value>609, 18</value>
   </data>
   <data name="LinkLabel_SelectAll.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 15</value>
@@ -346,7 +346,7 @@
     <value>Arial, 9pt</value>
   </data>
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 16</value>
+    <value>18, 15</value>
   </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 15</value>

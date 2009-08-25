@@ -120,6 +120,9 @@
   <data name="&gt;&gt;GridColumn_Fax.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
+  <data name="&gt;&gt;LinkLabel_SelectAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
     <value>PanelControl_Filter</value>
   </data>
@@ -128,6 +131,10 @@
   </data>
   <data name="&gt;&gt;SaveFileDialog_ExportExcel.Name" xml:space="preserve">
     <value>SaveFileDialog_ExportExcel</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="LinkLabel_SelectAll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>615, 18</value>
   </data>
   <data name="GridColumn_Remarks.Caption" xml:space="preserve">
     <value>备注</value>
@@ -142,7 +149,6 @@
   <data name="ToolStripButton_Close.Text" xml:space="preserve">
     <value>关闭</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="GridControl_Supplier.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 72</value>
   </data>
@@ -152,17 +158,14 @@
   <data name="GridColumn_Country.VisibleIndex" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
-  <data name="&gt;&gt;GridView_Supplier.Name" xml:space="preserve">
-    <value>GridView_Supplier</value>
+  <data name="&gt;&gt;TextEdit_Search.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="GridColumn_SupplierCode.VisibleIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="ToolStripButton_Delete.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 22</value>
-  </data>
-  <data name="&gt;&gt;ToolStripButton_View.Name" xml:space="preserve">
-    <value>ToolStripButton_View</value>
   </data>
   <data name="GridColumn_WebSite.VisibleIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -177,8 +180,8 @@
   <data name="GridControl_Supplier.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left</value>
   </data>
-  <data name="&gt;&gt;PanelControl_Filter.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="GridColumn_Linkman.Caption" xml:space="preserve">
+    <value>联系人</value>
   </data>
   <data name="&gt;&gt;GridColumn_Remarks.Name" xml:space="preserve">
     <value>GridColumn_Remarks</value>
@@ -201,11 +204,14 @@
   <data name="ToolStripButton_Refresh.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 22</value>
   </data>
-  <data name="ToolStripButton_Choose.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
+  <data name="LinkLabel_UnselectAll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>652, 18</value>
   </data>
   <data name="&gt;&gt;GridColumn_SupplierName.Name" xml:space="preserve">
     <value>GridColumn_SupplierName</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_UnselectAll.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;PanelControl_Filter.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
@@ -272,6 +278,9 @@
   </data>
   <data name="GridControl_Supplier.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>Inherit</value>
+  </data>
+  <data name="ToolStripButton_Create.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 22</value>
   </data>
   <data name="ToolStripButton_ShowFilter.Text" xml:space="preserve">
     <value>筛选条件</value>
@@ -372,11 +381,11 @@
   <data name="&gt;&gt;ToolStrip_Form.Name" xml:space="preserve">
     <value>ToolStrip_Form</value>
   </data>
+  <data name="&gt;&gt;LinkLabel_SelectAll.Name" xml:space="preserve">
+    <value>LinkLabel_SelectAll</value>
+  </data>
   <data name="&gt;&gt;ToolStripButton_Refresh.Name" xml:space="preserve">
     <value>ToolStripButton_Refresh</value>
-  </data>
-  <data name="GridColumn_CellPhone.VisibleIndex" type="System.Int32, mscorlib">
-    <value>6</value>
   </data>
   <assembly alias="DevExpress.XtraEditors.v8.1" name="DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
   <data name="TextEdit_Search.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
@@ -403,14 +412,8 @@
   <data name="ToolStripButton_Revise.Text" xml:space="preserve">
     <value>修改</value>
   </data>
-  <data name="GridColumn_Title.Caption" xml:space="preserve">
-    <value>职务</value>
-  </data>
-  <data name="&gt;&gt;Timer_Surveillant.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TextEdit_Search.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  <data name="GridColumn_CellPhone.VisibleIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
   <data name="&gt;&gt;GridColumn_City.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
@@ -442,23 +445,32 @@
   <data name="&gt;&gt;GridColumn_SupplierName.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
+  <data name="&gt;&gt;PanelControl_Filter.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="&gt;&gt;GridColumn_WebSite.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="GridColumn_WorkPhone.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="&gt;&gt;LinkLabel_SelectAll.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="ToolStripButton_Choose.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="ToolStripButton_Delete.Text" xml:space="preserve">
-    <value>删除</value>
+  <data name="&gt;&gt;ContextMenu_Paragraph.Name" xml:space="preserve">
+    <value>ContextMenu_Paragraph</value>
   </data>
   <data name="&gt;&gt;PanelControl_Filter.Name" xml:space="preserve">
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;GridColumn_WorkPhone.Name" xml:space="preserve">
     <value>GridColumn_WorkPhone</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_UnselectAll.Name" xml:space="preserve">
+    <value>LinkLabel_UnselectAll</value>
   </data>
   <data name="&gt;&gt;ToolStripButton_Create.Name" xml:space="preserve">
     <value>ToolStripButton_Create</value>
@@ -471,6 +483,12 @@
   </data>
   <data name="GridColumn_WebSite.Caption" xml:space="preserve">
     <value>网页</value>
+  </data>
+  <data name="&gt;&gt;GridView_Supplier.Name" xml:space="preserve">
+    <value>GridView_Supplier</value>
+  </data>
+  <data name="LinkLabel_UnselectAll.TabIndex" type="System.Int32, mscorlib">
+    <value>10004</value>
   </data>
   <data name="ToolStripButton_ExportExcel.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -490,6 +508,9 @@
   <data name="&gt;&gt;GridColumn_Email.Name" xml:space="preserve">
     <value>GridColumn_Email</value>
   </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>700, 500</value>
+  </data>
   <data name="SaveFileDialog_ExportExcel.Filter" xml:space="preserve">
     <value>Excel文档|*.xls</value>
   </data>
@@ -499,8 +520,8 @@
   <data name="ToolStrip_Form.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="GridControl_Supplier.EmbeddedNavigator.ToolTip" xml:space="preserve">
-    <value />
+  <data name="ToolStripButton_Choose.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
   </data>
   <data name="GridControl_Supplier.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v8.1">
     <value>Center</value>
@@ -511,8 +532,8 @@
   <data name="&gt;&gt;OpenFileDialog_ImportFile.Name" xml:space="preserve">
     <value>OpenFileDialog_ImportFile</value>
   </data>
-  <data name="ToolStripButton_Revise.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+  <data name="GridColumn_Title.Caption" xml:space="preserve">
+    <value>职务</value>
   </data>
   <data name="GridControl_Supplier.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -522,6 +543,9 @@
   </data>
   <data name="GridColumn_RowHighLight.Caption" xml:space="preserve">
     <value>GridColumn19</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_City.Name" xml:space="preserve">
+    <value>GridColumn_City</value>
   </data>
   <data name="GridColumn_HomePhone.Caption" xml:space="preserve">
     <value>家庭电话</value>
@@ -592,9 +616,6 @@
   <data name="GridColumn_Fax.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;DefaultLookAndFeel_Form.Type" xml:space="preserve">
-    <value>DevExpress.LookAndFeel.DefaultLookAndFeel, DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
-  </data>
   <data name="ToolStripButton_ExportExcel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -616,14 +637,23 @@
   <data name="&gt;&gt;GridColumn_PostCode.Name" xml:space="preserve">
     <value>GridColumn_PostCode</value>
   </data>
+  <data name="&gt;&gt;LinkLabel_SelectAll.Parent" xml:space="preserve">
+    <value>PanelControl_Filter</value>
+  </data>
   <data name="GridColumn_Remarks.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_UnselectAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ToolStripButton_Close.Name" xml:space="preserve">
     <value>ToolStripButton_Close</value>
   </data>
   <data name="&gt;&gt;GridColumn_CellPhone.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="LinkLabel_SelectAll.TabIndex" type="System.Int32, mscorlib">
+    <value>10003</value>
   </data>
   <data name="&gt;&gt;GridColumn_Fax.Name" xml:space="preserve">
     <value>GridColumn_Fax</value>
@@ -640,8 +670,8 @@
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 15</value>
   </data>
-  <data name="GridColumn_Linkman.Caption" xml:space="preserve">
-    <value>联系人</value>
+  <data name="ToolStripButton_Delete.Text" xml:space="preserve">
+    <value>删除</value>
   </data>
   <data name="&gt;&gt;SaveFileDialog_ExportExcel.Type" xml:space="preserve">
     <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -658,14 +688,14 @@
   <data name="GridColumn_Department.VisibleIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="TextEdit_Search.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
+  <data name="GridControl_Supplier.EmbeddedNavigator.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="TextEdit_Search.Location" type="System.Drawing.Point, System.Drawing">
     <value>67, 13</value>
   </data>
-  <data name="&gt;&gt;GridControl_Supplier.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  <data name="&gt;&gt;DefaultLookAndFeel_Form.Type" xml:space="preserve">
+    <value>DevExpress.LookAndFeel.DefaultLookAndFeel, DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="&gt;&gt;OpenFileDialog_ImportFile.Type" xml:space="preserve">
     <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -699,25 +729,28 @@
     <value>None</value>
   </data>
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="GridColumn_City.Caption" xml:space="preserve">
     <value>城市</value>
   </data>
   <data name="&gt;&gt;TextEdit_Search.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;GridColumn_SupplierCode.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="&gt;&gt;GridColumn_City.Name" xml:space="preserve">
-    <value>GridColumn_City</value>
+  <data name="&gt;&gt;Timer_Surveillant.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ToolStripButton_Close.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;GridColumn_Country.Name" xml:space="preserve">
     <value>GridColumn_Country</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_UnselectAll.Parent" xml:space="preserve">
+    <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;GridColumn_Linkman.Name" xml:space="preserve">
     <value>GridColumn_Linkman</value>
@@ -734,8 +767,8 @@
   <data name="&gt;&gt;GridControl_Supplier.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;ContextMenu_Paragraph.Name" xml:space="preserve">
-    <value>ContextMenu_Paragraph</value>
+  <data name="&gt;&gt;ToolStripButton_View.Name" xml:space="preserve">
+    <value>ToolStripButton_View</value>
   </data>
   <data name="ToolStripButton_Import.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -767,11 +800,14 @@
   <data name="&gt;&gt;ToolStripButton_Create.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="ToolStripButton_Revise.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 22</value>
+  </data>
   <data name="&gt;&gt;GridControl_Supplier.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="ToolStripButton_Create.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+  <data name="TextEdit_Search.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
   </data>
   <data name="Label1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9pt</value>
@@ -797,8 +833,8 @@
   <data name="&gt;&gt;GridColumn_PostCode.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>700, 500</value>
+  <data name="&gt;&gt;GridControl_Supplier.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="&gt;&gt;TextEdit_Search.Name" xml:space="preserve">
     <value>TextEdit_Search</value>
@@ -812,8 +848,8 @@
   <metadata name="Timer_Surveillant.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>138, 0</value>
   </metadata>
-  <metadata name="OpenFileDialog_ImportFile.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 37</value>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>English</value>
   </metadata>
   <metadata name="DefaultLookAndFeel_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>295, 0</value>
@@ -824,7 +860,7 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>English</value>
+  <metadata name="OpenFileDialog_ImportFile.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 37</value>
   </metadata>
 </root>
