@@ -359,11 +359,11 @@ Namespace Manifest
 
             For Each bindingRow As MyPosXAuto.FTs.FT_XV_T_MP_SALE_TEMPLATE_WARERow In Me.SVFT_BINDING_LIST.FindRowsByCondition(Nothing)
                 bindingRow.ROW_REMARK = String.Empty
-
+                
                 If bindingRow.DISCOUNT_TYPE <= 0 Then
                     bindingRow.ROW_HIGHLIGHT = MyPosXService.Decls.ROW_HIGHLIGHT_ROW_DATA_MISSING
                     bindingRow.ROW_REMARK = MyPosXService.Decls.ROW_REMARK_0006
-                ElseIf bindingRow.DISCOUNT_AMOUNT <= 0 Then
+                ElseIf bindingRow.DISCOUNT_AMOUNT <= 0 AndAlso bindingRow.EXCHANGE_POINTS_AMOUNT <= 0 Then
                     bindingRow.ROW_HIGHLIGHT = MyPosXService.Decls.ROW_HIGHLIGHT_ROW_DATA_MISSING
                     bindingRow.ROW_REMARK = MyPosXService.Decls.ROW_REMARK_0007
                 End If
