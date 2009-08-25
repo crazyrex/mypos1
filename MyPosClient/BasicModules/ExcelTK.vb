@@ -467,11 +467,11 @@ Namespace Utils
 
         End Sub
 
-        Public Function GetCellText(ByVal rowCounter As Integer, ByVal columnCounter As Integer) As String
-            Me._opRange = Me._openSheet.Range(Me._openSheet.Cells(rowCounter, columnCounter), Me._openSheet.Cells(rowCounter, columnCounter))
+        Public Function GetCellText(ByVal rowIndex As Integer, ByVal columnIndex As Integer) As String
+
             'Me._opRange.Select()
 
-            Return CommTK.FString(Me._opRange.Text)
+            Return CommTK.FString(CommTK.FString(Me._openSheet.Range(Me._openSheet.Cells(rowIndex, columnIndex), Me._openSheet.Cells(rowIndex, columnIndex)).Value))
 
         End Function
 
