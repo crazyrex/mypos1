@@ -77,7 +77,7 @@ Namespace Business
             UploadCacheData
             UpdateSummary
             ValidateOnline
-            BizUtld0006
+            PrintPurchaseList
             BizUtld0007
             BizUtld0008
             BizUtld0009
@@ -218,12 +218,12 @@ Namespace Business
                     '-------------------------------------------------------------------
                     functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoValidateOnline)
 
-                Case Affairs.BizUtld0006
+                Case Affairs.PrintPurchaseList
 
                     '
                     '取到处理函数的结果，传入返回给Manifest的AgentResponse包
                     '-------------------------------------------------------------------
-                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoBizUtld0006)
+                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoPrintPurchaseList)
 
                 Case Affairs.BizUtld0007
 
@@ -582,7 +582,7 @@ Namespace Business
                         SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_CURRENT_POS_ID), _
                          MyPosXAuto.Decls.CIVALUE_TURNOVER_POINT_EXCHANGE)
 
-                    'Me._manifest.InvokeBizRequest(Affairs.PrintPurchaseList, False)
+                    Me._manifest.InvokeBizRequest(Affairs.PrintPurchaseList, False)
                     Dim turnoverID = Guid.NewGuid.ToString
 
                     MyPosXAuto.Facade.AfBizTurnover.CreateH_MP_TURNOVERInfo( _
@@ -705,7 +705,7 @@ Namespace Business
                     turnoverDtlCacheDataRow.SUM_DISCOUNT = 0
                 Next
 
-                'Me._manifest.InvokeBizRequest(Affairs.PrintPurchaseList, False)
+                Me._manifest.InvokeBizRequest(Affairs.PrintPurchaseList, False)
 
 
                 Me._manifest.SVFT_CACHE_DATA_TURNOVER_LIST.SaveXml( _
@@ -1152,14 +1152,45 @@ Namespace Business
         '''
         '''
         '''-------------------------------------------------------------------
-        Private Function DoBizUtld0006() As String
+        Private Function DoPrintPurchaseList() As String
 
 
             Try
 
+                Dim report As New Reports.R_02_01001
+
+                report.DataSource = Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST
+
+                report.XrLabel_ReturnTurnoverCode.Text = CommTK.GetTranslatedString("积分兑换")
+
+                Dim staffRow As MyPosXAuto.FTs.FT_M_STAFFRow = _
+                    MyPosXAuto.Facade.AfBizMaster.GetM_STAFFRow(Utils.Decls.LOGIN_STAFF_ID)
+
+                If IsNothing(staffRow) = True Then
+                    Return String.Empty
+                End If
+
+                report.XrLabel_ServiceTel.Text = SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_SERVICE_TEL)
+                report.XrLabel_TurnoverCode.Text = Me._manifest.SV_PRINTING_TURNOVER_CODE
+                report.XrLabel_BranchName.Text = Utils.Decls.CURRENT_POS_ROW.POS_NAME
+                report.XrLabel_Operator.Text = String.Format(" <{0}> {1} ", _
+                        staffRow.STAFF_CODE, _
+                        staffRow.STAFF_NAME)
+
+                report.XrLabel_Payable.Text = Me._manifest.Label_UsePoint.Text
+
+                report.CreateDataBindings()
+                Dim copies As Integer = CommTK.FInteger(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_PURCHASE_LIST_COPIES))
+                If copies <= 0 Then
+                    copies = 1
+                End If
+
+                For counter As Integer = 1 To copies
+                    report.Print()
+                Next
 
                 'Dim servResult As String = _
-                '    Me._service.ServBizUtld0006()
+                '    Me._service.ServPrintPurchaseList()
 
                 'If servResult.Length > 0 Then
                 '    Return servResult        

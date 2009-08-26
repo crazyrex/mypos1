@@ -328,7 +328,9 @@ Namespace Manifest
         End Function
 
         Public Overrides Function ValidateInput() As String
-
+            If CommTK.FInteger(Me.Label_HintGainPoint.Text) <= 0 Then
+                Return MyPosXService.Decls.MSG_ALERT_00070
+            End If
             Return String.Empty
 
         End Function
@@ -813,11 +815,11 @@ Namespace Manifest
             End If
         End Sub
 
-        Private Sub CalcEdit_UsePoint_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles CalcEdit_ChargeAmount.KeyDown
-            If e.KeyCode = Keys.Enter Then
-                Me._bizAgent.DoRequest(Business.B_02_01201.Affairs.AquiringPoints, False)
-            End If
+        Private Sub CalcEdit_ChargeAmount_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles CalcEdit_ChargeAmount.EditValueChanged
+            Me._bizAgent.DoRequest(Business.B_02_01201.Affairs.AquiringPoints, False)
         End Sub
+
+      
     End Class
 
 
