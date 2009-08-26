@@ -328,6 +328,9 @@ Namespace Manifest
 
         Public Overrides Function ValidateInput() As String
 
+            If CommTK.FInteger(Me.Label_HoldingPoint.Text) < CommTK.FInteger(Me.Label_UsePoint.Text) Then
+                Return MyPosXService.Decls.MSG_ALERT_00069
+            End If
             Return String.Empty
 
         End Function
