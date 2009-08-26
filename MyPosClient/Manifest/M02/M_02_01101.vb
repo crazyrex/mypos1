@@ -364,6 +364,7 @@ Namespace Manifest
 
             Select Case Me._bizAgent.AffairOf(responseResult.ResponseTitle)
                 Case Business.B_02_01101.Affairs.InitDisplay
+                    Me.DoPrivateUpdateCacheStatus()
                     Me.GridView_TurnoverDtl.BestFitColumns()
 
                 Case Business.B_02_01101.Affairs.LoadClientInfoByCode
@@ -386,7 +387,8 @@ Namespace Manifest
                     Me.DoPrivateUpdateCacheStatus()
                     Me.IA_ClearContent(True)
 
-                Case Business.B_02_01101.Affairs.UpdateSummary
+                Case Business.B_02_01101.Affairs.UploadCacheData
+                    Me.ShowStatusMessage(StatusMessageIcon.Okay, MyPosXService.Decls.MSG_STATUS_0011)
                     Me.DoPrivateUpdateCacheStatus()
 
             End Select
