@@ -2,7 +2,7 @@
 
 
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-    Partial Public Class R_02_01001
+    Partial Public Class R_02_01101
         Inherits DevExpress.XtraReports.UI.XtraReport
 
         'XtraReport overrides dispose to clean up the component list.
@@ -34,12 +34,10 @@
             Me.XrTableCell_WareAmount = New DevExpress.XtraReports.UI.XRTableCell
             Me.PageFooter = New DevExpress.XtraReports.UI.PageFooterBand
             Me.ReportFooter = New DevExpress.XtraReports.UI.ReportFooterBand
-            Me.XrLabel_Extradiscount = New DevExpress.XtraReports.UI.XRLabel
-            Me.XrLabel1 = New DevExpress.XtraReports.UI.XRLabel
             Me.XrLabel_WelcomeBack = New DevExpress.XtraReports.UI.XRLabel
             Me.XrLabel_ServiceTel = New DevExpress.XtraReports.UI.XRLabel
             Me.XrLabel_NTel = New DevExpress.XtraReports.UI.XRLabel
-            Me.XrLabel_Payable = New DevExpress.XtraReports.UI.XRLabel
+            Me.XrLabel_UsePoint = New DevExpress.XtraReports.UI.XRLabel
             Me.XrLabel6 = New DevExpress.XtraReports.UI.XRLabel
             Me.ReportHeader = New DevExpress.XtraReports.UI.ReportHeaderBand
             Me.XrLabel_ReturnTurnoverCode = New DevExpress.XtraReports.UI.XRLabel
@@ -155,35 +153,15 @@
             '
             'PageFooter
             '
-            Me.PageFooter.Height = 29
             Me.PageFooter.Name = "PageFooter"
             Me.PageFooter.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
             Me.PageFooter.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
             '
             'ReportFooter
             '
-            Me.ReportFooter.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel_Extradiscount, Me.XrLabel1, Me.XrLabel_WelcomeBack, Me.XrLabel_ServiceTel, Me.XrLabel_NTel, Me.XrLabel_Payable, Me.XrLabel6})
+            Me.ReportFooter.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel_WelcomeBack, Me.XrLabel_ServiceTel, Me.XrLabel_NTel, Me.XrLabel_UsePoint, Me.XrLabel6})
             Me.ReportFooter.Height = 110
             Me.ReportFooter.Name = "ReportFooter"
-            '
-            'XrLabel_Extradiscount
-            '
-            Me.XrLabel_Extradiscount.Font = New System.Drawing.Font("Century Gothic", 8.0!)
-            Me.XrLabel_Extradiscount.Location = New System.Drawing.Point(117, 0)
-            Me.XrLabel_Extradiscount.Name = "XrLabel_Extradiscount"
-            Me.XrLabel_Extradiscount.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-            Me.XrLabel_Extradiscount.Size = New System.Drawing.Size(58, 17)
-            Me.XrLabel_Extradiscount.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
-            '
-            'XrLabel1
-            '
-            Me.XrLabel1.Font = New System.Drawing.Font("Times New Roman", 8.0!)
-            Me.XrLabel1.Location = New System.Drawing.Point(0, 0)
-            Me.XrLabel1.Name = "XrLabel1"
-            Me.XrLabel1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-            Me.XrLabel1.Size = New System.Drawing.Size(58, 17)
-            Me.XrLabel1.Text = "额外折扣"
-            Me.XrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
             '
             'XrLabel_WelcomeBack
             '
@@ -211,14 +189,14 @@
             Me.XrLabel_NTel.Text = "服务热线:"
             Me.XrLabel_NTel.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
             '
-            'XrLabel_Payable
+            'XrLabel_UsePoint
             '
-            Me.XrLabel_Payable.Font = New System.Drawing.Font("Century Gothic", 8.0!)
-            Me.XrLabel_Payable.Location = New System.Drawing.Point(117, 25)
-            Me.XrLabel_Payable.Name = "XrLabel_Payable"
-            Me.XrLabel_Payable.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-            Me.XrLabel_Payable.Size = New System.Drawing.Size(58, 17)
-            Me.XrLabel_Payable.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
+            Me.XrLabel_UsePoint.Font = New System.Drawing.Font("Century Gothic", 8.0!)
+            Me.XrLabel_UsePoint.Location = New System.Drawing.Point(92, 25)
+            Me.XrLabel_UsePoint.Name = "XrLabel_UsePoint"
+            Me.XrLabel_UsePoint.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+            Me.XrLabel_UsePoint.Size = New System.Drawing.Size(83, 17)
+            Me.XrLabel_UsePoint.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
             '
             'XrLabel6
             '
@@ -226,8 +204,8 @@
             Me.XrLabel6.Location = New System.Drawing.Point(0, 25)
             Me.XrLabel6.Name = "XrLabel6"
             Me.XrLabel6.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-            Me.XrLabel6.Size = New System.Drawing.Size(33, 17)
-            Me.XrLabel6.Text = "总计"
+            Me.XrLabel6.Size = New System.Drawing.Size(83, 17)
+            Me.XrLabel6.Text = "使用点数"
             Me.XrLabel6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
             '
             'ReportHeader
@@ -386,7 +364,7 @@
             Me.XrTableCell3.Text = "数量"
             Me.XrTableCell3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
             '
-            'R_02_01001
+            'R_02_01101
             '
             Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.PageFooter, Me.ReportFooter, Me.ReportHeader, Me.PageHeader})
             Me.Margins = New System.Drawing.Printing.Margins(0, 10, 10, 0)
@@ -410,7 +388,7 @@
         Friend WithEvents XrLabel_WelcomeBack As DevExpress.XtraReports.UI.XRLabel
         Friend WithEvents XrLabel_ServiceTel As DevExpress.XtraReports.UI.XRLabel
         Friend WithEvents XrLabel_NTel As DevExpress.XtraReports.UI.XRLabel
-        Friend WithEvents XrLabel_Payable As DevExpress.XtraReports.UI.XRLabel
+        Friend WithEvents XrLabel_UsePoint As DevExpress.XtraReports.UI.XRLabel
         Friend WithEvents XrLabel6 As DevExpress.XtraReports.UI.XRLabel
         Friend WithEvents ReportHeader As DevExpress.XtraReports.UI.ReportHeaderBand
         Friend WithEvents XrLabel_Operator As DevExpress.XtraReports.UI.XRLabel
@@ -434,7 +412,5 @@
         Friend WithEvents XrTableCell9 As DevExpress.XtraReports.UI.XRTableCell
         Friend WithEvents XrTableCell2 As DevExpress.XtraReports.UI.XRTableCell
         Friend WithEvents XrLabel_ReturnTurnoverCode As DevExpress.XtraReports.UI.XRLabel
-        Friend WithEvents XrLabel_Extradiscount As DevExpress.XtraReports.UI.XRLabel
-        Friend WithEvents XrLabel1 As DevExpress.XtraReports.UI.XRLabel
     End Class
 End Namespace
