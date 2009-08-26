@@ -988,7 +988,8 @@ Namespace Business
                     Return servResult
                 End If
 
-                MyPosXAuto.DataCache.DCHMV.OverwriteMV_MP_CLIENTFromDB()
+                MyPosXAuto.DataCache.DCHMV.OverwriteMV_MP_CLIENTFromDB(, False)
+                MyPosXAuto.DataCache.DCHMV.OverwriteMV_MP_POS_WARE_TOTALFromDB(, False)
 
                 Me._manifest.SVFT_CACHE_DATA_TURNOVER_LIST.Clear()
                 Me._manifest.SVFT_CACHE_DATA_TURNOVER_DTL_LIST.Clear()
