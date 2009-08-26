@@ -572,7 +572,7 @@ Namespace Business
 
 
                 Dim turnoverType As Integer = MyPosXAuto.Decls.CIVALUE_TURNOVER_TYPE_CHECK_OUT
-                Dim turnoverStyle As Integer = MyPosXAuto.Decls.CIVALUE_TURNOVER_STYLE_OTHERS
+                Dim turnoverStyle As Integer = MyPosXAuto.Decls.CIVALUE_TURNOVER_POINT_EXCHANGE
                 Dim pointUse As Integer = CommTK.FInteger(Me._manifest.Label_UsePoint.Text)
 
                 If Me._manifest.CheckEdit_IsOnLine.Checked = True Then
@@ -580,7 +580,7 @@ Namespace Business
                     Me._manifest.SV_PRINTING_TURNOVER_CODE = MyPosXService.Facade.OpBizTurnover.GetAutoTransferCode( _
                         False, _
                         SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_CURRENT_POS_ID), _
-                         MyPosXAuto.Decls.CIVALUE_TURNOVER_STYLE_OTHERS)
+                         MyPosXAuto.Decls.CIVALUE_TURNOVER_POINT_EXCHANGE)
 
                     'Me._manifest.InvokeBizRequest(Affairs.PrintPurchaseList, False)
                     Dim turnoverID = Guid.NewGuid.ToString
