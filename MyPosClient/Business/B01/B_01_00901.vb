@@ -124,6 +124,7 @@ Namespace Business
                 Me._manifest.Enabled = False
 
             End Try
+
         End Sub
 
 
