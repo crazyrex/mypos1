@@ -16,16 +16,25 @@ Public Class S_01_01001
         Dim result As S_01_01001                                                                 
         If MyPosXAuto.Decls.CURRENT_DB_TYPE = XL.DB.DBDecl.DBType.Remoting AndAlso CommDecl.SYSTEM_IS_ONLINE Then
 
-            result = CType(Activator.GetObject(GetType(S_01_01001), _
-                String.Format("tcp://{0}/S_01_01001.remote", _
-                    SysInfo.ReadLocalSysInfo(CommDecl.XLSLVN_SYSTEM_REMOTE_SERVICE_URL))),  _
-                S_01_01001)
+            Try
+                result = CType(Activator.GetObject(GetType(S_01_01001), _
+                    String.Format("tcp://{0}/S_01_01001.remote", _
+                        SysInfo.ReadLocalSysInfo(CommDecl.XLSLVN_SYSTEM_REMOTE_SERVICE_URL))),  _
+                    S_01_01001)
 
-            If result.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then
-                Dim ex As New XLException(XLException.ErrorClassify.ReadDataError)
-                ex.SetMessage(CommDecl.MSG_ALERT_REMOTE_AUTH_DENIED)
-                Throw ex
-            End If
+                If result.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then
+                    Dim ex As New XLException(XLException.ErrorClassify.ReadDataError)
+                    ex.SetMessage(CommDecl.MSG_ALERT_REMOTE_AUTH_DENIED)
+                    Throw ex
+                End If
+
+            Catch ex As Exception
+
+                Dim remoteConnectionEx As New XLException(XLException.ErrorClassify.ReadDataError)
+                remoteConnectionEx.SetMessage(CommDecl.MSG_ALERT_REMOTE_CONNECTION_INAVAILABLE)
+                Throw remoteConnectionEx
+
+            End Try
 
         Else
 
