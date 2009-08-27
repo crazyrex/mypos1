@@ -120,6 +120,15 @@
   <metadata name="Detail.Name" xml:space="preserve">
     <value>Detail</value>
   </metadata>
+  <metadata name="XrTable6.Name" xml:space="preserve">
+    <value>XrTable6</value>
+  </metadata>
+  <metadata name="XrTableRow6.Name" xml:space="preserve">
+    <value>XrTableRow6</value>
+  </metadata>
+  <metadata name="XrTableCell_WareCode.Name" xml:space="preserve">
+    <value>XrTableCell_WareCode</value>
+  </metadata>
   <metadata name="XrTable4.Name" xml:space="preserve">
     <value>XrTable4</value>
   </metadata>
@@ -194,6 +203,15 @@
   </metadata>
   <metadata name="PageHeader.Name" xml:space="preserve">
     <value>PageHeader</value>
+  </metadata>
+  <metadata name="XrTable5.Name" xml:space="preserve">
+    <value>XrTable5</value>
+  </metadata>
+  <metadata name="XrTableRow5.Name" xml:space="preserve">
+    <value>XrTableRow5</value>
+  </metadata>
+  <metadata name="XrTableCell5.Name" xml:space="preserve">
+    <value>XrTableCell5</value>
   </metadata>
   <metadata name="XrTable3.Name" xml:space="preserve">
     <value>XrTable3</value>
