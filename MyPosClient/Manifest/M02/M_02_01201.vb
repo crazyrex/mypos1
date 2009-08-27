@@ -328,7 +328,7 @@ Namespace Manifest
         End Function
 
         Public Overrides Function ValidateInput() As String
-            If CommTK.FInteger(Me.Label_HintGainPoint.Text) <= 0 Then
+            If CommTK.FInteger(Me.Label_AquiringPoints.Text) <= 0 Then
                 Return MyPosXService.Decls.MSG_ALERT_00070
             End If
             Return String.Empty

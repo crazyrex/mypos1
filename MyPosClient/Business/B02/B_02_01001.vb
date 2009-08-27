@@ -876,6 +876,10 @@ Namespace Business
                     dtlRow.TURNOVER_BOOK_STATUS = MyPosXAuto.Decls.CIVALUE_TURNOVER_BOOK_STATUS_ON_HAND
                     dtlRow.ORIGION_UNIT_PRICE = priceNoDiscount
                     dtlRow.UNIT_PRICE = origionPrice
+                    dtlRow.UNIT_COST = _
+                        MyPosXService.Facade.OpBizMaster.GetPosWareCost( _
+                            dtlRow.WARE_ID, _
+                            Utils.Decls.CURRENT_POS_ROW.POS_ID)
 
                 End If
 
@@ -937,11 +941,19 @@ Namespace Business
 
                 Dim totalSumPrice As Decimal = 0
                 Dim totalSumDiscount As Decimal = 0
+                Dim totalGainPoint As Integer = 0
+                Dim pointToRMBRate = CommTK.FDecimal(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_POINTS_TO_RMB_RATE))
+                Dim rmbToPointRate = CommTK.FDecimal(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_RMB_TO_POINTS_RATE))
+
 
                 For Each bindingRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow In Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST
 
                     bindingRow.UNIT_PRICE = bindingRow.ORIGION_UNIT_PRICE - bindingRow.UNIT_DISCOUNT
-
+                    bindingRow.GAIN_POINT = 0
+                    If rmbToPointRate > 0 Then
+                        bindingRow.GAIN_POINT = CommTK.FInteger(bindingRow.UNIT_PRICE / rmbToPointRate)
+                    End If
+                    totalGainPoint += bindingRow.GAIN_POINT
                     bindingRow.SUM_COST = bindingRow.UNIT_COST * bindingRow.WARE_AMOUNT
                     bindingRow.SUM_PRICE = bindingRow.UNIT_PRICE * bindingRow.WARE_AMOUNT
                     bindingRow.SUM_DISCOUNT = bindingRow.UNIT_DISCOUNT * bindingRow.WARE_AMOUNT
@@ -962,15 +974,12 @@ Namespace Business
                     False, _
                     "#,##0.00")
 
-                Dim pointToRMBRate = CommTK.FDecimal(SysInfo.ReadLocalSysInfo(MyPosXService.Decls.SVN_POINTS_TO_RMB_RATE))
-                Dim rmbToPointRate = CommTK.FDecimal(SysInfo.ReadLocalSysInfo(MyPosXService.Decls.SVN_RMB_TO_POINTS_RATE))
-
                 Dim payable = _
                     CommTK.FDecimal(totalSumPrice - Me._manifest.CalcEdit_ExtraDiscount.Value - Me._manifest.CalcEdit_UsePoint.Value * pointToRMBRate)
 
                 Me._manifest.Label_Payable.Text = CommTK.FString(payable, False, "#,##0.00")
                 If rmbToPointRate > 0 AndAlso Me._manifest.Label_ClientID.Text.Length > 0 Then
-                    Me._manifest.Label_AquiringPoints.Text = CommTK.FString(payable / rmbToPointRate, False, "#,##0.00")
+                    Me._manifest.Label_AquiringPoints.Text = CommTK.FString(totalGainPoint)
                 Else
                     Me._manifest.Label_AquiringPoints.Text = "0.00"
                 End If

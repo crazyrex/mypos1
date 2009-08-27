@@ -929,7 +929,11 @@ Namespace Business
                     dtlRow.ATTRIBUTE4 = wareRowSEntity.ATTRIBUTE4
                     dtlRow.TURNOVER_BOOK_STATUS = MyPosXAuto.Decls.CIVALUE_TURNOVER_BOOK_STATUS_ON_HAND
                     dtlRow.ORIGION_UNIT_PRICE = priceNoDiscount
-                    dtlRow.UNIT_DISCOUNT = saleTemplateWareRow.EXCHANGE_POINTS_AMOUNT
+                    dtlRow.USE_POINT = saleTemplateWareRow.EXCHANGE_POINTS_AMOUNT
+                    dtlRow.UNIT_COST = _
+                        MyPosXService.Facade.OpBizMaster.GetPosWareCost( _
+                            dtlRow.WARE_ID, _
+                            Utils.Decls.CURRENT_POS_ROW.POS_ID)
 
                 End If
 
@@ -1048,6 +1052,7 @@ Namespace Business
 
             Try
 
+
                 Dim totalPoint As Decimal = 0
 
                 For Each bindingRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow In Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST
@@ -1059,14 +1064,11 @@ Namespace Business
                     bindingRow.SUM_DISCOUNT = bindingRow.UNIT_DISCOUNT * bindingRow.WARE_AMOUNT
                     bindingRow.ORIGION_SUM_PRICE = bindingRow.ORIGION_UNIT_PRICE * bindingRow.WARE_AMOUNT
 
-                    totalPoint += bindingRow.SUM_DISCOUNT
+                    totalPoint += bindingRow.USE_POINT * bindingRow.WARE_AMOUNT
 
                 Next
 
                 Me._manifest.Label_UsePoint.Text = CommTK.FString(totalPoint, False, "#,##0.00")
-
-                Dim pointToRMBRate = CommTK.FDecimal(SysInfo.ReadLocalSysInfo(MyPosXService.Decls.SVN_POINTS_TO_RMB_RATE))
-                Dim rmbToPointRate = CommTK.FDecimal(SysInfo.ReadLocalSysInfo(MyPosXService.Decls.SVN_RMB_TO_POINTS_RATE))
 
 
                 'Dim servResult As String = _
