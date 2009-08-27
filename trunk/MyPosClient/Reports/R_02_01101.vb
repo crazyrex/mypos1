@@ -7,6 +7,7 @@ Namespace Reports
         Public Sub CreateDataBindings()
 
 
+            Me.XrTableCell_WareCode.DataBindings.Add("Text", Me.DataSource, "WARE_CODE")
             Me.XrTableCell_WareName.DataBindings.Add("Text", Me.DataSource, "WARE_NAME")
             Me.XrTableCell_WareAmount.DataBindings.Add("Text", Me.DataSource, "WARE_AMOUNT", "{0:0}")
             Me.XrTableCell_OrigionUnitPrice.DataBindings.Add("Text", Me.DataSource, "ORIGION_UNIT_PRICE", "{0:0.00}")

@@ -57,16 +57,24 @@
             Me.XrTableRow2 = New DevExpress.XtraReports.UI.XRTableRow
             Me.XrTableCell1 = New DevExpress.XtraReports.UI.XRTableCell
             Me.XrTableCell3 = New DevExpress.XtraReports.UI.XRTableCell
+            Me.XrTable5 = New DevExpress.XtraReports.UI.XRTable
+            Me.XrTableRow5 = New DevExpress.XtraReports.UI.XRTableRow
+            Me.XrTableCell5 = New DevExpress.XtraReports.UI.XRTableCell
+            Me.XrTable6 = New DevExpress.XtraReports.UI.XRTable
+            Me.XrTableRow6 = New DevExpress.XtraReports.UI.XRTableRow
+            Me.XrTableCell_WareCode = New DevExpress.XtraReports.UI.XRTableCell
             CType(Me.XrTable4, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.XrTable3, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.XrTable5, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.XrTable6, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
             '
             'Detail
             '
-            Me.Detail.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrTable4, Me.XrTable1})
-            Me.Detail.Height = 34
+            Me.Detail.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrTable6, Me.XrTable4, Me.XrTable1})
+            Me.Detail.Height = 51
             Me.Detail.Name = "Detail"
             Me.Detail.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
             Me.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
@@ -74,7 +82,7 @@
             'XrTable4
             '
             Me.XrTable4.Font = New System.Drawing.Font("Times New Roman", 8.0!)
-            Me.XrTable4.Location = New System.Drawing.Point(0, 17)
+            Me.XrTable4.Location = New System.Drawing.Point(0, 34)
             Me.XrTable4.Name = "XrTable4"
             Me.XrTable4.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
             Me.XrTable4.Rows.AddRange(New DevExpress.XtraReports.UI.XRTableRow() {Me.XrTableRow4})
@@ -238,7 +246,7 @@
             '
             'XrLabel_ReturnTurnoverCode
             '
-            Me.XrLabel_ReturnTurnoverCode.Font = New System.Drawing.Font("SimSun", 7.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+            Me.XrLabel_ReturnTurnoverCode.Font = New System.Drawing.Font("宋体", 7.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
             Me.XrLabel_ReturnTurnoverCode.Location = New System.Drawing.Point(0, 50)
             Me.XrLabel_ReturnTurnoverCode.Name = "XrLabel_ReturnTurnoverCode"
             Me.XrLabel_ReturnTurnoverCode.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
@@ -248,7 +256,7 @@
             '
             'XrLabel_TurnoverCode
             '
-            Me.XrLabel_TurnoverCode.Font = New System.Drawing.Font("SimSun", 7.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+            Me.XrLabel_TurnoverCode.Font = New System.Drawing.Font("宋体", 7.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
             Me.XrLabel_TurnoverCode.Location = New System.Drawing.Point(0, 25)
             Me.XrLabel_TurnoverCode.Name = "XrLabel_TurnoverCode"
             Me.XrLabel_TurnoverCode.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
@@ -258,7 +266,7 @@
             '
             'XrLabel_Operator
             '
-            Me.XrLabel_Operator.Font = New System.Drawing.Font("SimSun", 7.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+            Me.XrLabel_Operator.Font = New System.Drawing.Font("宋体", 7.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
             Me.XrLabel_Operator.Location = New System.Drawing.Point(50, 75)
             Me.XrLabel_Operator.Name = "XrLabel_Operator"
             Me.XrLabel_Operator.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
@@ -268,7 +276,7 @@
             '
             'XrLabel4
             '
-            Me.XrLabel4.Font = New System.Drawing.Font("SimSun", 7.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+            Me.XrLabel4.Font = New System.Drawing.Font("宋体", 7.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
             Me.XrLabel4.Location = New System.Drawing.Point(0, 75)
             Me.XrLabel4.Name = "XrLabel4"
             Me.XrLabel4.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
@@ -279,7 +287,7 @@
             '
             'XrLabel_BranchName
             '
-            Me.XrLabel_BranchName.Font = New System.Drawing.Font("SimHei", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+            Me.XrLabel_BranchName.Font = New System.Drawing.Font("黑体", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
             Me.XrLabel_BranchName.Location = New System.Drawing.Point(0, 0)
             Me.XrLabel_BranchName.Name = "XrLabel_BranchName"
             Me.XrLabel_BranchName.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
@@ -290,14 +298,14 @@
             '
             'PageHeader
             '
-            Me.PageHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrTable3, Me.XrTable2})
-            Me.PageHeader.Height = 34
+            Me.PageHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrTable5, Me.XrTable3, Me.XrTable2})
+            Me.PageHeader.Height = 51
             Me.PageHeader.Name = "PageHeader"
             '
             'XrTable3
             '
             Me.XrTable3.Font = New System.Drawing.Font("Times New Roman", 8.0!)
-            Me.XrTable3.Location = New System.Drawing.Point(0, 17)
+            Me.XrTable3.Location = New System.Drawing.Point(0, 34)
             Me.XrTable3.Name = "XrTable3"
             Me.XrTable3.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
             Me.XrTable3.Rows.AddRange(New DevExpress.XtraReports.UI.XRTableRow() {Me.XrTableRow3})
@@ -386,6 +394,62 @@
             Me.XrTableCell3.Text = "数量"
             Me.XrTableCell3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
             '
+            'XrTable5
+            '
+            Me.XrTable5.Font = New System.Drawing.Font("Times New Roman", 8.0!)
+            Me.XrTable5.Location = New System.Drawing.Point(0, 17)
+            Me.XrTable5.Name = "XrTable5"
+            Me.XrTable5.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
+            Me.XrTable5.Rows.AddRange(New DevExpress.XtraReports.UI.XRTableRow() {Me.XrTableRow5})
+            Me.XrTable5.Size = New System.Drawing.Size(175, 17)
+            Me.XrTable5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+            '
+            'XrTableRow5
+            '
+            Me.XrTableRow5.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.XrTableCell5})
+            Me.XrTableRow5.Name = "XrTableRow5"
+            Me.XrTableRow5.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
+            Me.XrTableRow5.Size = New System.Drawing.Size(175, 17)
+            Me.XrTableRow5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+            '
+            'XrTableCell5
+            '
+            Me.XrTableCell5.Font = New System.Drawing.Font("Century Gothic", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Me.XrTableCell5.Location = New System.Drawing.Point(0, 0)
+            Me.XrTableCell5.Name = "XrTableCell5"
+            Me.XrTableCell5.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+            Me.XrTableCell5.Size = New System.Drawing.Size(175, 17)
+            Me.XrTableCell5.StylePriority.UseTextAlignment = False
+            Me.XrTableCell5.Text = "货品编码"
+            Me.XrTableCell5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+            '
+            'XrTable6
+            '
+            Me.XrTable6.Font = New System.Drawing.Font("Times New Roman", 8.0!)
+            Me.XrTable6.Location = New System.Drawing.Point(0, 17)
+            Me.XrTable6.Name = "XrTable6"
+            Me.XrTable6.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
+            Me.XrTable6.Rows.AddRange(New DevExpress.XtraReports.UI.XRTableRow() {Me.XrTableRow6})
+            Me.XrTable6.Size = New System.Drawing.Size(175, 17)
+            Me.XrTable6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+            '
+            'XrTableRow6
+            '
+            Me.XrTableRow6.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.XrTableCell_WareCode})
+            Me.XrTableRow6.Name = "XrTableRow6"
+            Me.XrTableRow6.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
+            Me.XrTableRow6.Size = New System.Drawing.Size(175, 17)
+            Me.XrTableRow6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+            '
+            'XrTableCell_WareCode
+            '
+            Me.XrTableCell_WareCode.Location = New System.Drawing.Point(0, 0)
+            Me.XrTableCell_WareCode.Name = "XrTableCell_WareCode"
+            Me.XrTableCell_WareCode.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+            Me.XrTableCell_WareCode.Size = New System.Drawing.Size(175, 17)
+            Me.XrTableCell_WareCode.StylePriority.UseTextAlignment = False
+            Me.XrTableCell_WareCode.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+            '
             'R_02_01001
             '
             Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.PageFooter, Me.ReportFooter, Me.ReportHeader, Me.PageHeader})
@@ -398,6 +462,8 @@
             CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.XrTable3, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.XrTable5, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.XrTable6, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
         End Sub
@@ -436,5 +502,11 @@
         Friend WithEvents XrLabel_ReturnTurnoverCode As DevExpress.XtraReports.UI.XRLabel
         Friend WithEvents XrLabel_Extradiscount As DevExpress.XtraReports.UI.XRLabel
         Friend WithEvents XrLabel1 As DevExpress.XtraReports.UI.XRLabel
+        Friend WithEvents XrTable5 As DevExpress.XtraReports.UI.XRTable
+        Friend WithEvents XrTableRow5 As DevExpress.XtraReports.UI.XRTableRow
+        Friend WithEvents XrTableCell5 As DevExpress.XtraReports.UI.XRTableCell
+        Friend WithEvents XrTable6 As DevExpress.XtraReports.UI.XRTable
+        Friend WithEvents XrTableRow6 As DevExpress.XtraReports.UI.XRTableRow
+        Friend WithEvents XrTableCell_WareCode As DevExpress.XtraReports.UI.XRTableCell
     End Class
 End Namespace
