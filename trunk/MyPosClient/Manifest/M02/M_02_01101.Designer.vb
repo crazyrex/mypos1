@@ -92,8 +92,7 @@
             Me.GridColumn_UnitName = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_WareAmount = New DevExpress.XtraGrid.Columns.GridColumn
             Me.RepositoryItemCalcEdit_WareAmount = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
-            Me.GridColumn_UnitPoint = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn_SumPoint = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn_UsePoint = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_CurrentAmount = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_RowHighlight = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_OrigionUntPrice = New DevExpress.XtraGrid.Columns.GridColumn
@@ -296,7 +295,7 @@
             '
             'GridView_TurnoverDtl
             '
-            Me.GridView_TurnoverDtl.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn_BatchCode, Me.GridColumn_WareCode, Me.GridColumn_CustomCode, Me.GridColumn_WareName, Me.GridColumn_TurnoverBookStatus, Me.GridColumn_Spec, Me.GridColumn_Model, Me.GridColumn_Attribute1, Me.GridColumn_Attribute2, Me.GridColumn_Attribute3, Me.GridColumn_Attribute4, Me.GridColumn_UnitName, Me.GridColumn_WareAmount, Me.GridColumn_UnitPoint, Me.GridColumn_SumPoint, Me.GridColumn_CurrentAmount, Me.GridColumn_RowHighlight, Me.GridColumn_OrigionUntPrice, Me.GridColumn_OrigionSumPrice})
+            Me.GridView_TurnoverDtl.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn_BatchCode, Me.GridColumn_WareCode, Me.GridColumn_CustomCode, Me.GridColumn_WareName, Me.GridColumn_TurnoverBookStatus, Me.GridColumn_Spec, Me.GridColumn_Model, Me.GridColumn_Attribute1, Me.GridColumn_Attribute2, Me.GridColumn_Attribute3, Me.GridColumn_Attribute4, Me.GridColumn_UnitName, Me.GridColumn_WareAmount, Me.GridColumn_UsePoint, Me.GridColumn_CurrentAmount, Me.GridColumn_RowHighlight, Me.GridColumn_OrigionUntPrice, Me.GridColumn_OrigionSumPrice})
             StyleFormatCondition1.Appearance.BackColor = System.Drawing.Color.Lime
             StyleFormatCondition1.Appearance.BackColor2 = System.Drawing.Color.White
             StyleFormatCondition1.Appearance.Options.UseBackColor = True
@@ -464,23 +463,14 @@
             Me.RepositoryItemCalcEdit_WareAmount.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
             Me.RepositoryItemCalcEdit_WareAmount.Name = "RepositoryItemCalcEdit_WareAmount"
             '
-            'GridColumn_UnitPoint
+            'GridColumn_UsePoint
             '
-            Me.GridColumn_UnitPoint.Caption = "单件点数"
-            Me.GridColumn_UnitPoint.FieldName = "UNIT_DISCOUNT"
-            Me.GridColumn_UnitPoint.Name = "GridColumn_UnitPoint"
-            Me.GridColumn_UnitPoint.OptionsColumn.AllowFocus = False
-            Me.GridColumn_UnitPoint.Visible = True
-            Me.GridColumn_UnitPoint.VisibleIndex = 12
-            '
-            'GridColumn_SumPoint
-            '
-            Me.GridColumn_SumPoint.Caption = "总点数"
-            Me.GridColumn_SumPoint.FieldName = "SUM_DISCOUNT"
-            Me.GridColumn_SumPoint.Name = "GridColumn_SumPoint"
-            Me.GridColumn_SumPoint.OptionsColumn.AllowFocus = False
-            Me.GridColumn_SumPoint.Visible = True
-            Me.GridColumn_SumPoint.VisibleIndex = 13
+            Me.GridColumn_UsePoint.Caption = "单件点数"
+            Me.GridColumn_UsePoint.FieldName = "USE_POINT"
+            Me.GridColumn_UsePoint.Name = "GridColumn_UsePoint"
+            Me.GridColumn_UsePoint.OptionsColumn.AllowFocus = False
+            Me.GridColumn_UsePoint.Visible = True
+            Me.GridColumn_UsePoint.VisibleIndex = 12
             '
             'GridColumn_CurrentAmount
             '
@@ -1429,8 +1419,7 @@
         Friend WithEvents Label_UsePoint As System.Windows.Forms.Label
         Friend WithEvents ToolStripButton_Refresh As System.Windows.Forms.ToolStripButton
         Friend WithEvents ToolStripButton_Save As System.Windows.Forms.ToolStripButton
-        Friend WithEvents GridColumn_UnitPoint As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn_SumPoint As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridColumn_UsePoint As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents CheckEdit_IsOnLine As DevExpress.XtraEditors.CheckEdit
 
 #End Region

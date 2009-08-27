@@ -47,13 +47,14 @@
             Dim CTag3 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag5 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim StyleFormatCondition1 As DevExpress.XtraGrid.StyleFormatCondition = New DevExpress.XtraGrid.StyleFormatCondition
+            Dim StyleFormatCondition2 As DevExpress.XtraGrid.StyleFormatCondition = New DevExpress.XtraGrid.StyleFormatCondition
             Dim CTag6 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Me.ToolStrip_Form = New System.Windows.Forms.ToolStrip
             Me.ToolStripButton_Create = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_Revise = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_Delete = New System.Windows.Forms.ToolStripButton
-            Me.ToolStripButton_Refresh = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_Report = New System.Windows.Forms.ToolStripButton
+            Me.ToolStripButton_Refresh = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_Close = New System.Windows.Forms.ToolStripButton
             Me.PanelControl_Filter = New DevExpress.XtraEditors.PanelControl
             Me.TextEdit_Search = New DevExpress.XtraEditors.TextEdit
@@ -64,8 +65,8 @@
             Me.GridColumn_BeginDate = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_AffairDays = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_TemplateID = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn_RowHighlight = New DevExpress.XtraGrid.Columns.GridColumn
             Me.RepositoryItemLookUpEdit_TemplateID = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
+            Me.GridColumn_RowHighlight = New DevExpress.XtraGrid.Columns.GridColumn
             Me.ToolStrip_Form.SuspendLayout()
             CType(Me.PanelControl_Filter, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.PanelControl_Filter.SuspendLayout()
@@ -113,37 +114,37 @@
             'ToolStripButton_Create
             '
             Me.ToolStripButton_Create.Name = "ToolStripButton_Create"
-            Me.ToolStripButton_Create.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Create.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Create.Text = "新建"
             '
             'ToolStripButton_Revise
             '
             Me.ToolStripButton_Revise.Name = "ToolStripButton_Revise"
-            Me.ToolStripButton_Revise.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Revise.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Revise.Text = "修改"
             '
             'ToolStripButton_Delete
             '
             Me.ToolStripButton_Delete.Name = "ToolStripButton_Delete"
-            Me.ToolStripButton_Delete.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Delete.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Delete.Text = "删除"
-            '
-            'ToolStripButton_Refresh
-            '
-            Me.ToolStripButton_Refresh.Name = "ToolStripButton_Refresh"
-            Me.ToolStripButton_Refresh.Size = New System.Drawing.Size(33, 22)
-            Me.ToolStripButton_Refresh.Text = "刷新"
             '
             'ToolStripButton_Report
             '
             Me.ToolStripButton_Report.Name = "ToolStripButton_Report"
-            Me.ToolStripButton_Report.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Report.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Report.Text = "报表"
+            '
+            'ToolStripButton_Refresh
+            '
+            Me.ToolStripButton_Refresh.Name = "ToolStripButton_Refresh"
+            Me.ToolStripButton_Refresh.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Refresh.Text = "刷新"
             '
             'ToolStripButton_Close
             '
             Me.ToolStripButton_Close.Name = "ToolStripButton_Close"
-            Me.ToolStripButton_Close.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Close.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Close.Text = "关闭"
             '
             'PanelControl_Filter
@@ -187,7 +188,7 @@
             Me.TextEdit_Search.EditValue = ""
             Me.TextEdit_Search.Location = New System.Drawing.Point(67, 13)
             Me.TextEdit_Search.Name = "TextEdit_Search"
-            Me.TextEdit_Search.Size = New System.Drawing.Size(184, 21)
+            Me.TextEdit_Search.Size = New System.Drawing.Size(184, 20)
             Me.TextEdit_Search.TabIndex = 10000
             CTag2.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag2.CalculatorRequired = True
@@ -297,7 +298,14 @@
             StyleFormatCondition1.Column = Me.GridColumn_RowHighlight
             StyleFormatCondition1.Condition = DevExpress.XtraGrid.FormatConditionEnum.Equal
             StyleFormatCondition1.Value1 = "SEARCH_MATCH"
-            Me.GridView_SaleAffair.FormatConditions.AddRange(New DevExpress.XtraGrid.StyleFormatCondition() {StyleFormatCondition1})
+            StyleFormatCondition2.Appearance.BackColor = System.Drawing.Color.OrangeRed
+            StyleFormatCondition2.Appearance.BackColor2 = System.Drawing.Color.White
+            StyleFormatCondition2.Appearance.Options.UseBackColor = True
+            StyleFormatCondition2.ApplyToRow = True
+            StyleFormatCondition2.Column = Me.GridColumn_RowHighlight
+            StyleFormatCondition2.Condition = DevExpress.XtraGrid.FormatConditionEnum.Equal
+            StyleFormatCondition2.Value1 = "ROW_HIGHLIGHT_ACTIVE_AFFAIR"
+            Me.GridView_SaleAffair.FormatConditions.AddRange(New DevExpress.XtraGrid.StyleFormatCondition() {StyleFormatCondition1, StyleFormatCondition2})
             Me.GridView_SaleAffair.GridControl = Me.GridControl_SaleAffair
             Me.GridView_SaleAffair.Name = "GridView_SaleAffair"
             Me.GridView_SaleAffair.OptionsView.ColumnAutoWidth = False
@@ -343,13 +351,6 @@
             Me.GridColumn_TemplateID.Visible = True
             Me.GridColumn_TemplateID.VisibleIndex = 3
             '
-            'GridColumn_RowHighlight
-            '
-            Me.GridColumn_RowHighlight.Caption = "高亮显示"
-            Me.GridColumn_RowHighlight.FieldName = "DSR_FT_ROW_HIGHLIGHT"
-            Me.GridColumn_RowHighlight.Name = "GridColumn_RowHighlight"
-            Me.GridColumn_RowHighlight.OptionsColumn.AllowFocus = False
-            '
             'RepositoryItemLookUpEdit_TemplateID
             '
             Me.RepositoryItemLookUpEdit_TemplateID.AutoHeight = False
@@ -358,6 +359,13 @@
             Me.RepositoryItemLookUpEdit_TemplateID.DisplayMember = "TEMPLATE_CODE"
             Me.RepositoryItemLookUpEdit_TemplateID.Name = "RepositoryItemLookUpEdit_TemplateID"
             Me.RepositoryItemLookUpEdit_TemplateID.ValueMember = "TEMPLATE_ID"
+            '
+            'GridColumn_RowHighlight
+            '
+            Me.GridColumn_RowHighlight.Caption = "高亮显示"
+            Me.GridColumn_RowHighlight.FieldName = "DSR_FT_ROW_HIGHLIGHT"
+            Me.GridColumn_RowHighlight.Name = "GridColumn_RowHighlight"
+            Me.GridColumn_RowHighlight.OptionsColumn.AllowFocus = False
             '
             'M_01_00901
             '

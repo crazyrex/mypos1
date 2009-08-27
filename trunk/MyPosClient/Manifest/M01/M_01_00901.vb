@@ -362,6 +362,7 @@ Namespace Manifest
                 Case Business.B_01_00901.Affairs.LoadList
                     Me.DoPrivateUpdateSelectingRow()
                     Me.GridView_SaleAffair.BestFitColumns()
+                    Me.DoPrivateUpdateActiveAffairHighlight()
 
                     'Case Business.B_02_00202.Affairs.SaveInfo             
                 'Window.XLMessageBox.ShowMessage( _                
@@ -625,8 +626,16 @@ Namespace Manifest
         End Sub
 
 
-        Private Sub DoPrivateUtld0001()
+        Private Sub DoPrivateUpdateActiveAffairHighlight()
 
+            Me.SVFT_BINDING_LIST.ResetRowHighlighting()
+            Dim affairCondition As New MyPosXAuto.Facade.AfBizManage.ConditionOfT_MP_SALE_AFFAIR(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            affairCondition.Add(MyPosXAuto.Facade.AfBizManage.T_MP_SALE_AFFAIRColumns.BEGIN_DATEColumn, "<=", CommTK.GetSyncServerTime)
+            affairCondition.Add(MyPosXAuto.Facade.AfBizManage.T_MP_SALE_AFFAIRColumns.END_DATEColumn, ">=", CommTK.GetSyncServerTime)
+
+            For Each bindingRow As MyPosXAuto.FTs.FT_T_MP_SALE_AFFAIRRow In Me.SVFT_BINDING_LIST.FindRowsByCondition(affairCondition)
+                bindingRow.ROW_HIGHLIGHT = MyPosXService.Decls.ROW_HIGHLIGHT_ACTIVE_AFFAIR
+            Next
         End Sub
 
 
