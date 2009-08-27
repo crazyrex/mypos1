@@ -23,7 +23,7 @@ Public Class S_03_01201
 
             If result.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then
                 Dim ex As New XLException(XLException.ErrorClassify.ReadDataError)
-                ex.SetMessage(CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED)
+                ex.SetMessage(CommDecl.MSG_ALERT_REMOTE_AUTH_DENIED)
                 Throw ex
             End If
 
@@ -36,13 +36,13 @@ Public Class S_03_01201
 
     End Function
 
-        Public Enum LCs
-            None
+    Public Enum LCs
+        None
         Choose
-            Utld0003
-            Utld0004
-            Utld0005
-        End Enum
+        Utld0003
+        Utld0004
+        Utld0005
+    End Enum
 
 
     'Public Function ServInitDisplay( _
@@ -103,7 +103,7 @@ Public Class S_03_01201
         ByRef refClientRowSE As MyPosXAuto.FTs.FT_M_MP_CLIENTRowSEntity _
         ) As String
 
-        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTE_AUTH_DENIED
 
         Try
 
@@ -147,7 +147,7 @@ Public Class S_03_01201
         ByRef refClientRowSE As MyPosXAuto.FTs.FT_M_MP_CLIENTRowSEntity _
         ) As String
 
-        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTE_AUTH_DENIED
 
         Try
             Dim clientConditions As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_MP_CLIENT(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_Or)
@@ -191,7 +191,7 @@ Public Class S_03_01201
         ByRef refParaUtld As String _
         ) As String
 
-        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTE_AUTH_DENIED
 
         Try
 
@@ -228,7 +228,7 @@ Public Class S_03_01201
         ByRef refParaUtld As String _
         ) As String
 
-        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTE_AUTH_DENIED
 
         Try
 
@@ -265,7 +265,7 @@ Public Class S_03_01201
         ByRef refParaUtld As String _
         ) As String
 
-        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTE_AUTH_DENIED
 
         Try
 
@@ -302,7 +302,7 @@ Public Class S_03_01201
         ByRef refParaUtld As String _
         ) As String
 
-        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTE_AUTH_DENIED
 
         Try
 
@@ -339,7 +339,7 @@ Public Class S_03_01201
         ByRef refParaUtld As String _
         ) As String
 
-        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTE_AUTH_DENIED
 
         Try
 
@@ -376,7 +376,7 @@ Public Class S_03_01201
         ByRef refParaUtld As String _
         ) As String
 
-        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTE_AUTH_DENIED
 
         Try
 
@@ -413,7 +413,7 @@ Public Class S_03_01201
         ByRef refParaUtld As String _
         ) As String
 
-        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTE_AUTH_DENIED
 
         Try
 
@@ -450,7 +450,7 @@ Public Class S_03_01201
         ByRef refParaUtld As String _
         ) As String
 
-        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTE_AUTH_DENIED
 
         Try
 
@@ -487,7 +487,7 @@ Public Class S_03_01201
         ByRef refParaUtld As String _
         ) As String
 
-        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTE_AUTH_DENIED
 
         Try
 
@@ -524,7 +524,7 @@ Public Class S_03_01201
         ByRef refParaUtld As String _
         ) As String
 
-        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTE_AUTH_DENIED
 
         Try
 
@@ -561,7 +561,7 @@ Public Class S_03_01201
         ByRef refParaUtld As String _
         ) As String
 
-        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTE_AUTH_DENIED
 
         Try
 
@@ -598,7 +598,7 @@ Public Class S_03_01201
         ByRef refParaUtld As String _
         ) As String
 
-        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTE_AUTH_DENIED
 
         Try
 
@@ -635,7 +635,7 @@ Public Class S_03_01201
         ByRef refParaUtld As String _
         ) As String
 
-        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTE_AUTH_DENIED
 
         Try
 
@@ -672,7 +672,7 @@ Public Class S_03_01201
         ByRef refParaUtld As String _
         ) As String
 
-        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTE_AUTH_DENIED
 
         Try
 
@@ -709,7 +709,7 @@ Public Class S_03_01201
         ByRef refParaUtld As String _
         ) As String
 
-        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTE_AUTH_DENIED
 
         Try
 
@@ -746,7 +746,7 @@ Public Class S_03_01201
         ByRef refParaUtld As String _
         ) As String
 
-        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTE_AUTH_DENIED
 
         Try
 
@@ -783,7 +783,7 @@ Public Class S_03_01201
         ByRef refParaUtld As String _
         ) As String
 
-        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTE_AUTH_DENIED
 
         Try
 
@@ -820,7 +820,7 @@ Public Class S_03_01201
         ByRef refParaUtld As String _
         ) As String
 
-        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED
+        If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTE_AUTH_DENIED
 
         Try
 

@@ -17,7 +17,7 @@ Public Class ServiceTK
 
             If result.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then
                 Dim ex As New XLException(XLException.ErrorClassify.ReadDataError)
-                ex.SetMessage(CommDecl.MSG_ALERT_REMOTH_AUTH_DENIED)
+                ex.SetMessage(CommDecl.MSG_ALERT_REMOTE_AUTH_DENIED)
                 Throw ex
             End If
 
