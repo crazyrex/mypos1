@@ -99,20 +99,32 @@ Namespace Business
 
             Me._manifest = CType(theManifest, Manifest.M_03_01201)
 
+            
             Try
 
                 Me._service = MyPosXService.S_03_01201.GetInstance()
 
             Catch ex As Exception
 
+                If ex.Message = CommDecl.MSG_ALERT_REMOTE_CONNECTION_INAVAILABLE AndAlso _
+                    CommDecl.SYSTEM_SHOULD_BE_ONLINE = False AndAlso _
+                        Window.XLMessageBox.ShowMessage( _
+                            "Remoting connection fail, switch into offline mode?", _
+                            Window.XLMessageBox.MessageType.Wrong, _
+                            MessageBoxButtons.OKCancel) = DialogResult.OK Then
+                    CommDecl.SYSTEM_IS_ONLINE = False
+                    Me._service = MyPosXService.S_03_01201.GetInstance()
+                    Return
+                End If
+
                 Window.XLMessageBox.ShowMessage( _
                     ex.Message, _
                     Window.XLMessageBox.MessageType.Wrong, _
                     MessageBoxButtons.OK)
-
                 Me._manifest.Enabled = False
 
             End Try
+
         End Sub
 
 
