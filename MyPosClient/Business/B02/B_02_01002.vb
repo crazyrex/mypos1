@@ -85,6 +85,17 @@ Namespace Business
 
             Catch ex As Exception
 
+                If ex.Message = CommDecl.MSG_ALERT_REMOTE_CONNECTION_INAVAILABLE AndAlso _
+                   CommDecl.SYSTEM_SHOULD_BE_ONLINE = False AndAlso _
+                       Window.XLMessageBox.ShowMessage( _
+                           "Remoting connection fail, switch into offline mode?", _
+                           Window.XLMessageBox.MessageType.Wrong, _
+                           MessageBoxButtons.OKCancel) = DialogResult.OK Then
+                    CommDecl.SYSTEM_IS_ONLINE = False
+                    Me._service = MyPosXService.S_02_01002.GetInstance()
+                    Return
+                End If
+
                 Window.XLMessageBox.ShowMessage( _
                     ex.Message, _
                     Window.XLMessageBox.MessageType.Wrong, _
