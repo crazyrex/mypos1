@@ -134,16 +134,19 @@
 </value>
   </data>
   <data name="ToolStripButton_New.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 22</value>
+    <value>27, 22</value>
   </data>
   <data name="ToolStripButton_New.Text" xml:space="preserve">
     <value>New</value>
   </data>
   <data name="ToolStripButton_Add.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 22</value>
+    <value>27, 22</value>
   </data>
   <data name="ToolStripButton_Add.Text" xml:space="preserve">
     <value>Add</value>
+  </data>
+  <data name="ToolStripButton_Save.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 22</value>
   </data>
   <data name="ToolStripButton_Save.Text" xml:space="preserve">
     <value>Save</value>
@@ -164,13 +167,13 @@
 </value>
   </data>
   <data name="ToolStripButton_Revise.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 22</value>
+    <value>33, 22</value>
   </data>
   <data name="ToolStripButton_Revise.Text" xml:space="preserve">
     <value>Edit</value>
   </data>
   <data name="ToolStripButton_Remove.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 22</value>
+    <value>45, 22</value>
   </data>
   <data name="ToolStripButton_Remove.Text" xml:space="preserve">
     <value>Remove</value>
@@ -191,7 +194,7 @@
 </value>
   </data>
   <data name="ToolStripButton_ShareDtl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 22</value>
+    <value>93, 22</value>
   </data>
   <data name="ToolStripButton_ShareDtl.Text" xml:space="preserve">
     <value>Set commission</value>
@@ -212,7 +215,7 @@
 </value>
   </data>
   <data name="ToolStripButton_PrintBatchLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 22</value>
+    <value>99, 22</value>
   </data>
   <data name="ToolStripButton_PrintBatchLabel.Text" xml:space="preserve">
     <value>Print bch label</value>
@@ -233,7 +236,7 @@
 </value>
   </data>
   <data name="ToolStripButton_PrintPurchaseLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 22</value>
+    <value>123, 22</value>
   </data>
   <data name="ToolStripButton_PrintPurchaseLabel.Text" xml:space="preserve">
     <value>Print purchase list</value>
@@ -254,7 +257,7 @@
 </value>
   </data>
   <data name="ToolStripButton_PayLog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 22</value>
+    <value>69, 22</value>
   </data>
   <data name="ToolStripButton_PayLog.Text" xml:space="preserve">
     <value>IO pay log</value>
@@ -275,7 +278,7 @@
 </value>
   </data>
   <data name="ToolStripButton_ConsignLog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 22</value>
+    <value>75, 22</value>
   </data>
   <data name="ToolStripButton_ConsignLog.Text" xml:space="preserve">
     <value>Consign log</value>
@@ -296,7 +299,7 @@
 </value>
   </data>
   <data name="ToolStripButton_ImportFromMobile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 22</value>
+    <value>51, 22</value>
   </data>
   <data name="ToolStripButton_ImportFromMobile.Text" xml:space="preserve">
     <value>Loading</value>
@@ -317,13 +320,13 @@
 </value>
   </data>
   <data name="ToolStripButton_ExportExcel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 22</value>
+    <value>45, 22</value>
   </data>
   <data name="ToolStripButton_ExportExcel.Text" xml:space="preserve">
     <value>Export</value>
   </data>
   <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 22</value>
+    <value>39, 22</value>
   </data>
   <data name="ToolStripButton_Close.Text" xml:space="preserve">
     <value>Close</value>
@@ -334,11 +337,17 @@
   <data name="TextEdit_Remarks.Location" type="System.Drawing.Point, System.Drawing">
     <value>118, 5</value>
   </data>
+  <data name="TextEdit_Remarks.Size" type="System.Drawing.Size, System.Drawing">
+    <value>452, 21</value>
+  </data>
   <data name="Label15.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 15</value>
   </data>
   <data name="Label15.Text" xml:space="preserve">
     <value>Remarks</value>
+  </data>
+  <data name="Panel_Remarks.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 226</value>
   </data>
   <data name="Panel_Remarks.Size" type="System.Drawing.Size, System.Drawing">
     <value>769, 29</value>
@@ -370,8 +379,14 @@
   <data name="CalcEdit_ExtraDiscount.Location" type="System.Drawing.Point, System.Drawing">
     <value>118, 1</value>
   </data>
+  <data name="CalcEdit_ExtraDiscount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 21</value>
+  </data>
   <data name="CalcEdit_Pay.Location" type="System.Drawing.Point, System.Drawing">
     <value>499, 1</value>
+  </data>
+  <data name="CalcEdit_Pay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 21</value>
   </data>
   <data name="Label10.Location" type="System.Drawing.Point, System.Drawing">
     <value>393, 4</value>
@@ -385,11 +400,17 @@
   <data name="Label_ExtraDiscount.Text" xml:space="preserve">
     <value>Extra discount</value>
   </data>
+  <data name="Panel_FinancialPart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 200</value>
+  </data>
   <data name="Panel_FinancialPart.Size" type="System.Drawing.Size, System.Drawing">
     <value>769, 29</value>
   </data>
   <data name="CalcEdit_DeliveryCharge.Location" type="System.Drawing.Point, System.Drawing">
     <value>499, 5</value>
+  </data>
+  <data name="CalcEdit_DeliveryCharge.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 21</value>
   </data>
   <data name="Label_DeliveryCharge.Location" type="System.Drawing.Point, System.Drawing">
     <value>393, 8</value>
@@ -403,17 +424,26 @@
   <data name="TextEdit_DeliveryDetail.Location" type="System.Drawing.Point, System.Drawing">
     <value>118, 5</value>
   </data>
+  <data name="TextEdit_DeliveryDetail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>259, 21</value>
+  </data>
   <data name="Label8.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 15</value>
   </data>
   <data name="Label8.Text" xml:space="preserve">
     <value>Delivery Req.</value>
   </data>
+  <data name="Panel_Delivery.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 169</value>
+  </data>
   <data name="Panel_Delivery.Size" type="System.Drawing.Size, System.Drawing">
     <value>769, 30</value>
   </data>
   <data name="LookUpEdit_TurnoverStyle.Location" type="System.Drawing.Point, System.Drawing">
     <value>132, 103</value>
+  </data>
+  <data name="LookUpEdit_TurnoverStyle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 21</value>
   </data>
   <data name="Label_Mode.Location" type="System.Drawing.Point, System.Drawing">
     <value>21, 106</value>
@@ -442,6 +472,9 @@
   <data name="ButtonEdit_CustomerCode.Location" type="System.Drawing.Point, System.Drawing">
     <value>132, 76</value>
   </data>
+  <data name="ButtonEdit_CustomerCode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 21</value>
+  </data>
   <data name="Label_Customer.Location" type="System.Drawing.Point, System.Drawing">
     <value>21, 79</value>
   </data>
@@ -459,6 +492,9 @@
   </data>
   <data name="ButtonEdit_SupplierCode.Location" type="System.Drawing.Point, System.Drawing">
     <value>513, 76</value>
+  </data>
+  <data name="ButtonEdit_SupplierCode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 21</value>
   </data>
   <data name="Label_Supplier.Location" type="System.Drawing.Point, System.Drawing">
     <value>407, 79</value>
@@ -478,6 +514,9 @@
   <data name="ButtonEdit_EmployeeCode.Location" type="System.Drawing.Point, System.Drawing">
     <value>513, 49</value>
   </data>
+  <data name="ButtonEdit_EmployeeCode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 21</value>
+  </data>
   <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
     <value>407, 52</value>
   </data>
@@ -490,6 +529,9 @@
   <data name="LookUpEdit_Pos.Location" type="System.Drawing.Point, System.Drawing">
     <value>132, 49</value>
   </data>
+  <data name="LookUpEdit_Pos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 21</value>
+  </data>
   <data name="Label_TurnoverPos.Location" type="System.Drawing.Point, System.Drawing">
     <value>21, 52</value>
   </data>
@@ -501,6 +543,9 @@
   </data>
   <data name="DateEdit_DepositTime.Location" type="System.Drawing.Point, System.Drawing">
     <value>513, 22</value>
+  </data>
+  <data name="DateEdit_DepositTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 21</value>
   </data>
   <data name="Label_TurnoverTime.Location" type="System.Drawing.Point, System.Drawing">
     <value>407, 25</value>
@@ -533,10 +578,13 @@
     <value>Check-in Ref. No.</value>
   </data>
   <data name="GroupControl_Turnover.Size" type="System.Drawing.Size, System.Drawing">
-    <value>794, 215</value>
+    <value>794, 264</value>
   </data>
   <data name="GroupControl_Turnover.Text" xml:space="preserve">
     <value>Check-in</value>
+  </data>
+  <data name="GridControl_TurnoverDtl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 64</value>
   </data>
   <data name="GridColumn_BatchCode.Caption" xml:space="preserve">
     <value>Batch code</value>
@@ -577,14 +625,11 @@
   <data name="GridColumn_UnitPrice.Caption" xml:space="preserve">
     <value>Unit price</value>
   </data>
-  <data name="GridColumn_Unitcost.Caption" xml:space="preserve">
-    <value>Unit cost</value>
-  </data>
   <data name="GridColumn_Remarks.Caption" xml:space="preserve">
     <value>Remarks</value>
   </data>
   <data name="GridControl_TurnoverDtl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>790, 194</value>
+    <value>790, 145</value>
   </data>
   <data name="LinkLabel_SingleWare.Size" type="System.Drawing.Size, System.Drawing">
     <value>109, 15</value>
@@ -607,6 +652,9 @@
   <data name="ButtonEdit_WareCode.Location" type="System.Drawing.Point, System.Drawing">
     <value>96, 12</value>
   </data>
+  <data name="ButtonEdit_WareCode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 21</value>
+  </data>
   <data name="Label18.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 18</value>
   </data>
@@ -616,14 +664,17 @@
   <data name="Label18.Text" xml:space="preserve">
     <value>Barcode</value>
   </data>
+  <data name="PanelControl_WareInput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 21</value>
+  </data>
   <data name="PanelControl_WareInput.Size" type="System.Drawing.Size, System.Drawing">
     <value>790, 43</value>
   </data>
   <data name="GroupControl_Details.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 240</value>
+    <value>0, 289</value>
   </data>
   <data name="GroupControl_Details.Size" type="System.Drawing.Size, System.Drawing">
-    <value>794, 260</value>
+    <value>794, 211</value>
   </data>
   <data name="GroupControl_Details.Text" xml:space="preserve">
     <value>Details</value>

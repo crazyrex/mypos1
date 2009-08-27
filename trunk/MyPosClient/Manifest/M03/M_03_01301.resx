@@ -118,17 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="DefaultLookAndFeel_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>278, 0</value>
+    <value>295, 0</value>
   </metadata>
   <metadata name="Timer_Surveillant.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>134, 0</value>
+    <value>138, 0</value>
   </metadata>
   <metadata name="ToolStrip_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ToolStripButton_Refresh.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>33, 22</value>
   </data>
   <data name="ToolStripButton_Refresh.Text" xml:space="preserve">
     <value>刷新</value>
@@ -136,29 +136,29 @@
   <data name="ToolStripButton_ExportSalesReport.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIISURBVDhPpZP7S1NxGMbPPxKaXVUkMEq8IpKUCoY/hGgI
-        ymqkDYYXcCjDZOANURSjCNGFQUTsl4GXVMxKk62YU4fXQpaIlygHQxBRH8/zwvyaIAYe+HLgnPN8nue9
-        HA3nvDTq63oW/jm13XOwvPTB3DYFY5MH+bXfcN8ygfTSMSSXfESicQDxBqdYHwH29g9w2tnZ3UcguIvN
-        rR3417exuBJE5N1n/wfwLgXEOc38Bc6xNRHb+/y4nm49G0Bnit2zf9H6bkliE/jKuYxrd6oVgDWfjB+K
-        TWeKMyrGEVfowITvD9re/9ABVQrAhh0HHK+ZselMMaN/mvwtDb+aVqkA7HYIwIj3ysfluPTorJnP6Ezx
-        oHsD1s5ZXEktUwCOioB5f1CEPR9+wTG6iuiserTo8dkwng7HT/R+XUPF8xlcTjErAOdMcW6NW8STiwG8
-        7vej8oUPN/PsEv3t8Ao0TZP3T1u8uJRkUgAuSYHtO97oLxmXd5t9Ho8aPTK+GzntqNfrLm2fFoihwYOI
-        xGIF4KjoGBLzY1OrF9k6OOFxnwDC4wxIMX1G0pMhgVyMNyoA13PAtS7OrJk1PrC69LUdQWxuF6IybHrX
-        LRI7JrtZdoDAo1XmbjMyD+tjSXxGcXRmnYg5ttD9QuxDhN0uUgDOmbvNTpPOJaGAo2K36cyaGZvOFIfd
-        KlSA8/zRh9ABIDUG+1JpAAAAAElFTkSuQmCC
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAgxJREFUOE+lkvtL
+        U2EYx+0PEbtpFwnBKPGKiJImGP0gYhIYs1E5GF5gIxkpA00JRSmMEF0ohMh+GaRWYlqabMVcNdS2QpaI
+        VqiDIYhk397vA6fXhCjyhYdzeM/5fp7vczkAdeL2cwho7v/wWzT1zcN+Pwhr51uY2/y41PQaF+wzKKiZ
+        QvaN58g0jyLd5KEUcQbg+84P/Cm2tncQjW3j68YWIqubCC3FcOJc478BAuGoZM6zvoRnakXEruEIjhc4
+        /g5gZop9c+voGAyLbQIfeBZxLL9BA1jzXvuGbWamuKh+GmmVbswE19A59FEBbmoAG7YbsLtm2mZmiml9
+        cvabNDwpz6YB7LYBoMXCumkJr7LOmnnHzBQ/9X2Bo2cOibm1GsBREbAQiYmw/8lnuCeWkVzcgnZlnw1j
+        3HV/wuNXK6i/9x5Hc6wawDlTXHbLJ+LZUBQPRyKwdQdxutwl1h+NLXHh5Ht1ewBHsiwawCW57HyDAfWR
+        dvl0uhZQ1eqX8aVc7EKLqrum651ATLf9OJx5XQM4KmY0xPzZ0hFAiQJnXB0WwME0E3IsL5B17ZlADqWb
+        NYDrOepdlcysmTWWOrxqbceRWtaLk0VO1XW72D5Vckd2gMBfq8zdpmUG62NJvKM4+XyziDk24xmfWoGE
+        s1c0gHPmbrPTpHNJKOCo2G1mZs20zcwUJ5yp1AB5+8/zEwgF5GMVDxh4AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="ToolStripButton_ExportSalesReport.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
   <data name="ToolStripButton_ExportSalesReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 22</value>
+    <value>63, 22</value>
   </data>
   <data name="ToolStripButton_ExportSalesReport.Text" xml:space="preserve">
     <value>导出Excel</value>
   </data>
   <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>33, 22</value>
   </data>
   <data name="ToolStripButton_Close.Text" xml:space="preserve">
     <value>关闭</value>
@@ -217,7 +217,7 @@
     <value>Combo</value>
   </data>
   <data name="LookUpEdit_Pos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 20</value>
+    <value>134, 21</value>
   </data>
   <data name="LookUpEdit_Pos.TabIndex" type="System.Int32, mscorlib">
     <value>10002</value>
@@ -272,7 +272,7 @@
     <value>70, 59</value>
   </data>
   <data name="TextEdit_Search.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 20</value>
+    <value>211, 21</value>
   </data>
   <data name="TextEdit_Search.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -326,7 +326,7 @@
     <value>Combo</value>
   </data>
   <data name="DateEdit_ToDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 20</value>
+    <value>90, 21</value>
   </data>
   <data name="DateEdit_ToDate.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -380,7 +380,7 @@
     <value>Combo</value>
   </data>
   <data name="DateEdit_FromDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 20</value>
+    <value>90, 21</value>
   </data>
   <data name="DateEdit_FromDate.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -450,12 +450,6 @@
   </data>
   <data name="&gt;&gt;PanelControl_Filter.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <metadata name="SaveFileDialog_ExportToExcel.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>473, 0</value>
-  </metadata>
-  <data name="SaveFileDialog_ExportToExcel.Filter" xml:space="preserve">
-    <value>Excel文档|*.xls</value>
   </data>
   <data name="GridControl_Sales.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -808,6 +802,12 @@
   <data name="&gt;&gt;GridControl_Sales.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="SaveFileDialog_ExportToExcel.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>489, 0</value>
+  </metadata>
+  <data name="SaveFileDialog_ExportToExcel.Filter" xml:space="preserve">
+    <value>Excel文档|*.xls</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -852,18 +852,6 @@
   </data>
   <data name="&gt;&gt;ToolStripButton_Close.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SaveFileDialog_ExportToExcel.Name" xml:space="preserve">
-    <value>SaveFileDialog_ExportToExcel</value>
-  </data>
-  <data name="&gt;&gt;SaveFileDialog_ExportToExcel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RepositoryItemCheckEdit_Select.Name" xml:space="preserve">
-    <value>RepositoryItemCheckEdit_Select</value>
-  </data>
-  <data name="&gt;&gt;RepositoryItemCheckEdit_Select.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="&gt;&gt;GridView_Sales.Name" xml:space="preserve">
     <value>GridView_Sales</value>
@@ -1074,6 +1062,18 @@
   </data>
   <data name="&gt;&gt;GridColumn_TurnoverID.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;RepositoryItemCheckEdit_Select.Name" xml:space="preserve">
+    <value>RepositoryItemCheckEdit_Select</value>
+  </data>
+  <data name="&gt;&gt;RepositoryItemCheckEdit_Select.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;SaveFileDialog_ExportToExcel.Name" xml:space="preserve">
+    <value>SaveFileDialog_ExportToExcel</value>
+  </data>
+  <data name="&gt;&gt;SaveFileDialog_ExportToExcel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>M_03_01301</value>
