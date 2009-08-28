@@ -45,10 +45,10 @@ Namespace Manifest
         'Public SVLM_UTLD_0002 As String ="SVLM_UTLD_0002"
 
         '数据列表变量
-        'Public SVFT_BINDING_XXX_LIST As New XAuto.FTs.FT_
+        Public SVFT_BINDING_LIST As New MyPosXAuto.FTs.FT_MP_MP_SELECT_PERIOD_POINT_WARE_EXCHANGE_TOTAL
         'Public SVFT_CHOOSE_XXX_LIST As New XAuto.FTs.FT_
 
-        'Public SVFR_SELECTING_XXX_ROW As XAuto.FTs.FT_ Row
+        Public SVFR_SELECTING_ROW As MyPosXAuto.FTs.FT_MP_MP_SELECT_PERIOD_POINT_WARE_EXCHANGE_TOTALRow
 
         #End Region
 
