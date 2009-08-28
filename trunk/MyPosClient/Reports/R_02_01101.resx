@@ -126,23 +126,11 @@
   <metadata name="XrTableRow6.Name" xml:space="preserve">
     <value>XrTableRow6</value>
   </metadata>
-  <metadata name="XrTableCell_WareCode.Name" xml:space="preserve">
-    <value>XrTableCell_WareCode</value>
+  <metadata name="XrTableCell_WareAmount.Name" xml:space="preserve">
+    <value>XrTableCell_WareAmount</value>
   </metadata>
-  <metadata name="XrTable4.Name" xml:space="preserve">
-    <value>XrTable4</value>
-  </metadata>
-  <metadata name="XrTableRow4.Name" xml:space="preserve">
-    <value>XrTableRow4</value>
-  </metadata>
-  <metadata name="XrTableCell_OrigionUnitPrice.Name" xml:space="preserve">
-    <value>XrTableCell_OrigionUnitPrice</value>
-  </metadata>
-  <metadata name="XrTableCell_UnitDiscount.Name" xml:space="preserve">
-    <value>XrTableCell_UnitDiscount</value>
-  </metadata>
-  <metadata name="XrTableCell_SumPrice.Name" xml:space="preserve">
-    <value>XrTableCell_SumPrice</value>
+  <metadata name="XrTableCell_UsePoint.Name" xml:space="preserve">
+    <value>XrTableCell_UsePoint</value>
   </metadata>
   <metadata name="XrTable1.Name" xml:space="preserve">
     <value>XrTable1</value>
@@ -153,8 +141,8 @@
   <metadata name="XrTableCell_WareName.Name" xml:space="preserve">
     <value>XrTableCell_WareName</value>
   </metadata>
-  <metadata name="XrTableCell_WareAmount.Name" xml:space="preserve">
-    <value>XrTableCell_WareAmount</value>
+  <metadata name="XrTableCell_WareCode.Name" xml:space="preserve">
+    <value>XrTableCell_WareCode</value>
   </metadata>
   <metadata name="PageFooter.Name" xml:space="preserve">
     <value>PageFooter</value>
@@ -225,20 +213,8 @@
   <metadata name="XrTableCell4.Name" xml:space="preserve">
     <value>XrTableCell4</value>
   </metadata>
-  <metadata name="XrTable3.Name" xml:space="preserve">
-    <value>XrTable3</value>
-  </metadata>
-  <metadata name="XrTableRow3.Name" xml:space="preserve">
-    <value>XrTableRow3</value>
-  </metadata>
-  <metadata name="XrTableCell7.Name" xml:space="preserve">
-    <value>XrTableCell7</value>
-  </metadata>
   <metadata name="XrTableCell2.Name" xml:space="preserve">
     <value>XrTableCell2</value>
-  </metadata>
-  <metadata name="XrTableCell9.Name" xml:space="preserve">
-    <value>XrTableCell9</value>
   </metadata>
   <metadata name="XrTable2.Name" xml:space="preserve">
     <value>XrTable2</value>
