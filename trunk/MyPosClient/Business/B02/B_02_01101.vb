@@ -838,7 +838,7 @@ Namespace Business
                 Me._manifest.TextEdit_ClientCode.Text = clientRowSE.CLIENT_CODE
                 Me._manifest.Label_ClientName.Text = clientRowSE.CLIENT_NAME
                 Me._manifest.Label_ClientID.Text = clientRowSE.CLIENT_ID
-                Me._manifest.Label_HoldingPoint.Text = CommTK.FString(clientRowSE.CURRENT_POINT, False, "#,##0.00")
+                Me._manifest.Label_HoldingPoint.Text = CommTK.FString(clientRowSE.CURRENT_POINT)
 
 
                 'Dim servResult As String = _
@@ -1068,7 +1068,7 @@ Namespace Business
 
                 For Each bindingRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow In Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST
 
-                    bindingRow.UNIT_PRICE = bindingRow.ORIGION_UNIT_PRICE - bindingRow.UNIT_DISCOUNT
+                    bindingRow.UNIT_PRICE = 0
 
                     bindingRow.SUM_COST = bindingRow.UNIT_COST * bindingRow.WARE_AMOUNT
                     bindingRow.SUM_PRICE = bindingRow.UNIT_PRICE * bindingRow.WARE_AMOUNT
@@ -1079,7 +1079,7 @@ Namespace Business
 
                 Next
 
-                Me._manifest.Label_UsePoint.Text = CommTK.FString(totalPoint, False, "#,##0.00")
+                Me._manifest.Label_UsePoint.Text = CommTK.FString(totalPoint)
 
 
                 'Dim servResult As String = _
@@ -1170,7 +1170,7 @@ Namespace Business
 
             Try
 
-                Dim report As New Reports.R_02_01001
+                Dim report As New Reports.R_02_01101
 
                 report.DataSource = Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST
 
@@ -1190,7 +1190,10 @@ Namespace Business
                         staffRow.STAFF_CODE, _
                         staffRow.STAFF_NAME)
 
-                report.XrLabel_Payable.Text = Me._manifest.Label_UsePoint.Text
+                report.XrLabel_ClientCode.Text = Me._manifest.TextEdit_ClientCode.Text
+                report.XrLabel_PointsOrigion.Text = Me._manifest.Label_HoldingPoint.Text
+                report.XrLabel_UsePoint.Text = Me._manifest.Label_UsePoint.Text
+                report.XrLabel_PointsLeft.Text = CommTK.FString(CommTK.FInteger(Me._manifest.Label_HoldingPoint.Text) - CommTK.FInteger(Me._manifest.Label_UsePoint.Text))
 
                 report.CreateDataBindings()
                 Dim copies As Integer = CommTK.FInteger(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_PURCHASE_LIST_COPIES))

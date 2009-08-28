@@ -118,23 +118,23 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="DefaultLookAndFeel_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>295, 0</value>
+    <value>278, 0</value>
   </metadata>
   <metadata name="Timer_Surveillant.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>138, 0</value>
+    <value>134, 0</value>
   </metadata>
   <metadata name="ToolStrip_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ToolStripButton_Save.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 22</value>
+    <value>35, 22</value>
   </data>
   <data name="ToolStripButton_Save.Text" xml:space="preserve">
     <value>保存</value>
   </data>
   <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 22</value>
+    <value>35, 22</value>
   </data>
   <data name="ToolStripButton_Close.Text" xml:space="preserve">
     <value>关闭</value>
@@ -775,7 +775,7 @@
     <value>491, 120</value>
   </data>
   <data name="SpinEdit_PurchasaeListCopies.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 21</value>
+    <value>33, 20</value>
   </data>
   <data name="SpinEdit_PurchasaeListCopies.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -799,7 +799,7 @@
     <value>200, 85</value>
   </data>
   <data name="SpinEdit_AutoWareCodeIDLenth.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 21</value>
+    <value>33, 20</value>
   </data>
   <data name="SpinEdit_AutoWareCodeIDLenth.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -1283,31 +1283,197 @@
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
     <value>20</value>
   </data>
-  <data name="GroupControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="TextEdit_PractWareCodePrefix.Location" type="System.Drawing.Point, System.Drawing">
+    <value>42, 24</value>
   </data>
-  <data name="GroupControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="TextEdit_PractWareCodePrefix.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 20</value>
   </data>
-  <data name="GroupControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>682, 354</value>
-  </data>
-  <data name="GroupControl1.TabIndex" type="System.Int32, mscorlib">
+  <data name="TextEdit_PractWareCodePrefix.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
   </data>
-  <data name="GroupControl1.Text" xml:space="preserve">
-    <value>设置</value>
+  <data name="&gt;&gt;TextEdit_PractWareCodePrefix.Name" xml:space="preserve">
+    <value>TextEdit_PractWareCodePrefix</value>
   </data>
-  <data name="&gt;&gt;GroupControl1.Name" xml:space="preserve">
-    <value>GroupControl1</value>
+  <data name="&gt;&gt;TextEdit_PractWareCodePrefix.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="&gt;&gt;GroupControl1.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  <data name="&gt;&gt;TextEdit_PractWareCodePrefix.Parent" xml:space="preserve">
+    <value>GroupControl7</value>
   </data>
-  <data name="&gt;&gt;GroupControl1.Parent" xml:space="preserve">
-    <value>XtraTabPage1</value>
+  <data name="&gt;&gt;TextEdit_PractWareCodePrefix.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;GroupControl1.ZOrder" xml:space="preserve">
+  <data name="CheckEdit_PractWareCodeHasDay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>178, 25</value>
+  </data>
+  <data name="CheckEdit_PractWareCodeHasDay.Properties.Caption" xml:space="preserve">
+    <value>+日</value>
+  </data>
+  <data name="CheckEdit_PractWareCodeHasDay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 19</value>
+  </data>
+  <data name="CheckEdit_PractWareCodeHasDay.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_PractWareCodeHasDay.Name" xml:space="preserve">
+    <value>CheckEdit_PractWareCodeHasDay</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_PractWareCodeHasDay.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_PractWareCodeHasDay.Parent" xml:space="preserve">
+    <value>GroupControl7</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_PractWareCodeHasDay.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CheckEdit_PractWareCodeHasYearMonth.Location" type="System.Drawing.Point, System.Drawing">
+    <value>122, 25</value>
+  </data>
+  <data name="CheckEdit_PractWareCodeHasYearMonth.Properties.Caption" xml:space="preserve">
+    <value>+年月</value>
+  </data>
+  <data name="CheckEdit_PractWareCodeHasYearMonth.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 19</value>
+  </data>
+  <data name="CheckEdit_PractWareCodeHasYearMonth.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_PractWareCodeHasYearMonth.Name" xml:space="preserve">
+    <value>CheckEdit_PractWareCodeHasYearMonth</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_PractWareCodeHasYearMonth.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_PractWareCodeHasYearMonth.Parent" xml:space="preserve">
+    <value>GroupControl7</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_PractWareCodeHasYearMonth.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="SpinEdit_PractWareCodeDigitLength.EditValue" type="System.Decimal, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="SpinEdit_PractWareCodeDigitLength.Location" type="System.Drawing.Point, System.Drawing">
+    <value>231, 25</value>
+  </data>
+  <data name="SpinEdit_PractWareCodeDigitLength.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 20</value>
+  </data>
+  <data name="SpinEdit_PractWareCodeDigitLength.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
+  </data>
+  <data name="&gt;&gt;SpinEdit_PractWareCodeDigitLength.Name" xml:space="preserve">
+    <value>SpinEdit_PractWareCodeDigitLength</value>
+  </data>
+  <data name="&gt;&gt;SpinEdit_PractWareCodeDigitLength.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;SpinEdit_PractWareCodeDigitLength.Parent" xml:space="preserve">
+    <value>GroupControl7</value>
+  </data>
+  <data name="&gt;&gt;SpinEdit_PractWareCodeDigitLength.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="GridControl_RecipientTypeBarcode.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="GridControl_RecipientTypeBarcode.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="GridControl_RecipientTypeBarcode.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="GridControl_RecipientTypeBarcode.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <assembly alias="DevExpress.XtraEditors.v8.1" name="DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
+  <data name="GridControl_RecipientTypeBarcode.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v8.1">
+    <value>None</value>
+  </data>
+  <data name="GridControl_RecipientTypeBarcode.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v8.1">
+    <value>Application</value>
+  </data>
+  <data name="GridControl_RecipientTypeBarcode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 20</value>
+  </data>
+  <data name="GridColumn_RecipientType.Caption" xml:space="preserve">
+    <value>包装类型</value>
+  </data>
+  <data name="RepositoryItemLookUpEdit_RecipientType.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RepositoryItemLookUpEdit_RecipientType.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
+  </data>
+  <data name="RepositoryItemLookUpEdit_RecipientType.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RepositoryItemLookUpEdit_RecipientType.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RepositoryItemLookUpEdit_RecipientType.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RepositoryItemLookUpEdit_RecipientType.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GridColumn_RecipientType.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn_RecipientType.VisibleIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="GridColumn_RecipientType.Width" type="System.Int32, mscorlib">
+    <value>99</value>
+  </data>
+  <data name="GridColumn_RecipientTypeValue.Caption" xml:space="preserve">
+    <value>包装类型值</value>
+  </data>
+  <data name="GridColumn_RecipientTypeValue.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn_RecipientTypeValue.VisibleIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="GridColumn_BarcodePrefix.Caption" xml:space="preserve">
+    <value>条码前缀</value>
+  </data>
+  <data name="RepositoryItemTextEdit_BarcodePrefix.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RepositoryItemTextEdit_BarcodePrefix.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RepositoryItemTextEdit_BarcodePrefix.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RepositoryItemTextEdit_BarcodePrefix.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="GridColumn_BarcodePrefix.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn_BarcodePrefix.VisibleIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="GridControl_RecipientTypeBarcode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>678, 333</value>
+  </data>
+  <data name="GridControl_RecipientTypeBarcode.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
+  </data>
+  <data name="&gt;&gt;GridControl_RecipientTypeBarcode.Name" xml:space="preserve">
+    <value>GridControl_RecipientTypeBarcode</value>
+  </data>
+  <data name="&gt;&gt;GridControl_RecipientTypeBarcode.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;GridControl_RecipientTypeBarcode.Parent" xml:space="preserve">
+    <value>GroupControl3</value>
+  </data>
+  <data name="&gt;&gt;GridControl_RecipientTypeBarcode.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="TextEdit_ClientCodePrefix.Location" type="System.Drawing.Point, System.Drawing">
@@ -1751,280 +1917,6 @@
   <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <data name="GroupControl2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="GroupControl2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="GroupControl2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>682, 354</value>
-  </data>
-  <data name="GroupControl2.TabIndex" type="System.Int32, mscorlib">
-    <value>10000</value>
-  </data>
-  <data name="GroupControl2.Text" xml:space="preserve">
-    <value>编号规则</value>
-  </data>
-  <data name="&gt;&gt;GroupControl2.Name" xml:space="preserve">
-    <value>GroupControl2</value>
-  </data>
-  <data name="&gt;&gt;GroupControl2.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
-  </data>
-  <data name="&gt;&gt;GroupControl2.Parent" xml:space="preserve">
-    <value>XtraTabPage2</value>
-  </data>
-  <data name="&gt;&gt;GroupControl2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="TextEdit_PractWareCodePrefix.Location" type="System.Drawing.Point, System.Drawing">
-    <value>42, 24</value>
-  </data>
-  <data name="TextEdit_PractWareCodePrefix.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 21</value>
-  </data>
-  <data name="TextEdit_PractWareCodePrefix.TabIndex" type="System.Int32, mscorlib">
-    <value>10000</value>
-  </data>
-  <data name="&gt;&gt;TextEdit_PractWareCodePrefix.Name" xml:space="preserve">
-    <value>TextEdit_PractWareCodePrefix</value>
-  </data>
-  <data name="&gt;&gt;TextEdit_PractWareCodePrefix.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
-  </data>
-  <data name="&gt;&gt;TextEdit_PractWareCodePrefix.Parent" xml:space="preserve">
-    <value>GroupControl7</value>
-  </data>
-  <data name="&gt;&gt;TextEdit_PractWareCodePrefix.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="CheckEdit_PractWareCodeHasDay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>178, 25</value>
-  </data>
-  <data name="CheckEdit_PractWareCodeHasDay.Properties.Caption" xml:space="preserve">
-    <value>+日</value>
-  </data>
-  <data name="CheckEdit_PractWareCodeHasDay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 19</value>
-  </data>
-  <data name="CheckEdit_PractWareCodeHasDay.TabIndex" type="System.Int32, mscorlib">
-    <value>10000</value>
-  </data>
-  <data name="&gt;&gt;CheckEdit_PractWareCodeHasDay.Name" xml:space="preserve">
-    <value>CheckEdit_PractWareCodeHasDay</value>
-  </data>
-  <data name="&gt;&gt;CheckEdit_PractWareCodeHasDay.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
-  </data>
-  <data name="&gt;&gt;CheckEdit_PractWareCodeHasDay.Parent" xml:space="preserve">
-    <value>GroupControl7</value>
-  </data>
-  <data name="&gt;&gt;CheckEdit_PractWareCodeHasDay.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="CheckEdit_PractWareCodeHasYearMonth.Location" type="System.Drawing.Point, System.Drawing">
-    <value>122, 25</value>
-  </data>
-  <data name="CheckEdit_PractWareCodeHasYearMonth.Properties.Caption" xml:space="preserve">
-    <value>+年月</value>
-  </data>
-  <data name="CheckEdit_PractWareCodeHasYearMonth.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 19</value>
-  </data>
-  <data name="CheckEdit_PractWareCodeHasYearMonth.TabIndex" type="System.Int32, mscorlib">
-    <value>10000</value>
-  </data>
-  <data name="&gt;&gt;CheckEdit_PractWareCodeHasYearMonth.Name" xml:space="preserve">
-    <value>CheckEdit_PractWareCodeHasYearMonth</value>
-  </data>
-  <data name="&gt;&gt;CheckEdit_PractWareCodeHasYearMonth.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
-  </data>
-  <data name="&gt;&gt;CheckEdit_PractWareCodeHasYearMonth.Parent" xml:space="preserve">
-    <value>GroupControl7</value>
-  </data>
-  <data name="&gt;&gt;CheckEdit_PractWareCodeHasYearMonth.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="SpinEdit_PractWareCodeDigitLength.EditValue" type="System.Decimal, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="SpinEdit_PractWareCodeDigitLength.Location" type="System.Drawing.Point, System.Drawing">
-    <value>231, 25</value>
-  </data>
-  <data name="SpinEdit_PractWareCodeDigitLength.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 21</value>
-  </data>
-  <data name="SpinEdit_PractWareCodeDigitLength.TabIndex" type="System.Int32, mscorlib">
-    <value>10000</value>
-  </data>
-  <data name="&gt;&gt;SpinEdit_PractWareCodeDigitLength.Name" xml:space="preserve">
-    <value>SpinEdit_PractWareCodeDigitLength</value>
-  </data>
-  <data name="&gt;&gt;SpinEdit_PractWareCodeDigitLength.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
-  </data>
-  <data name="&gt;&gt;SpinEdit_PractWareCodeDigitLength.Parent" xml:space="preserve">
-    <value>GroupControl7</value>
-  </data>
-  <data name="&gt;&gt;SpinEdit_PractWareCodeDigitLength.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="GroupControl7.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="GroupControl7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="GroupControl7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>682, 354</value>
-  </data>
-  <data name="GroupControl7.TabIndex" type="System.Int32, mscorlib">
-    <value>10000</value>
-  </data>
-  <data name="GroupControl7.Text" xml:space="preserve">
-    <value>实际货品自动编号</value>
-  </data>
-  <data name="&gt;&gt;GroupControl7.Name" xml:space="preserve">
-    <value>GroupControl7</value>
-  </data>
-  <data name="&gt;&gt;GroupControl7.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
-  </data>
-  <data name="&gt;&gt;GroupControl7.Parent" xml:space="preserve">
-    <value>XtraTabPage4</value>
-  </data>
-  <data name="&gt;&gt;GroupControl7.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="GridControl_RecipientTypeBarcode.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="GridControl_RecipientTypeBarcode.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="GridControl_RecipientTypeBarcode.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="GridControl_RecipientTypeBarcode.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <assembly alias="DevExpress.XtraEditors.v8.1" name="DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
-  <data name="GridControl_RecipientTypeBarcode.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v8.1">
-    <value>None</value>
-  </data>
-  <data name="GridControl_RecipientTypeBarcode.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v8.1">
-    <value>Application</value>
-  </data>
-  <data name="GridControl_RecipientTypeBarcode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 21</value>
-  </data>
-  <data name="GridColumn_RecipientType.Caption" xml:space="preserve">
-    <value>包装类型</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_RecipientType.AutoHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_RecipientType.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
-    <value>Combo</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_RecipientType.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_RecipientType.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_RecipientType.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_RecipientType.NullText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="GridColumn_RecipientType.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="GridColumn_RecipientType.VisibleIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="GridColumn_RecipientType.Width" type="System.Int32, mscorlib">
-    <value>99</value>
-  </data>
-  <data name="GridColumn_RecipientTypeValue.Caption" xml:space="preserve">
-    <value>包装类型值</value>
-  </data>
-  <data name="GridColumn_RecipientTypeValue.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="GridColumn_RecipientTypeValue.VisibleIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="GridColumn_BarcodePrefix.Caption" xml:space="preserve">
-    <value>条码前缀</value>
-  </data>
-  <data name="RepositoryItemTextEdit_BarcodePrefix.AutoHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RepositoryItemTextEdit_BarcodePrefix.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RepositoryItemTextEdit_BarcodePrefix.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RepositoryItemTextEdit_BarcodePrefix.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="GridColumn_BarcodePrefix.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="GridColumn_BarcodePrefix.VisibleIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="GridControl_RecipientTypeBarcode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>678, 331</value>
-  </data>
-  <data name="GridControl_RecipientTypeBarcode.TabIndex" type="System.Int32, mscorlib">
-    <value>10000</value>
-  </data>
-  <data name="&gt;&gt;GridControl_RecipientTypeBarcode.Name" xml:space="preserve">
-    <value>GridControl_RecipientTypeBarcode</value>
-  </data>
-  <data name="&gt;&gt;GridControl_RecipientTypeBarcode.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
-  </data>
-  <data name="&gt;&gt;GridControl_RecipientTypeBarcode.Parent" xml:space="preserve">
-    <value>GroupControl3</value>
-  </data>
-  <data name="&gt;&gt;GridControl_RecipientTypeBarcode.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="GroupControl3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="GroupControl3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="GroupControl3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>682, 354</value>
-  </data>
-  <data name="GroupControl3.TabIndex" type="System.Int32, mscorlib">
-    <value>10000</value>
-  </data>
-  <data name="GroupControl3.Text" xml:space="preserve">
-    <value>包装号前缀</value>
-  </data>
-  <data name="&gt;&gt;GroupControl3.Name" xml:space="preserve">
-    <value>GroupControl3</value>
-  </data>
-  <data name="&gt;&gt;GroupControl3.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
-  </data>
-  <data name="&gt;&gt;GroupControl3.Parent" xml:space="preserve">
-    <value>XtraTabPage3</value>
-  </data>
-  <data name="&gt;&gt;GroupControl3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="CheckEdit_LabelWithPrice.Location" type="System.Drawing.Point, System.Drawing">
     <value>218, 31</value>
   </data>
@@ -2324,33 +2216,6 @@
   </data>
   <data name="&gt;&gt;Label10.ZOrder" xml:space="preserve">
     <value>6</value>
-  </data>
-  <data name="GroupControl4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="GroupControl4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="GroupControl4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>682, 354</value>
-  </data>
-  <data name="GroupControl4.TabIndex" type="System.Int32, mscorlib">
-    <value>10000</value>
-  </data>
-  <data name="GroupControl4.Text" xml:space="preserve">
-    <value>标签/报表方案</value>
-  </data>
-  <data name="&gt;&gt;GroupControl4.Name" xml:space="preserve">
-    <value>GroupControl4</value>
-  </data>
-  <data name="&gt;&gt;GroupControl4.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
-  </data>
-  <data name="&gt;&gt;GroupControl4.Parent" xml:space="preserve">
-    <value>XtraTabPage5</value>
-  </data>
-  <data name="&gt;&gt;GroupControl4.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="TextEdit_CustomAttribute4.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2723,60 +2588,6 @@
   </data>
   <data name="&gt;&gt;CheckEdit_CustomWareAttribute1.ZOrder" xml:space="preserve">
     <value>11</value>
-  </data>
-  <data name="PanelControl_CustomAttribute.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="PanelControl_CustomAttribute.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="PanelControl_CustomAttribute.Size" type="System.Drawing.Size, System.Drawing">
-    <value>682, 354</value>
-  </data>
-  <data name="PanelControl_CustomAttribute.TabIndex" type="System.Int32, mscorlib">
-    <value>10000</value>
-  </data>
-  <data name="PanelControl_CustomAttribute.Text" xml:space="preserve">
-    <value>货品自定属性</value>
-  </data>
-  <data name="&gt;&gt;PanelControl_CustomAttribute.Name" xml:space="preserve">
-    <value>PanelControl_CustomAttribute</value>
-  </data>
-  <data name="&gt;&gt;PanelControl_CustomAttribute.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
-  </data>
-  <data name="&gt;&gt;PanelControl_CustomAttribute.Parent" xml:space="preserve">
-    <value>XtraTabPage6</value>
-  </data>
-  <data name="&gt;&gt;PanelControl_CustomAttribute.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="GroupControl5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="GroupControl5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="GroupControl5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>682, 354</value>
-  </data>
-  <data name="GroupControl5.TabIndex" type="System.Int32, mscorlib">
-    <value>10000</value>
-  </data>
-  <data name="GroupControl5.Text" xml:space="preserve">
-    <value>客户自定属性</value>
-  </data>
-  <data name="&gt;&gt;GroupControl5.Name" xml:space="preserve">
-    <value>GroupControl5</value>
-  </data>
-  <data name="&gt;&gt;GroupControl5.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
-  </data>
-  <data name="&gt;&gt;GroupControl5.Parent" xml:space="preserve">
-    <value>XtraTabPage7</value>
-  </data>
-  <data name="&gt;&gt;GroupControl5.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="CheckEdit_AllowExtraConsign.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 249</value>
@@ -3183,33 +2994,6 @@
   <data name="&gt;&gt;CheckEdit_ShowCustomWareCode.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <data name="GroupControl6.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="GroupControl6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="GroupControl6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>682, 354</value>
-  </data>
-  <data name="GroupControl6.TabIndex" type="System.Int32, mscorlib">
-    <value>10000</value>
-  </data>
-  <data name="GroupControl6.Text" xml:space="preserve">
-    <value>其它选项</value>
-  </data>
-  <data name="&gt;&gt;GroupControl6.Name" xml:space="preserve">
-    <value>GroupControl6</value>
-  </data>
-  <data name="&gt;&gt;GroupControl6.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
-  </data>
-  <data name="&gt;&gt;GroupControl6.Parent" xml:space="preserve">
-    <value>XtraTabPage8</value>
-  </data>
-  <data name="&gt;&gt;GroupControl6.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="CalcEdit_RMBToPointsRate.Location" type="System.Drawing.Point, System.Drawing">
     <value>459, 33</value>
   </data>
@@ -3217,7 +3001,7 @@
     <value>Glyph</value>
   </data>
   <data name="CalcEdit_RMBToPointsRate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 21</value>
+    <value>65, 20</value>
   </data>
   <data name="CalcEdit_RMBToPointsRate.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -3241,7 +3025,7 @@
     <value>Glyph</value>
   </data>
   <data name="CalcEdit_PointsToRMBRate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 21</value>
+    <value>65, 20</value>
   </data>
   <data name="CalcEdit_PointsToRMBRate.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -3372,41 +3156,41 @@
   <data name="&gt;&gt;CheckEdit_CanPointsToRMB.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="GroupControl8.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="GroupControl8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="GroupControl8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>682, 354</value>
-  </data>
-  <data name="GroupControl8.TabIndex" type="System.Int32, mscorlib">
-    <value>10000</value>
-  </data>
-  <data name="GroupControl8.Text" xml:space="preserve">
-    <value>点数及优惠</value>
-  </data>
-  <data name="&gt;&gt;GroupControl8.Name" xml:space="preserve">
-    <value>GroupControl8</value>
-  </data>
-  <data name="&gt;&gt;GroupControl8.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
-  </data>
-  <data name="&gt;&gt;GroupControl8.Parent" xml:space="preserve">
-    <value>XtraTabPage9</value>
-  </data>
-  <data name="&gt;&gt;GroupControl8.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="XtraTabControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
   <data name="XtraTabControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 25</value>
   </data>
+  <data name="GroupControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="GroupControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="GroupControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>682, 355</value>
+  </data>
+  <data name="GroupControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
+  </data>
+  <data name="GroupControl1.Text" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="&gt;&gt;GroupControl1.Name" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;GroupControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;GroupControl1.Parent" xml:space="preserve">
+    <value>XtraTabPage1</value>
+  </data>
+  <data name="&gt;&gt;GroupControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="XtraTabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>682, 354</value>
+    <value>682, 355</value>
   </data>
   <data name="XtraTabPage1.Text" xml:space="preserve">
     <value>设置</value>
@@ -3429,8 +3213,35 @@
   <data name="XtraTabControl1.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
   </data>
+  <data name="GroupControl2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="GroupControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="GroupControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>682, 355</value>
+  </data>
+  <data name="GroupControl2.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
+  </data>
+  <data name="GroupControl2.Text" xml:space="preserve">
+    <value>编号规则</value>
+  </data>
+  <data name="&gt;&gt;GroupControl2.Name" xml:space="preserve">
+    <value>GroupControl2</value>
+  </data>
+  <data name="&gt;&gt;GroupControl2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;GroupControl2.Parent" xml:space="preserve">
+    <value>XtraTabPage2</value>
+  </data>
+  <data name="&gt;&gt;GroupControl2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="XtraTabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>682, 354</value>
+    <value>682, 355</value>
   </data>
   <data name="XtraTabPage2.Text" xml:space="preserve">
     <value>编号规则</value>
@@ -3447,8 +3258,35 @@
   <data name="&gt;&gt;XtraTabPage2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="GroupControl3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="GroupControl3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="GroupControl3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>682, 355</value>
+  </data>
+  <data name="GroupControl3.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
+  </data>
+  <data name="GroupControl3.Text" xml:space="preserve">
+    <value>包装号前缀</value>
+  </data>
+  <data name="&gt;&gt;GroupControl3.Name" xml:space="preserve">
+    <value>GroupControl3</value>
+  </data>
+  <data name="&gt;&gt;GroupControl3.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;GroupControl3.Parent" xml:space="preserve">
+    <value>XtraTabPage3</value>
+  </data>
+  <data name="&gt;&gt;GroupControl3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="XtraTabPage3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>682, 354</value>
+    <value>682, 355</value>
   </data>
   <data name="XtraTabPage3.Text" xml:space="preserve">
     <value>包装号前缀</value>
@@ -3465,8 +3303,35 @@
   <data name="&gt;&gt;XtraTabPage3.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="GroupControl7.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="GroupControl7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="GroupControl7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>682, 355</value>
+  </data>
+  <data name="GroupControl7.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
+  </data>
+  <data name="GroupControl7.Text" xml:space="preserve">
+    <value>实际货品自动编号</value>
+  </data>
+  <data name="&gt;&gt;GroupControl7.Name" xml:space="preserve">
+    <value>GroupControl7</value>
+  </data>
+  <data name="&gt;&gt;GroupControl7.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;GroupControl7.Parent" xml:space="preserve">
+    <value>XtraTabPage4</value>
+  </data>
+  <data name="&gt;&gt;GroupControl7.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="XtraTabPage4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>682, 354</value>
+    <value>682, 355</value>
   </data>
   <data name="XtraTabPage4.Text" xml:space="preserve">
     <value>实际货品自动编号</value>
@@ -3483,8 +3348,35 @@
   <data name="&gt;&gt;XtraTabPage4.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="GroupControl4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="GroupControl4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="GroupControl4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>682, 355</value>
+  </data>
+  <data name="GroupControl4.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
+  </data>
+  <data name="GroupControl4.Text" xml:space="preserve">
+    <value>标签/报表方案</value>
+  </data>
+  <data name="&gt;&gt;GroupControl4.Name" xml:space="preserve">
+    <value>GroupControl4</value>
+  </data>
+  <data name="&gt;&gt;GroupControl4.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;GroupControl4.Parent" xml:space="preserve">
+    <value>XtraTabPage5</value>
+  </data>
+  <data name="&gt;&gt;GroupControl4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="XtraTabPage5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>682, 354</value>
+    <value>682, 355</value>
   </data>
   <data name="XtraTabPage5.Text" xml:space="preserve">
     <value>标签/报表方案</value>
@@ -3501,8 +3393,35 @@
   <data name="&gt;&gt;XtraTabPage5.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="PanelControl_CustomAttribute.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="PanelControl_CustomAttribute.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="PanelControl_CustomAttribute.Size" type="System.Drawing.Size, System.Drawing">
+    <value>682, 355</value>
+  </data>
+  <data name="PanelControl_CustomAttribute.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
+  </data>
+  <data name="PanelControl_CustomAttribute.Text" xml:space="preserve">
+    <value>货品自定属性</value>
+  </data>
+  <data name="&gt;&gt;PanelControl_CustomAttribute.Name" xml:space="preserve">
+    <value>PanelControl_CustomAttribute</value>
+  </data>
+  <data name="&gt;&gt;PanelControl_CustomAttribute.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;PanelControl_CustomAttribute.Parent" xml:space="preserve">
+    <value>XtraTabPage6</value>
+  </data>
+  <data name="&gt;&gt;PanelControl_CustomAttribute.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="XtraTabPage6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>682, 354</value>
+    <value>682, 355</value>
   </data>
   <data name="XtraTabPage6.Text" xml:space="preserve">
     <value>货品自定属性</value>
@@ -3519,8 +3438,35 @@
   <data name="&gt;&gt;XtraTabPage6.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="GroupControl5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="GroupControl5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="GroupControl5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>682, 355</value>
+  </data>
+  <data name="GroupControl5.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
+  </data>
+  <data name="GroupControl5.Text" xml:space="preserve">
+    <value>客户自定属性</value>
+  </data>
+  <data name="&gt;&gt;GroupControl5.Name" xml:space="preserve">
+    <value>GroupControl5</value>
+  </data>
+  <data name="&gt;&gt;GroupControl5.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;GroupControl5.Parent" xml:space="preserve">
+    <value>XtraTabPage7</value>
+  </data>
+  <data name="&gt;&gt;GroupControl5.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="XtraTabPage7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>682, 354</value>
+    <value>682, 355</value>
   </data>
   <data name="XtraTabPage7.Text" xml:space="preserve">
     <value>客户自定属性</value>
@@ -3537,8 +3483,35 @@
   <data name="&gt;&gt;XtraTabPage7.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="GroupControl6.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="GroupControl6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="GroupControl6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>682, 355</value>
+  </data>
+  <data name="GroupControl6.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
+  </data>
+  <data name="GroupControl6.Text" xml:space="preserve">
+    <value>其它选项</value>
+  </data>
+  <data name="&gt;&gt;GroupControl6.Name" xml:space="preserve">
+    <value>GroupControl6</value>
+  </data>
+  <data name="&gt;&gt;GroupControl6.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;GroupControl6.Parent" xml:space="preserve">
+    <value>XtraTabPage8</value>
+  </data>
+  <data name="&gt;&gt;GroupControl6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="XtraTabPage8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>682, 354</value>
+    <value>682, 355</value>
   </data>
   <data name="XtraTabPage8.Text" xml:space="preserve">
     <value>其它选项</value>
@@ -3555,8 +3528,35 @@
   <data name="&gt;&gt;XtraTabPage8.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="GroupControl8.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="GroupControl8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="GroupControl8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>682, 355</value>
+  </data>
+  <data name="GroupControl8.TabIndex" type="System.Int32, mscorlib">
+    <value>10000</value>
+  </data>
+  <data name="GroupControl8.Text" xml:space="preserve">
+    <value>点数及优惠</value>
+  </data>
+  <data name="&gt;&gt;GroupControl8.Name" xml:space="preserve">
+    <value>GroupControl8</value>
+  </data>
+  <data name="&gt;&gt;GroupControl8.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;GroupControl8.Parent" xml:space="preserve">
+    <value>XtraTabPage9</value>
+  </data>
+  <data name="&gt;&gt;GroupControl8.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="XtraTabPage9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>682, 354</value>
+    <value>682, 355</value>
   </data>
   <data name="XtraTabPage9.Text" xml:space="preserve">
     <value>点数及优惠</value>

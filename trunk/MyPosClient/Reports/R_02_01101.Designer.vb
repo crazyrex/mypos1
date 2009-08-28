@@ -37,6 +37,10 @@
             Me.XrTableCell_WareAmount = New DevExpress.XtraReports.UI.XRTableCell
             Me.PageFooter = New DevExpress.XtraReports.UI.PageFooterBand
             Me.ReportFooter = New DevExpress.XtraReports.UI.ReportFooterBand
+            Me.XrLabel_PointsLeft = New DevExpress.XtraReports.UI.XRLabel
+            Me.XrLabel3 = New DevExpress.XtraReports.UI.XRLabel
+            Me.XrLabel_PointsOrigion = New DevExpress.XtraReports.UI.XRLabel
+            Me.XrLabel1 = New DevExpress.XtraReports.UI.XRLabel
             Me.XrLabel_WelcomeBack = New DevExpress.XtraReports.UI.XRLabel
             Me.XrLabel_ServiceTel = New DevExpress.XtraReports.UI.XRLabel
             Me.XrLabel_NTel = New DevExpress.XtraReports.UI.XRLabel
@@ -61,10 +65,8 @@
             Me.XrTableRow2 = New DevExpress.XtraReports.UI.XRTableRow
             Me.XrTableCell1 = New DevExpress.XtraReports.UI.XRTableCell
             Me.XrTableCell3 = New DevExpress.XtraReports.UI.XRTableCell
-            Me.XrLabel1 = New DevExpress.XtraReports.UI.XRLabel
-            Me.XrLabel_PointsOrigion = New DevExpress.XtraReports.UI.XRLabel
-            Me.XrLabel3 = New DevExpress.XtraReports.UI.XRLabel
-            Me.XrLabel_PointsLeft = New DevExpress.XtraReports.UI.XRLabel
+            Me.XrLabel2 = New DevExpress.XtraReports.UI.XRLabel
+            Me.XrLabel_ClientCode = New DevExpress.XtraReports.UI.XRLabel
             CType(Me.XrTable6, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.XrTable4, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -199,13 +201,52 @@
             '
             'ReportFooter
             '
-            Me.ReportFooter.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel_PointsLeft, Me.XrLabel3, Me.XrLabel_PointsOrigion, Me.XrLabel1, Me.XrLabel_WelcomeBack, Me.XrLabel_ServiceTel, Me.XrLabel_NTel, Me.XrLabel_UsePoint, Me.XrLabel6})
-            Me.ReportFooter.Height = 110
+            Me.ReportFooter.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel_ClientCode, Me.XrLabel2, Me.XrLabel_PointsLeft, Me.XrLabel3, Me.XrLabel_PointsOrigion, Me.XrLabel1, Me.XrLabel_WelcomeBack, Me.XrLabel_ServiceTel, Me.XrLabel_NTel, Me.XrLabel_UsePoint, Me.XrLabel6})
+            Me.ReportFooter.Height = 133
             Me.ReportFooter.Name = "ReportFooter"
+            '
+            'XrLabel_PointsLeft
+            '
+            Me.XrLabel_PointsLeft.Font = New System.Drawing.Font("Century Gothic", 8.0!)
+            Me.XrLabel_PointsLeft.Location = New System.Drawing.Point(92, 59)
+            Me.XrLabel_PointsLeft.Name = "XrLabel_PointsLeft"
+            Me.XrLabel_PointsLeft.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+            Me.XrLabel_PointsLeft.Size = New System.Drawing.Size(83, 17)
+            Me.XrLabel_PointsLeft.Text = "XrLabel_PointsLeft"
+            Me.XrLabel_PointsLeft.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
+            '
+            'XrLabel3
+            '
+            Me.XrLabel3.Font = New System.Drawing.Font("Times New Roman", 8.0!)
+            Me.XrLabel3.Location = New System.Drawing.Point(0, 59)
+            Me.XrLabel3.Name = "XrLabel3"
+            Me.XrLabel3.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+            Me.XrLabel3.Size = New System.Drawing.Size(83, 17)
+            Me.XrLabel3.Text = "剩余点数"
+            Me.XrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+            '
+            'XrLabel_PointsOrigion
+            '
+            Me.XrLabel_PointsOrigion.Font = New System.Drawing.Font("Century Gothic", 8.0!)
+            Me.XrLabel_PointsOrigion.Location = New System.Drawing.Point(92, 25)
+            Me.XrLabel_PointsOrigion.Name = "XrLabel_PointsOrigion"
+            Me.XrLabel_PointsOrigion.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+            Me.XrLabel_PointsOrigion.Size = New System.Drawing.Size(83, 17)
+            Me.XrLabel_PointsOrigion.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
+            '
+            'XrLabel1
+            '
+            Me.XrLabel1.Font = New System.Drawing.Font("Times New Roman", 8.0!)
+            Me.XrLabel1.Location = New System.Drawing.Point(0, 25)
+            Me.XrLabel1.Name = "XrLabel1"
+            Me.XrLabel1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+            Me.XrLabel1.Size = New System.Drawing.Size(83, 17)
+            Me.XrLabel1.Text = "原有点数"
+            Me.XrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
             '
             'XrLabel_WelcomeBack
             '
-            Me.XrLabel_WelcomeBack.Location = New System.Drawing.Point(0, 83)
+            Me.XrLabel_WelcomeBack.Location = New System.Drawing.Point(0, 108)
             Me.XrLabel_WelcomeBack.Name = "XrLabel_WelcomeBack"
             Me.XrLabel_WelcomeBack.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
             Me.XrLabel_WelcomeBack.Size = New System.Drawing.Size(175, 25)
@@ -214,7 +255,7 @@
             '
             'XrLabel_ServiceTel
             '
-            Me.XrLabel_ServiceTel.Location = New System.Drawing.Point(83, 58)
+            Me.XrLabel_ServiceTel.Location = New System.Drawing.Point(83, 83)
             Me.XrLabel_ServiceTel.Name = "XrLabel_ServiceTel"
             Me.XrLabel_ServiceTel.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
             Me.XrLabel_ServiceTel.Size = New System.Drawing.Size(92, 25)
@@ -222,7 +263,7 @@
             '
             'XrLabel_NTel
             '
-            Me.XrLabel_NTel.Location = New System.Drawing.Point(0, 58)
+            Me.XrLabel_NTel.Location = New System.Drawing.Point(0, 83)
             Me.XrLabel_NTel.Name = "XrLabel_NTel"
             Me.XrLabel_NTel.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
             Me.XrLabel_NTel.Size = New System.Drawing.Size(75, 25)
@@ -232,7 +273,7 @@
             'XrLabel_UsePoint
             '
             Me.XrLabel_UsePoint.Font = New System.Drawing.Font("Century Gothic", 8.0!)
-            Me.XrLabel_UsePoint.Location = New System.Drawing.Point(92, 17)
+            Me.XrLabel_UsePoint.Location = New System.Drawing.Point(92, 42)
             Me.XrLabel_UsePoint.Name = "XrLabel_UsePoint"
             Me.XrLabel_UsePoint.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
             Me.XrLabel_UsePoint.Size = New System.Drawing.Size(83, 17)
@@ -241,7 +282,7 @@
             'XrLabel6
             '
             Me.XrLabel6.Font = New System.Drawing.Font("Times New Roman", 8.0!)
-            Me.XrLabel6.Location = New System.Drawing.Point(0, 17)
+            Me.XrLabel6.Location = New System.Drawing.Point(0, 42)
             Me.XrLabel6.Name = "XrLabel6"
             Me.XrLabel6.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
             Me.XrLabel6.Size = New System.Drawing.Size(83, 17)
@@ -433,44 +474,26 @@
             Me.XrTableCell3.Text = "数量"
             Me.XrTableCell3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
             '
-            'XrLabel1
+            'XrLabel2
             '
-            Me.XrLabel1.Font = New System.Drawing.Font("Times New Roman", 8.0!)
-            Me.XrLabel1.Location = New System.Drawing.Point(0, 0)
-            Me.XrLabel1.Name = "XrLabel1"
-            Me.XrLabel1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-            Me.XrLabel1.Size = New System.Drawing.Size(83, 17)
-            Me.XrLabel1.Text = "原有点数"
-            Me.XrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+            Me.XrLabel2.Font = New System.Drawing.Font("Times New Roman", 8.0!)
+            Me.XrLabel2.Location = New System.Drawing.Point(0, 0)
+            Me.XrLabel2.Name = "XrLabel2"
+            Me.XrLabel2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+            Me.XrLabel2.Size = New System.Drawing.Size(75, 25)
+            Me.XrLabel2.StylePriority.UseFont = False
+            Me.XrLabel2.Text = "会员号"
+            Me.XrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
             '
-            'XrLabel_PointsOrigion
+            'XrLabel_ClientCode
             '
-            Me.XrLabel_PointsOrigion.Font = New System.Drawing.Font("Century Gothic", 8.0!)
-            Me.XrLabel_PointsOrigion.Location = New System.Drawing.Point(92, 0)
-            Me.XrLabel_PointsOrigion.Name = "XrLabel_PointsOrigion"
-            Me.XrLabel_PointsOrigion.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-            Me.XrLabel_PointsOrigion.Size = New System.Drawing.Size(83, 17)
-            Me.XrLabel_PointsOrigion.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
-            '
-            'XrLabel3
-            '
-            Me.XrLabel3.Font = New System.Drawing.Font("Times New Roman", 8.0!)
-            Me.XrLabel3.Location = New System.Drawing.Point(0, 34)
-            Me.XrLabel3.Name = "XrLabel3"
-            Me.XrLabel3.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-            Me.XrLabel3.Size = New System.Drawing.Size(83, 17)
-            Me.XrLabel3.Text = "剩余点数"
-            Me.XrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
-            '
-            'XrLabel_PointsLeft
-            '
-            Me.XrLabel_PointsLeft.Font = New System.Drawing.Font("Century Gothic", 8.0!)
-            Me.XrLabel_PointsLeft.Location = New System.Drawing.Point(92, 34)
-            Me.XrLabel_PointsLeft.Name = "XrLabel_PointsLeft"
-            Me.XrLabel_PointsLeft.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-            Me.XrLabel_PointsLeft.Size = New System.Drawing.Size(83, 17)
-            Me.XrLabel_PointsLeft.Text = "XrLabel_PointsLeft"
-            Me.XrLabel_PointsLeft.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
+            Me.XrLabel_ClientCode.Font = New System.Drawing.Font("Times New Roman", 8.0!)
+            Me.XrLabel_ClientCode.Location = New System.Drawing.Point(83, 0)
+            Me.XrLabel_ClientCode.Name = "XrLabel_ClientCode"
+            Me.XrLabel_ClientCode.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+            Me.XrLabel_ClientCode.Size = New System.Drawing.Size(92, 25)
+            Me.XrLabel_ClientCode.StylePriority.UseFont = False
+            Me.XrLabel_ClientCode.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
             '
             'R_02_01101
             '
@@ -532,5 +555,7 @@
         Friend WithEvents XrLabel3 As DevExpress.XtraReports.UI.XRLabel
         Friend WithEvents XrLabel_PointsOrigion As DevExpress.XtraReports.UI.XRLabel
         Friend WithEvents XrLabel1 As DevExpress.XtraReports.UI.XRLabel
+        Friend WithEvents XrLabel_ClientCode As DevExpress.XtraReports.UI.XRLabel
+        Friend WithEvents XrLabel2 As DevExpress.XtraReports.UI.XRLabel
     End Class
 End Namespace

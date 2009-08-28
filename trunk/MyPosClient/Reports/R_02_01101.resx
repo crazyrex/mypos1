@@ -162,6 +162,12 @@
   <metadata name="ReportFooter.Name" xml:space="preserve">
     <value>ReportFooter</value>
   </metadata>
+  <metadata name="XrLabel_ClientCode.Name" xml:space="preserve">
+    <value>XrLabel_ClientCode</value>
+  </metadata>
+  <metadata name="XrLabel2.Name" xml:space="preserve">
+    <value>XrLabel2</value>
+  </metadata>
   <metadata name="XrLabel_PointsLeft.Name" xml:space="preserve">
     <value>XrLabel_PointsLeft</value>
   </metadata>
