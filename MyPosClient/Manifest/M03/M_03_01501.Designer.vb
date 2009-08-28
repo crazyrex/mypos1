@@ -73,12 +73,12 @@
             Me.GridColumn_Attribute3 = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_Attribute4 = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_CurrentAmount = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn_OrigionSumPrice = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn_UnitPrice = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn_UnitName = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_UnitCost = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_SumCost = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_ExchangePoint = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_RowHighlight = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn_OrigionUnitPrice = New DevExpress.XtraGrid.Columns.GridColumn
             Me.ToolStrip_Form.SuspendLayout()
             CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.PanelControl1.SuspendLayout()
@@ -133,19 +133,19 @@
             'ToolStripButton_Refresh
             '
             Me.ToolStripButton_Refresh.Name = "ToolStripButton_Refresh"
-            Me.ToolStripButton_Refresh.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Refresh.Size = New System.Drawing.Size(33, 22)
             Me.ToolStripButton_Refresh.Text = "刷新"
             '
             'ToolStripButton_Report
             '
             Me.ToolStripButton_Report.Name = "ToolStripButton_Report"
-            Me.ToolStripButton_Report.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Report.Size = New System.Drawing.Size(33, 22)
             Me.ToolStripButton_Report.Text = "报表"
             '
             'ToolStripButton_Close
             '
             Me.ToolStripButton_Close.Name = "ToolStripButton_Close"
-            Me.ToolStripButton_Close.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Close.Size = New System.Drawing.Size(33, 22)
             Me.ToolStripButton_Close.Text = "关闭"
             '
             'PanelControl1
@@ -192,7 +192,7 @@
             '
             Me.TextEdit_Search.Location = New System.Drawing.Point(80, 31)
             Me.TextEdit_Search.Name = "TextEdit_Search"
-            Me.TextEdit_Search.Size = New System.Drawing.Size(282, 20)
+            Me.TextEdit_Search.Size = New System.Drawing.Size(282, 21)
             Me.TextEdit_Search.TabIndex = 10000
             CTag2.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag2.CalculatorRequired = True
@@ -263,7 +263,7 @@
             Me.DateEdit_To.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
             Me.DateEdit_To.Properties.NullDate = New Date(1753, 1, 1, 12, 0, 0, 0)
             Me.DateEdit_To.Properties.VistaTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
-            Me.DateEdit_To.Size = New System.Drawing.Size(122, 20)
+            Me.DateEdit_To.Size = New System.Drawing.Size(122, 21)
             Me.DateEdit_To.TabIndex = 10000
             CTag4.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag4.CalculatorRequired = True
@@ -298,7 +298,7 @@
             Me.DateEdit_From.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
             Me.DateEdit_From.Properties.NullDate = New Date(1753, 1, 1, 12, 0, 0, 0)
             Me.DateEdit_From.Properties.VistaTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
-            Me.DateEdit_From.Size = New System.Drawing.Size(122, 20)
+            Me.DateEdit_From.Size = New System.Drawing.Size(122, 21)
             Me.DateEdit_From.TabIndex = 10000
             CTag5.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag5.CalculatorRequired = True
@@ -435,7 +435,7 @@
             '
             'GridView_NormalList
             '
-            Me.GridView_NormalList.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn_WareCode, Me.GridColumn_CustomCode, Me.GridColumn_WareName, Me.GridColumn_Spec, Me.GridColumn_Model, Me.GridColumn_Attribute1, Me.GridColumn_Attribute2, Me.GridColumn_Attribute3, Me.GridColumn_Attribute4, Me.GridColumn_CurrentAmount, Me.GridColumn_OrigionUnitPrice, Me.GridColumn_OrigionSumPrice, Me.GridColumn_UnitCost, Me.GridColumn_SumCost, Me.GridColumn_ExchangePoint, Me.GridColumn_RowHighlight})
+            Me.GridView_NormalList.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn_WareCode, Me.GridColumn_CustomCode, Me.GridColumn_WareName, Me.GridColumn_Spec, Me.GridColumn_Model, Me.GridColumn_Attribute1, Me.GridColumn_Attribute2, Me.GridColumn_Attribute3, Me.GridColumn_Attribute4, Me.GridColumn_CurrentAmount, Me.GridColumn_UnitPrice, Me.GridColumn_UnitName, Me.GridColumn_UnitCost, Me.GridColumn_SumCost, Me.GridColumn_ExchangePoint, Me.GridColumn_RowHighlight})
             StyleFormatCondition1.Appearance.BackColor = System.Drawing.Color.Lime
             StyleFormatCondition1.Appearance.BackColor2 = System.Drawing.Color.White
             StyleFormatCondition1.Appearance.Options.UseBackColor = True
@@ -552,18 +552,26 @@
             Me.GridColumn_CurrentAmount.Visible = True
             Me.GridColumn_CurrentAmount.VisibleIndex = 9
             '
-            'GridColumn_OrigionSumPrice
+            'GridColumn_UnitPrice
             '
-            Me.GridColumn_OrigionSumPrice.Caption = "原总价"
-            Me.GridColumn_OrigionSumPrice.DisplayFormat.FormatString = "{0:#,##0.00}"
-            Me.GridColumn_OrigionSumPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
-            Me.GridColumn_OrigionSumPrice.FieldName = "ORIGION_SUM_PRICE"
-            Me.GridColumn_OrigionSumPrice.Name = "GridColumn_OrigionSumPrice"
-            Me.GridColumn_OrigionSumPrice.OptionsColumn.AllowFocus = False
-            Me.GridColumn_OrigionSumPrice.SummaryItem.FieldName = "CURRENT_ORIGION_SUM_PRICE"
-            Me.GridColumn_OrigionSumPrice.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum
-            Me.GridColumn_OrigionSumPrice.Visible = True
-            Me.GridColumn_OrigionSumPrice.VisibleIndex = 14
+            Me.GridColumn_UnitPrice.Caption = "单价"
+            Me.GridColumn_UnitPrice.DisplayFormat.FormatString = "{0:#,##0.00}"
+            Me.GridColumn_UnitPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
+            Me.GridColumn_UnitPrice.FieldName = "UNIT_PRICE"
+            Me.GridColumn_UnitPrice.Name = "GridColumn_UnitPrice"
+            Me.GridColumn_UnitPrice.Visible = True
+            Me.GridColumn_UnitPrice.VisibleIndex = 10
+            '
+            'GridColumn_UnitName
+            '
+            Me.GridColumn_UnitName.Caption = "单位名称"
+            Me.GridColumn_UnitName.FieldName = "UNIT_NAME"
+            Me.GridColumn_UnitName.Name = "GridColumn_UnitName"
+            Me.GridColumn_UnitName.OptionsColumn.AllowFocus = False
+            Me.GridColumn_UnitName.SummaryItem.FieldName = "CURRENT_ORIGION_SUM_PRICE"
+            Me.GridColumn_UnitName.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum
+            Me.GridColumn_UnitName.Visible = True
+            Me.GridColumn_UnitName.VisibleIndex = 12
             '
             'GridColumn_UnitCost
             '
@@ -586,8 +594,6 @@
             Me.GridColumn_SumCost.OptionsColumn.AllowFocus = False
             Me.GridColumn_SumCost.SummaryItem.FieldName = "LACK_AMOUNT"
             Me.GridColumn_SumCost.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum
-            Me.GridColumn_SumCost.Visible = True
-            Me.GridColumn_SumCost.VisibleIndex = 13
             '
             'GridColumn_ExchangePoint
             '
@@ -599,8 +605,6 @@
             Me.GridColumn_ExchangePoint.OptionsColumn.AllowFocus = False
             Me.GridColumn_ExchangePoint.SummaryItem.FieldName = "CONSIGN_OUT_LACK_AMOUNT"
             Me.GridColumn_ExchangePoint.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum
-            Me.GridColumn_ExchangePoint.Visible = True
-            Me.GridColumn_ExchangePoint.VisibleIndex = 12
             '
             'GridColumn_RowHighlight
             '
@@ -608,16 +612,6 @@
             Me.GridColumn_RowHighlight.FieldName = "DSR_FT_ROW_HIGHLIGHT"
             Me.GridColumn_RowHighlight.Name = "GridColumn_RowHighlight"
             Me.GridColumn_RowHighlight.OptionsColumn.AllowFocus = False
-            '
-            'GridColumn_OrigionUnitPrice
-            '
-            Me.GridColumn_OrigionUnitPrice.Caption = "原单价"
-            Me.GridColumn_OrigionUnitPrice.DisplayFormat.FormatString = "{0:#,##0.00}"
-            Me.GridColumn_OrigionUnitPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
-            Me.GridColumn_OrigionUnitPrice.FieldName = "ORIGION_UNIT_PRICE"
-            Me.GridColumn_OrigionUnitPrice.Name = "GridColumn_OrigionUnitPrice"
-            Me.GridColumn_OrigionUnitPrice.Visible = True
-            Me.GridColumn_OrigionUnitPrice.VisibleIndex = 10
             '
             'M_03_01501
             '
@@ -628,6 +622,7 @@
             Me.Cursor = System.Windows.Forms.Cursors.Default
             Me.Font = New System.Drawing.Font("Arial", 9.0!)
             Me.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
+            Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
             Me.Name = "M_03_01501"
             Me.Size = New System.Drawing.Size(700, 500)
             CTag10.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
@@ -689,12 +684,12 @@
         Friend WithEvents GridColumn_Attribute3 As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents GridColumn_Attribute4 As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents GridColumn_CurrentAmount As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn_OrigionSumPrice As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridColumn_UnitName As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents GridColumn_UnitCost As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents GridColumn_SumCost As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents GridColumn_ExchangePoint As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents GridColumn_RowHighlight As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn_OrigionUnitPrice As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridColumn_UnitPrice As DevExpress.XtraGrid.Columns.GridColumn
 
 #End Region
 
