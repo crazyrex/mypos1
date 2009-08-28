@@ -82,6 +82,24 @@ Namespace Facade
 
         End Sub
 
+        Public Shared Sub FillFT_MP_MP_SELECT_PERIOD_POINT_WARE_EXCHANGE_TOTAL( _
+           ByVal fromDate As DateTime, _
+           ByVal toDate As DateTime, _
+           ByVal posID As String, _
+           ByRef list As MyPosXAuto.FTs.FT_MP_MP_SELECT_PERIOD_POINT_WARE_EXCHANGE_TOTAL)
+
+            Dim MPDataLayer As MyPosXAuto.DataLayer.EDLMP = MyPosXAuto.DataLayer.EDLMP.GetInstance()
+
+            MPDataLayer.FillFT_MP_MP_SELECT_PERIOD_POINT_WARE_EXCHANGE_TOTAL( _
+                fromDate, _
+                toDate, _
+                posID, _
+                list)
+
+        End Sub
+
+
+
 
         Public Shared Sub ExecuteMP_MP_EXECUTE_FINISH_TURNOVER_PAYMENT_BALANCE()
 
