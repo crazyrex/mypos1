@@ -1210,7 +1210,7 @@ Namespace Business
 
                 report.XrLabel_ServiceTel.Text = SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_SERVICE_TEL)
                 report.XrLabel_TurnoverCode.Text = Me._manifest.SV_PRINTING_TURNOVER_CODE
-                report.XrLabel_BranchName.Text = Utils.Decls.CURRENT_POS_ROW.POS_NAME
+                report.XrLabel_BranchName.Text = SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_COMPANY_TITLE)
                 report.XrLabel_Operator.Text = String.Format(" <{0}> {1} ", _
                         staffRow.STAFF_CODE, _
                         staffRow.STAFF_NAME)

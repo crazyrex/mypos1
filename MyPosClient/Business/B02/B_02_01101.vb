@@ -1174,7 +1174,7 @@ Namespace Business
 
                 report.DataSource = Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST
 
-                report.XrLabel_ReturnTurnoverCode.Text = CommTK.GetTranslatedString("积分兑换")
+                report.XrLabel11.Text = CommTK.GetTranslatedString("积分兑换")
 
                 Dim staffRow As MyPosXAuto.FTs.FT_M_STAFFRow = _
                     MyPosXAuto.Facade.AfBizMaster.GetM_STAFFRow(Utils.Decls.LOGIN_STAFF_ID)
@@ -1185,7 +1185,7 @@ Namespace Business
 
                 report.XrLabel_ServiceTel.Text = SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_SERVICE_TEL)
                 report.XrLabel_TurnoverCode.Text = Me._manifest.SV_PRINTING_TURNOVER_CODE
-                report.XrLabel_BranchName.Text = Utils.Decls.CURRENT_POS_ROW.POS_NAME
+                report.XrLabel_BranchName.Text = SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_COMPANY_TITLE)
                 report.XrLabel_Operator.Text = String.Format(" <{0}> {1} ", _
                         staffRow.STAFF_CODE, _
                         staffRow.STAFF_NAME)
