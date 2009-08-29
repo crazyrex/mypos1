@@ -26,6 +26,7 @@
             Me.XrTable6 = New DevExpress.XtraReports.UI.XRTable
             Me.XrTableRow6 = New DevExpress.XtraReports.UI.XRTableRow
             Me.XrTableCell_WareAmount = New DevExpress.XtraReports.UI.XRTableCell
+            Me.XrTableCell_UsePoint = New DevExpress.XtraReports.UI.XRTableCell
             Me.XrTable1 = New DevExpress.XtraReports.UI.XRTable
             Me.XrTableRow1 = New DevExpress.XtraReports.UI.XRTableRow
             Me.XrTableCell_WareName = New DevExpress.XtraReports.UI.XRTableCell
@@ -44,7 +45,7 @@
             Me.XrLabel_UsePoint = New DevExpress.XtraReports.UI.XRLabel
             Me.XrLabel6 = New DevExpress.XtraReports.UI.XRLabel
             Me.ReportHeader = New DevExpress.XtraReports.UI.ReportHeaderBand
-            Me.XrLabel_ReturnTurnoverCode = New DevExpress.XtraReports.UI.XRLabel
+            Me.XrLabel11 = New DevExpress.XtraReports.UI.XRLabel
             Me.XrLabel_TurnoverCode = New DevExpress.XtraReports.UI.XRLabel
             Me.XrLabel_Operator = New DevExpress.XtraReports.UI.XRLabel
             Me.XrLabel4 = New DevExpress.XtraReports.UI.XRLabel
@@ -53,12 +54,11 @@
             Me.XrTable5 = New DevExpress.XtraReports.UI.XRTable
             Me.XrTableRow5 = New DevExpress.XtraReports.UI.XRTableRow
             Me.XrTableCell4 = New DevExpress.XtraReports.UI.XRTableCell
+            Me.XrTableCell2 = New DevExpress.XtraReports.UI.XRTableCell
             Me.XrTable2 = New DevExpress.XtraReports.UI.XRTable
             Me.XrTableRow2 = New DevExpress.XtraReports.UI.XRTableRow
             Me.XrTableCell1 = New DevExpress.XtraReports.UI.XRTableCell
             Me.XrTableCell3 = New DevExpress.XtraReports.UI.XRTableCell
-            Me.XrTableCell2 = New DevExpress.XtraReports.UI.XRTableCell
-            Me.XrTableCell_UsePoint = New DevExpress.XtraReports.UI.XRTableCell
             CType(Me.XrTable6, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.XrTable5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -100,6 +100,15 @@
             Me.XrTableCell_WareAmount.Size = New System.Drawing.Size(92, 17)
             Me.XrTableCell_WareAmount.StylePriority.UseTextAlignment = False
             Me.XrTableCell_WareAmount.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
+            '
+            'XrTableCell_UsePoint
+            '
+            Me.XrTableCell_UsePoint.Location = New System.Drawing.Point(92, 0)
+            Me.XrTableCell_UsePoint.Name = "XrTableCell_UsePoint"
+            Me.XrTableCell_UsePoint.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+            Me.XrTableCell_UsePoint.Size = New System.Drawing.Size(83, 17)
+            Me.XrTableCell_UsePoint.StylePriority.UseTextAlignment = False
+            Me.XrTableCell_UsePoint.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
             '
             'XrTable1
             '
@@ -256,19 +265,20 @@
             '
             'ReportHeader
             '
-            Me.ReportHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel_ReturnTurnoverCode, Me.XrLabel_TurnoverCode, Me.XrLabel_Operator, Me.XrLabel4, Me.XrLabel_BranchName})
+            Me.ReportHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel11, Me.XrLabel_TurnoverCode, Me.XrLabel_Operator, Me.XrLabel4, Me.XrLabel_BranchName})
             Me.ReportHeader.Height = 105
             Me.ReportHeader.Name = "ReportHeader"
             '
-            'XrLabel_ReturnTurnoverCode
+            'XrLabel11
             '
-            Me.XrLabel_ReturnTurnoverCode.Font = New System.Drawing.Font("SimSun", 7.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-            Me.XrLabel_ReturnTurnoverCode.Location = New System.Drawing.Point(0, 50)
-            Me.XrLabel_ReturnTurnoverCode.Name = "XrLabel_ReturnTurnoverCode"
-            Me.XrLabel_ReturnTurnoverCode.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-            Me.XrLabel_ReturnTurnoverCode.Size = New System.Drawing.Size(175, 25)
-            Me.XrLabel_ReturnTurnoverCode.StylePriority.UseFont = False
-            Me.XrLabel_ReturnTurnoverCode.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+            Me.XrLabel11.Font = New System.Drawing.Font("SimSun", 7.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+            Me.XrLabel11.Location = New System.Drawing.Point(0, 50)
+            Me.XrLabel11.Name = "XrLabel11"
+            Me.XrLabel11.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+            Me.XrLabel11.Size = New System.Drawing.Size(175, 25)
+            Me.XrLabel11.StylePriority.UseFont = False
+            Me.XrLabel11.Text = "积分换物"
+            Me.XrLabel11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
             '
             'XrLabel_TurnoverCode
             '
@@ -347,6 +357,18 @@
             Me.XrTableCell4.Text = "数量"
             Me.XrTableCell4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
             '
+            'XrTableCell2
+            '
+            Me.XrTableCell2.Font = New System.Drawing.Font("Century Gothic", 7.0!)
+            Me.XrTableCell2.Location = New System.Drawing.Point(92, 0)
+            Me.XrTableCell2.Name = "XrTableCell2"
+            Me.XrTableCell2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+            Me.XrTableCell2.Size = New System.Drawing.Size(83, 17)
+            Me.XrTableCell2.StylePriority.UseFont = False
+            Me.XrTableCell2.StylePriority.UseTextAlignment = False
+            Me.XrTableCell2.Text = "点数"
+            Me.XrTableCell2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
+            '
             'XrTable2
             '
             Me.XrTable2.Font = New System.Drawing.Font("Times New Roman", 8.0!)
@@ -387,27 +409,6 @@
             Me.XrTableCell3.Text = "货品编码"
             Me.XrTableCell3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
             '
-            'XrTableCell2
-            '
-            Me.XrTableCell2.Font = New System.Drawing.Font("Century Gothic", 7.0!)
-            Me.XrTableCell2.Location = New System.Drawing.Point(92, 0)
-            Me.XrTableCell2.Name = "XrTableCell2"
-            Me.XrTableCell2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-            Me.XrTableCell2.Size = New System.Drawing.Size(83, 17)
-            Me.XrTableCell2.StylePriority.UseFont = False
-            Me.XrTableCell2.StylePriority.UseTextAlignment = False
-            Me.XrTableCell2.Text = "点数"
-            Me.XrTableCell2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
-            '
-            'XrTableCell_UsePoint
-            '
-            Me.XrTableCell_UsePoint.Location = New System.Drawing.Point(92, 0)
-            Me.XrTableCell_UsePoint.Name = "XrTableCell_UsePoint"
-            Me.XrTableCell_UsePoint.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-            Me.XrTableCell_UsePoint.Size = New System.Drawing.Size(83, 17)
-            Me.XrTableCell_UsePoint.StylePriority.UseTextAlignment = False
-            Me.XrTableCell_UsePoint.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
-            '
             'R_02_01101
             '
             Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.PageFooter, Me.ReportFooter, Me.ReportHeader, Me.PageHeader})
@@ -445,7 +446,7 @@
         Friend WithEvents XrTableRow2 As DevExpress.XtraReports.UI.XRTableRow
         Friend WithEvents XrTableCell1 As DevExpress.XtraReports.UI.XRTableCell
         Friend WithEvents XrTableCell3 As DevExpress.XtraReports.UI.XRTableCell
-        Friend WithEvents XrLabel_ReturnTurnoverCode As DevExpress.XtraReports.UI.XRLabel
+        Friend WithEvents XrLabel11 As DevExpress.XtraReports.UI.XRLabel
         Friend WithEvents XrTable6 As DevExpress.XtraReports.UI.XRTable
         Friend WithEvents XrTableRow6 As DevExpress.XtraReports.UI.XRTableRow
         Friend WithEvents XrTableCell_WareAmount As DevExpress.XtraReports.UI.XRTableCell
