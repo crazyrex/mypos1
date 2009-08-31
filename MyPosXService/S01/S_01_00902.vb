@@ -7,13 +7,14 @@
 '===========================================================
 Imports XL.Common
 Imports XL.Common.Utils
+Imports System.Collections
 
-Public Class S_01_00902        
+Public Class S_01_00902
     Inherits XL.DB.Utils.BaseService
 
-    Public Shared Function GetInstance() As S_01_00902                                           
+    Public Shared Function GetInstance() As S_01_00902
 
-        Dim result As S_01_00902                                                                 
+        Dim result As S_01_00902
         If MyPosXAuto.Decls.CURRENT_DB_TYPE = XL.DB.DBDecl.DBType.Remoting AndAlso CommDecl.SYSTEM_IS_ONLINE Then
 
             Try
@@ -149,16 +150,87 @@ Public Class S_01_00902
     End Function
 
 
-    Public Function ServBizUtld0002( _
-        ByVal valParaUtld As String, _
-        ByRef refParaUtld As String _
+    Public Function ServSaveInfo( _
+        ByVal refRevisingAffairID As String, _
+        ByVal valBeginDate As DateTime, _
+        ByVal valEndDate As DateTime, _
+        ByVal valAffairDays As Integer, _
+        ByVal valAffairName As String, _
+        ByVal valTemplateID As String, _
+        ByRef refEditingAffairPosList As MyPosXAuto.FTs.FT_M_MP_POS _
         ) As String
 
         If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTE_AUTH_DENIED
 
         Try
 
+            Dim dbAffairPosList As New MyPosXAuto.FTs.FT_T_MP_SALE_AFFAIR_POS
 
+            If MyPosXService.Facade.OpBizManage.ValidatePosAffairConflict( _
+                refRevisingAffairID, _
+                valBeginDate, _
+                valEndDate, _
+                refEditingAffairPosList) = False Then
+                Return MyPosXService.Decls.MSG_ALERT_00058
+            End If
+
+            If refRevisingAffairID = String.Empty Then
+                Dim affairID = Guid.NewGuid.ToString
+
+                MyPosXAuto.Facade.AfBizManage.CreateT_MP_SALE_AFFAIRInfo( _
+                     valAffairDays, _
+                     affairID, _
+                     valAffairName, _
+                     valBeginDate, _
+                     valEndDate, _
+                     valTemplateID)
+
+                For Each bindingRow As MyPosXAuto.FTs.FT_M_MP_POSRow In refEditingAffairPosList.FindRowsSelecting(True)
+                    dbAffairPosList.AddNewT_MP_SALE_AFFAIR_POSRow( _
+                        affairID, _
+                        Guid.NewGuid.ToString, _
+                        bindingRow.POS_ID)
+                Next
+
+            Else
+
+                MyPosXAuto.Facade.AfBizManage.ReviseT_MP_SALE_AFFAIRInfo( _
+                        refRevisingAffairID, _
+                        valAffairDays, _
+                        valAffairName, _
+                         valBeginDate, _
+                         valEndDate, _
+                        valTemplateID)
+                Dim affairCondition As New MyPosXAuto.Facade.AfBizManage.ConditionOfT_MP_SALE_AFFAIR(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+                affairCondition.Add(MyPosXAuto.Facade.AfBizManage.T_MP_SALE_AFFAIRColumns.AFFAIR_IDColumn, "=", refRevisingAffairID)
+                MyPosXAuto.Facade.AfBizManage.ReviseT_MP_SALE_AFFAIRData(affairCondition, MyPosXAuto.Facade.AfBizManage.T_MP_SALE_AFFAIRColumns.END_DATEColumn, valEndDate)
+
+                Dim posIDs As New ArrayList
+                For Each bindingRow As MyPosXAuto.FTs.FT_M_MP_POSRow In refEditingAffairPosList.FindRowsSelecting(True)
+                    posIDs.Add(bindingRow.POS_ID)
+                Next
+
+                Dim affairPosCondition As New MyPosXAuto.Facade.AfBizManage.ConditionOfT_MP_SALE_AFFAIR_POS(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+                affairPosCondition.Add(MyPosXAuto.Facade.AfBizManage.T_MP_SALE_AFFAIR_POSColumns.AFFAIR_IDColumn, "=", refRevisingAffairID)
+                MyPosXAuto.Facade.AfBizManage.FillFT_T_MP_SALE_AFFAIR_POS(affairPosCondition, dbAffairPosList)
+
+                For Each posID As String In posIDs
+
+                    affairPosCondition.Clear()
+                    affairPosCondition.Add(MyPosXAuto.Facade.AfBizManage.T_MP_SALE_AFFAIR_POSColumns.POS_IDColumn, "=", posID)
+                    If dbAffairPosList.FindRowsByCondition(affairPosCondition).Length = 0 Then
+                        dbAffairPosList.AddNewT_MP_SALE_AFFAIR_POSRow(refRevisingAffairID, Guid.NewGuid.ToString, posID)
+                    End If
+
+                Next
+
+                affairPosCondition.Clear()
+                affairPosCondition.Add(MyPosXAuto.Facade.AfBizManage.T_MP_SALE_AFFAIR_POSColumns.POS_IDColumn, False, posIDs)
+                dbAffairPosList.RemoveFT_T_MP_SALE_AFFAIR_POSRows(affairPosCondition)
+
+            End If
+
+            MyPosXAuto.Facade.AfBizManage.SaveBatchT_MP_SALE_AFFAIR_POSData(dbAffairPosList)
 
         Catch ex As XL.Common.Utils.XLException
 
@@ -852,5 +924,5 @@ Public Class S_01_00902
     End Function
 
 
-    End Class
+End Class
 
