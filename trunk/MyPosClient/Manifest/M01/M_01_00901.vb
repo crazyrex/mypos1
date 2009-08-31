@@ -356,8 +356,8 @@ Namespace Manifest
 
             Select Case Me._bizAgent.AffairOf(responseResult.ResponseTitle)
 
-                'Case Business.B_01_00201.Affairs.DeleteInfo
-                '    Me.UpdateDisplay()                     
+                Case Business.B_01_00901.Affairs.DeleteInfo
+                    Me.DoPrivateUpdateActiveAffairHighlight()
 
                 Case Business.B_01_00901.Affairs.LoadList
                     Me.DoPrivateUpdateSelectingRow()
