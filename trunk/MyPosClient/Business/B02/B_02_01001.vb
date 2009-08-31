@@ -941,7 +941,7 @@ Namespace Business
 
                 Dim totalSumPrice As Decimal = 0
                 Dim totalSumDiscount As Decimal = 0
-                Dim totalGainPoint As Integer = 0
+                'Dim totalGainPoint As Integer = 0
                 Dim pointToRMBRate = CommTK.FDecimal(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_POINTS_TO_RMB_RATE))
                 Dim rmbToPointRate = CommTK.FDecimal(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_RMB_TO_POINTS_RATE))
 
@@ -953,7 +953,7 @@ Namespace Business
                     If rmbToPointRate > 0 Then
                         bindingRow.GAIN_POINT = CommTK.FInteger(bindingRow.UNIT_PRICE / rmbToPointRate)
                     End If
-                    totalGainPoint += CommTK.FInteger(bindingRow.GAIN_POINT * bindingRow.WARE_AMOUNT)
+                    'totalGainPoint += CommTK.FInteger(bindingRow.GAIN_POINT * bindingRow.WARE_AMOUNT)
                     bindingRow.SUM_COST = bindingRow.UNIT_COST * bindingRow.WARE_AMOUNT
                     bindingRow.SUM_PRICE = bindingRow.UNIT_PRICE * bindingRow.WARE_AMOUNT
                     bindingRow.SUM_DISCOUNT = bindingRow.UNIT_DISCOUNT * bindingRow.WARE_AMOUNT
@@ -979,7 +979,7 @@ Namespace Business
 
                 Me._manifest.Label_Payable.Text = CommTK.FString(payable, False, "#,##0.00")
                 If rmbToPointRate > 0 AndAlso Me._manifest.Label_ClientID.Text.Length > 0 Then
-                    Me._manifest.Label_AquiringPoints.Text = CommTK.FString(totalGainPoint - Me._manifest.CalcEdit_ExtraDiscount.Value / rmbToPointRate)
+                    Me._manifest.Label_AquiringPoints.Text = CommTK.FString(payable / rmbToPointRate)
                 Else
                     Me._manifest.Label_AquiringPoints.Text = "0.00"
                 End If
