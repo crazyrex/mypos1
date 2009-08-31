@@ -953,7 +953,7 @@ Namespace Business
                     If rmbToPointRate > 0 Then
                         bindingRow.GAIN_POINT = CommTK.FInteger(bindingRow.UNIT_PRICE / rmbToPointRate)
                     End If
-                    totalGainPoint += bindingRow.GAIN_POINT
+                    totalGainPoint += CommTK.FInteger(bindingRow.GAIN_POINT * bindingRow.WARE_AMOUNT)
                     bindingRow.SUM_COST = bindingRow.UNIT_COST * bindingRow.WARE_AMOUNT
                     bindingRow.SUM_PRICE = bindingRow.UNIT_PRICE * bindingRow.WARE_AMOUNT
                     bindingRow.SUM_DISCOUNT = bindingRow.UNIT_DISCOUNT * bindingRow.WARE_AMOUNT
@@ -979,7 +979,7 @@ Namespace Business
 
                 Me._manifest.Label_Payable.Text = CommTK.FString(payable, False, "#,##0.00")
                 If rmbToPointRate > 0 AndAlso Me._manifest.Label_ClientID.Text.Length > 0 Then
-                    Me._manifest.Label_AquiringPoints.Text = CommTK.FString(totalGainPoint)
+                    Me._manifest.Label_AquiringPoints.Text = CommTK.FString(totalGainPoint - Me._manifest.CalcEdit_ExtraDiscount.Value / rmbToPointRate)
                 Else
                     Me._manifest.Label_AquiringPoints.Text = "0.00"
                 End If
