@@ -817,16 +817,27 @@ Namespace Manifest
         End Sub
 
         Private Sub SpinEdit_AffairDays_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles SpinEdit_AffairDays.EditValueChanged
-            Me.DateEdit_EndDate.DateTime = Me.DateEdit_BeginDate.DateTime.AddDays(Me.SpinEdit_AffairDays.Value)
+            If Me.FormStatus <> FormStatuses.Loading_IA_AfterFormLoaded Then
+                Return
+            End If
+            Me.DateEdit_EndDate.DateTime = CommTK.GetEndOfDate(Me.DateEdit_BeginDate.DateTime.AddDays(Me.SpinEdit_AffairDays.Value - 1))
         End Sub
 
         Private Sub DateEdit_EndDate_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles DateEdit_EndDate.EditValueChanged
-            Me.SpinEdit_AffairDays.Value = Me.DateEdit_EndDate.DateTime.Subtract(Me.DateEdit_BeginDate.DateTime).Days
+            If Me.FormStatus <> FormStatuses.Loading_IA_AfterFormLoaded Then
+                Return
+            End If
+            Me.DateEdit_EndDate.DateTime = CommTK.GetEndOfDate(Me.DateEdit_EndDate.DateTime)
+            Me.SpinEdit_AffairDays.Value = Me.DateEdit_EndDate.DateTime.Subtract(Me.DateEdit_BeginDate.DateTime).Days + 1
         End Sub
 
 
         Private Sub DateEdit_BeginDate_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles DateEdit_BeginDate.EditValueChanged
-            Me.SpinEdit_AffairDays.Value = Me.DateEdit_EndDate.DateTime.Subtract(Me.DateEdit_BeginDate.DateTime).Days
+            If Me.FormStatus <> FormStatuses.Loading_IA_AfterFormLoaded Then
+                Return
+            End If
+            Me.DateEdit_BeginDate.DateTime = CommTK.GetBeginOfDate(Me.DateEdit_BeginDate.DateTime)
+            Me.SpinEdit_AffairDays.Value = Me.DateEdit_EndDate.DateTime.Subtract(Me.DateEdit_BeginDate.DateTime).Days + 1
         End Sub
     End Class
 

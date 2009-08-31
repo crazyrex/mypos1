@@ -25,14 +25,14 @@ Namespace Facade
             Dim includingCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_T_MP_SALE_AFFAIR_POS(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
 
 
-            beginCondition.Add(AfXV.XV_T_MP_SALE_AFFAIR_POSColumns.BEGIN_DATEColumn, ">=", beginDate)
-            beginCondition.Add(AfXV.XV_T_MP_SALE_AFFAIR_POSColumns.BEGIN_DATEColumn, "<=", endDate)
+            beginCondition.Add(AfXV.XV_T_MP_SALE_AFFAIR_POSColumns.BEGIN_DATEColumn, ">", beginDate)
+            beginCondition.Add(AfXV.XV_T_MP_SALE_AFFAIR_POSColumns.BEGIN_DATEColumn, "<", endDate)
 
-            endCondition.Add(AfXV.XV_T_MP_SALE_AFFAIR_POSColumns.END_DATEColumn, ">=", beginDate)
-            endCondition.Add(AfXV.XV_T_MP_SALE_AFFAIR_POSColumns.END_DATEColumn, "<=", endDate)
+            endCondition.Add(AfXV.XV_T_MP_SALE_AFFAIR_POSColumns.END_DATEColumn, ">", beginDate)
+            endCondition.Add(AfXV.XV_T_MP_SALE_AFFAIR_POSColumns.END_DATEColumn, "<", endDate)
 
-            includingCondition.Add(AfXV.XV_T_MP_SALE_AFFAIR_POSColumns.BEGIN_DATEColumn, "<=", beginDate)
-            includingCondition.Add(AfXV.XV_T_MP_SALE_AFFAIR_POSColumns.END_DATEColumn, ">=", endDate)
+            includingCondition.Add(AfXV.XV_T_MP_SALE_AFFAIR_POSColumns.BEGIN_DATEColumn, "<", beginDate)
+            includingCondition.Add(AfXV.XV_T_MP_SALE_AFFAIR_POSColumns.END_DATEColumn, ">", endDate)
 
             dateRangeCondition.Add(beginCondition, True)
             dateRangeCondition.Add(endCondition, True)
