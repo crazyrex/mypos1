@@ -544,6 +544,7 @@ Namespace Business
             Try
                 Me._manifest.SVFT_BINDING_LIST.Clear()
 
+                MyPosXAuto.DataCache.DCHBizManage.OverwriteT_MP_SALE_AFFAIRFromDB()
                 MyPosXAuto.Facade.AfBizManage.FillFT_T_MP_SALE_AFFAIR(Nothing, Me._manifest.SVFT_BINDING_LIST)
 
                 Me._manifest.GridControl_SaleAffair.DataSource = Me._manifest.SVFT_BINDING_LIST

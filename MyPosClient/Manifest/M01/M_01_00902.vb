@@ -393,7 +393,6 @@ Namespace Manifest
                     'Me.IA_ClearContent()
                     'End If
 
-
             End Select
         End Sub
 
@@ -820,15 +819,27 @@ Namespace Manifest
             If Me.FormStatus <> FormStatuses.Loading_IA_AfterFormLoaded Then
                 Return
             End If
+            If Me.SpinEdit_AffairDays.Enabled = False Then
+                Return
+            End If
+
+            Me.DateEdit_EndDate.Enabled = False
             Me.DateEdit_EndDate.DateTime = CommTK.GetEndOfDate(Me.DateEdit_BeginDate.DateTime.AddDays(Me.SpinEdit_AffairDays.Value - 1))
+            Me.DateEdit_EndDate.Enabled = True
         End Sub
 
         Private Sub DateEdit_EndDate_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles DateEdit_EndDate.EditValueChanged
             If Me.FormStatus <> FormStatuses.Loading_IA_AfterFormLoaded Then
                 Return
             End If
+            If Me.DateEdit_EndDate.Enabled = False Then
+                Return
+            End If
+
             Me.DateEdit_EndDate.DateTime = CommTK.GetEndOfDate(Me.DateEdit_EndDate.DateTime)
+            Me.SpinEdit_AffairDays.Enabled = False
             Me.SpinEdit_AffairDays.Value = Me.DateEdit_EndDate.DateTime.Subtract(Me.DateEdit_BeginDate.DateTime).Days + 1
+            Me.SpinEdit_AffairDays.Enabled = True
         End Sub
 
 
@@ -836,8 +847,19 @@ Namespace Manifest
             If Me.FormStatus <> FormStatuses.Loading_IA_AfterFormLoaded Then
                 Return
             End If
+
+            If Me.DateEdit_BeginDate.Enabled = False Then
+                Return
+            End If
+
             Me.DateEdit_BeginDate.DateTime = CommTK.GetBeginOfDate(Me.DateEdit_BeginDate.DateTime)
-            Me.SpinEdit_AffairDays.Value = Me.DateEdit_EndDate.DateTime.Subtract(Me.DateEdit_BeginDate.DateTime).Days + 1
+            If Me.SpinEdit_AffairDays.Value <= 0 Then
+                Me.SpinEdit_AffairDays.Value = 1
+            Else
+                Me.SpinEdit_AffairDays.Enabled = False
+                Me.SpinEdit_AffairDays.Value = Me.DateEdit_EndDate.DateTime.Subtract(Me.DateEdit_BeginDate.DateTime).Days + 1
+                Me.SpinEdit_AffairDays.Enabled = True
+            End If
         End Sub
     End Class
 
