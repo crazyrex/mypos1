@@ -127,6 +127,15 @@ Namespace Facade
             MPDataLayer.ExecuteMP_MP_EXECUTE_DELETE_POINT_GAIN_USE_IO_WITH_NO_TURNOVER()
 
         End Sub
+
+        Public Shared Sub ExecuteMP_MP_EXECUTE_DELETE_REDUNDANCY_POS_SET_WARE()
+
+            Dim MPDataLayer As MyPosXAuto.DataLayer.EDLMP = MyPosXAuto.DataLayer.EDLMP.GetInstance()
+
+
+            MPDataLayer.ExecuteMP_MP_EXECUTE_DELETE_REDUNDANCY_POS_SET_WARE()
+
+        End Sub
     End Class
 
 End Namespace
