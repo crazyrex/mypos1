@@ -21,12 +21,12 @@ Namespace Facade
 
             Dim draftList As New MyPosXAuto.FTs.FT_T_MP_INVENTORY_DRAFT
             Dim draftRow As MyPosXAuto.FTs.FT_T_MP_INVENTORY_DRAFTRow
-            Dim draftConditions As New MyPosXAuto.Facade.AfBizInventory.ConditionOfT_MP_INVENTORY_DRAFT(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim draftConditions As New MyPosXAuto.Facade.AfBizInventory.ConditionOfT_MP_INVENTORY_DRAFT(XL.DB.Utils.Condition.LogicOperators.Logic_And)
             draftConditions.Add(AfBizInventory.T_MP_INVENTORY_DRAFTColumns.INVENTORY_IDColumn, "=", inventoryID)
             MyPosXAuto.Facade.AfBizInventory.FillFT_T_MP_INVENTORY_DRAFT(draftConditions, draftList)
 
             Dim wareTotalList As New MyPosXAuto.FTs.FT_MV_MP_POS_WARE_TOTAL
-            Dim wareTotalConditions As New MyPosXAuto.Facade.AfMV.ConditionOfMV_MP_POS_WARE_TOTAL(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim wareTotalConditions As New MyPosXAuto.Facade.AfMV.ConditionOfMV_MP_POS_WARE_TOTAL(XL.DB.Utils.Condition.LogicOperators.Logic_And)
 
             If inventoryRow.CHECK_ALL_ITEM = False Then
                 Dim draftWareIDs As New ArrayList
@@ -41,7 +41,7 @@ Namespace Facade
             MyPosXAuto.Facade.AfMV.FillFT_MV_MP_POS_WARE_TOTAL(wareTotalConditions, wareTotalList)
 
             Dim resultList As New MyPosXAuto.FTs.FT_T_MP_INVENTORY_RESULT
-            Dim resultCondition As New MyPosXAuto.Facade.AfBizInventory.ConditionOfT_MP_INVENTORY_RESULT(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim resultCondition As New MyPosXAuto.Facade.AfBizInventory.ConditionOfT_MP_INVENTORY_RESULT(XL.DB.Utils.Condition.LogicOperators.Logic_And)
             resultCondition.Add(AfBizInventory.T_MP_INVENTORY_RESULTColumns.INVENTORY_IDColumn, "=", inventoryID)
             MyPosXAuto.Facade.AfBizInventory.FillFT_T_MP_INVENTORY_RESULT(resultCondition, resultList)
 
@@ -135,7 +135,7 @@ Namespace Facade
 
         Public Shared Function CreateInventoryReplaceTurnover(ByVal inventoryID As String) As String
 
-            Dim resultConditions As New MyPosXAuto.Facade.AfBizInventory.ConditionOfT_MP_INVENTORY_RESULT(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim resultConditions As New MyPosXAuto.Facade.AfBizInventory.ConditionOfT_MP_INVENTORY_RESULT(XL.DB.Utils.Condition.LogicOperators.Logic_And)
             resultConditions.Add( _
                 AfBizInventory.T_MP_INVENTORY_RESULTColumns.INVENTORY_IDColumn, _
                 "=", _

@@ -17,12 +17,12 @@ Namespace Facade
             beginDate = CommTK.GetBeginOfDate(beginDate)
             endDate = CommTK.GetEndOfDate(endDate)
 
-            Dim affairPosCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_T_MP_SALE_AFFAIR_POS(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
-            Dim dateRangeCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_T_MP_SALE_AFFAIR_POS(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_Or)
+            Dim affairPosCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_T_MP_SALE_AFFAIR_POS(XL.DB.Utils.Condition.LogicOperators.Logic_And)
+            Dim dateRangeCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_T_MP_SALE_AFFAIR_POS(XL.DB.Utils.Condition.LogicOperators.Logic_Or)
 
-            Dim beginCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_T_MP_SALE_AFFAIR_POS(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
-            Dim endCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_T_MP_SALE_AFFAIR_POS(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
-            Dim includingCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_T_MP_SALE_AFFAIR_POS(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim beginCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_T_MP_SALE_AFFAIR_POS(XL.DB.Utils.Condition.LogicOperators.Logic_And)
+            Dim endCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_T_MP_SALE_AFFAIR_POS(XL.DB.Utils.Condition.LogicOperators.Logic_And)
+            Dim includingCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_T_MP_SALE_AFFAIR_POS(XL.DB.Utils.Condition.LogicOperators.Logic_And)
 
 
             beginCondition.Add(AfXV.XV_T_MP_SALE_AFFAIR_POSColumns.BEGIN_DATEColumn, ">", beginDate)
@@ -72,7 +72,7 @@ Namespace Facade
 
             affairTemplateWareList.Clear()
 
-            Dim affairPosCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_T_MP_SALE_AFFAIR_POS(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim affairPosCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_T_MP_SALE_AFFAIR_POS(XL.DB.Utils.Condition.LogicOperators.Logic_And)
 
             affairPosCondition.Add(AfXV.XV_T_MP_SALE_AFFAIR_POSColumns.POS_IDColumn, "=", posID)
             affairPosCondition.Add(AfXV.XV_T_MP_SALE_AFFAIR_POSColumns.BEGIN_DATEColumn, "<=", CommTK.GetSyncServerTime)
@@ -83,7 +83,7 @@ Namespace Facade
                 Return
             End If
 
-            Dim affairTemplateWareCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_T_MP_SALE_TEMPLATE_WARE(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim affairTemplateWareCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_T_MP_SALE_TEMPLATE_WARE(XL.DB.Utils.Condition.LogicOperators.Logic_And)
             affairTemplateWareCondition.Add(AfXV.XV_T_MP_SALE_TEMPLATE_WAREColumns.TEMPLATE_IDColumn, "=", affairPosRow.TEMPLATE_ID)
 
             Dim affairTemplateRow = MyPosXAuto.Facade.AfBizManage.GetT_MP_SALE_TEMPLATERow(affairPosRow.TEMPLATE_ID)

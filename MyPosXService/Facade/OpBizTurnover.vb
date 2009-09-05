@@ -11,7 +11,7 @@ Namespace Facade
 
         Public Shared Sub SycronizeMoveTurnoverDtls(ByVal fromTurnoverID As String, ByVal reliefPareID As String)
 
-            Dim turnoverCondition As New MyPosXAuto.Facade.AfBizTurnover.ConditionOfH_MP_TURNOVER(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim turnoverCondition As New MyPosXAuto.Facade.AfBizTurnover.ConditionOfH_MP_TURNOVER(XL.DB.Utils.Condition.LogicOperators.Logic_And)
             turnoverCondition.Add(AfBizTurnover.H_MP_TURNOVERColumns.TURNOVER_IDColumn, "<>", fromTurnoverID)
             turnoverCondition.Add(AfBizTurnover.H_MP_TURNOVERColumns.RELIEF_PAIR_IDColumn, "=", reliefPareID)
 
@@ -22,7 +22,7 @@ Namespace Facade
             Dim fromTurnoverDtlList As New MyPosXAuto.FTs.FT_H_MP_TURNOVER_DTL
             Dim toTurnoverDtlList As New MyPosXAuto.FTs.FT_H_MP_TURNOVER_DTL
 
-            Dim turnoverDtlCondition As New MyPosXAuto.Facade.AfBizTurnover.ConditionOfH_MP_TURNOVER_DTL(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim turnoverDtlCondition As New MyPosXAuto.Facade.AfBizTurnover.ConditionOfH_MP_TURNOVER_DTL(XL.DB.Utils.Condition.LogicOperators.Logic_And)
             turnoverDtlCondition.Add(AfBizTurnover.H_MP_TURNOVER_DTLColumns.TURNOVER_IDColumn, "=", fromTurnoverID)
 
             MyPosXAuto.Facade.AfBizTurnover.FillFT_H_MP_TURNOVER_DTL(turnoverDtlCondition, fromTurnoverDtlList)
@@ -77,7 +77,7 @@ Namespace Facade
                 Throw ex
             End If
 
-            Dim paymentSituationCondition As New MyPosXAuto.Facade.AfMV.ConditionOfMV_MP_TURNOVER_PAYMENT_SITUATION(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim paymentSituationCondition As New MyPosXAuto.Facade.AfMV.ConditionOfMV_MP_TURNOVER_PAYMENT_SITUATION(XL.DB.Utils.Condition.LogicOperators.Logic_And)
             paymentSituationCondition.Add(AfMV.MV_MP_TURNOVER_PAYMENT_SITUATIONColumns.TURNOVER_IDColumn, "=", turnoverID)
 
             Dim paymentSituationRow As MyPosXAuto.FTs.FT_MV_MP_TURNOVER_PAYMENT_SITUATIONRow = _
@@ -112,7 +112,7 @@ Namespace Facade
             End If
 
             Dim turnoverDtlList As New MyPosXAuto.FTs.FT_H_MP_TURNOVER_DTL
-            Dim turnoverDtlConditions As New MyPosXAuto.Facade.AfBizTurnover.ConditionOfH_MP_TURNOVER_DTL(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim turnoverDtlConditions As New MyPosXAuto.Facade.AfBizTurnover.ConditionOfH_MP_TURNOVER_DTL(XL.DB.Utils.Condition.LogicOperators.Logic_And)
             turnoverDtlConditions.Add(AfBizTurnover.H_MP_TURNOVER_DTLColumns.TURNOVER_IDColumn, "=", turnoverID)
             turnoverDtlConditions.Add(AfBizTurnover.H_MP_TURNOVER_DTLColumns.TURNOVER_BOOK_STATUSColumn, "=", MyPosXAuto.Decls.CIVALUE_TURNOVER_BOOK_STATUS_ON_HAND)
 
@@ -122,7 +122,7 @@ Namespace Facade
                 Return
             End If
 
-            Dim consignConditions As New MyPosXAuto.Facade.AfBizTurnover.ConditionOfH_MP_TURNOVER_CONSIGN(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim consignConditions As New MyPosXAuto.Facade.AfBizTurnover.ConditionOfH_MP_TURNOVER_CONSIGN(XL.DB.Utils.Condition.LogicOperators.Logic_And)
             consignConditions.Add(AfBizTurnover.H_MP_TURNOVER_CONSIGNColumns.TURNOVER_IDColumn, "=", turnoverID)
             consignConditions.Add(AfBizTurnover.H_MP_TURNOVER_CONSIGNColumns.IS_DEFAULTColumn, "=", True)
 
@@ -133,7 +133,7 @@ Namespace Facade
             Dim consignDtlRow As MyPosXAuto.FTs.FT_H_MP_TURNOVER_CONSIGN_DTLRow
 
             Dim consignID As String
-            Dim consignDtlConditions As New MyPosXAuto.Facade.AfBizTurnover.ConditionOfH_MP_TURNOVER_CONSIGN_DTL(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim consignDtlConditions As New MyPosXAuto.Facade.AfBizTurnover.ConditionOfH_MP_TURNOVER_CONSIGN_DTL(XL.DB.Utils.Condition.LogicOperators.Logic_And)
 
             If IsNothing(consignRow) = True Then
 
@@ -197,7 +197,7 @@ Namespace Facade
 
         Public Shared Function GetPosBatchWareStockAmount(ByVal posID As String, ByVal batchCode As String) As Double
 
-            Dim posBatchWareTotalCondition As New MyPosXAuto.Facade.AfMV.ConditionOfMV_MP_POS_BATCH_WARE_TOTAL(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim posBatchWareTotalCondition As New MyPosXAuto.Facade.AfMV.ConditionOfMV_MP_POS_BATCH_WARE_TOTAL(XL.DB.Utils.Condition.LogicOperators.Logic_And)
             posBatchWareTotalCondition.Add(AfMV.MV_MP_POS_BATCH_WARE_TOTALColumns.BATCH_CODEColumn, "=", batchCode)
             posBatchWareTotalCondition.Add(AfMV.MV_MP_POS_BATCH_WARE_TOTALColumns.POS_IDColumn, "=", posID)
 
@@ -215,7 +215,7 @@ Namespace Facade
         Public Shared Function GetPosWareStockAmount(ByVal posID As String, ByVal wareID As String) As Double
 
 
-            Dim posWareTotalConditions As New MyPosXAuto.Facade.AfMV.ConditionOfMV_MP_POS_WARE_TOTAL(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim posWareTotalConditions As New MyPosXAuto.Facade.AfMV.ConditionOfMV_MP_POS_WARE_TOTAL(XL.DB.Utils.Condition.LogicOperators.Logic_And)
             posWareTotalConditions.Add(AfMV.MV_MP_POS_WARE_TOTALColumns.WARE_IDColumn, "=", wareID)
             posWareTotalConditions.Add(AfMV.MV_MP_POS_WARE_TOTALColumns.POS_IDColumn, "=", posID)
 
@@ -235,7 +235,7 @@ Namespace Facade
             '''XV_H_MP_TURNOVER_DTL_PRACT_WARE条件TURNOVER_IDColumn改为H_MP_TURNOVER_TURNOVER_IDColumn
             Dim practDtlList As New MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTL_PRACT_WARE
 
-            Dim practDtlCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_H_MP_TURNOVER_DTL_PRACT_WARE(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim practDtlCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_H_MP_TURNOVER_DTL_PRACT_WARE(XL.DB.Utils.Condition.LogicOperators.Logic_And)
             practDtlCondition.Add(AfXV.XV_H_MP_TURNOVER_DTL_PRACT_WAREColumns.H_MP_TURNOVER_TURNOVER_IDColumn, "=", turnoverID)
 
             MyPosXAuto.Facade.AfXV.FillFT_XV_H_MP_TURNOVER_DTL_PRACT_WARE(practDtlCondition, practDtlList)
@@ -244,7 +244,7 @@ Namespace Facade
                 MyPosXAuto.Facade.AfBizTurnover.GetH_MP_TURNOVERRow(turnoverID)
 
             Dim turnoverDtlList As New MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTL
-            Dim turnoverDtlConditions As New MyPosXAuto.Facade.AfXV.ConditionOfXV_H_MP_TURNOVER_DTL(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim turnoverDtlConditions As New MyPosXAuto.Facade.AfXV.ConditionOfXV_H_MP_TURNOVER_DTL(XL.DB.Utils.Condition.LogicOperators.Logic_And)
 
             turnoverDtlConditions.Add(AfXV.XV_H_MP_TURNOVER_DTLColumns.TURNOVER_IDColumn, "=", turnoverID)
             turnoverDtlConditions.Add(AfXV.XV_H_MP_TURNOVER_DTLColumns.PRACT_CODE_REQUIREDColumn, "=", True)
@@ -310,7 +310,7 @@ Namespace Facade
 
             Next
 
-            Dim turnoverDtlCondition As New MyPosXAuto.Facade.AfBizTurnover.ConditionOfH_MP_TURNOVER_DTL(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim turnoverDtlCondition As New MyPosXAuto.Facade.AfBizTurnover.ConditionOfH_MP_TURNOVER_DTL(XL.DB.Utils.Condition.LogicOperators.Logic_And)
             turnoverDtlCondition.Add(AfBizTurnover.H_MP_TURNOVER_DTLColumns.DETAIL_IDColumn, False, involvedTurnoverDtlIDs)
             turnoverDtlCondition.Add(AfBizTurnover.H_MP_TURNOVER_DTLColumns.TURNOVER_IDColumn, "=", turnoverID)
 
@@ -320,7 +320,7 @@ Namespace Facade
 
         Public Shared Function ValidateTurnoverCode(ByVal turnoverCode As String) As Boolean
 
-            Dim turnoverConditions As New MyPosXAuto.Facade.AfBizTurnover.ConditionOfH_MP_TURNOVER(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim turnoverConditions As New MyPosXAuto.Facade.AfBizTurnover.ConditionOfH_MP_TURNOVER(XL.DB.Utils.Condition.LogicOperators.Logic_And)
             turnoverConditions.Add(AfBizTurnover.H_MP_TURNOVERColumns.TURNOVER_CODEColumn, "=", turnoverCode)
 
             Dim turnoverRow As MyPosXAuto.FTs.FT_H_MP_TURNOVERRow = _
@@ -675,7 +675,7 @@ Namespace Facade
             Dim turnoverDtlCacheDataRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow
             Dim turnoverDtlDBDataRow As MyPosXAuto.FTs.FT_H_MP_TURNOVER_DTLRow
 
-            Dim turnoverDtlCondition As New MyPosXAuto.Facade.AfBizTurnover.ConditionOfH_MP_TURNOVER_DTL(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim turnoverDtlCondition As New MyPosXAuto.Facade.AfBizTurnover.ConditionOfH_MP_TURNOVER_DTL(XL.DB.Utils.Condition.LogicOperators.Logic_And)
             For Each turnoverDtlCacheDataRow In turnoverDtlCacheDataList.FindRowsByCondition(Nothing)
 
                 If turnoverDtlCacheDataRow.WARE_AMOUNT = 0 Then
@@ -707,7 +707,7 @@ Namespace Facade
             Dim turnoverDBDataRow As MyPosXAuto.FTs.FT_H_MP_TURNOVERRow
             Dim turnoverCacheDataRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVERRow
 
-            Dim turnoverCondition As New MyPosXAuto.Facade.AfBizTurnover.ConditionOfH_MP_TURNOVER(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim turnoverCondition As New MyPosXAuto.Facade.AfBizTurnover.ConditionOfH_MP_TURNOVER(XL.DB.Utils.Condition.LogicOperators.Logic_And)
             For Each turnoverCacheDataRow In turnoverCacheDataList
 
                 If turnoverCacheDataRow.TURNOVER_ID.Length = 0 Then

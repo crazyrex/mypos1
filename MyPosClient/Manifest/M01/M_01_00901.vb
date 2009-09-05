@@ -629,7 +629,7 @@ Namespace Manifest
         Private Sub DoPrivateUpdateActiveAffairHighlight()
 
             Me.SVFT_BINDING_LIST.ResetRowHighlighting()
-            Dim affairCondition As New MyPosXAuto.Facade.AfBizManage.ConditionOfT_MP_SALE_AFFAIR(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim affairCondition As New MyPosXAuto.Facade.AfBizManage.ConditionOfT_MP_SALE_AFFAIR(XL.DB.Utils.Condition.LogicOperators.Logic_And)
             affairCondition.Add(MyPosXAuto.Facade.AfBizManage.T_MP_SALE_AFFAIRColumns.BEGIN_DATEColumn, "<=", CommTK.GetSyncServerTime)
             affairCondition.Add(MyPosXAuto.Facade.AfBizManage.T_MP_SALE_AFFAIRColumns.END_DATEColumn, ">=", CommTK.GetSyncServerTime)
 

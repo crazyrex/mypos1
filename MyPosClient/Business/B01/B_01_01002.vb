@@ -1545,7 +1545,7 @@ End Namespace
 '            Return String.Empty                                                                                                
 '        End If                                                                                                                 
 '                                                                                                                               
-'        Dim SSCondition As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_SSS(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+'        Dim SSCondition As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_SSS(XL.DB.Utils.Condition.LogicOperators.Logic_And)
 '        SSCondition.Add(XAuto.Facade.AfBizMaster.M_SSSColumns.SS_CODEColumn, "=", Me._manifest.ButtonEdit_XXXCode.Text)      
 '                                                                                                                               
 '        Dim SSRow As XAuto.FTs.FT_M_SSSRow = _                                                                                 

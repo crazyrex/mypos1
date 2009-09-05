@@ -17,7 +17,7 @@ Namespace Facade
                 currencyRate = 1
                 Return currencyValue
             End If
-            Dim currencyRateConditions As New MyPosXAuto.Facade.AfBizConfig.ConditionOfS_MP_CURRENCY_RATE(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim currencyRateConditions As New MyPosXAuto.Facade.AfBizConfig.ConditionOfS_MP_CURRENCY_RATE(XL.DB.Utils.Condition.LogicOperators.Logic_And)
             currencyRateConditions.Add(AfBizConfig.S_MP_CURRENCY_RATEColumns.CURRENCY_TYPEColumn, "=", currencyType)
 
             Dim currencyRateRow As MyPosXAuto.FTs.FT_S_MP_CURRENCY_RATERow = _
@@ -39,7 +39,7 @@ Namespace Facade
 
             Dim result As Boolean = True
 
-            Dim dbCondition As New MyPosXAuto.Facade.AfBizConfig.ConditionOfS_MP_POS_SET_WARE(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim dbCondition As New MyPosXAuto.Facade.AfBizConfig.ConditionOfS_MP_POS_SET_WARE(XL.DB.Utils.Condition.LogicOperators.Logic_And)
             dbCondition.Add(AfBizConfig.S_MP_POS_SET_WAREColumns.SET_IDColumn, "=", posSetID)
             Dim dbList As New MyPosXAuto.FTs.FT_S_MP_POS_SET_WARE
             MyPosXAuto.Facade.AfBizConfig.FillFT_S_MP_POS_SET_WARE(dbCondition, dbList)

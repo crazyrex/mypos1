@@ -592,7 +592,7 @@ Namespace Business
                     pointUse = -pointUse
                     extraDiscount = -extraDiscount
 
-                    Dim turnoverDtlCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_H_MP_TURNOVER_DTL(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+                    Dim turnoverDtlCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_H_MP_TURNOVER_DTL(XL.DB.Utils.Condition.LogicOperators.Logic_And)
                     turnoverDtlCondition.Add(MyPosXAuto.Facade.AfXV.XV_H_MP_TURNOVER_DTLColumns.WARE_AMOUNTColumn, "=", 0)
                     Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.RemoveFT_XV_H_MP_TURNOVER_DTLRows(turnoverDtlCondition)
 
@@ -829,7 +829,7 @@ Namespace Business
                     Return String.Empty
                 End If
 
-                Dim wareCondition As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_MP_WARE(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+                Dim wareCondition As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_MP_WARE(XL.DB.Utils.Condition.LogicOperators.Logic_And)
                 wareCondition.Add(MyPosXAuto.Facade.AfBizMaster.M_MP_WAREColumns.WARE_CODEColumn, "=", Me._manifest.ButtonEdit_WareCode.Text)
 
                 Dim wareRowSEntity As New MyPosXAuto.FTs.FT_M_MP_WARERowSEntity
@@ -855,7 +855,7 @@ Namespace Business
                     Return String.Empty
                 End If
 
-                Dim dtlCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_H_MP_TURNOVER_DTL(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+                Dim dtlCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_H_MP_TURNOVER_DTL(XL.DB.Utils.Condition.LogicOperators.Logic_And)
                 dtlCondition.Add(MyPosXAuto.Facade.AfXV.XV_H_MP_TURNOVER_DTLColumns.WARE_CODEColumn, "=", Me._manifest.ButtonEdit_WareCode.Text)
 
                 Dim dtlRow = Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.FindRowByCondition(dtlCondition)
@@ -885,7 +885,7 @@ Namespace Business
 
 
                 dtlRow.WARE_AMOUNT += 1
-                Dim saleTemplateWareCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_T_MP_SALE_TEMPLATE_WARE(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+                Dim saleTemplateWareCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_T_MP_SALE_TEMPLATE_WARE(XL.DB.Utils.Condition.LogicOperators.Logic_And)
                 saleTemplateWareCondition.Add(MyPosXAuto.Facade.AfXV.XV_T_MP_SALE_TEMPLATE_WAREColumns.WARE_IDColumn, "=", wareRowSEntity.WARE_ID)
 
                 Dim saleTemplateWareRow = Me._manifest.SVFT_REF_SALE_TEMPLATE_WARE_LIST.FindRowByCondition(saleTemplateWareCondition)
@@ -1028,7 +1028,7 @@ Namespace Business
 
             Try
 
-                Dim clientCondition As New MyPosXAuto.Facade.AfMV.ConditionOfMV_MP_CLIENT(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_Or)
+                Dim clientCondition As New MyPosXAuto.Facade.AfMV.ConditionOfMV_MP_CLIENT(XL.DB.Utils.Condition.LogicOperators.Logic_Or)
                 clientCondition.Add(MyPosXAuto.Facade.AfMV.MV_MP_CLIENTColumns.CLIENT_CODEColumn, "=", Me._manifest.TextEdit_ClientCode.Text)
                 clientCondition.Add(MyPosXAuto.Facade.AfMV.MV_MP_CLIENTColumns.CELL_PHONEColumn, "=", Me._manifest.TextEdit_ClientCode.Text)
                 Dim clientRow = MyPosXAuto.Facade.AfMV.GetMV_MP_CLIENTRow(clientCondition)
@@ -1276,9 +1276,9 @@ Namespace Business
                     Return MyPosXService.Decls.MSG_ALERT_00065
                 End If
 
-                Dim turnoverCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_H_MP_TURNOVER(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+                Dim turnoverCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_H_MP_TURNOVER(XL.DB.Utils.Condition.LogicOperators.Logic_And)
                 Me._manifest.SVFT_BINDING_TURNOVER_DTL_LIST.Clear()
-                Dim turnoverDtlCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_H_MP_TURNOVER_DTL(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+                Dim turnoverDtlCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_H_MP_TURNOVER_DTL(XL.DB.Utils.Condition.LogicOperators.Logic_And)
                 turnoverDtlCondition.Add(MyPosXAuto.Facade.AfXV.XV_H_MP_TURNOVER_DTLColumns.TURNOVER_IDColumn, "=", Me._manifest.SV_RETURN_RELIEF_TURNOVER_ROW_SE.TURNOVER_ID)
 
                 turnoverCondition.Add(MyPosXAuto.Facade.AfXV.XV_H_MP_TURNOVERColumns.TURNOVER_IDColumn, "=", Me._manifest.SV_RETURN_RELIEF_TURNOVER_ROW_SE.TURNOVER_ID)
@@ -1314,7 +1314,7 @@ Namespace Business
                 '        bindingRow.CloneDataRow(cacheTurnoverDtlRow)
                 '    Next
 
-                Dim returnTotalCondition As New MyPosXAuto.Facade.AfMV.ConditionOfMV_MP_TURNOVER_WARE_RETURN_TOTAL(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+                Dim returnTotalCondition As New MyPosXAuto.Facade.AfMV.ConditionOfMV_MP_TURNOVER_WARE_RETURN_TOTAL(XL.DB.Utils.Condition.LogicOperators.Logic_And)
                 returnTotalCondition.Add(MyPosXAuto.Facade.AfMV.MV_MP_TURNOVER_WARE_RETURN_TOTALColumns.TURNOVER_IDColumn, "=", Me._manifest.SV_RETURN_RELIEF_TURNOVER_ROW_SE.TURNOVER_ID)
                 Dim returnTotalList As New MyPosXAuto.FTs.FT_MV_MP_TURNOVER_WARE_RETURN_TOTAL
                 Dim returnTotalRow As MyPosXAuto.FTs.FT_MV_MP_TURNOVER_WARE_RETURN_TOTALRow
@@ -1969,7 +1969,7 @@ End Namespace
 '            Return String.Empty                                                                                                
 '        End If                                                                                                                 
 '                                                                                                                               
-'        Dim SSCondition As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_SSS(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+'        Dim SSCondition As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_SSS(XL.DB.Utils.Condition.LogicOperators.Logic_And)
 '        SSCondition.Add(XAuto.Facade.AfBizMaster.M_SSSColumns.SS_CODEColumn, "=", Me._manifest.ButtonEdit_XXXCode.Text)      
 '                                                                                                                               
 '        Dim SSRow As XAuto.FTs.FT_M_SSSRow = _                                                                                 
