@@ -12,7 +12,7 @@ Namespace Facade
             Dim posRow As MyPosXAuto.FTs.FT_M_MP_POSRow = _
                 MyPosXAuto.Facade.AfBizMaster.GetM_MP_POSRow(posID)
 
-            Dim warePriceSetDtlConditions As New MyPosXAuto.Facade.AfXV.ConditionOfXV_S_MP_POS_SET_WARE(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim warePriceSetDtlConditions As New MyPosXAuto.Facade.AfXV.ConditionOfXV_S_MP_POS_SET_WARE(XL.DB.Utils.Condition.LogicOperators.Logic_And)
             warePriceSetDtlConditions.Add( _
                 AfXV.XV_S_MP_POS_SET_WAREColumns.SET_IDColumn, _
                 "=", _
@@ -41,7 +41,7 @@ Namespace Facade
             Dim posRow As MyPosXAuto.FTs.FT_M_MP_POSRow = _
                 MyPosXAuto.Facade.AfBizMaster.GetM_MP_POSRow(posID)
 
-            Dim warePriceSetDtlConditions As New MyPosXAuto.Facade.AfXV.ConditionOfXV_S_MP_POS_SET_WARE(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim warePriceSetDtlConditions As New MyPosXAuto.Facade.AfXV.ConditionOfXV_S_MP_POS_SET_WARE(XL.DB.Utils.Condition.LogicOperators.Logic_And)
             warePriceSetDtlConditions.Add( _
                 AfXV.XV_S_MP_POS_SET_WAREColumns.SET_IDColumn, _
                 "=", _
@@ -66,7 +66,7 @@ Namespace Facade
         Public Shared Function GetWareClassifyIDPath(ByVal wareClassifyID As String, ByRef classifyDepth As Integer) As String
 
             Dim result As String = String.Empty
-            Dim wareClassifyCondition As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_MP_WARE_CLASSIFY(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim wareClassifyCondition As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_MP_WARE_CLASSIFY(XL.DB.Utils.Condition.LogicOperators.Logic_And)
             Dim wareClassifyRow As MyPosXAuto.FTs.FT_M_MP_WARE_CLASSIFYRow
             Dim wareClassifyIDPath As New ArrayList
 
@@ -74,7 +74,7 @@ Namespace Facade
             Do While wareClassifyID.Length <> 0
 
                 wareClassifyIDPath.Add(wareClassifyID)
-                wareClassifyCondition = New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_MP_WARE_CLASSIFY(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+                wareClassifyCondition = New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_MP_WARE_CLASSIFY(XL.DB.Utils.Condition.LogicOperators.Logic_And)
                 wareClassifyCondition.Add(MyPosXAuto.Facade.AfBizMaster.M_MP_WARE_CLASSIFYColumns.WARE_CLASSIFY_IDColumn, "=", wareClassifyID)
                 wareClassifyRow = _
                 MyPosXAuto.Facade.AfBizMaster.GetM_MP_WARE_CLASSIFYRow(wareClassifyCondition)
@@ -164,7 +164,7 @@ Namespace Facade
                 Return String.Empty
             End If
 
-            Dim locationCondition As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_MP_POS_LOCATION(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim locationCondition As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_MP_POS_LOCATION(XL.DB.Utils.Condition.LogicOperators.Logic_And)
             locationCondition.Add(AfBizMaster.M_MP_POS_LOCATIONColumns.AREA_CODEColumn, "=", codes(0))
             locationCondition.Add(AfBizMaster.M_MP_POS_LOCATIONColumns.SHELF_CODEColumn, "=", codes(1))
             locationCondition.Add(AfBizMaster.M_MP_POS_LOCATIONColumns.LOCATION_CODEColumn, "=", codes(2))
@@ -286,13 +286,13 @@ Namespace Facade
             End If
 
             Dim supplierRowSE As New MyPosXAuto.FTs.FT_M_MP_SUPPLIERRowSEntity
-            Dim supplierCondition As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_MP_SUPPLIER(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim supplierCondition As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_MP_SUPPLIER(XL.DB.Utils.Condition.LogicOperators.Logic_And)
             supplierCondition.Add(AfBizMaster.M_MP_SUPPLIERColumns.SUPPLIER_CODEColumn, "=", supplierCode)
             MyPosXAuto.Facade.AfBizMaster.FillM_MP_SUPPLIERRowSEntity(supplierRowSE, supplierCondition)
 
             Dim seedName As String = String.Format("{0}_{1}_{2}", MyPosXService.Decls.SPX_WARE_CODE, classifyID, supplierRowSE.SUPPLIER_ID)
             Dim seedValue As Integer
-            Dim wareCondition As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_MP_WARE(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim wareCondition As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_MP_WARE(XL.DB.Utils.Condition.LogicOperators.Logic_And)
             Dim result As New LineStrBuilder
 
             Do
@@ -343,7 +343,7 @@ Namespace Facade
 
         Public Shared Function GetAutoRecipientCode(ByVal preview As Boolean, ByVal recipientType As Integer) As String
 
-            Dim recipientBarcodeCondition As New MyPosXAuto.Facade.AfBizConfig.ConditionOfS_MP_RECP_TYPE_BARCODE(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim recipientBarcodeCondition As New MyPosXAuto.Facade.AfBizConfig.ConditionOfS_MP_RECP_TYPE_BARCODE(XL.DB.Utils.Condition.LogicOperators.Logic_And)
             recipientBarcodeCondition.Add(MyPosXAuto.Facade.AfBizConfig.S_MP_RECP_TYPE_BARCODEColumns.RECIPIENT_TYPEColumn, "=", recipientType)
             Dim recipientBarcodeRow As MyPosXAuto.FTs.FT_S_MP_RECP_TYPE_BARCODERow = _
                 MyPosXAuto.Facade.AfBizConfig.GetS_MP_RECP_TYPE_BARCODERow(recipientBarcodeCondition)
@@ -381,7 +381,7 @@ Namespace Facade
             ByVal classifyRows As MyPosXAuto.FTs.FT_M_MP_WARE_CLASSIFYRow(), _
             ByRef involvedClassifyCodes As ArrayList)
 
-            Dim wareClassifyCondition As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_MP_WARE_CLASSIFY(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim wareClassifyCondition As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_MP_WARE_CLASSIFY(XL.DB.Utils.Condition.LogicOperators.Logic_And)
             Dim wareClassifyRow As MyPosXAuto.FTs.FT_M_MP_WARE_CLASSIFYRow = Nothing
             Dim dbWareClassifyRow As MyPosXAuto.FTs.FT_M_MP_WARE_CLASSIFYRow = Nothing
             Dim childClassifyRows As MyPosXAuto.FTs.FT_M_MP_WARE_CLASSIFYRow() = Nothing

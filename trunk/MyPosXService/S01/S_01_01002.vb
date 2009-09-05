@@ -209,7 +209,7 @@ Public Class S_01_01002
             End If
 
 
-            Dim dbCondition As New MyPosXAuto.Facade.AfBizManage.ConditionOfT_MP_SALE_TEMPLATE_WARE(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim dbCondition As New MyPosXAuto.Facade.AfBizManage.ConditionOfT_MP_SALE_TEMPLATE_WARE(XL.DB.Utils.Condition.LogicOperators.Logic_And)
             dbCondition.Add(MyPosXAuto.Facade.AfBizManage.T_MP_SALE_TEMPLATE_WAREColumns.TEMPLATE_IDColumn, "=", refReviseTemplateID)
 
             Dim dbList As New MyPosXAuto.FTs.FT_T_MP_SALE_TEMPLATE_WARE
@@ -302,7 +302,7 @@ Public Class S_01_01002
         Try
 
 
-            Dim templateConditions As New MyPosXAuto.Facade.AfXV.ConditionOfXV_T_MP_SALE_TEMPLATE(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim templateConditions As New MyPosXAuto.Facade.AfXV.ConditionOfXV_T_MP_SALE_TEMPLATE(XL.DB.Utils.Condition.LogicOperators.Logic_And)
             templateConditions.Add(MyPosXAuto.Facade.AfXV.XV_T_MP_SALE_TEMPLATEColumns.TEMPLATE_IDColumn, "=", valReviseTemplateID)
 
             MyPosXAuto.Facade.AfXV.FillXV_T_MP_SALE_TEMPLATERowSEntity(refTemplateRow, templateConditions)
@@ -311,7 +311,7 @@ Public Class S_01_01002
                 Return MyPosXService.Decls.MSG_ALERT_00008
             End If
 
-            Dim templateWareConditions As New MyPosXAuto.Facade.AfXV.ConditionOfXV_T_MP_SALE_TEMPLATE_WARE(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+            Dim templateWareConditions As New MyPosXAuto.Facade.AfXV.ConditionOfXV_T_MP_SALE_TEMPLATE_WARE(XL.DB.Utils.Condition.LogicOperators.Logic_And)
             templateWareConditions.Add(MyPosXAuto.Facade.AfXV.XV_T_MP_SALE_TEMPLATE_WAREColumns.TEMPLATE_IDColumn, "=", valReviseTemplateID)
 
             MyPosXAuto.Facade.AfXV.FillFT_XV_T_MP_SALE_TEMPLATE_WARE(templateWareConditions, refTemplateWareList)

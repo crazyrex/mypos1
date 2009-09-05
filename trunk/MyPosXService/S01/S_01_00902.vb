@@ -114,7 +114,7 @@ Public Class S_01_00902
 
         Try
 
-            Dim saleTemplateConditions As New MyPosXAuto.Facade.AfBizManage.ConditionOfT_MP_SALE_TEMPLATE(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_Or)
+            Dim saleTemplateConditions As New MyPosXAuto.Facade.AfBizManage.ConditionOfT_MP_SALE_TEMPLATE(XL.DB.Utils.Condition.LogicOperators.Logic_Or)
             saleTemplateConditions.Add(MyPosXAuto.Facade.AfBizManage.T_MP_SALE_TEMPLATEColumns.TEMPLATE_CODEColumn, "=", valSaleTemplateCode)
             saleTemplateConditions.Add(MyPosXAuto.Facade.AfBizManage.T_MP_SALE_TEMPLATEColumns.TEMPLATE_NAMEColumn, "=", valSaleTemplateCode)
 
@@ -201,7 +201,7 @@ Public Class S_01_00902
                          valBeginDate, _
                          valEndDate, _
                         valTemplateID)
-                Dim affairCondition As New MyPosXAuto.Facade.AfBizManage.ConditionOfT_MP_SALE_AFFAIR(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+                Dim affairCondition As New MyPosXAuto.Facade.AfBizManage.ConditionOfT_MP_SALE_AFFAIR(XL.DB.Utils.Condition.LogicOperators.Logic_And)
                 affairCondition.Add(MyPosXAuto.Facade.AfBizManage.T_MP_SALE_AFFAIRColumns.AFFAIR_IDColumn, "=", refRevisingAffairID)
                 MyPosXAuto.Facade.AfBizManage.ReviseT_MP_SALE_AFFAIRData(affairCondition, MyPosXAuto.Facade.AfBizManage.T_MP_SALE_AFFAIRColumns.END_DATEColumn, valEndDate)
 
@@ -210,7 +210,7 @@ Public Class S_01_00902
                     posIDs.Add(bindingRow.POS_ID)
                 Next
 
-                Dim affairPosCondition As New MyPosXAuto.Facade.AfBizManage.ConditionOfT_MP_SALE_AFFAIR_POS(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+                Dim affairPosCondition As New MyPosXAuto.Facade.AfBizManage.ConditionOfT_MP_SALE_AFFAIR_POS(XL.DB.Utils.Condition.LogicOperators.Logic_And)
                 affairPosCondition.Add(MyPosXAuto.Facade.AfBizManage.T_MP_SALE_AFFAIR_POSColumns.AFFAIR_IDColumn, "=", refRevisingAffairID)
                 MyPosXAuto.Facade.AfBizManage.FillFT_T_MP_SALE_AFFAIR_POS(affairPosCondition, dbAffairPosList)
 

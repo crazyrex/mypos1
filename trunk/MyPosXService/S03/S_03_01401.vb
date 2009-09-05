@@ -113,7 +113,7 @@ Public Class S_03_01401
 
         Try
 
-            Dim posConditions As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_MP_POS(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_Or)
+            Dim posConditions As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_MP_POS(XL.DB.Utils.Condition.LogicOperators.Logic_Or)
             posConditions.Add(MyPosXAuto.Facade.AfBizMaster.M_MP_POSColumns.POS_CODEColumn, "=", valPosCode)
             posConditions.Add(MyPosXAuto.Facade.AfBizMaster.M_MP_POSColumns.POS_NAMEColumn, "=", valPosCode)
 

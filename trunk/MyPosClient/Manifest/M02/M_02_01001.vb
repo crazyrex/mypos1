@@ -869,7 +869,7 @@ Namespace Manifest
                         MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow)
 
 
-                Dim saleTemplateCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_T_MP_SALE_TEMPLATE_WARE(XL.DB.Utils.ConditionBuilder.LogicOperators.Logic_And)
+                Dim saleTemplateCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_T_MP_SALE_TEMPLATE_WARE(XL.DB.Utils.Condition.LogicOperators.Logic_And)
                 saleTemplateCondition.Add(MyPosXAuto.Facade.AfXV.XV_T_MP_SALE_TEMPLATE_WAREColumns.WARE_IDColumn, "=", Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_ID)
 
                 If Me.SVFT_REF_SALE_TEMPLATE_WARE_LIST.FindRowsByCondition(saleTemplateCondition).Length = 0 Then
