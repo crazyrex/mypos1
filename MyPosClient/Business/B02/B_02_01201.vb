@@ -796,6 +796,7 @@ Namespace Business
 
 
                 MyPosXAuto.Facade.AfBizManage.SaveBatchH_MP_CLIENT_POINT_IOData(pointIOList)
+                MyPosXAuto.DataCache.DCHMV.OverwriteMV_MP_CLIENTFromDB(, False)
 
                 'Dim servResult As String = _
                 '    Me._service.ServRechargeByImportExcel()
