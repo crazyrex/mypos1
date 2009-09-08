@@ -588,9 +588,9 @@ Namespace Business
                 If Me._manifest.SV_RETURN_RELIEF_TURNOVER_ROW_SE.IsNull = False Then
                     turnoverType = MyPosXAuto.Decls.CIVALUE_TURNOVER_TYPE_CHECK_IN
                     turnoverStyle = MyPosXAuto.Decls.CIVALUE_TURNOVER_STYLE_RETURNS
-                    pointGain = -pointGain
-                    pointUse = -pointUse
-                    extraDiscount = -extraDiscount
+                    'pointGain = -pointGain
+                    'pointUse = -pointUse
+                    'extraDiscount = - extraDiscount
 
                     Dim turnoverDtlCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_H_MP_TURNOVER_DTL(XL.DB.Utils.Condition.LogicOperators.Logic_And)
                     turnoverDtlCondition.Add(MyPosXAuto.Facade.AfXV.XV_H_MP_TURNOVER_DTLColumns.WARE_AMOUNTColumn, "=", 0)
