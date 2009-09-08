@@ -408,6 +408,9 @@ Namespace Manifest
 
             End If
 
+            If Me.CalcEdit_DiscountAmount.Value < 0 Then
+                Return MyPosXService.Decls.MSG_ALERT_00071
+            End If
             Return String.Empty
 
         End Function
