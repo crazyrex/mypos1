@@ -654,7 +654,7 @@ Namespace Manifest
                 End If
                 Me.SVFR_BINDING_TURNOVER_DTL_ROW.UNIT_DISCOUNT = Me.SVFR_BINDING_TURNOVER_DTL_ROW.ORIGION_UNIT_PRICE * Me.CalcEdit_DiscountAmount.Value
             Else
-                If Me.CalcEdit_DiscountAmount.Value >= Me.SVFR_BINDING_TURNOVER_DTL_ROW.ORIGION_UNIT_PRICE Then
+                If Me.CalcEdit_DiscountAmount.Value > Me.SVFR_BINDING_TURNOVER_DTL_ROW.ORIGION_UNIT_PRICE Then
                     Me.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0021)
                     Return
                 End If
