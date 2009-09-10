@@ -661,6 +661,9 @@
   <data name="GridColumn_Total.Caption" xml:space="preserve">
     <value>收款总额</value>
   </data>
+  <data name="GridColumn_Total.SummaryItem.DisplayFormat" xml:space="preserve">
+    <value>{0:#,##0.00}</value>
+  </data>
   <data name="GridColumn_Total.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -949,6 +952,12 @@
   <data name="&gt;&gt;GridColumn_UnitDiscount.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
+  <data name="&gt;&gt;GridColumn_UnitDiscountPercent.Name" xml:space="preserve">
+    <value>GridColumn_UnitDiscountPercent</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_UnitDiscountPercent.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
   <data name="&gt;&gt;GridColumn_ExtraDiscount.Name" xml:space="preserve">
     <value>GridColumn_ExtraDiscount</value>
   </data>
@@ -1068,12 +1077,6 @@
   </data>
   <data name="&gt;&gt;SaveFileDialog_ExportToExcel.Type" xml:space="preserve">
     <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GridColumn_UnitDiscountPercent.Name" xml:space="preserve">
-    <value>GridColumn_UnitDiscountPercent</value>
-  </data>
-  <data name="&gt;&gt;GridColumn_UnitDiscountPercent.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>M_03_00601</value>

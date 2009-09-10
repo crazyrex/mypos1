@@ -766,7 +766,7 @@ Namespace Facade
             Next
 
             shouldGainPointCondition.Clear()
-            usingPointsList.Clear()
+            gainingPointsList.Clear()
             shouldGainPointCondition.Add(AfMV.MV_MP_TURNOVER_SHOULD_GAIN_POINTColumns.TURNOVER_TYPEColumn, "=", MyPosXAuto.Decls.CIVALUE_TURNOVER_TYPE_CHECK_OUT)
             MyPosXAuto.Facade.AfMV.FillFT_MV_MP_TURNOVER_SHOULD_GAIN_POINT(shouldGainPointCondition, gainingPointsList)
 

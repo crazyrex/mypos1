@@ -107,7 +107,6 @@ Public Class S_03_01201
     Public Function ServInitDisplay( _
         ByVal valClinetID As String, _
         ByRef refClientList As MyPosXAuto.FTs.FT_M_MP_CLIENT, _
-        ByRef refTurnoverList As MyPosXAuto.FTs.FT_H_MP_TURNOVER, _
         ByRef refClientPointIOTypeList As MyPosXAuto.FTs.FT_CIV_POINT_IO_TYPE, _
         ByRef refClientRowSE As MyPosXAuto.FTs.FT_M_MP_CLIENTRowSEntity _
         ) As String
@@ -120,7 +119,6 @@ Public Class S_03_01201
             clientConditions.Add(MyPosXAuto.Facade.AfBizMaster.M_MP_CLIENTColumns.CLIENT_IDColumn, "=", valClinetID)
 
             MyPosXAuto.Facade.AfBizMaster.FillFT_M_MP_CLIENT(Nothing, refClientList)
-            MyPosXAuto.Facade.AfBizTurnover.FillFT_H_MP_TURNOVER(Nothing, refTurnoverList)
             MyPosXAuto.Facade.AfCIV.FillFT_CIV_POINT_IO_TYPE(Nothing, refClientPointIOTypeList)
             MyPosXAuto.Facade.AfBizMaster.FillM_MP_CLIENTRowSEntity(refClientRowSE, clientConditions)
 
