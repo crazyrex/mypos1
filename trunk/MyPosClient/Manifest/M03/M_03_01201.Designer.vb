@@ -77,13 +77,12 @@
             Me.GridColumn_IODate = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_ClientID = New DevExpress.XtraGrid.Columns.GridColumn
             Me.RepositoryItemLookUpEdit_ClientID = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
-            Me.GridColumn_PointAmount = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn_TurnoverID = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.RepositoryItemLookUpEdit_TurnoverID = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
-            Me.GridColumn_Remark = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn_MoneyAmount = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_PointIOType = New DevExpress.XtraGrid.Columns.GridColumn
             Me.RepositoryItemLookUpEdit_PointIOType = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
+            Me.GridColumn_PointAmount = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn_TurnoverID = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn_Remark = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn_MoneyAmount = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_RowSelected = New DevExpress.XtraGrid.Columns.GridColumn
             Me.RepositoryItemCheckEdit_RowSelected = New DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
             Me.GridColumn_RowHighLight = New DevExpress.XtraGrid.Columns.GridColumn
@@ -98,7 +97,6 @@
             CType(Me.GridControl_ClientPointIO, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.GridView_ClientPointIO, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemLookUpEdit_ClientID, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.RepositoryItemLookUpEdit_TurnoverID, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemLookUpEdit_PointIOType, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemCheckEdit_RowSelected, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
@@ -544,7 +542,7 @@
             Me.GridControl_ClientPointIO.Location = New System.Drawing.Point(0, 90)
             Me.GridControl_ClientPointIO.MainView = Me.GridView_ClientPointIO
             Me.GridControl_ClientPointIO.Name = "GridControl_ClientPointIO"
-            Me.GridControl_ClientPointIO.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemCheckEdit_RowSelected, Me.RepositoryItemLookUpEdit_TurnoverID, Me.RepositoryItemLookUpEdit_ClientID, Me.RepositoryItemLookUpEdit_PointIOType})
+            Me.GridControl_ClientPointIO.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemCheckEdit_RowSelected, Me.RepositoryItemLookUpEdit_ClientID, Me.RepositoryItemLookUpEdit_PointIOType})
             Me.GridControl_ClientPointIO.Size = New System.Drawing.Size(700, 410)
             Me.GridControl_ClientPointIO.TabIndex = 10002
             Me.GridControl_ClientPointIO.TabStop = False
@@ -602,6 +600,25 @@
             Me.RepositoryItemLookUpEdit_ClientID.Name = "RepositoryItemLookUpEdit_ClientID"
             Me.RepositoryItemLookUpEdit_ClientID.ValueMember = "CLIENT_ID"
             '
+            'GridColumn_PointIOType
+            '
+            Me.GridColumn_PointIOType.Caption = "点数出入类型"
+            Me.GridColumn_PointIOType.ColumnEdit = Me.RepositoryItemLookUpEdit_PointIOType
+            Me.GridColumn_PointIOType.FieldName = "POINT_IO_TYPE"
+            Me.GridColumn_PointIOType.Name = "GridColumn_PointIOType"
+            Me.GridColumn_PointIOType.OptionsColumn.AllowFocus = False
+            Me.GridColumn_PointIOType.Visible = True
+            Me.GridColumn_PointIOType.VisibleIndex = 3
+            '
+            'RepositoryItemLookUpEdit_PointIOType
+            '
+            Me.RepositoryItemLookUpEdit_PointIOType.AutoHeight = False
+            Me.RepositoryItemLookUpEdit_PointIOType.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+            Me.RepositoryItemLookUpEdit_PointIOType.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("ITEM_MEANING", "Name3", 20, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Data.ColumnSortOrder.None)})
+            Me.RepositoryItemLookUpEdit_PointIOType.DisplayMember = "ITEM_MEANING"
+            Me.RepositoryItemLookUpEdit_PointIOType.Name = "RepositoryItemLookUpEdit_PointIOType"
+            Me.RepositoryItemLookUpEdit_PointIOType.ValueMember = "ITEM_VALUE"
+            '
             'GridColumn_PointAmount
             '
             Me.GridColumn_PointAmount.Caption = "出入点数"
@@ -615,22 +632,12 @@
             'GridColumn_TurnoverID
             '
             Me.GridColumn_TurnoverID.Caption = "出入库编号"
-            Me.GridColumn_TurnoverID.ColumnEdit = Me.RepositoryItemLookUpEdit_TurnoverID
             Me.GridColumn_TurnoverID.FieldName = "TURNOVER_ID"
             Me.GridColumn_TurnoverID.Name = "GridColumn_TurnoverID"
-            Me.GridColumn_TurnoverID.OptionsColumn.AllowEdit = False
-            Me.GridColumn_TurnoverID.OptionsColumn.AllowFocus = False
+            Me.GridColumn_TurnoverID.OptionsColumn.ReadOnly = True
             Me.GridColumn_TurnoverID.Visible = True
             Me.GridColumn_TurnoverID.VisibleIndex = 5
-            '
-            'RepositoryItemLookUpEdit_TurnoverID
-            '
-            Me.RepositoryItemLookUpEdit_TurnoverID.AutoHeight = False
-            Me.RepositoryItemLookUpEdit_TurnoverID.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-            Me.RepositoryItemLookUpEdit_TurnoverID.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("TURNOVER_CODE", "Name1", 20, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Data.ColumnSortOrder.None)})
-            Me.RepositoryItemLookUpEdit_TurnoverID.DisplayMember = "TURNOVER_CODE"
-            Me.RepositoryItemLookUpEdit_TurnoverID.Name = "RepositoryItemLookUpEdit_TurnoverID"
-            Me.RepositoryItemLookUpEdit_TurnoverID.ValueMember = "TURNOVER_ID"
+            Me.GridColumn_TurnoverID.Width = 127
             '
             'GridColumn_Remark
             '
@@ -653,25 +660,6 @@
             Me.GridColumn_MoneyAmount.OptionsColumn.AllowFocus = False
             Me.GridColumn_MoneyAmount.Visible = True
             Me.GridColumn_MoneyAmount.VisibleIndex = 7
-            '
-            'GridColumn_PointIOType
-            '
-            Me.GridColumn_PointIOType.Caption = "点数出入类型"
-            Me.GridColumn_PointIOType.ColumnEdit = Me.RepositoryItemLookUpEdit_PointIOType
-            Me.GridColumn_PointIOType.FieldName = "POINT_IO_TYPE"
-            Me.GridColumn_PointIOType.Name = "GridColumn_PointIOType"
-            Me.GridColumn_PointIOType.OptionsColumn.AllowFocus = False
-            Me.GridColumn_PointIOType.Visible = True
-            Me.GridColumn_PointIOType.VisibleIndex = 3
-            '
-            'RepositoryItemLookUpEdit_PointIOType
-            '
-            Me.RepositoryItemLookUpEdit_PointIOType.AutoHeight = False
-            Me.RepositoryItemLookUpEdit_PointIOType.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-            Me.RepositoryItemLookUpEdit_PointIOType.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("ITEM_MEANING", "Name3", 20, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Data.ColumnSortOrder.None)})
-            Me.RepositoryItemLookUpEdit_PointIOType.DisplayMember = "ITEM_MEANING"
-            Me.RepositoryItemLookUpEdit_PointIOType.Name = "RepositoryItemLookUpEdit_PointIOType"
-            Me.RepositoryItemLookUpEdit_PointIOType.ValueMember = "ITEM_VALUE"
             '
             'GridColumn_RowSelected
             '
@@ -743,7 +731,6 @@
             CType(Me.GridControl_ClientPointIO, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.GridView_ClientPointIO, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemLookUpEdit_ClientID, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.RepositoryItemLookUpEdit_TurnoverID, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemLookUpEdit_PointIOType, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemCheckEdit_RowSelected, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
@@ -766,7 +753,6 @@
         Friend WithEvents GridColumn_MoneyAmount As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents GridColumn_RowSelected As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents RepositoryItemCheckEdit_RowSelected As DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
-        Friend WithEvents RepositoryItemLookUpEdit_TurnoverID As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
         Friend WithEvents GridColumn_RowHighLight As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents ButtonEdit_ClientCode As DevExpress.XtraEditors.ButtonEdit
         Friend WithEvents Label_ClientID As System.Windows.Forms.Label

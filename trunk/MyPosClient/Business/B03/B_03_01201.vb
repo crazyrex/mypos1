@@ -407,12 +407,10 @@ Namespace Business
                 Me._service.ServInitDisplay( _
                     Me._manifest.SVLM_DEFAULT_CLIENT_ID, _
                     chooseClientList, _
-                    chooseTurnoverList, _
                     chooseClientPointIOTypeList, _
                     ClientRowSE)
 
                 Me._manifest.RepositoryItemLookUpEdit_ClientID.DataSource = chooseClientList
-                Me._manifest.RepositoryItemLookUpEdit_TurnoverID.DataSource = chooseTurnoverList
                 Me._manifest.RepositoryItemLookUpEdit_PointIOType.DataSource = chooseClientPointIOTypeList
 
                 Me._manifest.ButtonEdit_ClientCode.Text = ClientRowSE.CLIENT_CODE
