@@ -828,6 +828,7 @@ Namespace Business
                 Dim clientConditions As New MyPosXAuto.Facade.AfMV.ConditionOfMV_MP_CLIENT(XL.DB.Utils.Condition.LogicOperators.Logic_Or)
                 clientConditions.Add(MyPosXAuto.Facade.AfMV.MV_MP_CLIENTColumns.CLIENT_CODEColumn, "=", Me._manifest.TextEdit_ClientCode.Text)
                 clientConditions.Add(MyPosXAuto.Facade.AfMV.MV_MP_CLIENTColumns.CELL_PHONEColumn, "=", Me._manifest.TextEdit_ClientCode.Text)
+                clientConditions.Add(MyPosXAuto.Facade.AfMV.MV_MP_CLIENTColumns.CLIENT_TYPEColumn, "=", MyPosXAuto.Decls.CIVALUE_CLIENT_TYPE_RETAIL)
 
                 MyPosXAuto.Facade.AfMV.FillMV_MP_CLIENTRowSEntity(clientRowSE, clientConditions)
 
