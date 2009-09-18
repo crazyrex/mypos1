@@ -161,21 +161,8 @@
   <data name="CheckEdit_ExportPictureToExcel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="CheckEdit_ExportPictureToExcel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>274, 7</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="CheckEdit_ExportPictureToExcel.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="CheckEdit_ExportPictureToExcel.Properties.Caption" xml:space="preserve">
-    <value>导出Excel时带有图片</value>
-  </data>
   <data name="CheckEdit_ExportPictureToExcel.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 19</value>
-  </data>
-  <data name="CheckEdit_ExportPictureToExcel.TabIndex" type="System.Int32, mscorlib">
-    <value>10009</value>
   </data>
   <data name="LinkLabel_CancelAll.Location" type="System.Drawing.Point, System.Drawing">
     <value>475, 10</value>
@@ -255,8 +242,18 @@
   <data name="GridColumn_CurrentCost.Caption" xml:space="preserve">
     <value>Book inventory cost</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="GridColumn_CurrentCost.VisibleIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+    <value>15</value>
+  </data>
+  <data name="GridColumn_CurrentOrigionSumPrice.Caption" xml:space="preserve">
+    <value>Book inventory Ori. Price</value>
+  </data>
+  <data name="GridColumn_CurrentOrigionSumPrice.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn_CurrentOrigionSumPrice.VisibleIndex" type="System.Int32, mscorlib">
+    <value>13</value>
   </data>
   <data name="GridColumn_OrigionUnitCost.CustomizationCaption" xml:space="preserve">
     <value>原单价</value>
@@ -265,18 +262,27 @@
     <value>True</value>
   </data>
   <data name="GridColumn_OrigionUnitCost.VisibleIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="GridColumn_UnitName.Caption" xml:space="preserve">
     <value>Unit</value>
   </data>
   <data name="GridColumn_UnitName.VisibleIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="GridColumn_Remarks.Caption" xml:space="preserve">
     <value>Remarks</value>
   </data>
-  <data name="GridColumn_Image.Caption" xml:space="preserve">
-    <value>Image</value>
+  <data name="GridColumn_WareImage.Caption" xml:space="preserve">
+    <value>WARE_IMAGE</value>
+  </data>
+  <data name="GridColumn_WareImage.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn_WareImage.VisibleIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="GridColumn_WareImage.Width" type="System.Int32, mscorlib">
+    <value>36</value>
   </data>
 </root>

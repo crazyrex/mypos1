@@ -3169,7 +3169,7 @@
     <value>0, 0</value>
   </data>
   <data name="GroupControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>682, 355</value>
+    <value>682, 356</value>
   </data>
   <data name="GroupControl1.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -3190,7 +3190,7 @@
     <value>0</value>
   </data>
   <data name="XtraTabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>682, 355</value>
+    <value>682, 356</value>
   </data>
   <data name="XtraTabPage1.Text" xml:space="preserve">
     <value>设置</value>
