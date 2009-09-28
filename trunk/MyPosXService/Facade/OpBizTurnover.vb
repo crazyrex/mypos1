@@ -734,7 +734,9 @@ Namespace Facade
                     MyPosXAuto.Facade.AfBizTurnover.DeleteH_MP_TURNOVERInfo(turnoverCacheDataRow.TURNOVER_ID)
                 End If
 
-                'MyPosXAuto.Facade.AfBizTurnover.SaveBatchH_MP_TURNOVER_DTLData(turnoverDtlCacheDataList)
+                OpBizTurnover.GenerateDefaultTurnoverConsign(turnoverCacheDataRow.TURNOVER_ID)
+                OpBizTurnover.GenerateDefaultTurnoverPayment(turnoverCacheDataRow.TURNOVER_ID)
+
             Next
         End Sub
 

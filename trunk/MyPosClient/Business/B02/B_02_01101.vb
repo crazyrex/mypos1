@@ -825,12 +825,15 @@ Namespace Business
                 End If
 
                 Dim clientRowSE As New MyPosXAuto.FTs.FT_MV_MP_CLIENTRowSEntity
-                Dim clientConditions As New MyPosXAuto.Facade.AfMV.ConditionOfMV_MP_CLIENT(XL.DB.Utils.Condition.LogicOperators.Logic_Or)
-                clientConditions.Add(MyPosXAuto.Facade.AfMV.MV_MP_CLIENTColumns.CLIENT_CODEColumn, "=", Me._manifest.TextEdit_ClientCode.Text)
-                clientConditions.Add(MyPosXAuto.Facade.AfMV.MV_MP_CLIENTColumns.CELL_PHONEColumn, "=", Me._manifest.TextEdit_ClientCode.Text)
-                clientConditions.Add(MyPosXAuto.Facade.AfMV.MV_MP_CLIENTColumns.CLIENT_TYPEColumn, "=", MyPosXAuto.Decls.CIVALUE_CLIENT_TYPE_RETAIL)
+                Dim clientCondition As New MyPosXAuto.Facade.AfMV.ConditionOfMV_MP_CLIENT(XL.DB.Utils.Condition.LogicOperators.Logic_Or)
+                Dim codeCondition As New MyPosXAuto.Facade.AfMV.ConditionOfMV_MP_CLIENT(XL.DB.Utils.Condition.LogicOperators.Logic_Or)
+                clientCondition.Add(codeCondition, True)
 
-                MyPosXAuto.Facade.AfMV.FillMV_MP_CLIENTRowSEntity(clientRowSE, clientConditions)
+                codeCondition.Add(MyPosXAuto.Facade.AfMV.MV_MP_CLIENTColumns.CLIENT_CODEColumn, "=", Me._manifest.TextEdit_ClientCode.Text)
+                codeCondition.Add(MyPosXAuto.Facade.AfMV.MV_MP_CLIENTColumns.CELL_PHONEColumn, "=", Me._manifest.TextEdit_ClientCode.Text)
+                clientCondition.Add(MyPosXAuto.Facade.AfMV.MV_MP_CLIENTColumns.CLIENT_TYPEColumn, "=", MyPosXAuto.Decls.CIVALUE_CLIENT_TYPE_RETAIL)
+
+                MyPosXAuto.Facade.AfMV.FillMV_MP_CLIENTRowSEntity(clientRowSE, clientCondition)
 
                 If clientRowSE.IsNull = True Then
                     Return MyPosXService.Decls.MSG_ALERT_00008

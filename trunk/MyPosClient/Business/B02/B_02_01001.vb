@@ -1028,9 +1028,12 @@ Namespace Business
 
             Try
 
-                Dim clientCondition As New MyPosXAuto.Facade.AfMV.ConditionOfMV_MP_CLIENT(XL.DB.Utils.Condition.LogicOperators.Logic_Or)
-                clientCondition.Add(MyPosXAuto.Facade.AfMV.MV_MP_CLIENTColumns.CLIENT_CODEColumn, "=", Me._manifest.TextEdit_ClientCode.Text)
-                clientCondition.Add(MyPosXAuto.Facade.AfMV.MV_MP_CLIENTColumns.CELL_PHONEColumn, "=", Me._manifest.TextEdit_ClientCode.Text)
+                Dim clientCondition As New MyPosXAuto.Facade.AfMV.ConditionOfMV_MP_CLIENT(XL.DB.Utils.Condition.LogicOperators.Logic_And)
+                Dim codeCondition As New MyPosXAuto.Facade.AfMV.ConditionOfMV_MP_CLIENT(XL.DB.Utils.Condition.LogicOperators.Logic_Or)
+                clientCondition.Add(codeCondition, True)
+
+                codeCondition.Add(MyPosXAuto.Facade.AfMV.MV_MP_CLIENTColumns.CLIENT_CODEColumn, "=", Me._manifest.TextEdit_ClientCode.Text)
+                codeCondition.Add(MyPosXAuto.Facade.AfMV.MV_MP_CLIENTColumns.CELL_PHONEColumn, "=", Me._manifest.TextEdit_ClientCode.Text)
                 clientCondition.Add(MyPosXAuto.Facade.AfMV.MV_MP_CLIENTColumns.CLIENT_TYPEColumn, "=", MyPosXAuto.Decls.CIVALUE_CLIENT_TYPE_RETAIL)
                 Dim clientRow = MyPosXAuto.Facade.AfMV.GetMV_MP_CLIENTRow(clientCondition)
 
