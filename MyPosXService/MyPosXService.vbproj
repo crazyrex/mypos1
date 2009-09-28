@@ -326,6 +326,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Xml" />
     <Reference Include="XL.Common, Version=0.0.0.68, Culture=neutral, processorArchitecture=MSIL">
