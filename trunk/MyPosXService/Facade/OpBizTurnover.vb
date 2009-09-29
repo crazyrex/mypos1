@@ -750,9 +750,7 @@ Namespace Facade
             Dim usingPointsRow As MyPosXAuto.FTs.FT_MV_MP_TURNOVER_SHOULD_USE_POINTRow
             Dim dbPointIOList As New MyPosXAuto.FTs.FT_H_MP_CLIENT_POINT_IO
 
-            Dim shouldGainPointCondition As New MyPosXAuto.Facade.AfMV.ConditionOfMV_MP_TURNOVER_SHOULD_GAIN_POINT(XL.DB.Utils.Condition.LogicOperators.Logic_And)
-            shouldGainPointCondition.Add(AfMV.MV_MP_TURNOVER_SHOULD_GAIN_POINTColumns.TURNOVER_TYPEColumn, "=", MyPosXAuto.Decls.CIVALUE_TURNOVER_TYPE_CHECK_IN)
-            MyPosXAuto.Facade.AfMV.FillFT_MV_MP_TURNOVER_SHOULD_GAIN_POINT(shouldGainPointCondition, gainingPointsList)
+            MyPosXAuto.Facade.AfMV.FillFT_MV_MP_TURNOVER_SHOULD_GAIN_POINT(Nothing, gainingPointsList)
 
             For Each gainingPointsRow In gainingPointsList
                 dbPointIOList.AddNewH_MP_CLIENT_POINT_IORow( _
@@ -767,28 +765,8 @@ Namespace Facade
 
             Next
 
-            shouldGainPointCondition.Clear()
-            gainingPointsList.Clear()
-            shouldGainPointCondition.Add(AfMV.MV_MP_TURNOVER_SHOULD_GAIN_POINTColumns.TURNOVER_TYPEColumn, "=", MyPosXAuto.Decls.CIVALUE_TURNOVER_TYPE_CHECK_OUT)
-            MyPosXAuto.Facade.AfMV.FillFT_MV_MP_TURNOVER_SHOULD_GAIN_POINT(shouldGainPointCondition, gainingPointsList)
 
-            For Each gainingPointsRow In gainingPointsList
-                dbPointIOList.AddNewH_MP_CLIENT_POINT_IORow( _
-                    gainingPointsRow.CLIENT_ID, _
-                    Guid.NewGuid.ToString, _
-                    gainingPointsRow.TURNOVER_TIME, _
-                    -CommTK.FDecimal(gainingPointsRow.RMB_TO_POINT_RATE * gainingPointsRow.POINT_GAIN), _
-                    -gainingPointsRow.POINT_GAIN, _
-                    MyPosXAuto.Decls.CIVALUE_POINT_IO_TYPE_IN_ACCUMULATE, _
-                    String.Empty, _
-                    gainingPointsRow.TURNOVER_ID)
-
-            Next
-
-
-            Dim shouldUsePointCondition As New MyPosXAuto.Facade.AfMV.ConditionOfMV_MP_TURNOVER_SHOULD_USE_POINT(XL.DB.Utils.Condition.LogicOperators.Logic_And)
-            shouldUsePointCondition.Add(AfMV.MV_MP_TURNOVER_SHOULD_USE_POINTColumns.TURNOVER_TYPEColumn, "=", MyPosXAuto.Decls.CIVALUE_TURNOVER_TYPE_CHECK_OUT)
-            MyPosXAuto.Facade.AfMV.FillFT_MV_MP_TURNOVER_SHOULD_USE_POINT(shouldUsePointCondition, usingPointsList)
+            MyPosXAuto.Facade.AfMV.FillFT_MV_MP_TURNOVER_SHOULD_USE_POINT(Nothing, usingPointsList)
 
             For Each usingPointsRow In usingPointsList
                 dbPointIOList.AddNewH_MP_CLIENT_POINT_IORow( _
@@ -803,24 +781,7 @@ Namespace Facade
 
             Next
 
-            shouldUsePointCondition.Clear()
-            usingPointsList.Clear()
-            shouldUsePointCondition.Add(AfMV.MV_MP_TURNOVER_SHOULD_USE_POINTColumns.TURNOVER_TYPEColumn, "=", MyPosXAuto.Decls.CIVALUE_TURNOVER_TYPE_CHECK_IN)
-            MyPosXAuto.Facade.AfMV.FillFT_MV_MP_TURNOVER_SHOULD_USE_POINT(shouldUsePointCondition, usingPointsList)
-
-            For Each usingPointsRow In usingPointsList
-                dbPointIOList.AddNewH_MP_CLIENT_POINT_IORow( _
-                    usingPointsRow.CLIENT_ID, _
-                    Guid.NewGuid.ToString, _
-                    usingPointsRow.TURNOVER_TIME, _
-                    -CommTK.FDecimal(usingPointsRow.POINT_TO_RMB_RATE * usingPointsRow.POINT_USE), _
-                    -usingPointsRow.POINT_USE, _
-                    MyPosXAuto.Decls.CIVALUE_POINT_IO_TYPE_OUT_CONSUME, _
-                    String.Empty, _
-                    usingPointsRow.TURNOVER_ID)
-
-            Next
-
+      
             MyPosXAuto.Facade.AfBizManage.SaveBatchH_MP_CLIENT_POINT_IOData(dbPointIOList)
 
         End Sub
