@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="DefaultLookAndFeel_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>278, 0</value>
+    <value>294, 0</value>
   </metadata>
   <metadata name="Timer_Surveillant.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>134, 0</value>
+    <value>141, 0</value>
   </metadata>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="SplitContainerControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -129,7 +129,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="SplitContainerControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 90</value>
+    <value>0, 125</value>
   </data>
   <data name="SplitContainerControl_Left.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -178,7 +178,7 @@
     <value>0, 0</value>
   </data>
   <data name="TreeList_WareClassify.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 140</value>
+    <value>259, 206</value>
   </data>
   <data name="TreeList_WareClassify.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -265,7 +265,7 @@
     <value>0, 0</value>
   </data>
   <data name="PictureBox_Item.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 260</value>
+    <value>259, 159</value>
   </data>
   <data name="PictureBox_Item.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -286,7 +286,7 @@
     <value>Panel2</value>
   </data>
   <data name="SplitContainerControl_Left.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 406</value>
+    <value>259, 371</value>
   </data>
   <data name="SplitContainerControl_Left.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -476,7 +476,7 @@
     <value>高亮显示</value>
   </data>
   <data name="GridControl_Ware.Size" type="System.Drawing.Size, System.Drawing">
-    <value>427, 406</value>
+    <value>427, 371</value>
   </data>
   <data name="GridControl_Ware.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -497,7 +497,7 @@
     <value>Panel2</value>
   </data>
   <data name="SplitContainerControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>700, 410</value>
+    <value>700, 375</value>
   </data>
   <data name="SplitContainerControl1.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -521,7 +521,7 @@
     <value>0, 0</value>
   </metadata>
   <data name="ToolStripButton_Choose.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>36, 22</value>
   </data>
   <data name="ToolStripButton_Choose.Text" xml:space="preserve">
     <value>选择</value>
@@ -530,7 +530,7 @@
     <value>False</value>
   </data>
   <data name="ToolStripButton_CreateWareClassify.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 22</value>
+    <value>60, 22</value>
   </data>
   <data name="ToolStripButton_CreateWareClassify.Text" xml:space="preserve">
     <value>新建类别</value>
@@ -554,37 +554,37 @@
     <value>Magenta</value>
   </data>
   <data name="ToolStripButton_CreateWare.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 22</value>
+    <value>60, 22</value>
   </data>
   <data name="ToolStripButton_CreateWare.Text" xml:space="preserve">
     <value>新建货品</value>
   </data>
   <data name="ToolStripButton_Revise.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>36, 22</value>
   </data>
   <data name="ToolStripButton_Revise.Text" xml:space="preserve">
     <value>修改</value>
   </data>
   <data name="ToolStripButton_Delete.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>36, 22</value>
   </data>
   <data name="ToolStripButton_Delete.Text" xml:space="preserve">
     <value>删除</value>
   </data>
   <data name="ToolStripButton_Refresh.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>36, 22</value>
   </data>
   <data name="ToolStripButton_Refresh.Text" xml:space="preserve">
     <value>刷新</value>
   </data>
   <data name="ToolStripButton_PrintLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 22</value>
+    <value>60, 22</value>
   </data>
   <data name="ToolStripButton_PrintLabel.Text" xml:space="preserve">
     <value>打印标签</value>
   </data>
   <data name="ToolStripButton_View.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>36, 22</value>
   </data>
   <data name="ToolStripButton_View.Text" xml:space="preserve">
     <value>查看</value>
@@ -608,7 +608,7 @@
     <value>Magenta</value>
   </data>
   <data name="ToolStripButton_ImportFromExcel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 22</value>
+    <value>65, 22</value>
   </data>
   <data name="ToolStripButton_ImportFromExcel.Text" xml:space="preserve">
     <value>Excel导入</value>
@@ -632,13 +632,13 @@
     <value>Magenta</value>
   </data>
   <data name="ToolStripButton_Report.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>36, 22</value>
   </data>
   <data name="ToolStripButton_Report.Text" xml:space="preserve">
     <value>报表</value>
   </data>
   <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>36, 22</value>
   </data>
   <data name="ToolStripButton_Close.Text" xml:space="preserve">
     <value>关闭</value>
@@ -664,8 +664,44 @@
   <data name="&gt;&gt;ToolStrip_Form.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="ComboBoxEdit_DownloadImageMode.EditValue" xml:space="preserve">
+    <value>全部下载</value>
+  </data>
+  <data name="ComboBoxEdit_DownloadImageMode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>82, 42</value>
+  </data>
+  <data name="ComboBoxEdit_DownloadImageMode.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
+  </data>
+  <data name="ComboBoxEdit_DownloadImageMode.Properties.Items" xml:space="preserve">
+    <value>全部下载</value>
+  </data>
+  <data name="ComboBoxEdit_DownloadImageMode.Properties.Items1" xml:space="preserve">
+    <value>当前分类</value>
+  </data>
+  <data name="ComboBoxEdit_DownloadImageMode.Properties.Items2" xml:space="preserve">
+    <value>当前货品</value>
+  </data>
+  <data name="ComboBoxEdit_DownloadImageMode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 21</value>
+  </data>
+  <data name="ComboBoxEdit_DownloadImageMode.TabIndex" type="System.Int32, mscorlib">
+    <value>10006</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxEdit_DownloadImageMode.Name" xml:space="preserve">
+    <value>ComboBoxEdit_DownloadImageMode</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxEdit_DownloadImageMode.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxEdit_DownloadImageMode.Parent" xml:space="preserve">
+    <value>PanelControl_Filter</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxEdit_DownloadImageMode.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="CheckEdit_ShowRetired.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 13</value>
+    <value>104, 13</value>
   </data>
   <data name="CheckEdit_ShowRetired.Properties.Caption" xml:space="preserve">
     <value>显示过期货品</value>
@@ -686,7 +722,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;CheckEdit_ShowRetired.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="CheckEdit_PriceCostModifiable.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -713,13 +749,13 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;CheckEdit_PriceCostModifiable.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="CheckEdit_RemotingMode.EditValue" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="CheckEdit_RemotingMode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>269, 13</value>
+    <value>22, 13</value>
   </data>
   <data name="CheckEdit_RemotingMode.Properties.Caption" xml:space="preserve">
     <value>在线模式</value>
@@ -743,10 +779,10 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;CheckEdit_RemotingMode.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="CheckEdit_ExportPictureToExcel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>132, 13</value>
+    <value>186, 42</value>
   </data>
   <data name="CheckEdit_ExportPictureToExcel.Properties.Caption" xml:space="preserve">
     <value>导出Excel带图片</value>
@@ -767,10 +803,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;CheckEdit_ExportPictureToExcel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="LinkLabel_DownloadImages.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+    <value>4</value>
   </data>
   <data name="LinkLabel_DownloadImages.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -782,7 +815,7 @@
     <value>NoControl</value>
   </data>
   <data name="LinkLabel_DownloadImages.Location" type="System.Drawing.Point, System.Drawing">
-    <value>423, 43</value>
+    <value>21, 45</value>
   </data>
   <data name="LinkLabel_DownloadImages.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 15</value>
@@ -806,7 +839,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;LinkLabel_DownloadImages.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="LinkLabel_SaveCostPriceModify.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -842,7 +875,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;LinkLabel_SaveCostPriceModify.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="LinkLabel_CancelAll.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -872,7 +905,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;LinkLabel_CancelAll.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="LinkLabel_SelectAll.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -899,7 +932,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;LinkLabel_SelectAll.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="LinkLabel_AllWareList.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -926,7 +959,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;LinkLabel_AllWareList.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="LinkLabel_AllWareExportExcel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -953,16 +986,16 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;LinkLabel_AllWareExportExcel.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="TextEdit_Search.EditValue" xml:space="preserve">
     <value />
   </data>
   <data name="TextEdit_Search.Location" type="System.Drawing.Point, System.Drawing">
-    <value>66, 38</value>
+    <value>62, 73</value>
   </data>
   <data name="TextEdit_Search.Size" type="System.Drawing.Size, System.Drawing">
-    <value>212, 20</value>
+    <value>212, 21</value>
   </data>
   <data name="TextEdit_Search.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -977,7 +1010,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;TextEdit_Search.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -986,7 +1019,7 @@
     <value>Arial, 9pt</value>
   </data>
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 40</value>
+    <value>21, 76</value>
   </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 15</value>
@@ -1007,7 +1040,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="PanelControl_Filter.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -1016,7 +1049,7 @@
     <value>0, 25</value>
   </data>
   <data name="PanelControl_Filter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>700, 65</value>
+    <value>700, 100</value>
   </data>
   <data name="PanelControl_Filter.TabIndex" type="System.Int32, mscorlib">
     <value>10001</value>
@@ -1034,19 +1067,19 @@
     <value>1</value>
   </data>
   <metadata name="SaveFileDialog_ExportExcel.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>473, 0</value>
+    <value>502, 0</value>
   </metadata>
   <data name="SaveFileDialog_ExportExcel.Filter" xml:space="preserve">
     <value>Excel文档|*.xls</value>
   </data>
   <metadata name="OpenFileDialog_ImportFile.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>671, 0</value>
+    <value>713, 0</value>
   </metadata>
   <data name="OpenFileDialog_ImportFile.Filter" xml:space="preserve">
     <value>Excel文件|*.xls;*.xlsx</value>
   </data>
   <metadata name="OpenFileDialog_SetImage.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>867, 0</value>
+    <value>922, 0</value>
   </metadata>
   <data name="OpenFileDialog_SetImage.Filter" xml:space="preserve">
     <value>图片文件|*.jpg;*.png</value>
