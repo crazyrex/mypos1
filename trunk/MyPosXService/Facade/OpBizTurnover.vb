@@ -97,7 +97,7 @@ Namespace Facade
                 "Default Payment", MyPosXAuto.Decls.CIVALUE_PAY_TYPE_CASH, _
                 turnoverID)
 
-            Facade.OpMP.ExecuteMP_MP_EXECUTE_FINISH_TURNOVER_PAYMENT_BALANCE()
+            Facade.OpMP.ExecuteMP_MP_EXECUTE_FINISH_TURNOVER_PAYMENT_BALANCE(turnoverID)
 
         End Sub
 
@@ -192,7 +192,7 @@ Namespace Facade
 
             MyPosXAuto.Facade.AfBizTurnover.SaveBatchH_MP_TURNOVER_CONSIGN_DTLData(consignDtlList)
 
-            OpMP.ExecuteMP_MP_EXECUTE_FINISH_TURNOVER_CONSIGN_BALANCE()
+            OpMP.ExecuteMP_MP_EXECUTE_FINISH_TURNOVER_CONSIGN_BALANCE(turnoverID)
         End Sub
 
         Public Shared Function GetPosBatchWareStockAmount(ByVal posID As String, ByVal batchCode As String) As Double

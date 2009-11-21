@@ -101,21 +101,21 @@ Namespace Facade
 
 
 
-        Public Shared Sub ExecuteMP_MP_EXECUTE_FINISH_TURNOVER_PAYMENT_BALANCE()
+        Public Shared Sub ExecuteMP_MP_EXECUTE_FINISH_TURNOVER_PAYMENT_BALANCE(ByVal turnoverID As String)
 
             Dim MPDataLayer As MyPosXAuto.DataLayer.EDLMP = MyPosXAuto.DataLayer.EDLMP.GetInstance()
 
 
-            MPDataLayer.ExecuteMP_MP_EXECUTE_FINISH_TURNOVER_PAYMENT_BALANCE()
+            MPDataLayer.ExecuteMP_MP_EXECUTE_FINISH_TURNOVER_PAYMENT_BALANCE(turnoverID)
 
         End Sub
 
-        Public Shared Sub ExecuteMP_MP_EXECUTE_FINISH_TURNOVER_CONSIGN_BALANCE()
+        Public Shared Sub ExecuteMP_MP_EXECUTE_FINISH_TURNOVER_CONSIGN_BALANCE(ByVal turnoverID As String)
 
             Dim MPDataLayer As MyPosXAuto.DataLayer.EDLMP = MyPosXAuto.DataLayer.EDLMP.GetInstance()
 
 
-            MPDataLayer.ExecuteMP_MP_EXECUTE_FINISH_TURNOVER_CONSIGN_BALANCE()
+            MPDataLayer.ExecuteMP_MP_EXECUTE_FINISH_TURNOVER_CONSIGN_BALANCE(turnoverID)
 
         End Sub
 
