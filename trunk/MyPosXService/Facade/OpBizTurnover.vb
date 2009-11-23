@@ -17,6 +17,13 @@ Namespace Facade
 
             Dim turnoverRow As MyPosXAuto.FTs.FT_H_MP_TURNOVERRow = _
                  MyPosXAuto.Facade.AfBizTurnover.GetH_MP_TURNOVERRow(turnoverCondition)
+
+            If IsNothing(turnoverRow) = True Then
+                Dim ex As New XLException(XLException.ErrorClassify.ReadDataError)
+                ex.SetMessage(MyPosXService.Decls.MSG_ALERT_00074)
+                Throw ex
+            End If
+
             Dim toTurnoverID As String = turnoverRow.TURNOVER_ID
 
             Dim fromTurnoverDtlList As New MyPosXAuto.FTs.FT_H_MP_TURNOVER_DTL
