@@ -435,9 +435,8 @@ Namespace Facade
             End If
 
 
-            Dim seedName As String = String.Format("TURNOVER_{0}", codeType)
 
-            'Dim turnoverDate As String = String.Format("{0:yyyyMMdd}", CommTK.GetsyncServerTime)
+            'Dim turnoverDate As String = String.Format("{0:yyyyMM}", CommTK.GetsyncServerTime)
 
 
 
@@ -448,51 +447,29 @@ Namespace Facade
                 Return CommTK.GetTranslatedString(MyPosXService.Decls.MSG_ALERT_00003)
             End If
 
-            Dim result As String = String.Empty
+            Dim resultBuilder As New LineStrBuilder
 
-            Dim labelPrintSet As String = SysInfo.ReadShareSysInfo(CommDecl.XLSSVN_LABEL_PRINT_SET).ToUpper
+            resultBuilder.AppendFormat("{0}-{1}-{2:yyyyMM}", _
+                    codeType, _
+                    posRow.POS_CODE, _
+                    CommTK.GetSyncServerTime)
 
-            Select Case labelPrintSet
-                Case "POWER LEGEND"
+            If preview = True Then
 
-                    If preview = True Then
+                resultBuilder.AppendFormat("-XXXXXX")
 
-                        result = String.Format("{0}XXXXXX", _
-                            codeType)
+            Else
 
-                    Else
+                Dim seedName As String = String.Format("TURNOVER_{0}_{1:yyyyMM}", codeType, CommTK.GetSyncServerTime)
 
-                        Dim locationSeedValue As Integer = _
-                            Facade.OpSysConfig.GetNewSeedID(seedName)
+                Dim locationSeedValue As Integer = _
+                    Facade.OpSysConfig.GetNewSeedID(seedName)
 
-                        result = String.Format("{0}{1:000000}", _
-                            codeType, _
-                            locationSeedValue)
+                resultBuilder.AppendFormat("{0:000000}", locationSeedValue)
 
-                    End If
+            End If
 
-                Case Else
-
-                    If preview = True Then
-
-                        result = String.Format("{0}{1}-XXXXXX", _
-                            codeType, _
-                            posRow.POS_CODE)
-
-                    Else
-
-                        Dim locationSeedValue As Integer = _
-                            Facade.OpSysConfig.GetNewSeedID(seedName)
-
-                        result = String.Format("{0}{1}{2:000000}", _
-                            codeType, _
-                            posRow.POS_CODE, _
-                            locationSeedValue)
-
-                    End If
-
-            End Select
-            Return result
+            Return resultBuilder.ToString
 
 
 
