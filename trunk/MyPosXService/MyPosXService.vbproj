@@ -293,6 +293,7 @@
     <Compile Include="S03\S_03_01201.vb" />
     <Compile Include="S03\S_03_01401.vb" />
     <Compile Include="S03\S_03_01501.vb" />
+    <Compile Include="S03\S_03_01601.vb" />
     <Compile Include="S08\S_08_00101.vb">
       <SubType>Code</SubType>
     </Compile>
