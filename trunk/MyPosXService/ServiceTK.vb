@@ -31,7 +31,8 @@ Public Class ServiceTK
     End Function
 
     Public Sub ServInitDefaultData( _
-        ByRef refDEFAULT_CI_CURRENCY_TYPE_VALUE_RMB As Integer _
+        ByRef refDEFAULT_CI_CURRENCY_TYPE_VALUE_RMB As Integer, _
+        ByRef refRegisterVersionLevelString As String _
         )
 
         Dim itemID As String = Guid.NewGuid.ToString
@@ -47,6 +48,8 @@ Public Class ServiceTK
         MyPosXService.Decls.DEFAULT_CI_CURRENCY_TYPE_VALUE_RMB = refDEFAULT_CI_CURRENCY_TYPE_VALUE_RMB
 
 
+        '=================================================================================================================
+        refRegisterVersionLevelString = SysInfo.RegisterVersionLevel.ToString
 
     End Sub
 
