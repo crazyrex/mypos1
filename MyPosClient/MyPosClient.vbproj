@@ -1174,6 +1174,9 @@
       <DependentUpon>M_01_00404.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M01\M_01_00501.resx">
+      <DependentUpon>M_01_00501.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Manifest\M01\M_01_00601.en.resx">
       <DependentUpon>M_01_00601.vb</DependentUpon>
       <SubType>Designer</SubType>
