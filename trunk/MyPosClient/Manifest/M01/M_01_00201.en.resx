@@ -131,7 +131,7 @@
     <value>Remarks</value>
   </data>
   <data name="TreeList_WareClassify.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 103</value>
+    <value>259, 204</value>
   </data>
   <data name="LinkLabel_DeleteImage.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 15</value>
@@ -419,9 +419,6 @@
   <data name="ComboBoxEdit_DownloadImageMode.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="ComboBoxEdit_DownloadImageMode.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
-    <value>Combo</value>
-  </data>
   <data name="ComboBoxEdit_DownloadImageMode.Properties.Items" xml:space="preserve">
     <value>Download All</value>
   </data>
@@ -462,7 +459,7 @@
     <value>Top, Right</value>
   </data>
   <data name="CheckEdit_ShowRetired.Location" type="System.Drawing.Point, System.Drawing">
-    <value>158, 11</value>
+    <value>158, 12</value>
   </data>
   <data name="CheckEdit_ShowRetired.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -474,7 +471,7 @@
     <value>103, 19</value>
   </data>
   <data name="CheckEdit_PriceCostModifiable.Location" type="System.Drawing.Point, System.Drawing">
-    <value>515, 47</value>
+    <value>524, 47</value>
   </data>
   <data name="CheckEdit_PriceCostModifiable.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -486,7 +483,7 @@
     <value>133, 19</value>
   </data>
   <data name="CheckEdit_RemotingMode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 13</value>
+    <value>28, 12</value>
   </data>
   <data name="CheckEdit_RemotingMode.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -498,7 +495,7 @@
     <value>90, 19</value>
   </data>
   <data name="CheckEdit_ExportPictureToExcel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>269, 41</value>
+    <value>228, 42</value>
   </data>
   <data name="CheckEdit_ExportPictureToExcel.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>True</value>
