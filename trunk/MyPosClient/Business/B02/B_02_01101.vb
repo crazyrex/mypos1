@@ -918,7 +918,7 @@ Namespace Business
                     Utils.Decls.CURRENT_POS_ROW.POS_ID, _
                     priceNoDiscount)
 
-                If origionPrice <= 0 Then
+                If origionPrice < 0 Then
                     Me._manifest.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0006)
                     Return String.Empty
                 End If

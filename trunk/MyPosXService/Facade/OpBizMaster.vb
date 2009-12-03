@@ -27,7 +27,7 @@ Namespace Facade
                 MyPosXAuto.Facade.AfXV.GetXV_S_MP_POS_SET_WARERow(warePriceSetDtlConditions)
 
             If IsNothing(posSetWareRow) = True Then
-                Return 0
+                Return -1
             End If
 
             origionPrice = posSetWareRow.UNIT_PRICE
