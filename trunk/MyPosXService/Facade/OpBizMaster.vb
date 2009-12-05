@@ -2,6 +2,7 @@ Imports XL.Common
 Imports XL.Common.Utils
 Imports MyPosXAuto.Facade
 Imports System.Collections
+Imports System.Collections.Generic
 
 Namespace Facade
 
@@ -378,13 +379,13 @@ Namespace Facade
         Public Shared Sub ImportClassifyList( _
             ByVal parentWareClassifyID As String, _
             ByVal wareClassifyList As MyPosXAuto.FTs.FT_M_MP_WARE_CLASSIFY, _
-            ByVal classifyRows As MyPosXAuto.FTs.FT_M_MP_WARE_CLASSIFYRow(), _
+            ByVal classifyRows As List(Of MyPosXAuto.FTs.FT_M_MP_WARE_CLASSIFYRow), _
             ByRef involvedClassifyCodes As ArrayList)
 
             Dim wareClassifyCondition As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_MP_WARE_CLASSIFY(XL.DB.Utils.Condition.LogicOperators.Logic_And)
             Dim wareClassifyRow As MyPosXAuto.FTs.FT_M_MP_WARE_CLASSIFYRow = Nothing
             Dim dbWareClassifyRow As MyPosXAuto.FTs.FT_M_MP_WARE_CLASSIFYRow = Nothing
-            Dim childClassifyRows As MyPosXAuto.FTs.FT_M_MP_WARE_CLASSIFYRow() = Nothing
+            Dim childClassifyRows As New List(Of MyPosXAuto.FTs.FT_M_MP_WARE_CLASSIFYRow)
             Dim wareClassifyID As String
 
             For Each wareClassifyRow In classifyRows
@@ -436,7 +437,7 @@ Namespace Facade
 
         End Sub
 
-        
+
     End Class
 
 End Namespace

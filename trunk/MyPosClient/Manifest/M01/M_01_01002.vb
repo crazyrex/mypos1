@@ -370,7 +370,7 @@ Namespace Manifest
 
             Next
 
-            If Me.SVFT_BINDING_LIST.FindRowsHighlight(MyPosXService.Decls.ROW_HIGHLIGHT_ROW_DATA_MISSING).Length > 0 Then
+            If Me.SVFT_BINDING_LIST.FindRowsHighlight(MyPosXService.Decls.ROW_HIGHLIGHT_ROW_DATA_MISSING).Count > 0 Then
                 Return MyPosXService.Decls.MSG_ALERT_00061
             End If
 

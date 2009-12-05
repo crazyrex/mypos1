@@ -875,7 +875,7 @@ Namespace Manifest
                 Dim saleTemplateCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_T_MP_SALE_TEMPLATE_WARE(XL.DB.Utils.Condition.LogicOperators.Logic_And)
                 saleTemplateCondition.Add(MyPosXAuto.Facade.AfXV.XV_T_MP_SALE_TEMPLATE_WAREColumns.WARE_IDColumn, "=", Me.SVFR_BINDING_TURNOVER_DTL_ROW.WARE_ID)
 
-                If Me.SVFT_REF_SALE_TEMPLATE_WARE_LIST.FindRowsByCondition(saleTemplateCondition).Length = 0 Then
+                If Me.SVFT_REF_SALE_TEMPLATE_WARE_LIST.FindRowsByCondition(saleTemplateCondition).Count = 0 Then
                     Me.Panel_DetailDiscount.Enabled = True
                 End If
                 'Me.ToolStripButton_Delete.Enabled = True

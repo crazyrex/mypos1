@@ -390,12 +390,9 @@ Namespace Business
                                                                                                                       
                 Dim chooseWareList As New MyPosXAuto.FTs.FT_M_MP_WARE
                 Dim chooWareBomTypeList As New MyPosXAuto.FTs.FT_CIV_WARE_BOM_TYPE
-
                 MyPosXAuto.Facade.AfMV.FillFT_MV_MP_WARE_BOM(Nothing, Me._manifest.SVFT_BINDING_LIST)
 
                 Me._manifest.TreeList_WareBomList.DataSource = Me._manifest.SVFT_BINDING_LIST
-
-
 
                 'Dim chooseAssetConformationList As New MyPosXAuto.FTs.FT_CIV_ASSET_CONFORMATION
 
@@ -565,44 +562,70 @@ Namespace Business
                                                                                     
             Try                                                                     
 
+                If Me._manifest.SVLM_CREATING_ROOT_WARE_ID.Length > 0 Then
+
+                    Dim wareRow = MyPosXAuto.Facade.AfBizMaster.GetM_MP_WARERow(Me._manifest.SVLM_CREATING_ROOT_WARE_ID)
+                    If IsNothing(wareRow) = True Then
+                        Return MyPosXService.Decls.MSG_ALERT_00008
+                    End If
+                    Me._manifest.SVFT_BINDING_LIST.AddNewMV_MP_WARE_BOMRow( _
+                        0, _
+                        0, _
+                        Me._manifest.SVLM_CREATING_ROOT_WARE_ID, _
+                        String.Empty, _
+                        String.Empty, _
+                        String.Empty, _
+                        wareRow.WARE_CODE, _
+                        wareRow.WARE_NAME, _
+                        MyPosXService.Decls.DEFAULT_CI_VALUE_WARE_BOM_TYPE_NONE)
+
+                    Me._manifest.TreeList_WareBomList.DataSource = Me._manifest.SVFT_BINDING_LIST
+
+                    Return String.Empty
+                End If
+
+
+
                 Dim wareCodes As New ArrayList
-                For Each wareCode In Me._manifest.MemoEdit1.Text.Split(Chr(10))
+                For Each wareCode In Me._manifest.MemoEdit_WareCodes.Text.Split(Chr(10))
                     wareCodes.Add(wareCode.Trim)
                 Next
 
-                Dim bomCondition As New MyPosXAuto.Facade.AfMV.ConditionOfMV_MP_WARE_BOM(XL.DB.Utils.Condition.LogicOperators.Logic_And)
-                bomCondition.Add(MyPosXAuto.Facade.AfMV.MV_MP_WARE_BOMColumns.WARE_CODEColumn, True, wareCodes)
-                bomCondition.Add( 
-
+                Dim chooseRootWareList As New MyPosXAuto.FTs.FT_M_MP_WARE
                 Dim servResult As String = _
-                    Me._service.ServLoadList()
+                    Me._service.ServLoadList( _
+                        CommTK.ALToStr(wareCodes), _
+                        Me._manifest.SVFT_BINDING_LIST, _
+                        chooseRootWareList)
 
                 If servResult.Length > 0 Then
                     Return servResult
                 End If
-                                                                                    
-            Catch ex As XL.Common.Utils.XLException                                 
-                                                                                    
-                Dim logContentBuilder As New LineStrBuilder                         
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)        
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace) 
-                                                                                    
-                WinTK.OutputLog("XL Exception", logContentBuilder.ToString())     
-                                                                                    
-                Return ex.Message                                                   
-                                                                                    
-            Catch ex As Exception                                                   
-                                                                                    
-                Dim logContentBuilder As New LineStrBuilder                         
-                logContentBuilder.AppendLine("Message: {0}", ex.Message)        
-                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace) 
-                                                                                    
+
+                Me._manifest.TreeList_WareBomList.DataSource = Me._manifest.SVFT_BINDING_LIST
+
+            Catch ex As XL.Common.Utils.XLException
+
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
+                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
+                WinTK.OutputLog("XL Exception", logContentBuilder.ToString())
+
+                Return ex.Message
+
+            Catch ex As Exception
+
+                Dim logContentBuilder As New LineStrBuilder
+                logContentBuilder.AppendLine("Message: {0}", ex.Message)
+                logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)
+
                 WinTK.OutputLog("Exception occured", logContentBuilder.ToString())
-                                                                                    
-                XL.Win.Window.XLMessageBox.UseSmallFont = True                      
-                Return ex.Message & vbNewLine & ex.StackTrace.ToString()            
-                                                                                    
-            End Try                                                                 
+
+                XL.Win.Window.XLMessageBox.UseSmallFont = True
+                Return ex.Message & vbNewLine & ex.StackTrace.ToString()
+
+            End Try
                                                                                     
             Return String.Empty                                                     
                                                                                     

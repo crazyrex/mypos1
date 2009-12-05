@@ -32,20 +32,33 @@ Public Class ServiceTK
 
     Public Sub ServInitDefaultData( _
         ByRef refDEFAULT_CI_CURRENCY_TYPE_VALUE_RMB As Integer, _
+        ByRef refDEFAULT_CI_VALUE_WARE_BOM_TYPE_NONE As Integer, _
         ByRef refRegisterVersionLevelString As String _
         )
 
         Dim itemID As String = Guid.NewGuid.ToString
 
-        MyPosXService.Decls.DEFAULT_CI_CURRENCY_TYPE_VALUE_RMB = _
+        MyPosXService.Decls.DEFAULT_CI_VALUE_CURRENCY_TYPE_RMB = _
             MyPosXService.Facade.OpSysConfig.CreateCommonItem( _
                 itemID, _
                 MyPosXAuto.Decls.CICNAME_CURRENCY_TYPE, _
-                MyPosXService.Decls.DEFAULT_CI_CURRENCY_TYPE_TEXT_RMB, _
+                MyPosXService.Decls.DEFAULT_CI_TEXT_CURRENCY_TYPE_RMB, _
                 String.Empty, _
                 True)
 
-        MyPosXService.Decls.DEFAULT_CI_CURRENCY_TYPE_VALUE_RMB = refDEFAULT_CI_CURRENCY_TYPE_VALUE_RMB
+        MyPosXService.Decls.DEFAULT_CI_VALUE_CURRENCY_TYPE_RMB = refDEFAULT_CI_CURRENCY_TYPE_VALUE_RMB
+
+        itemID = Guid.NewGuid.ToString
+
+        MyPosXService.Decls.DEFAULT_CI_VALUE_WARE_BOM_TYPE_NONE = _
+            MyPosXService.Facade.OpSysConfig.CreateCommonItem( _
+                itemID, _
+                MyPosXAuto.Decls.CICNAME_CURRENCY_TYPE, _
+                MyPosXService.Decls.DEFAULT_CI_TEXT_WARE_BOM_TYPE_NONE, _
+                String.Empty, _
+                True)
+
+        MyPosXService.Decls.DEFAULT_CI_VALUE_WARE_BOM_TYPE_NONE = refDEFAULT_CI_VALUE_WARE_BOM_TYPE_NONE
 
 
         '=================================================================================================================

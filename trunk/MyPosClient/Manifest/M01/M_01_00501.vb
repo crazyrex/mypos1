@@ -25,15 +25,15 @@ Namespace Manifest
 
     Partial Public Class M_01_00501
 
-#Region"Prerequested Inits"
+#Region "Prerequested Inits"
 
-        #Region"Shared values"
+#Region "Shared values"
         '
         'Shared Value, 用于与其它窗体交换数值的情况下, 需要自己根据需要更改命名
         '原则上所有UTLD的变量不能出现在成品中, 在确定不需要的情况下应删除UTLD
         '-------------------------------------------------------------------
-        Public SV_UTLD_0001 As String ="SV_UTLD_0001"
-        Public SV_UTLD_0002 As String ="SV_UTLD_0002"
+        Public SV_UTLD_0001 As String = "SV_UTLD_0001"
+        Public SV_UTLD_0002 As String = "SV_UTLD_0002"
         'Public SV_UTLD_0003 As String ="SV_UTLD_0003"
         'Public SV_UTLD_0004 As String ="SV_UTLD_0004"
         'Public SV_UTLD_0005 As String ="SV_UTLD_0005"
@@ -41,7 +41,7 @@ Namespace Manifest
         'Public SV_RPTOPT_LABEL As XForm.ReportOption = Nothing
 
         '读取,显示数据的条件值变量
-        'Public SVLM_UTLD_0001 As String ="SVLM_UTLD_0001"
+        Public SVLM_CREATING_ROOT_WARE_ID As String = String.Empty
         'Public SVLM_UTLD_0002 As String ="SVLM_UTLD_0002"
 
         '数据列表变量
@@ -50,10 +50,10 @@ Namespace Manifest
 
         Public SVFR_SELECTING_ROW As MyPosXAuto.FTs.FT_MV_MP_WARE_BOMRow
 
-        #End Region
+#End Region
 
 
-        #Region"Private values"
+#Region "Private values"
 
         'Private PV_UTLD_0001 As String =""
         'Private PV_UTLD_0002 As String =""
@@ -61,13 +61,13 @@ Namespace Manifest
         'Private PV_UTLD_0004 As String =""
         'Private PV_UTLD_0005 As String =""
 
-        #End Region
+#End Region
         'Launch Conditions
         '-------------------------------------------------------------------
 
         Public LAUNCH_CONDITION As MyPosXService.S_01_00501.LCs
 
-        Public Overrides Sub SetLC(LCName As String)
+        Public Overrides Sub SetLC(ByVal LCName As String)
 
             Me._launchCondition = LCName
             Me.LAUNCH_CONDITION = CType(System.Enum.Parse(GetType(MyPosXService.S_01_00501.LCs), LCName), MyPosXService.S_01_00501.LCs)
@@ -93,14 +93,14 @@ Namespace Manifest
             '在 InitializeComponent() 调用之后添加任何初始化
             Me.SetAuthorName("Henry Qu")
 
-            Me.InitializeMe(New Business.B_01_00501(Me), "基本信息","商品BOM管理",False)
+            Me.InitializeMe(New Business.B_01_00501(Me), "基本信息", "商品BOM管理", False)
             Me._bizAgent = CType(Me.BizAgent, Business.B_01_00501)
 
         End Sub
 
 #End Region
 
-#Region"Basic overrides"
+#Region "Basic overrides"
 
         Protected Overrides Sub IA_InitBeforeRC()
 
@@ -124,30 +124,30 @@ Namespace Manifest
             '指定需要备份值的控件
             'Me.SetValueBackupControl(Me.ControlToBeBackup)
 
-                Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Add, AddressOf Me.TbActionAdd)
-                Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Remove, AddressOf Me.TbActionRemove)
-                Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Refresh, AddressOf Me.TbActionRefresh)
-                Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Close, AddressOf Me.TbActionClose)
-                'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0001, AddressOf Me.TbActionUtld0001)
-                'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0002, AddressOf Me.TbActionUtld0002)
-                'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0003, AddressOf Me.TbActionUtld0003)
-                'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0004, AddressOf Me.TbActionUtld0004)
-                'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0005, AddressOf Me.TbActionUtld0005)
-                'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0006, AddressOf Me.TbActionUtld0006)
-                'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0007, AddressOf Me.TbActionUtld0007)
-                'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0008, AddressOf Me.TbActionUtld0008)
-                'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0009, AddressOf Me.TbActionUtld0009)
-                'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0010, AddressOf Me.TbActionUtld0010)
-                'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0011, AddressOf Me.TbActionUtld0011)
-                'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0012, AddressOf Me.TbActionUtld0012)
-                'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0013, AddressOf Me.TbActionUtld0013)
-                'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0014, AddressOf Me.TbActionUtld0014)
-                'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0015, AddressOf Me.TbActionUtld0015)
-                'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0016, AddressOf Me.TbActionUtld0016)
-                'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0017, AddressOf Me.TbActionUtld0017)
-                'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0018, AddressOf Me.TbActionUtld0018)
-                'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0019, AddressOf Me.TbActionUtld0019)
-                'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0020, AddressOf Me.TbActionUtld0020)
+            Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Add, AddressOf Me.TbActionAdd)
+            Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Remove, AddressOf Me.TbActionRemove)
+            Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Refresh, AddressOf Me.TbActionRefresh)
+            Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Close, AddressOf Me.TbActionClose)
+            'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0001, AddressOf Me.TbActionUtld0001)
+            'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0002, AddressOf Me.TbActionUtld0002)
+            'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0003, AddressOf Me.TbActionUtld0003)
+            'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0004, AddressOf Me.TbActionUtld0004)
+            'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0005, AddressOf Me.TbActionUtld0005)
+            'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0006, AddressOf Me.TbActionUtld0006)
+            'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0007, AddressOf Me.TbActionUtld0007)
+            'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0008, AddressOf Me.TbActionUtld0008)
+            'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0009, AddressOf Me.TbActionUtld0009)
+            'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0010, AddressOf Me.TbActionUtld0010)
+            'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0011, AddressOf Me.TbActionUtld0011)
+            'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0012, AddressOf Me.TbActionUtld0012)
+            'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0013, AddressOf Me.TbActionUtld0013)
+            'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0014, AddressOf Me.TbActionUtld0014)
+            'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0015, AddressOf Me.TbActionUtld0015)
+            'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0016, AddressOf Me.TbActionUtld0016)
+            'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0017, AddressOf Me.TbActionUtld0017)
+            'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0018, AddressOf Me.TbActionUtld0018)
+            'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0019, AddressOf Me.TbActionUtld0019)
+            'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0020, AddressOf Me.TbActionUtld0020)
 
 
         End Sub
@@ -161,7 +161,9 @@ Namespace Manifest
             Select Case Me.LAUNCH_CONDITION
 
             End Select
-
+            If Me.SVLM_CREATING_ROOT_WARE_ID.Length > 0 Then
+                Me.PanelControl_Filter.Visible = False
+            End If
             'Initialize option list controls which value source isn't from the edit form content
 
             Me._bizAgent.DoRequest(Business.B_01_00501.Affairs.InitDisplay, False)
@@ -211,7 +213,7 @@ Namespace Manifest
             '对于列表画面
             '-------------------------------------------------------------------
 
-            Me.UpdateDisplay
+            Me.UpdateDisplay()
 
 
         End Sub
@@ -231,23 +233,38 @@ Namespace Manifest
 
                 'Case "TbActionReport"                                                                                
 
-                    'Dim optionForm As XForm.Manifest.M_ReportOptions = CType(popupForm, XForm.Manifest.M_ReportOptions)
-                    'Select Case optionForm.SV_SELECTING_OPTION.Type                                                    
-                    '    Case XForm.ReportOption.PrintType.Label                                                        
-                    '        Me._bizAgent.DoRequest(Business.B_02_00X01.Affairs.PrintLabels, False)                     
-                    '    Case XForm.ReportOption.PrintType.Excel                                                        
-                    '        Select Case optionForm.SV_SELECTING_OPTION.Name                                            
-                    '            Case MyPosXService.Decls.RPT_NAME_0002                                                      
-                    '                Me._bizAgent.DoRequest(Business.B_02_00X01.Affairs.ExportXXXListExcel, False)    
-                    '        End Select                                                                                 
-                    'End Select                                                                                         
+                'Dim optionForm As XForm.Manifest.M_ReportOptions = CType(popupForm, XForm.Manifest.M_ReportOptions)
+                'Select Case optionForm.SV_SELECTING_OPTION.Type                                                    
+                '    Case XForm.ReportOption.PrintType.Label                                                        
+                '        Me._bizAgent.DoRequest(Business.B_02_00X01.Affairs.PrintLabels, False)                     
+                '    Case XForm.ReportOption.PrintType.Excel                                                        
+                '        Select Case optionForm.SV_SELECTING_OPTION.Name                                            
+                '            Case MyPosXService.Decls.RPT_NAME_0002                                                      
+                '                Me._bizAgent.DoRequest(Business.B_02_00X01.Affairs.ExportXXXListExcel, False)    
+                '        End Select                                                                                 
+                'End Select                                                                                         
 
-                Case"ResponseTitleName1"
+                Case "TbActionAdd"
+                    Dim chooseForm = TryCast(popupForm, M_01_00201)
 
+                    For Each wareRow As MyPosXAuto.FTs.FT_M_MP_WARERow In chooseForm.SVFT_BINDING_WARE_LIST
+                        Dim addRow = Me.SVFT_BINDING_LIST.AddNewMV_MP_WARE_BOMRow( _
+                            0, _
+                            1, _
+                            wareRow.WARE_ID, _
+                            wareRow.WARE_CODE, _
+                            wareRow.WARE_NAME, _
+                            Me.SVFR_SELECTING_ROW.BELONG_WARE, _
+                            Me.SVFR_SELECTING_ROW.BELONG_WARE_CODE, _
+                            Me.SVFR_SELECTING_ROW.BELONG_WARE_NAME, _
+                            MyPosXService.Decls.DEFAULT_CI_VALUE_WARE_BOM_TYPE_NONE)
+                        addRow.ROW_HIGHLIGHT = MyPosXService.Decls.ROW_HIGHLIGHT_MODIFIED
+                    Next
 
-                Case"ResponseTitleName2"
+                    Me.IsSaved = False
+                Case "ResponseTitleName2"
 
-                Case"ResponseTitleName3"
+                Case "ResponseTitleName3"
 
 
             End Select
@@ -296,7 +313,7 @@ Namespace Manifest
             '保存操作结束后重置保存状态
             '-------------------------------------------------------------------
 
-           Return True
+            Return True
 
         End Function
 
@@ -327,7 +344,7 @@ Namespace Manifest
 
 #End Region
 
-#Region"Event Processes"
+#Region "Event Processes"
         Private Sub _bizAgent_Responded(ByVal responseResult As XL.Win.Component.BaseAgent.AgentResponse) Handles _bizAgent.Responded
 
             Dim operResult As String = CommTK.FString(responseResult.GetValue(WinDecl.RVN_SUCCEED))
@@ -363,18 +380,18 @@ Namespace Manifest
                 '    Me.GridView_XXXXXList.BestFitColumns()         
 
                 'Case Business.B_02_00202.Affairs.SaveInfo             
-                    'Window.XLMessageBox.ShowMessage( _                
-                    '    MyPosXService.Decls.MSG_OK_00001, _                
-                    '    Window.XLMessageBox.MessageType.Information, _
-                    '    MessageBoxButtons.OK)                         
-                    'Me.ResponseToParentForm()                         
+                'Window.XLMessageBox.ShowMessage( _                
+                '    MyPosXService.Decls.MSG_OK_00001, _                
+                '    Window.XLMessageBox.MessageType.Information, _
+                '    MessageBoxButtons.OK)                         
+                'Me.ResponseToParentForm()                         
 
-                    'If Me.SV_EDITING_TRANSFER_ID > 0 Then            
-                    '    Me.ResetSaveMode()                            
-                    '    Me.CloseForm()                                
-                    'Else                                              
-                    '    Me.IA_ClearContent()                          
-                    'End If                                            
+                'If Me.SV_EDITING_TRANSFER_ID > 0 Then            
+                '    Me.ResetSaveMode()                            
+                '    Me.CloseForm()                                
+                'Else                                              
+                '    Me.IA_ClearContent()                          
+                'End If                                            
 
 
             End Select
@@ -415,7 +432,7 @@ Namespace Manifest
         '    Dim chooseForm As New M_01_00101(Me.TransactRequestHandle, Me.FormID)                                                                                                         
         '    Me.PopupForm(chooseForm, "ButtonEdit_BranchCode_ButtonClick", False)                                                                                                        
         'End Sub                                                                                                                                                                           
-                                                                                                                                                                                          
+
         'Private Sub ButtonEdit_BranchCode_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles ButtonEdit_BranchCode.KeyDown                             
         '    If e.KeyCode = Keys.Enter Then                                                                                                                                                
         '        Me._bizAgent.DoRequest(Business.B_01_00201.Affairs.LoadBranchInfoByCode, False)                                                                                           
@@ -424,17 +441,24 @@ Namespace Manifest
 
 #End Region
 
-#Region"ToolStrip Actions"
-
+#Region "ToolStrip Actions"
 
         Private Sub TbActionAdd()
 
-            'Dim choiceForm As New M_(Me.TransactRequestHandle, Me.FormID)
-            'Me.PopupForm(choiceForm,"TbActionAdd", False)
+            Dim choiceForm As New M_01_00201(Me.TransactRequestHandle, Me.FormID)
+            choiceForm.LAUNCH_CONDITION = MyPosXService.S_01_00201.LCs.Choose
+            Me.PopupForm(choiceForm, "TbActionAdd", False)
 
         End Sub
 
         Private Sub TbActionRemove()
+
+            If Me.SVFR_SELECTING_ROW.OWNING_WARE.Length = 0 Then
+                Return
+            End If
+
+            Me.SVFR_SELECTING_ROW.Delete()
+            Me.IsSaved = False
 
         End Sub
 
@@ -553,46 +577,31 @@ Namespace Manifest
 
 #End Region
 
-#Region"Private Methods"
+#Region "Private Methods"
 
 
         Private Sub DoPrivateUpdateSelectingRow()
 
 
-            'Me.SVFR_SELECTING_ROW = Nothing                          
-            '                                                         
-            'Me.ToolStripButton_Delete.Enabled = False                
-            'Me.ToolStripButton_Revise.Enabled = False                
-            '                                                         
-            'If Me.GridView_BranchList.RowCount > 0 Then              
-            '    Me.SVFR_SELECTING_ROW = _                            
-            '        CType(Me.GridView_BindingList.GetDataRow( _      
-            '            Me.GridView_BindingList.FocusedRowHandle),  _
-            '            XAuto.FTs.FT_Row)                            
-            '                                                         
-            '    Me.ToolStripButton_Delete.Enabled = True             
-            '    Me.ToolStripButton_Revise.Enabled = True             
-            '                                                         
-            'End If                                                   
+            Me.SVFR_SELECTING_ROW = Nothing
+
+            Me.ToolStripButton_Remove.Enabled = False
+            Me.ToolStripButton_Add.Enabled = False
 
 
+            If IsNothing(Me.TreeList_WareBomList.FocusedNode) = False Then
 
-            'If IsNothing(Me.TreeList_XXXX.FocusedNode) = False Then  
-            '                                                         
-            '    Me.SVFR_SELECTING_ROW = _                            
-            '         CType(CType( _                                  
-            '             Me.TreeList_XXXX.GetDataRecordByNode( _     
-            '                 Me.TreeList_XXXX.FocusedNode),  _       
-            '             DataRowView).Row, XAuto.FTs.FT_M_AV_XXXXRow)
-            '                                                         
-            '    If Me.SVFR_SELECTING_ROW.XXXX_ID > 0 Then            
-            '        Me.ToolStripButton_Choose.Enabled = True         
-            '    End If                                               
-            '                                                         
-            '    Me.ToolStripButton_DeleteXXXX.Enabled = True         
-            '    Me.ToolStripButton_ReviseXXXX.Enabled = True         
-            '                                                         
-            'End If                                                   
+                Me.SVFR_SELECTING_ROW = _
+                     CType(CType( _
+                         Me.TreeList_WareBomList.GetDataRecordByNode( _
+                             Me.TreeList_WareBomList.FocusedNode),  _
+                         DataRowView).Row, MyPosXAuto.FTs.FT_MV_MP_WARE_BOMRow)
+
+                Me.ToolStripButton_Remove.Enabled = True
+                Me.ToolStripButton_Add.Enabled = True
+                'Me.ToolStripButton_ReviseXXXX.Enabled = True
+
+            End If
 
 
 
@@ -701,7 +710,7 @@ Namespace Manifest
 
 #End Region
 
-#Region"Public Methods"
+#Region "Public Methods"
 
 
         Public Sub DoPublicUtld0001()
@@ -806,7 +815,7 @@ Namespace Manifest
 
 #End Region
 
-        
+
     End Class
 
 

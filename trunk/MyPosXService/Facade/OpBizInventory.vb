@@ -93,7 +93,7 @@ Namespace Facade
             wareTotalConditions.Clear()
             wareTotalConditions.Add(AfMV.MV_MP_POS_WARE_TOTALColumns.WARE_IDColumn, False, involvedWareIDs)
 
-            Dim wareTotalRows As MyPosXAuto.FTs.FT_MV_MP_POS_WARE_TOTALRow() = wareTotalList.FindRowsByCondition(wareTotalConditions)
+            Dim wareTotalRows = wareTotalList.FindRowsByCondition(wareTotalConditions)
 
             For Each wareTotalRow In wareTotalRows
 
