@@ -109,7 +109,8 @@ Public Class S_01_00501
 
     Public Function ServLoadList( _
         ByVal valWareCodesString As String, _
-        ByRef refBindingList As MyPosXAuto.FTs.FT_MV_MP_WARE_BOM _
+        ByRef refBindingList As MyPosXAuto.FTs.FT_MV_MP_WARE_BOM, _
+        ByRef refChooseRootWareList As MyPosXAuto.FTs.FT_M_MP_WARE _
         ) As String
 
         If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTE_AUTH_DENIED
@@ -117,10 +118,77 @@ Public Class S_01_00501
         Try
             Dim wareCodes = CommTK.StrToAL(valWareCodesString)
 
-            Dim rootWareIDs As New List(Of String)
+            Dim bomCondition As New MyPosXAuto.Facade.AfMV.ConditionOfMV_MP_WARE_BOM(XL.DB.Utils.Condition.LogicOperators.Logic_And)
+            Dim bomRow As MyPosXAuto.FTs.FT_MV_MP_WARE_BOMRow
+            refBindingList.Clear()
+            Dim bindingRow As MyPosXAuto.FTs.FT_MV_MP_WARE_BOMRow
+            Dim wareCondition As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_MP_WARE(XL.DB.Utils.Condition.LogicOperators.Logic_And)
+            Dim addedChooseRootWareIDs As New List(Of String)
+
+            '找出所有的根货品
+            Dim owningWareIDQueue As New Queue(Of String)
             For Each wareCode As String In wareCodes
 
+                '根据货品条码找到为组合件的记录
+                bomCondition.Clear()
+                bomCondition.Add(MyPosXAuto.Facade.AfMV.MV_MP_WARE_BOMColumns.OWNING_WARE_CODEColumn, "=", wareCode)
+                bomRow = MyPosXAuto.Facade.AfMV.GetMV_MP_WARE_BOMRow(bomCondition)
+
+                If IsNothing(bomRow) = True Then
+                    Continue For
+                End If
+
+                '找到后把此货品的相应行加入绑定列表
+                bomCondition.Clear()
+                bomCondition.Add(MyPosXAuto.Facade.AfMV.MV_MP_WARE_BOMColumns.BELONG_WAREColumn, "=", bomRow.OWNING_WARE)
+                bomRow = MyPosXAuto.Facade.AfMV.GetMV_MP_WARE_BOMRow(bomCondition)
+
+                If IsNothing(bomRow) = True Then
+                    Continue For
+                End If
+
+
+                bindingRow = refBindingList.NewMV_MP_WARE_BOMRow
+                refBindingList.AddMV_MP_WARE_BOMRow(bindingRow)
+                bindingRow.CloneDataRow(bomRow)
+                bindingRow.ROW_HIGHLIGHT = Decls.ROW_HIGHLIGHT_BOM_ROOT
+                owningWareIDQueue.Enqueue(bomRow.BELONG_WARE)
+
+                Do While bomRow.OWNING_WARE.Length > 0
+
+                    bomCondition.Clear()
+                    bomCondition.Add(MyPosXAuto.Facade.AfMV.MV_MP_WARE_BOMColumns.BELONG_WAREColumn, "=", bomRow.OWNING_WARE)
+                    bomRow = MyPosXAuto.Facade.AfMV.GetMV_MP_WARE_BOMRow(bomCondition)
+
+                Loop
+
+
+                If addedChooseRootWareIDs.Contains(bomRow.BELONG_WARE) = False AndAlso _
+                    bomRow.BELONG_WARE <> bindingRow.BELONG_WARE Then
+                    wareCondition.Clear()
+                    wareCondition.Add(MyPosXAuto.Facade.AfBizMaster.M_MP_WAREColumns.WARE_IDColumn, "=", bomRow.BELONG_WARE)
+                    MyPosXAuto.Facade.AfBizMaster.FillFT_M_MP_WARE(wareCondition, refChooseRootWareList)
+                    addedChooseRootWareIDs.Add(bomRow.BELONG_WARE)
+                End If
             Next
+
+            Dim bomList As New MyPosXAuto.FTs.FT_MV_MP_WARE_BOM
+
+            '开始以广度优先递归，填充数状列表
+            Do While owningWareIDQueue.Count > 0
+
+                bomList.Clear()
+                bomCondition.Clear()
+                bomCondition.Add(MyPosXAuto.Facade.AfMV.MV_MP_WARE_BOMColumns.OWNING_WAREColumn, "=", owningWareIDQueue.Dequeue)
+                MyPosXAuto.Facade.AfMV.FillFT_MV_MP_WARE_BOM(bomCondition, bomList)
+
+                For Each bomRow In bomList
+                    owningWareIDQueue.Enqueue(bomRow.BELONG_WARE)
+                Next
+
+                refBindingList.ImportTable(bomList, Nothing)
+            Loop
+
 
         Catch ex As XL.Common.Utils.XLException
 

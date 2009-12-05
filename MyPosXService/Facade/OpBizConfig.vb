@@ -13,7 +13,7 @@ Namespace Facade
             ByVal currencyValue As Decimal, _
             ByRef currencyRate As Double) As Decimal
 
-            If currencyType = MyPosXService.Decls.DEFAULT_CI_CURRENCY_TYPE_VALUE_RMB Then
+            If currencyType = MyPosXService.Decls.DEFAULT_CI_VALUE_CURRENCY_TYPE_RMB Then
                 currencyRate = 1
                 Return currencyValue
             End If

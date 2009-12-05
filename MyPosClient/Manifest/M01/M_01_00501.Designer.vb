@@ -46,32 +46,33 @@
             Dim CTag4 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag5 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim StyleFormatCondition1 As DevExpress.XtraTreeList.StyleFormatConditions.StyleFormatCondition = New DevExpress.XtraTreeList.StyleFormatConditions.StyleFormatCondition
+            Dim StyleFormatCondition2 As DevExpress.XtraTreeList.StyleFormatConditions.StyleFormatCondition = New DevExpress.XtraTreeList.StyleFormatConditions.StyleFormatCondition
             Dim CTag7 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag8 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Me.ToolStrip_Form = New System.Windows.Forms.ToolStrip
+            Me.ToolStripButton_Save = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_Add = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_Remove = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_Refresh = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_Close = New System.Windows.Forms.ToolStripButton
             Me.PanelControl_Filter = New DevExpress.XtraEditors.PanelControl
-            Me.MemoEdit1 = New DevExpress.XtraEditors.MemoEdit
+            Me.MemoEdit_WareCodes = New DevExpress.XtraEditors.MemoEdit
             Me.TextEdit_Search = New DevExpress.XtraEditors.TextEdit
             Me.Label2 = New System.Windows.Forms.Label
             Me.Label1 = New System.Windows.Forms.Label
             Me.TreeListColumn_RowHighLight = New DevExpress.XtraTreeList.Columns.TreeListColumn
             Me.TreeList_WareBomList = New DevExpress.XtraTreeList.TreeList
-            Me.RepositoryItemLookUpEdit_WareName = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
             Me.TreeListColumn_BelongWare = New DevExpress.XtraTreeList.Columns.TreeListColumn
+            Me.RepositoryItemLookUpEdit_WareName = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
             Me.TreeListColumn_BelongQty = New DevExpress.XtraTreeList.Columns.TreeListColumn
             Me.RepositoryItemCalcEdit_BelongQty = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
             Me.TreeListColumn_WareBomType = New DevExpress.XtraTreeList.Columns.TreeListColumn
             Me.RepositoryItemLookUpEdit_WareBomType = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
             Me.TreeListColumn_AdditionBelongQty = New DevExpress.XtraTreeList.Columns.TreeListColumn
-            Me.ToolStripButton_Save = New System.Windows.Forms.ToolStripButton
             Me.ToolStrip_Form.SuspendLayout()
             CType(Me.PanelControl_Filter, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.PanelControl_Filter.SuspendLayout()
-            CType(Me.MemoEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.MemoEdit_WareCodes.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.TextEdit_Search.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.TreeList_WareBomList, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemLookUpEdit_WareName, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -118,35 +119,41 @@
             CTag1.ValueType = XL.Common.ControlValueType.Character
             Me.ToolStrip_Form.Tag = CTag1
             '
+            'ToolStripButton_Save
+            '
+            Me.ToolStripButton_Save.Name = "ToolStripButton_Save"
+            Me.ToolStripButton_Save.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Save.Text = "保存"
+            '
             'ToolStripButton_Add
             '
             Me.ToolStripButton_Add.Name = "ToolStripButton_Add"
-            Me.ToolStripButton_Add.Size = New System.Drawing.Size(36, 22)
+            Me.ToolStripButton_Add.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Add.Text = "添加"
             '
             'ToolStripButton_Remove
             '
             Me.ToolStripButton_Remove.Name = "ToolStripButton_Remove"
-            Me.ToolStripButton_Remove.Size = New System.Drawing.Size(36, 22)
+            Me.ToolStripButton_Remove.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Remove.Text = "去除"
             '
             'ToolStripButton_Refresh
             '
             Me.ToolStripButton_Refresh.Name = "ToolStripButton_Refresh"
-            Me.ToolStripButton_Refresh.Size = New System.Drawing.Size(36, 22)
+            Me.ToolStripButton_Refresh.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Refresh.Text = "刷新"
             '
             'ToolStripButton_Close
             '
             Me.ToolStripButton_Close.Name = "ToolStripButton_Close"
-            Me.ToolStripButton_Close.Size = New System.Drawing.Size(36, 22)
+            Me.ToolStripButton_Close.Size = New System.Drawing.Size(35, 22)
             Me.ToolStripButton_Close.Text = "关闭"
             '
             'PanelControl_Filter
             '
             Me.PanelControl_Filter.Appearance.BackColor = System.Drawing.Color.White
             Me.PanelControl_Filter.Appearance.Options.UseBackColor = True
-            Me.PanelControl_Filter.Controls.Add(Me.MemoEdit1)
+            Me.PanelControl_Filter.Controls.Add(Me.MemoEdit_WareCodes)
             Me.PanelControl_Filter.Controls.Add(Me.TextEdit_Search)
             Me.PanelControl_Filter.Controls.Add(Me.Label2)
             Me.PanelControl_Filter.Controls.Add(Me.Label1)
@@ -180,12 +187,12 @@
             CTag6.ValueType = XL.Common.ControlValueType.Character
             Me.PanelControl_Filter.Tag = CTag6
             '
-            'MemoEdit1
+            'MemoEdit_WareCodes
             '
-            Me.MemoEdit1.Location = New System.Drawing.Point(85, 8)
-            Me.MemoEdit1.Name = "MemoEdit1"
-            Me.MemoEdit1.Size = New System.Drawing.Size(172, 77)
-            Me.MemoEdit1.TabIndex = 10001
+            Me.MemoEdit_WareCodes.Location = New System.Drawing.Point(85, 8)
+            Me.MemoEdit_WareCodes.Name = "MemoEdit_WareCodes"
+            Me.MemoEdit_WareCodes.Size = New System.Drawing.Size(172, 77)
+            Me.MemoEdit_WareCodes.TabIndex = 10001
             CTag2.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag2.CalculatorRequired = True
             CTag2.ComboValueTextBox = Nothing
@@ -204,12 +211,12 @@
             CTag2.KeyValueAbsentable = False
             CTag2.LeagleText = ""
             CTag2.NumericButtonTextBox = Nothing
-            CTag2.ParentControl = Me.MemoEdit1
+            CTag2.ParentControl = Me.MemoEdit_WareCodes
             CTag2.SkipValidate = False
             CTag2.TimeButtonTextBox = Nothing
             CTag2.ToolTip = ""
             CTag2.ValueType = XL.Common.ControlValueType.Character
-            Me.MemoEdit1.Tag = CTag2
+            Me.MemoEdit_WareCodes.Tag = CTag2
             '
             'TextEdit_Search
             '
@@ -327,11 +334,21 @@
             '
             Me.TreeList_WareBomList.Columns.AddRange(New DevExpress.XtraTreeList.Columns.TreeListColumn() {Me.TreeListColumn_BelongWare, Me.TreeListColumn_BelongQty, Me.TreeListColumn_WareBomType, Me.TreeListColumn_AdditionBelongQty, Me.TreeListColumn_RowHighLight})
             Me.TreeList_WareBomList.Dock = System.Windows.Forms.DockStyle.Fill
+            StyleFormatCondition1.Appearance.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+            StyleFormatCondition1.Appearance.Options.UseBackColor = True
             StyleFormatCondition1.ApplyToRow = True
             StyleFormatCondition1.Column = Me.TreeListColumn_RowHighLight
             StyleFormatCondition1.Condition = DevExpress.XtraGrid.FormatConditionEnum.Equal
             StyleFormatCondition1.Value1 = "ROW_HIGHLIGHT_MODIFIED"
-            Me.TreeList_WareBomList.FormatConditions.AddRange(New DevExpress.XtraTreeList.StyleFormatConditions.StyleFormatCondition() {StyleFormatCondition1})
+            StyleFormatCondition2.Appearance.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+            StyleFormatCondition2.Appearance.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold)
+            StyleFormatCondition2.Appearance.Options.UseBackColor = True
+            StyleFormatCondition2.Appearance.Options.UseFont = True
+            StyleFormatCondition2.ApplyToRow = True
+            StyleFormatCondition2.Column = Me.TreeListColumn_RowHighLight
+            StyleFormatCondition2.Condition = DevExpress.XtraGrid.FormatConditionEnum.Equal
+            StyleFormatCondition2.Value1 = "ROW_HIGHLIGHT_BOM_ROOT"
+            Me.TreeList_WareBomList.FormatConditions.AddRange(New DevExpress.XtraTreeList.StyleFormatConditions.StyleFormatCondition() {StyleFormatCondition1, StyleFormatCondition2})
             Me.TreeList_WareBomList.KeyFieldName = "BELONG_WARE"
             Me.TreeList_WareBomList.Location = New System.Drawing.Point(0, 117)
             Me.TreeList_WareBomList.Name = "TreeList_WareBomList"
@@ -366,15 +383,6 @@
             CTag7.ValueType = XL.Common.ControlValueType.Character
             Me.TreeList_WareBomList.Tag = CTag7
             '
-            'RepositoryItemLookUpEdit_WareName
-            '
-            Me.RepositoryItemLookUpEdit_WareName.AutoHeight = False
-            Me.RepositoryItemLookUpEdit_WareName.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-            Me.RepositoryItemLookUpEdit_WareName.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("WARE_NAME", "Name1", 20, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Data.ColumnSortOrder.None)})
-            Me.RepositoryItemLookUpEdit_WareName.DisplayMember = "WARE_NAME"
-            Me.RepositoryItemLookUpEdit_WareName.Name = "RepositoryItemLookUpEdit_WareName"
-            Me.RepositoryItemLookUpEdit_WareName.ValueMember = "WARE_ID"
-            '
             'TreeListColumn_BelongWare
             '
             Me.TreeListColumn_BelongWare.Caption = "货品"
@@ -383,6 +391,15 @@
             Me.TreeListColumn_BelongWare.Name = "TreeListColumn_BelongWare"
             Me.TreeListColumn_BelongWare.Visible = True
             Me.TreeListColumn_BelongWare.VisibleIndex = 0
+            '
+            'RepositoryItemLookUpEdit_WareName
+            '
+            Me.RepositoryItemLookUpEdit_WareName.AutoHeight = False
+            Me.RepositoryItemLookUpEdit_WareName.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+            Me.RepositoryItemLookUpEdit_WareName.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("WARE_NAME", "Name1", 20, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Data.ColumnSortOrder.None)})
+            Me.RepositoryItemLookUpEdit_WareName.DisplayMember = "WARE_NAME"
+            Me.RepositoryItemLookUpEdit_WareName.Name = "RepositoryItemLookUpEdit_WareName"
+            Me.RepositoryItemLookUpEdit_WareName.ValueMember = "WARE_ID"
             '
             'TreeListColumn_BelongQty
             '
@@ -430,12 +447,6 @@
             Me.TreeListColumn_AdditionBelongQty.Visible = True
             Me.TreeListColumn_AdditionBelongQty.VisibleIndex = 2
             '
-            'ToolStripButton_Save
-            '
-            Me.ToolStripButton_Save.Name = "ToolStripButton_Save"
-            Me.ToolStripButton_Save.Size = New System.Drawing.Size(36, 22)
-            Me.ToolStripButton_Save.Text = "保存"
-            '
             'M_01_00501
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -477,7 +488,7 @@
             CType(Me.PanelControl_Filter, System.ComponentModel.ISupportInitialize).EndInit()
             Me.PanelControl_Filter.ResumeLayout(False)
             Me.PanelControl_Filter.PerformLayout()
-            CType(Me.MemoEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.MemoEdit_WareCodes.Properties, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.TextEdit_Search.Properties, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.TreeList_WareBomList, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemLookUpEdit_WareName, System.ComponentModel.ISupportInitialize).EndInit()
@@ -499,7 +510,7 @@
         Friend WithEvents TreeListColumn_BelongWare As DevExpress.XtraTreeList.Columns.TreeListColumn
         Friend WithEvents TreeListColumn_RowHighLight As DevExpress.XtraTreeList.Columns.TreeListColumn
         Friend WithEvents RepositoryItemCalcEdit_BelongQty As DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
-        Friend WithEvents MemoEdit1 As DevExpress.XtraEditors.MemoEdit
+        Friend WithEvents MemoEdit_WareCodes As DevExpress.XtraEditors.MemoEdit
         Friend WithEvents Label2 As System.Windows.Forms.Label
         Friend WithEvents ToolStripButton_Save As System.Windows.Forms.ToolStripButton
 

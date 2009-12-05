@@ -151,38 +151,11 @@
   <data name="SplitContainerControl_Left.Size" type="System.Drawing.Size, System.Drawing">
     <value>259, 369</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="GridControl_Ware.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left</value>
-  </data>
-  <data name="GridControl_Ware.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Tile</value>
-  </data>
-  <data name="GridControl_Ware.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>Inherit</value>
-  </data>
-  <assembly alias="DevExpress.XtraEditors.v8.1" name="DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
-  <data name="GridControl_Ware.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v8.1">
-    <value>Center</value>
-  </data>
-  <data name="GridControl_Ware.EmbeddedNavigator.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <assembly alias="DevExpress.Utils.v8.1" name="DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
-  <data name="GridControl_Ware.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v8.1">
-    <value>None</value>
-  </data>
-  <data name="GridControl_Ware.EmbeddedNavigator.ToolTipTitle" xml:space="preserve">
-    <value />
-  </data>
   <data name="GridColumn_RowSelect.Caption" xml:space="preserve">
     <value>Select</value>
   </data>
   <data name="GridColumn_WareCode.Caption" xml:space="preserve">
     <value>Barcode</value>
-  </data>
-  <data name="GridColumn_WareCode.SummaryItem.DisplayFormat" xml:space="preserve">
-    <value />
   </data>
   <data name="GridColumn_CustomCode.Caption" xml:space="preserve">
     <value>Item code</value>
@@ -202,90 +175,8 @@
   <data name="GridColumn_UnitPrice.Caption" xml:space="preserve">
     <value>Price</value>
   </data>
-  <data name="RepositoryItemCalcEdit_UnitPrice.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
-    <value>Default</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="RepositoryItemCalcEdit_UnitPrice.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RepositoryItemCalcEdit_UnitPrice.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RepositoryItemCalcEdit_UnitPrice.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RepositoryItemCalcEdit_UnitPrice.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
-    <value>Numeric</value>
-  </data>
-  <data name="RepositoryItemCalcEdit_UnitPrice.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="RepositoryItemCalcEdit_UnitPrice.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RepositoryItemCalcEdit_UnitPrice.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RepositoryItemCalcEdit_UnitPrice.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="GridColumn_Unitcost.Caption" xml:space="preserve">
     <value>Unit cost</value>
-  </data>
-  <data name="RepositoryItemCalcEdit_UnitCost.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
-    <value>Default</value>
-  </data>
-  <data name="RepositoryItemCalcEdit_UnitCost.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RepositoryItemCalcEdit_UnitCost.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RepositoryItemCalcEdit_UnitCost.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RepositoryItemCalcEdit_UnitCost.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
-    <value>Numeric</value>
-  </data>
-  <data name="RepositoryItemCalcEdit_UnitCost.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="RepositoryItemCalcEdit_UnitCost.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RepositoryItemCalcEdit_UnitCost.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RepositoryItemCalcEdit_UnitCost.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_SupplierID.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
-    <value>Default</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_SupplierID.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_SupplierID.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RepositoryItemLookUpEdit_SupplierID.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_SupplierID.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
-    <value>None</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_SupplierID.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_SupplierID.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_SupplierID.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_SupplierID.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="GridColumn_Remarks.Caption" xml:space="preserve">
     <value>Remarks</value>
@@ -297,13 +188,13 @@
     <value>700, 373</value>
   </data>
   <data name="ToolStripButton_Choose.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 22</value>
+    <value>47, 22</value>
   </data>
   <data name="ToolStripButton_Choose.Text" xml:space="preserve">
     <value>Choose</value>
   </data>
   <data name="ToolStripButton_CreateWareClassify.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 22</value>
+    <value>80, 22</value>
   </data>
   <data name="ToolStripButton_CreateWareClassify.Text" xml:space="preserve">
     <value>New Category</value>
@@ -311,74 +202,75 @@
   <data name="ToolStripButton_CreateWare.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIISURBVDhPpZP7S1NxGMbPPxKaXVUkMEq8IpKUCoY/hGgI
-        ymqkDYYXcCjDZOANURSjCNGFQUTsl4GXVMxKk62YU4fXQpaIlygHQxBRH8/zwvyaIAYe+HLgnPN8nue9
-        HA3nvDTq63oW/jm13XOwvPTB3DYFY5MH+bXfcN8ygfTSMSSXfESicQDxBqdYHwH29g9w2tnZ3UcguIvN
-        rR3417exuBJE5N1n/wfwLgXEOc38Bc6xNRHb+/y4nm49G0Bnit2zf9H6bkliE/jKuYxrd6oVgDWfjB+K
-        TWeKMyrGEVfowITvD9re/9ABVQrAhh0HHK+ZselMMaN/mvwtDb+aVqkA7HYIwIj3ysfluPTorJnP6Ezx
-        oHsD1s5ZXEktUwCOioB5f1CEPR9+wTG6iuiserTo8dkwng7HT/R+XUPF8xlcTjErAOdMcW6NW8STiwG8
-        7vej8oUPN/PsEv3t8Ao0TZP3T1u8uJRkUgAuSYHtO97oLxmXd5t9Ho8aPTK+GzntqNfrLm2fFoihwYOI
-        xGIF4KjoGBLzY1OrF9k6OOFxnwDC4wxIMX1G0pMhgVyMNyoA13PAtS7OrJk1PrC69LUdQWxuF6IybHrX
-        LRI7JrtZdoDAo1XmbjMyD+tjSXxGcXRmnYg5ttD9QuxDhN0uUgDOmbvNTpPOJaGAo2K36cyaGZvOFIfd
-        KlSA8/zRh9ABIDUG+1JpAAAAAElFTkSuQmCC
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAgxJREFUOE+lkvtL
+        U2EYx+0PEbtpFwnBKPGKiJImGP0gYhIYs1E5GF5gIxkpA00JRSmMEF0ohMh+GaRWYlqabMVcNdS2QpaI
+        VqiDIYhk397vA6fXhCjyhYdzeM/5fp7vczkAdeL2cwho7v/wWzT1zcN+Pwhr51uY2/y41PQaF+wzKKiZ
+        QvaN58g0jyLd5KEUcQbg+84P/Cm2tncQjW3j68YWIqubCC3FcOJc478BAuGoZM6zvoRnakXEruEIjhc4
+        /g5gZop9c+voGAyLbQIfeBZxLL9BA1jzXvuGbWamuKh+GmmVbswE19A59FEBbmoAG7YbsLtm2mZmiml9
+        cvabNDwpz6YB7LYBoMXCumkJr7LOmnnHzBQ/9X2Bo2cOibm1GsBREbAQiYmw/8lnuCeWkVzcgnZlnw1j
+        3HV/wuNXK6i/9x5Hc6wawDlTXHbLJ+LZUBQPRyKwdQdxutwl1h+NLXHh5Ht1ewBHsiwawCW57HyDAfWR
+        dvl0uhZQ1eqX8aVc7EKLqrum651ATLf9OJx5XQM4KmY0xPzZ0hFAiQJnXB0WwME0E3IsL5B17ZlADqWb
+        NYDrOepdlcysmTWWOrxqbceRWtaLk0VO1XW72D5Vckd2gMBfq8zdpmUG62NJvKM4+XyziDk24xmfWoGE
+        s1c0gHPmbrPTpHNJKOCo2G1mZs20zcwUJ5yp1AB5+8/zEwgF5GMVDxh4AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="ToolStripButton_CreateWare.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 22</value>
+    <value>57, 22</value>
   </data>
   <data name="ToolStripButton_CreateWare.Text" xml:space="preserve">
     <value>New Item</value>
   </data>
   <data name="ToolStripButton_Revise.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 22</value>
+    <value>29, 22</value>
   </data>
   <data name="ToolStripButton_Revise.Text" xml:space="preserve">
     <value>Edit</value>
   </data>
   <data name="ToolStripButton_Delete.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 22</value>
+    <value>42, 22</value>
   </data>
   <data name="ToolStripButton_Delete.Text" xml:space="preserve">
     <value>Delete</value>
   </data>
   <data name="ToolStripButton_Refresh.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 22</value>
+    <value>49, 22</value>
   </data>
   <data name="ToolStripButton_Refresh.Text" xml:space="preserve">
     <value>Refresh</value>
   </data>
   <data name="ToolStripButton_PrintLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 22</value>
+    <value>61, 22</value>
   </data>
   <data name="ToolStripButton_PrintLabel.Text" xml:space="preserve">
     <value>Print Label</value>
   </data>
   <data name="ToolStripButton_View.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 22</value>
+    <value>33, 22</value>
   </data>
   <data name="ToolStripButton_View.Text" xml:space="preserve">
     <value>View</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="ToolStripButton_View.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="ToolStripButton_ImportFromExcel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIISURBVDhPpZP7S1NxGMbPPxKaXVUkMEq8IpKUCoY/hGgI
-        ymqkDYYXcCjDZOANURSjCNGFQUTsl4GXVMxKk62YU4fXQpaIlygHQxBRH8/zwvyaIAYe+HLgnPN8nue9
-        HA3nvDTq63oW/jm13XOwvPTB3DYFY5MH+bXfcN8ygfTSMSSXfESicQDxBqdYHwH29g9w2tnZ3UcguIvN
-        rR3417exuBJE5N1n/wfwLgXEOc38Bc6xNRHb+/y4nm49G0Bnit2zf9H6bkliE/jKuYxrd6oVgDWfjB+K
-        TWeKMyrGEVfowITvD9re/9ABVQrAhh0HHK+ZselMMaN/mvwtDb+aVqkA7HYIwIj3ysfluPTorJnP6Ezx
-        oHsD1s5ZXEktUwCOioB5f1CEPR9+wTG6iuiserTo8dkwng7HT/R+XUPF8xlcTjErAOdMcW6NW8STiwG8
-        7vej8oUPN/PsEv3t8Ao0TZP3T1u8uJRkUgAuSYHtO97oLxmXd5t9Ho8aPTK+GzntqNfrLm2fFoihwYOI
-        xGIF4KjoGBLzY1OrF9k6OOFxnwDC4wxIMX1G0pMhgVyMNyoA13PAtS7OrJk1PrC69LUdQWxuF6IybHrX
-        LRI7JrtZdoDAo1XmbjMyD+tjSXxGcXRmnYg5ttD9QuxDhN0uUgDOmbvNTpPOJaGAo2K36cyaGZvOFIfd
-        KlSA8/zRh9ABIDUG+1JpAAAAAElFTkSuQmCC
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAgxJREFUOE+lkvtL
+        U2EYx+0PEbtpFwnBKPGKiJImGP0gYhIYs1E5GF5gIxkpA00JRSmMEF0ohMh+GaRWYlqabMVcNdS2QpaI
+        VqiDIYhk397vA6fXhCjyhYdzeM/5fp7vczkAdeL2cwho7v/wWzT1zcN+Pwhr51uY2/y41PQaF+wzKKiZ
+        QvaN58g0jyLd5KEUcQbg+84P/Cm2tncQjW3j68YWIqubCC3FcOJc478BAuGoZM6zvoRnakXEruEIjhc4
+        /g5gZop9c+voGAyLbQIfeBZxLL9BA1jzXvuGbWamuKh+GmmVbswE19A59FEBbmoAG7YbsLtm2mZmiml9
+        cvabNDwpz6YB7LYBoMXCumkJr7LOmnnHzBQ/9X2Bo2cOibm1GsBREbAQiYmw/8lnuCeWkVzcgnZlnw1j
+        3HV/wuNXK6i/9x5Hc6wawDlTXHbLJ+LZUBQPRyKwdQdxutwl1h+NLXHh5Ht1ewBHsiwawCW57HyDAfWR
+        dvl0uhZQ1eqX8aVc7EKLqrum651ATLf9OJx5XQM4KmY0xPzZ0hFAiQJnXB0WwME0E3IsL5B17ZlADqWb
+        NYDrOepdlcysmTWWOrxqbceRWtaLk0VO1XW72D5Vckd2gMBfq8zdpmUG62NJvKM4+XyziDk24xmfWoGE
+        s1c0gHPmbrPTpHNJKOCo2G1mZs20zcwUJ5yp1AB5+8/zEwgF5GMVDxh4AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="ToolStripButton_ImportFromExcel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 22</value>
+    <value>43, 22</value>
   </data>
   <data name="ToolStripButton_ImportFromExcel.Text" xml:space="preserve">
     <value>Import</value>
@@ -386,26 +278,26 @@
   <data name="ToolStripButton_Report.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIISURBVDhPpZP7S1NxGMbPPxKaXVUkMEq8IpKUCoY/hGgI
-        ymqkDYYXcCjDZOANURSjCNGFQUTsl4GXVMxKk62YU4fXQpaIlygHQxBRH8/zwvyaIAYe+HLgnPN8nue9
-        HA3nvDTq63oW/jm13XOwvPTB3DYFY5MH+bXfcN8ygfTSMSSXfESicQDxBqdYHwH29g9w2tnZ3UcguIvN
-        rR3417exuBJE5N1n/wfwLgXEOc38Bc6xNRHb+/y4nm49G0Bnit2zf9H6bkliE/jKuYxrd6oVgDWfjB+K
-        TWeKMyrGEVfowITvD9re/9ABVQrAhh0HHK+ZselMMaN/mvwtDb+aVqkA7HYIwIj3ysfluPTorJnP6Ezx
-        oHsD1s5ZXEktUwCOioB5f1CEPR9+wTG6iuiserTo8dkwng7HT/R+XUPF8xlcTjErAOdMcW6NW8STiwG8
-        7vej8oUPN/PsEv3t8Ao0TZP3T1u8uJRkUgAuSYHtO97oLxmXd5t9Ho8aPTK+GzntqNfrLm2fFoihwYOI
-        xGIF4KjoGBLzY1OrF9k6OOFxnwDC4wxIMX1G0pMhgVyMNyoA13PAtS7OrJk1PrC69LUdQWxuF6IybHrX
-        LRI7JrtZdoDAo1XmbjMyD+tjSXxGcXRmnYg5ttD9QuxDhN0uUgDOmbvNTpPOJaGAo2K36cyaGZvOFIfd
-        KlSA8/zRh9ABIDUG+1JpAAAAAElFTkSuQmCC
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAgxJREFUOE+lkvtL
+        U2EYx+0PEbtpFwnBKPGKiJImGP0gYhIYs1E5GF5gIxkpA00JRSmMEF0ohMh+GaRWYlqabMVcNdS2QpaI
+        VqiDIYhk397vA6fXhCjyhYdzeM/5fp7vczkAdeL2cwho7v/wWzT1zcN+Pwhr51uY2/y41PQaF+wzKKiZ
+        QvaN58g0jyLd5KEUcQbg+84P/Cm2tncQjW3j68YWIqubCC3FcOJc478BAuGoZM6zvoRnakXEruEIjhc4
+        /g5gZop9c+voGAyLbQIfeBZxLL9BA1jzXvuGbWamuKh+GmmVbswE19A59FEBbmoAG7YbsLtm2mZmiml9
+        cvabNDwpz6YB7LYBoMXCumkJr7LOmnnHzBQ/9X2Bo2cOibm1GsBREbAQiYmw/8lnuCeWkVzcgnZlnw1j
+        3HV/wuNXK6i/9x5Hc6wawDlTXHbLJ+LZUBQPRyKwdQdxutwl1h+NLXHh5Ht1ewBHsiwawCW57HyDAfWR
+        dvl0uhZQ1eqX8aVc7EKLqrum651ATLf9OJx5XQM4KmY0xPzZ0hFAiQJnXB0WwME0E3IsL5B17ZlADqWb
+        NYDrOepdlcysmTWWOrxqbceRWtaLk0VO1XW72D5Vckd2gMBfq8zdpmUG62NJvKM4+XyziDk24xmfWoGE
+        s1c0gHPmbrPTpHNJKOCo2G1mZs20zcwUJ5yp1AB5+8/zEwgF5GMVDxh4AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="ToolStripButton_Report.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 22</value>
+    <value>44, 22</value>
   </data>
   <data name="ToolStripButton_Report.Text" xml:space="preserve">
     <value>Report</value>
   </data>
   <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 22</value>
+    <value>37, 22</value>
   </data>
   <data name="ToolStripButton_Close.Text" xml:space="preserve">
     <value>Close</value>
@@ -416,9 +308,6 @@
   <data name="ComboBoxEdit_DownloadImageMode.Location" type="System.Drawing.Point, System.Drawing">
     <value>124, 40</value>
   </data>
-  <data name="ComboBoxEdit_DownloadImageMode.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="ComboBoxEdit_DownloadImageMode.Properties.Items" xml:space="preserve">
     <value>Download All</value>
   </data>
@@ -428,41 +317,12 @@
   <data name="ComboBoxEdit_DownloadImageMode.Properties.Items2" xml:space="preserve">
     <value>Current Item</value>
   </data>
-  <data name="ComboBoxEdit_DownloadImageMode.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
-    <value>Default</value>
-  </data>
-  <data name="ComboBoxEdit_DownloadImageMode.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="ComboBoxEdit_DownloadImageMode.Properties.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ComboBoxEdit_DownloadImageMode.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="ComboBoxEdit_DownloadImageMode.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
-    <value>None</value>
-  </data>
-  <data name="ComboBoxEdit_DownloadImageMode.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="ComboBoxEdit_DownloadImageMode.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="ComboBoxEdit_DownloadImageMode.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="ComboBoxEdit_DownloadImageMode.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="CheckEdit_ShowRetired.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="CheckEdit_ShowRetired.Location" type="System.Drawing.Point, System.Drawing">
     <value>158, 12</value>
-  </data>
-  <data name="CheckEdit_ShowRetired.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="CheckEdit_ShowRetired.Properties.Caption" xml:space="preserve">
     <value>Show retired</value>
@@ -473,9 +333,6 @@
   <data name="CheckEdit_PriceCostModifiable.Location" type="System.Drawing.Point, System.Drawing">
     <value>524, 47</value>
   </data>
-  <data name="CheckEdit_PriceCostModifiable.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="CheckEdit_PriceCostModifiable.Properties.Caption" xml:space="preserve">
     <value>Price cost editable</value>
   </data>
@@ -485,9 +342,6 @@
   <data name="CheckEdit_RemotingMode.Location" type="System.Drawing.Point, System.Drawing">
     <value>28, 12</value>
   </data>
-  <data name="CheckEdit_RemotingMode.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="CheckEdit_RemotingMode.Properties.Caption" xml:space="preserve">
     <value>Online mode</value>
   </data>
@@ -496,9 +350,6 @@
   </data>
   <data name="CheckEdit_ExportPictureToExcel.Location" type="System.Drawing.Point, System.Drawing">
     <value>228, 42</value>
-  </data>
-  <data name="CheckEdit_ExportPictureToExcel.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="CheckEdit_ExportPictureToExcel.Properties.Caption" xml:space="preserve">
     <value>Export image to Excel</value>
@@ -562,36 +413,6 @@
   </data>
   <data name="TextEdit_Search.Location" type="System.Drawing.Point, System.Drawing">
     <value>66, 75</value>
-  </data>
-  <data name="TextEdit_Search.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="TextEdit_Search.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
-    <value>Default</value>
-  </data>
-  <data name="TextEdit_Search.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="TextEdit_Search.Properties.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TextEdit_Search.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="TextEdit_Search.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
-    <value>None</value>
-  </data>
-  <data name="TextEdit_Search.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="TextEdit_Search.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="TextEdit_Search.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="TextEdit_Search.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 79</value>

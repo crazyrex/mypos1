@@ -96,7 +96,7 @@ Namespace Facade
             MyPosXAuto.Facade.AfBizTurnover.CreateH_MP_TURNOVER_PAY_LOGInfo( _
                 CommTK.FDecimal(paymentSituationRow.SUM_PRICE - paymentSituationRow.PAY_AMOUNT), _
                 1, _
-                MyPosXService.Decls.DEFAULT_CI_CURRENCY_TYPE_VALUE_RMB, _
+                MyPosXService.Decls.DEFAULT_CI_VALUE_CURRENCY_TYPE_RMB, _
                 turnoverRow.STAFF_ID, _
                 logID, _
                 paymentSituationRow.SUM_PRICE - paymentSituationRow.PAY_AMOUNT, _

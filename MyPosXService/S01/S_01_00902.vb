@@ -218,7 +218,7 @@ Public Class S_01_00902
 
                     affairPosCondition.Clear()
                     affairPosCondition.Add(MyPosXAuto.Facade.AfBizManage.T_MP_SALE_AFFAIR_POSColumns.POS_IDColumn, "=", posID)
-                    If dbAffairPosList.FindRowsByCondition(affairPosCondition).Length = 0 Then
+                    If dbAffairPosList.FindRowsByCondition(affairPosCondition).Count = 0 Then
                         dbAffairPosList.AddNewT_MP_SALE_AFFAIR_POSRow(refRevisingAffairID, Guid.NewGuid.ToString, posID)
                     End If
 
