@@ -772,9 +772,6 @@
   <data name="CheckEdit_RemotingMode.TabIndex" type="System.Int32, mscorlib">
     <value>10005</value>
   </data>
-  <data name="CheckEdit_RemotingMode.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="&gt;&gt;CheckEdit_RemotingMode.Name" xml:space="preserve">
     <value>CheckEdit_RemotingMode</value>
   </data>
@@ -831,9 +828,6 @@
   </data>
   <data name="LinkLabel_DownloadImages.Text" xml:space="preserve">
     <value>下载图片</value>
-  </data>
-  <data name="LinkLabel_DownloadImages.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="&gt;&gt;LinkLabel_DownloadImages.Name" xml:space="preserve">
     <value>LinkLabel_DownloadImages</value>
@@ -1093,6 +1087,9 @@
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>59</value>
   </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>English</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1312,6 +1309,12 @@
   <data name="&gt;&gt;ToolStripButton_PrintLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;ToolStripButton_SetWareBOM.Name" xml:space="preserve">
+    <value>ToolStripButton_SetWareBOM</value>
+  </data>
+  <data name="&gt;&gt;ToolStripButton_SetWareBOM.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;ToolStripButton_View.Name" xml:space="preserve">
     <value>ToolStripButton_View</value>
   </data>
@@ -1353,12 +1356,6 @@
   </data>
   <data name="&gt;&gt;OpenFileDialog_SetImage.Type" xml:space="preserve">
     <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripButton_SetWareBOM.Name" xml:space="preserve">
-    <value>ToolStripButton_SetWareBOM</value>
-  </data>
-  <data name="&gt;&gt;ToolStripButton_SetWareBOM.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>M_01_00201</value>

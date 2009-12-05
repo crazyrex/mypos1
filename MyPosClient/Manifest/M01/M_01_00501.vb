@@ -272,8 +272,7 @@ Namespace Manifest
 
 
         Protected Overrides Sub IA_SavedModeChanged(ByVal savedMode As Boolean)
-
-
+            Me.ToolStripButton_Save.Visible = Not savedMode
         End Sub
 
 
@@ -375,23 +374,25 @@ Namespace Manifest
                 'Case Business.B_01_00201.Affairs.DeleteInfo
                 '    Me.UpdateDisplay()                     
 
-                'Case Business.B_02_00201.Affairs.LoadList             
-                '    Me.DoPrivateUpdateSelectingRow()               
-                '    Me.GridView_XXXXXList.BestFitColumns()         
+                Case Business.B_01_00501.Affairs.LoadList
+                    Me.ResetSaveMode()
+                    Me.DoPrivateUpdateSelectingRow()
+                    Me.TreeList_WareBomList.BestFitColumns()
+                    Me.TreeList_WareBomList.ExpandAll()
 
-                'Case Business.B_02_00202.Affairs.SaveInfo             
-                'Window.XLMessageBox.ShowMessage( _                
-                '    MyPosXService.Decls.MSG_OK_00001, _                
-                '    Window.XLMessageBox.MessageType.Information, _
-                '    MessageBoxButtons.OK)                         
-                'Me.ResponseToParentForm()                         
+                    'Case Business.B_02_00202.Affairs.SaveInfo             
+                    'Window.XLMessageBox.ShowMessage( _                
+                    '    MyPosXService.Decls.MSG_OK_00001, _                
+                    '    Window.XLMessageBox.MessageType.Information, _
+                    '    MessageBoxButtons.OK)                         
+                    'Me.ResponseToParentForm()                         
 
-                'If Me.SV_EDITING_TRANSFER_ID > 0 Then            
-                '    Me.ResetSaveMode()                            
-                '    Me.CloseForm()                                
-                'Else                                              
-                '    Me.IA_ClearContent()                          
-                'End If                                            
+                    'If Me.SV_EDITING_TRANSFER_ID > 0 Then            
+                    '    Me.ResetSaveMode()                            
+                    '    Me.CloseForm()                                
+                    'Else                                              
+                    '    Me.IA_ClearContent()                          
+                    'End If                                            
 
 
             End Select
@@ -447,7 +448,7 @@ Namespace Manifest
 
             Dim choiceForm As New M_01_00201(Me.TransactRequestHandle, Me.FormID)
             choiceForm.LAUNCH_CONDITION = MyPosXService.S_01_00201.LCs.Choose
-            Me.PopupForm(choiceForm, "TbActionAdd", False)
+            Me.PopupForm(choiceForm, "TbActionAdd", True)
 
         End Sub
 
@@ -463,7 +464,9 @@ Namespace Manifest
         End Sub
 
         Private Sub TbActionRefresh()
-
+            If Me.AttemptSaveBeforeWipeOut = False Then
+                Return
+            End If
             Me.UpdateDisplay()
 
         End Sub
@@ -587,7 +590,8 @@ Namespace Manifest
 
             Me.ToolStripButton_Remove.Enabled = False
             Me.ToolStripButton_Add.Enabled = False
-
+            Me.TreeListColumn_BelongQty.OptionsColumn.AllowFocus = False
+            Me.TreeListColumn_WareBomType.OptionsColumn.AllowFocus = False
 
             If IsNothing(Me.TreeList_WareBomList.FocusedNode) = False Then
 
@@ -597,6 +601,10 @@ Namespace Manifest
                              Me.TreeList_WareBomList.FocusedNode),  _
                          DataRowView).Row, MyPosXAuto.FTs.FT_MV_MP_WARE_BOMRow)
 
+                If Me.SVFR_SELECTING_ROW.OWNING_WARE.Length > 0 Then
+                    Me.TreeListColumn_BelongQty.OptionsColumn.AllowFocus = True
+                    Me.TreeListColumn_WareBomType.OptionsColumn.AllowFocus = True
+                End If
                 Me.ToolStripButton_Remove.Enabled = True
                 Me.ToolStripButton_Add.Enabled = True
                 'Me.ToolStripButton_ReviseXXXX.Enabled = True
@@ -816,6 +824,20 @@ Namespace Manifest
 #End Region
 
 
+        Private Sub RepositoryItemLookUpEdit_WareBomType_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemLookUpEdit_WareBomType.EditValueChanged
+            Dim lookupEdit = TryCast(sender, DevExpress.XtraEditors.LookUpEdit)
+            Me.SVFR_SELECTING_ROW.WARE_BOM_TYPE = CommTK.FInteger(lookupEdit.EditValue)
+            Me.SVFR_SELECTING_ROW.ROW_HIGHLIGHT = MyPosXService.Decls.ROW_HIGHLIGHT_MODIFIED
+            Me.IsSaved = False
+        End Sub
+
+        Private Sub RepositoryItemCalcEdit_BelongQty_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemCalcEdit_BelongQty.EditValueChanged
+            Dim calcEdit = TryCast(sender, DevExpress.XtraEditors.CalcEdit)
+            'should not have commtk.finteger herer
+            Me.SVFR_SELECTING_ROW.BELONG_QTY = CommTK.FInteger(calcEdit.Value)
+            Me.SVFR_SELECTING_ROW.ROW_HIGHLIGHT = MyPosXService.Decls.ROW_HIGHLIGHT_MODIFIED
+            Me.IsSaved = False
+        End Sub
     End Class
 
 
