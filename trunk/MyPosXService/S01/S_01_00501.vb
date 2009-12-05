@@ -152,6 +152,9 @@ Public Class S_01_00501
                 refBindingList.AddMV_MP_WARE_BOMRow(bindingRow)
                 bindingRow.CloneDataRow(bomRow)
                 bindingRow.ROW_HIGHLIGHT = Decls.ROW_HIGHLIGHT_BOM_ROOT
+                bindingRow.OWNING_WARE = String.Empty
+                bindingRow.OWNING_WARE_CODE = String.Empty
+                bindingRow.OWNING_WARE_NAME = String.Empty
                 owningWareIDQueue.Enqueue(bomRow.BELONG_WARE)
 
                 Do While bomRow.OWNING_WARE.Length > 0

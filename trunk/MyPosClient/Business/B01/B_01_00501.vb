@@ -388,11 +388,13 @@ Namespace Business
 
 
                                                                                                                       
-                Dim chooseWareList As New MyPosXAuto.FTs.FT_M_MP_WARE
-                Dim chooWareBomTypeList As New MyPosXAuto.FTs.FT_CIV_WARE_BOM_TYPE
-                MyPosXAuto.Facade.AfMV.FillFT_MV_MP_WARE_BOM(Nothing, Me._manifest.SVFT_BINDING_LIST)
-
-                Me._manifest.TreeList_WareBomList.DataSource = Me._manifest.SVFT_BINDING_LIST
+                Dim chooseWareBomTypeList As New MyPosXAuto.FTs.FT_CIV_WARE_BOM_TYPE
+                MyPosXAuto.Facade.AfCIV.FillCI_WARE_BOM_TYPEList( _
+                    CommDecl.CURRENT_LANGUAGE_OPTION, _
+                    String.Empty, _
+                    chooseWareBomTypeList, _
+                    False)
+                Me._manifest.RepositoryItemLookUpEdit_WareBomType.DataSource = chooseWareBomTypeList
 
                 'Dim chooseAssetConformationList As New MyPosXAuto.FTs.FT_CIV_ASSET_CONFORMATION
 
@@ -518,7 +520,7 @@ Namespace Business
                                                                                     
             Try                                                                     
                                                                                     
-                                                                                    
+
                 'Dim servResult As String = _                                       
                 '    Me._service.ServSaveInfo()                                     
                                                                                     
@@ -572,11 +574,11 @@ Namespace Business
                         0, _
                         0, _
                         Me._manifest.SVLM_CREATING_ROOT_WARE_ID, _
-                        String.Empty, _
-                        String.Empty, _
-                        String.Empty, _
                         wareRow.WARE_CODE, _
                         wareRow.WARE_NAME, _
+                        String.Empty, _
+                        String.Empty, _
+                        String.Empty, _
                         MyPosXService.Decls.DEFAULT_CI_VALUE_WARE_BOM_TYPE_NONE)
 
                     Me._manifest.TreeList_WareBomList.DataSource = Me._manifest.SVFT_BINDING_LIST
