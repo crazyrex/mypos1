@@ -45,10 +45,10 @@ Namespace Manifest
         'Public SVLM_UTLD_0002 As String ="SVLM_UTLD_0002"
 
         '数据列表变量
-        'Public SVFT_BINDING_XXX_LIST As New XAuto.FTs.FT_
+        Public SVFT_BINDING_LIST As New MyPosXAuto.FTs.FT_MV_MP_WARE_BOM
         'Public SVFT_CHOOSE_XXX_LIST As New XAuto.FTs.FT_
 
-        'Public SVFR_SELECTING_XXX_ROW As XAuto.FTs.FT_ Row
+        Public SVFR_SELECTING_ROW As MyPosXAuto.FTs.FT_MV_MP_WARE_BOMRow
 
         #End Region
 
@@ -304,7 +304,7 @@ Namespace Manifest
         Public Overrides Sub UpdateDisplay()
 
             'Me._bizAgent.DoRequest(Business.B_0X_00XXX.Affairs.LoadInfo, False)
-            'Me._bizAgent.DoRequest(Business.B_0X_00XXX.Affairs.LoadList, False)
+            Me._bizAgent.DoRequest(Business.B_01_00501.Affairs.LoadList, False)
 
         End Sub
 
@@ -806,6 +806,7 @@ Namespace Manifest
 
 #End Region
 
+        
     End Class
 
 

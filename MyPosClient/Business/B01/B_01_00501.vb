@@ -388,9 +388,19 @@ Namespace Business
 
 
                                                                                                                       
-                'Dim choosePurchaseWayList As New MyPosXAuto.FTs.FT_CIV_PURCHASE_WAY                                       
-                'Dim chooseAssetAbsentTypeList As New MyPosXAuto.FTs.FT_CIV_ASSET_ABSENT_TYPE                              
-                'Dim chooseAssetConformationList As New MyPosXAuto.FTs.FT_CIV_ASSET_CONFORMATION                           
+                Dim chooseWareList As New MyPosXAuto.FTs.FT_M_MP_WARE
+                Dim chooWareBomTypeList As New MyPosXAuto.FTs.FT_CIV_WARE_BOM_TYPE
+
+                MyPosXAuto.Facade.AfMV.FillFT_MV_MP_WARE_BOM(Nothing, Me._manifest.SVFT_BINDING_LIST)
+
+                Me._manifest.TreeList_WareBomList.DataSource = Me._manifest.SVFT_BINDING_LIST
+
+
+
+                'Dim chooseAssetConformationList As New MyPosXAuto.FTs.FT_CIV_ASSET_CONFORMATION
+
+
+
                 'Dim chooseEliminateWayList As New MyPosXAuto.FTs.FT_CIV_ELIMINATE_WAY                                     
                 'Dim chooseInAccountCredenceTextList As New MyPosXAuto.FTs.FT_CIV_IN_ACCOUNT_CREDENCE_TEXT                 
                 '                                                                                                     
@@ -554,14 +564,22 @@ Namespace Business
                                                                                     
                                                                                     
             Try                                                                     
-                                                                                    
-                                                                                    
-                'Dim servResult As String = _                                       
-                '    Me._service.ServLoadList()                                     
-                                                                                    
-                'If servResult.Length > 0 Then                                      
-                '    Return servResult                                              
-                'End If                                                             
+
+                Dim wareCodes As New ArrayList
+                For Each wareCode In Me._manifest.MemoEdit1.Text.Split(Chr(10))
+                    wareCodes.Add(wareCode.Trim)
+                Next
+
+                Dim bomCondition As New MyPosXAuto.Facade.AfMV.ConditionOfMV_MP_WARE_BOM(XL.DB.Utils.Condition.LogicOperators.Logic_And)
+                bomCondition.Add(MyPosXAuto.Facade.AfMV.MV_MP_WARE_BOMColumns.WARE_CODEColumn, True, wareCodes)
+                bomCondition.Add( 
+
+                Dim servResult As String = _
+                    Me._service.ServLoadList()
+
+                If servResult.Length > 0 Then
+                    Return servResult
+                End If
                                                                                     
             Catch ex As XL.Common.Utils.XLException                                 
                                                                                     
