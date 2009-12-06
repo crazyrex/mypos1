@@ -65,18 +65,18 @@
             Me.TreeListColumn_BelongWareCode = New DevExpress.XtraTreeList.Columns.TreeListColumn
             Me.TreeListColumn_BelongWareName = New DevExpress.XtraTreeList.Columns.TreeListColumn
             Me.TreeListColumn_BelongQty = New DevExpress.XtraTreeList.Columns.TreeListColumn
+            Me.RepositoryItemCalcEdit_BelongQty = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
             Me.TreeListColumn_WareBomType = New DevExpress.XtraTreeList.Columns.TreeListColumn
             Me.RepositoryItemLookUpEdit_WareBomType = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
             Me.TreeListColumn_AdditionBelongQty = New DevExpress.XtraTreeList.Columns.TreeListColumn
-            Me.RepositoryItemCalcEdit_BelongQty = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
             Me.ToolStrip_Form.SuspendLayout()
             CType(Me.PanelControl_Filter, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.PanelControl_Filter.SuspendLayout()
             CType(Me.MemoEdit_WareCodes.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.TextEdit_Search.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.TreeList_WareBomList, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.RepositoryItemLookUpEdit_WareBomType, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemCalcEdit_BelongQty, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.RepositoryItemLookUpEdit_WareBomType, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'DefaultLookAndFeel_Form
@@ -392,6 +392,7 @@
             Me.TreeListColumn_BelongWareCode.OptionsColumn.AllowFocus = False
             Me.TreeListColumn_BelongWareCode.Visible = True
             Me.TreeListColumn_BelongWareCode.VisibleIndex = 0
+            Me.TreeListColumn_BelongWareCode.Width = 37
             '
             'TreeListColumn_BelongWareName
             '
@@ -402,14 +403,23 @@
             Me.TreeListColumn_BelongWareName.OptionsColumn.AllowFocus = False
             Me.TreeListColumn_BelongWareName.Visible = True
             Me.TreeListColumn_BelongWareName.VisibleIndex = 1
+            Me.TreeListColumn_BelongWareName.Width = 37
             '
             'TreeListColumn_BelongQty
             '
-            Me.TreeListColumn_BelongQty.Caption = "数量"
+            Me.TreeListColumn_BelongQty.Caption = "组成数量"
             Me.TreeListColumn_BelongQty.ColumnEdit = Me.RepositoryItemCalcEdit_BelongQty
             Me.TreeListColumn_BelongQty.FieldName = "BELONG_QTY"
             Me.TreeListColumn_BelongQty.Name = "TreeListColumn_BelongQty"
-            Me.TreeListColumn_BelongQty.Width = 58
+            Me.TreeListColumn_BelongQty.Visible = True
+            Me.TreeListColumn_BelongQty.VisibleIndex = 3
+            Me.TreeListColumn_BelongQty.Width = 61
+            '
+            'RepositoryItemCalcEdit_BelongQty
+            '
+            Me.RepositoryItemCalcEdit_BelongQty.AutoHeight = False
+            Me.RepositoryItemCalcEdit_BelongQty.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+            Me.RepositoryItemCalcEdit_BelongQty.Name = "RepositoryItemCalcEdit_BelongQty"
             '
             'TreeListColumn_WareBomType
             '
@@ -419,30 +429,27 @@
             Me.TreeListColumn_WareBomType.Name = "TreeListColumn_WareBomType"
             Me.TreeListColumn_WareBomType.Visible = True
             Me.TreeListColumn_WareBomType.VisibleIndex = 2
+            Me.TreeListColumn_WareBomType.Width = 62
             '
             'RepositoryItemLookUpEdit_WareBomType
             '
             Me.RepositoryItemLookUpEdit_WareBomType.AutoHeight = False
             Me.RepositoryItemLookUpEdit_WareBomType.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+            Me.RepositoryItemLookUpEdit_WareBomType.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("ITEM_MEANING", " ", 20, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Data.ColumnSortOrder.None)})
             Me.RepositoryItemLookUpEdit_WareBomType.DisplayMember = "ITEM_MEANING"
             Me.RepositoryItemLookUpEdit_WareBomType.Name = "RepositoryItemLookUpEdit_WareBomType"
             Me.RepositoryItemLookUpEdit_WareBomType.ValueMember = "ITEM_VALUE"
             '
             'TreeListColumn_AdditionBelongQty
             '
-            Me.TreeListColumn_AdditionBelongQty.Caption = "追加数量"
+            Me.TreeListColumn_AdditionBelongQty.Caption = "合成其他商品数量"
             Me.TreeListColumn_AdditionBelongQty.FieldName = "ADDITION_BELONG_QTY"
             Me.TreeListColumn_AdditionBelongQty.Name = "TreeListColumn_AdditionBelongQty"
             Me.TreeListColumn_AdditionBelongQty.OptionsColumn.AllowEdit = False
             Me.TreeListColumn_AdditionBelongQty.OptionsColumn.AllowFocus = False
             Me.TreeListColumn_AdditionBelongQty.Visible = True
-            Me.TreeListColumn_AdditionBelongQty.VisibleIndex = 3
-            '
-            'RepositoryItemCalcEdit1
-            '
-            Me.RepositoryItemCalcEdit_BelongQty.AutoHeight = False
-            Me.RepositoryItemCalcEdit_BelongQty.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-            Me.RepositoryItemCalcEdit_BelongQty.Name = "RepositoryItemCalcEdit1"
+            Me.TreeListColumn_AdditionBelongQty.VisibleIndex = 4
+            Me.TreeListColumn_AdditionBelongQty.Width = 109
             '
             'M_01_00501
             '
@@ -488,8 +495,8 @@
             CType(Me.MemoEdit_WareCodes.Properties, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.TextEdit_Search.Properties, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.TreeList_WareBomList, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.RepositoryItemLookUpEdit_WareBomType, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemCalcEdit_BelongQty, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.RepositoryItemLookUpEdit_WareBomType, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 

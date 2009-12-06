@@ -32,7 +32,7 @@ Namespace Manifest
         'Shared Value, 用于与其它窗体交换数值的情况下, 需要自己根据需要更改命名
         '原则上所有UTLD的变量不能出现在成品中, 在确定不需要的情况下应删除UTLD
         '-------------------------------------------------------------------
-        Public SV_UTLD_0001 As String = "SV_UTLD_0001"
+        Public SV_ADDING_WARE_IDS As New ArrayList
         Public SV_UTLD_0002 As String = "SV_UTLD_0002"
         'Public SV_UTLD_0003 As String ="SV_UTLD_0003"
         'Public SV_UTLD_0004 As String ="SV_UTLD_0004"
@@ -247,21 +247,24 @@ Namespace Manifest
                 Case "TbActionAdd"
                     Dim chooseForm = TryCast(popupForm, M_01_00201)
 
-                    For Each wareRow As MyPosXAuto.FTs.FT_M_MP_WARERow In chooseForm.SVFT_BINDING_WARE_LIST
+                    Me.TreeList_WareBomList.DataSource = Nothing
+                    For Each wareRow As MyPosXAuto.FTs.FT_M_MP_WARERow In chooseForm.SVFT_BINDING_WARE_LIST.FindRowsSelecting(True)
+                        Me.SV_ADDING_WARE_IDS.Add(wareRow.WARE_ID)
+
+
                         Dim addRow = Me.SVFT_BINDING_LIST.AddNewMV_MP_WARE_BOMRow( _
                             0, _
                             1, _
                             wareRow.WARE_ID, _
                             wareRow.WARE_CODE, _
                             wareRow.WARE_NAME, _
-                            Me.SVFR_SELECTING_ROW.BELONG_WARE, _
-                            Me.SVFR_SELECTING_ROW.BELONG_WARE_CODE, _
-                            Me.SVFR_SELECTING_ROW.BELONG_WARE_NAME, _
+                            Me.SVLM_CREATING_ROOT_WARE_ID, _
+                            String.Empty, _
+                            String.Empty, _
                             MyPosXService.Decls.DEFAULT_CI_VALUE_WARE_BOM_TYPE_NONE)
                         addRow.ROW_HIGHLIGHT = MyPosXService.Decls.ROW_HIGHLIGHT_MODIFIED
                     Next
-
-                    Me.IsSaved = False
+                    Me._bizAgent.DoRequest(Business.B_01_00501.Affairs.AddWare, False)
                 Case "ResponseTitleName2"
 
                 Case "ResponseTitleName3"
@@ -394,7 +397,11 @@ Namespace Manifest
                     '    Me.IA_ClearContent()                          
                     'End If                                            
 
-
+                Case Business.B_01_00501.Affairs.AddWare
+                    Me.TreeList_WareBomList.DataSource = Me.SVFT_BINDING_LIST
+                    Me.TreeList_WareBomList.ExpandAll()
+                    Me.TreeList_WareBomList.BestFitColumns()
+                    Me.IsSaved = False
             End Select
         End Sub
 
@@ -448,6 +455,8 @@ Namespace Manifest
 
             Dim choiceForm As New M_01_00201(Me.TransactRequestHandle, Me.FormID)
             choiceForm.LAUNCH_CONDITION = MyPosXService.S_01_00201.LCs.Choose
+            choiceForm.SVLM_MULTI_CHOICE = True
+            choiceForm.SVLM_STAY_AFTER_CHOOSE = True
             Me.PopupForm(choiceForm, "TbActionAdd", True)
 
         End Sub
@@ -601,13 +610,12 @@ Namespace Manifest
                              Me.TreeList_WareBomList.FocusedNode),  _
                          DataRowView).Row, MyPosXAuto.FTs.FT_MV_MP_WARE_BOMRow)
 
-                If Me.SVFR_SELECTING_ROW.OWNING_WARE.Length > 0 Then
+                If Me.SVFR_SELECTING_ROW.OWNING_WARE = Me.SVLM_CREATING_ROOT_WARE_ID Then
                     Me.TreeListColumn_BelongQty.OptionsColumn.AllowFocus = True
                     Me.TreeListColumn_WareBomType.OptionsColumn.AllowFocus = True
                 End If
                 Me.ToolStripButton_Remove.Enabled = True
                 Me.ToolStripButton_Add.Enabled = True
-                'Me.ToolStripButton_ReviseXXXX.Enabled = True
 
             End If
 
@@ -837,6 +845,10 @@ Namespace Manifest
             Me.SVFR_SELECTING_ROW.BELONG_QTY = CommTK.FInteger(calcEdit.Value)
             Me.SVFR_SELECTING_ROW.ROW_HIGHLIGHT = MyPosXService.Decls.ROW_HIGHLIGHT_MODIFIED
             Me.IsSaved = False
+        End Sub
+
+        Private Sub TreeList_WareBomList_FocusedNodeChanged(ByVal sender As Object, ByVal e As DevExpress.XtraTreeList.FocusedNodeChangedEventArgs) Handles TreeList_WareBomList.FocusedNodeChanged
+            Me.DoPrivateUpdateSelectingRow()
         End Sub
     End Class
 
