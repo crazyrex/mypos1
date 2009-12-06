@@ -45,10 +45,10 @@ Namespace Manifest
         'Public SVLM_UTLD_0002 As String ="SVLM_UTLD_0002"
 
         '数据列表变量
-        Public SVFT_BINDING_LIST As New MyPosXAuto.FTs.FT_MV_MP_WARE_BOM
+        Public SVFT_BINDING_LIST As New MyPosXAuto.FTs.FT_XV_S_MP_WARE_BOM
         'Public SVFT_CHOOSE_XXX_LIST As New XAuto.FTs.FT_
 
-        Public SVFR_SELECTING_ROW As MyPosXAuto.FTs.FT_MV_MP_WARE_BOMRow
+        Public SVFR_SELECTING_ROW As MyPosXAuto.FTs.FT_XV_S_MP_WARE_BOMRow
 
 #End Region
 
@@ -128,7 +128,7 @@ Namespace Manifest
             Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Remove, AddressOf Me.TbActionRemove)
             Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Refresh, AddressOf Me.TbActionRefresh)
             Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Close, AddressOf Me.TbActionClose)
-            'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0001, AddressOf Me.TbActionUtld0001)
+            Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Save, AddressOf Me.TbActionSave)
             'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0002, AddressOf Me.TbActionUtld0002)
             'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0003, AddressOf Me.TbActionUtld0003)
             'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0004, AddressOf Me.TbActionUtld0004)
@@ -246,23 +246,10 @@ Namespace Manifest
 
                 Case "TbActionAdd"
                     Dim chooseForm = TryCast(popupForm, M_01_00201)
-
                     Me.TreeList_WareBomList.DataSource = Nothing
                     For Each wareRow As MyPosXAuto.FTs.FT_M_MP_WARERow In chooseForm.SVFT_BINDING_WARE_LIST.FindRowsSelecting(True)
                         Me.SV_ADDING_WARE_IDS.Add(wareRow.WARE_ID)
 
-
-                        Dim addRow = Me.SVFT_BINDING_LIST.AddNewMV_MP_WARE_BOMRow( _
-                            0, _
-                            1, _
-                            wareRow.WARE_ID, _
-                            wareRow.WARE_CODE, _
-                            wareRow.WARE_NAME, _
-                            Me.SVLM_CREATING_ROOT_WARE_ID, _
-                            String.Empty, _
-                            String.Empty, _
-                            MyPosXService.Decls.DEFAULT_CI_VALUE_WARE_BOM_TYPE_NONE)
-                        addRow.ROW_HIGHLIGHT = MyPosXService.Decls.ROW_HIGHLIGHT_MODIFIED
                     Next
                     Me._bizAgent.DoRequest(Business.B_01_00501.Affairs.AddWare, False)
                 Case "ResponseTitleName2"
@@ -402,6 +389,9 @@ Namespace Manifest
                     Me.TreeList_WareBomList.ExpandAll()
                     Me.TreeList_WareBomList.BestFitColumns()
                     Me.IsSaved = False
+
+                Case Business.B_01_00501.Affairs.SaveInfo
+                    Me.UpdateDisplay()
             End Select
         End Sub
 
@@ -463,7 +453,7 @@ Namespace Manifest
 
         Private Sub TbActionRemove()
 
-            If Me.SVFR_SELECTING_ROW.OWNING_WARE.Length = 0 Then
+            If Me.SVFR_SELECTING_ROW.OWNING_WARE__WARE_ID.Length = 0 Then
                 Return
             End If
 
@@ -487,8 +477,8 @@ Namespace Manifest
         End Sub
 
 
-        Private Sub TbActionUtld0001()
-
+        Private Sub TbActionSave()
+            Me._bizAgent.DoRequest(Business.B_01_00501.Affairs.SaveInfo, False)
         End Sub
 
 
@@ -608,12 +598,13 @@ Namespace Manifest
                      CType(CType( _
                          Me.TreeList_WareBomList.GetDataRecordByNode( _
                              Me.TreeList_WareBomList.FocusedNode),  _
-                         DataRowView).Row, MyPosXAuto.FTs.FT_MV_MP_WARE_BOMRow)
+                         DataRowView).Row, MyPosXAuto.FTs.FT_XV_S_MP_WARE_BOMRow)
 
-                If Me.SVFR_SELECTING_ROW.OWNING_WARE = Me.SVLM_CREATING_ROOT_WARE_ID Then
+                If Me.SVFR_SELECTING_ROW.OWNING_WARE__WARE_ID = Me.SVLM_CREATING_ROOT_WARE_ID Then
                     Me.TreeListColumn_BelongQty.OptionsColumn.AllowFocus = True
                     Me.TreeListColumn_WareBomType.OptionsColumn.AllowFocus = True
                 End If
+
                 Me.ToolStripButton_Remove.Enabled = True
                 Me.ToolStripButton_Add.Enabled = True
 
@@ -842,7 +833,11 @@ Namespace Manifest
         Private Sub RepositoryItemCalcEdit_BelongQty_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemCalcEdit_BelongQty.EditValueChanged
             Dim calcEdit = TryCast(sender, DevExpress.XtraEditors.CalcEdit)
             'should not have commtk.finteger herer
+
             Me.SVFR_SELECTING_ROW.BELONG_QTY = CommTK.FInteger(calcEdit.Value)
+            If Me.SVFR_SELECTING_ROW.BELONG_QTY <= 0 Then
+                Me.SVFR_SELECTING_ROW.BELONG_QTY = 1
+            End If
             Me.SVFR_SELECTING_ROW.ROW_HIGHLIGHT = MyPosXService.Decls.ROW_HIGHLIGHT_MODIFIED
             Me.IsSaved = False
         End Sub

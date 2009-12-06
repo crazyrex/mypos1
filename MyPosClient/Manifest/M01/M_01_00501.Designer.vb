@@ -68,7 +68,6 @@
             Me.RepositoryItemCalcEdit_BelongQty = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
             Me.TreeListColumn_WareBomType = New DevExpress.XtraTreeList.Columns.TreeListColumn
             Me.RepositoryItemLookUpEdit_WareBomType = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
-            Me.TreeListColumn_AdditionBelongQty = New DevExpress.XtraTreeList.Columns.TreeListColumn
             Me.ToolStrip_Form.SuspendLayout()
             CType(Me.PanelControl_Filter, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.PanelControl_Filter.SuspendLayout()
@@ -331,7 +330,7 @@
             '
             'TreeList_WareBomList
             '
-            Me.TreeList_WareBomList.Columns.AddRange(New DevExpress.XtraTreeList.Columns.TreeListColumn() {Me.TreeListColumn_BelongWareCode, Me.TreeListColumn_BelongWareName, Me.TreeListColumn_BelongQty, Me.TreeListColumn_WareBomType, Me.TreeListColumn_AdditionBelongQty, Me.TreeListColumn_RowHighLight})
+            Me.TreeList_WareBomList.Columns.AddRange(New DevExpress.XtraTreeList.Columns.TreeListColumn() {Me.TreeListColumn_BelongWareCode, Me.TreeListColumn_BelongWareName, Me.TreeListColumn_BelongQty, Me.TreeListColumn_WareBomType, Me.TreeListColumn_RowHighLight})
             Me.TreeList_WareBomList.Dock = System.Windows.Forms.DockStyle.Fill
             StyleFormatCondition1.Appearance.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
             StyleFormatCondition1.Appearance.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold)
@@ -350,11 +349,11 @@
             StyleFormatCondition2.Condition = DevExpress.XtraGrid.FormatConditionEnum.Equal
             StyleFormatCondition2.Value1 = "ROW_HIGHLIGHT_MODIFIED"
             Me.TreeList_WareBomList.FormatConditions.AddRange(New DevExpress.XtraTreeList.StyleFormatConditions.StyleFormatCondition() {StyleFormatCondition1, StyleFormatCondition2})
-            Me.TreeList_WareBomList.KeyFieldName = "BELONG_WARE"
+            Me.TreeList_WareBomList.KeyFieldName = "BELONG_WARE__WARE_ID"
             Me.TreeList_WareBomList.Location = New System.Drawing.Point(0, 117)
             Me.TreeList_WareBomList.Name = "TreeList_WareBomList"
             Me.TreeList_WareBomList.OptionsView.AutoWidth = False
-            Me.TreeList_WareBomList.ParentFieldName = "OWNING_WARE"
+            Me.TreeList_WareBomList.ParentFieldName = "OWNING_WARE__WARE_ID"
             Me.TreeList_WareBomList.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemLookUpEdit_WareBomType, Me.RepositoryItemCalcEdit_BelongQty})
             Me.TreeList_WareBomList.Size = New System.Drawing.Size(530, 383)
             Me.TreeList_WareBomList.TabIndex = 10002
@@ -387,7 +386,7 @@
             'TreeListColumn_BelongWareCode
             '
             Me.TreeListColumn_BelongWareCode.Caption = "货号"
-            Me.TreeListColumn_BelongWareCode.FieldName = "BELONG_WARE_CODE"
+            Me.TreeListColumn_BelongWareCode.FieldName = "BELONG_WARE__WARE_CODE"
             Me.TreeListColumn_BelongWareCode.Name = "TreeListColumn_BelongWareCode"
             Me.TreeListColumn_BelongWareCode.OptionsColumn.AllowFocus = False
             Me.TreeListColumn_BelongWareCode.Visible = True
@@ -397,7 +396,7 @@
             'TreeListColumn_BelongWareName
             '
             Me.TreeListColumn_BelongWareName.Caption = "品名"
-            Me.TreeListColumn_BelongWareName.FieldName = "BELONG_WARE_NAME"
+            Me.TreeListColumn_BelongWareName.FieldName = "BELONG_WARE__WARE_NAME"
             Me.TreeListColumn_BelongWareName.Name = "TreeListColumn_BelongWareName"
             Me.TreeListColumn_BelongWareName.OptionsColumn.AllowEdit = False
             Me.TreeListColumn_BelongWareName.OptionsColumn.AllowFocus = False
@@ -439,17 +438,6 @@
             Me.RepositoryItemLookUpEdit_WareBomType.DisplayMember = "ITEM_MEANING"
             Me.RepositoryItemLookUpEdit_WareBomType.Name = "RepositoryItemLookUpEdit_WareBomType"
             Me.RepositoryItemLookUpEdit_WareBomType.ValueMember = "ITEM_VALUE"
-            '
-            'TreeListColumn_AdditionBelongQty
-            '
-            Me.TreeListColumn_AdditionBelongQty.Caption = "合成其他商品数量"
-            Me.TreeListColumn_AdditionBelongQty.FieldName = "ADDITION_BELONG_QTY"
-            Me.TreeListColumn_AdditionBelongQty.Name = "TreeListColumn_AdditionBelongQty"
-            Me.TreeListColumn_AdditionBelongQty.OptionsColumn.AllowEdit = False
-            Me.TreeListColumn_AdditionBelongQty.OptionsColumn.AllowFocus = False
-            Me.TreeListColumn_AdditionBelongQty.Visible = True
-            Me.TreeListColumn_AdditionBelongQty.VisibleIndex = 4
-            Me.TreeListColumn_AdditionBelongQty.Width = 109
             '
             'M_01_00501
             '
@@ -507,7 +495,6 @@
         Friend WithEvents TreeList_WareBomList As DevExpress.XtraTreeList.TreeList
         Friend WithEvents TreeListColumn_BelongQty As DevExpress.XtraTreeList.Columns.TreeListColumn
         Friend WithEvents TreeListColumn_WareBomType As DevExpress.XtraTreeList.Columns.TreeListColumn
-        Friend WithEvents TreeListColumn_AdditionBelongQty As DevExpress.XtraTreeList.Columns.TreeListColumn
         Friend WithEvents TreeListColumn_BelongWareName As DevExpress.XtraTreeList.Columns.TreeListColumn
         Friend WithEvents TreeListColumn_RowHighLight As DevExpress.XtraTreeList.Columns.TreeListColumn
         Friend WithEvents MemoEdit_WareCodes As DevExpress.XtraEditors.MemoEdit
