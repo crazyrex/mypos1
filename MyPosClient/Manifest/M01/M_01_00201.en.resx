@@ -244,6 +244,12 @@
   <data name="ToolStripButton_PrintLabel.Text" xml:space="preserve">
     <value>Print Label</value>
   </data>
+  <data name="ToolStripButton_SetWareBOM.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 22</value>
+  </data>
+  <data name="ToolStripButton_SetWareBOM.Text" xml:space="preserve">
+    <value>Set BOM</value>
+  </data>
   <data name="ToolStripButton_View.Size" type="System.Drawing.Size, System.Drawing">
     <value>33, 22</value>
   </data>

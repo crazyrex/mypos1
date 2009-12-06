@@ -53,7 +53,7 @@ Public Class ServiceTK
         MyPosXService.Decls.DEFAULT_CI_VALUE_WARE_BOM_TYPE_NONE = _
             MyPosXService.Facade.OpSysConfig.CreateCommonItem( _
                 itemID, _
-                MyPosXAuto.Decls.CICNAME_CURRENCY_TYPE, _
+                MyPosXAuto.Decls.CICNAME_WARE_BOM_TYPE, _
                 MyPosXService.Decls.DEFAULT_CI_TEXT_WARE_BOM_TYPE_NONE, _
                 String.Empty, _
                 True)
