@@ -48,8 +48,16 @@ Namespace Manifest
             Dim StyleFormatCondition1 As DevExpress.XtraTreeList.StyleFormatConditions.StyleFormatCondition = New DevExpress.XtraTreeList.StyleFormatConditions.StyleFormatCondition
             Dim StyleFormatCondition2 As DevExpress.XtraTreeList.StyleFormatConditions.StyleFormatCondition = New DevExpress.XtraTreeList.StyleFormatConditions.StyleFormatCondition
             Dim CTag7 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
-            Dim CTag8 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
+            Dim CTag14 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
+            Dim CTag13 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
+            Dim CTag10 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag9 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
+            Dim CTag12 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
+            Dim CTag11 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
+            Dim StyleFormatCondition4 As DevExpress.XtraGrid.StyleFormatCondition = New DevExpress.XtraGrid.StyleFormatCondition
+            Dim CTag8 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
+            Dim StyleFormatCondition3 As DevExpress.XtraGrid.StyleFormatCondition = New DevExpress.XtraGrid.StyleFormatCondition
+            Dim CTag15 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Me.ToolStrip_Form = New System.Windows.Forms.ToolStrip
             Me.ToolStripButton_Save = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_Add = New System.Windows.Forms.ToolStripButton
@@ -75,6 +83,64 @@ Namespace Manifest
             Me.XtraTabPage2 = New DevExpress.XtraTab.XtraTabPage
             Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl
             Me.GroupControl2 = New DevExpress.XtraEditors.GroupControl
+            Me.ToolStrip1 = New System.Windows.Forms.ToolStrip
+            Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton
+            Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton
+            Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton
+            Me.ToolStripButton4 = New System.Windows.Forms.ToolStripButton
+            Me.ToolStripButton5 = New System.Windows.Forms.ToolStripButton
+            Me.ToolStrip2 = New System.Windows.Forms.ToolStrip
+            Me.ToolStripButton6 = New System.Windows.Forms.ToolStripButton
+            Me.ToolStripButton7 = New System.Windows.Forms.ToolStripButton
+            Me.ToolStripButton8 = New System.Windows.Forms.ToolStripButton
+            Me.ToolStripButton9 = New System.Windows.Forms.ToolStripButton
+            Me.ToolStripButton10 = New System.Windows.Forms.ToolStripButton
+            Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl
+            Me.PanelControl2 = New DevExpress.XtraEditors.PanelControl
+            Me.GridControl_Ware = New DevExpress.XtraGrid.GridControl
+            Me.GridView_Ware = New DevExpress.XtraGrid.Views.Grid.GridView
+            Me.GridColumn_RowSelect = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.RepositoryItemCheckEdit_Select = New DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
+            Me.GridColumn_WareCode = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn_CustomCode = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn_WareName = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn_Spec = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn_Model = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn_Attribute1 = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn_Attribute2 = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn_Attribute3 = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn_Attribute4 = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn_UnitName = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn_UnitPrice = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.RepositoryItemCalcEdit_UnitPrice = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
+            Me.GridColumn_Unitcost = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.RepositoryItemCalcEdit_UnitCost = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
+            Me.GridColumn_SupplierID = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.RepositoryItemLookUpEdit_SupplierID = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
+            Me.GridColumn_Remarks = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn_RowHighlight = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridControl1 = New DevExpress.XtraGrid.GridControl
+            Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView
+            Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.RepositoryItemCheckEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
+            Me.GridColumn2 = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn3 = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn4 = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn5 = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn6 = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn7 = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn8 = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn9 = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn10 = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn11 = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn12 = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.RepositoryItemCalcEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
+            Me.GridColumn13 = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.RepositoryItemCalcEdit2 = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
+            Me.GridColumn14 = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.RepositoryItemLookUpEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
+            Me.GridColumn15 = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn16 = New DevExpress.XtraGrid.Columns.GridColumn
             Me.ToolStrip_Form.SuspendLayout()
             CType(Me.PanelControl_Filter, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.PanelControl_Filter.SuspendLayout()
@@ -90,7 +156,25 @@ Namespace Manifest
             Me.XtraTabPage1.SuspendLayout()
             Me.XtraTabPage2.SuspendLayout()
             CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.GroupControl1.SuspendLayout()
             CType(Me.GroupControl2, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.GroupControl2.SuspendLayout()
+            Me.ToolStrip1.SuspendLayout()
+            Me.ToolStrip2.SuspendLayout()
+            CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.GridControl_Ware, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.GridView_Ware, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.RepositoryItemCheckEdit_Select, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.RepositoryItemCalcEdit_UnitPrice, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.RepositoryItemCalcEdit_UnitCost, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.RepositoryItemLookUpEdit_SupplierID, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.RepositoryItemCheckEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.RepositoryItemCalcEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.RepositoryItemCalcEdit2, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.RepositoryItemLookUpEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'DefaultLookAndFeel_Form
@@ -464,7 +548,7 @@ Namespace Manifest
             Me.SplitContainerControl1.Panel2.Controls.Add(Me.GroupControl2)
             Me.SplitContainerControl1.Panel2.Text = "Panel2"
             Me.SplitContainerControl1.Size = New System.Drawing.Size(696, 351)
-            Me.SplitContainerControl1.SplitterPosition = 289
+            Me.SplitContainerControl1.SplitterPosition = 346
             Me.SplitContainerControl1.TabIndex = 10000
             Me.SplitContainerControl1.Text = "SplitContainerControl1"
             '
@@ -478,30 +562,30 @@ Namespace Manifest
             Me.XtraTabControl1.TabIndex = 10000
             Me.XtraTabControl1.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.XtraTabPage1, Me.XtraTabPage2})
             Me.XtraTabControl1.TabStop = False
-            CTag8.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
-            CTag8.CalculatorRequired = True
-            CTag8.ComboValueTextBox = Nothing
-            CTag8.ControlRelatedCode = Nothing
-            CTag8.DateButtonTextBox = Nothing
-            CTag8.DateTimeButtonTextBox = Nothing
-            CTag8.DisplayLinkControl = Nothing
-            CTag8.DisplayLinkDisplayFieldName = Nothing
-            CTag8.DisplayLinkKeyFieldName = Nothing
-            CTag8.DisplayLinkTable = Nothing
-            CTag8.FlexgridEditItem = ""
-            CTag8.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
-            CTag8.FormStatus = XL.Win.Component.BaseForm.FormStatuses.BeforeLoading
-            CTag8.IsButtonCustomed = False
-            CTag8.IsTextValid = True
-            CTag8.KeyValueAbsentable = False
-            CTag8.LeagleText = ""
-            CTag8.NumericButtonTextBox = Nothing
-            CTag8.ParentControl = Me.XtraTabControl1
-            CTag8.SkipValidate = False
-            CTag8.TimeButtonTextBox = Nothing
-            CTag8.ToolTip = ""
-            CTag8.ValueType = XL.Common.ControlValueType.Character
-            Me.XtraTabControl1.Tag = CTag8
+            CTag14.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
+            CTag14.CalculatorRequired = True
+            CTag14.ComboValueTextBox = Nothing
+            CTag14.ControlRelatedCode = Nothing
+            CTag14.DateButtonTextBox = Nothing
+            CTag14.DateTimeButtonTextBox = Nothing
+            CTag14.DisplayLinkControl = Nothing
+            CTag14.DisplayLinkDisplayFieldName = Nothing
+            CTag14.DisplayLinkKeyFieldName = Nothing
+            CTag14.DisplayLinkTable = Nothing
+            CTag14.FlexgridEditItem = ""
+            CTag14.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
+            CTag14.FormStatus = XL.Win.Component.BaseForm.FormStatuses.BeforeLoading
+            CTag14.IsButtonCustomed = False
+            CTag14.IsTextValid = True
+            CTag14.KeyValueAbsentable = False
+            CTag14.LeagleText = ""
+            CTag14.NumericButtonTextBox = Nothing
+            CTag14.ParentControl = Me.XtraTabControl1
+            CTag14.SkipValidate = False
+            CTag14.TimeButtonTextBox = Nothing
+            CTag14.ToolTip = ""
+            CTag14.ValueType = XL.Common.ControlValueType.Character
+            Me.XtraTabControl1.Tag = CTag14
             Me.XtraTabControl1.Text = "XtraTabControl1"
             '
             'XtraTabPage1
@@ -520,34 +604,161 @@ Namespace Manifest
             '
             'GroupControl1
             '
+            Me.GroupControl1.Controls.Add(Me.GridControl1)
+            Me.GroupControl1.Controls.Add(Me.PanelControl1)
+            Me.GroupControl1.Controls.Add(Me.ToolStrip2)
             Me.GroupControl1.Dock = System.Windows.Forms.DockStyle.Fill
             Me.GroupControl1.Location = New System.Drawing.Point(0, 0)
             Me.GroupControl1.Name = "GroupControl1"
-            Me.GroupControl1.Size = New System.Drawing.Size(285, 347)
+            Me.GroupControl1.Size = New System.Drawing.Size(342, 347)
             Me.GroupControl1.TabIndex = 0
             Me.GroupControl1.Text = "组件"
             '
             'GroupControl2
             '
+            Me.GroupControl2.Controls.Add(Me.GridControl_Ware)
+            Me.GroupControl2.Controls.Add(Me.PanelControl2)
+            Me.GroupControl2.Controls.Add(Me.ToolStrip1)
             Me.GroupControl2.Dock = System.Windows.Forms.DockStyle.Fill
             Me.GroupControl2.Location = New System.Drawing.Point(0, 0)
             Me.GroupControl2.Name = "GroupControl2"
-            Me.GroupControl2.Size = New System.Drawing.Size(397, 347)
+            Me.GroupControl2.Size = New System.Drawing.Size(340, 347)
             Me.GroupControl2.TabIndex = 1
             Me.GroupControl2.Text = "货品选项"
             '
-            'M_01_00206
+            'ToolStrip1
             '
-            Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
-            Me.Controls.Add(Me.XtraTabControl1)
-            Me.Controls.Add(Me.PanelControl_Filter)
-            Me.Controls.Add(Me.ToolStrip_Form)
-            Me.Cursor = System.Windows.Forms.Cursors.Default
-            Me.Font = New System.Drawing.Font("Arial", 9.0!)
-            Me.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
-            Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-            Me.Name = "M_01_00206"
-            Me.Size = New System.Drawing.Size(705, 500)
+            Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripButton5})
+            Me.ToolStrip1.Location = New System.Drawing.Point(2, 21)
+            Me.ToolStrip1.Name = "ToolStrip1"
+            Me.ToolStrip1.Size = New System.Drawing.Size(336, 25)
+            Me.ToolStrip1.TabIndex = 10001
+            CTag13.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
+            CTag13.CalculatorRequired = True
+            CTag13.ComboValueTextBox = Nothing
+            CTag13.ControlRelatedCode = Nothing
+            CTag13.DateButtonTextBox = Nothing
+            CTag13.DateTimeButtonTextBox = Nothing
+            CTag13.DisplayLinkControl = Nothing
+            CTag13.DisplayLinkDisplayFieldName = Nothing
+            CTag13.DisplayLinkKeyFieldName = Nothing
+            CTag13.DisplayLinkTable = Nothing
+            CTag13.FlexgridEditItem = ""
+            CTag13.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
+            CTag13.FormStatus = XL.Win.Component.BaseForm.FormStatuses.BeforeLoading
+            CTag13.IsButtonCustomed = False
+            CTag13.IsTextValid = True
+            CTag13.KeyValueAbsentable = False
+            CTag13.LeagleText = ""
+            CTag13.NumericButtonTextBox = Nothing
+            CTag13.ParentControl = Me.ToolStrip1
+            CTag13.SkipValidate = False
+            CTag13.TimeButtonTextBox = Nothing
+            CTag13.ToolTip = ""
+            CTag13.ValueType = XL.Common.ControlValueType.Character
+            Me.ToolStrip1.Tag = CTag13
+            '
+            'ToolStripButton1
+            '
+            Me.ToolStripButton1.Name = "ToolStripButton1"
+            Me.ToolStripButton1.Size = New System.Drawing.Size(36, 22)
+            Me.ToolStripButton1.Text = "保存"
+            '
+            'ToolStripButton2
+            '
+            Me.ToolStripButton2.Name = "ToolStripButton2"
+            Me.ToolStripButton2.Size = New System.Drawing.Size(36, 22)
+            Me.ToolStripButton2.Text = "添加"
+            '
+            'ToolStripButton3
+            '
+            Me.ToolStripButton3.Name = "ToolStripButton3"
+            Me.ToolStripButton3.Size = New System.Drawing.Size(36, 22)
+            Me.ToolStripButton3.Text = "去除"
+            '
+            'ToolStripButton4
+            '
+            Me.ToolStripButton4.Name = "ToolStripButton4"
+            Me.ToolStripButton4.Size = New System.Drawing.Size(36, 22)
+            Me.ToolStripButton4.Text = "刷新"
+            '
+            'ToolStripButton5
+            '
+            Me.ToolStripButton5.Name = "ToolStripButton5"
+            Me.ToolStripButton5.Size = New System.Drawing.Size(36, 22)
+            Me.ToolStripButton5.Text = "关闭"
+            '
+            'ToolStrip2
+            '
+            Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton6, Me.ToolStripButton7, Me.ToolStripButton8, Me.ToolStripButton9, Me.ToolStripButton10})
+            Me.ToolStrip2.Location = New System.Drawing.Point(2, 21)
+            Me.ToolStrip2.Name = "ToolStrip2"
+            Me.ToolStrip2.Size = New System.Drawing.Size(338, 25)
+            Me.ToolStrip2.TabIndex = 10001
+            CTag10.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
+            CTag10.CalculatorRequired = True
+            CTag10.ComboValueTextBox = Nothing
+            CTag10.ControlRelatedCode = Nothing
+            CTag10.DateButtonTextBox = Nothing
+            CTag10.DateTimeButtonTextBox = Nothing
+            CTag10.DisplayLinkControl = Nothing
+            CTag10.DisplayLinkDisplayFieldName = Nothing
+            CTag10.DisplayLinkKeyFieldName = Nothing
+            CTag10.DisplayLinkTable = Nothing
+            CTag10.FlexgridEditItem = ""
+            CTag10.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
+            CTag10.FormStatus = XL.Win.Component.BaseForm.FormStatuses.BeforeLoading
+            CTag10.IsButtonCustomed = False
+            CTag10.IsTextValid = True
+            CTag10.KeyValueAbsentable = False
+            CTag10.LeagleText = ""
+            CTag10.NumericButtonTextBox = Nothing
+            CTag10.ParentControl = Me.ToolStrip2
+            CTag10.SkipValidate = False
+            CTag10.TimeButtonTextBox = Nothing
+            CTag10.ToolTip = ""
+            CTag10.ValueType = XL.Common.ControlValueType.Character
+            Me.ToolStrip2.Tag = CTag10
+            '
+            'ToolStripButton6
+            '
+            Me.ToolStripButton6.Name = "ToolStripButton6"
+            Me.ToolStripButton6.Size = New System.Drawing.Size(36, 22)
+            Me.ToolStripButton6.Text = "保存"
+            '
+            'ToolStripButton7
+            '
+            Me.ToolStripButton7.Name = "ToolStripButton7"
+            Me.ToolStripButton7.Size = New System.Drawing.Size(36, 22)
+            Me.ToolStripButton7.Text = "添加"
+            '
+            'ToolStripButton8
+            '
+            Me.ToolStripButton8.Name = "ToolStripButton8"
+            Me.ToolStripButton8.Size = New System.Drawing.Size(36, 22)
+            Me.ToolStripButton8.Text = "去除"
+            '
+            'ToolStripButton9
+            '
+            Me.ToolStripButton9.Name = "ToolStripButton9"
+            Me.ToolStripButton9.Size = New System.Drawing.Size(36, 22)
+            Me.ToolStripButton9.Text = "刷新"
+            '
+            'ToolStripButton10
+            '
+            Me.ToolStripButton10.Name = "ToolStripButton10"
+            Me.ToolStripButton10.Size = New System.Drawing.Size(36, 22)
+            Me.ToolStripButton10.Text = "关闭"
+            '
+            'PanelControl1
+            '
+            Me.PanelControl1.Appearance.BackColor = System.Drawing.Color.White
+            Me.PanelControl1.Appearance.Options.UseBackColor = True
+            Me.PanelControl1.Dock = System.Windows.Forms.DockStyle.Top
+            Me.PanelControl1.Location = New System.Drawing.Point(2, 46)
+            Me.PanelControl1.Name = "PanelControl1"
+            Me.PanelControl1.Size = New System.Drawing.Size(338, 50)
+            Me.PanelControl1.TabIndex = 10002
             CTag9.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag9.CalculatorRequired = True
             CTag9.ComboValueTextBox = Nothing
@@ -566,12 +777,545 @@ Namespace Manifest
             CTag9.KeyValueAbsentable = False
             CTag9.LeagleText = ""
             CTag9.NumericButtonTextBox = Nothing
-            CTag9.ParentControl = Me
+            CTag9.ParentControl = Me.PanelControl1
             CTag9.SkipValidate = False
             CTag9.TimeButtonTextBox = Nothing
             CTag9.ToolTip = ""
             CTag9.ValueType = XL.Common.ControlValueType.Character
-            Me.Tag = CTag9
+            Me.PanelControl1.Tag = CTag9
+            '
+            'PanelControl2
+            '
+            Me.PanelControl2.Appearance.BackColor = System.Drawing.Color.White
+            Me.PanelControl2.Appearance.Options.UseBackColor = True
+            Me.PanelControl2.Dock = System.Windows.Forms.DockStyle.Top
+            Me.PanelControl2.Location = New System.Drawing.Point(2, 46)
+            Me.PanelControl2.Name = "PanelControl2"
+            Me.PanelControl2.Size = New System.Drawing.Size(336, 50)
+            Me.PanelControl2.TabIndex = 10003
+            CTag12.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
+            CTag12.CalculatorRequired = True
+            CTag12.ComboValueTextBox = Nothing
+            CTag12.ControlRelatedCode = Nothing
+            CTag12.DateButtonTextBox = Nothing
+            CTag12.DateTimeButtonTextBox = Nothing
+            CTag12.DisplayLinkControl = Nothing
+            CTag12.DisplayLinkDisplayFieldName = Nothing
+            CTag12.DisplayLinkKeyFieldName = Nothing
+            CTag12.DisplayLinkTable = Nothing
+            CTag12.FlexgridEditItem = ""
+            CTag12.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
+            CTag12.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
+            CTag12.IsButtonCustomed = False
+            CTag12.IsTextValid = True
+            CTag12.KeyValueAbsentable = False
+            CTag12.LeagleText = ""
+            CTag12.NumericButtonTextBox = Nothing
+            CTag12.ParentControl = Me.PanelControl2
+            CTag12.SkipValidate = False
+            CTag12.TimeButtonTextBox = Nothing
+            CTag12.ToolTip = ""
+            CTag12.ValueType = XL.Common.ControlValueType.Character
+            Me.PanelControl2.Tag = CTag12
+            '
+            'GridControl_Ware
+            '
+            Me.GridControl_Ware.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.GridControl_Ware.EmbeddedNavigator.Name = ""
+            CTag11.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
+            CTag11.CalculatorRequired = True
+            CTag11.ComboValueTextBox = Nothing
+            CTag11.ControlRelatedCode = Nothing
+            CTag11.DateButtonTextBox = Nothing
+            CTag11.DateTimeButtonTextBox = Nothing
+            CTag11.DisplayLinkControl = Nothing
+            CTag11.DisplayLinkDisplayFieldName = Nothing
+            CTag11.DisplayLinkKeyFieldName = Nothing
+            CTag11.DisplayLinkTable = Nothing
+            CTag11.FlexgridEditItem = ""
+            CTag11.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
+            CTag11.FormStatus = XL.Win.Component.BaseForm.FormStatuses.BeforeLoading
+            CTag11.IsButtonCustomed = False
+            CTag11.IsTextValid = True
+            CTag11.KeyValueAbsentable = False
+            CTag11.LeagleText = ""
+            CTag11.NumericButtonTextBox = Nothing
+            CTag11.ParentControl = Me.GridControl_Ware.EmbeddedNavigator
+            CTag11.SkipValidate = False
+            CTag11.TimeButtonTextBox = Nothing
+            CTag11.ToolTip = ""
+            CTag11.ValueType = XL.Common.ControlValueType.Character
+            Me.GridControl_Ware.EmbeddedNavigator.Tag = CTag11
+            Me.GridControl_Ware.Location = New System.Drawing.Point(2, 96)
+            Me.GridControl_Ware.MainView = Me.GridView_Ware
+            Me.GridControl_Ware.Name = "GridControl_Ware"
+            Me.GridControl_Ware.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemCheckEdit_Select, Me.RepositoryItemLookUpEdit_SupplierID, Me.RepositoryItemCalcEdit_UnitPrice, Me.RepositoryItemCalcEdit_UnitCost})
+            Me.GridControl_Ware.Size = New System.Drawing.Size(336, 249)
+            Me.GridControl_Ware.TabIndex = 10004
+            Me.GridControl_Ware.TabStop = False
+            Me.GridControl_Ware.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView_Ware})
+            '
+            'GridView_Ware
+            '
+            Me.GridView_Ware.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn_RowSelect, Me.GridColumn_WareCode, Me.GridColumn_CustomCode, Me.GridColumn_WareName, Me.GridColumn_Spec, Me.GridColumn_Model, Me.GridColumn_Attribute1, Me.GridColumn_Attribute2, Me.GridColumn_Attribute3, Me.GridColumn_Attribute4, Me.GridColumn_UnitName, Me.GridColumn_UnitPrice, Me.GridColumn_Unitcost, Me.GridColumn_SupplierID, Me.GridColumn_Remarks, Me.GridColumn_RowHighlight})
+            StyleFormatCondition4.Appearance.BackColor = System.Drawing.Color.Lime
+            StyleFormatCondition4.Appearance.BackColor2 = System.Drawing.Color.White
+            StyleFormatCondition4.Appearance.Options.UseBackColor = True
+            StyleFormatCondition4.ApplyToRow = True
+            StyleFormatCondition4.Column = Me.GridColumn_RowHighlight
+            StyleFormatCondition4.Condition = DevExpress.XtraGrid.FormatConditionEnum.Equal
+            StyleFormatCondition4.Value1 = "SEARCH_MATCH"
+            Me.GridView_Ware.FormatConditions.AddRange(New DevExpress.XtraGrid.StyleFormatCondition() {StyleFormatCondition4})
+            Me.GridView_Ware.GridControl = Me.GridControl_Ware
+            Me.GridView_Ware.Name = "GridView_Ware"
+            Me.GridView_Ware.OptionsView.ColumnAutoWidth = False
+            Me.GridView_Ware.OptionsView.ShowFooter = True
+            Me.GridView_Ware.OptionsView.ShowGroupPanel = False
+            '
+            'GridColumn_RowSelect
+            '
+            Me.GridColumn_RowSelect.Caption = "选择"
+            Me.GridColumn_RowSelect.ColumnEdit = Me.RepositoryItemCheckEdit_Select
+            Me.GridColumn_RowSelect.FieldName = "DSR_FT_ROW_SELECTED"
+            Me.GridColumn_RowSelect.Name = "GridColumn_RowSelect"
+            Me.GridColumn_RowSelect.Visible = True
+            Me.GridColumn_RowSelect.VisibleIndex = 0
+            '
+            'RepositoryItemCheckEdit_Select
+            '
+            Me.RepositoryItemCheckEdit_Select.AutoHeight = False
+            Me.RepositoryItemCheckEdit_Select.Name = "RepositoryItemCheckEdit_Select"
+            '
+            'GridColumn_WareCode
+            '
+            Me.GridColumn_WareCode.Caption = "货品代码"
+            Me.GridColumn_WareCode.FieldName = "WARE_CODE"
+            Me.GridColumn_WareCode.Name = "GridColumn_WareCode"
+            Me.GridColumn_WareCode.OptionsColumn.AllowFocus = False
+            Me.GridColumn_WareCode.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Count
+            Me.GridColumn_WareCode.Visible = True
+            Me.GridColumn_WareCode.VisibleIndex = 1
+            '
+            'GridColumn_CustomCode
+            '
+            Me.GridColumn_CustomCode.Caption = "自定货号"
+            Me.GridColumn_CustomCode.FieldName = "CUSTOM_CODE"
+            Me.GridColumn_CustomCode.Name = "GridColumn_CustomCode"
+            Me.GridColumn_CustomCode.OptionsColumn.AllowFocus = False
+            Me.GridColumn_CustomCode.Visible = True
+            Me.GridColumn_CustomCode.VisibleIndex = 2
+            '
+            'GridColumn_WareName
+            '
+            Me.GridColumn_WareName.Caption = "货品名称"
+            Me.GridColumn_WareName.FieldName = "WARE_NAME"
+            Me.GridColumn_WareName.Name = "GridColumn_WareName"
+            Me.GridColumn_WareName.OptionsColumn.AllowFocus = False
+            Me.GridColumn_WareName.Visible = True
+            Me.GridColumn_WareName.VisibleIndex = 3
+            '
+            'GridColumn_Spec
+            '
+            Me.GridColumn_Spec.Caption = "货品规格"
+            Me.GridColumn_Spec.FieldName = "SPEC"
+            Me.GridColumn_Spec.Name = "GridColumn_Spec"
+            Me.GridColumn_Spec.OptionsColumn.AllowFocus = False
+            Me.GridColumn_Spec.Visible = True
+            Me.GridColumn_Spec.VisibleIndex = 4
+            '
+            'GridColumn_Model
+            '
+            Me.GridColumn_Model.Caption = "货品型号"
+            Me.GridColumn_Model.FieldName = "MODEL"
+            Me.GridColumn_Model.Name = "GridColumn_Model"
+            Me.GridColumn_Model.OptionsColumn.AllowFocus = False
+            Me.GridColumn_Model.Visible = True
+            Me.GridColumn_Model.VisibleIndex = 5
+            '
+            'GridColumn_Attribute1
+            '
+            Me.GridColumn_Attribute1.Caption = "属性1"
+            Me.GridColumn_Attribute1.FieldName = "ATTRIBUTE1"
+            Me.GridColumn_Attribute1.Name = "GridColumn_Attribute1"
+            Me.GridColumn_Attribute1.OptionsColumn.AllowFocus = False
+            Me.GridColumn_Attribute1.Visible = True
+            Me.GridColumn_Attribute1.VisibleIndex = 6
+            '
+            'GridColumn_Attribute2
+            '
+            Me.GridColumn_Attribute2.Caption = "属性2"
+            Me.GridColumn_Attribute2.FieldName = "ATTRIBUTE2"
+            Me.GridColumn_Attribute2.Name = "GridColumn_Attribute2"
+            Me.GridColumn_Attribute2.OptionsColumn.AllowFocus = False
+            Me.GridColumn_Attribute2.Visible = True
+            Me.GridColumn_Attribute2.VisibleIndex = 7
+            '
+            'GridColumn_Attribute3
+            '
+            Me.GridColumn_Attribute3.Caption = "属性3"
+            Me.GridColumn_Attribute3.FieldName = "ATTRIBUTE3"
+            Me.GridColumn_Attribute3.Name = "GridColumn_Attribute3"
+            Me.GridColumn_Attribute3.OptionsColumn.AllowFocus = False
+            Me.GridColumn_Attribute3.Visible = True
+            Me.GridColumn_Attribute3.VisibleIndex = 8
+            '
+            'GridColumn_Attribute4
+            '
+            Me.GridColumn_Attribute4.Caption = "属性4"
+            Me.GridColumn_Attribute4.FieldName = "ATTRIBUTE4"
+            Me.GridColumn_Attribute4.Name = "GridColumn_Attribute4"
+            Me.GridColumn_Attribute4.OptionsColumn.AllowFocus = False
+            Me.GridColumn_Attribute4.Visible = True
+            Me.GridColumn_Attribute4.VisibleIndex = 9
+            '
+            'GridColumn_UnitName
+            '
+            Me.GridColumn_UnitName.Caption = "单位"
+            Me.GridColumn_UnitName.FieldName = "UNIT_NAME"
+            Me.GridColumn_UnitName.Name = "GridColumn_UnitName"
+            Me.GridColumn_UnitName.OptionsColumn.AllowFocus = False
+            Me.GridColumn_UnitName.Visible = True
+            Me.GridColumn_UnitName.VisibleIndex = 10
+            '
+            'GridColumn_UnitPrice
+            '
+            Me.GridColumn_UnitPrice.Caption = "单价"
+            Me.GridColumn_UnitPrice.ColumnEdit = Me.RepositoryItemCalcEdit_UnitPrice
+            Me.GridColumn_UnitPrice.DisplayFormat.FormatString = "{0:#,##0.00}"
+            Me.GridColumn_UnitPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
+            Me.GridColumn_UnitPrice.FieldName = "UNIT_PRICE"
+            Me.GridColumn_UnitPrice.Name = "GridColumn_UnitPrice"
+            Me.GridColumn_UnitPrice.OptionsColumn.AllowFocus = False
+            Me.GridColumn_UnitPrice.Visible = True
+            Me.GridColumn_UnitPrice.VisibleIndex = 11
+            '
+            'RepositoryItemCalcEdit_UnitPrice
+            '
+            Me.RepositoryItemCalcEdit_UnitPrice.AutoHeight = False
+            Me.RepositoryItemCalcEdit_UnitPrice.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+            Me.RepositoryItemCalcEdit_UnitPrice.Name = "RepositoryItemCalcEdit_UnitPrice"
+            '
+            'GridColumn_Unitcost
+            '
+            Me.GridColumn_Unitcost.Caption = "成本"
+            Me.GridColumn_Unitcost.ColumnEdit = Me.RepositoryItemCalcEdit_UnitCost
+            Me.GridColumn_Unitcost.DisplayFormat.FormatString = "{0:#,##0.00}"
+            Me.GridColumn_Unitcost.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
+            Me.GridColumn_Unitcost.FieldName = "UNIT_COST"
+            Me.GridColumn_Unitcost.Name = "GridColumn_Unitcost"
+            Me.GridColumn_Unitcost.OptionsColumn.AllowFocus = False
+            Me.GridColumn_Unitcost.Visible = True
+            Me.GridColumn_Unitcost.VisibleIndex = 12
+            '
+            'RepositoryItemCalcEdit_UnitCost
+            '
+            Me.RepositoryItemCalcEdit_UnitCost.AutoHeight = False
+            Me.RepositoryItemCalcEdit_UnitCost.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+            Me.RepositoryItemCalcEdit_UnitCost.Name = "RepositoryItemCalcEdit_UnitCost"
+            '
+            'GridColumn_SupplierID
+            '
+            Me.GridColumn_SupplierID.Caption = "供应商名称"
+            Me.GridColumn_SupplierID.ColumnEdit = Me.RepositoryItemLookUpEdit_SupplierID
+            Me.GridColumn_SupplierID.FieldName = "SUPPLIER_ID"
+            Me.GridColumn_SupplierID.Name = "GridColumn_SupplierID"
+            Me.GridColumn_SupplierID.OptionsColumn.AllowFocus = False
+            Me.GridColumn_SupplierID.Visible = True
+            Me.GridColumn_SupplierID.VisibleIndex = 13
+            '
+            'RepositoryItemLookUpEdit_SupplierID
+            '
+            Me.RepositoryItemLookUpEdit_SupplierID.AutoHeight = False
+            Me.RepositoryItemLookUpEdit_SupplierID.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+            Me.RepositoryItemLookUpEdit_SupplierID.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("SUPPLIER_NAME", "Name1", 20, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Data.ColumnSortOrder.None)})
+            Me.RepositoryItemLookUpEdit_SupplierID.DisplayMember = "SUPPLIER_NAME"
+            Me.RepositoryItemLookUpEdit_SupplierID.Name = "RepositoryItemLookUpEdit_SupplierID"
+            Me.RepositoryItemLookUpEdit_SupplierID.NullText = ""
+            Me.RepositoryItemLookUpEdit_SupplierID.ValueMember = "SUPPLIER_ID"
+            '
+            'GridColumn_Remarks
+            '
+            Me.GridColumn_Remarks.Caption = "备注"
+            Me.GridColumn_Remarks.FieldName = "REMARK"
+            Me.GridColumn_Remarks.Name = "GridColumn_Remarks"
+            Me.GridColumn_Remarks.OptionsColumn.AllowFocus = False
+            Me.GridColumn_Remarks.Visible = True
+            Me.GridColumn_Remarks.VisibleIndex = 14
+            '
+            'GridColumn_RowHighlight
+            '
+            Me.GridColumn_RowHighlight.Caption = "高亮显示"
+            Me.GridColumn_RowHighlight.FieldName = "DSR_FT_ROW_HIGHLIGHT"
+            Me.GridColumn_RowHighlight.Name = "GridColumn_RowHighlight"
+            Me.GridColumn_RowHighlight.OptionsColumn.AllowFocus = False
+            '
+            'GridControl1
+            '
+            Me.GridControl1.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.GridControl1.EmbeddedNavigator.Name = ""
+            CTag8.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
+            CTag8.CalculatorRequired = True
+            CTag8.ComboValueTextBox = Nothing
+            CTag8.ControlRelatedCode = Nothing
+            CTag8.DateButtonTextBox = Nothing
+            CTag8.DateTimeButtonTextBox = Nothing
+            CTag8.DisplayLinkControl = Nothing
+            CTag8.DisplayLinkDisplayFieldName = Nothing
+            CTag8.DisplayLinkKeyFieldName = Nothing
+            CTag8.DisplayLinkTable = Nothing
+            CTag8.FlexgridEditItem = ""
+            CTag8.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
+            CTag8.FormStatus = XL.Win.Component.BaseForm.FormStatuses.BeforeLoading
+            CTag8.IsButtonCustomed = False
+            CTag8.IsTextValid = True
+            CTag8.KeyValueAbsentable = False
+            CTag8.LeagleText = ""
+            CTag8.NumericButtonTextBox = Nothing
+            CTag8.ParentControl = Me.GridControl1.EmbeddedNavigator
+            CTag8.SkipValidate = False
+            CTag8.TimeButtonTextBox = Nothing
+            CTag8.ToolTip = ""
+            CTag8.ValueType = XL.Common.ControlValueType.Character
+            Me.GridControl1.EmbeddedNavigator.Tag = CTag8
+            Me.GridControl1.Location = New System.Drawing.Point(2, 96)
+            Me.GridControl1.MainView = Me.GridView1
+            Me.GridControl1.Name = "GridControl1"
+            Me.GridControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemCheckEdit1, Me.RepositoryItemLookUpEdit1, Me.RepositoryItemCalcEdit1, Me.RepositoryItemCalcEdit2})
+            Me.GridControl1.Size = New System.Drawing.Size(338, 249)
+            Me.GridControl1.TabIndex = 10003
+            Me.GridControl1.TabStop = False
+            Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
+            '
+            'GridView1
+            '
+            Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn1, Me.GridColumn2, Me.GridColumn3, Me.GridColumn4, Me.GridColumn5, Me.GridColumn6, Me.GridColumn7, Me.GridColumn8, Me.GridColumn9, Me.GridColumn10, Me.GridColumn11, Me.GridColumn12, Me.GridColumn13, Me.GridColumn14, Me.GridColumn15, Me.GridColumn16})
+            StyleFormatCondition3.Appearance.BackColor = System.Drawing.Color.Lime
+            StyleFormatCondition3.Appearance.BackColor2 = System.Drawing.Color.White
+            StyleFormatCondition3.Appearance.Options.UseBackColor = True
+            StyleFormatCondition3.ApplyToRow = True
+            StyleFormatCondition3.Column = Me.GridColumn16
+            StyleFormatCondition3.Condition = DevExpress.XtraGrid.FormatConditionEnum.Equal
+            StyleFormatCondition3.Value1 = "SEARCH_MATCH"
+            Me.GridView1.FormatConditions.AddRange(New DevExpress.XtraGrid.StyleFormatCondition() {StyleFormatCondition3})
+            Me.GridView1.GridControl = Me.GridControl1
+            Me.GridView1.Name = "GridView1"
+            Me.GridView1.OptionsView.ColumnAutoWidth = False
+            Me.GridView1.OptionsView.ShowFooter = True
+            Me.GridView1.OptionsView.ShowGroupPanel = False
+            '
+            'GridColumn1
+            '
+            Me.GridColumn1.Caption = "选择"
+            Me.GridColumn1.ColumnEdit = Me.RepositoryItemCheckEdit1
+            Me.GridColumn1.FieldName = "DSR_FT_ROW_SELECTED"
+            Me.GridColumn1.Name = "GridColumn1"
+            Me.GridColumn1.Visible = True
+            Me.GridColumn1.VisibleIndex = 0
+            '
+            'RepositoryItemCheckEdit1
+            '
+            Me.RepositoryItemCheckEdit1.AutoHeight = False
+            Me.RepositoryItemCheckEdit1.Name = "RepositoryItemCheckEdit1"
+            '
+            'GridColumn2
+            '
+            Me.GridColumn2.Caption = "货品代码"
+            Me.GridColumn2.FieldName = "WARE_CODE"
+            Me.GridColumn2.Name = "GridColumn2"
+            Me.GridColumn2.OptionsColumn.AllowFocus = False
+            Me.GridColumn2.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Count
+            Me.GridColumn2.Visible = True
+            Me.GridColumn2.VisibleIndex = 1
+            '
+            'GridColumn3
+            '
+            Me.GridColumn3.Caption = "自定货号"
+            Me.GridColumn3.FieldName = "CUSTOM_CODE"
+            Me.GridColumn3.Name = "GridColumn3"
+            Me.GridColumn3.OptionsColumn.AllowFocus = False
+            Me.GridColumn3.Visible = True
+            Me.GridColumn3.VisibleIndex = 2
+            '
+            'GridColumn4
+            '
+            Me.GridColumn4.Caption = "货品名称"
+            Me.GridColumn4.FieldName = "WARE_NAME"
+            Me.GridColumn4.Name = "GridColumn4"
+            Me.GridColumn4.OptionsColumn.AllowFocus = False
+            Me.GridColumn4.Visible = True
+            Me.GridColumn4.VisibleIndex = 3
+            '
+            'GridColumn5
+            '
+            Me.GridColumn5.Caption = "货品规格"
+            Me.GridColumn5.FieldName = "SPEC"
+            Me.GridColumn5.Name = "GridColumn5"
+            Me.GridColumn5.OptionsColumn.AllowFocus = False
+            Me.GridColumn5.Visible = True
+            Me.GridColumn5.VisibleIndex = 4
+            '
+            'GridColumn6
+            '
+            Me.GridColumn6.Caption = "货品型号"
+            Me.GridColumn6.FieldName = "MODEL"
+            Me.GridColumn6.Name = "GridColumn6"
+            Me.GridColumn6.OptionsColumn.AllowFocus = False
+            Me.GridColumn6.Visible = True
+            Me.GridColumn6.VisibleIndex = 5
+            '
+            'GridColumn7
+            '
+            Me.GridColumn7.Caption = "属性1"
+            Me.GridColumn7.FieldName = "ATTRIBUTE1"
+            Me.GridColumn7.Name = "GridColumn7"
+            Me.GridColumn7.OptionsColumn.AllowFocus = False
+            Me.GridColumn7.Visible = True
+            Me.GridColumn7.VisibleIndex = 6
+            '
+            'GridColumn8
+            '
+            Me.GridColumn8.Caption = "属性2"
+            Me.GridColumn8.FieldName = "ATTRIBUTE2"
+            Me.GridColumn8.Name = "GridColumn8"
+            Me.GridColumn8.OptionsColumn.AllowFocus = False
+            Me.GridColumn8.Visible = True
+            Me.GridColumn8.VisibleIndex = 7
+            '
+            'GridColumn9
+            '
+            Me.GridColumn9.Caption = "属性3"
+            Me.GridColumn9.FieldName = "ATTRIBUTE3"
+            Me.GridColumn9.Name = "GridColumn9"
+            Me.GridColumn9.OptionsColumn.AllowFocus = False
+            Me.GridColumn9.Visible = True
+            Me.GridColumn9.VisibleIndex = 8
+            '
+            'GridColumn10
+            '
+            Me.GridColumn10.Caption = "属性4"
+            Me.GridColumn10.FieldName = "ATTRIBUTE4"
+            Me.GridColumn10.Name = "GridColumn10"
+            Me.GridColumn10.OptionsColumn.AllowFocus = False
+            Me.GridColumn10.Visible = True
+            Me.GridColumn10.VisibleIndex = 9
+            '
+            'GridColumn11
+            '
+            Me.GridColumn11.Caption = "单位"
+            Me.GridColumn11.FieldName = "UNIT_NAME"
+            Me.GridColumn11.Name = "GridColumn11"
+            Me.GridColumn11.OptionsColumn.AllowFocus = False
+            Me.GridColumn11.Visible = True
+            Me.GridColumn11.VisibleIndex = 10
+            '
+            'GridColumn12
+            '
+            Me.GridColumn12.Caption = "单价"
+            Me.GridColumn12.ColumnEdit = Me.RepositoryItemCalcEdit1
+            Me.GridColumn12.DisplayFormat.FormatString = "{0:#,##0.00}"
+            Me.GridColumn12.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
+            Me.GridColumn12.FieldName = "UNIT_PRICE"
+            Me.GridColumn12.Name = "GridColumn12"
+            Me.GridColumn12.OptionsColumn.AllowFocus = False
+            Me.GridColumn12.Visible = True
+            Me.GridColumn12.VisibleIndex = 11
+            '
+            'RepositoryItemCalcEdit1
+            '
+            Me.RepositoryItemCalcEdit1.AutoHeight = False
+            Me.RepositoryItemCalcEdit1.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+            Me.RepositoryItemCalcEdit1.Name = "RepositoryItemCalcEdit1"
+            '
+            'GridColumn13
+            '
+            Me.GridColumn13.Caption = "成本"
+            Me.GridColumn13.ColumnEdit = Me.RepositoryItemCalcEdit2
+            Me.GridColumn13.DisplayFormat.FormatString = "{0:#,##0.00}"
+            Me.GridColumn13.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
+            Me.GridColumn13.FieldName = "UNIT_COST"
+            Me.GridColumn13.Name = "GridColumn13"
+            Me.GridColumn13.OptionsColumn.AllowFocus = False
+            Me.GridColumn13.Visible = True
+            Me.GridColumn13.VisibleIndex = 12
+            '
+            'RepositoryItemCalcEdit2
+            '
+            Me.RepositoryItemCalcEdit2.AutoHeight = False
+            Me.RepositoryItemCalcEdit2.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+            Me.RepositoryItemCalcEdit2.Name = "RepositoryItemCalcEdit2"
+            '
+            'GridColumn14
+            '
+            Me.GridColumn14.Caption = "供应商名称"
+            Me.GridColumn14.ColumnEdit = Me.RepositoryItemLookUpEdit1
+            Me.GridColumn14.FieldName = "SUPPLIER_ID"
+            Me.GridColumn14.Name = "GridColumn14"
+            Me.GridColumn14.OptionsColumn.AllowFocus = False
+            Me.GridColumn14.Visible = True
+            Me.GridColumn14.VisibleIndex = 13
+            '
+            'RepositoryItemLookUpEdit1
+            '
+            Me.RepositoryItemLookUpEdit1.AutoHeight = False
+            Me.RepositoryItemLookUpEdit1.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+            Me.RepositoryItemLookUpEdit1.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("SUPPLIER_NAME", "Name1", 20, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Data.ColumnSortOrder.None)})
+            Me.RepositoryItemLookUpEdit1.DisplayMember = "SUPPLIER_NAME"
+            Me.RepositoryItemLookUpEdit1.Name = "RepositoryItemLookUpEdit1"
+            Me.RepositoryItemLookUpEdit1.NullText = ""
+            Me.RepositoryItemLookUpEdit1.ValueMember = "SUPPLIER_ID"
+            '
+            'GridColumn15
+            '
+            Me.GridColumn15.Caption = "备注"
+            Me.GridColumn15.FieldName = "REMARK"
+            Me.GridColumn15.Name = "GridColumn15"
+            Me.GridColumn15.OptionsColumn.AllowFocus = False
+            Me.GridColumn15.Visible = True
+            Me.GridColumn15.VisibleIndex = 14
+            '
+            'GridColumn16
+            '
+            Me.GridColumn16.Caption = "高亮显示"
+            Me.GridColumn16.FieldName = "DSR_FT_ROW_HIGHLIGHT"
+            Me.GridColumn16.Name = "GridColumn16"
+            Me.GridColumn16.OptionsColumn.AllowFocus = False
+            '
+            'M_01_00206
+            '
+            Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+            Me.Controls.Add(Me.XtraTabControl1)
+            Me.Controls.Add(Me.PanelControl_Filter)
+            Me.Controls.Add(Me.ToolStrip_Form)
+            Me.Cursor = System.Windows.Forms.Cursors.Default
+            Me.Font = New System.Drawing.Font("Arial", 9.0!)
+            Me.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
+            Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+            Me.Name = "M_01_00206"
+            Me.Size = New System.Drawing.Size(705, 500)
+            CTag15.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
+            CTag15.CalculatorRequired = True
+            CTag15.ComboValueTextBox = Nothing
+            CTag15.ControlRelatedCode = Nothing
+            CTag15.DateButtonTextBox = Nothing
+            CTag15.DateTimeButtonTextBox = Nothing
+            CTag15.DisplayLinkControl = Nothing
+            CTag15.DisplayLinkDisplayFieldName = Nothing
+            CTag15.DisplayLinkKeyFieldName = Nothing
+            CTag15.DisplayLinkTable = Nothing
+            CTag15.FlexgridEditItem = ""
+            CTag15.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
+            CTag15.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
+            CTag15.IsButtonCustomed = False
+            CTag15.IsTextValid = True
+            CTag15.KeyValueAbsentable = False
+            CTag15.LeagleText = ""
+            CTag15.NumericButtonTextBox = Nothing
+            CTag15.ParentControl = Me
+            CTag15.SkipValidate = False
+            CTag15.TimeButtonTextBox = Nothing
+            CTag15.ToolTip = ""
+            CTag15.ValueType = XL.Common.ControlValueType.Character
+            Me.Tag = CTag15
             Me.ToolStrip_Form.ResumeLayout(False)
             Me.ToolStrip_Form.PerformLayout()
             CType(Me.PanelControl_Filter, System.ComponentModel.ISupportInitialize).EndInit()
@@ -589,7 +1333,29 @@ Namespace Manifest
             Me.XtraTabPage1.ResumeLayout(False)
             Me.XtraTabPage2.ResumeLayout(False)
             CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.GroupControl1.ResumeLayout(False)
+            Me.GroupControl1.PerformLayout()
             CType(Me.GroupControl2, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.GroupControl2.ResumeLayout(False)
+            Me.GroupControl2.PerformLayout()
+            Me.ToolStrip1.ResumeLayout(False)
+            Me.ToolStrip1.PerformLayout()
+            Me.ToolStrip2.ResumeLayout(False)
+            Me.ToolStrip2.PerformLayout()
+            CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.GridControl_Ware, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.GridView_Ware, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.RepositoryItemCheckEdit_Select, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.RepositoryItemCalcEdit_UnitPrice, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.RepositoryItemCalcEdit_UnitCost, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.RepositoryItemLookUpEdit_SupplierID, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.RepositoryItemCheckEdit1, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.RepositoryItemCalcEdit1, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.RepositoryItemCalcEdit2, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.RepositoryItemLookUpEdit1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -614,6 +1380,64 @@ Namespace Manifest
         Friend WithEvents XtraTabControl1 As DevExpress.XtraTab.XtraTabControl
         Friend WithEvents XtraTabPage1 As DevExpress.XtraTab.XtraTabPage
         Friend WithEvents XtraTabPage2 As DevExpress.XtraTab.XtraTabPage
+        Friend WithEvents PanelControl1 As DevExpress.XtraEditors.PanelControl
+        Friend WithEvents ToolStrip2 As System.Windows.Forms.ToolStrip
+        Friend WithEvents ToolStripButton6 As System.Windows.Forms.ToolStripButton
+        Friend WithEvents ToolStripButton7 As System.Windows.Forms.ToolStripButton
+        Friend WithEvents ToolStripButton8 As System.Windows.Forms.ToolStripButton
+        Friend WithEvents ToolStripButton9 As System.Windows.Forms.ToolStripButton
+        Friend WithEvents ToolStripButton10 As System.Windows.Forms.ToolStripButton
+        Friend WithEvents PanelControl2 As DevExpress.XtraEditors.PanelControl
+        Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
+        Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
+        Friend WithEvents ToolStripButton2 As System.Windows.Forms.ToolStripButton
+        Friend WithEvents ToolStripButton3 As System.Windows.Forms.ToolStripButton
+        Friend WithEvents ToolStripButton4 As System.Windows.Forms.ToolStripButton
+        Friend WithEvents ToolStripButton5 As System.Windows.Forms.ToolStripButton
+        Friend WithEvents GridControl_Ware As DevExpress.XtraGrid.GridControl
+        Friend WithEvents GridView_Ware As DevExpress.XtraGrid.Views.Grid.GridView
+        Friend WithEvents GridColumn_RowSelect As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents RepositoryItemCheckEdit_Select As DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
+        Friend WithEvents GridColumn_WareCode As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridColumn_CustomCode As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridColumn_WareName As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridColumn_Spec As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridColumn_Model As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridColumn_Attribute1 As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridColumn_Attribute2 As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridColumn_Attribute3 As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridColumn_Attribute4 As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridColumn_UnitName As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridColumn_UnitPrice As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents RepositoryItemCalcEdit_UnitPrice As DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
+        Friend WithEvents GridColumn_Unitcost As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents RepositoryItemCalcEdit_UnitCost As DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
+        Friend WithEvents GridColumn_SupplierID As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents RepositoryItemLookUpEdit_SupplierID As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
+        Friend WithEvents GridColumn_Remarks As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridColumn_RowHighlight As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridControl1 As DevExpress.XtraGrid.GridControl
+        Friend WithEvents GridView1 As DevExpress.XtraGrid.Views.Grid.GridView
+        Friend WithEvents GridColumn1 As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents RepositoryItemCheckEdit1 As DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
+        Friend WithEvents GridColumn2 As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridColumn3 As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridColumn4 As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridColumn5 As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridColumn6 As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridColumn7 As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridColumn8 As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridColumn9 As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridColumn10 As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridColumn11 As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridColumn12 As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents RepositoryItemCalcEdit1 As DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
+        Friend WithEvents GridColumn13 As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents RepositoryItemCalcEdit2 As DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
+        Friend WithEvents GridColumn14 As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents RepositoryItemLookUpEdit1 As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
+        Friend WithEvents GridColumn15 As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridColumn16 As DevExpress.XtraGrid.Columns.GridColumn
 
 #End Region
 
