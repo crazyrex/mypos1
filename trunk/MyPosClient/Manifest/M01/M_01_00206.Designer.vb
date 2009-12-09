@@ -49,6 +49,7 @@ Namespace Manifest
             Dim StyleFormatCondition2 As DevExpress.XtraTreeList.StyleFormatConditions.StyleFormatCondition = New DevExpress.XtraTreeList.StyleFormatConditions.StyleFormatCondition
             Dim CTag7 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag8 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
+            Dim CTag9 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Me.ToolStrip_Form = New System.Windows.Forms.ToolStrip
             Me.ToolStripButton_Save = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_Add = New System.Windows.Forms.ToolStripButton
@@ -68,6 +69,12 @@ Namespace Manifest
             Me.RepositoryItemCalcEdit_BelongQty = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
             Me.TreeListColumn_WareBomType = New DevExpress.XtraTreeList.Columns.TreeListColumn
             Me.RepositoryItemLookUpEdit_WareBomType = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
+            Me.SplitContainerControl1 = New DevExpress.XtraEditors.SplitContainerControl
+            Me.XtraTabControl1 = New DevExpress.XtraTab.XtraTabControl
+            Me.XtraTabPage1 = New DevExpress.XtraTab.XtraTabPage
+            Me.XtraTabPage2 = New DevExpress.XtraTab.XtraTabPage
+            Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl
+            Me.GroupControl2 = New DevExpress.XtraEditors.GroupControl
             Me.ToolStrip_Form.SuspendLayout()
             CType(Me.PanelControl_Filter, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.PanelControl_Filter.SuspendLayout()
@@ -76,6 +83,14 @@ Namespace Manifest
             CType(Me.TreeList_WareBomList, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemCalcEdit_BelongQty, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemLookUpEdit_WareBomType, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.SplitContainerControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.SplitContainerControl1.SuspendLayout()
+            CType(Me.XtraTabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.XtraTabControl1.SuspendLayout()
+            Me.XtraTabPage1.SuspendLayout()
+            Me.XtraTabPage2.SuspendLayout()
+            CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.GroupControl2, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'DefaultLookAndFeel_Form
@@ -90,7 +105,7 @@ Namespace Manifest
             Me.ToolStrip_Form.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton_Save, Me.ToolStripButton_Add, Me.ToolStripButton_Remove, Me.ToolStripButton_Refresh, Me.ToolStripButton_Close})
             Me.ToolStrip_Form.Location = New System.Drawing.Point(0, 0)
             Me.ToolStrip_Form.Name = "ToolStrip_Form"
-            Me.ToolStrip_Form.Size = New System.Drawing.Size(530, 25)
+            Me.ToolStrip_Form.Size = New System.Drawing.Size(705, 25)
             Me.ToolStrip_Form.TabIndex = 10000
             CTag1.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag1.CalculatorRequired = True
@@ -120,31 +135,31 @@ Namespace Manifest
             'ToolStripButton_Save
             '
             Me.ToolStripButton_Save.Name = "ToolStripButton_Save"
-            Me.ToolStripButton_Save.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Save.Size = New System.Drawing.Size(36, 22)
             Me.ToolStripButton_Save.Text = "保存"
             '
             'ToolStripButton_Add
             '
             Me.ToolStripButton_Add.Name = "ToolStripButton_Add"
-            Me.ToolStripButton_Add.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Add.Size = New System.Drawing.Size(36, 22)
             Me.ToolStripButton_Add.Text = "添加"
             '
             'ToolStripButton_Remove
             '
             Me.ToolStripButton_Remove.Name = "ToolStripButton_Remove"
-            Me.ToolStripButton_Remove.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Remove.Size = New System.Drawing.Size(36, 22)
             Me.ToolStripButton_Remove.Text = "去除"
             '
             'ToolStripButton_Refresh
             '
             Me.ToolStripButton_Refresh.Name = "ToolStripButton_Refresh"
-            Me.ToolStripButton_Refresh.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Refresh.Size = New System.Drawing.Size(36, 22)
             Me.ToolStripButton_Refresh.Text = "刷新"
             '
             'ToolStripButton_Close
             '
             Me.ToolStripButton_Close.Name = "ToolStripButton_Close"
-            Me.ToolStripButton_Close.Size = New System.Drawing.Size(35, 22)
+            Me.ToolStripButton_Close.Size = New System.Drawing.Size(36, 22)
             Me.ToolStripButton_Close.Text = "关闭"
             '
             'PanelControl_Filter
@@ -158,7 +173,7 @@ Namespace Manifest
             Me.PanelControl_Filter.Dock = System.Windows.Forms.DockStyle.Top
             Me.PanelControl_Filter.Location = New System.Drawing.Point(0, 25)
             Me.PanelControl_Filter.Name = "PanelControl_Filter"
-            Me.PanelControl_Filter.Size = New System.Drawing.Size(530, 92)
+            Me.PanelControl_Filter.Size = New System.Drawing.Size(705, 92)
             Me.PanelControl_Filter.TabIndex = 10001
             CTag6.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag6.CalculatorRequired = True
@@ -350,12 +365,12 @@ Namespace Manifest
             StyleFormatCondition2.Value1 = "ROW_HIGHLIGHT_MODIFIED"
             Me.TreeList_WareBomList.FormatConditions.AddRange(New DevExpress.XtraTreeList.StyleFormatConditions.StyleFormatCondition() {StyleFormatCondition1, StyleFormatCondition2})
             Me.TreeList_WareBomList.KeyFieldName = "BELONG_WARE__WARE_ID"
-            Me.TreeList_WareBomList.Location = New System.Drawing.Point(0, 117)
+            Me.TreeList_WareBomList.Location = New System.Drawing.Point(0, 0)
             Me.TreeList_WareBomList.Name = "TreeList_WareBomList"
             Me.TreeList_WareBomList.OptionsView.AutoWidth = False
             Me.TreeList_WareBomList.ParentFieldName = "OWNING_WARE__WARE_ID"
             Me.TreeList_WareBomList.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemLookUpEdit_WareBomType, Me.RepositoryItemCalcEdit_BelongQty})
-            Me.TreeList_WareBomList.Size = New System.Drawing.Size(530, 383)
+            Me.TreeList_WareBomList.Size = New System.Drawing.Size(696, 351)
             Me.TreeList_WareBomList.TabIndex = 10002
             Me.TreeList_WareBomList.TabStop = False
             CTag7.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
@@ -439,18 +454,30 @@ Namespace Manifest
             Me.RepositoryItemLookUpEdit_WareBomType.Name = "RepositoryItemLookUpEdit_WareBomType"
             Me.RepositoryItemLookUpEdit_WareBomType.ValueMember = "ITEM_VALUE"
             '
-            'M_01_00206
+            'SplitContainerControl1
             '
-            Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
-            Me.Controls.Add(Me.TreeList_WareBomList)
-            Me.Controls.Add(Me.PanelControl_Filter)
-            Me.Controls.Add(Me.ToolStrip_Form)
-            Me.Cursor = System.Windows.Forms.Cursors.Default
-            Me.Font = New System.Drawing.Font("Arial", 9.0!)
-            Me.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
-            Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-            Me.Name = "M_01_00206"
-            Me.Size = New System.Drawing.Size(530, 500)
+            Me.SplitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.SplitContainerControl1.Location = New System.Drawing.Point(0, 0)
+            Me.SplitContainerControl1.Name = "SplitContainerControl1"
+            Me.SplitContainerControl1.Panel1.Controls.Add(Me.GroupControl1)
+            Me.SplitContainerControl1.Panel1.Text = "Panel1"
+            Me.SplitContainerControl1.Panel2.Controls.Add(Me.GroupControl2)
+            Me.SplitContainerControl1.Panel2.Text = "Panel2"
+            Me.SplitContainerControl1.Size = New System.Drawing.Size(696, 351)
+            Me.SplitContainerControl1.SplitterPosition = 289
+            Me.SplitContainerControl1.TabIndex = 10000
+            Me.SplitContainerControl1.Text = "SplitContainerControl1"
+            '
+            'XtraTabControl1
+            '
+            Me.XtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.XtraTabControl1.Location = New System.Drawing.Point(0, 117)
+            Me.XtraTabControl1.Name = "XtraTabControl1"
+            Me.XtraTabControl1.SelectedTabPage = Me.XtraTabPage1
+            Me.XtraTabControl1.Size = New System.Drawing.Size(705, 383)
+            Me.XtraTabControl1.TabIndex = 10000
+            Me.XtraTabControl1.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.XtraTabPage1, Me.XtraTabPage2})
+            Me.XtraTabControl1.TabStop = False
             CTag8.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag8.CalculatorRequired = True
             CTag8.ComboValueTextBox = Nothing
@@ -463,18 +490,88 @@ Namespace Manifest
             CTag8.DisplayLinkTable = Nothing
             CTag8.FlexgridEditItem = ""
             CTag8.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
-            CTag8.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
+            CTag8.FormStatus = XL.Win.Component.BaseForm.FormStatuses.BeforeLoading
             CTag8.IsButtonCustomed = False
             CTag8.IsTextValid = True
             CTag8.KeyValueAbsentable = False
             CTag8.LeagleText = ""
             CTag8.NumericButtonTextBox = Nothing
-            CTag8.ParentControl = Me
+            CTag8.ParentControl = Me.XtraTabControl1
             CTag8.SkipValidate = False
             CTag8.TimeButtonTextBox = Nothing
             CTag8.ToolTip = ""
             CTag8.ValueType = XL.Common.ControlValueType.Character
-            Me.Tag = CTag8
+            Me.XtraTabControl1.Tag = CTag8
+            Me.XtraTabControl1.Text = "XtraTabControl1"
+            '
+            'XtraTabPage1
+            '
+            Me.XtraTabPage1.Controls.Add(Me.SplitContainerControl1)
+            Me.XtraTabPage1.Name = "XtraTabPage1"
+            Me.XtraTabPage1.Size = New System.Drawing.Size(696, 351)
+            Me.XtraTabPage1.Text = "当前货品"
+            '
+            'XtraTabPage2
+            '
+            Me.XtraTabPage2.Controls.Add(Me.TreeList_WareBomList)
+            Me.XtraTabPage2.Name = "XtraTabPage2"
+            Me.XtraTabPage2.Size = New System.Drawing.Size(696, 351)
+            Me.XtraTabPage2.Text = "组织结构"
+            '
+            'GroupControl1
+            '
+            Me.GroupControl1.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.GroupControl1.Location = New System.Drawing.Point(0, 0)
+            Me.GroupControl1.Name = "GroupControl1"
+            Me.GroupControl1.Size = New System.Drawing.Size(285, 347)
+            Me.GroupControl1.TabIndex = 0
+            Me.GroupControl1.Text = "组件"
+            '
+            'GroupControl2
+            '
+            Me.GroupControl2.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.GroupControl2.Location = New System.Drawing.Point(0, 0)
+            Me.GroupControl2.Name = "GroupControl2"
+            Me.GroupControl2.Size = New System.Drawing.Size(397, 347)
+            Me.GroupControl2.TabIndex = 1
+            Me.GroupControl2.Text = "货品选项"
+            '
+            'M_01_00206
+            '
+            Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+            Me.Controls.Add(Me.XtraTabControl1)
+            Me.Controls.Add(Me.PanelControl_Filter)
+            Me.Controls.Add(Me.ToolStrip_Form)
+            Me.Cursor = System.Windows.Forms.Cursors.Default
+            Me.Font = New System.Drawing.Font("Arial", 9.0!)
+            Me.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
+            Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+            Me.Name = "M_01_00206"
+            Me.Size = New System.Drawing.Size(705, 500)
+            CTag9.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
+            CTag9.CalculatorRequired = True
+            CTag9.ComboValueTextBox = Nothing
+            CTag9.ControlRelatedCode = Nothing
+            CTag9.DateButtonTextBox = Nothing
+            CTag9.DateTimeButtonTextBox = Nothing
+            CTag9.DisplayLinkControl = Nothing
+            CTag9.DisplayLinkDisplayFieldName = Nothing
+            CTag9.DisplayLinkKeyFieldName = Nothing
+            CTag9.DisplayLinkTable = Nothing
+            CTag9.FlexgridEditItem = ""
+            CTag9.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
+            CTag9.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
+            CTag9.IsButtonCustomed = False
+            CTag9.IsTextValid = True
+            CTag9.KeyValueAbsentable = False
+            CTag9.LeagleText = ""
+            CTag9.NumericButtonTextBox = Nothing
+            CTag9.ParentControl = Me
+            CTag9.SkipValidate = False
+            CTag9.TimeButtonTextBox = Nothing
+            CTag9.ToolTip = ""
+            CTag9.ValueType = XL.Common.ControlValueType.Character
+            Me.Tag = CTag9
             Me.ToolStrip_Form.ResumeLayout(False)
             Me.ToolStrip_Form.PerformLayout()
             CType(Me.PanelControl_Filter, System.ComponentModel.ISupportInitialize).EndInit()
@@ -485,6 +582,14 @@ Namespace Manifest
             CType(Me.TreeList_WareBomList, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemCalcEdit_BelongQty, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemLookUpEdit_WareBomType, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.SplitContainerControl1, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.SplitContainerControl1.ResumeLayout(False)
+            CType(Me.XtraTabControl1, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.XtraTabControl1.ResumeLayout(False)
+            Me.XtraTabPage1.ResumeLayout(False)
+            Me.XtraTabPage2.ResumeLayout(False)
+            CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.GroupControl2, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -503,6 +608,12 @@ Namespace Manifest
         Friend WithEvents RepositoryItemLookUpEdit_WareBomType As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
         Friend WithEvents TreeListColumn_BelongWareCode As DevExpress.XtraTreeList.Columns.TreeListColumn
         Friend WithEvents RepositoryItemCalcEdit_BelongQty As DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
+        Friend WithEvents SplitContainerControl1 As DevExpress.XtraEditors.SplitContainerControl
+        Friend WithEvents GroupControl1 As DevExpress.XtraEditors.GroupControl
+        Friend WithEvents GroupControl2 As DevExpress.XtraEditors.GroupControl
+        Friend WithEvents XtraTabControl1 As DevExpress.XtraTab.XtraTabControl
+        Friend WithEvents XtraTabPage1 As DevExpress.XtraTab.XtraTabPage
+        Friend WithEvents XtraTabPage2 As DevExpress.XtraTab.XtraTabPage
 
 #End Region
 
