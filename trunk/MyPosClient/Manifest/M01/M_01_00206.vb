@@ -845,6 +845,10 @@ Namespace Manifest
         Private Sub TreeList_WareBomList_FocusedNodeChanged(ByVal sender As Object, ByVal e As DevExpress.XtraTreeList.FocusedNodeChangedEventArgs) Handles TreeList_WareBomList.FocusedNodeChanged
             Me.DoPrivateUpdateSelectingRow()
         End Sub
+
+        Private Sub GroupControl1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles GroupControl1.Paint
+
+        End Sub
     End Class
 
 
