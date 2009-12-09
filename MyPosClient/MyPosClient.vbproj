@@ -456,6 +456,7 @@
       <DependentUpon>M_01_00201.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00201.vb">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M01\M_01_00202.Designer.vb">
       <DependentUpon>M_01_00202.vb</DependentUpon>
