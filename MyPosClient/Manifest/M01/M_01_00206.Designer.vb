@@ -121,26 +121,13 @@ Namespace Manifest
             Me.GridColumn_RowHighlight = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridControl1 = New DevExpress.XtraGrid.GridControl
             Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView
-            Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn
             Me.RepositoryItemCheckEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
-            Me.GridColumn2 = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn3 = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn4 = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn5 = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn6 = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn7 = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn8 = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn9 = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn10 = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn11 = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn12 = New DevExpress.XtraGrid.Columns.GridColumn
             Me.RepositoryItemCalcEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
-            Me.GridColumn13 = New DevExpress.XtraGrid.Columns.GridColumn
             Me.RepositoryItemCalcEdit2 = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
-            Me.GridColumn14 = New DevExpress.XtraGrid.Columns.GridColumn
             Me.RepositoryItemLookUpEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
             Me.GridColumn15 = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn16 = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.RepositoryItemTextEdit_ComponentName = New DevExpress.XtraEditors.Repository.RepositoryItemTextEdit
             Me.ToolStrip_Form.SuspendLayout()
             CType(Me.PanelControl_Filter, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.PanelControl_Filter.SuspendLayout()
@@ -175,6 +162,7 @@ Namespace Manifest
             CType(Me.RepositoryItemCalcEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemCalcEdit2, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemLookUpEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.RepositoryItemTextEdit_ComponentName, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'DefaultLookAndFeel_Form
@@ -1080,7 +1068,7 @@ Namespace Manifest
             Me.GridControl1.Location = New System.Drawing.Point(2, 96)
             Me.GridControl1.MainView = Me.GridView1
             Me.GridControl1.Name = "GridControl1"
-            Me.GridControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemCheckEdit1, Me.RepositoryItemLookUpEdit1, Me.RepositoryItemCalcEdit1, Me.RepositoryItemCalcEdit2})
+            Me.GridControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemCheckEdit1, Me.RepositoryItemLookUpEdit1, Me.RepositoryItemCalcEdit1, Me.RepositoryItemCalcEdit2, Me.RepositoryItemTextEdit_ComponentName})
             Me.GridControl1.Size = New System.Drawing.Size(338, 249)
             Me.GridControl1.TabIndex = 10003
             Me.GridControl1.TabStop = False
@@ -1088,7 +1076,7 @@ Namespace Manifest
             '
             'GridView1
             '
-            Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn1, Me.GridColumn2, Me.GridColumn3, Me.GridColumn4, Me.GridColumn5, Me.GridColumn6, Me.GridColumn7, Me.GridColumn8, Me.GridColumn9, Me.GridColumn10, Me.GridColumn11, Me.GridColumn12, Me.GridColumn13, Me.GridColumn14, Me.GridColumn15, Me.GridColumn16})
+            Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn15, Me.GridColumn16})
             StyleFormatCondition3.Appearance.BackColor = System.Drawing.Color.Lime
             StyleFormatCondition3.Appearance.BackColor2 = System.Drawing.Color.White
             StyleFormatCondition3.Appearance.Options.UseBackColor = True
@@ -1103,122 +1091,10 @@ Namespace Manifest
             Me.GridView1.OptionsView.ShowFooter = True
             Me.GridView1.OptionsView.ShowGroupPanel = False
             '
-            'GridColumn1
-            '
-            Me.GridColumn1.Caption = "选择"
-            Me.GridColumn1.ColumnEdit = Me.RepositoryItemCheckEdit1
-            Me.GridColumn1.FieldName = "DSR_FT_ROW_SELECTED"
-            Me.GridColumn1.Name = "GridColumn1"
-            Me.GridColumn1.Visible = True
-            Me.GridColumn1.VisibleIndex = 0
-            '
             'RepositoryItemCheckEdit1
             '
             Me.RepositoryItemCheckEdit1.AutoHeight = False
             Me.RepositoryItemCheckEdit1.Name = "RepositoryItemCheckEdit1"
-            '
-            'GridColumn2
-            '
-            Me.GridColumn2.Caption = "货品代码"
-            Me.GridColumn2.FieldName = "WARE_CODE"
-            Me.GridColumn2.Name = "GridColumn2"
-            Me.GridColumn2.OptionsColumn.AllowFocus = False
-            Me.GridColumn2.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Count
-            Me.GridColumn2.Visible = True
-            Me.GridColumn2.VisibleIndex = 1
-            '
-            'GridColumn3
-            '
-            Me.GridColumn3.Caption = "自定货号"
-            Me.GridColumn3.FieldName = "CUSTOM_CODE"
-            Me.GridColumn3.Name = "GridColumn3"
-            Me.GridColumn3.OptionsColumn.AllowFocus = False
-            Me.GridColumn3.Visible = True
-            Me.GridColumn3.VisibleIndex = 2
-            '
-            'GridColumn4
-            '
-            Me.GridColumn4.Caption = "货品名称"
-            Me.GridColumn4.FieldName = "WARE_NAME"
-            Me.GridColumn4.Name = "GridColumn4"
-            Me.GridColumn4.OptionsColumn.AllowFocus = False
-            Me.GridColumn4.Visible = True
-            Me.GridColumn4.VisibleIndex = 3
-            '
-            'GridColumn5
-            '
-            Me.GridColumn5.Caption = "货品规格"
-            Me.GridColumn5.FieldName = "SPEC"
-            Me.GridColumn5.Name = "GridColumn5"
-            Me.GridColumn5.OptionsColumn.AllowFocus = False
-            Me.GridColumn5.Visible = True
-            Me.GridColumn5.VisibleIndex = 4
-            '
-            'GridColumn6
-            '
-            Me.GridColumn6.Caption = "货品型号"
-            Me.GridColumn6.FieldName = "MODEL"
-            Me.GridColumn6.Name = "GridColumn6"
-            Me.GridColumn6.OptionsColumn.AllowFocus = False
-            Me.GridColumn6.Visible = True
-            Me.GridColumn6.VisibleIndex = 5
-            '
-            'GridColumn7
-            '
-            Me.GridColumn7.Caption = "属性1"
-            Me.GridColumn7.FieldName = "ATTRIBUTE1"
-            Me.GridColumn7.Name = "GridColumn7"
-            Me.GridColumn7.OptionsColumn.AllowFocus = False
-            Me.GridColumn7.Visible = True
-            Me.GridColumn7.VisibleIndex = 6
-            '
-            'GridColumn8
-            '
-            Me.GridColumn8.Caption = "属性2"
-            Me.GridColumn8.FieldName = "ATTRIBUTE2"
-            Me.GridColumn8.Name = "GridColumn8"
-            Me.GridColumn8.OptionsColumn.AllowFocus = False
-            Me.GridColumn8.Visible = True
-            Me.GridColumn8.VisibleIndex = 7
-            '
-            'GridColumn9
-            '
-            Me.GridColumn9.Caption = "属性3"
-            Me.GridColumn9.FieldName = "ATTRIBUTE3"
-            Me.GridColumn9.Name = "GridColumn9"
-            Me.GridColumn9.OptionsColumn.AllowFocus = False
-            Me.GridColumn9.Visible = True
-            Me.GridColumn9.VisibleIndex = 8
-            '
-            'GridColumn10
-            '
-            Me.GridColumn10.Caption = "属性4"
-            Me.GridColumn10.FieldName = "ATTRIBUTE4"
-            Me.GridColumn10.Name = "GridColumn10"
-            Me.GridColumn10.OptionsColumn.AllowFocus = False
-            Me.GridColumn10.Visible = True
-            Me.GridColumn10.VisibleIndex = 9
-            '
-            'GridColumn11
-            '
-            Me.GridColumn11.Caption = "单位"
-            Me.GridColumn11.FieldName = "UNIT_NAME"
-            Me.GridColumn11.Name = "GridColumn11"
-            Me.GridColumn11.OptionsColumn.AllowFocus = False
-            Me.GridColumn11.Visible = True
-            Me.GridColumn11.VisibleIndex = 10
-            '
-            'GridColumn12
-            '
-            Me.GridColumn12.Caption = "单价"
-            Me.GridColumn12.ColumnEdit = Me.RepositoryItemCalcEdit1
-            Me.GridColumn12.DisplayFormat.FormatString = "{0:#,##0.00}"
-            Me.GridColumn12.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
-            Me.GridColumn12.FieldName = "UNIT_PRICE"
-            Me.GridColumn12.Name = "GridColumn12"
-            Me.GridColumn12.OptionsColumn.AllowFocus = False
-            Me.GridColumn12.Visible = True
-            Me.GridColumn12.VisibleIndex = 11
             '
             'RepositoryItemCalcEdit1
             '
@@ -1226,33 +1102,11 @@ Namespace Manifest
             Me.RepositoryItemCalcEdit1.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
             Me.RepositoryItemCalcEdit1.Name = "RepositoryItemCalcEdit1"
             '
-            'GridColumn13
-            '
-            Me.GridColumn13.Caption = "成本"
-            Me.GridColumn13.ColumnEdit = Me.RepositoryItemCalcEdit2
-            Me.GridColumn13.DisplayFormat.FormatString = "{0:#,##0.00}"
-            Me.GridColumn13.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
-            Me.GridColumn13.FieldName = "UNIT_COST"
-            Me.GridColumn13.Name = "GridColumn13"
-            Me.GridColumn13.OptionsColumn.AllowFocus = False
-            Me.GridColumn13.Visible = True
-            Me.GridColumn13.VisibleIndex = 12
-            '
             'RepositoryItemCalcEdit2
             '
             Me.RepositoryItemCalcEdit2.AutoHeight = False
             Me.RepositoryItemCalcEdit2.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
             Me.RepositoryItemCalcEdit2.Name = "RepositoryItemCalcEdit2"
-            '
-            'GridColumn14
-            '
-            Me.GridColumn14.Caption = "供应商名称"
-            Me.GridColumn14.ColumnEdit = Me.RepositoryItemLookUpEdit1
-            Me.GridColumn14.FieldName = "SUPPLIER_ID"
-            Me.GridColumn14.Name = "GridColumn14"
-            Me.GridColumn14.OptionsColumn.AllowFocus = False
-            Me.GridColumn14.Visible = True
-            Me.GridColumn14.VisibleIndex = 13
             '
             'RepositoryItemLookUpEdit1
             '
@@ -1266,12 +1120,13 @@ Namespace Manifest
             '
             'GridColumn15
             '
-            Me.GridColumn15.Caption = "备注"
-            Me.GridColumn15.FieldName = "REMARK"
+            Me.GridColumn15.Caption = "组件名称"
+            Me.GridColumn15.ColumnEdit = Me.RepositoryItemTextEdit_ComponentName
+            Me.GridColumn15.FieldName = "COMPONENT_NAME"
             Me.GridColumn15.Name = "GridColumn15"
             Me.GridColumn15.OptionsColumn.AllowFocus = False
             Me.GridColumn15.Visible = True
-            Me.GridColumn15.VisibleIndex = 14
+            Me.GridColumn15.VisibleIndex = 0
             '
             'GridColumn16
             '
@@ -1279,6 +1134,11 @@ Namespace Manifest
             Me.GridColumn16.FieldName = "DSR_FT_ROW_HIGHLIGHT"
             Me.GridColumn16.Name = "GridColumn16"
             Me.GridColumn16.OptionsColumn.AllowFocus = False
+            '
+            'RepositoryItemTextEdit_ComponentName
+            '
+            Me.RepositoryItemTextEdit_ComponentName.AutoHeight = False
+            Me.RepositoryItemTextEdit_ComponentName.Name = "RepositoryItemTextEdit_ComponentName"
             '
             'M_01_00206
             '
@@ -1356,6 +1216,7 @@ Namespace Manifest
             CType(Me.RepositoryItemCalcEdit1, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemCalcEdit2, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemLookUpEdit1, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.RepositoryItemTextEdit_ComponentName, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -1418,26 +1279,13 @@ Namespace Manifest
         Friend WithEvents GridColumn_RowHighlight As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents GridControl1 As DevExpress.XtraGrid.GridControl
         Friend WithEvents GridView1 As DevExpress.XtraGrid.Views.Grid.GridView
-        Friend WithEvents GridColumn1 As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents RepositoryItemCheckEdit1 As DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
-        Friend WithEvents GridColumn2 As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn3 As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn4 As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn5 As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn6 As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn7 As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn8 As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn9 As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn10 As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn11 As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn12 As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents RepositoryItemCalcEdit1 As DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
-        Friend WithEvents GridColumn13 As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents RepositoryItemCalcEdit2 As DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
-        Friend WithEvents GridColumn14 As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents RepositoryItemLookUpEdit1 As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
         Friend WithEvents GridColumn15 As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents GridColumn16 As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents RepositoryItemTextEdit_ComponentName As DevExpress.XtraEditors.Repository.RepositoryItemTextEdit
 
 #End Region
 
