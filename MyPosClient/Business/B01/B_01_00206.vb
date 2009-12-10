@@ -521,14 +521,14 @@ Namespace Business
             Try
 
 
-                Dim servResult As String = _
-                    Me._service.ServSaveInfo( _
-                        Me._manifest.SVLM_CREATING_ROOT_WARE_ID, _
-                        Me._manifest.SVFT_BINDING_LIST)
+                'Dim servResult As String = _
+                '    Me._service.ServSaveInfo( _
+                '        Me._manifest.SVLM_CREATING_ROOT_WARE_ID, _
+                '        Me._manifest.SVFT_BINDING_LIST)
 
-                If servResult.Length > 0 Then
-                    Return servResult
-                End If
+                'If servResult.Length > 0 Then
+                '    Return servResult
+                'End If
 
                 Me._manifest.ShowStatusMessage(StatusMessageIcon.Okay, MyPosXService.Decls.MSG_STATUS_0027)
             Catch ex As XL.Common.Utils.XLException
@@ -566,38 +566,38 @@ Namespace Business
 
 
             Try
-                Dim editingWareRow As MyPosXAuto.FTs.FT_M_MP_WARERow
-                Me._manifest.TreeList_WareBomList.DataSource = Nothing
-                Me._manifest.SVFT_BINDING_LIST.Clear()
-                If Me._manifest.SVLM_CREATING_ROOT_WARE_ID.Length > 0 Then
+                'Dim editingWareRow As MyPosXAuto.FTs.FT_M_MP_WARERow
+                'Me._manifest.TreeList_WareBomList.DataSource = Nothing
+                'Me._manifest.SVFT_BINDING_LIST.Clear()
+                'If Me._manifest.SVLM_CREATING_ROOT_WARE_ID.Length > 0 Then
 
-                    editingWareRow = MyPosXAuto.Facade.AfBizMaster.GetM_MP_WARERow(Me._manifest.SVLM_CREATING_ROOT_WARE_ID)
-                    If IsNothing(editingWareRow) = True Then
-                        Return MyPosXService.Decls.MSG_ALERT_00008
-                    End If
-                    Me._manifest.MemoEdit_WareCodes.Text = editingWareRow.WARE_CODE
+                '    editingWareRow = MyPosXAuto.Facade.AfBizMaster.GetM_MP_WARERow(Me._manifest.SVLM_CREATING_ROOT_WARE_ID)
+                '    If IsNothing(editingWareRow) = True Then
+                '        Return MyPosXService.Decls.MSG_ALERT_00008
+                '    End If
+                '    Me._manifest.MemoEdit_WareCodes.Text = editingWareRow.WARE_CODE
 
-                End If
+                'End If
 
-                Dim wareCodes As New ArrayList
-                For Each wareCode In Me._manifest.MemoEdit_WareCodes.Text.Split(Chr(10))
-                    wareCodes.Add(wareCode.Trim)
-                Next
+                'Dim wareCodes As New ArrayList
+                'For Each wareCode In Me._manifest.MemoEdit_WareCodes.Text.Split(Chr(10))
+                '    wareCodes.Add(wareCode.Trim)
+                'Next
 
-                Dim chooseRootWareList As New MyPosXAuto.FTs.FT_M_MP_WARE
-                Me._manifest.ShowStatusMessage(StatusMessageIcon.Progressing, MyPosXService.Decls.MSG_STATUS_0026)
-                Dim servResult As String = _
-                    Me._service.ServLoadList( _
-                        CommTK.ALToStr(wareCodes), _
-                        Me._manifest.SVFT_BINDING_LIST, _
-                        chooseRootWareList)
+                'Dim chooseRootWareList As New MyPosXAuto.FTs.FT_M_MP_WARE
+                'Me._manifest.ShowStatusMessage(StatusMessageIcon.Progressing, MyPosXService.Decls.MSG_STATUS_0026)
+                'Dim servResult As String = _
+                '    Me._service.ServLoadList( _
+                '        CommTK.ALToStr(wareCodes), _
+                '        Me._manifest.SVFT_BINDING_LIST, _
+                '        chooseRootWareList)
 
-                If servResult.Length > 0 Then
-                    Return servResult
-                End If
-                Me._manifest.ShowStatusMessage(StatusMessageIcon.Progressing, MyPosXService.Decls.MSG_STATUS_0028)
+                'If servResult.Length > 0 Then
+                '    Return servResult
+                'End If
+                'Me._manifest.ShowStatusMessage(StatusMessageIcon.Progressing, MyPosXService.Decls.MSG_STATUS_0028)
 
-                Me._manifest.TreeList_WareBomList.DataSource = Me._manifest.SVFT_BINDING_LIST
+                'Me._manifest.TreeList_WareBomList.DataSource = Me._manifest.SVFT_BINDING_LIST
 
             Catch ex As XL.Common.Utils.XLException
 
@@ -636,15 +636,15 @@ Namespace Business
             Try
 
 
-                Dim servResult As String = _
-                    Me._service.ServAddWare( _
-                        Me._manifest.SVLM_CREATING_ROOT_WARE_ID, _
-                        CommTK.ALToStr(Me._manifest.SV_ADDING_WARE_IDS), _
-                        Me._manifest.SVFT_BINDING_LIST)
+                'Dim servResult As String = _
+                '    Me._service.ServAddWare( _
+                '        Me._manifest.SVLM_CREATING_ROOT_WARE_ID, _
+                '        CommTK.ALToStr(Me._manifest.SV_ADDING_WARE_IDS), _
+                '        Me._manifest.SVFT_BINDING_LIST)
 
-                If servResult.Length > 0 Then
-                    Return servResult
-                End If
+                'If servResult.Length > 0 Then
+                '    Return servResult
+                'End If
 
             Catch ex As XL.Common.Utils.XLException
 

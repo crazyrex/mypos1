@@ -45,10 +45,13 @@ Namespace Manifest
         'Public SVLM_UTLD_0002 As String ="SVLM_UTLD_0002"
 
         '数据列表变量
-        Public SVFT_BINDING_LIST As New MyPosXAuto.FTs.FT_XV_S_MP_WARE_BOM
+        Public SVFT_BINDING_COMPONENT_LIST As New MyPosXAuto.FTs.FT_XV_S_MP_BOM_COMPONENT
+        Public SVFT_BINDING_OPTION_LIST As New MyPosXAuto.FTs.FT_XV_S_MP_BOM_COMP_WARE_OPT
         'Public SVFT_CHOOSE_XXX_LIST As New XAuto.FTs.FT_
 
-        Public SVFR_SELECTING_ROW As MyPosXAuto.FTs.FT_XV_S_MP_WARE_BOMRow
+        Public SVFR_SELECTING_COMPONENT_ROW As MyPosXAuto.FTs.FT_XV_S_MP_BOM_COMPONENTRow
+        Public SVFR_SELECTING_COMPONENT_WARE_OPT_ROW As MyPosXAuto.FTs.FT_XV_S_MP_BOM_COMP_WARE_OPTRow
+
 
 #End Region
 
@@ -124,11 +127,14 @@ Namespace Manifest
             '指定需要备份值的控件
             'Me.SetValueBackupControl(Me.ControlToBeBackup)
 
-            Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Add, AddressOf Me.TbActionAdd)
-            Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Remove, AddressOf Me.TbActionRemove)
+            Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_AddComponent, AddressOf Me.TbActionAddComponent)
+            Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_AddOptions, AddressOf Me.TbActionAddOptions)
+            Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_RemoveComponent, AddressOf Me.TbActionRemoveComponent)
+            Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_RemoveOptions, AddressOf Me.TbActionRemoveOptions)
             Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Refresh, AddressOf Me.TbActionRefresh)
             Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Close, AddressOf Me.TbActionClose)
-            Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Save, AddressOf Me.TbActionSave)
+            Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_SaveComponents, AddressOf Me.TbActionSaveComponents)
+            Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_SaveOptions, AddressOf Me.TbActionSaveOptions)
             'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0002, AddressOf Me.TbActionUtld0002)
             'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0003, AddressOf Me.TbActionUtld0003)
             'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0004, AddressOf Me.TbActionUtld0004)
@@ -262,7 +268,7 @@ Namespace Manifest
 
 
         Protected Overrides Sub IA_SavedModeChanged(ByVal savedMode As Boolean)
-            Me.ToolStripButton_Save.Visible = Not savedMode
+            'Me.ToolStripButton_Save.Visible = Not savedMode
         End Sub
 
 
@@ -385,10 +391,10 @@ Namespace Manifest
                     'End If                                            
 
                 Case Business.B_01_00206.Affairs.AddWare
-                    Me.TreeList_WareBomList.DataSource = Me.SVFT_BINDING_LIST
-                    Me.TreeList_WareBomList.ExpandAll()
-                    Me.TreeList_WareBomList.BestFitColumns()
-                    Me.IsSaved = False
+                    'Me.TreeList_WareBomList.DataSource = Me.SVFT_BINDING_LIST
+                    'Me.TreeList_WareBomList.ExpandAll()
+                    'Me.TreeList_WareBomList.BestFitColumns()
+                    'Me.IsSaved = False
 
                 Case Business.B_01_00206.Affairs.SaveInfo
                     Me.UpdateDisplay()
@@ -441,23 +447,30 @@ Namespace Manifest
 
 #Region "ToolStrip Actions"
 
-        Private Sub TbActionAdd()
+        Private Sub TbActionAddComponent()
 
+            
+
+        End Sub
+
+        Private Sub TbActionAddOptions()
             Dim choiceForm As New M_01_00201(Me.TransactRequestHandle, Me.FormID)
             choiceForm.LAUNCH_CONDITION = MyPosXService.S_01_00201.LCs.Choose
             choiceForm.SVLM_MULTI_CHOICE = True
             choiceForm.SVLM_STAY_AFTER_CHOOSE = True
             Me.PopupForm(choiceForm, "TbActionAdd", True)
+        End Sub
+
+        Private Sub TbActionRemoveComponent()
+            Me.SVFR_SELECTING_COMPONENT_ROW.Delete()
+            Me.IsSaved = False
+
 
         End Sub
 
-        Private Sub TbActionRemove()
+        Private Sub TbActionRemoveOptions()
 
-            If Me.SVFR_SELECTING_ROW.OWNING_WARE__WARE_ID.Length = 0 Then
-                Return
-            End If
-
-            Me.SVFR_SELECTING_ROW.Delete()
+            Me.SVFR_SELECTING_COMPONENT_WARE_OPT_ROW.Delete()
             Me.IsSaved = False
 
         End Sub
@@ -476,8 +489,11 @@ Namespace Manifest
 
         End Sub
 
+        Private Sub TbActionSaveComponents()
+            Me._bizAgent.DoRequest(Business.B_01_00206.Affairs.SaveInfo, False)
+        End Sub
 
-        Private Sub TbActionSave()
+        Private Sub TbActionSaveOptions()
             Me._bizAgent.DoRequest(Business.B_01_00206.Affairs.SaveInfo, False)
         End Sub
 
@@ -585,30 +601,30 @@ Namespace Manifest
         Private Sub DoPrivateUpdateSelectingRow()
 
 
-            Me.SVFR_SELECTING_ROW = Nothing
+            'Me.SVFR_SELECTING_ROW = Nothing
 
-            Me.ToolStripButton_Remove.Enabled = False
-            Me.ToolStripButton_Add.Enabled = False
-            Me.TreeListColumn_BelongQty.OptionsColumn.AllowFocus = False
-            Me.TreeListColumn_WareBomType.OptionsColumn.AllowFocus = False
+            'Me.ToolStripButton_Remove.Enabled = False
+            'Me.ToolStripButton_Add.Enabled = False
+            'Me.TreeListColumn_BelongQty.OptionsColumn.AllowFocus = False
+            'Me.TreeListColumn_WareBomType.OptionsColumn.AllowFocus = False
 
-            If IsNothing(Me.TreeList_WareBomList.FocusedNode) = False Then
+            'If IsNothing(Me.TreeList_WareBomList.FocusedNode) = False Then
 
-                Me.SVFR_SELECTING_ROW = _
-                     CType(CType( _
-                         Me.TreeList_WareBomList.GetDataRecordByNode( _
-                             Me.TreeList_WareBomList.FocusedNode),  _
-                         DataRowView).Row, MyPosXAuto.FTs.FT_XV_S_MP_WARE_BOMRow)
+            '    Me.SVFR_SELECTING_ROW = _
+            '         CType(CType( _
+            '             Me.TreeList_WareBomList.GetDataRecordByNode( _
+            '                 Me.TreeList_WareBomList.FocusedNode),  _
+            '             DataRowView).Row, MyPosXAuto.FTs.FT_XV_S_MP_WARE_BOMRow)
 
-                If Me.SVFR_SELECTING_ROW.OWNING_WARE__WARE_ID = Me.SVLM_CREATING_ROOT_WARE_ID Then
-                    Me.TreeListColumn_BelongQty.OptionsColumn.AllowFocus = True
-                    Me.TreeListColumn_WareBomType.OptionsColumn.AllowFocus = True
-                End If
+            '    If Me.SVFR_SELECTING_ROW.OWNING_WARE__WARE_ID = Me.SVLM_CREATING_ROOT_WARE_ID Then
+            '        Me.TreeListColumn_BelongQty.OptionsColumn.AllowFocus = True
+            '        Me.TreeListColumn_WareBomType.OptionsColumn.AllowFocus = True
+            '    End If
 
-                Me.ToolStripButton_Remove.Enabled = True
-                Me.ToolStripButton_Add.Enabled = True
+            '    Me.ToolStripButton_Remove.Enabled = True
+            '    Me.ToolStripButton_Add.Enabled = True
 
-            End If
+            'End If
 
 
 
@@ -823,24 +839,24 @@ Namespace Manifest
 #End Region
 
 
-        Private Sub RepositoryItemLookUpEdit_WareBomType_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemLookUpEdit_WareBomType.EditValueChanged
-            Dim lookupEdit = TryCast(sender, DevExpress.XtraEditors.LookUpEdit)
-            Me.SVFR_SELECTING_ROW.WARE_BOM_TYPE = CommTK.FInteger(lookupEdit.EditValue)
-            Me.SVFR_SELECTING_ROW.ROW_HIGHLIGHT = MyPosXService.Decls.ROW_HIGHLIGHT_MODIFIED
-            Me.IsSaved = False
-        End Sub
+        'Private Sub RepositoryItemLookUpEdit_WareBomType_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemLookUpEdit_WareBomType.EditValueChanged
+        '    Dim lookupEdit = TryCast(sender, DevExpress.XtraEditors.LookUpEdit)
+        '    Me.SVFR_SELECTING_ROW.WARE_BOM_TYPE = CommTK.FInteger(lookupEdit.EditValue)
+        '    Me.SVFR_SELECTING_ROW.ROW_HIGHLIGHT = MyPosXService.Decls.ROW_HIGHLIGHT_MODIFIED
+        '    Me.IsSaved = False
+        'End Sub
 
-        Private Sub RepositoryItemCalcEdit_BelongQty_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemCalcEdit_BelongQty.EditValueChanged
-            Dim calcEdit = TryCast(sender, DevExpress.XtraEditors.CalcEdit)
-            'should not have commtk.finteger herer
+        'Private Sub RepositoryItemCalcEdit_BelongQty_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemCalcEdit_BelongQty.EditValueChanged
+        '    Dim calcEdit = TryCast(sender, DevExpress.XtraEditors.CalcEdit)
+        '    'should not have commtk.finteger herer
 
-            Me.SVFR_SELECTING_ROW.BELONG_QTY = CommTK.FInteger(calcEdit.Value)
-            If Me.SVFR_SELECTING_ROW.BELONG_QTY <= 0 Then
-                Me.SVFR_SELECTING_ROW.BELONG_QTY = 1
-            End If
-            Me.SVFR_SELECTING_ROW.ROW_HIGHLIGHT = MyPosXService.Decls.ROW_HIGHLIGHT_MODIFIED
-            Me.IsSaved = False
-        End Sub
+        '    Me.SVFR_SELECTING_ROW.BELONG_QTY = CommTK.FInteger(calcEdit.Value)
+        '    If Me.SVFR_SELECTING_ROW.BELONG_QTY <= 0 Then
+        '        Me.SVFR_SELECTING_ROW.BELONG_QTY = 1
+        '    End If
+        '    Me.SVFR_SELECTING_ROW.ROW_HIGHLIGHT = MyPosXService.Decls.ROW_HIGHLIGHT_MODIFIED
+        '    Me.IsSaved = False
+        'End Sub
 
         Private Sub TreeList_WareBomList_FocusedNodeChanged(ByVal sender As Object, ByVal e As DevExpress.XtraTreeList.FocusedNodeChangedEventArgs) Handles TreeList_WareBomList.FocusedNodeChanged
             Me.DoPrivateUpdateSelectingRow()
