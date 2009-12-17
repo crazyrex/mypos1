@@ -396,6 +396,22 @@ Namespace Business
                     False)
                 Me._manifest.RepositoryItemLookUpEdit_WareBomType.DataSource = chooseWareBomTypeList
 
+                Dim wareRow = MyPosXAuto.Facade.AfBizMaster.GetM_MP_WARERow(Me._manifest.SV_EDITING_WARE_ID)
+                If IsNothing(wareRow) = True Then
+                    Me._manifest.ToolStripButton_Refresh.Enabled = False
+                    Me._manifest.XtraTabControl1.Enabled = False
+                    Me._manifest.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0029)
+                    Return String.Empty
+                End If
+
+                Dim componentRow = _
+                    Me._manifest.SVFT_BINDING_COMPONENT_LIST.AddNewS_MP_BOM_COMPONENTRow( _
+                        String.Empty, _
+                        wareRow.WARE_NAME, _
+                        wareRow.WARE_ID, _
+                        String.Empty)
+                componentRow.ROW_REMARK = "ROOT_WARE"
+                Me._manifest.TreeList_Component.DataSource = Me._manifest.SVFT_BINDING_COMPONENT_LIST
                 'Dim chooseAssetConformationList As New MyPosXAuto.FTs.FT_CIV_ASSET_CONFORMATION
 
 

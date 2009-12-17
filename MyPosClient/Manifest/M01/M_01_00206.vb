@@ -33,23 +33,23 @@ Namespace Manifest
         '原则上所有UTLD的变量不能出现在成品中, 在确定不需要的情况下应删除UTLD
         '-------------------------------------------------------------------
         Public SV_ADDING_WARE_IDS As New ArrayList
-        Public SV_UTLD_0002 As String = "SV_UTLD_0002"
-        'Public SV_UTLD_0003 As String ="SV_UTLD_0003"
-        'Public SV_UTLD_0004 As String ="SV_UTLD_0004"
-        'Public SV_UTLD_0005 As String ="SV_UTLD_0005"
-        'Public SV_RPTOPT_EXCEL As XForm.ReportOption = Nothing
-        'Public SV_RPTOPT_LABEL As XForm.ReportOption = Nothing
+        Public SV_EDITING_WARE_ID As String = String.Empty
+        'Public SV_UTLD_0002 As String = "SV_UTLD_0002"
+        ''Public SV_UTLD_0003 As String ="SV_UTLD_0003"
+        ''Public SV_UTLD_0004 As String ="SV_UTLD_0004"
+        ''Public SV_UTLD_0005 As String ="SV_UTLD_0005"
+        ''Public SV_RPTOPT_EXCEL As XForm.ReportOption = Nothing
+        ''Public SV_RPTOPT_LABEL As XForm.ReportOption = Nothing
 
-        '读取,显示数据的条件值变量
-        Public SVLM_CREATING_ROOT_WARE_ID As String = String.Empty
+        ''读取,显示数据的条件值变量
         'Public SVLM_UTLD_0002 As String ="SVLM_UTLD_0002"
 
         '数据列表变量
-        Public SVFT_BINDING_COMPONENT_LIST As New MyPosXAuto.FTs.FT_XV_S_MP_BOM_COMPONENT
+        Public SVFT_BINDING_COMPONENT_LIST As New MyPosXAuto.FTs.FT_S_MP_BOM_COMPONENT
         Public SVFT_BINDING_OPTION_LIST As New MyPosXAuto.FTs.FT_XV_S_MP_BOM_COMP_WARE_OPT
         'Public SVFT_CHOOSE_XXX_LIST As New XAuto.FTs.FT_
 
-        Public SVFR_SELECTING_COMPONENT_ROW As MyPosXAuto.FTs.FT_XV_S_MP_BOM_COMPONENTRow
+        Public SVFR_SELECTING_COMPONENT_ROW As MyPosXAuto.FTs.FT_S_MP_BOM_COMPONENTRow
         Public SVFR_SELECTING_COMPONENT_WARE_OPT_ROW As MyPosXAuto.FTs.FT_XV_S_MP_BOM_COMP_WARE_OPTRow
 
 
@@ -167,9 +167,6 @@ Namespace Manifest
             Select Case Me.LAUNCH_CONDITION
 
             End Select
-            If Me.SVLM_CREATING_ROOT_WARE_ID.Length > 0 Then
-                Me.PanelControl_Filter.Visible = False
-            End If
             'Initialize option list controls which value source isn't from the edit form content
 
             Me._bizAgent.DoRequest(Business.B_01_00206.Affairs.InitDisplay, False)
@@ -393,9 +390,10 @@ Namespace Manifest
                 Case Business.B_01_00206.Affairs.AddWare
                     'Me.TreeList_WareBomList.DataSource = Me.SVFT_BINDING_LIST
                     'Me.TreeList_WareBomList.ExpandAll()
-                    'Me.TreeList_WareBomList.BestFitColumns()
+                    'Me.TreeList_Component.BestFitColumns()
                     'Me.IsSaved = False
-
+                Case Business.B_01_00206.Affairs.InitDisplay
+                    Me.TreeList_Component.BestFitColumns()
                 Case Business.B_01_00206.Affairs.SaveInfo
                     Me.UpdateDisplay()
             End Select
@@ -449,7 +447,18 @@ Namespace Manifest
 
         Private Sub TbActionAddComponent()
 
-            
+            Dim parentComponentID = String.Empty
+            If IsNothing(Me.SVFR_SELECTING_COMPONENT_ROW) = False Then
+                parentComponentID = Me.SVFR_SELECTING_COMPONENT_ROW.COMPONENT_ID
+            End If
+            Dim componentRow = Me.SVFT_BINDING_COMPONENT_LIST.AddNewS_MP_BOM_COMPONENTRow( _
+                Guid.NewGuid.ToString, _
+                String.Empty, _
+                Me.SV_EDITING_WARE_ID, _
+                parentComponentID)
+            componentRow.ROW_REMARK = "COMPONENT"
+            Me.TreeList_Component.FocusedNode.ExpandAll()
+            Me.TreeList_Component.BestFitColumns()
 
         End Sub
 
@@ -601,38 +610,59 @@ Namespace Manifest
         Private Sub DoPrivateUpdateSelectingRow()
 
 
-            'Me.SVFR_SELECTING_ROW = Nothing
+            Me.SVFR_SELECTING_COMPONENT_ROW = Nothing
 
-            'Me.ToolStripButton_Remove.Enabled = False
-            'Me.ToolStripButton_Add.Enabled = False
-            'Me.TreeListColumn_BelongQty.OptionsColumn.AllowFocus = False
-            'Me.TreeListColumn_WareBomType.OptionsColumn.AllowFocus = False
+            Me.ToolStripButton_AddOptions.Enabled = False
+            'Me.ToolStripButton_RemoveOptions.Enabled = False
+            Me.ToolStripButton_RefreshOptions.Enabled = False
+            Me.TreeListColumn_Component.OptionsColumn.AllowFocus = False
 
-            'If IsNothing(Me.TreeList_WareBomList.FocusedNode) = False Then
+            If IsNothing(Me.TreeList_Component.FocusedNode) = False Then
 
-            '    Me.SVFR_SELECTING_ROW = _
-            '         CType(CType( _
-            '             Me.TreeList_WareBomList.GetDataRecordByNode( _
-            '                 Me.TreeList_WareBomList.FocusedNode),  _
-            '             DataRowView).Row, MyPosXAuto.FTs.FT_XV_S_MP_WARE_BOMRow)
+                Me.SVFR_SELECTING_COMPONENT_ROW = _
+                     CType(CType( _
+                         Me.TreeList_Component.GetDataRecordByNode( _
+                             Me.TreeList_Component.FocusedNode),  _
+                         DataRowView).Row, MyPosXAuto.FTs.FT_S_MP_BOM_COMPONENTRow)
 
-            '    If Me.SVFR_SELECTING_ROW.OWNING_WARE__WARE_ID = Me.SVLM_CREATING_ROOT_WARE_ID Then
-            '        Me.TreeListColumn_BelongQty.OptionsColumn.AllowFocus = True
-            '        Me.TreeListColumn_WareBomType.OptionsColumn.AllowFocus = True
-            '    End If
+                If Me.SVFR_SELECTING_COMPONENT_ROW.COMPONENT_ID.Length > 0 Then
+                    Me.TreeListColumn_Component.OptionsColumn.AllowFocus = True
+                    Me.ToolStripButton_AddOptions.Enabled = True
+                End If
 
-            '    Me.ToolStripButton_Remove.Enabled = True
-            '    Me.ToolStripButton_Add.Enabled = True
+                'Me.ToolStripButton_Remove.Enabled = True
 
-            'End If
+            End If
 
 
 
         End Sub
 
 
-        Private Sub DoPrivateUtld0001()
+        Private Sub DoPrivateUpdateBomSetupVisibles()
+            Me.ToolStripButton_AddComponent.Visible = True
+            Me.ToolStripButton_RemoveComponent.Visible = True
+            Me.ToolStripButton_RefreshComponents.Visible = True
+            Me.ToolStripButton_SaveComponents.Visible = True
 
+            Me.ToolStripButton_AddOptions.Visible = True
+            Me.ToolStripButton_RemoveOptions.Visible = True
+            Me.ToolStripButton_RefreshOptions.Visible = True
+            Me.ToolStripButton_SaveOptions.Visible = True
+
+            If Me.SplitContainerControl_BomSetup.Panel2.Enabled = False Then
+                Me.ToolStripButton_RefreshComponents.Visible = False
+            Else
+                Me.ToolStripButton_SaveComponents.Visible = False
+            End If
+
+            If Me.SplitContainerControl_BomSetup.Panel1.Enabled = False Then
+                If IsNothing(Me.SVFR_SELECTING_COMPONENT_ROW) = False Then
+                    Me.ToolStripButton_RefreshOptions.Visible = True
+                End If
+            Else
+                Me.ToolStripButton_SaveOptions.Visible = True
+            End If
         End Sub
 
 
@@ -858,12 +888,17 @@ Namespace Manifest
         '    Me.IsSaved = False
         'End Sub
 
-        Private Sub TreeList_WareBomList_FocusedNodeChanged(ByVal sender As Object, ByVal e As DevExpress.XtraTreeList.FocusedNodeChangedEventArgs) Handles TreeList_WareBomList.FocusedNodeChanged
+        Private Sub TreeList_Component_FocusedNodeChanged(ByVal sender As Object, ByVal e As DevExpress.XtraTreeList.FocusedNodeChangedEventArgs) Handles TreeList_Component.FocusedNodeChanged
             Me.DoPrivateUpdateSelectingRow()
         End Sub
 
         Private Sub GroupControl1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles GroupControl1.Paint
 
+        End Sub
+
+        Private Sub RepositoryItemTextEdit_ComponentName_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemTextEdit_ComponentName.EditValueChanged
+            Dim textEdit = TryCast(sender, DevExpress.XtraEditors.TextEdit)
+            Me.SVFR_SELECTING_COMPONENT_ROW.COMPONENT_NAME = textEdit.Text
         End Sub
     End Class
 
