@@ -264,7 +264,8 @@ Public Class S_01_00206
 
                 optionRow = refBindingList.NewXV_S_MP_BOM_COMP_WARE_OPTRow()
                 refBindingList.AddXV_S_MP_BOM_COMP_WARE_OPTRow(optionRow)
-
+                optionRow.COMPONENT_ID = valComponentID
+                optionRow.OPTION_ID = Guid.NewGuid.ToString
                 optionRow.MAX_QTY = 10
                 optionRow.MIN_QTY = 1
                 optionRow.WARE_ID = wareRow.WARE_ID
@@ -400,7 +401,6 @@ Public Class S_01_00206
                 End If
 
                 dbOptionRow.CloneDataRow(optionRow)
-                dbOptionRow.COMPONENT_ID = valComponentID
             Next
 
             optionCondition.Clear()
