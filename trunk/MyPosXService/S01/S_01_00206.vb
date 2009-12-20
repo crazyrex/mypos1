@@ -311,7 +311,7 @@ Public Class S_01_00206
     End Function
 
 
-    Public Function ServSavComponentInfo( _
+    Public Function SaveComponentList( _
         ByVal rootWareID As String, _
         ByRef refBindingList As MyPosXAuto.FTs.FT_S_MP_BOM_COMPONENT _
         ) As String
@@ -320,41 +320,36 @@ Public Class S_01_00206
 
         Try
 
-            'Dim dbBomList As New MyPosXAuto.FTs.FT_S_MP_WARE_BOM
-            'Dim dbBomRow As MyPosXAuto.FTs.FT_S_MP_WARE_BOMRow
-            'Dim dbBomCondition As New MyPosXAuto.Facade.AfBizConfig.ConditionOfS_MP_WARE_BOM(XL.DB.Utils.Condition.LogicOperators.Logic_And)
-            'dbBomCondition.Add(MyPosXAuto.Facade.AfBizConfig.S_MP_WARE_BOMColumns.OWNING_WAREColumn, "=", rootWareID)
-            'MyPosXAuto.Facade.AfBizConfig.FillFT_S_MP_WARE_BOM(dbBomCondition, dbBomList)
 
-            'Dim involvedWareIDs As New ArrayList
+            Dim dbComponentList As New MyPosXAuto.FTs.FT_S_MP_BOM_COMPONENT
+            Dim dbComponentRow As MyPosXAuto.FTs.FT_S_MP_BOM_COMPONENTRow
+            Dim dbComponentCondition As New MyPosXAuto.Facade.AfBizConfig.ConditionOfS_MP_BOM_COMPONENT(XL.DB.Utils.Condition.LogicOperators.Logic_And)
+            dbComponentCondition.Add(MyPosXAuto.Facade.AfBizConfig.S_MP_BOM_COMPONENTColumns.COMPOSING_WAREColumn, "=", rootWareID)
+            MyPosXAuto.Facade.AfBizConfig.FillFT_S_MP_BOM_COMPONENT(dbComponentCondition, dbComponentList)
 
-            'Dim bindingCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_S_MP_WARE_BOM(XL.DB.Utils.Condition.LogicOperators.Logic_And)
-            'bindingCondition.Add(MyPosXAuto.Facade.AfXV.XV_S_MP_WARE_BOMColumns.OWNING_WARE__WARE_IDColumn, "=", rootWareID)
-            'For Each bindingRow As MyPosXAuto.FTs.FT_XV_S_MP_WARE_BOMRow In refBindingList.FindRowsByCondition(bindingCondition)
-            '    involvedWareIDs.Add(bindingRow.BELONG_WARE__WARE_ID)
-            '    dbBomCondition.Clear()
-            '    dbBomCondition.Add(MyPosXAuto.Facade.AfBizConfig.S_MP_WARE_BOMColumns.BELONG_WAREColumn, "=", bindingRow.BELONG_WARE__WARE_ID)
-            '    dbBomRow = dbBomList.FindRowByCondition(dbBomCondition)
+            Dim involvedComponentIDs As New ArrayList
 
-            '    If IsNothing(dbBomRow) = False Then
-            '        dbBomRow.WARE_BOM_TYPE = bindingRow.WARE_BOM_TYPE
-            '        dbBomRow.BELONG_QTY = bindingRow.BELONG_QTY
-            '        Continue For
-            '    End If
+            For Each bindingRow As MyPosXAuto.FTs.FT_S_MP_BOM_COMPONENTRow In refBindingList
+                involvedComponentIDs.Add(bindingRow.COMPONENT_ID)
+                dbComponentCondition.Clear()
+                dbComponentCondition.Add(MyPosXAuto.Facade.AfBizConfig.S_MP_BOM_COMPONENTColumns.COMPONENT_IDColumn, "=", bindingRow.COMPONENT_ID)
+                dbComponentRow = dbComponentList.FindRowByCondition(dbComponentCondition)
 
-            '    dbBomList.AddNewS_MP_WARE_BOMRow( _
-            '        bindingRow.BELONG_QTY, _
-            '        bindingRow.BELONG_WARE__WARE_ID, _
-            '        Guid.NewGuid.ToString, _
-            '        rootWareID, _
-            '        bindingRow.WARE_BOM_TYPE)
-            'Next
+                If IsNothing(dbComponentRow) = True Then
+                    dbComponentRow = dbComponentList.NewS_MP_BOM_COMPONENTRow
+                    dbComponentList.AddS_MP_BOM_COMPONENTRow(dbComponentRow)
 
-            'dbBomCondition.Clear()
-            'dbBomCondition.Add(MyPosXAuto.Facade.AfBizConfig.S_MP_WARE_BOMColumns.BELONG_WAREColumn, False, involvedWareIDs)
-            'dbBomList.RemoveFT_S_MP_WARE_BOMRows(dbBomCondition)
+                End If
 
-            'MyPosXAuto.Facade.AfBizConfig.SaveBatchS_MP_WARE_BOMData(dbBomList)
+                dbComponentRow.CloneDataRow(bindingRow)
+
+            Next
+
+            dbComponentCondition.Clear()
+            dbComponentCondition.Add(MyPosXAuto.Facade.AfBizConfig.S_MP_BOM_COMPONENTColumns.COMPONENT_IDColumn, False, involvedComponentIDs)
+            dbComponentList.RemoveFT_S_MP_BOM_COMPONENTRows(dbComponentCondition)
+
+            MyPosXAuto.Facade.AfBizConfig.SaveBatchS_MP_BOM_COMPONENTData(dbComponentList)
         Catch ex As XL.Common.Utils.XLException
 
             Dim logContentBuilder As New LineStrBuilder
