@@ -13,10 +13,10 @@ Imports XL.Win.Utils
 Namespace Business
 
 
-    Public Class B_01_00206  
+    Public Class B_01_00206
         Inherits XL.Win.Component.BaseAgent
 
-#Region" 组件设计器生成的代码"
+#Region " 组件设计器生成的代码"
 
         Public Sub New(ByVal Container As System.ComponentModel.IContainer)
             MyClass.New()
@@ -59,22 +59,22 @@ Namespace Business
 #End Region
 
 
-#Region"Prerequested Inits"
+#Region "Prerequested Inits"
 
         '
         '本代理所对应的表现层实例
         '
-        Private _manifest As Manifest.M_01_00206     
-        Private _service As MyPosXService.S_01_00206     
+        Private _manifest As Manifest.M_01_00206
+        Private _service As MyPosXService.S_01_00206
 
         Public Enum Affairs
             InitDisplay
             LoadInfo
             SaveComponentList
-            LoadList
-            AddWare
+            LoadComponentList
+            AddOptions
             SaveOptionList
-            BizUtld0003
+            LoadOptionList
             BizUtld0004
             BizUtld0005
             BizUtld0006
@@ -187,19 +187,19 @@ Namespace Business
                     '-------------------------------------------------------------------          
                     functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoSaveComponentList)
 
-                Case Affairs.LoadList
+                Case Affairs.LoadComponentList
 
                     '                                                                             
                     '取到处理函数的结果，传入返回给Manifest的AgentResponse包                      
                     '-------------------------------------------------------------------          
-                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoLoadList)
+                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoLoadComponentList)
 
-                Case Affairs.AddWare
+                Case Affairs.AddOptions
 
                     '
                     '取到处理函数的结果，传入返回给Manifest的AgentResponse包
                     '-------------------------------------------------------------------
-                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoAddWare)
+                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoAddOptions)
 
                 Case Affairs.SaveOptionList
 
@@ -208,12 +208,12 @@ Namespace Business
                     '-------------------------------------------------------------------
                     functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoSaveOptionList)
 
-                Case Affairs.BizUtld0003
+                Case Affairs.LoadOptionList
 
                     '
                     '取到处理函数的结果，传入返回给Manifest的AgentResponse包
                     '-------------------------------------------------------------------
-                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoBizUtld0003)
+                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoLoadOptionList)
 
                 Case Affairs.BizUtld0004
 
@@ -404,48 +404,59 @@ Namespace Business
                     Return String.Empty
                 End If
 
-                Dim componentRow = _
+                Dim rootComponentRow = _
                     Me._manifest.SVFT_BINDING_COMPONENT_LIST.AddNewS_MP_BOM_COMPONENTRow( _
                         Me._manifest.SV_EDITING_WARE_ID, _
                         wareRow.WARE_NAME, _
                         wareRow.WARE_ID, _
                         String.Empty)
-                componentRow.ROW_REMARK = "ROOT_WARE"
+                rootComponentRow.ROW_REMARK = "ROOT_WARE"
                 Me._manifest.TreeList_Component.DataSource = Me._manifest.SVFT_BINDING_COMPONENT_LIST
-                'Dim chooseAssetConformationList As New MyPosXAuto.FTs.FT_CIV_ASSET_CONFORMATION
 
+                Dim sysAttribute1 = SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE1)
+                Dim sysAttribute2 = SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE2)
+                Dim sysAttribute3 = SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE3)
+                Dim sysAttribute4 = SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE4)
 
+                Me._manifest.GridColumn_Attribute1.Caption = sysAttribute1
+                Me._manifest.GridColumn_Attribute2.Caption = sysAttribute2
+                Me._manifest.GridColumn_Attribute3.Caption = sysAttribute3
+                Me._manifest.GridColumn_Attribute4.Caption = sysAttribute4
 
-                'Dim chooseEliminateWayList As New MyPosXAuto.FTs.FT_CIV_ELIMINATE_WAY                                     
-                'Dim chooseInAccountCredenceTextList As New MyPosXAuto.FTs.FT_CIV_IN_ACCOUNT_CREDENCE_TEXT                 
-                '                                                                                                     
-                'Dim sysManageFormMustConfirm As Boolean                                                              
-                '                                                                                                     
-                'Me._service.ServInitDisplay( _                                                                       
-                '    CommDecl.CURRENT_LANGUAGE_OPTION, _                                                              
-                '    choosePurchaseWayList, _                                                                         
-                '    chooseAssetAbsentTypeList, _                                                                     
-                '    chooseAssetConformationList, _                                                                   
-                '    chooseEliminateWayList, _                                                                        
-                '    chooseInAccountCredenceTextList, _                                                               
-                '    sysManageFormMustConfirm)                                                                        
-                '                                                                                                     
-                'Me._manifest.LookUpEdit_AssetAbsentType.Properties.DataSource = chooseAssetAbsentTypeList            
-                'Me._manifest.LookUpEdit_Conformation.Properties.DataSource = chooseAssetConformationList             
-                'Me._manifest.LookUpEdit_EliminateWay.Properties.DataSource = chooseEliminateWayList                  
-                'Me._manifest.LookUpEdit_PurchaseWay.Properties.DataSource = choosePurchaseWayList                    
-                'Me._manifest.LookUpEdit_InAccountCredenceText.Properties.DataSource = chooseInAccountCredenceTextList
-                '                                                                                                     
-                'Me._manifest.LookUpEdit_AssetAbsentType.EditValue = XAuto.Decls.CIVALUE_ASSET_ABSENT_TYPE_NONE       
-                'Me._manifest.LookUpEdit_EliminateWay.EditValue = MyPosXService.Decls.DEFAULT_CI_ELIMINATE_WAY_VALUE_NONE  
-                '                                                                                                     
-                'If Me._manifest.SV_EDITING_ASSET_ID < 0 Then                                                         
-                '			xxxx                                                                                            
-                'End If                                                                                               
-                '                                                                                                     
-                'If sysManageFormMustConfirm = True Then                                                              
-                '    Me._manifest.ButtonEdit_CurrentDepartmentCode.Enabled = False                                    
-                'End If                                                                                               
+                If sysAttribute1.Length = 0 Then
+                    Me._manifest.GridColumn_Attribute1.Visible = False
+                End If
+
+                If sysAttribute2.Length = 0 Then
+                    Me._manifest.GridColumn_Attribute2.Visible = False
+                End If
+
+                If sysAttribute3.Length = 0 Then
+                    Me._manifest.GridColumn_Attribute3.Visible = False
+                End If
+
+                If sysAttribute4.Length = 0 Then
+                    Me._manifest.GridColumn_Attribute4.Visible = False
+                End If
+
+                Dim sysWareSpecModelDiscard = CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_WARE_SPEC_MODEL_DISCARD))
+                If sysWareSpecModelDiscard = True Then
+                    Me._manifest.GridColumn_Spec.Visible = False
+                    Me._manifest.GridColumn_Model.Visible = False
+                End If
+
+                Dim sysShowCustomWareCode = CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_SHOW_CUSTOM_WARE_CODE))
+                If sysShowCustomWareCode = False Then
+                    Me._manifest.GridColumn_CustomCode.Visible = False
+                End If
+
+                Dim userCostHidden As Boolean = CommTK.FBoolean(SysInfo.LoginUserOptions.Options("OPN_COST_HIDDEN"))
+                Dim userPriceHidden As Boolean = CommTK.FBoolean(SysInfo.LoginUserOptions.Options("OPN_PRICE_HIDDEN"))
+                Dim userFinacialForbiddened As Boolean = CommTK.FBoolean(SysInfo.LoginUserOptions.Options("OPN_FINANCIAL_FORBIDDENED"))
+
+                If userCostHidden = True Then
+                    Me._manifest.GridColumn_Unitcost.Visible = False
+                End If
 
 
                 'Me._manifest.SV_RPTOPT_LABEL = New XForm.ReportOption(MyPosXService.Decls.RPT_NAME_0001, XForm.ReportOption.PrintType.Label, True)
@@ -538,7 +549,7 @@ Namespace Business
 
 
                 Dim servResult As String = _
-                    Me._service.SaveComponentList( _
+                    Me._service.ServSaveComponentList( _
                         Me._manifest.SV_EDITING_WARE_ID, _
                         Me._manifest.SVFT_BINDING_COMPONENT_LIST)
 
@@ -578,32 +589,42 @@ Namespace Business
         '''                                                                         
         '''                                                                         
         '''-------------------------------------------------------------------      
-        Private Function DoLoadList() As String
+        Private Function DoLoadComponentList() As String
 
 
             Try
-                'Dim editingWareRow As MyPosXAuto.FTs.FT_M_MP_WARERow
-                'Me._manifest.TreeList_WareBomList.DataSource = Nothing
-                'Me._manifest.SVFT_BINDING_LIST.Clear()
-                'If Me._manifest.SVLM_CREATING_ROOT_WARE_ID.Length > 0 Then
 
-                '    editingWareRow = MyPosXAuto.Facade.AfBizMaster.GetM_MP_WARERow(Me._manifest.SVLM_CREATING_ROOT_WARE_ID)
-                '    If IsNothing(editingWareRow) = True Then
-                '        Return MyPosXService.Decls.MSG_ALERT_00008
-                '    End If
-                '    Me._manifest.MemoEdit_WareCodes.Text = editingWareRow.WARE_CODE
+                Me._manifest.TreeList_Component.DataSource = Nothing
+                Me._manifest.SVFT_BINDING_COMPONENT_LIST.Clear()
 
-                'End If
+                Dim wareRow = MyPosXAuto.Facade.AfBizMaster.GetM_MP_WARERow(Me._manifest.SV_EDITING_WARE_ID)
+                If IsNothing(wareRow) = True Then
+                    Me._manifest.ToolStripButton_Refresh.Enabled = False
+                    Me._manifest.XtraTabControl1.Enabled = False
+                    Me._manifest.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0029)
+                    Return String.Empty
+                End If
 
-                'Dim wareCodes As New ArrayList
-                'For Each wareCode In Me._manifest.MemoEdit_WareCodes.Text.Split(Chr(10))
-                '    wareCodes.Add(wareCode.Trim)
-                'Next
+                Dim rootComponentRow = _
+                    Me._manifest.SVFT_BINDING_COMPONENT_LIST.AddNewS_MP_BOM_COMPONENTRow( _
+                        Me._manifest.SV_EDITING_WARE_ID, _
+                        wareRow.WARE_NAME, _
+                        wareRow.WARE_ID, _
+                        String.Empty)
+                rootComponentRow.ROW_REMARK = "ROOT_WARE"
 
-                'Dim chooseRootWareList As New MyPosXAuto.FTs.FT_M_MP_WARE
-                'Me._manifest.ShowStatusMessage(StatusMessageIcon.Progressing, MyPosXService.Decls.MSG_STATUS_0026)
+                Dim componentCondition As New MyPosXAuto.Facade.AfBizConfig.ConditionOfS_MP_BOM_COMPONENT(XL.DB.Utils.Condition.LogicOperators.Logic_And)
+                componentCondition.Add(MyPosXAuto.Facade.AfBizConfig.S_MP_BOM_COMPONENTColumns.COMPOSING_WAREColumn, "=", wareRow.WARE_ID)
+
+                Me._manifest.ShowStatusMessage(StatusMessageIcon.Progressing, MyPosXService.Decls.MSG_STATUS_0026)
+
+                MyPosXAuto.Facade.AfBizConfig.FillFT_S_MP_BOM_COMPONENT( _
+                    componentCondition, _
+                    Me._manifest.SVFT_BINDING_COMPONENT_LIST)
+
+
                 'Dim servResult As String = _
-                '    Me._service.ServLoadList( _
+                '    Me._service.ServLoadComponentList( _
                 '        CommTK.ALToStr(wareCodes), _
                 '        Me._manifest.SVFT_BINDING_LIST, _
                 '        chooseRootWareList)
@@ -611,9 +632,14 @@ Namespace Business
                 'If servResult.Length > 0 Then
                 '    Return servResult
                 'End If
-                'Me._manifest.ShowStatusMessage(StatusMessageIcon.Progressing, MyPosXService.Decls.MSG_STATUS_0028)
+                For Each bindingRow As MyPosXAuto.FTs.FT_S_MP_BOM_COMPONENTRow In Me._manifest.SVFT_BINDING_COMPONENT_LIST
+                    If bindingRow.COMPONENT_ID <> Me._manifest.SV_EDITING_WARE_ID Then
+                        bindingRow.ROW_REMARK = "COMPONENT"
+                    End If
+                Next
+                Me._manifest.ShowStatusMessage(StatusMessageIcon.Progressing, MyPosXService.Decls.MSG_STATUS_0028)
 
-                'Me._manifest.TreeList_WareBomList.DataSource = Me._manifest.SVFT_BINDING_LIST
+                Me._manifest.TreeList_Component.DataSource = Me._manifest.SVFT_BINDING_COMPONENT_LIST
 
             Catch ex As XL.Common.Utils.XLException
 
@@ -646,21 +672,23 @@ Namespace Business
         '''
         '''
         '''-------------------------------------------------------------------
-        Private Function DoAddWare() As String
+        Private Function DoAddOptions() As String
 
 
             Try
 
 
-                'Dim servResult As String = _
-                '    Me._service.ServAddWare( _
-                '        Me._manifest.SVLM_CREATING_ROOT_WARE_ID, _
-                '        CommTK.ALToStr(Me._manifest.SV_ADDING_WARE_IDS), _
-                '        Me._manifest.SVFT_BINDING_LIST)
+                Dim servResult As String = _
+                    Me._service.ServAddOptions( _
+                        Me._manifest.SVFR_SELECTING_COMPONENT_ROW.COMPONENT_ID, _
+                        CommTK.ALToStr(Me._manifest.SV_ADDING_WARE_IDS), _
+                        Me._manifest.SVFT_BINDING_OPTION_LIST)
 
-                'If servResult.Length > 0 Then
-                '    Return servResult
-                'End If
+                If servResult.Length > 0 Then
+                    Return servResult
+                End If
+
+                Me._manifest.GridControl_Ware.DataSource = Me._manifest.SVFT_BINDING_OPTION_LIST
 
             Catch ex As XL.Common.Utils.XLException
 
@@ -699,12 +727,14 @@ Namespace Business
             Try
 
 
-                'Dim servResult As String = _
-                '    Me._service.ServSaveOptionList()
+                Dim servResult As String = _
+                    Me._service.ServSaveOptionList( _
+                        Me._manifest.SVFR_SELECTING_COMPONENT_ROW.COMPONENT_ID, _
+                        Me._manifest.SVFT_BINDING_OPTION_LIST)
 
-                'If servResult.Length > 0 Then
-                '    Return servResult        
-                'End If                       
+                If servResult.Length > 0 Then
+                    Return servResult
+                End If
 
             Catch ex As XL.Common.Utils.XLException
 
@@ -737,18 +767,25 @@ Namespace Business
         '''
         '''
         '''-------------------------------------------------------------------
-        Private Function DoBizUtld0003() As String
+        Private Function DoLoadOptionList() As String
 
 
             Try
 
+                Dim optionCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_S_MP_BOM_COMP_WARE_OPT(XL.DB.Utils.Condition.LogicOperators.Logic_And)
+                optionCondition.Add(MyPosXAuto.Facade.AfXV.XV_S_MP_BOM_COMP_WARE_OPTColumns.COMPONENT_IDColumn, "=", Me._manifest.SVFR_SELECTING_COMPONENT_ROW.COMPONENT_ID)
+
+                Me._manifest.SVFT_BINDING_OPTION_LIST.Clear()
+                MyPosXAuto.Facade.AfXV.FillFT_XV_S_MP_BOM_COMP_WARE_OPT(optionCondition, Me._manifest.SVFT_BINDING_OPTION_LIST)
 
                 'Dim servResult As String = _
-                '    Me._service.ServBizUtld0003()
+                '    Me._service.ServLoadOptionList()
 
                 'If servResult.Length > 0 Then
                 '    Return servResult        
                 'End If                       
+
+                Me._manifest.GridControl_Ware.DataSource = Me._manifest.SVFT_BINDING_OPTION_LIST
 
             Catch ex As XL.Common.Utils.XLException
 
@@ -1537,64 +1574,64 @@ End Namespace
 
 'Code Samples Below ------------------------
 
-        ''''Function remark:                                                                                                            
-        ''''                                                                                                                            
-        ''''                                                                                                                            
-        ''''-------------------------------------------------------------------                                                         
-        'Private Function DoLoadXXXByCode() As String                                                                                   
-        '                                                                                                                               
-        '                                                                                                                               
-        '    Try                                                                                                                        
-        '        If Me._manifest.ButtonEdit_XXXCode.Text.Trim.Length = 0 Then                                                           
-        '            Return String.Empty                                                                                                
-        '        End If                                                                                                                 
-        '                                                                                                                               
-        '        Dim SSCondition As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_SSS(XL.DB.Utils.Condition.LogicOperators.Logic_And)
-        '        SSCondition.Add(XAuto.Facade.AfBizMaster.M_SSSColumns.SS_CODEColumn, "=", Me._manifest.ButtonEdit_XXXCode.Text)      
-        '                                                                                                                               
-        '        Dim SSRow As XAuto.FTs.FT_M_SSSRow = _                                                                                 
-        '            XAuto.Facade.AfBizMaster.GetM_SSSRow(SSCondition)                                                                  
-        '                                                                                                                               
-        '        If IsNothing(SSRow) = True Then                                                                                        
-        '            Return XService.Decls.MSG_ALERT_00001                                                                              
-        '        End If                                                                                                                 
-        '                                                                                                                               
-        '        Me._manifest.ButtonEdit_XXXCode.Text = SSRow.SS_CODE                                                                   
-        '        Me._manifest.Label_XXXName.Text = SSRow.SS_NAME                                                                        
-        '        Me._manifest.Label_XXXID.Text = CommTK.FString(SSRow.SS_ID)                                                            
-        '                                                                                                                               
-        '        'Dim servResult As String = _                                                                                          
-        '        '    Me._service.ServLoadXXXByCode()                                                                                   
-        '                                                                                                                               
-        '        'If servResult.Length > 0 Then                                                                                         
-        '        '    Return servResult                                                                                                 
-        '        'End If                                                                                                                
-        '                                                                                                                               
-        '    Catch ex As XL.Common.Utils.XLException                                                                                    
-        '                                                                                                                               
-        '        Dim logContentBuilder As New LineStrBuilder                                                                            
-        '        logContentBuilder.AppendLine("Message: {0}", ex.Message)                                                           
-        '        logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)                                                    
-        '                                                                                                                               
-        '        WinTK.OutputLog("XL Exception", logContentBuilder.ToString())                                                        
-        '                                                                                                                               
-        '        Return ex.Message                                                                                                      
-        '                                                                                                                               
-        '    Catch ex As Exception                                                                                                      
-        '                                                                                                                               
-        '        Dim logContentBuilder As New LineStrBuilder                                                                            
-        '        logContentBuilder.AppendLine("Message: {0}", ex.Message)                                                           
-        '        logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)                                                    
-        '                                                                                                                               
-        '        WinTK.OutputLog("Exception occured", logContentBuilder.ToString())                                                   
-        '                                                                                                                               
-        '        XL.Win.Window.XLMessageBox.UseSmallFont = True                                                                         
-        '        Return ex.Message & vbNewLine & ex.StackTrace.ToString()                                                               
-        '                                                                                                                               
-        '    End Try                                                                                                                    
-        '                                                                                                                               
-        '    Return String.Empty                                                                                                        
-        '                                                                                                                               
-        'End Function                                                                                                                   
+''''Function remark:                                                                                                            
+''''                                                                                                                            
+''''                                                                                                                            
+''''-------------------------------------------------------------------                                                         
+'Private Function DoLoadXXXByCode() As String                                                                                   
+'                                                                                                                               
+'                                                                                                                               
+'    Try                                                                                                                        
+'        If Me._manifest.ButtonEdit_XXXCode.Text.Trim.Length = 0 Then                                                           
+'            Return String.Empty                                                                                                
+'        End If                                                                                                                 
+'                                                                                                                               
+'        Dim SSCondition As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_SSS(XL.DB.Utils.Condition.LogicOperators.Logic_And)
+'        SSCondition.Add(XAuto.Facade.AfBizMaster.M_SSSColumns.SS_CODEColumn, "=", Me._manifest.ButtonEdit_XXXCode.Text)      
+'                                                                                                                               
+'        Dim SSRow As XAuto.FTs.FT_M_SSSRow = _                                                                                 
+'            XAuto.Facade.AfBizMaster.GetM_SSSRow(SSCondition)                                                                  
+'                                                                                                                               
+'        If IsNothing(SSRow) = True Then                                                                                        
+'            Return XService.Decls.MSG_ALERT_00001                                                                              
+'        End If                                                                                                                 
+'                                                                                                                               
+'        Me._manifest.ButtonEdit_XXXCode.Text = SSRow.SS_CODE                                                                   
+'        Me._manifest.Label_XXXName.Text = SSRow.SS_NAME                                                                        
+'        Me._manifest.Label_XXXID.Text = CommTK.FString(SSRow.SS_ID)                                                            
+'                                                                                                                               
+'        'Dim servResult As String = _                                                                                          
+'        '    Me._service.ServLoadXXXByCode()                                                                                   
+'                                                                                                                               
+'        'If servResult.Length > 0 Then                                                                                         
+'        '    Return servResult                                                                                                 
+'        'End If                                                                                                                
+'                                                                                                                               
+'    Catch ex As XL.Common.Utils.XLException                                                                                    
+'                                                                                                                               
+'        Dim logContentBuilder As New LineStrBuilder                                                                            
+'        logContentBuilder.AppendLine("Message: {0}", ex.Message)                                                           
+'        logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)                                                    
+'                                                                                                                               
+'        WinTK.OutputLog("XL Exception", logContentBuilder.ToString())                                                        
+'                                                                                                                               
+'        Return ex.Message                                                                                                      
+'                                                                                                                               
+'    Catch ex As Exception                                                                                                      
+'                                                                                                                               
+'        Dim logContentBuilder As New LineStrBuilder                                                                            
+'        logContentBuilder.AppendLine("Message: {0}", ex.Message)                                                           
+'        logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)                                                    
+'                                                                                                                               
+'        WinTK.OutputLog("Exception occured", logContentBuilder.ToString())                                                   
+'                                                                                                                               
+'        XL.Win.Window.XLMessageBox.UseSmallFont = True                                                                         
+'        Return ex.Message & vbNewLine & ex.StackTrace.ToString()                                                               
+'                                                                                                                               
+'    End Try                                                                                                                    
+'                                                                                                                               
+'    Return String.Empty                                                                                                        
+'                                                                                                                               
+'End Function                                                                                                                   
 
 
