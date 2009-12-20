@@ -394,7 +394,7 @@ Namespace Manifest
                     'Me.IsSaved = False
                 Case Business.B_01_00206.Affairs.InitDisplay
                     Me.TreeList_Component.BestFitColumns()
-                Case Business.B_01_00206.Affairs.SaveInfo
+                Case Business.B_01_00206.Affairs.SaveComponentList
                     Me.UpdateDisplay()
             End Select
         End Sub
@@ -459,6 +459,8 @@ Namespace Manifest
             componentRow.ROW_REMARK = "COMPONENT"
             Me.TreeList_Component.FocusedNode.ExpandAll()
             Me.TreeList_Component.BestFitColumns()
+            Me.SplitContainerControl_BomSetup.Panel2.Enabled = False
+            Me.DoPrivateUpdateBomSetupVisibles()
 
         End Sub
 
@@ -474,6 +476,8 @@ Namespace Manifest
             Me.SVFR_SELECTING_COMPONENT_ROW.Delete()
             Me.IsSaved = False
 
+            Me.SplitContainerControl_BomSetup.Panel2.Enabled = False
+            Me.DoPrivateUpdateBomSetupVisibles()
 
         End Sub
 
@@ -499,11 +503,11 @@ Namespace Manifest
         End Sub
 
         Private Sub TbActionSaveComponents()
-            Me._bizAgent.DoRequest(Business.B_01_00206.Affairs.SaveInfo, False)
+            Me._bizAgent.DoRequest(Business.B_01_00206.Affairs.SaveComponentList, False)
         End Sub
 
         Private Sub TbActionSaveOptions()
-            Me._bizAgent.DoRequest(Business.B_01_00206.Affairs.SaveInfo, False)
+            Me._bizAgent.DoRequest(Business.B_01_00206.Affairs.SaveOptionList, False)
         End Sub
 
 
@@ -899,6 +903,18 @@ Namespace Manifest
         Private Sub RepositoryItemTextEdit_ComponentName_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemTextEdit_ComponentName.EditValueChanged
             Dim textEdit = TryCast(sender, DevExpress.XtraEditors.TextEdit)
             Me.SVFR_SELECTING_COMPONENT_ROW.COMPONENT_NAME = textEdit.Text
+        End Sub
+
+  
+        Private Sub TreeList_Component_DragObjectDrop(ByVal sender As System.Object, ByVal e As DevExpress.XtraTreeList.DragObjectDropEventArgs) Handles TreeList_Component.DragObjectDrop
+
+            Me.SplitContainerControl_BomSetup.Panel2.Enabled = False
+            Me.DoPrivateUpdateBomSetupVisibles()
+
+        End Sub
+
+        Private Sub TreeList_Component_BeforeDragNode(ByVal sender As System.Object, ByVal e As DevExpress.XtraTreeList.BeforeDragNodeEventArgs) Handles TreeList_Component.BeforeDragNode
+            e.CanDrag = (Me.SVFR_SELECTING_COMPONENT_ROW.COMPONENT_ID <> Me.SV_EDITING_WARE_ID)
         End Sub
     End Class
 

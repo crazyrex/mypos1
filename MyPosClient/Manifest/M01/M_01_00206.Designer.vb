@@ -664,11 +664,13 @@ Namespace Manifest
             '
             'TreeList_Component
             '
+            Me.TreeList_Component.AllowDrop = True
             Me.TreeList_Component.Columns.AddRange(New DevExpress.XtraTreeList.Columns.TreeListColumn() {Me.TreeListColumn_TreeIcon, Me.TreeListColumn_Component, Me.TreeListColumn_ComponentRowHighlight})
             Me.TreeList_Component.Dock = System.Windows.Forms.DockStyle.Fill
             Me.TreeList_Component.KeyFieldName = "COMPONENT_ID"
             Me.TreeList_Component.Location = New System.Drawing.Point(2, 96)
             Me.TreeList_Component.Name = "TreeList_Component"
+            Me.TreeList_Component.OptionsBehavior.DragNodes = True
             Me.TreeList_Component.ParentFieldName = "PARENT_COMPONENT"
             Me.TreeList_Component.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemTextEdit_ComponentName, Me.RepositoryItemImageComboBox_TreeIcon})
             Me.TreeList_Component.Size = New System.Drawing.Size(212, 322)

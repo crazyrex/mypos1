@@ -70,10 +70,10 @@ Namespace Business
         Public Enum Affairs
             InitDisplay
             LoadInfo
-            SaveInfo
+            SaveComponentList
             LoadList
             AddWare
-            BizUtld0002
+            SaveOptionList
             BizUtld0003
             BizUtld0004
             BizUtld0005
@@ -180,12 +180,12 @@ Namespace Business
                     '-------------------------------------------------------------------          
                     functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoLoadInfo)
 
-                Case Affairs.SaveInfo
+                Case Affairs.SaveComponentList
 
                     '                                                                             
                     '取到处理函数的结果，传入返回给Manifest的AgentResponse包                      
                     '-------------------------------------------------------------------          
-                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoSaveInfo)
+                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoSaveComponentList)
 
                 Case Affairs.LoadList
 
@@ -201,12 +201,12 @@ Namespace Business
                     '-------------------------------------------------------------------
                     functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoAddWare)
 
-                Case Affairs.BizUtld0002
+                Case Affairs.SaveOptionList
 
                     '
                     '取到处理函数的结果，传入返回给Manifest的AgentResponse包
                     '-------------------------------------------------------------------
-                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoBizUtld0002)
+                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoSaveOptionList)
 
                 Case Affairs.BizUtld0003
 
@@ -406,7 +406,7 @@ Namespace Business
 
                 Dim componentRow = _
                     Me._manifest.SVFT_BINDING_COMPONENT_LIST.AddNewS_MP_BOM_COMPONENTRow( _
-                        String.Empty, _
+                        Me._manifest.SV_EDITING_WARE_ID, _
                         wareRow.WARE_NAME, _
                         wareRow.WARE_ID, _
                         String.Empty)
@@ -531,20 +531,20 @@ Namespace Business
         '''                                                                         
         '''                                                                         
         '''-------------------------------------------------------------------      
-        Private Function DoSaveInfo() As String
+        Private Function DoSaveComponentList() As String
 
 
             Try
 
 
-                'Dim servResult As String = _
-                '    Me._service.ServSaveInfo( _
-                '        Me._manifest.SVLM_CREATING_ROOT_WARE_ID, _
-                '        Me._manifest.SVFT_BINDING_LIST)
+                Dim servResult As String = _
+                    Me._service.SaveComponentList( _
+                        Me._manifest.SV_EDITING_WARE_ID, _
+                        Me._manifest.SVFT_BINDING_COMPONENT_LIST)
 
-                'If servResult.Length > 0 Then
-                '    Return servResult
-                'End If
+                If servResult.Length > 0 Then
+                    Return servResult
+                End If
 
                 Me._manifest.ShowStatusMessage(StatusMessageIcon.Okay, MyPosXService.Decls.MSG_STATUS_0027)
             Catch ex As XL.Common.Utils.XLException
@@ -693,14 +693,14 @@ Namespace Business
         '''
         '''
         '''-------------------------------------------------------------------
-        Private Function DoBizUtld0002() As String
+        Private Function DoSaveOptionList() As String
 
 
             Try
 
 
                 'Dim servResult As String = _
-                '    Me._service.ServBizUtld0002()
+                '    Me._service.ServSaveOptionList()
 
                 'If servResult.Length > 0 Then
                 '    Return servResult        
