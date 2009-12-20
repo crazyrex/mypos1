@@ -127,7 +127,7 @@
     <value>378, 17</value>
   </metadata>
   <metadata name="ImageCollection_TreeIcon.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>743, 17</value>
+    <value>17, 56</value>
   </metadata>
   <assembly alias="DevExpress.Utils.v8.1" name="DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
   <data name="ImageCollection_TreeIcon.ImageStream" type="DevExpress.Utils.ImageCollectionStreamer, DevExpress.Utils.v8.1" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -139,7 +139,7 @@
         YW1lcgIAAAAJSW1hZ2VTaXplBERhdGEEBxNTeXN0ZW0uRHJhd2luZy5TaXplAwAAAAICAAAABfz///8T
         U3lzdGVtLkRyYXdpbmcuU2l6ZQIAAAAFd2lkdGgGaGVpZ2h0AAAICAMAAAAQAAAAEAAAAAkFAAAADwUA
         AACyBAAAAsYCAACJUE5HDQoaCgAAAA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAABc1JHQgCuzhzpAAAA
-        BGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwQAADsEBuJFr7QAAAltJREFUOE/Vk2tI02EUh0fSjYzI+lDk
+        BGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvwAADr8BOAVTJAAAAltJREFUOE/Vk2tI02EUh0fSjYzI+lDk
         NEeozdKkwLllLCtXooR9MIyCTLtBFy9lSV7CW0aIW6moK2myNDUvGCoD8ZrTAq9EJiJqTieiYkiSl3r6
         Q+DsQ2AfO/DjwMv5Pec9h/cVif6LKEo06FZ9UQbKqY1J4ZLMiRBBkQoftIpqQW95cbial141ZLs1ojlX
         UrwMVUubSZfpUXsUoJEV8kxWRI6ikvPiUwRLD3HbXUGQq4RMXw86/ecwBwKtgophGbK40MN8KoQ7x5Hh
@@ -151,7 +151,7 @@
         g1glspizq6KQPxcxPtrA5JdWzAPN5A2Hk/PtDhM8oWrpLrIQGzztNhCmdFy5/T8f6K2YQPy61jE4bKCv
         o4a07iCUD7fhErCFvbY7uKg6+HfzSlRy5j19Rtl9bOUrZlz1Z/jHwl/1p4YzNXQvBAAAAABJRU5ErkJg
         guQBAACJUE5HDQoaCgAAAA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAABc1JHQgCuzhzpAAAABGdBTUEA
-        ALGPC/xhBQAAAAlwSFlzAAAOwQAADsEBuJFr7QAAAXlJREFUOE+1kk0ow3EYx5eLi2InOWBtRpGXNoUN
+        ALGPC/xhBQAAAAlwSFlzAAAOvwAADr8BOAVTJAAAAXlJREFUOE+1kk0ow3EYx5eLi2InOWBtRpGXNoUN
         kbwt5PVAjTngIC+lRZryEnkrTSgXDooDDqSddvDSchA2kZdwIO3gX+Ygonz8W00pmr/yq6d+h9/zeb7f
         7++Ryf7tZNpQN9wRbDxE+gz9OhmWJxLbBJLNL9IBFVbI6X0nqf0enQXpgJIxyLa8ktHzTMHwHwAy1TJp
         Zg/6rgey+/8CEFML0jWR0HxLwaAEwLF9IVaYKXX5Ug/Jm6ZoWPhdBoyEQp9Yc/GwlvvZpKh1Ujx65x/C

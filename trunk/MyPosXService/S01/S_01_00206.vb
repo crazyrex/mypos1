@@ -230,60 +230,49 @@ Public Class S_01_00206
     'End Function
 
 
-    Public Function ServAddWare( _
-        ByVal rootWareID As String, _
+    Public Function ServAddOptions( _
+        ByVal valComponentID As String, _
         ByVal valAddingWareIDString As String, _
-        ByRef refBindingList As MyPosXAuto.FTs.FT_S_MP_BOM_COMP_WARE_OPT _
+        ByRef refBindingList As MyPosXAuto.FTs.FT_XV_S_MP_BOM_COMP_WARE_OPT _
         ) As String
 
         If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTE_AUTH_DENIED
 
         Try
 
-            'Dim bomCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_S_MP_WARE_BOM(XL.DB.Utils.Condition.LogicOperators.Logic_And)
-            'Dim bomRow As MyPosXAuto.FTs.FT_XV_S_MP_WARE_BOMRow
-            'Dim wareRow As MyPosXAuto.FTs.FT_M_MP_WARERow
-            'Dim rootWareUpperWareIDs As New List(Of String)
+            Dim optionRow As MyPosXAuto.FTs.FT_XV_S_MP_BOM_COMP_WARE_OPTRow
+            Dim componentRow = MyPosXAuto.Facade.AfBizConfig.GetS_MP_BOM_COMPONENTRow(valComponentID)
 
+            Dim existingWareIDs As New List(Of String)
+            For Each optionRow In refBindingList
+                existingWareIDs.Add(optionRow.WARE_ID)
+            Next
 
-            'bomCondition.Add(MyPosXAuto.Facade.AfXV.XV_S_MP_WARE_BOMColumns.BELONG_WARE__WARE_IDColumn, "=", rootWareID)
-            'bomRow = MyPosXAuto.Facade.AfXV.GetXV_S_MP_WARE_BOMRow(bomCondition)
-            'Do While IsNothing(bomRow) = False AndAlso bomRow.OWNING_WARE__WARE_ID.Length > 0
-            '    bomCondition.Clear()
-            '    bomCondition.Add(MyPosXAuto.Facade.AfXV.XV_S_MP_WARE_BOMColumns.BELONG_WARE__WARE_IDColumn, "=", bomRow.OWNING_WARE__WARE_ID)
-            '    bomRow = MyPosXAuto.Facade.AfXV.GetXV_S_MP_WARE_BOMRow(bomCondition)
-            '    rootWareUpperWareIDs.Add(bomRow.OWNING_WARE__WARE_ID)
-            'Loop
+            Dim wareRow As MyPosXAuto.FTs.FT_M_MP_WARERow
+            Dim optionCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_S_MP_BOM_COMP_WARE_OPT(XL.DB.Utils.Condition.LogicOperators.Logic_And)
 
+            For Each addingWareID As String In CommTK.StrToAL(valAddingWareIDString)
 
-            'For Each addingWareID As String In CommTK.StrToAL(valAddingWareIDString)
-            '    bomCondition.Clear()
-            '    bomCondition.Add(MyPosXAuto.Facade.AfXV.XV_S_MP_WARE_BOMColumns.BELONG_WARE__WARE_IDColumn, "=", addingWareID)
+                If existingWareIDs.Contains(addingWareID) = True Then
+                    Continue For
+                End If
 
-            '    bomRow = refBindingList.FindRowByCondition(bomCondition)
-            '    If IsNothing(bomRow) = False Then
-            '        Continue For
-            '    End If
+                wareRow = MyPosXAuto.Facade.AfBizMaster.GetM_MP_WARERow(addingWareID)
+                If IsNothing(wareRow) = True Then
+                    Continue For
+                End If
 
-            '    wareRow = MyPosXAuto.Facade.AfBizMaster.GetM_MP_WARERow(addingWareID)
-            '    If IsNothing(wareRow) = True Then
-            '        Continue For
-            '    End If
+                optionRow = refBindingList.NewXV_S_MP_BOM_COMP_WARE_OPTRow()
+                refBindingList.AddXV_S_MP_BOM_COMP_WARE_OPTRow(optionRow)
 
-            '    If rootWareUpperWareIDs.Contains(wareRow.WARE_ID) = True Then
-            '        Continue For
-            '    End If
+                optionRow.MAX_QTY = 10
+                optionRow.MIN_QTY = 1
+                optionRow.WARE_ID = wareRow.WARE_ID
+                optionRow.WARE_CODE = wareRow.WARE_CODE
+                optionRow.WARE_NAME = wareRow.WARE_NAME
+                optionRow.ROW_HIGHLIGHT = MyPosXService.Decls.ROW_HIGHLIGHT_MODIFIED
 
-            '    bomRow = refBindingList.NewXV_S_MP_WARE_BOMRow()
-            '    refBindingList.AddXV_S_MP_WARE_BOMRow(bomRow)
-            '    bomRow.BELONG_QTY = 1
-            '    bomRow.BELONG_WARE__WARE_ID = wareRow.WARE_ID
-            '    bomRow.BELONG_WARE__WARE_CODE = wareRow.WARE_CODE
-            '    bomRow.BELONG_WARE__WARE_NAME = wareRow.WARE_NAME
-            '    bomRow.WARE_BOM_TYPE = MyPosXService.Decls.DEFAULT_CI_VALUE_WARE_BOM_TYPE_NONE
-            '    bomRow.ROW_HIGHLIGHT = MyPosXService.Decls.ROW_HIGHLIGHT_MODIFIED
-
-            'Next
+            Next
 
         Catch ex As XL.Common.Utils.XLException
 
@@ -311,8 +300,8 @@ Public Class S_01_00206
     End Function
 
 
-    Public Function SaveComponentList( _
-        ByVal rootWareID As String, _
+    Public Function ServSaveComponentList( _
+        ByVal valComposingWareID As String, _
         ByRef refBindingList As MyPosXAuto.FTs.FT_S_MP_BOM_COMPONENT _
         ) As String
 
@@ -324,12 +313,17 @@ Public Class S_01_00206
             Dim dbComponentList As New MyPosXAuto.FTs.FT_S_MP_BOM_COMPONENT
             Dim dbComponentRow As MyPosXAuto.FTs.FT_S_MP_BOM_COMPONENTRow
             Dim dbComponentCondition As New MyPosXAuto.Facade.AfBizConfig.ConditionOfS_MP_BOM_COMPONENT(XL.DB.Utils.Condition.LogicOperators.Logic_And)
-            dbComponentCondition.Add(MyPosXAuto.Facade.AfBizConfig.S_MP_BOM_COMPONENTColumns.COMPOSING_WAREColumn, "=", rootWareID)
+            dbComponentCondition.Add(MyPosXAuto.Facade.AfBizConfig.S_MP_BOM_COMPONENTColumns.COMPOSING_WAREColumn, "=", valComposingWareID)
             MyPosXAuto.Facade.AfBizConfig.FillFT_S_MP_BOM_COMPONENT(dbComponentCondition, dbComponentList)
 
             Dim involvedComponentIDs As New ArrayList
 
             For Each bindingRow As MyPosXAuto.FTs.FT_S_MP_BOM_COMPONENTRow In refBindingList
+
+                If bindingRow.COMPONENT_ID = valComposingWareID Then
+                    Continue For
+                End If
+
                 involvedComponentIDs.Add(bindingRow.COMPONENT_ID)
                 dbComponentCondition.Clear()
                 dbComponentCondition.Add(MyPosXAuto.Facade.AfBizConfig.S_MP_BOM_COMPONENTColumns.COMPONENT_IDColumn, "=", bindingRow.COMPONENT_ID)
@@ -376,16 +370,43 @@ Public Class S_01_00206
     End Function
 
 
-    Public Function ServBizUtld0004( _
-        ByVal valParaUtld As String, _
-        ByRef refParaUtld As String _
+    Public Function ServSaveOptionList( _
+        ByVal valComponentID As String, _
+        ByRef refOptionList As MyPosXAuto.FTs.FT_XV_S_MP_BOM_COMP_WARE_OPT _
         ) As String
 
         If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTE_AUTH_DENIED
 
         Try
+            Dim optionCondition As New MyPosXAuto.Facade.AfBizConfig.ConditionOfS_MP_BOM_COMP_WARE_OPT(XL.DB.Utils.Condition.LogicOperators.Logic_And)
+            optionCondition.Add(MyPosXAuto.Facade.AfBizConfig.S_MP_BOM_COMP_WARE_OPTColumns.COMPONENT_IDColumn, "=", valComponentID)
 
+            Dim dbOptionList As New MyPosXAuto.FTs.FT_S_MP_BOM_COMP_WARE_OPT
+            Dim dbOptionRow As MyPosXAuto.FTs.FT_S_MP_BOM_COMP_WARE_OPTRow
+            MyPosXAuto.Facade.AfBizConfig.FillFT_S_MP_BOM_COMP_WARE_OPT(optionCondition, dbOptionList)
 
+            Dim involvedOptionIDs As New ArrayList
+            For Each optionRow As MyPosXAuto.FTs.FT_XV_S_MP_BOM_COMP_WARE_OPTRow In refOptionList
+
+                involvedOptionIDs.Add(optionRow.OPTION_ID)
+                optionCondition.Clear()
+                optionCondition.Add(MyPosXAuto.Facade.AfBizConfig.S_MP_BOM_COMP_WARE_OPTColumns.OPTION_IDColumn, "=", optionRow.OPTION_ID)
+
+                dbOptionRow = dbOptionList.FindRowByCondition(optionCondition)
+
+                If IsNothing(dbOptionRow) = True Then
+                    dbOptionRow = dbOptionList.NewS_MP_BOM_COMP_WARE_OPTRow
+                    dbOptionList.AddS_MP_BOM_COMP_WARE_OPTRow(dbOptionRow)
+                End If
+
+                dbOptionRow.CloneDataRow(optionRow)
+                dbOptionRow.COMPONENT_ID = valComponentID
+            Next
+
+            optionCondition.Clear()
+            optionCondition.Add(MyPosXAuto.Facade.AfBizConfig.S_MP_BOM_COMP_WARE_OPTColumns.OPTION_IDColumn, False, involvedOptionIDs)
+            dbOptionList.RemoveFT_S_MP_BOM_COMP_WARE_OPTRows(optionCondition)
+            MyPosXAuto.Facade.AfBizConfig.SaveBatchS_MP_BOM_COMP_WARE_OPTData(dbOptionList)
 
         Catch ex As XL.Common.Utils.XLException
 

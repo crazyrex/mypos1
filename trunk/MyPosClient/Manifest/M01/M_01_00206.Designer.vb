@@ -71,7 +71,7 @@ Namespace Manifest
             Me.TextEdit_Search = New DevExpress.XtraEditors.TextEdit
             Me.Label1 = New System.Windows.Forms.Label
             Me.TreeListColumn_RowHighLight = New DevExpress.XtraTreeList.Columns.TreeListColumn
-            Me.TreeList_WareBomList = New DevExpress.XtraTreeList.TreeList
+            Me.TreeList_OverviewList = New DevExpress.XtraTreeList.TreeList
             Me.TreeListColumn_BelongWareCode = New DevExpress.XtraTreeList.Columns.TreeListColumn
             Me.TreeListColumn_BelongWareName = New DevExpress.XtraTreeList.Columns.TreeListColumn
             Me.TreeListColumn_BelongQty = New DevExpress.XtraTreeList.Columns.TreeListColumn
@@ -125,12 +125,16 @@ Namespace Manifest
             Me.ToolStripButton_RemoveOptions = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_RefreshOptions = New System.Windows.Forms.ToolStripButton
             Me.XtraTabPage2 = New DevExpress.XtraTab.XtraTabPage
+            Me.GridColumn_MinQty = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn_MaxQty = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.RepositoryItemCalcEdit_MinQty = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
+            Me.RepositoryItemCalcEdit_MaxQty = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
             Me.ToolStrip_Form.SuspendLayout()
             CType(Me.PanelControl_Filter, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.PanelControl_Filter.SuspendLayout()
             CType(Me.ButtonEdit_WareCode.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.TextEdit_Search.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.TreeList_WareBomList, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.TreeList_OverviewList, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemCalcEdit_BelongQty, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemLookUpEdit_WareBomType, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.XtraTabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -157,6 +161,8 @@ Namespace Manifest
             CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.ToolStrip1.SuspendLayout()
             Me.XtraTabPage2.SuspendLayout()
+            CType(Me.RepositoryItemCalcEdit_MinQty, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.RepositoryItemCalcEdit_MaxQty, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'DefaultLookAndFeel_Form
@@ -288,9 +294,9 @@ Namespace Manifest
             '
             Me.Label_CustomCode.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
             Me.Label_CustomCode.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.Label_CustomCode.Location = New System.Drawing.Point(203, 18)
+            Me.Label_CustomCode.Location = New System.Drawing.Point(188, 16)
             Me.Label_CustomCode.Name = "Label_CustomCode"
-            Me.Label_CustomCode.Size = New System.Drawing.Size(137, 18)
+            Me.Label_CustomCode.Size = New System.Drawing.Size(152, 21)
             Me.Label_CustomCode.TabIndex = 10003
             CTag3.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag3.CalculatorRequired = True
@@ -319,7 +325,7 @@ Namespace Manifest
             '
             'ButtonEdit_WareCode
             '
-            Me.ButtonEdit_WareCode.Location = New System.Drawing.Point(81, 16)
+            Me.ButtonEdit_WareCode.Location = New System.Drawing.Point(66, 16)
             Me.ButtonEdit_WareCode.Name = "ButtonEdit_WareCode"
             Me.ButtonEdit_WareCode.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
             Me.ButtonEdit_WareCode.Size = New System.Drawing.Size(116, 21)
@@ -458,10 +464,10 @@ Namespace Manifest
             Me.TreeListColumn_RowHighLight.FieldName = "DSR_FT_ROW_HIGHLIGHT"
             Me.TreeListColumn_RowHighLight.Name = "TreeListColumn_RowHighLight"
             '
-            'TreeList_WareBomList
+            'TreeList_OverviewList
             '
-            Me.TreeList_WareBomList.Columns.AddRange(New DevExpress.XtraTreeList.Columns.TreeListColumn() {Me.TreeListColumn_BelongWareCode, Me.TreeListColumn_BelongWareName, Me.TreeListColumn_BelongQty, Me.TreeListColumn_WareBomType, Me.TreeListColumn_RowHighLight})
-            Me.TreeList_WareBomList.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.TreeList_OverviewList.Columns.AddRange(New DevExpress.XtraTreeList.Columns.TreeListColumn() {Me.TreeListColumn_BelongWareCode, Me.TreeListColumn_BelongWareName, Me.TreeListColumn_BelongQty, Me.TreeListColumn_WareBomType, Me.TreeListColumn_RowHighLight})
+            Me.TreeList_OverviewList.Dock = System.Windows.Forms.DockStyle.Fill
             StyleFormatCondition1.Appearance.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
             StyleFormatCondition1.Appearance.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold)
             StyleFormatCondition1.Appearance.Options.UseBackColor = True
@@ -478,16 +484,16 @@ Namespace Manifest
             StyleFormatCondition2.Column = Me.TreeListColumn_RowHighLight
             StyleFormatCondition2.Condition = DevExpress.XtraGrid.FormatConditionEnum.Equal
             StyleFormatCondition2.Value1 = "ROW_HIGHLIGHT_MODIFIED"
-            Me.TreeList_WareBomList.FormatConditions.AddRange(New DevExpress.XtraTreeList.StyleFormatConditions.StyleFormatCondition() {StyleFormatCondition1, StyleFormatCondition2})
-            Me.TreeList_WareBomList.KeyFieldName = "BELONG_WARE__WARE_ID"
-            Me.TreeList_WareBomList.Location = New System.Drawing.Point(0, 0)
-            Me.TreeList_WareBomList.Name = "TreeList_WareBomList"
-            Me.TreeList_WareBomList.OptionsView.AutoWidth = False
-            Me.TreeList_WareBomList.ParentFieldName = "OWNING_WARE__WARE_ID"
-            Me.TreeList_WareBomList.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemLookUpEdit_WareBomType, Me.RepositoryItemCalcEdit_BelongQty})
-            Me.TreeList_WareBomList.Size = New System.Drawing.Size(740, 424)
-            Me.TreeList_WareBomList.TabIndex = 10002
-            Me.TreeList_WareBomList.TabStop = False
+            Me.TreeList_OverviewList.FormatConditions.AddRange(New DevExpress.XtraTreeList.StyleFormatConditions.StyleFormatCondition() {StyleFormatCondition1, StyleFormatCondition2})
+            Me.TreeList_OverviewList.KeyFieldName = "BELONG_WARE__WARE_ID"
+            Me.TreeList_OverviewList.Location = New System.Drawing.Point(0, 0)
+            Me.TreeList_OverviewList.Name = "TreeList_OverviewList"
+            Me.TreeList_OverviewList.OptionsView.AutoWidth = False
+            Me.TreeList_OverviewList.ParentFieldName = "OWNING_WARE__WARE_ID"
+            Me.TreeList_OverviewList.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemLookUpEdit_WareBomType, Me.RepositoryItemCalcEdit_BelongQty})
+            Me.TreeList_OverviewList.Size = New System.Drawing.Size(740, 424)
+            Me.TreeList_OverviewList.TabIndex = 10002
+            Me.TreeList_OverviewList.TabStop = False
             CTag9.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag9.CalculatorRequired = True
             CTag9.ComboValueTextBox = Nothing
@@ -506,12 +512,12 @@ Namespace Manifest
             CTag9.KeyValueAbsentable = False
             CTag9.LeagleText = ""
             CTag9.NumericButtonTextBox = Nothing
-            CTag9.ParentControl = Me.TreeList_WareBomList
+            CTag9.ParentControl = Me.TreeList_OverviewList
             CTag9.SkipValidate = False
             CTag9.TimeButtonTextBox = Nothing
             CTag9.ToolTip = ""
             CTag9.ValueType = XL.Common.ControlValueType.Character
-            Me.TreeList_WareBomList.Tag = CTag9
+            Me.TreeList_OverviewList.Tag = CTag9
             '
             'TreeListColumn_BelongWareCode
             '
@@ -851,7 +857,7 @@ Namespace Manifest
             Me.GridControl_Ware.Location = New System.Drawing.Point(2, 96)
             Me.GridControl_Ware.MainView = Me.GridView_Ware
             Me.GridControl_Ware.Name = "GridControl_Ware"
-            Me.GridControl_Ware.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemCheckEdit_Select, Me.RepositoryItemLookUpEdit_SupplierID, Me.RepositoryItemCalcEdit_UnitPrice, Me.RepositoryItemCalcEdit_UnitCost})
+            Me.GridControl_Ware.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemCheckEdit_Select, Me.RepositoryItemLookUpEdit_SupplierID, Me.RepositoryItemCalcEdit_UnitPrice, Me.RepositoryItemCalcEdit_UnitCost, Me.RepositoryItemCalcEdit_MinQty, Me.RepositoryItemCalcEdit_MaxQty})
             Me.GridControl_Ware.Size = New System.Drawing.Size(506, 322)
             Me.GridControl_Ware.TabIndex = 10004
             Me.GridControl_Ware.TabStop = False
@@ -859,7 +865,7 @@ Namespace Manifest
             '
             'GridView_Ware
             '
-            Me.GridView_Ware.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn_RowSelect, Me.GridColumn_WareCode, Me.GridColumn_CustomCode, Me.GridColumn_WareName, Me.GridColumn_Spec, Me.GridColumn_Model, Me.GridColumn_Attribute1, Me.GridColumn_Attribute2, Me.GridColumn_Attribute3, Me.GridColumn_Attribute4, Me.GridColumn_UnitName, Me.GridColumn_UnitPrice, Me.GridColumn_Unitcost, Me.GridColumn_SupplierID, Me.GridColumn_Remarks, Me.GridColumn_RowHighlight})
+            Me.GridView_Ware.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn_RowSelect, Me.GridColumn_WareCode, Me.GridColumn_CustomCode, Me.GridColumn_MaxQty, Me.GridColumn_MinQty, Me.GridColumn_WareName, Me.GridColumn_Spec, Me.GridColumn_Model, Me.GridColumn_Attribute1, Me.GridColumn_Attribute2, Me.GridColumn_Attribute3, Me.GridColumn_Attribute4, Me.GridColumn_UnitName, Me.GridColumn_UnitPrice, Me.GridColumn_Unitcost, Me.GridColumn_SupplierID, Me.GridColumn_Remarks, Me.GridColumn_RowHighlight})
             StyleFormatCondition3.Appearance.BackColor = System.Drawing.Color.Lime
             StyleFormatCondition3.Appearance.BackColor2 = System.Drawing.Color.White
             StyleFormatCondition3.Appearance.Options.UseBackColor = True
@@ -914,7 +920,7 @@ Namespace Manifest
             Me.GridColumn_WareName.Name = "GridColumn_WareName"
             Me.GridColumn_WareName.OptionsColumn.AllowFocus = False
             Me.GridColumn_WareName.Visible = True
-            Me.GridColumn_WareName.VisibleIndex = 3
+            Me.GridColumn_WareName.VisibleIndex = 5
             '
             'GridColumn_Spec
             '
@@ -923,7 +929,7 @@ Namespace Manifest
             Me.GridColumn_Spec.Name = "GridColumn_Spec"
             Me.GridColumn_Spec.OptionsColumn.AllowFocus = False
             Me.GridColumn_Spec.Visible = True
-            Me.GridColumn_Spec.VisibleIndex = 4
+            Me.GridColumn_Spec.VisibleIndex = 6
             '
             'GridColumn_Model
             '
@@ -932,7 +938,7 @@ Namespace Manifest
             Me.GridColumn_Model.Name = "GridColumn_Model"
             Me.GridColumn_Model.OptionsColumn.AllowFocus = False
             Me.GridColumn_Model.Visible = True
-            Me.GridColumn_Model.VisibleIndex = 5
+            Me.GridColumn_Model.VisibleIndex = 7
             '
             'GridColumn_Attribute1
             '
@@ -941,7 +947,7 @@ Namespace Manifest
             Me.GridColumn_Attribute1.Name = "GridColumn_Attribute1"
             Me.GridColumn_Attribute1.OptionsColumn.AllowFocus = False
             Me.GridColumn_Attribute1.Visible = True
-            Me.GridColumn_Attribute1.VisibleIndex = 6
+            Me.GridColumn_Attribute1.VisibleIndex = 8
             '
             'GridColumn_Attribute2
             '
@@ -950,7 +956,7 @@ Namespace Manifest
             Me.GridColumn_Attribute2.Name = "GridColumn_Attribute2"
             Me.GridColumn_Attribute2.OptionsColumn.AllowFocus = False
             Me.GridColumn_Attribute2.Visible = True
-            Me.GridColumn_Attribute2.VisibleIndex = 7
+            Me.GridColumn_Attribute2.VisibleIndex = 9
             '
             'GridColumn_Attribute3
             '
@@ -959,7 +965,7 @@ Namespace Manifest
             Me.GridColumn_Attribute3.Name = "GridColumn_Attribute3"
             Me.GridColumn_Attribute3.OptionsColumn.AllowFocus = False
             Me.GridColumn_Attribute3.Visible = True
-            Me.GridColumn_Attribute3.VisibleIndex = 8
+            Me.GridColumn_Attribute3.VisibleIndex = 10
             '
             'GridColumn_Attribute4
             '
@@ -968,7 +974,7 @@ Namespace Manifest
             Me.GridColumn_Attribute4.Name = "GridColumn_Attribute4"
             Me.GridColumn_Attribute4.OptionsColumn.AllowFocus = False
             Me.GridColumn_Attribute4.Visible = True
-            Me.GridColumn_Attribute4.VisibleIndex = 9
+            Me.GridColumn_Attribute4.VisibleIndex = 11
             '
             'GridColumn_UnitName
             '
@@ -977,7 +983,7 @@ Namespace Manifest
             Me.GridColumn_UnitName.Name = "GridColumn_UnitName"
             Me.GridColumn_UnitName.OptionsColumn.AllowFocus = False
             Me.GridColumn_UnitName.Visible = True
-            Me.GridColumn_UnitName.VisibleIndex = 10
+            Me.GridColumn_UnitName.VisibleIndex = 12
             '
             'GridColumn_UnitPrice
             '
@@ -989,7 +995,7 @@ Namespace Manifest
             Me.GridColumn_UnitPrice.Name = "GridColumn_UnitPrice"
             Me.GridColumn_UnitPrice.OptionsColumn.AllowFocus = False
             Me.GridColumn_UnitPrice.Visible = True
-            Me.GridColumn_UnitPrice.VisibleIndex = 11
+            Me.GridColumn_UnitPrice.VisibleIndex = 13
             '
             'RepositoryItemCalcEdit_UnitPrice
             '
@@ -1007,7 +1013,7 @@ Namespace Manifest
             Me.GridColumn_Unitcost.Name = "GridColumn_Unitcost"
             Me.GridColumn_Unitcost.OptionsColumn.AllowFocus = False
             Me.GridColumn_Unitcost.Visible = True
-            Me.GridColumn_Unitcost.VisibleIndex = 12
+            Me.GridColumn_Unitcost.VisibleIndex = 14
             '
             'RepositoryItemCalcEdit_UnitCost
             '
@@ -1023,7 +1029,7 @@ Namespace Manifest
             Me.GridColumn_SupplierID.Name = "GridColumn_SupplierID"
             Me.GridColumn_SupplierID.OptionsColumn.AllowFocus = False
             Me.GridColumn_SupplierID.Visible = True
-            Me.GridColumn_SupplierID.VisibleIndex = 13
+            Me.GridColumn_SupplierID.VisibleIndex = 15
             '
             'RepositoryItemLookUpEdit_SupplierID
             '
@@ -1042,7 +1048,7 @@ Namespace Manifest
             Me.GridColumn_Remarks.Name = "GridColumn_Remarks"
             Me.GridColumn_Remarks.OptionsColumn.AllowFocus = False
             Me.GridColumn_Remarks.Visible = True
-            Me.GridColumn_Remarks.VisibleIndex = 14
+            Me.GridColumn_Remarks.VisibleIndex = 16
             '
             'GridColumn_RowHighlight
             '
@@ -1144,7 +1150,7 @@ Namespace Manifest
             '
             'XtraTabPage2
             '
-            Me.XtraTabPage2.Controls.Add(Me.TreeList_WareBomList)
+            Me.XtraTabPage2.Controls.Add(Me.TreeList_OverviewList)
             Me.XtraTabPage2.Name = "XtraTabPage2"
             Me.XtraTabPage2.Size = New System.Drawing.Size(740, 424)
             CTag16.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
@@ -1172,6 +1178,36 @@ Namespace Manifest
             CTag16.ValueType = XL.Common.ControlValueType.Character
             Me.XtraTabPage2.Tag = CTag16
             Me.XtraTabPage2.Text = "组织结构"
+            '
+            'GridColumn_MinQty
+            '
+            Me.GridColumn_MinQty.Caption = "最小数量"
+            Me.GridColumn_MinQty.ColumnEdit = Me.RepositoryItemCalcEdit_MinQty
+            Me.GridColumn_MinQty.FieldName = "MIN_QTY"
+            Me.GridColumn_MinQty.Name = "GridColumn_MinQty"
+            Me.GridColumn_MinQty.Visible = True
+            Me.GridColumn_MinQty.VisibleIndex = 4
+            '
+            'GridColumn_MaxQty
+            '
+            Me.GridColumn_MaxQty.Caption = "最大数量"
+            Me.GridColumn_MaxQty.ColumnEdit = Me.RepositoryItemCalcEdit_MaxQty
+            Me.GridColumn_MaxQty.FieldName = "MAX_QTY"
+            Me.GridColumn_MaxQty.Name = "GridColumn_MaxQty"
+            Me.GridColumn_MaxQty.Visible = True
+            Me.GridColumn_MaxQty.VisibleIndex = 3
+            '
+            'RepositoryItemCalcEdit_MinQty
+            '
+            Me.RepositoryItemCalcEdit_MinQty.AutoHeight = False
+            Me.RepositoryItemCalcEdit_MinQty.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+            Me.RepositoryItemCalcEdit_MinQty.Name = "RepositoryItemCalcEdit_MinQty"
+            '
+            'RepositoryItemCalcEdit_MaxQty
+            '
+            Me.RepositoryItemCalcEdit_MaxQty.AutoHeight = False
+            Me.RepositoryItemCalcEdit_MaxQty.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+            Me.RepositoryItemCalcEdit_MaxQty.Name = "RepositoryItemCalcEdit_MaxQty"
             '
             'M_01_00206
             '
@@ -1216,7 +1252,7 @@ Namespace Manifest
             Me.PanelControl_Filter.PerformLayout()
             CType(Me.ButtonEdit_WareCode.Properties, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.TextEdit_Search.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.TreeList_WareBomList, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.TreeList_OverviewList, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemCalcEdit_BelongQty, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemLookUpEdit_WareBomType, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.XtraTabControl1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1247,6 +1283,8 @@ Namespace Manifest
             Me.ToolStrip1.ResumeLayout(False)
             Me.ToolStrip1.PerformLayout()
             Me.XtraTabPage2.ResumeLayout(False)
+            CType(Me.RepositoryItemCalcEdit_MinQty, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.RepositoryItemCalcEdit_MaxQty, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -1254,7 +1292,7 @@ Namespace Manifest
         Friend WithEvents PanelControl_Filter As DevExpress.XtraEditors.PanelControl
         Friend WithEvents TextEdit_Search As DevExpress.XtraEditors.TextEdit
         Friend WithEvents Label1 As System.Windows.Forms.Label
-        Friend WithEvents TreeList_WareBomList As DevExpress.XtraTreeList.TreeList
+        Friend WithEvents TreeList_OverviewList As DevExpress.XtraTreeList.TreeList
         Friend WithEvents TreeListColumn_BelongQty As DevExpress.XtraTreeList.Columns.TreeListColumn
         Friend WithEvents TreeListColumn_WareBomType As DevExpress.XtraTreeList.Columns.TreeListColumn
         Friend WithEvents TreeListColumn_BelongWareName As DevExpress.XtraTreeList.Columns.TreeListColumn
@@ -1313,6 +1351,10 @@ Namespace Manifest
         Friend WithEvents TreeListColumn_TreeIcon As DevExpress.XtraTreeList.Columns.TreeListColumn
         Friend WithEvents RepositoryItemImageComboBox_TreeIcon As DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox
         Friend WithEvents ImageCollection_TreeIcon As DevExpress.Utils.ImageCollection
+        Friend WithEvents GridColumn_MaxQty As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridColumn_MinQty As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents RepositoryItemCalcEdit_MinQty As DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
+        Friend WithEvents RepositoryItemCalcEdit_MaxQty As DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
 
 #End Region
 
