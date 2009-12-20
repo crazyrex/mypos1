@@ -102,6 +102,10 @@ Namespace Manifest
             Me.RepositoryItemCheckEdit_Select = New DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
             Me.GridColumn_WareCode = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_CustomCode = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn_MaxQty = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.RepositoryItemCalcEdit_MaxQty = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
+            Me.GridColumn_MinQty = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.RepositoryItemCalcEdit_MinQty = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
             Me.GridColumn_WareName = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_Spec = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_Model = New DevExpress.XtraGrid.Columns.GridColumn
@@ -125,10 +129,6 @@ Namespace Manifest
             Me.ToolStripButton_RemoveOptions = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_RefreshOptions = New System.Windows.Forms.ToolStripButton
             Me.XtraTabPage2 = New DevExpress.XtraTab.XtraTabPage
-            Me.GridColumn_MinQty = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn_MaxQty = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.RepositoryItemCalcEdit_MinQty = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
-            Me.RepositoryItemCalcEdit_MaxQty = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
             Me.ToolStrip_Form.SuspendLayout()
             CType(Me.PanelControl_Filter, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.PanelControl_Filter.SuspendLayout()
@@ -155,14 +155,14 @@ Namespace Manifest
             CType(Me.GridControl_Ware, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.GridView_Ware, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemCheckEdit_Select, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.RepositoryItemCalcEdit_MaxQty, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.RepositoryItemCalcEdit_MinQty, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemCalcEdit_UnitPrice, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemCalcEdit_UnitCost, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemLookUpEdit_SupplierID, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.ToolStrip1.SuspendLayout()
             Me.XtraTabPage2.SuspendLayout()
-            CType(Me.RepositoryItemCalcEdit_MinQty, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.RepositoryItemCalcEdit_MaxQty, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'DefaultLookAndFeel_Form
@@ -759,7 +759,7 @@ Namespace Manifest
             '
             'ToolStrip2
             '
-            Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton_SaveComponents, Me.ToolStripButton_AddComponent, Me.ToolStripButton_RemoveComponent, Me.ToolStripButton_RefreshComponents})
+            Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton_AddComponent, Me.ToolStripButton_RemoveComponent, Me.ToolStripButton_RefreshComponents, Me.ToolStripButton_SaveComponents})
             Me.ToolStrip2.Location = New System.Drawing.Point(2, 21)
             Me.ToolStrip2.Name = "ToolStrip2"
             Me.ToolStrip2.Size = New System.Drawing.Size(212, 25)
@@ -912,6 +912,36 @@ Namespace Manifest
             Me.GridColumn_CustomCode.OptionsColumn.AllowFocus = False
             Me.GridColumn_CustomCode.Visible = True
             Me.GridColumn_CustomCode.VisibleIndex = 2
+            '
+            'GridColumn_MaxQty
+            '
+            Me.GridColumn_MaxQty.Caption = "最大数量"
+            Me.GridColumn_MaxQty.ColumnEdit = Me.RepositoryItemCalcEdit_MaxQty
+            Me.GridColumn_MaxQty.FieldName = "MAX_QTY"
+            Me.GridColumn_MaxQty.Name = "GridColumn_MaxQty"
+            Me.GridColumn_MaxQty.Visible = True
+            Me.GridColumn_MaxQty.VisibleIndex = 3
+            '
+            'RepositoryItemCalcEdit_MaxQty
+            '
+            Me.RepositoryItemCalcEdit_MaxQty.AutoHeight = False
+            Me.RepositoryItemCalcEdit_MaxQty.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+            Me.RepositoryItemCalcEdit_MaxQty.Name = "RepositoryItemCalcEdit_MaxQty"
+            '
+            'GridColumn_MinQty
+            '
+            Me.GridColumn_MinQty.Caption = "最小数量"
+            Me.GridColumn_MinQty.ColumnEdit = Me.RepositoryItemCalcEdit_MinQty
+            Me.GridColumn_MinQty.FieldName = "MIN_QTY"
+            Me.GridColumn_MinQty.Name = "GridColumn_MinQty"
+            Me.GridColumn_MinQty.Visible = True
+            Me.GridColumn_MinQty.VisibleIndex = 4
+            '
+            'RepositoryItemCalcEdit_MinQty
+            '
+            Me.RepositoryItemCalcEdit_MinQty.AutoHeight = False
+            Me.RepositoryItemCalcEdit_MinQty.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+            Me.RepositoryItemCalcEdit_MinQty.Name = "RepositoryItemCalcEdit_MinQty"
             '
             'GridColumn_WareName
             '
@@ -1179,36 +1209,6 @@ Namespace Manifest
             Me.XtraTabPage2.Tag = CTag16
             Me.XtraTabPage2.Text = "组织结构"
             '
-            'GridColumn_MinQty
-            '
-            Me.GridColumn_MinQty.Caption = "最小数量"
-            Me.GridColumn_MinQty.ColumnEdit = Me.RepositoryItemCalcEdit_MinQty
-            Me.GridColumn_MinQty.FieldName = "MIN_QTY"
-            Me.GridColumn_MinQty.Name = "GridColumn_MinQty"
-            Me.GridColumn_MinQty.Visible = True
-            Me.GridColumn_MinQty.VisibleIndex = 4
-            '
-            'GridColumn_MaxQty
-            '
-            Me.GridColumn_MaxQty.Caption = "最大数量"
-            Me.GridColumn_MaxQty.ColumnEdit = Me.RepositoryItemCalcEdit_MaxQty
-            Me.GridColumn_MaxQty.FieldName = "MAX_QTY"
-            Me.GridColumn_MaxQty.Name = "GridColumn_MaxQty"
-            Me.GridColumn_MaxQty.Visible = True
-            Me.GridColumn_MaxQty.VisibleIndex = 3
-            '
-            'RepositoryItemCalcEdit_MinQty
-            '
-            Me.RepositoryItemCalcEdit_MinQty.AutoHeight = False
-            Me.RepositoryItemCalcEdit_MinQty.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-            Me.RepositoryItemCalcEdit_MinQty.Name = "RepositoryItemCalcEdit_MinQty"
-            '
-            'RepositoryItemCalcEdit_MaxQty
-            '
-            Me.RepositoryItemCalcEdit_MaxQty.AutoHeight = False
-            Me.RepositoryItemCalcEdit_MaxQty.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-            Me.RepositoryItemCalcEdit_MaxQty.Name = "RepositoryItemCalcEdit_MaxQty"
-            '
             'M_01_00206
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -1276,6 +1276,8 @@ Namespace Manifest
             CType(Me.GridControl_Ware, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.GridView_Ware, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemCheckEdit_Select, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.RepositoryItemCalcEdit_MaxQty, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.RepositoryItemCalcEdit_MinQty, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemCalcEdit_UnitPrice, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemCalcEdit_UnitCost, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemLookUpEdit_SupplierID, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1283,8 +1285,6 @@ Namespace Manifest
             Me.ToolStrip1.ResumeLayout(False)
             Me.ToolStrip1.PerformLayout()
             Me.XtraTabPage2.ResumeLayout(False)
-            CType(Me.RepositoryItemCalcEdit_MinQty, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.RepositoryItemCalcEdit_MaxQty, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 

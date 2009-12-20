@@ -929,7 +929,7 @@ Namespace Manifest
 
         Private Sub TreeList_Component_FocusedNodeChanged(ByVal sender As Object, ByVal e As DevExpress.XtraTreeList.FocusedNodeChangedEventArgs) Handles TreeList_Component.FocusedNodeChanged
             Me.DoPrivateUpdateSelectingComponentRow()
-            Me._bizAgent.DoRequest(Business.B_01_00206.Affairs.LoadInfo, True)
+            Me._bizAgent.DoRequest(Business.B_01_00206.Affairs.LoadOptionList, True)
         End Sub
 
         Private Sub GroupControl1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles GroupControl1.Paint
@@ -959,12 +959,17 @@ Namespace Manifest
         Private Sub RepositoryItemCalcEdit_MaxQty_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemCalcEdit_MaxQty.EditValueChanged
             Dim calcEdit = TryCast(sender, DevExpress.XtraEditors.CalcEdit)
             Me.SVFR_SELECTING_COMPONENT_WARE_OPT_ROW.MAX_QTY = calcEdit.Value
+            Me.IsSaved = False
+            Me.SplitContainerControl_BomSetup.Panel1.Enabled = False
+            Me.DoPrivateUpdateSelectingOptionRow()
         End Sub
 
         Private Sub RepositoryItemCalcEdit_MinQty_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemCalcEdit_MinQty.EditValueChanged
             Dim calcEdit = TryCast(sender, DevExpress.XtraEditors.CalcEdit)
             Me.SVFR_SELECTING_COMPONENT_WARE_OPT_ROW.MIN_QTY = calcEdit.Value
-
+            Me.IsSaved = False
+            Me.SplitContainerControl_BomSetup.Panel1.Enabled = False
+            Me.DoPrivateUpdateSelectingOptionRow()
         End Sub
 
         Private Sub GridView_Ware_FocusedRowChanged(ByVal sender As Object, ByVal e As DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs) Handles GridView_Ware.FocusedRowChanged
