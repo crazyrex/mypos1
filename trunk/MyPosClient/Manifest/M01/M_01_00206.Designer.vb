@@ -46,20 +46,17 @@ Namespace Manifest
             Dim CTag5 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag6 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag7 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
-            Dim StyleFormatCondition1 As DevExpress.XtraTreeList.StyleFormatConditions.StyleFormatCondition = New DevExpress.XtraTreeList.StyleFormatConditions.StyleFormatCondition
-            Dim StyleFormatCondition2 As DevExpress.XtraTreeList.StyleFormatConditions.StyleFormatCondition = New DevExpress.XtraTreeList.StyleFormatConditions.StyleFormatCondition
-            Dim CTag9 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
-            Dim CTag17 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
-            Dim CTag15 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
+            Dim CTag16 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
+            Dim CTag14 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(M_01_00206))
+            Dim CTag9 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag10 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag11 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
+            Dim StyleFormatCondition1 As DevExpress.XtraGrid.StyleFormatCondition = New DevExpress.XtraGrid.StyleFormatCondition
             Dim CTag12 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
-            Dim StyleFormatCondition3 As DevExpress.XtraGrid.StyleFormatCondition = New DevExpress.XtraGrid.StyleFormatCondition
             Dim CTag13 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
-            Dim CTag14 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
-            Dim CTag16 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
-            Dim CTag18 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
+            Dim CTag15 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
+            Dim CTag17 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Me.ToolStrip_Form = New System.Windows.Forms.ToolStrip
             Me.ToolStripButton_Refresh = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_Close = New System.Windows.Forms.ToolStripButton
@@ -70,14 +67,6 @@ Namespace Manifest
             Me.Label18 = New System.Windows.Forms.Label
             Me.TextEdit_Search = New DevExpress.XtraEditors.TextEdit
             Me.Label1 = New System.Windows.Forms.Label
-            Me.TreeListColumn_RowHighLight = New DevExpress.XtraTreeList.Columns.TreeListColumn
-            Me.TreeList_OverviewList = New DevExpress.XtraTreeList.TreeList
-            Me.TreeListColumn_BelongWareCode = New DevExpress.XtraTreeList.Columns.TreeListColumn
-            Me.TreeListColumn_BelongWareName = New DevExpress.XtraTreeList.Columns.TreeListColumn
-            Me.TreeListColumn_BelongQty = New DevExpress.XtraTreeList.Columns.TreeListColumn
-            Me.RepositoryItemCalcEdit_BelongQty = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
-            Me.TreeListColumn_WareBomType = New DevExpress.XtraTreeList.Columns.TreeListColumn
-            Me.RepositoryItemLookUpEdit_WareBomType = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
             Me.XtraTabControl1 = New DevExpress.XtraTab.XtraTabControl
             Me.XtraTabPage1 = New DevExpress.XtraTab.XtraTabPage
             Me.SplitContainerControl_BomSetup = New DevExpress.XtraEditors.SplitContainerControl
@@ -91,10 +80,10 @@ Namespace Manifest
             Me.TreeListColumn_ComponentRowHighlight = New DevExpress.XtraTreeList.Columns.TreeListColumn
             Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl
             Me.ToolStrip2 = New System.Windows.Forms.ToolStrip
-            Me.ToolStripButton_SaveComponents = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_AddComponent = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_RemoveComponent = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_RefreshComponents = New System.Windows.Forms.ToolStripButton
+            Me.ToolStripButton_SaveComponents = New System.Windows.Forms.ToolStripButton
             Me.GroupControl2 = New DevExpress.XtraEditors.GroupControl
             Me.GridControl_Ware = New DevExpress.XtraGrid.GridControl
             Me.GridView_Ware = New DevExpress.XtraGrid.Views.Grid.GridView
@@ -129,14 +118,17 @@ Namespace Manifest
             Me.ToolStripButton_RemoveOptions = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_RefreshOptions = New System.Windows.Forms.ToolStripButton
             Me.XtraTabPage2 = New DevExpress.XtraTab.XtraTabPage
+            Me.TreeList_OverViewList = New DevExpress.XtraTreeList.TreeList
+            Me.TreeListColumn1 = New DevExpress.XtraTreeList.Columns.TreeListColumn
+            Me.RepositoryItemImageComboBox1 = New DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox
+            Me.TreeListColumn2 = New DevExpress.XtraTreeList.Columns.TreeListColumn
+            Me.RepositoryItemTextEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemTextEdit
+            Me.TreeListColumn3 = New DevExpress.XtraTreeList.Columns.TreeListColumn
             Me.ToolStrip_Form.SuspendLayout()
             CType(Me.PanelControl_Filter, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.PanelControl_Filter.SuspendLayout()
             CType(Me.ButtonEdit_WareCode.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.TextEdit_Search.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.TreeList_OverviewList, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.RepositoryItemCalcEdit_BelongQty, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.RepositoryItemLookUpEdit_WareBomType, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.XtraTabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.XtraTabControl1.SuspendLayout()
             Me.XtraTabPage1.SuspendLayout()
@@ -163,6 +155,9 @@ Namespace Manifest
             CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.ToolStrip1.SuspendLayout()
             Me.XtraTabPage2.SuspendLayout()
+            CType(Me.TreeList_OverViewList, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.RepositoryItemImageComboBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.RepositoryItemTextEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'DefaultLookAndFeel_Form
@@ -209,6 +204,7 @@ Namespace Manifest
             Me.ToolStripButton_Refresh.Name = "ToolStripButton_Refresh"
             Me.ToolStripButton_Refresh.Size = New System.Drawing.Size(36, 22)
             Me.ToolStripButton_Refresh.Text = "刷新"
+            Me.ToolStripButton_Refresh.Visible = False
             '
             'ToolStripButton_Close
             '
@@ -458,123 +454,6 @@ Namespace Manifest
             Me.Label1.Tag = CTag7
             Me.Label1.Text = "搜索"
             '
-            'TreeListColumn_RowHighLight
-            '
-            Me.TreeListColumn_RowHighLight.Caption = "高亮显示"
-            Me.TreeListColumn_RowHighLight.FieldName = "DSR_FT_ROW_HIGHLIGHT"
-            Me.TreeListColumn_RowHighLight.Name = "TreeListColumn_RowHighLight"
-            '
-            'TreeList_OverviewList
-            '
-            Me.TreeList_OverviewList.Columns.AddRange(New DevExpress.XtraTreeList.Columns.TreeListColumn() {Me.TreeListColumn_BelongWareCode, Me.TreeListColumn_BelongWareName, Me.TreeListColumn_BelongQty, Me.TreeListColumn_WareBomType, Me.TreeListColumn_RowHighLight})
-            Me.TreeList_OverviewList.Dock = System.Windows.Forms.DockStyle.Fill
-            StyleFormatCondition1.Appearance.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-            StyleFormatCondition1.Appearance.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold)
-            StyleFormatCondition1.Appearance.Options.UseBackColor = True
-            StyleFormatCondition1.Appearance.Options.UseFont = True
-            StyleFormatCondition1.ApplyToRow = True
-            StyleFormatCondition1.Column = Me.TreeListColumn_RowHighLight
-            StyleFormatCondition1.Condition = DevExpress.XtraGrid.FormatConditionEnum.Equal
-            StyleFormatCondition1.Value1 = "ROW_HIGHLIGHT_BOM_ROOT"
-            StyleFormatCondition2.Appearance.BackColor = System.Drawing.Color.White
-            StyleFormatCondition2.Appearance.ForeColor = System.Drawing.Color.Red
-            StyleFormatCondition2.Appearance.Options.UseBackColor = True
-            StyleFormatCondition2.Appearance.Options.UseForeColor = True
-            StyleFormatCondition2.ApplyToRow = True
-            StyleFormatCondition2.Column = Me.TreeListColumn_RowHighLight
-            StyleFormatCondition2.Condition = DevExpress.XtraGrid.FormatConditionEnum.Equal
-            StyleFormatCondition2.Value1 = "ROW_HIGHLIGHT_MODIFIED"
-            Me.TreeList_OverviewList.FormatConditions.AddRange(New DevExpress.XtraTreeList.StyleFormatConditions.StyleFormatCondition() {StyleFormatCondition1, StyleFormatCondition2})
-            Me.TreeList_OverviewList.KeyFieldName = "BELONG_WARE__WARE_ID"
-            Me.TreeList_OverviewList.Location = New System.Drawing.Point(0, 0)
-            Me.TreeList_OverviewList.Name = "TreeList_OverviewList"
-            Me.TreeList_OverviewList.OptionsView.AutoWidth = False
-            Me.TreeList_OverviewList.ParentFieldName = "OWNING_WARE__WARE_ID"
-            Me.TreeList_OverviewList.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemLookUpEdit_WareBomType, Me.RepositoryItemCalcEdit_BelongQty})
-            Me.TreeList_OverviewList.Size = New System.Drawing.Size(740, 424)
-            Me.TreeList_OverviewList.TabIndex = 10002
-            Me.TreeList_OverviewList.TabStop = False
-            CTag9.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
-            CTag9.CalculatorRequired = True
-            CTag9.ComboValueTextBox = Nothing
-            CTag9.ControlRelatedCode = Nothing
-            CTag9.DateButtonTextBox = Nothing
-            CTag9.DateTimeButtonTextBox = Nothing
-            CTag9.DisplayLinkControl = Nothing
-            CTag9.DisplayLinkDisplayFieldName = Nothing
-            CTag9.DisplayLinkKeyFieldName = Nothing
-            CTag9.DisplayLinkTable = Nothing
-            CTag9.FlexgridEditItem = ""
-            CTag9.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
-            CTag9.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
-            CTag9.IsButtonCustomed = False
-            CTag9.IsTextValid = True
-            CTag9.KeyValueAbsentable = False
-            CTag9.LeagleText = ""
-            CTag9.NumericButtonTextBox = Nothing
-            CTag9.ParentControl = Me.TreeList_OverviewList
-            CTag9.SkipValidate = False
-            CTag9.TimeButtonTextBox = Nothing
-            CTag9.ToolTip = ""
-            CTag9.ValueType = XL.Common.ControlValueType.Character
-            Me.TreeList_OverviewList.Tag = CTag9
-            '
-            'TreeListColumn_BelongWareCode
-            '
-            Me.TreeListColumn_BelongWareCode.Caption = "货号"
-            Me.TreeListColumn_BelongWareCode.FieldName = "BELONG_WARE__WARE_CODE"
-            Me.TreeListColumn_BelongWareCode.Name = "TreeListColumn_BelongWareCode"
-            Me.TreeListColumn_BelongWareCode.OptionsColumn.AllowFocus = False
-            Me.TreeListColumn_BelongWareCode.Visible = True
-            Me.TreeListColumn_BelongWareCode.VisibleIndex = 0
-            Me.TreeListColumn_BelongWareCode.Width = 37
-            '
-            'TreeListColumn_BelongWareName
-            '
-            Me.TreeListColumn_BelongWareName.Caption = "品名"
-            Me.TreeListColumn_BelongWareName.FieldName = "BELONG_WARE__WARE_NAME"
-            Me.TreeListColumn_BelongWareName.Name = "TreeListColumn_BelongWareName"
-            Me.TreeListColumn_BelongWareName.OptionsColumn.AllowEdit = False
-            Me.TreeListColumn_BelongWareName.OptionsColumn.AllowFocus = False
-            Me.TreeListColumn_BelongWareName.Visible = True
-            Me.TreeListColumn_BelongWareName.VisibleIndex = 1
-            Me.TreeListColumn_BelongWareName.Width = 37
-            '
-            'TreeListColumn_BelongQty
-            '
-            Me.TreeListColumn_BelongQty.Caption = "组成数量"
-            Me.TreeListColumn_BelongQty.ColumnEdit = Me.RepositoryItemCalcEdit_BelongQty
-            Me.TreeListColumn_BelongQty.FieldName = "BELONG_QTY"
-            Me.TreeListColumn_BelongQty.Name = "TreeListColumn_BelongQty"
-            Me.TreeListColumn_BelongQty.Visible = True
-            Me.TreeListColumn_BelongQty.VisibleIndex = 3
-            Me.TreeListColumn_BelongQty.Width = 61
-            '
-            'RepositoryItemCalcEdit_BelongQty
-            '
-            Me.RepositoryItemCalcEdit_BelongQty.AutoHeight = False
-            Me.RepositoryItemCalcEdit_BelongQty.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-            Me.RepositoryItemCalcEdit_BelongQty.Name = "RepositoryItemCalcEdit_BelongQty"
-            '
-            'TreeListColumn_WareBomType
-            '
-            Me.TreeListColumn_WareBomType.Caption = "BOM类型"
-            Me.TreeListColumn_WareBomType.ColumnEdit = Me.RepositoryItemLookUpEdit_WareBomType
-            Me.TreeListColumn_WareBomType.FieldName = "WARE_BOM_TYPE"
-            Me.TreeListColumn_WareBomType.Name = "TreeListColumn_WareBomType"
-            Me.TreeListColumn_WareBomType.Visible = True
-            Me.TreeListColumn_WareBomType.VisibleIndex = 2
-            Me.TreeListColumn_WareBomType.Width = 62
-            '
-            'RepositoryItemLookUpEdit_WareBomType
-            '
-            Me.RepositoryItemLookUpEdit_WareBomType.AutoHeight = False
-            Me.RepositoryItemLookUpEdit_WareBomType.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-            Me.RepositoryItemLookUpEdit_WareBomType.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("ITEM_MEANING", " ", 20, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Data.ColumnSortOrder.None)})
-            Me.RepositoryItemLookUpEdit_WareBomType.DisplayMember = "ITEM_MEANING"
-            Me.RepositoryItemLookUpEdit_WareBomType.Name = "RepositoryItemLookUpEdit_WareBomType"
-            Me.RepositoryItemLookUpEdit_WareBomType.ValueMember = "ITEM_VALUE"
-            '
             'XtraTabControl1
             '
             Me.XtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -585,30 +464,30 @@ Namespace Manifest
             Me.XtraTabControl1.TabIndex = 10000
             Me.XtraTabControl1.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.XtraTabPage1, Me.XtraTabPage2})
             Me.XtraTabControl1.TabStop = False
-            CTag17.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
-            CTag17.CalculatorRequired = True
-            CTag17.ComboValueTextBox = Nothing
-            CTag17.ControlRelatedCode = Nothing
-            CTag17.DateButtonTextBox = Nothing
-            CTag17.DateTimeButtonTextBox = Nothing
-            CTag17.DisplayLinkControl = Nothing
-            CTag17.DisplayLinkDisplayFieldName = Nothing
-            CTag17.DisplayLinkKeyFieldName = Nothing
-            CTag17.DisplayLinkTable = Nothing
-            CTag17.FlexgridEditItem = ""
-            CTag17.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
-            CTag17.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
-            CTag17.IsButtonCustomed = False
-            CTag17.IsTextValid = True
-            CTag17.KeyValueAbsentable = False
-            CTag17.LeagleText = ""
-            CTag17.NumericButtonTextBox = Nothing
-            CTag17.ParentControl = Me.XtraTabControl1
-            CTag17.SkipValidate = False
-            CTag17.TimeButtonTextBox = Nothing
-            CTag17.ToolTip = ""
-            CTag17.ValueType = XL.Common.ControlValueType.Character
-            Me.XtraTabControl1.Tag = CTag17
+            CTag16.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
+            CTag16.CalculatorRequired = True
+            CTag16.ComboValueTextBox = Nothing
+            CTag16.ControlRelatedCode = Nothing
+            CTag16.DateButtonTextBox = Nothing
+            CTag16.DateTimeButtonTextBox = Nothing
+            CTag16.DisplayLinkControl = Nothing
+            CTag16.DisplayLinkDisplayFieldName = Nothing
+            CTag16.DisplayLinkKeyFieldName = Nothing
+            CTag16.DisplayLinkTable = Nothing
+            CTag16.FlexgridEditItem = ""
+            CTag16.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
+            CTag16.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
+            CTag16.IsButtonCustomed = False
+            CTag16.IsTextValid = True
+            CTag16.KeyValueAbsentable = False
+            CTag16.LeagleText = ""
+            CTag16.NumericButtonTextBox = Nothing
+            CTag16.ParentControl = Me.XtraTabControl1
+            CTag16.SkipValidate = False
+            CTag16.TimeButtonTextBox = Nothing
+            CTag16.ToolTip = ""
+            CTag16.ValueType = XL.Common.ControlValueType.Character
+            Me.XtraTabControl1.Tag = CTag16
             Me.XtraTabControl1.Text = "XtraTabControl1"
             '
             'XtraTabPage1
@@ -616,30 +495,30 @@ Namespace Manifest
             Me.XtraTabPage1.Controls.Add(Me.SplitContainerControl_BomSetup)
             Me.XtraTabPage1.Name = "XtraTabPage1"
             Me.XtraTabPage1.Size = New System.Drawing.Size(740, 424)
-            CTag15.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
-            CTag15.CalculatorRequired = True
-            CTag15.ComboValueTextBox = Nothing
-            CTag15.ControlRelatedCode = Nothing
-            CTag15.DateButtonTextBox = Nothing
-            CTag15.DateTimeButtonTextBox = Nothing
-            CTag15.DisplayLinkControl = Nothing
-            CTag15.DisplayLinkDisplayFieldName = Nothing
-            CTag15.DisplayLinkKeyFieldName = Nothing
-            CTag15.DisplayLinkTable = Nothing
-            CTag15.FlexgridEditItem = ""
-            CTag15.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
-            CTag15.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
-            CTag15.IsButtonCustomed = False
-            CTag15.IsTextValid = True
-            CTag15.KeyValueAbsentable = False
-            CTag15.LeagleText = ""
-            CTag15.NumericButtonTextBox = Nothing
-            CTag15.ParentControl = Me.XtraTabPage1
-            CTag15.SkipValidate = False
-            CTag15.TimeButtonTextBox = Nothing
-            CTag15.ToolTip = ""
-            CTag15.ValueType = XL.Common.ControlValueType.Character
-            Me.XtraTabPage1.Tag = CTag15
+            CTag14.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
+            CTag14.CalculatorRequired = True
+            CTag14.ComboValueTextBox = Nothing
+            CTag14.ControlRelatedCode = Nothing
+            CTag14.DateButtonTextBox = Nothing
+            CTag14.DateTimeButtonTextBox = Nothing
+            CTag14.DisplayLinkControl = Nothing
+            CTag14.DisplayLinkDisplayFieldName = Nothing
+            CTag14.DisplayLinkKeyFieldName = Nothing
+            CTag14.DisplayLinkTable = Nothing
+            CTag14.FlexgridEditItem = ""
+            CTag14.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
+            CTag14.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
+            CTag14.IsButtonCustomed = False
+            CTag14.IsTextValid = True
+            CTag14.KeyValueAbsentable = False
+            CTag14.LeagleText = ""
+            CTag14.NumericButtonTextBox = Nothing
+            CTag14.ParentControl = Me.XtraTabPage1
+            CTag14.SkipValidate = False
+            CTag14.TimeButtonTextBox = Nothing
+            CTag14.ToolTip = ""
+            CTag14.ValueType = XL.Common.ControlValueType.Character
+            Me.XtraTabPage1.Tag = CTag14
             Me.XtraTabPage1.Text = "当前货品"
             '
             'SplitContainerControl_BomSetup
@@ -732,6 +611,38 @@ Namespace Manifest
             Me.PanelControl1.Name = "PanelControl1"
             Me.PanelControl1.Size = New System.Drawing.Size(212, 50)
             Me.PanelControl1.TabIndex = 10002
+            CTag9.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
+            CTag9.CalculatorRequired = True
+            CTag9.ComboValueTextBox = Nothing
+            CTag9.ControlRelatedCode = Nothing
+            CTag9.DateButtonTextBox = Nothing
+            CTag9.DateTimeButtonTextBox = Nothing
+            CTag9.DisplayLinkControl = Nothing
+            CTag9.DisplayLinkDisplayFieldName = Nothing
+            CTag9.DisplayLinkKeyFieldName = Nothing
+            CTag9.DisplayLinkTable = Nothing
+            CTag9.FlexgridEditItem = ""
+            CTag9.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
+            CTag9.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
+            CTag9.IsButtonCustomed = False
+            CTag9.IsTextValid = True
+            CTag9.KeyValueAbsentable = False
+            CTag9.LeagleText = ""
+            CTag9.NumericButtonTextBox = Nothing
+            CTag9.ParentControl = Me.PanelControl1
+            CTag9.SkipValidate = False
+            CTag9.TimeButtonTextBox = Nothing
+            CTag9.ToolTip = ""
+            CTag9.ValueType = XL.Common.ControlValueType.Character
+            Me.PanelControl1.Tag = CTag9
+            '
+            'ToolStrip2
+            '
+            Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton_AddComponent, Me.ToolStripButton_RemoveComponent, Me.ToolStripButton_RefreshComponents, Me.ToolStripButton_SaveComponents})
+            Me.ToolStrip2.Location = New System.Drawing.Point(2, 21)
+            Me.ToolStrip2.Name = "ToolStrip2"
+            Me.ToolStrip2.Size = New System.Drawing.Size(212, 25)
+            Me.ToolStrip2.TabIndex = 10001
             CTag10.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag10.CalculatorRequired = True
             CTag10.ComboValueTextBox = Nothing
@@ -744,57 +655,18 @@ Namespace Manifest
             CTag10.DisplayLinkTable = Nothing
             CTag10.FlexgridEditItem = ""
             CTag10.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
-            CTag10.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
+            CTag10.FormStatus = XL.Win.Component.BaseForm.FormStatuses.BeforeLoading
             CTag10.IsButtonCustomed = False
             CTag10.IsTextValid = True
             CTag10.KeyValueAbsentable = False
             CTag10.LeagleText = ""
             CTag10.NumericButtonTextBox = Nothing
-            CTag10.ParentControl = Me.PanelControl1
+            CTag10.ParentControl = Me.ToolStrip2
             CTag10.SkipValidate = False
             CTag10.TimeButtonTextBox = Nothing
             CTag10.ToolTip = ""
             CTag10.ValueType = XL.Common.ControlValueType.Character
-            Me.PanelControl1.Tag = CTag10
-            '
-            'ToolStrip2
-            '
-            Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton_AddComponent, Me.ToolStripButton_RemoveComponent, Me.ToolStripButton_RefreshComponents, Me.ToolStripButton_SaveComponents})
-            Me.ToolStrip2.Location = New System.Drawing.Point(2, 21)
-            Me.ToolStrip2.Name = "ToolStrip2"
-            Me.ToolStrip2.Size = New System.Drawing.Size(212, 25)
-            Me.ToolStrip2.TabIndex = 10001
-            CTag11.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
-            CTag11.CalculatorRequired = True
-            CTag11.ComboValueTextBox = Nothing
-            CTag11.ControlRelatedCode = Nothing
-            CTag11.DateButtonTextBox = Nothing
-            CTag11.DateTimeButtonTextBox = Nothing
-            CTag11.DisplayLinkControl = Nothing
-            CTag11.DisplayLinkDisplayFieldName = Nothing
-            CTag11.DisplayLinkKeyFieldName = Nothing
-            CTag11.DisplayLinkTable = Nothing
-            CTag11.FlexgridEditItem = ""
-            CTag11.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
-            CTag11.FormStatus = XL.Win.Component.BaseForm.FormStatuses.BeforeLoading
-            CTag11.IsButtonCustomed = False
-            CTag11.IsTextValid = True
-            CTag11.KeyValueAbsentable = False
-            CTag11.LeagleText = ""
-            CTag11.NumericButtonTextBox = Nothing
-            CTag11.ParentControl = Me.ToolStrip2
-            CTag11.SkipValidate = False
-            CTag11.TimeButtonTextBox = Nothing
-            CTag11.ToolTip = ""
-            CTag11.ValueType = XL.Common.ControlValueType.Character
-            Me.ToolStrip2.Tag = CTag11
-            '
-            'ToolStripButton_SaveComponents
-            '
-            Me.ToolStripButton_SaveComponents.Name = "ToolStripButton_SaveComponents"
-            Me.ToolStripButton_SaveComponents.Size = New System.Drawing.Size(36, 22)
-            Me.ToolStripButton_SaveComponents.Text = "保存"
-            Me.ToolStripButton_SaveComponents.Visible = False
+            Me.ToolStrip2.Tag = CTag10
             '
             'ToolStripButton_AddComponent
             '
@@ -814,6 +686,13 @@ Namespace Manifest
             Me.ToolStripButton_RefreshComponents.Size = New System.Drawing.Size(36, 22)
             Me.ToolStripButton_RefreshComponents.Text = "刷新"
             '
+            'ToolStripButton_SaveComponents
+            '
+            Me.ToolStripButton_SaveComponents.Name = "ToolStripButton_SaveComponents"
+            Me.ToolStripButton_SaveComponents.Size = New System.Drawing.Size(36, 22)
+            Me.ToolStripButton_SaveComponents.Text = "保存"
+            Me.ToolStripButton_SaveComponents.Visible = False
+            '
             'GroupControl2
             '
             Me.GroupControl2.Controls.Add(Me.GridControl_Ware)
@@ -830,30 +709,30 @@ Namespace Manifest
             '
             Me.GridControl_Ware.Dock = System.Windows.Forms.DockStyle.Fill
             Me.GridControl_Ware.EmbeddedNavigator.Name = ""
-            CTag12.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
-            CTag12.CalculatorRequired = True
-            CTag12.ComboValueTextBox = Nothing
-            CTag12.ControlRelatedCode = Nothing
-            CTag12.DateButtonTextBox = Nothing
-            CTag12.DateTimeButtonTextBox = Nothing
-            CTag12.DisplayLinkControl = Nothing
-            CTag12.DisplayLinkDisplayFieldName = Nothing
-            CTag12.DisplayLinkKeyFieldName = Nothing
-            CTag12.DisplayLinkTable = Nothing
-            CTag12.FlexgridEditItem = ""
-            CTag12.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
-            CTag12.FormStatus = XL.Win.Component.BaseForm.FormStatuses.BeforeLoading
-            CTag12.IsButtonCustomed = False
-            CTag12.IsTextValid = True
-            CTag12.KeyValueAbsentable = False
-            CTag12.LeagleText = ""
-            CTag12.NumericButtonTextBox = Nothing
-            CTag12.ParentControl = Me.GridControl_Ware.EmbeddedNavigator
-            CTag12.SkipValidate = False
-            CTag12.TimeButtonTextBox = Nothing
-            CTag12.ToolTip = ""
-            CTag12.ValueType = XL.Common.ControlValueType.Character
-            Me.GridControl_Ware.EmbeddedNavigator.Tag = CTag12
+            CTag11.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
+            CTag11.CalculatorRequired = True
+            CTag11.ComboValueTextBox = Nothing
+            CTag11.ControlRelatedCode = Nothing
+            CTag11.DateButtonTextBox = Nothing
+            CTag11.DateTimeButtonTextBox = Nothing
+            CTag11.DisplayLinkControl = Nothing
+            CTag11.DisplayLinkDisplayFieldName = Nothing
+            CTag11.DisplayLinkKeyFieldName = Nothing
+            CTag11.DisplayLinkTable = Nothing
+            CTag11.FlexgridEditItem = ""
+            CTag11.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
+            CTag11.FormStatus = XL.Win.Component.BaseForm.FormStatuses.BeforeLoading
+            CTag11.IsButtonCustomed = False
+            CTag11.IsTextValid = True
+            CTag11.KeyValueAbsentable = False
+            CTag11.LeagleText = ""
+            CTag11.NumericButtonTextBox = Nothing
+            CTag11.ParentControl = Me.GridControl_Ware.EmbeddedNavigator
+            CTag11.SkipValidate = False
+            CTag11.TimeButtonTextBox = Nothing
+            CTag11.ToolTip = ""
+            CTag11.ValueType = XL.Common.ControlValueType.Character
+            Me.GridControl_Ware.EmbeddedNavigator.Tag = CTag11
             Me.GridControl_Ware.Location = New System.Drawing.Point(2, 96)
             Me.GridControl_Ware.MainView = Me.GridView_Ware
             Me.GridControl_Ware.Name = "GridControl_Ware"
@@ -866,14 +745,14 @@ Namespace Manifest
             'GridView_Ware
             '
             Me.GridView_Ware.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn_RowSelect, Me.GridColumn_WareCode, Me.GridColumn_CustomCode, Me.GridColumn_MaxQty, Me.GridColumn_MinQty, Me.GridColumn_WareName, Me.GridColumn_Spec, Me.GridColumn_Model, Me.GridColumn_Attribute1, Me.GridColumn_Attribute2, Me.GridColumn_Attribute3, Me.GridColumn_Attribute4, Me.GridColumn_UnitName, Me.GridColumn_UnitPrice, Me.GridColumn_Unitcost, Me.GridColumn_SupplierID, Me.GridColumn_Remarks, Me.GridColumn_RowHighlight})
-            StyleFormatCondition3.Appearance.BackColor = System.Drawing.Color.Lime
-            StyleFormatCondition3.Appearance.BackColor2 = System.Drawing.Color.White
-            StyleFormatCondition3.Appearance.Options.UseBackColor = True
-            StyleFormatCondition3.ApplyToRow = True
-            StyleFormatCondition3.Column = Me.GridColumn_RowHighlight
-            StyleFormatCondition3.Condition = DevExpress.XtraGrid.FormatConditionEnum.Equal
-            StyleFormatCondition3.Value1 = "SEARCH_MATCH"
-            Me.GridView_Ware.FormatConditions.AddRange(New DevExpress.XtraGrid.StyleFormatCondition() {StyleFormatCondition3})
+            StyleFormatCondition1.Appearance.BackColor = System.Drawing.Color.Lime
+            StyleFormatCondition1.Appearance.BackColor2 = System.Drawing.Color.White
+            StyleFormatCondition1.Appearance.Options.UseBackColor = True
+            StyleFormatCondition1.ApplyToRow = True
+            StyleFormatCondition1.Column = Me.GridColumn_RowHighlight
+            StyleFormatCondition1.Condition = DevExpress.XtraGrid.FormatConditionEnum.Equal
+            StyleFormatCondition1.Value1 = "SEARCH_MATCH"
+            Me.GridView_Ware.FormatConditions.AddRange(New DevExpress.XtraGrid.StyleFormatCondition() {StyleFormatCondition1})
             Me.GridView_Ware.GridControl = Me.GridControl_Ware
             Me.GridView_Ware.Name = "GridView_Ware"
             Me.GridView_Ware.OptionsView.ColumnAutoWidth = False
@@ -1096,6 +975,38 @@ Namespace Manifest
             Me.PanelControl2.Name = "PanelControl2"
             Me.PanelControl2.Size = New System.Drawing.Size(506, 50)
             Me.PanelControl2.TabIndex = 10003
+            CTag12.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
+            CTag12.CalculatorRequired = True
+            CTag12.ComboValueTextBox = Nothing
+            CTag12.ControlRelatedCode = Nothing
+            CTag12.DateButtonTextBox = Nothing
+            CTag12.DateTimeButtonTextBox = Nothing
+            CTag12.DisplayLinkControl = Nothing
+            CTag12.DisplayLinkDisplayFieldName = Nothing
+            CTag12.DisplayLinkKeyFieldName = Nothing
+            CTag12.DisplayLinkTable = Nothing
+            CTag12.FlexgridEditItem = ""
+            CTag12.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
+            CTag12.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
+            CTag12.IsButtonCustomed = False
+            CTag12.IsTextValid = True
+            CTag12.KeyValueAbsentable = False
+            CTag12.LeagleText = ""
+            CTag12.NumericButtonTextBox = Nothing
+            CTag12.ParentControl = Me.PanelControl2
+            CTag12.SkipValidate = False
+            CTag12.TimeButtonTextBox = Nothing
+            CTag12.ToolTip = ""
+            CTag12.ValueType = XL.Common.ControlValueType.Character
+            Me.PanelControl2.Tag = CTag12
+            '
+            'ToolStrip1
+            '
+            Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton_AddOptions, Me.ToolStripButton_RemoveOptions, Me.ToolStripButton_RefreshOptions, Me.ToolStripButton_SaveOptions})
+            Me.ToolStrip1.Location = New System.Drawing.Point(2, 21)
+            Me.ToolStrip1.Name = "ToolStrip1"
+            Me.ToolStrip1.Size = New System.Drawing.Size(506, 25)
+            Me.ToolStrip1.TabIndex = 10001
             CTag13.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag13.CalculatorRequired = True
             CTag13.ComboValueTextBox = Nothing
@@ -1108,50 +1019,18 @@ Namespace Manifest
             CTag13.DisplayLinkTable = Nothing
             CTag13.FlexgridEditItem = ""
             CTag13.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
-            CTag13.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
+            CTag13.FormStatus = XL.Win.Component.BaseForm.FormStatuses.BeforeLoading
             CTag13.IsButtonCustomed = False
             CTag13.IsTextValid = True
             CTag13.KeyValueAbsentable = False
             CTag13.LeagleText = ""
             CTag13.NumericButtonTextBox = Nothing
-            CTag13.ParentControl = Me.PanelControl2
+            CTag13.ParentControl = Me.ToolStrip1
             CTag13.SkipValidate = False
             CTag13.TimeButtonTextBox = Nothing
             CTag13.ToolTip = ""
             CTag13.ValueType = XL.Common.ControlValueType.Character
-            Me.PanelControl2.Tag = CTag13
-            '
-            'ToolStrip1
-            '
-            Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton_SaveOptions, Me.ToolStripButton_AddOptions, Me.ToolStripButton_RemoveOptions, Me.ToolStripButton_RefreshOptions})
-            Me.ToolStrip1.Location = New System.Drawing.Point(2, 21)
-            Me.ToolStrip1.Name = "ToolStrip1"
-            Me.ToolStrip1.Size = New System.Drawing.Size(506, 25)
-            Me.ToolStrip1.TabIndex = 10001
-            CTag14.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
-            CTag14.CalculatorRequired = True
-            CTag14.ComboValueTextBox = Nothing
-            CTag14.ControlRelatedCode = Nothing
-            CTag14.DateButtonTextBox = Nothing
-            CTag14.DateTimeButtonTextBox = Nothing
-            CTag14.DisplayLinkControl = Nothing
-            CTag14.DisplayLinkDisplayFieldName = Nothing
-            CTag14.DisplayLinkKeyFieldName = Nothing
-            CTag14.DisplayLinkTable = Nothing
-            CTag14.FlexgridEditItem = ""
-            CTag14.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
-            CTag14.FormStatus = XL.Win.Component.BaseForm.FormStatuses.BeforeLoading
-            CTag14.IsButtonCustomed = False
-            CTag14.IsTextValid = True
-            CTag14.KeyValueAbsentable = False
-            CTag14.LeagleText = ""
-            CTag14.NumericButtonTextBox = Nothing
-            CTag14.ParentControl = Me.ToolStrip1
-            CTag14.SkipValidate = False
-            CTag14.TimeButtonTextBox = Nothing
-            CTag14.ToolTip = ""
-            CTag14.ValueType = XL.Common.ControlValueType.Character
-            Me.ToolStrip1.Tag = CTag14
+            Me.ToolStrip1.Tag = CTag13
             '
             'ToolStripButton_SaveOptions
             '
@@ -1180,34 +1059,87 @@ Namespace Manifest
             '
             'XtraTabPage2
             '
-            Me.XtraTabPage2.Controls.Add(Me.TreeList_OverviewList)
+            Me.XtraTabPage2.Controls.Add(Me.TreeList_OverViewList)
             Me.XtraTabPage2.Name = "XtraTabPage2"
             Me.XtraTabPage2.Size = New System.Drawing.Size(740, 424)
-            CTag16.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
-            CTag16.CalculatorRequired = True
-            CTag16.ComboValueTextBox = Nothing
-            CTag16.ControlRelatedCode = Nothing
-            CTag16.DateButtonTextBox = Nothing
-            CTag16.DateTimeButtonTextBox = Nothing
-            CTag16.DisplayLinkControl = Nothing
-            CTag16.DisplayLinkDisplayFieldName = Nothing
-            CTag16.DisplayLinkKeyFieldName = Nothing
-            CTag16.DisplayLinkTable = Nothing
-            CTag16.FlexgridEditItem = ""
-            CTag16.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
-            CTag16.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
-            CTag16.IsButtonCustomed = False
-            CTag16.IsTextValid = True
-            CTag16.KeyValueAbsentable = False
-            CTag16.LeagleText = ""
-            CTag16.NumericButtonTextBox = Nothing
-            CTag16.ParentControl = Me.XtraTabPage2
-            CTag16.SkipValidate = False
-            CTag16.TimeButtonTextBox = Nothing
-            CTag16.ToolTip = ""
-            CTag16.ValueType = XL.Common.ControlValueType.Character
-            Me.XtraTabPage2.Tag = CTag16
+            CTag15.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
+            CTag15.CalculatorRequired = True
+            CTag15.ComboValueTextBox = Nothing
+            CTag15.ControlRelatedCode = Nothing
+            CTag15.DateButtonTextBox = Nothing
+            CTag15.DateTimeButtonTextBox = Nothing
+            CTag15.DisplayLinkControl = Nothing
+            CTag15.DisplayLinkDisplayFieldName = Nothing
+            CTag15.DisplayLinkKeyFieldName = Nothing
+            CTag15.DisplayLinkTable = Nothing
+            CTag15.FlexgridEditItem = ""
+            CTag15.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
+            CTag15.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
+            CTag15.IsButtonCustomed = False
+            CTag15.IsTextValid = True
+            CTag15.KeyValueAbsentable = False
+            CTag15.LeagleText = ""
+            CTag15.NumericButtonTextBox = Nothing
+            CTag15.ParentControl = Me.XtraTabPage2
+            CTag15.SkipValidate = False
+            CTag15.TimeButtonTextBox = Nothing
+            CTag15.ToolTip = ""
+            CTag15.ValueType = XL.Common.ControlValueType.Character
+            Me.XtraTabPage2.Tag = CTag15
             Me.XtraTabPage2.Text = "组织结构"
+            '
+            'TreeList_OverView
+            '
+            Me.TreeList_OverViewList.AllowDrop = True
+            Me.TreeList_OverViewList.Columns.AddRange(New DevExpress.XtraTreeList.Columns.TreeListColumn() {Me.TreeListColumn1, Me.TreeListColumn2, Me.TreeListColumn3})
+            Me.TreeList_OverViewList.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.TreeList_OverViewList.KeyFieldName = "COMPONENT_ID"
+            Me.TreeList_OverViewList.Location = New System.Drawing.Point(0, 0)
+            Me.TreeList_OverViewList.Name = "TreeList_OverView"
+            Me.TreeList_OverViewList.OptionsBehavior.DragNodes = True
+            Me.TreeList_OverViewList.OptionsView.AutoWidth = False
+            Me.TreeList_OverViewList.ParentFieldName = "PARENT_COMPONENT"
+            Me.TreeList_OverViewList.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemTextEdit1, Me.RepositoryItemImageComboBox1})
+            Me.TreeList_OverViewList.Size = New System.Drawing.Size(740, 424)
+            Me.TreeList_OverViewList.TabIndex = 10004
+            '
+            'TreeListColumn1
+            '
+            Me.TreeListColumn1.ColumnEdit = Me.RepositoryItemImageComboBox1
+            Me.TreeListColumn1.FieldName = "DSR_FT_ROW_REMARK"
+            Me.TreeListColumn1.Name = "TreeListColumn1"
+            Me.TreeListColumn1.OptionsColumn.AllowFocus = False
+            Me.TreeListColumn1.Visible = True
+            Me.TreeListColumn1.VisibleIndex = 0
+            Me.TreeListColumn1.Width = 73
+            '
+            'RepositoryItemImageComboBox1
+            '
+            Me.RepositoryItemImageComboBox1.Items.AddRange(New DevExpress.XtraEditors.Controls.ImageComboBoxItem() {New DevExpress.XtraEditors.Controls.ImageComboBoxItem("", "ROOT_WARE", 0), New DevExpress.XtraEditors.Controls.ImageComboBoxItem("", "COMPONENT", 1)})
+            Me.RepositoryItemImageComboBox1.LargeImages = Me.ImageCollection_TreeIcon
+            Me.RepositoryItemImageComboBox1.Name = "RepositoryItemImageComboBox1"
+            Me.RepositoryItemImageComboBox1.SmallImages = Me.ImageCollection_TreeIcon
+            '
+            'TreeListColumn2
+            '
+            Me.TreeListColumn2.Caption = "组件"
+            Me.TreeListColumn2.ColumnEdit = Me.RepositoryItemTextEdit1
+            Me.TreeListColumn2.FieldName = "COMPONENT_NAME"
+            Me.TreeListColumn2.Name = "TreeListColumn2"
+            Me.TreeListColumn2.Visible = True
+            Me.TreeListColumn2.VisibleIndex = 1
+            Me.TreeListColumn2.Width = 646
+            '
+            'RepositoryItemTextEdit1
+            '
+            Me.RepositoryItemTextEdit1.AutoHeight = False
+            Me.RepositoryItemTextEdit1.Name = "RepositoryItemTextEdit1"
+            '
+            'TreeListColumn3
+            '
+            Me.TreeListColumn3.Caption = "高亮显示"
+            Me.TreeListColumn3.FieldName = "DSR_FT_ROW_HIGHLIGHT"
+            Me.TreeListColumn3.Name = "TreeListColumn3"
             '
             'M_01_00206
             '
@@ -1221,30 +1153,30 @@ Namespace Manifest
             Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
             Me.Name = "M_01_00206"
             Me.Size = New System.Drawing.Size(749, 529)
-            CTag18.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
-            CTag18.CalculatorRequired = True
-            CTag18.ComboValueTextBox = Nothing
-            CTag18.ControlRelatedCode = Nothing
-            CTag18.DateButtonTextBox = Nothing
-            CTag18.DateTimeButtonTextBox = Nothing
-            CTag18.DisplayLinkControl = Nothing
-            CTag18.DisplayLinkDisplayFieldName = Nothing
-            CTag18.DisplayLinkKeyFieldName = Nothing
-            CTag18.DisplayLinkTable = Nothing
-            CTag18.FlexgridEditItem = ""
-            CTag18.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
-            CTag18.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
-            CTag18.IsButtonCustomed = False
-            CTag18.IsTextValid = True
-            CTag18.KeyValueAbsentable = False
-            CTag18.LeagleText = ""
-            CTag18.NumericButtonTextBox = Nothing
-            CTag18.ParentControl = Me
-            CTag18.SkipValidate = False
-            CTag18.TimeButtonTextBox = Nothing
-            CTag18.ToolTip = ""
-            CTag18.ValueType = XL.Common.ControlValueType.Character
-            Me.Tag = CTag18
+            CTag17.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
+            CTag17.CalculatorRequired = True
+            CTag17.ComboValueTextBox = Nothing
+            CTag17.ControlRelatedCode = Nothing
+            CTag17.DateButtonTextBox = Nothing
+            CTag17.DateTimeButtonTextBox = Nothing
+            CTag17.DisplayLinkControl = Nothing
+            CTag17.DisplayLinkDisplayFieldName = Nothing
+            CTag17.DisplayLinkKeyFieldName = Nothing
+            CTag17.DisplayLinkTable = Nothing
+            CTag17.FlexgridEditItem = ""
+            CTag17.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
+            CTag17.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
+            CTag17.IsButtonCustomed = False
+            CTag17.IsTextValid = True
+            CTag17.KeyValueAbsentable = False
+            CTag17.LeagleText = ""
+            CTag17.NumericButtonTextBox = Nothing
+            CTag17.ParentControl = Me
+            CTag17.SkipValidate = False
+            CTag17.TimeButtonTextBox = Nothing
+            CTag17.ToolTip = ""
+            CTag17.ValueType = XL.Common.ControlValueType.Character
+            Me.Tag = CTag17
             Me.ToolStrip_Form.ResumeLayout(False)
             Me.ToolStrip_Form.PerformLayout()
             CType(Me.PanelControl_Filter, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1252,9 +1184,6 @@ Namespace Manifest
             Me.PanelControl_Filter.PerformLayout()
             CType(Me.ButtonEdit_WareCode.Properties, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.TextEdit_Search.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.TreeList_OverviewList, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.RepositoryItemCalcEdit_BelongQty, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.RepositoryItemLookUpEdit_WareBomType, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.XtraTabControl1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.XtraTabControl1.ResumeLayout(False)
             Me.XtraTabPage1.ResumeLayout(False)
@@ -1285,6 +1214,9 @@ Namespace Manifest
             Me.ToolStrip1.ResumeLayout(False)
             Me.ToolStrip1.PerformLayout()
             Me.XtraTabPage2.ResumeLayout(False)
+            CType(Me.TreeList_OverViewList, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.RepositoryItemImageComboBox1, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.RepositoryItemTextEdit1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -1292,14 +1224,6 @@ Namespace Manifest
         Friend WithEvents PanelControl_Filter As DevExpress.XtraEditors.PanelControl
         Friend WithEvents TextEdit_Search As DevExpress.XtraEditors.TextEdit
         Friend WithEvents Label1 As System.Windows.Forms.Label
-        Friend WithEvents TreeList_OverviewList As DevExpress.XtraTreeList.TreeList
-        Friend WithEvents TreeListColumn_BelongQty As DevExpress.XtraTreeList.Columns.TreeListColumn
-        Friend WithEvents TreeListColumn_WareBomType As DevExpress.XtraTreeList.Columns.TreeListColumn
-        Friend WithEvents TreeListColumn_BelongWareName As DevExpress.XtraTreeList.Columns.TreeListColumn
-        Friend WithEvents TreeListColumn_RowHighLight As DevExpress.XtraTreeList.Columns.TreeListColumn
-        Friend WithEvents RepositoryItemLookUpEdit_WareBomType As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
-        Friend WithEvents TreeListColumn_BelongWareCode As DevExpress.XtraTreeList.Columns.TreeListColumn
-        Friend WithEvents RepositoryItemCalcEdit_BelongQty As DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
         Friend WithEvents SplitContainerControl_BomSetup As DevExpress.XtraEditors.SplitContainerControl
         Friend WithEvents GroupControl1 As DevExpress.XtraEditors.GroupControl
         Friend WithEvents GroupControl2 As DevExpress.XtraEditors.GroupControl
@@ -1355,6 +1279,12 @@ Namespace Manifest
         Friend WithEvents GridColumn_MinQty As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents RepositoryItemCalcEdit_MinQty As DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
         Friend WithEvents RepositoryItemCalcEdit_MaxQty As DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
+        Friend WithEvents TreeList_OverViewList As DevExpress.XtraTreeList.TreeList
+        Friend WithEvents TreeListColumn1 As DevExpress.XtraTreeList.Columns.TreeListColumn
+        Friend WithEvents RepositoryItemImageComboBox1 As DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox
+        Friend WithEvents TreeListColumn2 As DevExpress.XtraTreeList.Columns.TreeListColumn
+        Friend WithEvents RepositoryItemTextEdit1 As DevExpress.XtraEditors.Repository.RepositoryItemTextEdit
+        Friend WithEvents TreeListColumn3 As DevExpress.XtraTreeList.Columns.TreeListColumn
 
 #End Region
 
