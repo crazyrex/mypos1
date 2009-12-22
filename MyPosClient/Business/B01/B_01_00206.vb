@@ -388,13 +388,13 @@ Namespace Business
 
 
 
-                Dim chooseWareBomTypeList As New MyPosXAuto.FTs.FT_CIV_WARE_BOM_TYPE
-                MyPosXAuto.Facade.AfCIV.FillCI_WARE_BOM_TYPEList( _
-                    CommDecl.CURRENT_LANGUAGE_OPTION, _
-                    String.Empty, _
-                    chooseWareBomTypeList, _
-                    False)
-                Me._manifest.RepositoryItemLookUpEdit_WareBomType.DataSource = chooseWareBomTypeList
+                'Dim chooseWareBomTypeList As New MyPosXAuto.FTs.FT_CIV_WARE_BOM_TYPE
+                'MyPosXAuto.Facade.AfCIV.FillCI_WARE_BOM_TYPEList( _
+                '    CommDecl.CURRENT_LANGUAGE_OPTION, _
+                '    String.Empty, _
+                '    chooseWareBomTypeList, _
+                '    False)
+                'Me._manifest.RepositoryItemLookUpEdit_WareBomType.DataSource = chooseWareBomTypeList
 
                 Dim wareRow = MyPosXAuto.Facade.AfBizMaster.GetM_MP_WARERow(Me._manifest.SV_EDITING_WARE_ID)
                 If IsNothing(wareRow) = True Then

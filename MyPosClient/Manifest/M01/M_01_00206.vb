@@ -47,6 +47,7 @@ Namespace Manifest
         '数据列表变量
         Public SVFT_BINDING_COMPONENT_LIST As New MyPosXAuto.FTs.FT_S_MP_BOM_COMPONENT
         Public SVFT_BINDING_OPTION_LIST As New MyPosXAuto.FTs.FT_XV_S_MP_BOM_COMP_WARE_OPT
+        Public SVFT_BINDING_OVERVIEW_LIST As New MyPosXAuto.FTs.FT_S_MP_BOM_COMPONENT
         'Public SVFT_CHOOSE_XXX_LIST As New XAuto.FTs.FT_
 
         Public SVFR_SELECTING_COMPONENT_ROW As MyPosXAuto.FTs.FT_S_MP_BOM_COMPONENTRow
@@ -135,8 +136,8 @@ Namespace Manifest
             Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Close, AddressOf Me.TbActionClose)
             Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_SaveComponents, AddressOf Me.TbActionSaveComponents)
             Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_SaveOptions, AddressOf Me.TbActionSaveOptions)
-            'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0002, AddressOf Me.TbActionUtld0002)
-            'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0003, AddressOf Me.TbActionUtld0003)
+            Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_RefreshComponents, AddressOf Me.TbActionRefreshComponents)
+            Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_RefreshOptions, AddressOf Me.TbactionRefreshOptions)
             'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0004, AddressOf Me.TbActionUtld0004)
             'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0005, AddressOf Me.TbActionUtld0005)
             'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0006, AddressOf Me.TbActionUtld0006)
@@ -249,7 +250,7 @@ Namespace Manifest
 
                 Case "TbActionAddOptions"
                     Dim chooseForm = TryCast(popupForm, M_01_00201)
-                    Me.TreeList_OverviewList.DataSource = Nothing
+                    Me.TreeList_OverViewList.DataSource = Nothing
                     For Each wareRow As MyPosXAuto.FTs.FT_M_MP_WARERow In chooseForm.SVFT_BINDING_WARE_LIST.FindRowsSelecting(True)
                         Me.SV_ADDING_WARE_IDS.Add(wareRow.WARE_ID)
                     Next
@@ -383,6 +384,7 @@ Namespace Manifest
                     Me.ResetSaveMode()
 
                 Case Business.B_01_00206.Affairs.LoadOptionList
+                    Me.GridView_Ware.BestFitColumns()
                     Me.DoPrivateUpdateSelectingComponentRow()
                     'Case Business.B_02_00202.Affairs.SaveInfo             
                     'Window.XLMessageBox.ShowMessage( _                
@@ -454,6 +456,80 @@ Namespace Manifest
         '    End If                                                                                                                                                                        
         'End Sub                                                                                                                                                                           
 
+        Private Sub TreeList_Component_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles TreeList_Component.DragDrop
+            Me.IsSaved = False
+            Me.SplitContainerControl_BomSetup.Panel2.Enabled = False
+            Me.DoPrivateUpdateBomSetupVisibles()
+        End Sub
+
+        'Private Sub RepositoryItemLookUpEdit_WareBomType_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemLookUpEdit_WareBomType.EditValueChanged
+        '    Dim lookupEdit = TryCast(sender, DevExpress.XtraEditors.LookUpEdit)
+        '    Me.SVFR_SELECTING_ROW.WARE_BOM_TYPE = CommTK.FInteger(lookupEdit.EditValue)
+        '    Me.SVFR_SELECTING_ROW.ROW_HIGHLIGHT = MyPosXService.Decls.ROW_HIGHLIGHT_MODIFIED
+        '    Me.IsSaved = False
+        'End Sub
+
+        'Private Sub RepositoryItemCalcEdit_BelongQty_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemCalcEdit_BelongQty.EditValueChanged
+        '    Dim calcEdit = TryCast(sender, DevExpress.XtraEditors.CalcEdit)
+        '    'should not have commtk.finteger herer
+
+        '    Me.SVFR_SELECTING_ROW.BELONG_QTY = CommTK.FInteger(calcEdit.Value)
+        '    If Me.SVFR_SELECTING_ROW.BELONG_QTY <= 0 Then
+        '        Me.SVFR_SELECTING_ROW.BELONG_QTY = 1
+        '    End If
+        '    Me.SVFR_SELECTING_ROW.ROW_HIGHLIGHT = MyPosXService.Decls.ROW_HIGHLIGHT_MODIFIED
+        '    Me.IsSaved = False
+        'End Sub
+
+        Private Sub TreeList_Component_FocusedNodeChanged(ByVal sender As Object, ByVal e As DevExpress.XtraTreeList.FocusedNodeChangedEventArgs) Handles TreeList_Component.FocusedNodeChanged
+            Me.DoPrivateUpdateSelectingComponentRow()
+            If IsNothing(Me.SVFR_SELECTING_COMPONENT_ROW) = True Then
+                Me.SVFT_BINDING_OPTION_LIST.Clear()
+            Else
+                Me._bizAgent.DoRequest(Business.B_01_00206.Affairs.LoadOptionList, True)
+            End If
+        End Sub
+
+
+        Private Sub RepositoryItemTextEdit_ComponentName_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemTextEdit_ComponentName.EditValueChanged
+            Dim textEdit = TryCast(sender, DevExpress.XtraEditors.TextEdit)
+            Me.SVFR_SELECTING_COMPONENT_ROW.COMPONENT_NAME = textEdit.Text
+            Me.IsSaved = False
+            Me.SplitContainerControl_BomSetup.Panel2.Enabled = False
+            Me.DoPrivateUpdateBomSetupVisibles()
+        End Sub
+
+        Private Sub TreeList_Component_DragObjectDrop(ByVal sender As System.Object, ByVal e As DevExpress.XtraTreeList.DragObjectDropEventArgs) Handles TreeList_Component.DragObjectDrop
+
+            Me.IsSaved = False
+            Me.SplitContainerControl_BomSetup.Panel2.Enabled = False
+            Me.DoPrivateUpdateBomSetupVisibles()
+
+        End Sub
+
+        Private Sub TreeList_Component_BeforeDragNode(ByVal sender As System.Object, ByVal e As DevExpress.XtraTreeList.BeforeDragNodeEventArgs) Handles TreeList_Component.BeforeDragNode
+            e.CanDrag = (Me.SVFR_SELECTING_COMPONENT_ROW.COMPONENT_ID <> Me.SV_EDITING_WARE_ID)
+        End Sub
+
+        Private Sub RepositoryItemCalcEdit_MaxQty_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemCalcEdit_MaxQty.EditValueChanged
+            Dim calcEdit = TryCast(sender, DevExpress.XtraEditors.CalcEdit)
+            Me.SVFR_SELECTING_COMPONENT_WARE_OPT_ROW.MAX_QTY = calcEdit.Value
+            Me.IsSaved = False
+            Me.SplitContainerControl_BomSetup.Panel1.Enabled = False
+            Me.DoPrivateUpdateSelectingOptionRow()
+        End Sub
+
+        Private Sub RepositoryItemCalcEdit_MinQty_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemCalcEdit_MinQty.EditValueChanged
+            Dim calcEdit = TryCast(sender, DevExpress.XtraEditors.CalcEdit)
+            Me.SVFR_SELECTING_COMPONENT_WARE_OPT_ROW.MIN_QTY = calcEdit.Value
+            Me.IsSaved = False
+            Me.SplitContainerControl_BomSetup.Panel1.Enabled = False
+            Me.DoPrivateUpdateSelectingOptionRow()
+        End Sub
+
+        Private Sub GridView_Ware_FocusedRowChanged(ByVal sender As Object, ByVal e As DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs) Handles GridView_Ware.FocusedRowChanged
+            Me.DoPrivateUpdateSelectingOptionRow()
+        End Sub
 #End Region
 
 #Region "ToolStrip Actions"
@@ -525,12 +601,30 @@ Namespace Manifest
         End Sub
 
 
-        Private Sub TbActionUtld0002()
+        Private Sub TbActionRefreshComponents()
+            If Me.IsSaved = False AndAlso _
+                Window.XLMessageBox.ShowMessage( _
+                MyPosXService.Decls.MSG_CONFIRM_00024, _
+                Window.XLMessageBox.MessageType.Warning, _
+                MessageBoxButtons.OKCancel) = DialogResult.Cancel Then
+                Return
+            End If
+
+            Me._bizAgent.DoRequest(Business.B_01_00206.Affairs.LoadComponentList, False)
 
         End Sub
 
 
-        Private Sub TbActionUtld0003()
+        Private Sub TbActionRefreshOptions()
+            If Me.IsSaved = False AndAlso _
+                Window.XLMessageBox.ShowMessage( _
+                MyPosXService.Decls.MSG_CONFIRM_00024, _
+                Window.XLMessageBox.MessageType.Warning, _
+                MessageBoxButtons.OKCancel) = DialogResult.Cancel Then
+                Return
+            End If
+
+            Me._bizAgent.DoRequest(Business.B_01_00206.Affairs.LoadOptionList, False)
 
         End Sub
 
@@ -902,78 +996,13 @@ Namespace Manifest
 
 #End Region
 
-        Private Sub TreeList_Component_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles TreeList_Component.DragDrop
-            Me.IsSaved = False
-            Me.SplitContainerControl_BomSetup.Panel2.Enabled = False
-            Me.DoPrivateUpdateBomSetupVisibles()
-        End Sub
+        
+        Private Sub XtraTabControl1_SelectedPageChanged(ByVal sender As System.Object, ByVal e As DevExpress.XtraTab.TabPageChangedEventArgs) Handles XtraTabControl1.SelectedPageChanged
+            Me.ToolStripButton_Refresh.Visible = False
 
-        'Private Sub RepositoryItemLookUpEdit_WareBomType_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemLookUpEdit_WareBomType.EditValueChanged
-        '    Dim lookupEdit = TryCast(sender, DevExpress.XtraEditors.LookUpEdit)
-        '    Me.SVFR_SELECTING_ROW.WARE_BOM_TYPE = CommTK.FInteger(lookupEdit.EditValue)
-        '    Me.SVFR_SELECTING_ROW.ROW_HIGHLIGHT = MyPosXService.Decls.ROW_HIGHLIGHT_MODIFIED
-        '    Me.IsSaved = False
-        'End Sub
-
-        'Private Sub RepositoryItemCalcEdit_BelongQty_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemCalcEdit_BelongQty.EditValueChanged
-        '    Dim calcEdit = TryCast(sender, DevExpress.XtraEditors.CalcEdit)
-        '    'should not have commtk.finteger herer
-
-        '    Me.SVFR_SELECTING_ROW.BELONG_QTY = CommTK.FInteger(calcEdit.Value)
-        '    If Me.SVFR_SELECTING_ROW.BELONG_QTY <= 0 Then
-        '        Me.SVFR_SELECTING_ROW.BELONG_QTY = 1
-        '    End If
-        '    Me.SVFR_SELECTING_ROW.ROW_HIGHLIGHT = MyPosXService.Decls.ROW_HIGHLIGHT_MODIFIED
-        '    Me.IsSaved = False
-        'End Sub
-
-        Private Sub TreeList_Component_FocusedNodeChanged(ByVal sender As Object, ByVal e As DevExpress.XtraTreeList.FocusedNodeChangedEventArgs) Handles TreeList_Component.FocusedNodeChanged
-            Me.DoPrivateUpdateSelectingComponentRow()
-            Me._bizAgent.DoRequest(Business.B_01_00206.Affairs.LoadOptionList, True)
-        End Sub
-
-        Private Sub GroupControl1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles GroupControl1.Paint
-
-        End Sub
-
-        Private Sub RepositoryItemTextEdit_ComponentName_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemTextEdit_ComponentName.EditValueChanged
-            Dim textEdit = TryCast(sender, DevExpress.XtraEditors.TextEdit)
-            Me.SVFR_SELECTING_COMPONENT_ROW.COMPONENT_NAME = textEdit.Text
-            Me.IsSaved = False
-            Me.SplitContainerControl_BomSetup.Panel2.Enabled = False
-            Me.DoPrivateUpdateBomSetupVisibles()
-        End Sub
-
-        Private Sub TreeList_Component_DragObjectDrop(ByVal sender As System.Object, ByVal e As DevExpress.XtraTreeList.DragObjectDropEventArgs) Handles TreeList_Component.DragObjectDrop
-
-            Me.IsSaved = False
-            Me.SplitContainerControl_BomSetup.Panel2.Enabled = False
-            Me.DoPrivateUpdateBomSetupVisibles()
-
-        End Sub
-
-        Private Sub TreeList_Component_BeforeDragNode(ByVal sender As System.Object, ByVal e As DevExpress.XtraTreeList.BeforeDragNodeEventArgs) Handles TreeList_Component.BeforeDragNode
-            e.CanDrag = (Me.SVFR_SELECTING_COMPONENT_ROW.COMPONENT_ID <> Me.SV_EDITING_WARE_ID)
-        End Sub
-
-        Private Sub RepositoryItemCalcEdit_MaxQty_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemCalcEdit_MaxQty.EditValueChanged
-            Dim calcEdit = TryCast(sender, DevExpress.XtraEditors.CalcEdit)
-            Me.SVFR_SELECTING_COMPONENT_WARE_OPT_ROW.MAX_QTY = calcEdit.Value
-            Me.IsSaved = False
-            Me.SplitContainerControl_BomSetup.Panel1.Enabled = False
-            Me.DoPrivateUpdateSelectingOptionRow()
-        End Sub
-
-        Private Sub RepositoryItemCalcEdit_MinQty_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemCalcEdit_MinQty.EditValueChanged
-            Dim calcEdit = TryCast(sender, DevExpress.XtraEditors.CalcEdit)
-            Me.SVFR_SELECTING_COMPONENT_WARE_OPT_ROW.MIN_QTY = calcEdit.Value
-            Me.IsSaved = False
-            Me.SplitContainerControl_BomSetup.Panel1.Enabled = False
-            Me.DoPrivateUpdateSelectingOptionRow()
-        End Sub
-
-        Private Sub GridView_Ware_FocusedRowChanged(ByVal sender As Object, ByVal e As DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs) Handles GridView_Ware.FocusedRowChanged
-            Me.DoPrivateUpdateSelectingOptionRow()
+            If Me.XtraTabControl1.SelectedTabPage Is Me.XtraTabPage2 Then
+                Me.ToolStripButton_Refresh.Visible = True
+            End If
         End Sub
     End Class
 
