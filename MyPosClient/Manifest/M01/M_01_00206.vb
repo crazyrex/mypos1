@@ -314,6 +314,7 @@ Namespace Manifest
 
             'Me._bizAgent.DoRequest(Business.B_0X_00XXX.Affairs.LoadInfo, False)
             Me._bizAgent.DoRequest(Business.B_01_00206.Affairs.LoadComponentList, False)
+            Me._bizAgent.DoRequest(Business.B_01_00206.Affairs.LoadOverviewList, False)
 
         End Sub
 
@@ -372,19 +373,21 @@ Namespace Manifest
                     Me.DoPrivateUpdateSelectingComponentRow()
                     Me.TreeList_Component.BestFitColumns()
                     Me.TreeList_Component.ExpandAll()
+                    Me._bizAgent.DoRequest(Business.B_01_00206.Affairs.LoadOptionList, False)
 
                 Case Business.B_01_00206.Affairs.SaveComponentList
                     Me.SplitContainerControl_BomSetup.Panel2.Enabled = True
-                    Me.DoPrivateUpdateBomSetupVisibles()
                     Me.ResetSaveMode()
+                    Me.DoPrivateUpdateBomSetupVisibles()
 
                 Case Business.B_01_00206.Affairs.SaveOptionList
                     Me.SplitContainerControl_BomSetup.Panel1.Enabled = True
-                    Me.DoPrivateUpdateBomSetupVisibles()
                     Me.ResetSaveMode()
+                    Me.DoPrivateUpdateBomSetupVisibles()
 
                 Case Business.B_01_00206.Affairs.LoadOptionList
                     Me.GridView_Ware.BestFitColumns()
+                    Me.ResetSaveMode()
                     Me.DoPrivateUpdateSelectingComponentRow()
                     'Case Business.B_02_00202.Affairs.SaveInfo             
                     'Window.XLMessageBox.ShowMessage( _                
@@ -403,14 +406,19 @@ Namespace Manifest
                 Case Business.B_01_00206.Affairs.AddOptions
                     Me.GridView_Ware.BestFitColumns()
                     Me.SplitContainerControl_BomSetup.Panel1.Enabled = False
-                    Me.DoPrivateUpdateBomSetupVisibles()
                     Me.IsSaved = False
+                    Me.DoPrivateUpdateBomSetupVisibles()
 
                 Case Business.B_01_00206.Affairs.InitDisplay
                     Me.TreeList_Component.BestFitColumns()
 
                 Case Business.B_01_00206.Affairs.SaveComponentList
                     Me.UpdateDisplay()
+
+                Case Business.B_01_00206.Affairs.LoadOverviewList
+                    Me.TreeList_OverViewList.ExpandAll()
+                    'Me.TreeList_OverViewList.BestFitColumns()
+
             End Select
         End Sub
 
@@ -530,6 +538,15 @@ Namespace Manifest
         Private Sub GridView_Ware_FocusedRowChanged(ByVal sender As Object, ByVal e As DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs) Handles GridView_Ware.FocusedRowChanged
             Me.DoPrivateUpdateSelectingOptionRow()
         End Sub
+
+        Private Sub XtraTabControl1_SelectedPageChanged(ByVal sender As System.Object, ByVal e As DevExpress.XtraTab.TabPageChangedEventArgs) Handles XtraTabControl1.SelectedPageChanged
+            Me.ToolStripButton_Refresh.Visible = False
+
+            If Me.XtraTabControl1.SelectedTabPage Is Me.XtraTabPage_OverView Then
+                Me.ToolStripButton_Refresh.Visible = True
+            End If
+        End Sub
+
 #End Region
 
 #Region "ToolStrip Actions"
@@ -774,8 +791,10 @@ Namespace Manifest
 
             If Me.SplitContainerControl_BomSetup.Panel1.Enabled = False Then
                 Me.ToolStripButton_SaveOptions.Visible = True
-            Else
             End If
+
+            Me.XtraTabPage_OverView.PageVisible = Me.IsSaved
+
         End Sub
 
 
@@ -997,13 +1016,6 @@ Namespace Manifest
 #End Region
 
         
-        Private Sub XtraTabControl1_SelectedPageChanged(ByVal sender As System.Object, ByVal e As DevExpress.XtraTab.TabPageChangedEventArgs) Handles XtraTabControl1.SelectedPageChanged
-            Me.ToolStripButton_Refresh.Visible = False
-
-            If Me.XtraTabControl1.SelectedTabPage Is Me.XtraTabPage2 Then
-                Me.ToolStripButton_Refresh.Visible = True
-            End If
-        End Sub
     End Class
 
 

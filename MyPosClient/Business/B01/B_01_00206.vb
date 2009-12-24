@@ -75,7 +75,7 @@ Namespace Business
             AddOptions
             SaveOptionList
             LoadOptionList
-            BizUtld0004
+            LoadOverviewList
             BizUtld0005
             BizUtld0006
             BizUtld0007
@@ -215,12 +215,12 @@ Namespace Business
                     '-------------------------------------------------------------------
                     functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoLoadOptionList)
 
-                Case Affairs.BizUtld0004
+                Case Affairs.LoadOverviewList
 
                     '
                     '取到处理函数的结果，传入返回给Manifest的AgentResponse包
                     '-------------------------------------------------------------------
-                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoBizUtld0004)
+                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoLoadOverviewList)
 
                 Case Affairs.BizUtld0005
 
@@ -772,10 +772,13 @@ Namespace Business
 
             Try
 
+                Me._manifest.SVFT_BINDING_OPTION_LIST.Clear()
+                If Me._manifest.SVFR_SELECTING_COMPONENT_ROW.COMPONENT_ID = Me._manifest.SV_EDITING_WARE_ID Then
+                    Return String.Empty
+                End If
                 Dim optionCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_S_MP_BOM_COMP_WARE_OPT(XL.DB.Utils.Condition.LogicOperators.Logic_And)
                 optionCondition.Add(MyPosXAuto.Facade.AfXV.XV_S_MP_BOM_COMP_WARE_OPTColumns.COMPONENT_IDColumn, "=", Me._manifest.SVFR_SELECTING_COMPONENT_ROW.COMPONENT_ID)
 
-                Me._manifest.SVFT_BINDING_OPTION_LIST.Clear()
                 MyPosXAuto.Facade.AfXV.FillFT_XV_S_MP_BOM_COMP_WARE_OPT(optionCondition, Me._manifest.SVFT_BINDING_OPTION_LIST)
 
                 'Dim servResult As String = _
@@ -818,18 +821,45 @@ Namespace Business
         '''
         '''
         '''-------------------------------------------------------------------
-        Private Function DoBizUtld0004() As String
+        Private Function DoLoadOverviewList() As String
 
 
             Try
 
+                Me._manifest.TreeList_OverViewList.DataSource = Nothing
+                Me._manifest.SVFT_BINDING_OVERVIEW_LIST.Clear()
+                Me._manifest.SVFT_BINDING_OVERVIEW_LIST.ImportTable(Me._manifest.SVFT_BINDING_COMPONENT_LIST, Nothing)
 
+                Dim optionCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_S_MP_BOM_COMP_WARE_OPT(XL.DB.Utils.Condition.LogicOperators.Logic_And)
+                optionCondition.Add(MyPosXAuto.Facade.AfXV.XV_S_MP_BOM_COMP_WARE_OPTColumns.COMPOSING_WAREColumn, "=", Me._manifest.SV_EDITING_WARE_ID)
+
+                Dim optionList As New MyPosXAuto.FTs.FT_XV_S_MP_BOM_COMP_WARE_OPT
+                MyPosXAuto.Facade.AfXV.FillFT_XV_S_MP_BOM_COMP_WARE_OPT(optionCondition, optionList)
+                Dim optionRow As MyPosXAuto.FTs.FT_XV_S_MP_BOM_COMP_WARE_OPTRow
+                Dim overviewRow As MyPosXAuto.FTs.FT_S_MP_BOM_COMPONENTRow
+                Dim wareInfo As String
+                For Each optionRow In optionList
+
+                    wareInfo = String.Format("[{0}] {1} {2} {3}", optionRow.WARE_CODE, optionRow.WARE_NAME, optionRow.MODEL, optionRow.SPEC).Trim
+                    overviewRow = _
+                        Me._manifest.SVFT_BINDING_OVERVIEW_LIST.AddNewS_MP_BOM_COMPONENTRow( _
+                            optionRow.OPTION_ID, _
+                            String.Format("{0}: {1}-{2} {^}  ", wareInfo, optionRow.MIN_QTY, optionRow.MAX_QTY, optionRow.UNIT_NAME), _
+                            Me._manifest.SV_EDITING_WARE_ID, _
+                            optionRow.COMPONENT_ID)
+
+                    overviewRow.ROW_REMARK = "OPTION"
+
+                Next
+
+                Me._manifest.TreeList_OverViewList.DataSource = Me._manifest.SVFT_BINDING_OVERVIEW_LIST
                 'Dim servResult As String = _
-                '    Me._service.ServBizUtld0004()
+                '    Me._service.ServLoadOverviewList()
 
                 'If servResult.Length > 0 Then
                 '    Return servResult        
                 'End If                       
+
 
             Catch ex As XL.Common.Utils.XLException
 

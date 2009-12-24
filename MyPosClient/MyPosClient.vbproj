@@ -359,6 +359,9 @@
     <Compile Include="Business\B02\B_02_01201.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Business\B02\B_02_01301.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Business\B03\B_03_00101.vb">
       <SubType>Component</SubType>
     </Compile>
@@ -792,6 +795,12 @@
       <DependentUpon>M_02_01201.vb</DependentUpon>
     </Compile>
     <Compile Include="Manifest\M02\M_02_01201.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_01301.Designer.vb">
+      <DependentUpon>M_02_01301.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manifest\M02\M_02_01301.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manifest\M03\M_03_01301.Designer.vb">
@@ -1469,6 +1478,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Manifest\M02\M_02_01201.resx">
       <DependentUpon>M_02_01201.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manifest\M02\M_02_01301.resx">
+      <DependentUpon>M_02_01301.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manifest\M03\M_03_01301.en.resx">
       <DependentUpon>M_03_01301.vb</DependentUpon>

@@ -68,7 +68,7 @@ Namespace Manifest
             Me.TextEdit_Search = New DevExpress.XtraEditors.TextEdit
             Me.Label1 = New System.Windows.Forms.Label
             Me.XtraTabControl1 = New DevExpress.XtraTab.XtraTabControl
-            Me.XtraTabPage1 = New DevExpress.XtraTab.XtraTabPage
+            Me.XtraTabPage_ComponentOption = New DevExpress.XtraTab.XtraTabPage
             Me.SplitContainerControl_BomSetup = New DevExpress.XtraEditors.SplitContainerControl
             Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl
             Me.TreeList_Component = New DevExpress.XtraTreeList.TreeList
@@ -113,11 +113,11 @@ Namespace Manifest
             Me.GridColumn_RowHighlight = New DevExpress.XtraGrid.Columns.GridColumn
             Me.PanelControl2 = New DevExpress.XtraEditors.PanelControl
             Me.ToolStrip1 = New System.Windows.Forms.ToolStrip
-            Me.ToolStripButton_SaveOptions = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_AddOptions = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_RemoveOptions = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_RefreshOptions = New System.Windows.Forms.ToolStripButton
-            Me.XtraTabPage2 = New DevExpress.XtraTab.XtraTabPage
+            Me.ToolStripButton_SaveOptions = New System.Windows.Forms.ToolStripButton
+            Me.XtraTabPage_OverView = New DevExpress.XtraTab.XtraTabPage
             Me.TreeList_OverViewList = New DevExpress.XtraTreeList.TreeList
             Me.TreeListColumn1 = New DevExpress.XtraTreeList.Columns.TreeListColumn
             Me.RepositoryItemImageComboBox1 = New DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox
@@ -131,7 +131,7 @@ Namespace Manifest
             CType(Me.TextEdit_Search.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.XtraTabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.XtraTabControl1.SuspendLayout()
-            Me.XtraTabPage1.SuspendLayout()
+            Me.XtraTabPage_ComponentOption.SuspendLayout()
             CType(Me.SplitContainerControl_BomSetup, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SplitContainerControl_BomSetup.SuspendLayout()
             CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -154,7 +154,7 @@ Namespace Manifest
             CType(Me.RepositoryItemLookUpEdit_SupplierID, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.ToolStrip1.SuspendLayout()
-            Me.XtraTabPage2.SuspendLayout()
+            Me.XtraTabPage_OverView.SuspendLayout()
             CType(Me.TreeList_OverViewList, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemImageComboBox1, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemTextEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -459,10 +459,10 @@ Namespace Manifest
             Me.XtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill
             Me.XtraTabControl1.Location = New System.Drawing.Point(0, 73)
             Me.XtraTabControl1.Name = "XtraTabControl1"
-            Me.XtraTabControl1.SelectedTabPage = Me.XtraTabPage1
+            Me.XtraTabControl1.SelectedTabPage = Me.XtraTabPage_ComponentOption
             Me.XtraTabControl1.Size = New System.Drawing.Size(749, 456)
             Me.XtraTabControl1.TabIndex = 10000
-            Me.XtraTabControl1.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.XtraTabPage1, Me.XtraTabPage2})
+            Me.XtraTabControl1.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.XtraTabPage_ComponentOption, Me.XtraTabPage_OverView})
             Me.XtraTabControl1.TabStop = False
             CTag16.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag16.CalculatorRequired = True
@@ -490,11 +490,11 @@ Namespace Manifest
             Me.XtraTabControl1.Tag = CTag16
             Me.XtraTabControl1.Text = "XtraTabControl1"
             '
-            'XtraTabPage1
+            'XtraTabPage_ComponentOption
             '
-            Me.XtraTabPage1.Controls.Add(Me.SplitContainerControl_BomSetup)
-            Me.XtraTabPage1.Name = "XtraTabPage1"
-            Me.XtraTabPage1.Size = New System.Drawing.Size(740, 424)
+            Me.XtraTabPage_ComponentOption.Controls.Add(Me.SplitContainerControl_BomSetup)
+            Me.XtraTabPage_ComponentOption.Name = "XtraTabPage_ComponentOption"
+            Me.XtraTabPage_ComponentOption.Size = New System.Drawing.Size(740, 424)
             CTag14.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag14.CalculatorRequired = True
             CTag14.ComboValueTextBox = Nothing
@@ -513,13 +513,13 @@ Namespace Manifest
             CTag14.KeyValueAbsentable = False
             CTag14.LeagleText = ""
             CTag14.NumericButtonTextBox = Nothing
-            CTag14.ParentControl = Me.XtraTabPage1
+            CTag14.ParentControl = Me.XtraTabPage_ComponentOption
             CTag14.SkipValidate = False
             CTag14.TimeButtonTextBox = Nothing
             CTag14.ToolTip = ""
             CTag14.ValueType = XL.Common.ControlValueType.Character
-            Me.XtraTabPage1.Tag = CTag14
-            Me.XtraTabPage1.Text = "当前货品"
+            Me.XtraTabPage_ComponentOption.Tag = CTag14
+            Me.XtraTabPage_ComponentOption.Text = "当前货品"
             '
             'SplitContainerControl_BomSetup
             '
@@ -1032,13 +1032,6 @@ Namespace Manifest
             CTag13.ValueType = XL.Common.ControlValueType.Character
             Me.ToolStrip1.Tag = CTag13
             '
-            'ToolStripButton_SaveOptions
-            '
-            Me.ToolStripButton_SaveOptions.Name = "ToolStripButton_SaveOptions"
-            Me.ToolStripButton_SaveOptions.Size = New System.Drawing.Size(36, 22)
-            Me.ToolStripButton_SaveOptions.Text = "保存"
-            Me.ToolStripButton_SaveOptions.Visible = False
-            '
             'ToolStripButton_AddOptions
             '
             Me.ToolStripButton_AddOptions.Name = "ToolStripButton_AddOptions"
@@ -1057,11 +1050,18 @@ Namespace Manifest
             Me.ToolStripButton_RefreshOptions.Size = New System.Drawing.Size(36, 22)
             Me.ToolStripButton_RefreshOptions.Text = "刷新"
             '
-            'XtraTabPage2
+            'ToolStripButton_SaveOptions
             '
-            Me.XtraTabPage2.Controls.Add(Me.TreeList_OverViewList)
-            Me.XtraTabPage2.Name = "XtraTabPage2"
-            Me.XtraTabPage2.Size = New System.Drawing.Size(740, 424)
+            Me.ToolStripButton_SaveOptions.Name = "ToolStripButton_SaveOptions"
+            Me.ToolStripButton_SaveOptions.Size = New System.Drawing.Size(36, 22)
+            Me.ToolStripButton_SaveOptions.Text = "保存"
+            Me.ToolStripButton_SaveOptions.Visible = False
+            '
+            'XtraTabPage_OverView
+            '
+            Me.XtraTabPage_OverView.Controls.Add(Me.TreeList_OverViewList)
+            Me.XtraTabPage_OverView.Name = "XtraTabPage_OverView"
+            Me.XtraTabPage_OverView.Size = New System.Drawing.Size(740, 424)
             CTag15.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag15.CalculatorRequired = True
             CTag15.ComboValueTextBox = Nothing
@@ -1080,22 +1080,22 @@ Namespace Manifest
             CTag15.KeyValueAbsentable = False
             CTag15.LeagleText = ""
             CTag15.NumericButtonTextBox = Nothing
-            CTag15.ParentControl = Me.XtraTabPage2
+            CTag15.ParentControl = Me.XtraTabPage_OverView
             CTag15.SkipValidate = False
             CTag15.TimeButtonTextBox = Nothing
             CTag15.ToolTip = ""
             CTag15.ValueType = XL.Common.ControlValueType.Character
-            Me.XtraTabPage2.Tag = CTag15
-            Me.XtraTabPage2.Text = "组织结构"
+            Me.XtraTabPage_OverView.Tag = CTag15
+            Me.XtraTabPage_OverView.Text = "组织结构"
             '
-            'TreeList_OverView
+            'TreeList_OverViewList
             '
             Me.TreeList_OverViewList.AllowDrop = True
             Me.TreeList_OverViewList.Columns.AddRange(New DevExpress.XtraTreeList.Columns.TreeListColumn() {Me.TreeListColumn1, Me.TreeListColumn2, Me.TreeListColumn3})
             Me.TreeList_OverViewList.Dock = System.Windows.Forms.DockStyle.Fill
             Me.TreeList_OverViewList.KeyFieldName = "COMPONENT_ID"
             Me.TreeList_OverViewList.Location = New System.Drawing.Point(0, 0)
-            Me.TreeList_OverViewList.Name = "TreeList_OverView"
+            Me.TreeList_OverViewList.Name = "TreeList_OverViewList"
             Me.TreeList_OverViewList.OptionsBehavior.DragNodes = True
             Me.TreeList_OverViewList.OptionsView.AutoWidth = False
             Me.TreeList_OverViewList.ParentFieldName = "PARENT_COMPONENT"
@@ -1111,11 +1111,11 @@ Namespace Manifest
             Me.TreeListColumn1.OptionsColumn.AllowFocus = False
             Me.TreeListColumn1.Visible = True
             Me.TreeListColumn1.VisibleIndex = 0
-            Me.TreeListColumn1.Width = 73
+            Me.TreeListColumn1.Width = 114
             '
             'RepositoryItemImageComboBox1
             '
-            Me.RepositoryItemImageComboBox1.Items.AddRange(New DevExpress.XtraEditors.Controls.ImageComboBoxItem() {New DevExpress.XtraEditors.Controls.ImageComboBoxItem("", "ROOT_WARE", 0), New DevExpress.XtraEditors.Controls.ImageComboBoxItem("", "COMPONENT", 1)})
+            Me.RepositoryItemImageComboBox1.Items.AddRange(New DevExpress.XtraEditors.Controls.ImageComboBoxItem() {New DevExpress.XtraEditors.Controls.ImageComboBoxItem("", "ROOT_WARE", 0), New DevExpress.XtraEditors.Controls.ImageComboBoxItem("", "COMPONENT", 1), New DevExpress.XtraEditors.Controls.ImageComboBoxItem("", "OPTION", 2)})
             Me.RepositoryItemImageComboBox1.LargeImages = Me.ImageCollection_TreeIcon
             Me.RepositoryItemImageComboBox1.Name = "RepositoryItemImageComboBox1"
             Me.RepositoryItemImageComboBox1.SmallImages = Me.ImageCollection_TreeIcon
@@ -1126,6 +1126,7 @@ Namespace Manifest
             Me.TreeListColumn2.ColumnEdit = Me.RepositoryItemTextEdit1
             Me.TreeListColumn2.FieldName = "COMPONENT_NAME"
             Me.TreeListColumn2.Name = "TreeListColumn2"
+            Me.TreeListColumn2.OptionsColumn.AllowFocus = False
             Me.TreeListColumn2.Visible = True
             Me.TreeListColumn2.VisibleIndex = 1
             Me.TreeListColumn2.Width = 646
@@ -1186,7 +1187,7 @@ Namespace Manifest
             CType(Me.TextEdit_Search.Properties, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.XtraTabControl1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.XtraTabControl1.ResumeLayout(False)
-            Me.XtraTabPage1.ResumeLayout(False)
+            Me.XtraTabPage_ComponentOption.ResumeLayout(False)
             CType(Me.SplitContainerControl_BomSetup, System.ComponentModel.ISupportInitialize).EndInit()
             Me.SplitContainerControl_BomSetup.ResumeLayout(False)
             CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1213,7 +1214,7 @@ Namespace Manifest
             CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ToolStrip1.ResumeLayout(False)
             Me.ToolStrip1.PerformLayout()
-            Me.XtraTabPage2.ResumeLayout(False)
+            Me.XtraTabPage_OverView.ResumeLayout(False)
             CType(Me.TreeList_OverViewList, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemImageComboBox1, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemTextEdit1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1228,8 +1229,8 @@ Namespace Manifest
         Friend WithEvents GroupControl1 As DevExpress.XtraEditors.GroupControl
         Friend WithEvents GroupControl2 As DevExpress.XtraEditors.GroupControl
         Friend WithEvents XtraTabControl1 As DevExpress.XtraTab.XtraTabControl
-        Friend WithEvents XtraTabPage1 As DevExpress.XtraTab.XtraTabPage
-        Friend WithEvents XtraTabPage2 As DevExpress.XtraTab.XtraTabPage
+        Friend WithEvents XtraTabPage_ComponentOption As DevExpress.XtraTab.XtraTabPage
+        Friend WithEvents XtraTabPage_OverView As DevExpress.XtraTab.XtraTabPage
         Friend WithEvents PanelControl1 As DevExpress.XtraEditors.PanelControl
         Friend WithEvents ToolStrip2 As System.Windows.Forms.ToolStrip
         Friend WithEvents ToolStripButton_SaveComponents As System.Windows.Forms.ToolStripButton
