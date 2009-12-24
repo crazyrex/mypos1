@@ -224,11 +224,99 @@
   <data name="ToolStripButton_Close.Text" xml:space="preserve">
     <value>Close</value>
   </data>
+  <data name="Label_WareID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>508, 17</value>
+  </data>
+  <data name="Label_CustomCode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 13</value>
+  </data>
+  <data name="ButtonEdit_WareCode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>274, 11</value>
+  </data>
+  <data name="ButtonEdit_WareCode.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="DevExpress.XtraEditors.v8.1" name="DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
+  <data name="ButtonEdit_WareCode.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
+    <value>Default</value>
+  </data>
+  <data name="ButtonEdit_WareCode.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ButtonEdit_WareCode.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ButtonEdit_WareCode.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ButtonEdit_WareCode.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
+    <value>None</value>
+  </data>
+  <data name="ButtonEdit_WareCode.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="ButtonEdit_WareCode.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ButtonEdit_WareCode.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ButtonEdit_WareCode.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Label18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 15</value>
+  </data>
+  <data name="Label18.Text" xml:space="preserve">
+    <value>Add item</value>
+  </data>
+  <data name="CheckEdit_SingleWareLocations.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="CheckEdit_SingleWareLocations.Properties.Caption" xml:space="preserve">
     <value>Show the item lot details only </value>
   </data>
   <data name="CheckEdit_SingleWareLocations.Size" type="System.Drawing.Size, System.Drawing">
     <value>195, 19</value>
+  </data>
+  <data name="LookUpEdit_Pos.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LookUpEdit_Pos.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
+    <value>Default</value>
+  </data>
+  <data name="LookUpEdit_Pos.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="LookUpEdit_Pos.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LookUpEdit_Pos.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LookUpEdit_Pos.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
+    <value>None</value>
+  </data>
+  <data name="LookUpEdit_Pos.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="LookUpEdit_Pos.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LookUpEdit_Pos.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LookUpEdit_Pos.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>594, 16</value>
+  </data>
+  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 15</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>Displaying Item</value>
   </data>
   <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 15</value>
@@ -236,14 +324,70 @@
   <data name="Label2.Text" xml:space="preserve">
     <value>Location</value>
   </data>
+  <data name="TextEdit_Search.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Search.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
+    <value>Default</value>
+  </data>
+  <data name="TextEdit_Search.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextEdit_Search.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextEdit_Search.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Search.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
+    <value>None</value>
+  </data>
+  <data name="TextEdit_Search.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="TextEdit_Search.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Search.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextEdit_Search.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 15</value>
   </data>
   <data name="Label1.Text" xml:space="preserve">
     <value>Search</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="GridControl_NormalList.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left</value>
+  </data>
+  <data name="GridControl_NormalList.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Tile</value>
+  </data>
+  <data name="GridControl_NormalList.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
+  </data>
+  <data name="GridControl_NormalList.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v8.1">
+    <value>Center</value>
+  </data>
+  <data name="GridControl_NormalList.EmbeddedNavigator.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <assembly alias="DevExpress.Utils.v8.1" name="DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
+  <data name="GridControl_NormalList.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v8.1">
+    <value>None</value>
+  </data>
+  <data name="GridControl_NormalList.EmbeddedNavigator.ToolTipTitle" xml:space="preserve">
+    <value />
+  </data>
   <data name="GridColumn_WareCode.Caption" xml:space="preserve">
     <value>Barcode</value>
+  </data>
+  <data name="GridColumn_WareCode.SummaryItem.DisplayFormat" xml:space="preserve">
+    <value />
   </data>
   <data name="GridColumn_CustomCode.Caption" xml:space="preserve">
     <value>Item code</value>
@@ -260,14 +404,17 @@
   <data name="GridColumn_CurrentAmount.Caption" xml:space="preserve">
     <value>Book inventory Qty.</value>
   </data>
+  <data name="GridColumn_CurrentAmount.SummaryItem.DisplayFormat" xml:space="preserve">
+    <value />
+  </data>
   <data name="GridColumn_CurrentCost.Caption" xml:space="preserve">
     <value>Book inventory cost</value>
   </data>
-  <data name="GridColumn_CurrentOrigionSumPrice.Caption" xml:space="preserve">
-    <value>原价</value>
+  <data name="GridColumn_CurrentCost.SummaryItem.DisplayFormat" xml:space="preserve">
+    <value />
   </data>
-  <data name="GridColumn_CurrentOrigionSumPrice.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="GridColumn_CurrentOrigionSumPrice.SummaryItem.DisplayFormat" xml:space="preserve">
+    <value />
   </data>
   <data name="GridColumn_CurrentOrigionSumPrice.VisibleIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -281,17 +428,26 @@
   <data name="GridColumn_LackAmount.Caption" xml:space="preserve">
     <value>OOS Qty.</value>
   </data>
+  <data name="GridColumn_LackAmount.SummaryItem.DisplayFormat" xml:space="preserve">
+    <value />
+  </data>
   <data name="GridColumn_LackAmount.VisibleIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
   <data name="GridColumn_ConsignOutRemains.Caption" xml:space="preserve">
     <value>Consign out remains</value>
   </data>
+  <data name="GridColumn_ConsignOutRemains.SummaryItem.DisplayFormat" xml:space="preserve">
+    <value />
+  </data>
   <data name="GridColumn_ConsignOutRemains.VisibleIndex" type="System.Int32, mscorlib">
     <value>13</value>
   </data>
   <data name="GridColumn_ConsignInRemains.Caption" xml:space="preserve">
     <value>Consign in remains</value>
+  </data>
+  <data name="GridColumn_ConsignInRemains.SummaryItem.DisplayFormat" xml:space="preserve">
+    <value />
   </data>
   <data name="GridColumn_ConsignInRemains.VisibleIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -311,8 +467,32 @@
   <data name="XtraTabPage_NormalList.Text" xml:space="preserve">
     <value>Book inventory Qty.</value>
   </data>
+  <data name="GridControl_ShelfStockDifference.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left</value>
+  </data>
+  <data name="GridControl_ShelfStockDifference.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Tile</value>
+  </data>
+  <data name="GridControl_ShelfStockDifference.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
+  </data>
+  <data name="GridControl_ShelfStockDifference.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v8.1">
+    <value>Center</value>
+  </data>
+  <data name="GridControl_ShelfStockDifference.EmbeddedNavigator.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GridControl_ShelfStockDifference.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v8.1">
+    <value>None</value>
+  </data>
+  <data name="GridControl_ShelfStockDifference.EmbeddedNavigator.ToolTipTitle" xml:space="preserve">
+    <value />
+  </data>
   <data name="GridColumn_SWareCode.Caption" xml:space="preserve">
     <value>Barcode</value>
+  </data>
+  <data name="GridColumn_SWareCode.SummaryItem.DisplayFormat" xml:space="preserve">
+    <value />
   </data>
   <data name="GridColumn_SCustomCode.Caption" xml:space="preserve">
     <value>Item code</value>
@@ -329,11 +509,20 @@
   <data name="GridColumn_SelfAmount.Caption" xml:space="preserve">
     <value>Lot Qty.</value>
   </data>
+  <data name="GridColumn_SelfAmount.SummaryItem.DisplayFormat" xml:space="preserve">
+    <value />
+  </data>
   <data name="GridColumn_PosAmount.Caption" xml:space="preserve">
     <value>Book inventory Qty.</value>
   </data>
+  <data name="GridColumn_PosAmount.SummaryItem.DisplayFormat" xml:space="preserve">
+    <value />
+  </data>
   <data name="GridColumn_DifferenceAmount.Caption" xml:space="preserve">
     <value>Differences</value>
+  </data>
+  <data name="GridColumn_DifferenceAmount.SummaryItem.DisplayFormat" xml:space="preserve">
+    <value />
   </data>
   <data name="GridColumn_SUnitName.Caption" xml:space="preserve">
     <value>Unit</value>
@@ -341,14 +530,44 @@
   <data name="GridColumn_SRemark.Caption" xml:space="preserve">
     <value>Remarks</value>
   </data>
+  <data name="GridControl_ShelfStockDifference.Size" type="System.Drawing.Size, System.Drawing">
+    <value>742, 367</value>
+  </data>
+  <data name="XtraTabPage_ShelfPosDifference.Size" type="System.Drawing.Size, System.Drawing">
+    <value>742, 367</value>
+  </data>
   <data name="XtraTabPage_ShelfPosDifference.Text" xml:space="preserve">
     <value>Differences</value>
+  </data>
+  <data name="GridControl_BatchWareList.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left</value>
+  </data>
+  <data name="GridControl_BatchWareList.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Tile</value>
+  </data>
+  <data name="GridControl_BatchWareList.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
+  </data>
+  <data name="GridControl_BatchWareList.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v8.1">
+    <value>Center</value>
+  </data>
+  <data name="GridControl_BatchWareList.EmbeddedNavigator.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GridControl_BatchWareList.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v8.1">
+    <value>None</value>
+  </data>
+  <data name="GridControl_BatchWareList.EmbeddedNavigator.ToolTipTitle" xml:space="preserve">
+    <value />
   </data>
   <data name="GridColumn_BatchCode.Caption" xml:space="preserve">
     <value>Batch code</value>
   </data>
   <data name="GridColumn_BWareCode.Caption" xml:space="preserve">
     <value>Barcode</value>
+  </data>
+  <data name="GridColumn_BWareCode.SummaryItem.DisplayFormat" xml:space="preserve">
+    <value />
   </data>
   <data name="GridColumn_BCustomCode.Caption" xml:space="preserve">
     <value>Item code</value>
@@ -365,17 +584,50 @@
   <data name="GridColumn_BCurrentAmount.Caption" xml:space="preserve">
     <value>Book inventory Qty.</value>
   </data>
+  <data name="GridColumn_BCurrentAmount.SummaryItem.DisplayFormat" xml:space="preserve">
+    <value />
+  </data>
   <data name="GridColumn_BUnitName.Caption" xml:space="preserve">
     <value>Unit</value>
   </data>
   <data name="GridColumn_BRemark.Caption" xml:space="preserve">
     <value>Remarks</value>
   </data>
+  <data name="GridControl_BatchWareList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>742, 367</value>
+  </data>
+  <data name="XtraTabPage_BatchList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>742, 367</value>
+  </data>
   <data name="XtraTabPage_BatchList.Text" xml:space="preserve">
     <value>Batch code Qty.</value>
   </data>
+  <data name="GridControl_ShelfAmount.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left</value>
+  </data>
+  <data name="GridControl_ShelfAmount.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Tile</value>
+  </data>
+  <data name="GridControl_ShelfAmount.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
+  </data>
+  <data name="GridControl_ShelfAmount.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v8.1">
+    <value>Center</value>
+  </data>
+  <data name="GridControl_ShelfAmount.EmbeddedNavigator.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GridControl_ShelfAmount.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v8.1">
+    <value>None</value>
+  </data>
+  <data name="GridControl_ShelfAmount.EmbeddedNavigator.ToolTipTitle" xml:space="preserve">
+    <value />
+  </data>
   <data name="GridColumn_ShelfWareCode.Caption" xml:space="preserve">
     <value>Barcode</value>
+  </data>
+  <data name="GridColumn_ShelfWareCode.SummaryItem.DisplayFormat" xml:space="preserve">
+    <value />
   </data>
   <data name="GridColumn_ShelfCustomCode.Caption" xml:space="preserve">
     <value>Item code</value>
@@ -398,11 +650,20 @@
   <data name="GridColumn_LocationStockAmount.Caption" xml:space="preserve">
     <value>Lot Qty.</value>
   </data>
+  <data name="GridColumn_LocationStockAmount.SummaryItem.DisplayFormat" xml:space="preserve">
+    <value />
+  </data>
   <data name="GridColumn_ShelfUnitName.Caption" xml:space="preserve">
     <value>Unit</value>
   </data>
   <data name="GridColumn_ShelfRemark.Caption" xml:space="preserve">
     <value>Remarks</value>
+  </data>
+  <data name="GridControl_ShelfAmount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>742, 367</value>
+  </data>
+  <data name="XtraTabPage_ShelfAmount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>742, 367</value>
   </data>
   <data name="XtraTabPage_ShelfAmount.Text" xml:space="preserve">
     <value>Lot details</value>

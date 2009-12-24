@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="DefaultLookAndFeel_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>295, 0</value>
+    <value>294, 0</value>
   </metadata>
   <metadata name="Timer_Surveillant.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>138, 0</value>
+    <value>141, 0</value>
   </metadata>
   <metadata name="ToolStrip_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
@@ -130,23 +130,23 @@
   <data name="ToolStripButton_Choose.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAgxJREFUOE+lkvtL
-        U2EYx+0PEbtpFwnBKPGKiJImGP0gYhIYs1E5GF5gIxkpA00JRSmMEF0ohMh+GaRWYlqabMVcNdS2QpaI
-        VqiDIYhk397vA6fXhCjyhYdzeM/5fp7vczkAdeL2cwho7v/wWzT1zcN+Pwhr51uY2/y41PQaF+wzKKiZ
-        QvaN58g0jyLd5KEUcQbg+84P/Cm2tncQjW3j68YWIqubCC3FcOJc478BAuGoZM6zvoRnakXEruEIjhc4
-        /g5gZop9c+voGAyLbQIfeBZxLL9BA1jzXvuGbWamuKh+GmmVbswE19A59FEBbmoAG7YbsLtm2mZmiml9
-        cvabNDwpz6YB7LYBoMXCumkJr7LOmnnHzBQ/9X2Bo2cOibm1GsBREbAQiYmw/8lnuCeWkVzcgnZlnw1j
-        3HV/wuNXK6i/9x5Hc6wawDlTXHbLJ+LZUBQPRyKwdQdxutwl1h+NLXHh5Ht1ewBHsiwawCW57HyDAfWR
-        dvl0uhZQ1eqX8aVc7EKLqrum651ATLf9OJx5XQM4KmY0xPzZ0hFAiQJnXB0WwME0E3IsL5B17ZlADqWb
-        NYDrOepdlcysmTWWOrxqbceRWtaLk0VO1XW72D5Vckd2gMBfq8zdpmUG62NJvKM4+XyziDk24xmfWoGE
-        s1c0gHPmbrPTpHNJKOCo2G1mZs20zcwUJ5yp1AB5+8/zEwgF5GMVDxh4AAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIISURBVDhPpZP7S1NxGMbPPxKaXVUkMEq8IpKUCoY/hGgI
+        ymqkDYYXcCjDZOANURSjCNGFQUTsl4GXVMxKk62YU4fXQpaIlygHQxBRH8/zwvyaIAYe+HLgnPN8nue9
+        HA3nvDTq63oW/jm13XOwvPTB3DYFY5MH+bXfcN8ygfTSMSSXfESicQDxBqdYHwH29g9w2tnZ3UcguIvN
+        rR3417exuBJE5N1n/wfwLgXEOc38Bc6xNRHb+/y4nm49G0Bnit2zf9H6bkliE/jKuYxrd6oVgDWfjB+K
+        TWeKMyrGEVfowITvD9re/9ABVQrAhh0HHK+ZselMMaN/mvwtDb+aVqkA7HYIwIj3ysfluPTorJnP6Ezx
+        oHsD1s5ZXEktUwCOioB5f1CEPR9+wTG6iuiserTo8dkwng7HT/R+XUPF8xlcTjErAOdMcW6NW8STiwG8
+        7vej8oUPN/PsEv3t8Ao0TZP3T1u8uJRkUgAuSYHtO97oLxmXd5t9Ho8aPTK+GzntqNfrLm2fFoihwYOI
+        xGIF4KjoGBLzY1OrF9k6OOFxnwDC4wxIMX1G0pMhgVyMNyoA13PAtS7OrJk1PrC69LUdQWxuF6IybHrX
+        LRI7JrtZdoDAo1XmbjMyD+tjSXxGcXRmnYg5ttD9QuxDhN0uUgDOmbvNTpPOJaGAo2K36cyaGZvOFIfd
+        KlSA8/zRh9ABIDUG+1JpAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="ToolStripButton_Choose.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
   <data name="ToolStripButton_Choose.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 22</value>
+    <value>36, 22</value>
   </data>
   <data name="ToolStripButton_Choose.Text" xml:space="preserve">
     <value>选择</value>
@@ -156,7 +156,7 @@
     <value>False</value>
   </data>
   <data name="ToolStripButton_Refresh.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 22</value>
+    <value>36, 22</value>
   </data>
   <data name="ToolStripButton_Refresh.Text" xml:space="preserve">
     <value>刷新</value>
@@ -164,29 +164,29 @@
   <data name="ToolStripButton_ExportExcel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAgxJREFUOE+lkvtL
-        U2EYx+0PEbtpFwnBKPGKiJImGP0gYhIYs1E5GF5gIxkpA00JRSmMEF0ohMh+GaRWYlqabMVcNdS2QpaI
-        VqiDIYhk397vA6fXhCjyhYdzeM/5fp7vczkAdeL2cwho7v/wWzT1zcN+Pwhr51uY2/y41PQaF+wzKKiZ
-        QvaN58g0jyLd5KEUcQbg+84P/Cm2tncQjW3j68YWIqubCC3FcOJc478BAuGoZM6zvoRnakXEruEIjhc4
-        /g5gZop9c+voGAyLbQIfeBZxLL9BA1jzXvuGbWamuKh+GmmVbswE19A59FEBbmoAG7YbsLtm2mZmiml9
-        cvabNDwpz6YB7LYBoMXCumkJr7LOmnnHzBQ/9X2Bo2cOibm1GsBREbAQiYmw/8lnuCeWkVzcgnZlnw1j
-        3HV/wuNXK6i/9x5Hc6wawDlTXHbLJ+LZUBQPRyKwdQdxutwl1h+NLXHh5Ht1ewBHsiwawCW57HyDAfWR
-        dvl0uhZQ1eqX8aVc7EKLqrum651ATLf9OJx5XQM4KmY0xPzZ0hFAiQJnXB0WwME0E3IsL5B17ZlADqWb
-        NYDrOepdlcysmTWWOrxqbceRWtaLk0VO1XW72D5Vckd2gMBfq8zdpmUG62NJvKM4+XyziDk24xmfWoGE
-        s1c0gHPmbrPTpHNJKOCo2G1mZs20zcwUJ5yp1AB5+8/zEwgF5GMVDxh4AAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIISURBVDhPpZP7S1NxGMbPPxKaXVUkMEq8IpKUCoY/hGgI
+        ymqkDYYXcCjDZOANURSjCNGFQUTsl4GXVMxKk62YU4fXQpaIlygHQxBRH8/zwvyaIAYe+HLgnPN8nue9
+        HA3nvDTq63oW/jm13XOwvPTB3DYFY5MH+bXfcN8ygfTSMSSXfESicQDxBqdYHwH29g9w2tnZ3UcguIvN
+        rR3417exuBJE5N1n/wfwLgXEOc38Bc6xNRHb+/y4nm49G0Bnit2zf9H6bkliE/jKuYxrd6oVgDWfjB+K
+        TWeKMyrGEVfowITvD9re/9ABVQrAhh0HHK+ZselMMaN/mvwtDb+aVqkA7HYIwIj3ysfluPTorJnP6Ezx
+        oHsD1s5ZXEktUwCOioB5f1CEPR9+wTG6iuiserTo8dkwng7HT/R+XUPF8xlcTjErAOdMcW6NW8STiwG8
+        7vej8oUPN/PsEv3t8Ao0TZP3T1u8uJRkUgAuSYHtO97oLxmXd5t9Ho8aPTK+GzntqNfrLm2fFoihwYOI
+        xGIF4KjoGBLzY1OrF9k6OOFxnwDC4wxIMX1G0pMhgVyMNyoA13PAtS7OrJk1PrC69LUdQWxuF6IybHrX
+        LRI7JrtZdoDAo1XmbjMyD+tjSXxGcXRmnYg5ttD9QuxDhN0uUgDOmbvNTpPOJaGAo2K36cyaGZvOFIfd
+        KlSA8/zRh9ABIDUG+1JpAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="ToolStripButton_ExportExcel.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
   <data name="ToolStripButton_ExportExcel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 22</value>
+    <value>65, 22</value>
   </data>
   <data name="ToolStripButton_ExportExcel.Text" xml:space="preserve">
     <value>导出Excel</value>
   </data>
   <data name="ToolStripButton_PrintReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 22</value>
+    <value>36, 22</value>
   </data>
   <data name="ToolStripButton_PrintReport.Text" xml:space="preserve">
     <value>打印</value>
@@ -195,7 +195,7 @@
     <value>Magenta</value>
   </data>
   <data name="ToolStripButton_ViewTurnoverDtl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 22</value>
+    <value>60, 22</value>
   </data>
   <data name="ToolStripButton_ViewTurnoverDtl.Text" xml:space="preserve">
     <value>明细查询</value>
@@ -204,7 +204,7 @@
     <value>Magenta</value>
   </data>
   <data name="ToolStripButton_View.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 22</value>
+    <value>36, 22</value>
   </data>
   <data name="ToolStripButton_View.Text" xml:space="preserve">
     <value>查看</value>
@@ -213,7 +213,7 @@
     <value>False</value>
   </data>
   <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 22</value>
+    <value>36, 22</value>
   </data>
   <data name="ToolStripButton_Close.Text" xml:space="preserve">
     <value>关闭</value>
@@ -222,7 +222,7 @@
     <value>0, 0</value>
   </data>
   <data name="ToolStrip_Form.Size" type="System.Drawing.Size, System.Drawing">
-    <value>700, 25</value>
+    <value>751, 25</value>
   </data>
   <data name="ToolStrip_Form.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -239,8 +239,207 @@
   <data name="&gt;&gt;ToolStrip_Form.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="LinkLabel_RemoveWare.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="LinkLabel_RemoveWare.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LinkLabel_RemoveWare.Location" type="System.Drawing.Point, System.Drawing">
+    <value>442, 48</value>
+  </data>
+  <data name="LinkLabel_RemoveWare.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 17</value>
+  </data>
+  <data name="LinkLabel_RemoveWare.TabIndex" type="System.Int32, mscorlib">
+    <value>10014</value>
+  </data>
+  <data name="LinkLabel_RemoveWare.Text" xml:space="preserve">
+    <value>去除</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_RemoveWare.Name" xml:space="preserve">
+    <value>LinkLabel_RemoveWare</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_RemoveWare.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_RemoveWare.Parent" xml:space="preserve">
+    <value>PanelControl_Filter</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_RemoveWare.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="LinkLabel_CancelAll.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="LinkLabel_CancelAll.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LinkLabel_CancelAll.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LinkLabel_CancelAll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>514, 48</value>
+  </data>
+  <data name="LinkLabel_CancelAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 15</value>
+  </data>
+  <data name="LinkLabel_CancelAll.TabIndex" type="System.Int32, mscorlib">
+    <value>10013</value>
+  </data>
+  <data name="LinkLabel_CancelAll.Text" xml:space="preserve">
+    <value>全不选</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_CancelAll.Name" xml:space="preserve">
+    <value>LinkLabel_CancelAll</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_CancelAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_CancelAll.Parent" xml:space="preserve">
+    <value>PanelControl_Filter</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_CancelAll.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="LinkLabel_SelectAll.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="LinkLabel_SelectAll.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LinkLabel_SelectAll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>482, 48</value>
+  </data>
+  <data name="LinkLabel_SelectAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 17</value>
+  </data>
+  <data name="LinkLabel_SelectAll.TabIndex" type="System.Int32, mscorlib">
+    <value>10012</value>
+  </data>
+  <data name="LinkLabel_SelectAll.Text" xml:space="preserve">
+    <value>全选</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_SelectAll.Name" xml:space="preserve">
+    <value>LinkLabel_SelectAll</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_SelectAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_SelectAll.Parent" xml:space="preserve">
+    <value>PanelControl_Filter</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_SelectAll.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Label_WareID.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label_WareID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>563, 17</value>
+  </data>
+  <data name="Label_WareID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 18</value>
+  </data>
+  <data name="Label_WareID.TabIndex" type="System.Int32, mscorlib">
+    <value>10011</value>
+  </data>
+  <data name="Label_WareID.Text" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Label_WareID.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;Label_WareID.Name" xml:space="preserve">
+    <value>Label_WareID</value>
+  </data>
+  <data name="&gt;&gt;Label_WareID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label_WareID.Parent" xml:space="preserve">
+    <value>PanelControl_Filter</value>
+  </data>
+  <data name="&gt;&gt;Label_WareID.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="Label_CustomCode.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label_CustomCode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>420, 16</value>
+  </data>
+  <data name="Label_CustomCode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 18</value>
+  </data>
+  <data name="Label_CustomCode.TabIndex" type="System.Int32, mscorlib">
+    <value>10010</value>
+  </data>
+  <data name="&gt;&gt;Label_CustomCode.Name" xml:space="preserve">
+    <value>Label_CustomCode</value>
+  </data>
+  <data name="&gt;&gt;Label_CustomCode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label_CustomCode.Parent" xml:space="preserve">
+    <value>PanelControl_Filter</value>
+  </data>
+  <data name="&gt;&gt;Label_CustomCode.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="ButtonEdit_WareCode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>298, 14</value>
+  </data>
+  <data name="ButtonEdit_WareCode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 21</value>
+  </data>
+  <data name="ButtonEdit_WareCode.TabIndex" type="System.Int32, mscorlib">
+    <value>10009</value>
+  </data>
+  <data name="&gt;&gt;ButtonEdit_WareCode.Name" xml:space="preserve">
+    <value>ButtonEdit_WareCode</value>
+  </data>
+  <data name="&gt;&gt;ButtonEdit_WareCode.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.ButtonEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;ButtonEdit_WareCode.Parent" xml:space="preserve">
+    <value>PanelControl_Filter</value>
+  </data>
+  <data name="&gt;&gt;ButtonEdit_WareCode.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="Label18.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label18.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label18.Location" type="System.Drawing.Point, System.Drawing">
+    <value>213, 17</value>
+  </data>
+  <data name="Label18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 15</value>
+  </data>
+  <data name="Label18.TabIndex" type="System.Int32, mscorlib">
+    <value>10008</value>
+  </data>
+  <data name="Label18.Text" xml:space="preserve">
+    <value>添加显示货品</value>
+  </data>
+  <data name="&gt;&gt;Label18.Name" xml:space="preserve">
+    <value>Label18</value>
+  </data>
+  <data name="&gt;&gt;Label18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label18.Parent" xml:space="preserve">
+    <value>PanelControl_Filter</value>
+  </data>
+  <data name="&gt;&gt;Label18.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
   <data name="CheckEdit_SingleWareLocations.Location" type="System.Drawing.Point, System.Drawing">
-    <value>476, 16</value>
+    <value>613, 44</value>
   </data>
   <data name="CheckEdit_SingleWareLocations.Properties.Caption" xml:space="preserve">
     <value>仅显示此货品储位</value>
@@ -261,10 +460,10 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;CheckEdit_SingleWareLocations.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>7</value>
   </data>
   <data name="LookUpEdit_Pos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>84, 16</value>
+    <value>70, 15</value>
   </data>
   <assembly alias="DevExpress.Utils.v8.1" name="DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
   <data name="LookUpEdit_Pos.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
@@ -286,7 +485,73 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;LookUpEdit_Pos.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>8</value>
+  </data>
+  <data name="Label_DisplayingWareCount.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="Label_DisplayingWareCount.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label_DisplayingWareCount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>697, 17</value>
+  </data>
+  <data name="Label_DisplayingWareCount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 19</value>
+  </data>
+  <data name="Label_DisplayingWareCount.TabIndex" type="System.Int32, mscorlib">
+    <value>10005</value>
+  </data>
+  <data name="Label_DisplayingWareCount.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Label_DisplayingWareCount.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;Label_DisplayingWareCount.Name" xml:space="preserve">
+    <value>Label_DisplayingWareCount</value>
+  </data>
+  <data name="&gt;&gt;Label_DisplayingWareCount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label_DisplayingWareCount.Parent" xml:space="preserve">
+    <value>PanelControl_Filter</value>
+  </data>
+  <data name="&gt;&gt;Label_DisplayingWareCount.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="Label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="Label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>612, 17</value>
+  </data>
+  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 15</value>
+  </data>
+  <data name="Label3.TabIndex" type="System.Int32, mscorlib">
+    <value>10005</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>显示货品数量</value>
+  </data>
+  <data name="&gt;&gt;Label3.Name" xml:space="preserve">
+    <value>Label3</value>
+  </data>
+  <data name="&gt;&gt;Label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label3.Parent" xml:space="preserve">
+    <value>PanelControl_Filter</value>
+  </data>
+  <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
+    <value>10</value>
   </data>
   <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -316,13 +581,13 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>11</value>
   </data>
   <data name="TextEdit_Search.EditValue" xml:space="preserve">
     <value />
   </data>
   <data name="TextEdit_Search.Location" type="System.Drawing.Point, System.Drawing">
-    <value>286, 16</value>
+    <value>70, 42</value>
   </data>
   <data name="TextEdit_Search.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 21</value>
@@ -340,7 +605,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;TextEdit_Search.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>12</value>
   </data>
   <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -349,7 +614,7 @@
     <value>Arial, 9pt</value>
   </data>
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 18</value>
+    <value>17, 44</value>
   </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 15</value>
@@ -370,9 +635,8 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>13</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="PanelControl_Filter.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
@@ -380,7 +644,7 @@
     <value>0, 25</value>
   </data>
   <data name="PanelControl_Filter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>700, 52</value>
+    <value>751, 76</value>
   </data>
   <data name="PanelControl_Filter.TabIndex" type="System.Int32, mscorlib">
     <value>10001</value>
@@ -401,13 +665,25 @@
     <value>Fill</value>
   </data>
   <data name="XtraTabControl_Lists.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 77</value>
+    <value>0, 101</value>
   </data>
   <data name="GridControl_NormalList.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
   <data name="GridControl_NormalList.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
+  </data>
+  <data name="GridColumn_Select.Caption" xml:space="preserve">
+    <value>选择</value>
+  </data>
+  <data name="RepositoryItemCheckEdit_Select.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="GridColumn_Select.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn_Select.VisibleIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="GridColumn_WareCode.Caption" xml:space="preserve">
     <value>货品代码</value>
@@ -416,7 +692,7 @@
     <value>True</value>
   </data>
   <data name="GridColumn_WareCode.VisibleIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="GridColumn_CustomCode.Caption" xml:space="preserve">
     <value>自定货号</value>
@@ -425,7 +701,7 @@
     <value>True</value>
   </data>
   <data name="GridColumn_CustomCode.VisibleIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="GridColumn_WareName.Caption" xml:space="preserve">
     <value>货品名称</value>
@@ -434,7 +710,7 @@
     <value>True</value>
   </data>
   <data name="GridColumn_WareName.VisibleIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="GridColumn_Spec.Caption" xml:space="preserve">
     <value>货品规格</value>
@@ -443,7 +719,7 @@
     <value>True</value>
   </data>
   <data name="GridColumn_Spec.VisibleIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="GridColumn_Model.Caption" xml:space="preserve">
     <value>货品型号</value>
@@ -452,7 +728,7 @@
     <value>True</value>
   </data>
   <data name="GridColumn_Model.VisibleIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="GridColumn_Attribute1.Caption" xml:space="preserve">
     <value>属性1</value>
@@ -461,7 +737,7 @@
     <value>True</value>
   </data>
   <data name="GridColumn_Attribute1.VisibleIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="GridColumn_Attribute2.Caption" xml:space="preserve">
     <value>属性2</value>
@@ -470,7 +746,7 @@
     <value>True</value>
   </data>
   <data name="GridColumn_Attribute2.VisibleIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="GridColumn_Attribute3.Caption" xml:space="preserve">
     <value>属性3</value>
@@ -479,7 +755,7 @@
     <value>True</value>
   </data>
   <data name="GridColumn_Attribute3.VisibleIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="GridColumn_Attribute4.Caption" xml:space="preserve">
     <value>属性4</value>
@@ -488,7 +764,7 @@
     <value>True</value>
   </data>
   <data name="GridColumn_Attribute4.VisibleIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="GridColumn_CurrentAmount.Caption" xml:space="preserve">
     <value>当前数量</value>
@@ -497,7 +773,7 @@
     <value>True</value>
   </data>
   <data name="GridColumn_CurrentAmount.VisibleIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="GridColumn_CurrentCost.Caption" xml:space="preserve">
     <value>当前成本</value>
@@ -506,7 +782,7 @@
     <value>True</value>
   </data>
   <data name="GridColumn_CurrentCost.VisibleIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="GridColumn_CurrentOrigionSumPrice.Caption" xml:space="preserve">
     <value>原价</value>
@@ -515,7 +791,7 @@
     <value>True</value>
   </data>
   <data name="GridColumn_CurrentOrigionSumPrice.VisibleIndex" type="System.Int32, mscorlib">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="GridColumn_LowerLimit.Caption" xml:space="preserve">
     <value>最低库存限制</value>
@@ -524,7 +800,7 @@
     <value>True</value>
   </data>
   <data name="GridColumn_LowerLimit.VisibleIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="GridColumn_LackAmount.Caption" xml:space="preserve">
     <value>缺货数量</value>
@@ -533,7 +809,7 @@
     <value>True</value>
   </data>
   <data name="GridColumn_LackAmount.VisibleIndex" type="System.Int32, mscorlib">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="GridColumn_ConsignOutRemains.Caption" xml:space="preserve">
     <value>出货缺交货量</value>
@@ -542,7 +818,7 @@
     <value>True</value>
   </data>
   <data name="GridColumn_ConsignOutRemains.VisibleIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="GridColumn_ConsignInRemains.Caption" xml:space="preserve">
     <value>入货缺交货量</value>
@@ -551,7 +827,7 @@
     <value>True</value>
   </data>
   <data name="GridColumn_ConsignInRemains.VisibleIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="GridColumn_UnitName.Caption" xml:space="preserve">
     <value>单位</value>
@@ -560,7 +836,7 @@
     <value>True</value>
   </data>
   <data name="GridColumn_UnitName.VisibleIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="GridColumn_Remarks.Caption" xml:space="preserve">
     <value>备注</value>
@@ -569,13 +845,13 @@
     <value>True</value>
   </data>
   <data name="GridColumn_Remarks.VisibleIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="GridColumn_RowHighlight.Caption" xml:space="preserve">
     <value>高亮显示</value>
   </data>
   <data name="GridControl_NormalList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>691, 391</value>
+    <value>742, 367</value>
   </data>
   <data name="GridControl_NormalList.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -593,7 +869,7 @@
     <value>0</value>
   </data>
   <data name="XtraTabPage_NormalList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>691, 391</value>
+    <value>742, 367</value>
   </data>
   <data name="XtraTabPage_NormalList.Text" xml:space="preserve">
     <value>货品总量</value>
@@ -611,7 +887,7 @@
     <value>0</value>
   </data>
   <data name="XtraTabControl_Lists.Size" type="System.Drawing.Size, System.Drawing">
-    <value>700, 423</value>
+    <value>751, 399</value>
   </data>
   <data name="XtraTabControl_Lists.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -752,7 +1028,7 @@
     <value>高亮显示</value>
   </data>
   <data name="GridControl_ShelfStockDifference.Size" type="System.Drawing.Size, System.Drawing">
-    <value>691, 391</value>
+    <value>742, 367</value>
   </data>
   <data name="GridControl_ShelfStockDifference.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -770,7 +1046,7 @@
     <value>0</value>
   </data>
   <data name="XtraTabPage_ShelfPosDifference.Size" type="System.Drawing.Size, System.Drawing">
-    <value>691, 391</value>
+    <value>742, 367</value>
   </data>
   <data name="XtraTabPage_ShelfPosDifference.Text" xml:space="preserve">
     <value>库存储位数量差异</value>
@@ -914,7 +1190,7 @@
     <value>高亮显示</value>
   </data>
   <data name="GridControl_BatchWareList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>691, 391</value>
+    <value>742, 367</value>
   </data>
   <data name="GridControl_BatchWareList.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -932,7 +1208,7 @@
     <value>0</value>
   </data>
   <data name="XtraTabPage_BatchList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>691, 391</value>
+    <value>742, 367</value>
   </data>
   <data name="XtraTabPage_BatchList.Text" xml:space="preserve">
     <value>批号数量</value>
@@ -1085,7 +1361,7 @@
     <value>高亮显示</value>
   </data>
   <data name="GridControl_ShelfAmount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>691, 391</value>
+    <value>742, 367</value>
   </data>
   <data name="GridControl_ShelfAmount.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1103,7 +1379,7 @@
     <value>0</value>
   </data>
   <data name="XtraTabPage_ShelfAmount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>691, 391</value>
+    <value>742, 367</value>
   </data>
   <data name="XtraTabPage_ShelfAmount.Text" xml:space="preserve">
     <value>储位数量</value>
@@ -1136,7 +1412,7 @@
     <value>0</value>
   </data>
   <metadata name="SaveFileDialog_ExportExcel.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>489, 0</value>
+    <value>502, 0</value>
   </metadata>
   <data name="SaveFileDialog_ExportExcel.Filter" xml:space="preserve">
     <value>Excel文档|*.xls</value>
@@ -1154,7 +1430,7 @@
     <value>3, 4, 3, 4</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>700, 500</value>
+    <value>751, 500</value>
   </data>
   <data name="&gt;&gt;DefaultLookAndFeel_Form.Name" xml:space="preserve">
     <value>DefaultLookAndFeel_Form</value>
@@ -1215,6 +1491,18 @@
   </data>
   <data name="&gt;&gt;GridView_NormalList.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_Select.Name" xml:space="preserve">
+    <value>GridColumn_Select</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_Select.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;RepositoryItemCheckEdit_Select.Name" xml:space="preserve">
+    <value>RepositoryItemCheckEdit_Select</value>
+  </data>
+  <data name="&gt;&gt;RepositoryItemCheckEdit_Select.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="&gt;&gt;GridColumn_WareCode.Name" xml:space="preserve">
     <value>GridColumn_WareCode</value>
