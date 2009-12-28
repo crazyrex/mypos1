@@ -240,6 +240,36 @@
     <value>2</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="LinkLabel_AddAllWare.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="LinkLabel_AddAllWare.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LinkLabel_AddAllWare.Location" type="System.Drawing.Point, System.Drawing">
+    <value>659, 18</value>
+  </data>
+  <data name="LinkLabel_AddAllWare.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 17</value>
+  </data>
+  <data name="LinkLabel_AddAllWare.TabIndex" type="System.Int32, mscorlib">
+    <value>10014</value>
+  </data>
+  <data name="LinkLabel_AddAllWare.Text" xml:space="preserve">
+    <value>添加全部货品</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_AddAllWare.Name" xml:space="preserve">
+    <value>LinkLabel_AddAllWare</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_AddAllWare.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_AddAllWare.Parent" xml:space="preserve">
+    <value>PanelControl_Filter</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel_AddAllWare.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="LinkLabel_RemoveWare.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -247,16 +277,16 @@
     <value>NoControl</value>
   </data>
   <data name="LinkLabel_RemoveWare.Location" type="System.Drawing.Point, System.Drawing">
-    <value>442, 48</value>
+    <value>571, 17</value>
   </data>
   <data name="LinkLabel_RemoveWare.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 17</value>
+    <value>87, 17</value>
   </data>
   <data name="LinkLabel_RemoveWare.TabIndex" type="System.Int32, mscorlib">
     <value>10014</value>
   </data>
   <data name="LinkLabel_RemoveWare.Text" xml:space="preserve">
-    <value>去除</value>
+    <value>去除选中货品</value>
   </data>
   <data name="&gt;&gt;LinkLabel_RemoveWare.Name" xml:space="preserve">
     <value>LinkLabel_RemoveWare</value>
@@ -268,7 +298,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;LinkLabel_RemoveWare.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="LinkLabel_CancelAll.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -280,7 +310,7 @@
     <value>NoControl</value>
   </data>
   <data name="LinkLabel_CancelAll.Location" type="System.Drawing.Point, System.Drawing">
-    <value>514, 48</value>
+    <value>292, 46</value>
   </data>
   <data name="LinkLabel_CancelAll.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 15</value>
@@ -301,7 +331,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;LinkLabel_CancelAll.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="LinkLabel_SelectAll.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -310,7 +340,7 @@
     <value>NoControl</value>
   </data>
   <data name="LinkLabel_SelectAll.Location" type="System.Drawing.Point, System.Drawing">
-    <value>482, 48</value>
+    <value>260, 46</value>
   </data>
   <data name="LinkLabel_SelectAll.Size" type="System.Drawing.Size, System.Drawing">
     <value>34, 17</value>
@@ -331,7 +361,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;LinkLabel_SelectAll.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="Label_WareID.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -361,16 +391,16 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;Label_WareID.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="Label_CustomCode.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="Label_CustomCode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>420, 16</value>
+    <value>420, 11</value>
   </data>
   <data name="Label_CustomCode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 18</value>
+    <value>137, 28</value>
   </data>
   <data name="Label_CustomCode.TabIndex" type="System.Int32, mscorlib">
     <value>10010</value>
@@ -385,7 +415,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;Label_CustomCode.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="ButtonEdit_WareCode.Location" type="System.Drawing.Point, System.Drawing">
     <value>298, 14</value>
@@ -406,7 +436,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;ButtonEdit_WareCode.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="Label18.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -436,7 +466,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;Label18.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="CheckEdit_SingleWareLocations.Location" type="System.Drawing.Point, System.Drawing">
     <value>613, 44</value>
@@ -460,7 +490,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;CheckEdit_SingleWareLocations.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="LookUpEdit_Pos.Location" type="System.Drawing.Point, System.Drawing">
     <value>70, 15</value>
@@ -485,7 +515,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;LookUpEdit_Pos.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="Label_DisplayingWareCount.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9pt</value>
@@ -494,7 +524,7 @@
     <value>NoControl</value>
   </data>
   <data name="Label_DisplayingWareCount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>697, 17</value>
+    <value>502, 44</value>
   </data>
   <data name="Label_DisplayingWareCount.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 19</value>
@@ -518,7 +548,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;Label_DisplayingWareCount.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="Label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -530,7 +560,7 @@
     <value>NoControl</value>
   </data>
   <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>612, 17</value>
+    <value>417, 44</value>
   </data>
   <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 15</value>
@@ -551,7 +581,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -581,7 +611,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="TextEdit_Search.EditValue" xml:space="preserve">
     <value />
@@ -605,7 +635,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;TextEdit_Search.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -635,7 +665,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="PanelControl_Filter.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -644,7 +674,7 @@
     <value>0, 25</value>
   </data>
   <data name="PanelControl_Filter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>751, 76</value>
+    <value>751, 71</value>
   </data>
   <data name="PanelControl_Filter.TabIndex" type="System.Int32, mscorlib">
     <value>10001</value>
@@ -665,7 +695,7 @@
     <value>Fill</value>
   </data>
   <data name="XtraTabControl_Lists.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 101</value>
+    <value>0, 96</value>
   </data>
   <data name="GridControl_NormalList.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -851,7 +881,7 @@
     <value>高亮显示</value>
   </data>
   <data name="GridControl_NormalList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>742, 367</value>
+    <value>742, 372</value>
   </data>
   <data name="GridControl_NormalList.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -869,7 +899,7 @@
     <value>0</value>
   </data>
   <data name="XtraTabPage_NormalList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>742, 367</value>
+    <value>742, 372</value>
   </data>
   <data name="XtraTabPage_NormalList.Text" xml:space="preserve">
     <value>货品总量</value>
@@ -887,7 +917,7 @@
     <value>0</value>
   </data>
   <data name="XtraTabControl_Lists.Size" type="System.Drawing.Size, System.Drawing">
-    <value>751, 399</value>
+    <value>751, 404</value>
   </data>
   <data name="XtraTabControl_Lists.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
