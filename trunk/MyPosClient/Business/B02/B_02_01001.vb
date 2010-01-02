@@ -385,7 +385,7 @@ Namespace Business
             Try
 
 
-                Dim staffRowSE As New MyPosXAuto.FTs.FT_M_STAFFRowSEntity
+                'Dim staffRowSE As New MyPosXAuto.FTs.FT_M_STAFFRowSEntity
 
                 Dim sysWareSpecModelDiscard As Boolean
                 Dim sysHideFinancials As Boolean
@@ -397,36 +397,37 @@ Namespace Business
                 Dim sysAttribute3 As String = String.Empty
                 Dim sysAttribute4 As String = String.Empty
 
-                Dim wareBatchPrefix As String = String.Empty
 
                 Me._service.ServInitDisplay( _
-                    CommDecl.CURRENT_LANGUAGE_OPTION, _
-                    Utils.Decls.LOGIN_STAFF_ID, _
-                    staffRowSE, _
-                    sysWareSpecModelDiscard, _
-                    sysHideFinancials, _
-                    sysShowCustomWareCode, _
-                    sysAttribute1, _
-                    sysAttribute2, _
-                    sysAttribute3, _
-                    sysAttribute4, _
                     affairDescription, _
                     SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_CURRENT_POS_ID), _
-                    Me._manifest.SV_POS_SET_ROWSE, _
                     Me._manifest.SVFT_REF_SALE_TEMPLATE_WARE_LIST)
 
-                If staffRowSE.IsNull = False Then
-                    'Me._manifest.ButtonEdit_EmployeeCode.Text = staffRowSE.STAFF_CODE
-                    'Me._manifest.Label_EmployeeName.Text = staffRowSE.STAFF_NAME
-                    'Me._manifest.Label_EmployeeID.Text = CommTK.FString(staffRowSE.STAFF_ID)
+                sysWareSpecModelDiscard = CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_WARE_SPEC_MODEL_DISCARD))
+                sysHideFinancials = CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_HIDE_FINANCIALS))
+                sysShowCustomWareCode = CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_SHOW_CUSTOM_WARE_CODE))
+
+                sysAttribute1 = SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE1)
+                sysAttribute2 = SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE2)
+                sysAttribute3 = SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE3)
+                sysAttribute4 = SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE4)
+
+                If CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE1_HIDDEN)) = True Then
+                    sysAttribute1 = String.Empty
+                End If
+                If CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE2_HIDDEN)) = True Then
+                    sysAttribute2 = String.Empty
+                End If
+                If CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE3_HIDDEN)) = True Then
+                    sysAttribute3 = String.Empty
+                End If
+                If CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE4_HIDDEN)) = True Then
+                    sysAttribute4 = String.Empty
                 End If
 
                 Me._manifest.SV_REPORT_TURNOVER_DTL_LIST = New XForm.ReportOption(MyPosXService.Decls.RPT_NAME_0001, XForm.ReportOption.PrintType.Print, True)
 
-                'If CommTK.FBoolean(SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_PRINT_SHOPPING_LIST)) = True  Then
-                '    Me._manifest.ToolStripButton_PrintPurchaseLabel.Visible = False
-                'End If
-
+                
                 If sysHideFinancials = True Then
                     Me._manifest.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0005)
                 End If
@@ -471,7 +472,7 @@ Namespace Business
 
                 Me._manifest.Label_AffairDescription.Text = affairDescription
 
-                If Utils.Decls.LOGIN_STAFF_ID.Length = 0 Then
+                If Utils.Decls.LOGIN_STAFF_ROW_SE.STAFF_ID.Length = 0 Then
                     Me._manifest.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0013)
                     Me._manifest.DoPublicDisableOperations()
                     Return String.Empty
@@ -613,7 +614,7 @@ Namespace Business
                         TURNOVER_CODE:=Me._manifest.SV_PRINTING_TURNOVER_CODE, _
                         TURNOVER_TIME:=CommTK.GetSyncServerTime, _
                         POS_ID:=SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_CURRENT_POS_ID), _
-                        STAFF_ID:=Utils.Decls.LOGIN_STAFF_ID, _
+                        STAFF_ID:=Utils.Decls.LOGIN_STAFF_ROW_SE.STAFF_ID, _
                         TURNOVER_TYPE:=turnoverType, _
                         TURNOVER_STYLE:=turnoverStyle, _
                         SUPPLIER_ID:=String.Empty, _
@@ -666,7 +667,7 @@ Namespace Business
                     TURNOVER_CODE:=Me._manifest.SV_PRINTING_TURNOVER_CODE, _
                     TURNOVER_TIME:=CommTK.GetSyncServerTime, _
                     POS_ID:=SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_CURRENT_POS_ID), _
-                    STAFF_ID:=Utils.Decls.LOGIN_STAFF_ID, _
+                    STAFF_ID:=Utils.Decls.LOGIN_STAFF_ROW_SE.STAFF_ID, _
                     TURNOVER_TYPE:=turnoverType, _
                     TURNOVER_STYLE:=turnoverStyle, _
                     SUPPLIER_ID:=String.Empty, _
@@ -1206,7 +1207,7 @@ Namespace Business
                 End If
 
                 Dim staffRow As MyPosXAuto.FTs.FT_M_STAFFRow = _
-                    MyPosXAuto.Facade.AfBizMaster.GetM_STAFFRow(Utils.Decls.LOGIN_STAFF_ID)
+                    MyPosXAuto.Facade.AfBizMaster.GetM_STAFFRow(Utils.Decls.LOGIN_STAFF_ROW_SE.STAFF_ID)
 
                 If IsNothing(staffRow) = True Then
                     Return String.Empty

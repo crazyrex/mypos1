@@ -104,19 +104,8 @@ Public Class S_02_01001
 
 
     Public Function ServInitDisplay( _
-        ByVal valLanguagOption As Integer, _
-        ByVal valLoginStaffID As String, _
-        ByRef refStaffRowSE As MyPosXAuto.FTs.FT_M_STAFFRowSEntity, _
-        ByRef refSysWareSpecModelDiscard As Boolean, _
-        ByRef refSysHideFinancials As Boolean, _
-        ByRef refSysShowCustomWareCode As Boolean, _
-        ByRef refSysAttribute1 As String, _
-        ByRef refSysAttribute2 As String, _
-        ByRef refSysAttribute3 As String, _
-        ByRef refSysAttribute4 As String, _
         ByRef refAffairDescription As String, _
         ByVal valCurrentPosID As String, _
-        ByVal refCurrentPosSet As MyPosXAuto.FTs.FT_S_MP_POS_SETRowSEntity, _
         ByRef refSaleTemplateWareList As MyPosXAuto.FTs.FT_XV_T_MP_SALE_TEMPLATE_WARE) As String
 
 
@@ -125,31 +114,6 @@ Public Class S_02_01001
             Dim result As String = String.Empty
 
             XL.Common.Utils.SysInfo.SetShareTRSysInfo(AddressOf Facade.OpSysConfig.GetSysValue, AddressOf Facade.OpSysConfig.SetSysValue)
-
-            MyPosXAuto.Facade.AfBizMaster.FillM_STAFFRowSEntity(refStaffRowSE, valLoginStaffID)
-
-
-            refSysWareSpecModelDiscard = CommTK.FBoolean(SysInfo.ReadShareSysInfo(Decls.SVN_WARE_SPEC_MODEL_DISCARD))
-            refSysHideFinancials = CommTK.FBoolean(SysInfo.ReadShareSysInfo(Decls.SVN_HIDE_FINANCIALS))
-            refSysShowCustomWareCode = CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_SHOW_CUSTOM_WARE_CODE))
-
-            refSysAttribute1 = SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE1)
-            refSysAttribute2 = SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE2)
-            refSysAttribute3 = SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE3)
-            refSysAttribute4 = SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE4)
-
-            If CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE1_HIDDEN)) = True Then
-                refSysAttribute1 = String.Empty
-            End If
-            If CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE2_HIDDEN)) = True Then
-                refSysAttribute2 = String.Empty
-            End If
-            If CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE3_HIDDEN)) = True Then
-                refSysAttribute3 = String.Empty
-            End If
-            If CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE4_HIDDEN)) = True Then
-                refSysAttribute4 = String.Empty
-            End If
 
             MyPosXService.Facade.OpBizManage.FillPosCurrentAffairInfo( _
                 valCurrentPosID, _
