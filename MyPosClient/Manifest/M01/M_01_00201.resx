@@ -1073,13 +1073,13 @@
     <value>Excel文档|*.xls</value>
   </data>
   <metadata name="OpenFileDialog_ImportFile.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>713, 0</value>
+    <value>17, 39</value>
   </metadata>
   <data name="OpenFileDialog_ImportFile.Filter" xml:space="preserve">
     <value>Excel文件|*.xls;*.xlsx</value>
   </data>
   <metadata name="OpenFileDialog_SetImage.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 39</value>
+    <value>226, 39</value>
   </metadata>
   <data name="OpenFileDialog_SetImage.Filter" xml:space="preserve">
     <value>图片文件|*.jpg;*.png</value>

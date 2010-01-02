@@ -434,12 +434,6 @@ Namespace Facade
                 codeType &= "O"
             End If
 
-
-
-            'Dim turnoverDate As String = String.Format("{0:yyyyMM}", CommTK.GetsyncServerTime)
-
-
-
             Dim posRow As MyPosXAuto.FTs.FT_M_MP_POSRow = _
                 MyPosXAuto.Facade.AfBizMaster.GetM_MP_POSRow(posID)
 
@@ -524,6 +518,48 @@ Namespace Facade
             Return result
 
         End Function
+
+        'Public Shared Function GetAutoQuotationCode(ByVal preview As Boolean, ByVal posID As String) As String
+
+        '    Dim codeBuilder As New LineStrBuilder
+
+        '    codeType = SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_QUOTATION_PREFIX)
+
+        '    Dim posRow As MyPosXAuto.FTs.FT_M_MP_POSRow = _
+        '        MyPosXAuto.Facade.AfBizMaster.GetM_MP_POSRow(posID)
+
+        '    If IsNothing(posRow) = True Then
+        '        Return CommTK.GetTranslatedString(MyPosXService.Decls.MSG_ALERT_00003)
+        '    End If
+
+        '    Dim resultBuilder As New LineStrBuilder
+
+        '    resultBuilder.AppendFormat("{0}-{1}-{2:yyyyMM}", _
+        '            codeType, _
+        '            posRow.POS_CODE, _
+        '            CommTK.GetSyncServerTime)
+
+        '    If preview = True Then
+
+        '        resultBuilder.AppendFormat("-XXXXXX")
+
+        '    Else
+
+        '        Dim seedName As String = String.Format("TURNOVER_{0}_{1:yyyyMM}", codeType, CommTK.GetSyncServerTime)
+
+        '        Dim locationSeedValue As Integer = _
+        '            Facade.OpSysConfig.GetNewSeedID(seedName)
+
+        '        resultBuilder.AppendFormat("{0:000000}", locationSeedValue)
+
+        '    End If
+
+        '    Return resultBuilder.ToString
+
+
+
+        'End Function
+
 
         Public Shared Function GetTurnoverBatchIndex() As Integer
 

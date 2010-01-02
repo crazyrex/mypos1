@@ -3,7 +3,7 @@
 
     Public Class Decls
 
-        Public Shared LOGIN_STAFF_ID As String
+        Public Shared LOGIN_STAFF_ROW_SE As New MyPosXAuto.FTs.FT_M_STAFFRowSEntity
         Public Shared CURRENT_POS_ROW As MyPosXAuto.FTs.FT_M_MP_POSRow
 
         Public Shared IMAGE_CODE_INFO As System.Drawing.Imaging.ImageCodecInfo = Nothing
