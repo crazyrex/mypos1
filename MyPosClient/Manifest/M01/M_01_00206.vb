@@ -519,21 +519,21 @@ Namespace Manifest
             e.CanDrag = (Me.SVFR_SELECTING_COMPONENT_ROW.COMPONENT_ID <> Me.SV_EDITING_WARE_ID)
         End Sub
 
-        Private Sub RepositoryItemCalcEdit_MaxQty_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemCalcEdit_MaxQty.EditValueChanged
-            Dim calcEdit = TryCast(sender, DevExpress.XtraEditors.CalcEdit)
-            Me.SVFR_SELECTING_COMPONENT_WARE_OPT_ROW.MAX_QTY = calcEdit.Value
-            Me.IsSaved = False
-            Me.SplitContainerControl_BomSetup.Panel1.Enabled = False
-            Me.DoPrivateUpdateSelectingOptionRow()
-        End Sub
+        'Private Sub RepositoryItemCalcEdit_MaxQty_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemCalcEdit_MaxQty.EditValueChanged
+        '    Dim calcEdit = TryCast(sender, DevExpress.XtraEditors.CalcEdit)
+        '    Me.SVFR_SELECTING_COMPONENT_WARE_OPT_ROW.MAX_QTY = calcEdit.Value
+        '    Me.IsSaved = False
+        '    Me.SplitContainerControl_BomSetup.Panel1.Enabled = False
+        '    Me.DoPrivateUpdateSelectingOptionRow()
+        'End Sub
 
-        Private Sub RepositoryItemCalcEdit_MinQty_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemCalcEdit_MinQty.EditValueChanged
-            Dim calcEdit = TryCast(sender, DevExpress.XtraEditors.CalcEdit)
-            Me.SVFR_SELECTING_COMPONENT_WARE_OPT_ROW.MIN_QTY = calcEdit.Value
-            Me.IsSaved = False
-            Me.SplitContainerControl_BomSetup.Panel1.Enabled = False
-            Me.DoPrivateUpdateSelectingOptionRow()
-        End Sub
+        'Private Sub RepositoryItemCalcEdit_MinQty_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemCalcEdit_MinQty.EditValueChanged
+        '    Dim calcEdit = TryCast(sender, DevExpress.XtraEditors.CalcEdit)
+        '    Me.SVFR_SELECTING_COMPONENT_WARE_OPT_ROW.MIN_QTY = calcEdit.Value
+        '    Me.IsSaved = False
+        '    Me.SplitContainerControl_BomSetup.Panel1.Enabled = False
+        '    Me.DoPrivateUpdateSelectingOptionRow()
+        'End Sub
 
         Private Sub GridView_Ware_FocusedRowChanged(ByVal sender As Object, ByVal e As DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs) Handles GridView_Ware.FocusedRowChanged
             Me.DoPrivateUpdateSelectingOptionRow()

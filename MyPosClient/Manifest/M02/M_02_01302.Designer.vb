@@ -65,11 +65,11 @@
             Me.DateEdit_DepositTime = New DevExpress.XtraEditors.DateEdit
             Me.Label_TurnoverTime = New System.Windows.Forms.Label
             Me.Label1 = New System.Windows.Forms.Label
-            Me.LookUpEdit_TurnoverStyle = New DevExpress.XtraEditors.LookUpEdit
+            Me.LookUpEdit_QuotationType = New DevExpress.XtraEditors.LookUpEdit
             Me.Label2 = New System.Windows.Forms.Label
             Me.TextEdit_Remark = New DevExpress.XtraEditors.TextEdit
             Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl
-            Me.Label4 = New System.Windows.Forms.Label
+            Me.Label_LastReviser = New System.Windows.Forms.Label
             Me.Label3 = New System.Windows.Forms.Label
             Me.Label_CustomCode = New System.Windows.Forms.Label
             Me.ButtonEdit_WareCode = New DevExpress.XtraEditors.ButtonEdit
@@ -103,7 +103,7 @@
             CType(Me.TextEdit_TurnoverCode.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.DateEdit_DepositTime.Properties.VistaTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.DateEdit_DepositTime.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.LookUpEdit_TurnoverStyle.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.LookUpEdit_QuotationType.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.TextEdit_Remark.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.PanelControl1.SuspendLayout()
@@ -170,9 +170,10 @@
             '
             'TextEdit_TurnoverCode
             '
+            Me.TextEdit_TurnoverCode.ImeMode = System.Windows.Forms.ImeMode.Disable
             Me.TextEdit_TurnoverCode.Location = New System.Drawing.Point(98, 10)
             Me.TextEdit_TurnoverCode.Name = "TextEdit_TurnoverCode"
-            Me.TextEdit_TurnoverCode.Properties.ReadOnly = True
+            Me.TextEdit_TurnoverCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
             Me.TextEdit_TurnoverCode.Size = New System.Drawing.Size(159, 21)
             Me.TextEdit_TurnoverCode.TabIndex = 10002
             CTag2.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
@@ -346,17 +347,17 @@
             Me.Label1.Tag = CTag6
             Me.Label1.Text = "单据类型"
             '
-            'LookUpEdit_TurnoverStyle
+            'LookUpEdit_QuotationType
             '
-            Me.LookUpEdit_TurnoverStyle.Location = New System.Drawing.Point(98, 42)
-            Me.LookUpEdit_TurnoverStyle.Name = "LookUpEdit_TurnoverStyle"
-            Me.LookUpEdit_TurnoverStyle.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-            Me.LookUpEdit_TurnoverStyle.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("ITEM_MEANING", " ", 20, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Data.ColumnSortOrder.None)})
-            Me.LookUpEdit_TurnoverStyle.Properties.DisplayMember = "ITEM_MEANING"
-            Me.LookUpEdit_TurnoverStyle.Properties.NullText = ""
-            Me.LookUpEdit_TurnoverStyle.Properties.ValueMember = "ITEM_VALUE"
-            Me.LookUpEdit_TurnoverStyle.Size = New System.Drawing.Size(159, 21)
-            Me.LookUpEdit_TurnoverStyle.TabIndex = 10005
+            Me.LookUpEdit_QuotationType.Location = New System.Drawing.Point(98, 42)
+            Me.LookUpEdit_QuotationType.Name = "LookUpEdit_QuotationType"
+            Me.LookUpEdit_QuotationType.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+            Me.LookUpEdit_QuotationType.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("ITEM_MEANING", " ", 20, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Data.ColumnSortOrder.None)})
+            Me.LookUpEdit_QuotationType.Properties.DisplayMember = "ITEM_MEANING"
+            Me.LookUpEdit_QuotationType.Properties.NullText = ""
+            Me.LookUpEdit_QuotationType.Properties.ValueMember = "ITEM_VALUE"
+            Me.LookUpEdit_QuotationType.Size = New System.Drawing.Size(119, 21)
+            Me.LookUpEdit_QuotationType.TabIndex = 10005
             CTag7.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag7.CalculatorRequired = True
             CTag7.ComboValueTextBox = Nothing
@@ -375,12 +376,12 @@
             CTag7.KeyValueAbsentable = False
             CTag7.LeagleText = ""
             CTag7.NumericButtonTextBox = Nothing
-            CTag7.ParentControl = Me.LookUpEdit_TurnoverStyle
+            CTag7.ParentControl = Me.LookUpEdit_QuotationType
             CTag7.SkipValidate = False
             CTag7.TimeButtonTextBox = Nothing
             CTag7.ToolTip = ""
             CTag7.ValueType = XL.Common.ControlValueType.Character
-            Me.LookUpEdit_TurnoverStyle.Tag = CTag7
+            Me.LookUpEdit_QuotationType.Tag = CTag7
             '
             'Label2
             '
@@ -455,11 +456,11 @@
             Me.PanelControl1.Appearance.BackColor = System.Drawing.Color.White
             Me.PanelControl1.Appearance.Options.UseBackColor = True
             Me.PanelControl1.Controls.Add(Me.Label1)
-            Me.PanelControl1.Controls.Add(Me.LookUpEdit_TurnoverStyle)
+            Me.PanelControl1.Controls.Add(Me.LookUpEdit_QuotationType)
             Me.PanelControl1.Controls.Add(Me.Label_TurnoverCode)
             Me.PanelControl1.Controls.Add(Me.DateEdit_DepositTime)
             Me.PanelControl1.Controls.Add(Me.Label2)
-            Me.PanelControl1.Controls.Add(Me.Label4)
+            Me.PanelControl1.Controls.Add(Me.Label_LastReviser)
             Me.PanelControl1.Controls.Add(Me.Label3)
             Me.PanelControl1.Controls.Add(Me.Label_TurnoverTime)
             Me.PanelControl1.Controls.Add(Me.TextEdit_TurnoverCode)
@@ -494,17 +495,17 @@
             CTag12.ValueType = XL.Common.ControlValueType.Character
             Me.PanelControl1.Tag = CTag12
             '
-            'Label4
+            'Label_LastReviser
             '
-            Me.Label4.BackColor = System.Drawing.Color.White
-            Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-            Me.Label4.Font = New System.Drawing.Font("Arial", 9.0!)
-            Me.Label4.ForeColor = System.Drawing.Color.Black
-            Me.Label4.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.Label4.Location = New System.Drawing.Point(602, 12)
-            Me.Label4.Name = "Label4"
-            Me.Label4.Size = New System.Drawing.Size(80, 25)
-            Me.Label4.TabIndex = 10003
+            Me.Label_LastReviser.BackColor = System.Drawing.Color.White
+            Me.Label_LastReviser.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+            Me.Label_LastReviser.Font = New System.Drawing.Font("Arial", 9.0!)
+            Me.Label_LastReviser.ForeColor = System.Drawing.Color.Black
+            Me.Label_LastReviser.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.Label_LastReviser.Location = New System.Drawing.Point(602, 12)
+            Me.Label_LastReviser.Name = "Label_LastReviser"
+            Me.Label_LastReviser.Size = New System.Drawing.Size(80, 25)
+            Me.Label_LastReviser.TabIndex = 10003
             CTag10.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag10.CalculatorRequired = True
             CTag10.ComboValueTextBox = Nothing
@@ -523,12 +524,12 @@
             CTag10.KeyValueAbsentable = False
             CTag10.LeagleText = ""
             CTag10.NumericButtonTextBox = Nothing
-            CTag10.ParentControl = Me.Label4
+            CTag10.ParentControl = Me.Label_LastReviser
             CTag10.SkipValidate = False
             CTag10.TimeButtonTextBox = Nothing
             CTag10.ToolTip = ""
             CTag10.ValueType = XL.Common.ControlValueType.Character
-            Me.Label4.Tag = CTag10
+            Me.Label_LastReviser.Tag = CTag10
             '
             'Label3
             '
@@ -1064,7 +1065,7 @@
             CType(Me.TextEdit_TurnoverCode.Properties, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.DateEdit_DepositTime.Properties.VistaTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.DateEdit_DepositTime.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.LookUpEdit_TurnoverStyle.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.LookUpEdit_QuotationType.Properties, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.TextEdit_Remark.Properties, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.PanelControl1.ResumeLayout(False)
@@ -1087,12 +1088,12 @@
         Friend WithEvents DateEdit_DepositTime As DevExpress.XtraEditors.DateEdit
         Friend WithEvents Label_TurnoverTime As System.Windows.Forms.Label
         Friend WithEvents Label1 As System.Windows.Forms.Label
-        Friend WithEvents LookUpEdit_TurnoverStyle As DevExpress.XtraEditors.LookUpEdit
+        Friend WithEvents LookUpEdit_QuotationType As DevExpress.XtraEditors.LookUpEdit
         Friend WithEvents Label2 As System.Windows.Forms.Label
         Friend WithEvents TextEdit_Remark As DevExpress.XtraEditors.TextEdit
         Friend WithEvents PanelControl1 As DevExpress.XtraEditors.PanelControl
         Friend WithEvents ToolStripButton_EditBom As System.Windows.Forms.ToolStripButton
-        Friend WithEvents Label4 As System.Windows.Forms.Label
+        Friend WithEvents Label_LastReviser As System.Windows.Forms.Label
         Friend WithEvents Label3 As System.Windows.Forms.Label
         Friend WithEvents Label_CustomCode As System.Windows.Forms.Label
         Friend WithEvents ButtonEdit_WareCode As DevExpress.XtraEditors.ButtonEdit
