@@ -844,7 +844,7 @@ Namespace Business
                     overviewRow = _
                         Me._manifest.SVFT_BINDING_OVERVIEW_LIST.AddNewS_MP_BOM_COMPONENTRow( _
                             optionRow.OPTION_ID, _
-                            String.Format("{0}: {1}-{2} {^}  ", wareInfo, optionRow.MIN_QTY, optionRow.MAX_QTY, optionRow.UNIT_NAME), _
+                            wareInfo, _
                             Me._manifest.SV_EDITING_WARE_ID, _
                             optionRow.COMPONENT_ID)
 

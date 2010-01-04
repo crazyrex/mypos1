@@ -244,6 +244,8 @@
     <Compile Include="S02\S_02_01201.vb" />
     <Compile Include="S02\S_02_01301.vb" />
     <Compile Include="S02\S_02_01302.vb" />
+    <Compile Include="S02\S_02_01303.vb" />
+    <Compile Include="S02\S_02_01304.vb" />
     <Compile Include="S03\S_03_01301.vb" />
     <Compile Include="S03\S_03_00101.vb">
       <SubType>Code</SubType>
