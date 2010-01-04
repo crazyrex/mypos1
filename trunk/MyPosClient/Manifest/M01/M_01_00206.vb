@@ -42,7 +42,7 @@ Namespace Manifest
         ''Public SV_RPTOPT_LABEL As XForm.ReportOption = Nothing
 
         ''读取,显示数据的条件值变量
-        'Public SVLM_UTLD_0002 As String ="SVLM_UTLD_0002"
+        Public SVLM_CHOOSE_OPTION_COMPONENT_ID As String = String.Empty
 
         '数据列表变量
         Public SVFT_BINDING_COMPONENT_LIST As New MyPosXAuto.FTs.FT_S_MP_BOM_COMPONENT
@@ -166,6 +166,15 @@ Namespace Manifest
             '做根据LaunchCondition判断分支的相关动作, 如控件的显示不显示, 必填不必填
 
             Select Case Me.LAUNCH_CONDITION
+                Case MyPosXService.S_01_00206.LCs.ChooseOptionOfComponent
+                    Me.ToolStripButton_Choose.Visible = True
+                    Me.ToolStripButton_Refresh.Visible = False
+                    Me.XtraTabControl1.ShowTabHeader = DevExpress.Utils.DefaultBoolean.False
+                    Me.ToolStripButton_AddOptions.Visible = False
+                    Me.ToolStripButton_RemoveOptions.Visible = False
+                    Me.ToolStripButton_AddComponent.Visible = False
+                    Me.ToolStripButton_RemoveComponent.Visible = False
+                    Me.SplitContainerControl_BomSetup.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Panel2
 
             End Select
             'Initialize option list controls which value source isn't from the edit form content
@@ -312,6 +321,10 @@ Namespace Manifest
 
         Public Overrides Sub UpdateDisplay()
 
+            If Me.LAUNCH_CONDITION = MyPosXService.S_01_00206.LCs.ChooseOptionOfComponent Then
+                Me._bizAgent.DoRequest(Business.B_01_00206.Affairs.LoadOptionList, False)
+                Return
+            End If
             'Me._bizAgent.DoRequest(Business.B_0X_00XXX.Affairs.LoadInfo, False)
             Me._bizAgent.DoRequest(Business.B_01_00206.Affairs.LoadComponentList, False)
             Me._bizAgent.DoRequest(Business.B_01_00206.Affairs.LoadOverviewList, False)

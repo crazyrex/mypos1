@@ -385,7 +385,9 @@ Namespace Business
 
             Try
 
-
+                If Me._manifest.SVLM_CHOOSE_OPTION_COMPONENT_ID.Length > 0 Then
+                    Me._manifest.SVFR_SELECTING_COMPONENT_ROW = MyPosXAuto.Facade.AfBizConfig.GetS_MP_BOM_COMPONENTRow(Me._manifest.SVLM_CHOOSE_OPTION_COMPONENT_ID)
+                End If
 
 
                 'Dim chooseWareBomTypeList As New MyPosXAuto.FTs.FT_CIV_WARE_BOM_TYPE
@@ -771,11 +773,17 @@ Namespace Business
 
 
             Try
+                If IsNothing(Me._manifest.SVFR_SELECTING_COMPONENT_ROW) = False Then
+                    'Me._manifest.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0025)
+                    Return String.Empty
+                End If
 
                 Me._manifest.SVFT_BINDING_OPTION_LIST.Clear()
+
                 If Me._manifest.SVFR_SELECTING_COMPONENT_ROW.COMPONENT_ID = Me._manifest.SV_EDITING_WARE_ID Then
                     Return String.Empty
                 End If
+
                 Dim optionCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_S_MP_BOM_COMP_WARE_OPT(XL.DB.Utils.Condition.LogicOperators.Logic_And)
                 optionCondition.Add(MyPosXAuto.Facade.AfXV.XV_S_MP_BOM_COMP_WARE_OPTColumns.COMPONENT_IDColumn, "=", Me._manifest.SVFR_SELECTING_COMPONENT_ROW.COMPONENT_ID)
 
