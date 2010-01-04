@@ -50,7 +50,7 @@ Public Class S_01_00206
 
     Public Enum LCs
         None
-        Utld0002
+        ChooseOptionOfComponent
         Utld0003
         Utld0004
         Utld0005
