@@ -190,7 +190,7 @@
     <value>NoControl</value>
   </data>
   <data name="Label_EmployeeID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>663, 39</value>
+    <value>631, 43</value>
   </data>
   <data name="Label_EmployeeID.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 18</value>

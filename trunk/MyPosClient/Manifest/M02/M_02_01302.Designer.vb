@@ -78,7 +78,6 @@
             Me.Label_WareID = New System.Windows.Forms.Label
             Me.GridControl_QuotationWareDtl = New DevExpress.XtraGrid.GridControl
             Me.GridView_QuotationWareDtl = New DevExpress.XtraGrid.Views.Grid.GridView
-            Me.GridColumn_BatchCode = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_WareCode = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_CustomCode = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_WareName = New DevExpress.XtraGrid.Columns.GridColumn
@@ -645,7 +644,7 @@
             Me.Label18.ImeMode = System.Windows.Forms.ImeMode.NoControl
             Me.Label18.Location = New System.Drawing.Point(14, 12)
             Me.Label18.Name = "Label18"
-            Me.Label18.Size = New System.Drawing.Size(79, 15)
+            Me.Label18.Size = New System.Drawing.Size(55, 15)
             Me.Label18.TabIndex = 10008
             CTag15.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag15.CalculatorRequired = True
@@ -671,7 +670,7 @@
             CTag15.ToolTip = ""
             CTag15.ValueType = XL.Common.ControlValueType.Character
             Me.Label18.Tag = CTag15
-            Me.Label18.Text = "添加显示货品"
+            Me.Label18.Text = "添加货品"
             '
             'PanelControl2
             '
@@ -784,7 +783,7 @@
             '
             'GridView_QuotationWareDtl
             '
-            Me.GridView_QuotationWareDtl.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn_BatchCode, Me.GridColumn_WareCode, Me.GridColumn_CustomCode, Me.GridColumn_WareName, Me.GridColumn_Spec, Me.GridColumn_Model, Me.GridColumn_Attribute1, Me.GridColumn_Attribute2, Me.GridColumn_Attribute3, Me.GridColumn_Attribute4, Me.GridColumn_WareAmount, Me.GridColumn_SumPrice, Me.GridColumn_CurrentAmount, Me.GridColumn_UnitName, Me.GridColumn_UnitPrice, Me.GridColumn_UnitCost, Me.GridColumn_OrigionalPrice, Me.GridColumn_Remarks, Me.GridColumn_RowHighlight})
+            Me.GridView_QuotationWareDtl.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn_WareCode, Me.GridColumn_CustomCode, Me.GridColumn_WareName, Me.GridColumn_Spec, Me.GridColumn_Model, Me.GridColumn_Attribute1, Me.GridColumn_Attribute2, Me.GridColumn_Attribute3, Me.GridColumn_Attribute4, Me.GridColumn_WareAmount, Me.GridColumn_SumPrice, Me.GridColumn_CurrentAmount, Me.GridColumn_UnitName, Me.GridColumn_UnitPrice, Me.GridColumn_UnitCost, Me.GridColumn_OrigionalPrice, Me.GridColumn_Remarks, Me.GridColumn_RowHighlight})
             StyleFormatCondition1.Appearance.BackColor = System.Drawing.Color.Lime
             StyleFormatCondition1.Appearance.BackColor2 = System.Drawing.Color.White
             StyleFormatCondition1.Appearance.Options.UseBackColor = True
@@ -806,16 +805,6 @@
             Me.GridView_QuotationWareDtl.OptionsView.ShowFooter = True
             Me.GridView_QuotationWareDtl.OptionsView.ShowGroupPanel = False
             '
-            'GridColumn_BatchCode
-            '
-            Me.GridColumn_BatchCode.Caption = "批号"
-            Me.GridColumn_BatchCode.FieldName = "BATCH_CODE"
-            Me.GridColumn_BatchCode.Name = "GridColumn_BatchCode"
-            Me.GridColumn_BatchCode.OptionsColumn.AllowFocus = False
-            Me.GridColumn_BatchCode.Visible = True
-            Me.GridColumn_BatchCode.VisibleIndex = 0
-            Me.GridColumn_BatchCode.Width = 36
-            '
             'GridColumn_WareCode
             '
             Me.GridColumn_WareCode.Caption = "货品代码"
@@ -824,7 +813,7 @@
             Me.GridColumn_WareCode.OptionsColumn.AllowFocus = False
             Me.GridColumn_WareCode.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Count
             Me.GridColumn_WareCode.Visible = True
-            Me.GridColumn_WareCode.VisibleIndex = 1
+            Me.GridColumn_WareCode.VisibleIndex = 0
             Me.GridColumn_WareCode.Width = 60
             '
             'GridColumn_CustomCode
@@ -834,7 +823,7 @@
             Me.GridColumn_CustomCode.Name = "GridColumn_CustomCode"
             Me.GridColumn_CustomCode.OptionsColumn.AllowFocus = False
             Me.GridColumn_CustomCode.Visible = True
-            Me.GridColumn_CustomCode.VisibleIndex = 2
+            Me.GridColumn_CustomCode.VisibleIndex = 1
             Me.GridColumn_CustomCode.Width = 60
             '
             'GridColumn_WareName
@@ -844,7 +833,7 @@
             Me.GridColumn_WareName.Name = "GridColumn_WareName"
             Me.GridColumn_WareName.OptionsColumn.AllowFocus = False
             Me.GridColumn_WareName.Visible = True
-            Me.GridColumn_WareName.VisibleIndex = 3
+            Me.GridColumn_WareName.VisibleIndex = 2
             Me.GridColumn_WareName.Width = 60
             '
             'GridColumn_Spec
@@ -854,7 +843,7 @@
             Me.GridColumn_Spec.Name = "GridColumn_Spec"
             Me.GridColumn_Spec.OptionsColumn.AllowFocus = False
             Me.GridColumn_Spec.Visible = True
-            Me.GridColumn_Spec.VisibleIndex = 4
+            Me.GridColumn_Spec.VisibleIndex = 3
             Me.GridColumn_Spec.Width = 60
             '
             'GridColumn_Model
@@ -864,7 +853,7 @@
             Me.GridColumn_Model.Name = "GridColumn_Model"
             Me.GridColumn_Model.OptionsColumn.AllowFocus = False
             Me.GridColumn_Model.Visible = True
-            Me.GridColumn_Model.VisibleIndex = 5
+            Me.GridColumn_Model.VisibleIndex = 4
             Me.GridColumn_Model.Width = 60
             '
             'GridColumn_Attribute1
@@ -874,7 +863,7 @@
             Me.GridColumn_Attribute1.Name = "GridColumn_Attribute1"
             Me.GridColumn_Attribute1.OptionsColumn.AllowFocus = False
             Me.GridColumn_Attribute1.Visible = True
-            Me.GridColumn_Attribute1.VisibleIndex = 6
+            Me.GridColumn_Attribute1.VisibleIndex = 5
             Me.GridColumn_Attribute1.Width = 43
             '
             'GridColumn_Attribute2
@@ -884,7 +873,7 @@
             Me.GridColumn_Attribute2.Name = "GridColumn_Attribute2"
             Me.GridColumn_Attribute2.OptionsColumn.AllowFocus = False
             Me.GridColumn_Attribute2.Visible = True
-            Me.GridColumn_Attribute2.VisibleIndex = 7
+            Me.GridColumn_Attribute2.VisibleIndex = 6
             Me.GridColumn_Attribute2.Width = 43
             '
             'GridColumn_Attribute3
@@ -894,7 +883,7 @@
             Me.GridColumn_Attribute3.Name = "GridColumn_Attribute3"
             Me.GridColumn_Attribute3.OptionsColumn.AllowFocus = False
             Me.GridColumn_Attribute3.Visible = True
-            Me.GridColumn_Attribute3.VisibleIndex = 8
+            Me.GridColumn_Attribute3.VisibleIndex = 7
             Me.GridColumn_Attribute3.Width = 43
             '
             'GridColumn_Attribute4
@@ -904,7 +893,7 @@
             Me.GridColumn_Attribute4.Name = "GridColumn_Attribute4"
             Me.GridColumn_Attribute4.OptionsColumn.AllowFocus = False
             Me.GridColumn_Attribute4.Visible = True
-            Me.GridColumn_Attribute4.VisibleIndex = 9
+            Me.GridColumn_Attribute4.VisibleIndex = 8
             Me.GridColumn_Attribute4.Width = 43
             '
             'GridColumn_WareAmount
@@ -917,7 +906,7 @@
             Me.GridColumn_WareAmount.OptionsColumn.AllowFocus = False
             Me.GridColumn_WareAmount.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum
             Me.GridColumn_WareAmount.Visible = True
-            Me.GridColumn_WareAmount.VisibleIndex = 10
+            Me.GridColumn_WareAmount.VisibleIndex = 9
             Me.GridColumn_WareAmount.Width = 36
             '
             'GridColumn_SumPrice
@@ -931,7 +920,7 @@
             Me.GridColumn_SumPrice.SummaryItem.DisplayFormat = "{0:#,##0.00}"
             Me.GridColumn_SumPrice.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum
             Me.GridColumn_SumPrice.Visible = True
-            Me.GridColumn_SumPrice.VisibleIndex = 11
+            Me.GridColumn_SumPrice.VisibleIndex = 10
             Me.GridColumn_SumPrice.Width = 36
             '
             'GridColumn_CurrentAmount
@@ -944,7 +933,7 @@
             Me.GridColumn_CurrentAmount.OptionsColumn.AllowFocus = False
             Me.GridColumn_CurrentAmount.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum
             Me.GridColumn_CurrentAmount.Visible = True
-            Me.GridColumn_CurrentAmount.VisibleIndex = 12
+            Me.GridColumn_CurrentAmount.VisibleIndex = 11
             Me.GridColumn_CurrentAmount.Width = 84
             '
             'GridColumn_UnitName
@@ -954,7 +943,7 @@
             Me.GridColumn_UnitName.Name = "GridColumn_UnitName"
             Me.GridColumn_UnitName.OptionsColumn.AllowFocus = False
             Me.GridColumn_UnitName.Visible = True
-            Me.GridColumn_UnitName.VisibleIndex = 13
+            Me.GridColumn_UnitName.VisibleIndex = 12
             Me.GridColumn_UnitName.Width = 36
             '
             'GridColumn_UnitPrice
@@ -966,7 +955,7 @@
             Me.GridColumn_UnitPrice.Name = "GridColumn_UnitPrice"
             Me.GridColumn_UnitPrice.OptionsColumn.AllowFocus = False
             Me.GridColumn_UnitPrice.Visible = True
-            Me.GridColumn_UnitPrice.VisibleIndex = 14
+            Me.GridColumn_UnitPrice.VisibleIndex = 13
             Me.GridColumn_UnitPrice.Width = 48
             '
             'GridColumn_UnitCost
@@ -978,7 +967,7 @@
             Me.GridColumn_UnitCost.Name = "GridColumn_UnitCost"
             Me.GridColumn_UnitCost.OptionsColumn.AllowFocus = False
             Me.GridColumn_UnitCost.Visible = True
-            Me.GridColumn_UnitCost.VisibleIndex = 15
+            Me.GridColumn_UnitCost.VisibleIndex = 14
             Me.GridColumn_UnitCost.Width = 36
             '
             'GridColumn_OrigionalPrice
@@ -988,7 +977,7 @@
             Me.GridColumn_OrigionalPrice.Name = "GridColumn_OrigionalPrice"
             Me.GridColumn_OrigionalPrice.OptionsColumn.AllowFocus = False
             Me.GridColumn_OrigionalPrice.Visible = True
-            Me.GridColumn_OrigionalPrice.VisibleIndex = 16
+            Me.GridColumn_OrigionalPrice.VisibleIndex = 15
             '
             'GridColumn_Remarks
             '
@@ -997,7 +986,7 @@
             Me.GridColumn_Remarks.Name = "GridColumn_Remarks"
             Me.GridColumn_Remarks.OptionsColumn.AllowFocus = False
             Me.GridColumn_Remarks.Visible = True
-            Me.GridColumn_Remarks.VisibleIndex = 17
+            Me.GridColumn_Remarks.VisibleIndex = 16
             Me.GridColumn_Remarks.Width = 36
             '
             'GridColumn_RowHighlight
@@ -1102,7 +1091,6 @@
         Friend WithEvents PanelControl2 As DevExpress.XtraEditors.PanelControl
         Friend WithEvents GridControl_QuotationWareDtl As DevExpress.XtraGrid.GridControl
         Friend WithEvents GridView_QuotationWareDtl As DevExpress.XtraGrid.Views.Grid.GridView
-        Friend WithEvents GridColumn_BatchCode As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents GridColumn_WareCode As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents GridColumn_CustomCode As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents GridColumn_WareName As DevExpress.XtraGrid.Columns.GridColumn
