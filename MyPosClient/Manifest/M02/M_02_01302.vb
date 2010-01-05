@@ -452,7 +452,9 @@ Namespace Manifest
 
 
         Private Sub TbActionEditBom()
-
+            Dim inputForm As New M_02_01303(Me.TransactRequestHandle, Me.FormID)
+            inputForm.SV_UTLD_0001 = Me.SVFR_SELECTING_ROW
+            Me.PopupForm(inputForm, "TbActionEditBom", True)
         End Sub
 
 
