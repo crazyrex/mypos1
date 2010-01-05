@@ -73,7 +73,7 @@ Namespace Business
             SaveInfo
             LoadList
             AddWare
-            BizUtld0002
+            UpdateBindingList
             BizUtld0003
             BizUtld0004
             BizUtld0005
@@ -201,12 +201,12 @@ Namespace Business
                     '-------------------------------------------------------------------
                     functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoAddWare)
 
-                Case Affairs.BizUtld0002
+                Case Affairs.UpdateBindingList
 
                     '
                     '取到处理函数的结果，传入返回给Manifest的AgentResponse包
                     '-------------------------------------------------------------------
-                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoBizUtld0002)
+                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoUpdateBindingList)
 
                 Case Affairs.BizUtld0003
 
@@ -384,82 +384,6 @@ Namespace Business
 
 
             Try
-
-
-                Dim sysWareSpecModelDiscard As Boolean
-                Dim sysHideFinancials As Boolean
-                Dim sysShowCustomWareCode As Boolean
-                Dim affairDescription As String = String.Empty
-
-                Dim sysAttribute1 As String = String.Empty
-                Dim sysAttribute2 As String = String.Empty
-                Dim sysAttribute3 As String = String.Empty
-                Dim sysAttribute4 As String = String.Empty
-
-
-                sysWareSpecModelDiscard = CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_WARE_SPEC_MODEL_DISCARD))
-                sysHideFinancials = CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_HIDE_FINANCIALS))
-                sysShowCustomWareCode = CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_SHOW_CUSTOM_WARE_CODE))
-
-                sysAttribute1 = SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE1)
-                sysAttribute2 = SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE2)
-                sysAttribute3 = SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE3)
-                sysAttribute4 = SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE4)
-
-                If CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE1_HIDDEN)) = True Then
-                    sysAttribute1 = String.Empty
-                End If
-                If CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE2_HIDDEN)) = True Then
-                    sysAttribute2 = String.Empty
-                End If
-                If CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE3_HIDDEN)) = True Then
-                    sysAttribute3 = String.Empty
-                End If
-                If CommTK.FBoolean(SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE4_HIDDEN)) = True Then
-                    sysAttribute4 = String.Empty
-                End If
-
-                If sysHideFinancials = True Then
-                    Me._manifest.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0005)
-                End If
-
-                Me._manifest.GridColumn_Attribute1.Caption = sysAttribute1
-                Me._manifest.GridColumn_Attribute2.Caption = sysAttribute2
-                Me._manifest.GridColumn_Attribute3.Caption = sysAttribute3
-                Me._manifest.GridColumn_Attribute4.Caption = sysAttribute4
-
-                If sysAttribute1.Length = 0 Then
-                    Me._manifest.GridColumn_Attribute1.Visible = False
-                End If
-
-                If sysAttribute2.Length = 0 Then
-                    Me._manifest.GridColumn_Attribute2.Visible = False
-                End If
-
-                If sysAttribute3.Length = 0 Then
-                    Me._manifest.GridColumn_Attribute3.Visible = False
-                End If
-
-                If sysAttribute4.Length = 0 Then
-                    Me._manifest.GridColumn_Attribute4.Visible = False
-                End If
-
-                If sysWareSpecModelDiscard = True Then
-                    Me._manifest.GridColumn_Spec.Visible = False
-                    Me._manifest.GridColumn_Model.Visible = False
-                End If
-
-                If sysShowCustomWareCode = False Then
-                    Me._manifest.GridColumn_CustomCode.Visible = False
-                End If
-
-                Dim userCostHidden As Boolean = CommTK.FBoolean(SysInfo.LoginUserOptions.Options("OPN_COST_HIDDEN"))
-                Dim userPriceHidden As Boolean = CommTK.FBoolean(SysInfo.LoginUserOptions.Options("OPN_PRICE_HIDDEN"))
-
-                If userPriceHidden = True Then
-                    Me._manifest.GridColumn_UnitPrice.Visible = False
-                    Me._manifest.GridColumn_SumPrice.Visible = False
-                End If
 
                 '--------------------------------------------------------------------------------------------------------
                 Dim chooseQuotationTypeList As New MyPosXAuto.FTs.FT_CIV_QUOTATION_TYPE
@@ -676,19 +600,20 @@ Namespace Business
                 End If
 
 
-                Dim dtlRow = Me._manifest.SVFT_BINDING_LIST.NewXV_T_MP_QUOTATION_WARE_DTLRow
-                Me._manifest.SVFT_BINDING_LIST.AddXV_T_MP_QUOTATION_WARE_DTLRow(dtlRow)
+                Dim dtlRow = Me._manifest.SVFT_BACKEND_QUOTATION_WARE_LIST.NewT_MP_QUOTATION_WARE_DTLRow
+                Me._manifest.SVFT_BACKEND_QUOTATION_WARE_LIST.AddT_MP_QUOTATION_WARE_DTLRow(dtlRow)
+
                 dtlRow.WARE_ID = wareRowSEntity.WARE_ID
-                dtlRow.WARE_CODE = wareRowSEntity.WARE_CODE
-                dtlRow.WARE_NAME = wareRowSEntity.WARE_NAME
-                dtlRow.SPEC = wareRowSEntity.SPEC
-                dtlRow.SPEC_EN = wareRowSEntity.SPEC_EN
-                dtlRow.MODEL = wareRowSEntity.MODEL
-                dtlRow.MODEL_EN = wareRowSEntity.MODEL_EN
-                dtlRow.ATTRIBUTE1 = wareRowSEntity.ATTRIBUTE1
-                dtlRow.ATTRIBUTE2 = wareRowSEntity.ATTRIBUTE2
-                dtlRow.ATTRIBUTE3 = wareRowSEntity.ATTRIBUTE3
-                dtlRow.ATTRIBUTE4 = wareRowSEntity.ATTRIBUTE4
+                'dtlRow.WARE_CODE = wareRowSEntity.WARE_CODE
+                'dtlRow.WARE_NAME = wareRowSEntity.WARE_NAME
+                'dtlRow.SPEC = wareRowSEntity.SPEC
+                'dtlRow.SPEC_EN = wareRowSEntity.SPEC_EN
+                'dtlRow.MODEL = wareRowSEntity.MODEL
+                'dtlRow.MODEL_EN = wareRowSEntity.MODEL_EN
+                'dtlRow.ATTRIBUTE1 = wareRowSEntity.ATTRIBUTE1
+                'dtlRow.ATTRIBUTE2 = wareRowSEntity.ATTRIBUTE2
+                'dtlRow.ATTRIBUTE3 = wareRowSEntity.ATTRIBUTE3
+                'dtlRow.ATTRIBUTE4 = wareRowSEntity.ATTRIBUTE4
                 dtlRow.UNIT_PRICE = origionPrice
                 dtlRow.UNIT_COST = _
                     MyPosXService.Facade.OpBizMaster.GetPosWareCost( _
@@ -735,14 +660,14 @@ Namespace Business
         '''
         '''
         '''-------------------------------------------------------------------
-        Private Function DoBizUtld0002() As String
+        Private Function DoUpdateBindingList() As String
 
 
             Try
 
 
                 'Dim servResult As String = _
-                '    Me._service.ServBizUtld0002()
+                '    Me._service.ServUpdateBindingList()
 
                 'If servResult.Length > 0 Then
                 '    Return servResult        

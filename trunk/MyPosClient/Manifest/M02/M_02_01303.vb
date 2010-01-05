@@ -32,7 +32,7 @@ Namespace Manifest
         'Shared Value, 用于与其它窗体交换数值的情况下, 需要自己根据需要更改命名
         '原则上所有UTLD的变量不能出现在成品中, 在确定不需要的情况下应删除UTLD
         '-------------------------------------------------------------------
-        Public SV_UTLD_0001 As String ="SV_UTLD_0001"
+        Public SV_EDITING_COMPONENT_ID As String = String.Empty
         Public SV_UTLD_0002 As String ="SV_UTLD_0002"
         'Public SV_UTLD_0003 As String ="SV_UTLD_0003"
         'Public SV_UTLD_0004 As String ="SV_UTLD_0004"
@@ -45,7 +45,7 @@ Namespace Manifest
         'Public SVLM_UTLD_0002 As String ="SVLM_UTLD_0002"
 
         '数据列表变量
-        'Public SVFT_BINDING_XXX_LIST As New MyPosXAuto.FTs.FT_
+        Public SVFT_EDITING_OPTION_LIST As New MyPosXAuto.FTs.FT_T_MP_QUOTATION_WARE_DTL
         'Public SVFT_CHOOSE_XXX_LIST As New MyPosXAuto.FTs.FT_
 
         'Public SVFR_SELECTING_XXX_ROW As MyPosXAuto.FTs.FT_ Row

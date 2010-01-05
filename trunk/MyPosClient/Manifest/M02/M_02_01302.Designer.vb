@@ -54,9 +54,6 @@
             Dim CTag17 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag16 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag18 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
-            Dim StyleFormatCondition1 As DevExpress.XtraGrid.StyleFormatCondition = New DevExpress.XtraGrid.StyleFormatCondition
-            Dim StyleFormatCondition2 As DevExpress.XtraGrid.StyleFormatCondition = New DevExpress.XtraGrid.StyleFormatCondition
-            Dim CTag19 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Me.ToolStrip_Form = New System.Windows.Forms.ToolStrip
             Me.ToolStripButton_EditBom = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_Close = New System.Windows.Forms.ToolStripButton
@@ -76,28 +73,13 @@
             Me.Label18 = New System.Windows.Forms.Label
             Me.PanelControl2 = New DevExpress.XtraEditors.PanelControl
             Me.Label_WareID = New System.Windows.Forms.Label
-            Me.GridControl_QuotationWareDtl = New DevExpress.XtraGrid.GridControl
-            Me.GridView_QuotationWareDtl = New DevExpress.XtraGrid.Views.Grid.GridView
-            Me.GridColumn_WareCode = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn_CustomCode = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn_WareName = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn_Spec = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn_Model = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn_Attribute1 = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn_Attribute2 = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn_Attribute3 = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn_Attribute4 = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn_WareAmount = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn_SumPrice = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn_CurrentAmount = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn_UnitName = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn_UnitPrice = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn_UnitCost = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn_OrigionalPrice = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn_Remarks = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn_RowHighlight = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.RepositoryItemCheckEdit_Select = New DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
             Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl
+            Me.TreeList_OverViewList = New DevExpress.XtraTreeList.TreeList
+            Me.TreeListColumn1 = New DevExpress.XtraTreeList.Columns.TreeListColumn
+            Me.RepositoryItemImageComboBox1 = New DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox
+            Me.TreeListColumn2 = New DevExpress.XtraTreeList.Columns.TreeListColumn
+            Me.RepositoryItemTextEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemTextEdit
+            Me.TreeListColumn3 = New DevExpress.XtraTreeList.Columns.TreeListColumn
             Me.ToolStrip_Form.SuspendLayout()
             CType(Me.TextEdit_TurnoverCode.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.DateEdit_DepositTime.Properties.VistaTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -109,11 +91,11 @@
             CType(Me.ButtonEdit_WareCode.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.PanelControl2.SuspendLayout()
-            CType(Me.GridControl_QuotationWareDtl, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.GridView_QuotationWareDtl, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.RepositoryItemCheckEdit_Select, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.GroupControl1.SuspendLayout()
+            CType(Me.TreeList_OverViewList, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.RepositoryItemImageComboBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.RepositoryItemTextEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'DefaultLookAndFeel_Form
@@ -170,11 +152,11 @@
             'TextEdit_TurnoverCode
             '
             Me.TextEdit_TurnoverCode.ImeMode = System.Windows.Forms.ImeMode.Disable
-            Me.TextEdit_TurnoverCode.Location = New System.Drawing.Point(98, 10)
+            Me.TextEdit_TurnoverCode.Location = New System.Drawing.Point(98, 11)
             Me.TextEdit_TurnoverCode.Name = "TextEdit_TurnoverCode"
             Me.TextEdit_TurnoverCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.TextEdit_TurnoverCode.Size = New System.Drawing.Size(159, 21)
-            Me.TextEdit_TurnoverCode.TabIndex = 10002
+            Me.TextEdit_TurnoverCode.Size = New System.Drawing.Size(181, 21)
+            Me.TextEdit_TurnoverCode.TabIndex = 10000
             CTag2.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag2.CalculatorRequired = True
             CTag2.ComboValueTextBox = Nothing
@@ -210,7 +192,7 @@
             Me.Label_TurnoverCode.Location = New System.Drawing.Point(21, 13)
             Me.Label_TurnoverCode.Name = "Label_TurnoverCode"
             Me.Label_TurnoverCode.Size = New System.Drawing.Size(55, 15)
-            Me.Label_TurnoverCode.TabIndex = 10001
+            Me.Label_TurnoverCode.TabIndex = 10000
             CTag3.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag3.CalculatorRequired = True
             CTag3.ComboValueTextBox = Nothing
@@ -246,7 +228,7 @@
             Me.DateEdit_DepositTime.Properties.NullDate = New Date(1753, 1, 1, 12, 0, 0, 0)
             Me.DateEdit_DepositTime.Properties.VistaTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
             Me.DateEdit_DepositTime.Size = New System.Drawing.Size(95, 21)
-            Me.DateEdit_DepositTime.TabIndex = 10004
+            Me.DateEdit_DepositTime.TabIndex = 10000
             CTag4.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag4.CalculatorRequired = True
             CTag4.ComboValueTextBox = Nothing
@@ -282,7 +264,7 @@
             Me.Label_TurnoverTime.Location = New System.Drawing.Point(285, 13)
             Me.Label_TurnoverTime.Name = "Label_TurnoverTime"
             Me.Label_TurnoverTime.Size = New System.Drawing.Size(55, 15)
-            Me.Label_TurnoverTime.TabIndex = 10003
+            Me.Label_TurnoverTime.TabIndex = 10000
             CTag5.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag5.CalculatorRequired = True
             CTag5.ComboValueTextBox = Nothing
@@ -356,7 +338,7 @@
             Me.LookUpEdit_QuotationType.Properties.NullText = ""
             Me.LookUpEdit_QuotationType.Properties.ValueMember = "ITEM_VALUE"
             Me.LookUpEdit_QuotationType.Size = New System.Drawing.Size(119, 21)
-            Me.LookUpEdit_QuotationType.TabIndex = 10005
+            Me.LookUpEdit_QuotationType.TabIndex = 10000
             CTag7.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag7.CalculatorRequired = True
             CTag7.ComboValueTextBox = Nothing
@@ -468,7 +450,7 @@
             Me.PanelControl1.Location = New System.Drawing.Point(0, 25)
             Me.PanelControl1.Name = "PanelControl1"
             Me.PanelControl1.Size = New System.Drawing.Size(700, 72)
-            Me.PanelControl1.TabIndex = 10006
+            Me.PanelControl1.TabIndex = 10000
             CTag12.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag12.CalculatorRequired = True
             CTag12.ComboValueTextBox = Nothing
@@ -504,7 +486,7 @@
             Me.Label_LastReviser.Location = New System.Drawing.Point(602, 12)
             Me.Label_LastReviser.Name = "Label_LastReviser"
             Me.Label_LastReviser.Size = New System.Drawing.Size(80, 25)
-            Me.Label_LastReviser.TabIndex = 10003
+            Me.Label_LastReviser.TabIndex = 10000
             CTag10.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag10.CalculatorRequired = True
             CTag10.ComboValueTextBox = Nothing
@@ -540,7 +522,7 @@
             Me.Label3.Location = New System.Drawing.Point(518, 14)
             Me.Label3.Name = "Label3"
             Me.Label3.Size = New System.Drawing.Size(67, 15)
-            Me.Label3.TabIndex = 10003
+            Me.Label3.TabIndex = 10000
             CTag11.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag11.CalculatorRequired = True
             CTag11.ComboValueTextBox = Nothing
@@ -577,7 +559,7 @@
             Me.Label_CustomCode.Location = New System.Drawing.Point(221, 6)
             Me.Label_CustomCode.Name = "Label_CustomCode"
             Me.Label_CustomCode.Size = New System.Drawing.Size(137, 28)
-            Me.Label_CustomCode.TabIndex = 10010
+            Me.Label_CustomCode.TabIndex = 10000
             CTag13.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag13.CalculatorRequired = True
             CTag13.ComboValueTextBox = Nothing
@@ -609,7 +591,7 @@
             Me.ButtonEdit_WareCode.Name = "ButtonEdit_WareCode"
             Me.ButtonEdit_WareCode.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
             Me.ButtonEdit_WareCode.Size = New System.Drawing.Size(116, 21)
-            Me.ButtonEdit_WareCode.TabIndex = 10009
+            Me.ButtonEdit_WareCode.TabIndex = 10000
             CTag14.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag14.CalculatorRequired = True
             CTag14.ComboValueTextBox = Nothing
@@ -645,7 +627,7 @@
             Me.Label18.Location = New System.Drawing.Point(14, 12)
             Me.Label18.Name = "Label18"
             Me.Label18.Size = New System.Drawing.Size(55, 15)
-            Me.Label18.TabIndex = 10008
+            Me.Label18.TabIndex = 10000
             CTag15.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag15.CalculatorRequired = True
             CTag15.ComboValueTextBox = Nothing
@@ -684,7 +666,7 @@
             Me.PanelControl2.Location = New System.Drawing.Point(2, 21)
             Me.PanelControl2.Name = "PanelControl2"
             Me.PanelControl2.Size = New System.Drawing.Size(696, 41)
-            Me.PanelControl2.TabIndex = 10007
+            Me.PanelControl2.TabIndex = 10000
             CTag17.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag17.CalculatorRequired = True
             CTag17.ComboValueTextBox = Nothing
@@ -712,11 +694,14 @@
             '
             'Label_WareID
             '
+            Me.Label_WareID.BackColor = System.Drawing.Color.White
+            Me.Label_WareID.Font = New System.Drawing.Font("Arial", 9.0!)
+            Me.Label_WareID.ForeColor = System.Drawing.Color.Black
             Me.Label_WareID.ImeMode = System.Windows.Forms.ImeMode.NoControl
             Me.Label_WareID.Location = New System.Drawing.Point(333, 9)
             Me.Label_WareID.Name = "Label_WareID"
             Me.Label_WareID.Size = New System.Drawing.Size(25, 18)
-            Me.Label_WareID.TabIndex = 10012
+            Me.Label_WareID.TabIndex = 10000
             CTag16.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag16.CalculatorRequired = True
             CTag16.ComboValueTextBox = Nothing
@@ -744,267 +729,9 @@
             Me.Label_WareID.Text = "ID"
             Me.Label_WareID.Visible = False
             '
-            'GridControl_QuotationWareDtl
-            '
-            Me.GridControl_QuotationWareDtl.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.GridControl_QuotationWareDtl.EmbeddedNavigator.Name = ""
-            CTag18.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
-            CTag18.CalculatorRequired = True
-            CTag18.ComboValueTextBox = Nothing
-            CTag18.ControlRelatedCode = Nothing
-            CTag18.DateButtonTextBox = Nothing
-            CTag18.DateTimeButtonTextBox = Nothing
-            CTag18.DisplayLinkControl = Nothing
-            CTag18.DisplayLinkDisplayFieldName = Nothing
-            CTag18.DisplayLinkKeyFieldName = Nothing
-            CTag18.DisplayLinkTable = Nothing
-            CTag18.FlexgridEditItem = ""
-            CTag18.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
-            CTag18.FormStatus = XL.Win.Component.BaseForm.FormStatuses.BeforeLoading
-            CTag18.IsButtonCustomed = False
-            CTag18.IsTextValid = True
-            CTag18.KeyValueAbsentable = False
-            CTag18.LeagleText = ""
-            CTag18.NumericButtonTextBox = Nothing
-            CTag18.ParentControl = Me.GridControl_QuotationWareDtl.EmbeddedNavigator
-            CTag18.SkipValidate = False
-            CTag18.TimeButtonTextBox = Nothing
-            CTag18.ToolTip = ""
-            CTag18.ValueType = XL.Common.ControlValueType.Character
-            Me.GridControl_QuotationWareDtl.EmbeddedNavigator.Tag = CTag18
-            Me.GridControl_QuotationWareDtl.Location = New System.Drawing.Point(2, 62)
-            Me.GridControl_QuotationWareDtl.MainView = Me.GridView_QuotationWareDtl
-            Me.GridControl_QuotationWareDtl.Name = "GridControl_QuotationWareDtl"
-            Me.GridControl_QuotationWareDtl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemCheckEdit_Select})
-            Me.GridControl_QuotationWareDtl.Size = New System.Drawing.Size(696, 339)
-            Me.GridControl_QuotationWareDtl.TabIndex = 10008
-            Me.GridControl_QuotationWareDtl.TabStop = False
-            Me.GridControl_QuotationWareDtl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView_QuotationWareDtl})
-            '
-            'GridView_QuotationWareDtl
-            '
-            Me.GridView_QuotationWareDtl.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn_WareCode, Me.GridColumn_CustomCode, Me.GridColumn_WareName, Me.GridColumn_Spec, Me.GridColumn_Model, Me.GridColumn_Attribute1, Me.GridColumn_Attribute2, Me.GridColumn_Attribute3, Me.GridColumn_Attribute4, Me.GridColumn_WareAmount, Me.GridColumn_SumPrice, Me.GridColumn_CurrentAmount, Me.GridColumn_UnitName, Me.GridColumn_UnitPrice, Me.GridColumn_UnitCost, Me.GridColumn_OrigionalPrice, Me.GridColumn_Remarks, Me.GridColumn_RowHighlight})
-            StyleFormatCondition1.Appearance.BackColor = System.Drawing.Color.Lime
-            StyleFormatCondition1.Appearance.BackColor2 = System.Drawing.Color.White
-            StyleFormatCondition1.Appearance.Options.UseBackColor = True
-            StyleFormatCondition1.ApplyToRow = True
-            StyleFormatCondition1.Column = Me.GridColumn_RowHighlight
-            StyleFormatCondition1.Condition = DevExpress.XtraGrid.FormatConditionEnum.Equal
-            StyleFormatCondition1.Value1 = "SEARCH_MATCH"
-            StyleFormatCondition2.Appearance.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-            StyleFormatCondition2.Appearance.BackColor2 = System.Drawing.Color.White
-            StyleFormatCondition2.Appearance.Options.UseBackColor = True
-            StyleFormatCondition2.ApplyToRow = True
-            StyleFormatCondition2.Column = Me.GridColumn_RowHighlight
-            StyleFormatCondition2.Condition = DevExpress.XtraGrid.FormatConditionEnum.Equal
-            StyleFormatCondition2.Value1 = "ROW_HIGHLIGHT_OUT_OF_STOCK"
-            Me.GridView_QuotationWareDtl.FormatConditions.AddRange(New DevExpress.XtraGrid.StyleFormatCondition() {StyleFormatCondition1, StyleFormatCondition2})
-            Me.GridView_QuotationWareDtl.GridControl = Me.GridControl_QuotationWareDtl
-            Me.GridView_QuotationWareDtl.Name = "GridView_QuotationWareDtl"
-            Me.GridView_QuotationWareDtl.OptionsView.ColumnAutoWidth = False
-            Me.GridView_QuotationWareDtl.OptionsView.ShowFooter = True
-            Me.GridView_QuotationWareDtl.OptionsView.ShowGroupPanel = False
-            '
-            'GridColumn_WareCode
-            '
-            Me.GridColumn_WareCode.Caption = "货品代码"
-            Me.GridColumn_WareCode.FieldName = "WARE_CODE"
-            Me.GridColumn_WareCode.Name = "GridColumn_WareCode"
-            Me.GridColumn_WareCode.OptionsColumn.AllowFocus = False
-            Me.GridColumn_WareCode.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Count
-            Me.GridColumn_WareCode.Visible = True
-            Me.GridColumn_WareCode.VisibleIndex = 0
-            Me.GridColumn_WareCode.Width = 60
-            '
-            'GridColumn_CustomCode
-            '
-            Me.GridColumn_CustomCode.Caption = "自定货号"
-            Me.GridColumn_CustomCode.FieldName = "CUSTOM_CODE"
-            Me.GridColumn_CustomCode.Name = "GridColumn_CustomCode"
-            Me.GridColumn_CustomCode.OptionsColumn.AllowFocus = False
-            Me.GridColumn_CustomCode.Visible = True
-            Me.GridColumn_CustomCode.VisibleIndex = 1
-            Me.GridColumn_CustomCode.Width = 60
-            '
-            'GridColumn_WareName
-            '
-            Me.GridColumn_WareName.Caption = "货品名称"
-            Me.GridColumn_WareName.FieldName = "WARE_NAME"
-            Me.GridColumn_WareName.Name = "GridColumn_WareName"
-            Me.GridColumn_WareName.OptionsColumn.AllowFocus = False
-            Me.GridColumn_WareName.Visible = True
-            Me.GridColumn_WareName.VisibleIndex = 2
-            Me.GridColumn_WareName.Width = 60
-            '
-            'GridColumn_Spec
-            '
-            Me.GridColumn_Spec.Caption = "货品规格"
-            Me.GridColumn_Spec.FieldName = "SPEC"
-            Me.GridColumn_Spec.Name = "GridColumn_Spec"
-            Me.GridColumn_Spec.OptionsColumn.AllowFocus = False
-            Me.GridColumn_Spec.Visible = True
-            Me.GridColumn_Spec.VisibleIndex = 3
-            Me.GridColumn_Spec.Width = 60
-            '
-            'GridColumn_Model
-            '
-            Me.GridColumn_Model.Caption = "货品型号"
-            Me.GridColumn_Model.FieldName = "MODEL"
-            Me.GridColumn_Model.Name = "GridColumn_Model"
-            Me.GridColumn_Model.OptionsColumn.AllowFocus = False
-            Me.GridColumn_Model.Visible = True
-            Me.GridColumn_Model.VisibleIndex = 4
-            Me.GridColumn_Model.Width = 60
-            '
-            'GridColumn_Attribute1
-            '
-            Me.GridColumn_Attribute1.Caption = "属性1"
-            Me.GridColumn_Attribute1.FieldName = "ATTRIBUTE1"
-            Me.GridColumn_Attribute1.Name = "GridColumn_Attribute1"
-            Me.GridColumn_Attribute1.OptionsColumn.AllowFocus = False
-            Me.GridColumn_Attribute1.Visible = True
-            Me.GridColumn_Attribute1.VisibleIndex = 5
-            Me.GridColumn_Attribute1.Width = 43
-            '
-            'GridColumn_Attribute2
-            '
-            Me.GridColumn_Attribute2.Caption = "属性2"
-            Me.GridColumn_Attribute2.FieldName = "ATTRIBUTE2"
-            Me.GridColumn_Attribute2.Name = "GridColumn_Attribute2"
-            Me.GridColumn_Attribute2.OptionsColumn.AllowFocus = False
-            Me.GridColumn_Attribute2.Visible = True
-            Me.GridColumn_Attribute2.VisibleIndex = 6
-            Me.GridColumn_Attribute2.Width = 43
-            '
-            'GridColumn_Attribute3
-            '
-            Me.GridColumn_Attribute3.Caption = "属性3"
-            Me.GridColumn_Attribute3.FieldName = "ATTRIBUTE3"
-            Me.GridColumn_Attribute3.Name = "GridColumn_Attribute3"
-            Me.GridColumn_Attribute3.OptionsColumn.AllowFocus = False
-            Me.GridColumn_Attribute3.Visible = True
-            Me.GridColumn_Attribute3.VisibleIndex = 7
-            Me.GridColumn_Attribute3.Width = 43
-            '
-            'GridColumn_Attribute4
-            '
-            Me.GridColumn_Attribute4.Caption = "属性4"
-            Me.GridColumn_Attribute4.FieldName = "ATTRIBUTE4"
-            Me.GridColumn_Attribute4.Name = "GridColumn_Attribute4"
-            Me.GridColumn_Attribute4.OptionsColumn.AllowFocus = False
-            Me.GridColumn_Attribute4.Visible = True
-            Me.GridColumn_Attribute4.VisibleIndex = 8
-            Me.GridColumn_Attribute4.Width = 43
-            '
-            'GridColumn_WareAmount
-            '
-            Me.GridColumn_WareAmount.Caption = "数量"
-            Me.GridColumn_WareAmount.DisplayFormat.FormatString = "{0:#,##0.00}"
-            Me.GridColumn_WareAmount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
-            Me.GridColumn_WareAmount.FieldName = "WARE_AMOUNT"
-            Me.GridColumn_WareAmount.Name = "GridColumn_WareAmount"
-            Me.GridColumn_WareAmount.OptionsColumn.AllowFocus = False
-            Me.GridColumn_WareAmount.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum
-            Me.GridColumn_WareAmount.Visible = True
-            Me.GridColumn_WareAmount.VisibleIndex = 9
-            Me.GridColumn_WareAmount.Width = 36
-            '
-            'GridColumn_SumPrice
-            '
-            Me.GridColumn_SumPrice.Caption = "总价"
-            Me.GridColumn_SumPrice.DisplayFormat.FormatString = "{0:#,##0.00}"
-            Me.GridColumn_SumPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
-            Me.GridColumn_SumPrice.FieldName = "SUM_PRICE"
-            Me.GridColumn_SumPrice.Name = "GridColumn_SumPrice"
-            Me.GridColumn_SumPrice.OptionsColumn.AllowFocus = False
-            Me.GridColumn_SumPrice.SummaryItem.DisplayFormat = "{0:#,##0.00}"
-            Me.GridColumn_SumPrice.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum
-            Me.GridColumn_SumPrice.Visible = True
-            Me.GridColumn_SumPrice.VisibleIndex = 10
-            Me.GridColumn_SumPrice.Width = 36
-            '
-            'GridColumn_CurrentAmount
-            '
-            Me.GridColumn_CurrentAmount.Caption = "当前在库数量"
-            Me.GridColumn_CurrentAmount.DisplayFormat.FormatString = "{0:#,##0.00}"
-            Me.GridColumn_CurrentAmount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
-            Me.GridColumn_CurrentAmount.FieldName = "CURRENT_AMOUNT"
-            Me.GridColumn_CurrentAmount.Name = "GridColumn_CurrentAmount"
-            Me.GridColumn_CurrentAmount.OptionsColumn.AllowFocus = False
-            Me.GridColumn_CurrentAmount.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum
-            Me.GridColumn_CurrentAmount.Visible = True
-            Me.GridColumn_CurrentAmount.VisibleIndex = 11
-            Me.GridColumn_CurrentAmount.Width = 84
-            '
-            'GridColumn_UnitName
-            '
-            Me.GridColumn_UnitName.Caption = "单位"
-            Me.GridColumn_UnitName.FieldName = "UNIT_NAME"
-            Me.GridColumn_UnitName.Name = "GridColumn_UnitName"
-            Me.GridColumn_UnitName.OptionsColumn.AllowFocus = False
-            Me.GridColumn_UnitName.Visible = True
-            Me.GridColumn_UnitName.VisibleIndex = 12
-            Me.GridColumn_UnitName.Width = 36
-            '
-            'GridColumn_UnitPrice
-            '
-            Me.GridColumn_UnitPrice.Caption = "出货价"
-            Me.GridColumn_UnitPrice.DisplayFormat.FormatString = "{0:#,##0.00}"
-            Me.GridColumn_UnitPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
-            Me.GridColumn_UnitPrice.FieldName = "UNIT_PRICE"
-            Me.GridColumn_UnitPrice.Name = "GridColumn_UnitPrice"
-            Me.GridColumn_UnitPrice.OptionsColumn.AllowFocus = False
-            Me.GridColumn_UnitPrice.Visible = True
-            Me.GridColumn_UnitPrice.VisibleIndex = 13
-            Me.GridColumn_UnitPrice.Width = 48
-            '
-            'GridColumn_UnitCost
-            '
-            Me.GridColumn_UnitCost.Caption = "成本"
-            Me.GridColumn_UnitCost.DisplayFormat.FormatString = "{0:#,##0.00}"
-            Me.GridColumn_UnitCost.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
-            Me.GridColumn_UnitCost.FieldName = "UNIT_COST"
-            Me.GridColumn_UnitCost.Name = "GridColumn_UnitCost"
-            Me.GridColumn_UnitCost.OptionsColumn.AllowFocus = False
-            Me.GridColumn_UnitCost.Visible = True
-            Me.GridColumn_UnitCost.VisibleIndex = 14
-            Me.GridColumn_UnitCost.Width = 36
-            '
-            'GridColumn_OrigionalPrice
-            '
-            Me.GridColumn_OrigionalPrice.Caption = "原单价"
-            Me.GridColumn_OrigionalPrice.FieldName = "ORIGION_UNIT_PRICE"
-            Me.GridColumn_OrigionalPrice.Name = "GridColumn_OrigionalPrice"
-            Me.GridColumn_OrigionalPrice.OptionsColumn.AllowFocus = False
-            Me.GridColumn_OrigionalPrice.Visible = True
-            Me.GridColumn_OrigionalPrice.VisibleIndex = 15
-            '
-            'GridColumn_Remarks
-            '
-            Me.GridColumn_Remarks.Caption = "备注"
-            Me.GridColumn_Remarks.FieldName = "REMARK"
-            Me.GridColumn_Remarks.Name = "GridColumn_Remarks"
-            Me.GridColumn_Remarks.OptionsColumn.AllowFocus = False
-            Me.GridColumn_Remarks.Visible = True
-            Me.GridColumn_Remarks.VisibleIndex = 16
-            Me.GridColumn_Remarks.Width = 36
-            '
-            'GridColumn_RowHighlight
-            '
-            Me.GridColumn_RowHighlight.Caption = "高亮显示"
-            Me.GridColumn_RowHighlight.FieldName = "DSR_FT_ROW_HIGHLIGHT"
-            Me.GridColumn_RowHighlight.Name = "GridColumn_RowHighlight"
-            Me.GridColumn_RowHighlight.OptionsColumn.AllowFocus = False
-            Me.GridColumn_RowHighlight.Width = 60
-            '
-            'RepositoryItemCheckEdit_Select
-            '
-            Me.RepositoryItemCheckEdit_Select.AutoHeight = False
-            Me.RepositoryItemCheckEdit_Select.Name = "RepositoryItemCheckEdit_Select"
-            '
             'GroupControl1
             '
-            Me.GroupControl1.Controls.Add(Me.GridControl_QuotationWareDtl)
+            Me.GroupControl1.Controls.Add(Me.TreeList_OverViewList)
             Me.GroupControl1.Controls.Add(Me.PanelControl2)
             Me.GroupControl1.Dock = System.Windows.Forms.DockStyle.Fill
             Me.GroupControl1.Location = New System.Drawing.Point(0, 97)
@@ -1012,6 +739,59 @@
             Me.GroupControl1.Size = New System.Drawing.Size(700, 403)
             Me.GroupControl1.TabIndex = 10000
             Me.GroupControl1.Text = "货品明细"
+            '
+            'TreeList_OverViewList
+            '
+            Me.TreeList_OverViewList.AllowDrop = True
+            Me.TreeList_OverViewList.Columns.AddRange(New DevExpress.XtraTreeList.Columns.TreeListColumn() {Me.TreeListColumn1, Me.TreeListColumn2, Me.TreeListColumn3})
+            Me.TreeList_OverViewList.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.TreeList_OverViewList.KeyFieldName = "COMPONENT_ID"
+            Me.TreeList_OverViewList.Location = New System.Drawing.Point(2, 62)
+            Me.TreeList_OverViewList.Name = "TreeList_OverViewList"
+            Me.TreeList_OverViewList.OptionsBehavior.DragNodes = True
+            Me.TreeList_OverViewList.OptionsView.AutoWidth = False
+            Me.TreeList_OverViewList.ParentFieldName = "PARENT_COMPONENT"
+            Me.TreeList_OverViewList.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemTextEdit1, Me.RepositoryItemImageComboBox1})
+            Me.TreeList_OverViewList.Size = New System.Drawing.Size(696, 339)
+            Me.TreeList_OverViewList.TabIndex = 10003
+            Me.TreeList_OverViewList.TabStop = False
+            '
+            'TreeListColumn1
+            '
+            Me.TreeListColumn1.ColumnEdit = Me.RepositoryItemImageComboBox1
+            Me.TreeListColumn1.FieldName = "DSR_FT_ROW_REMARK"
+            Me.TreeListColumn1.Name = "TreeListColumn1"
+            Me.TreeListColumn1.OptionsColumn.AllowFocus = False
+            Me.TreeListColumn1.Visible = True
+            Me.TreeListColumn1.VisibleIndex = 0
+            Me.TreeListColumn1.Width = 114
+            '
+            'RepositoryItemImageComboBox1
+            '
+            Me.RepositoryItemImageComboBox1.Items.AddRange(New DevExpress.XtraEditors.Controls.ImageComboBoxItem() {New DevExpress.XtraEditors.Controls.ImageComboBoxItem("", "ROOT_WARE", 0), New DevExpress.XtraEditors.Controls.ImageComboBoxItem("", "COMPONENT", 1), New DevExpress.XtraEditors.Controls.ImageComboBoxItem("", "OPTION", 2)})
+            Me.RepositoryItemImageComboBox1.Name = "RepositoryItemImageComboBox1"
+            '
+            'TreeListColumn2
+            '
+            Me.TreeListColumn2.Caption = "组件"
+            Me.TreeListColumn2.ColumnEdit = Me.RepositoryItemTextEdit1
+            Me.TreeListColumn2.FieldName = "COMPONENT_NAME"
+            Me.TreeListColumn2.Name = "TreeListColumn2"
+            Me.TreeListColumn2.OptionsColumn.AllowFocus = False
+            Me.TreeListColumn2.Visible = True
+            Me.TreeListColumn2.VisibleIndex = 1
+            Me.TreeListColumn2.Width = 646
+            '
+            'RepositoryItemTextEdit1
+            '
+            Me.RepositoryItemTextEdit1.AutoHeight = False
+            Me.RepositoryItemTextEdit1.Name = "RepositoryItemTextEdit1"
+            '
+            'TreeListColumn3
+            '
+            Me.TreeListColumn3.Caption = "高亮显示"
+            Me.TreeListColumn3.FieldName = "DSR_FT_ROW_HIGHLIGHT"
+            Me.TreeListColumn3.Name = "TreeListColumn3"
             '
             'M_02_01302
             '
@@ -1025,30 +805,30 @@
             Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
             Me.Name = "M_02_01302"
             Me.Size = New System.Drawing.Size(700, 500)
-            CTag19.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
-            CTag19.CalculatorRequired = True
-            CTag19.ComboValueTextBox = Nothing
-            CTag19.ControlRelatedCode = Nothing
-            CTag19.DateButtonTextBox = Nothing
-            CTag19.DateTimeButtonTextBox = Nothing
-            CTag19.DisplayLinkControl = Nothing
-            CTag19.DisplayLinkDisplayFieldName = Nothing
-            CTag19.DisplayLinkKeyFieldName = Nothing
-            CTag19.DisplayLinkTable = Nothing
-            CTag19.FlexgridEditItem = ""
-            CTag19.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
-            CTag19.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
-            CTag19.IsButtonCustomed = False
-            CTag19.IsTextValid = True
-            CTag19.KeyValueAbsentable = False
-            CTag19.LeagleText = ""
-            CTag19.NumericButtonTextBox = Nothing
-            CTag19.ParentControl = Me
-            CTag19.SkipValidate = False
-            CTag19.TimeButtonTextBox = Nothing
-            CTag19.ToolTip = ""
-            CTag19.ValueType = XL.Common.ControlValueType.Character
-            Me.Tag = CTag19
+            CTag18.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
+            CTag18.CalculatorRequired = True
+            CTag18.ComboValueTextBox = Nothing
+            CTag18.ControlRelatedCode = Nothing
+            CTag18.DateButtonTextBox = Nothing
+            CTag18.DateTimeButtonTextBox = Nothing
+            CTag18.DisplayLinkControl = Nothing
+            CTag18.DisplayLinkDisplayFieldName = Nothing
+            CTag18.DisplayLinkKeyFieldName = Nothing
+            CTag18.DisplayLinkTable = Nothing
+            CTag18.FlexgridEditItem = ""
+            CTag18.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
+            CTag18.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
+            CTag18.IsButtonCustomed = False
+            CTag18.IsTextValid = True
+            CTag18.KeyValueAbsentable = False
+            CTag18.LeagleText = ""
+            CTag18.NumericButtonTextBox = Nothing
+            CTag18.ParentControl = Me
+            CTag18.SkipValidate = False
+            CTag18.TimeButtonTextBox = Nothing
+            CTag18.ToolTip = ""
+            CTag18.ValueType = XL.Common.ControlValueType.Character
+            Me.Tag = CTag18
             Me.ToolStrip_Form.ResumeLayout(False)
             Me.ToolStrip_Form.PerformLayout()
             CType(Me.TextEdit_TurnoverCode.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1063,11 +843,11 @@
             CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).EndInit()
             Me.PanelControl2.ResumeLayout(False)
             Me.PanelControl2.PerformLayout()
-            CType(Me.GridControl_QuotationWareDtl, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.GridView_QuotationWareDtl, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.RepositoryItemCheckEdit_Select, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.GroupControl1.ResumeLayout(False)
+            CType(Me.TreeList_OverViewList, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.RepositoryItemImageComboBox1, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.RepositoryItemTextEdit1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -1089,28 +869,13 @@
         Friend WithEvents Label18 As System.Windows.Forms.Label
         Friend WithEvents GroupControl1 As DevExpress.XtraEditors.GroupControl
         Friend WithEvents PanelControl2 As DevExpress.XtraEditors.PanelControl
-        Friend WithEvents GridControl_QuotationWareDtl As DevExpress.XtraGrid.GridControl
-        Friend WithEvents GridView_QuotationWareDtl As DevExpress.XtraGrid.Views.Grid.GridView
-        Friend WithEvents GridColumn_WareCode As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn_CustomCode As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn_WareName As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn_Spec As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn_Model As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn_Attribute1 As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn_Attribute2 As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn_Attribute3 As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn_Attribute4 As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn_WareAmount As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn_SumPrice As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn_CurrentAmount As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn_UnitName As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn_UnitPrice As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn_UnitCost As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn_OrigionalPrice As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn_Remarks As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn_RowHighlight As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents RepositoryItemCheckEdit_Select As DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
         Friend WithEvents Label_WareID As System.Windows.Forms.Label
+        Friend WithEvents TreeList_OverViewList As DevExpress.XtraTreeList.TreeList
+        Friend WithEvents TreeListColumn1 As DevExpress.XtraTreeList.Columns.TreeListColumn
+        Friend WithEvents RepositoryItemImageComboBox1 As DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox
+        Friend WithEvents TreeListColumn2 As DevExpress.XtraTreeList.Columns.TreeListColumn
+        Friend WithEvents RepositoryItemTextEdit1 As DevExpress.XtraEditors.Repository.RepositoryItemTextEdit
+        Friend WithEvents TreeListColumn3 As DevExpress.XtraTreeList.Columns.TreeListColumn
 
 #End Region
 
