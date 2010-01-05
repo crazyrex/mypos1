@@ -44,10 +44,12 @@ Namespace Manifest
         'Public SVLM_UTLD_0002 As String ="SVLM_UTLD_0002"
 
         '数据列表变量
-        Public SVFT_BINDING_LIST As New MyPosXAuto.FTs.FT_XV_T_MP_QUOTATION_WARE_DTL
+        Public SVFT_BACKEND_QUOTATION_WARE_LIST As New MyPosXAuto.FTs.FT_T_MP_QUOTATION_WARE_DTL
+        Public SVFT_BACKEND_BOM_OPTION_LIST As New MyPosXAuto.FTs.FT_T_MP_QUOT_WARE_BOM_DTL
+        Public SVFT_BINDING_COMPONENT_LIST As New MyPosXAuto.FTs.FT_S_MP_BOM_COMPONENT
         'Public SVFT_CHOOSE_XXX_LIST As New MyPosXAuto.FTs.FT_
 
-        Public SVFR_SELECTING_ROW As MyPosXAuto.FTs.FT_XV_T_MP_QUOTATION_WARE_DTLRow
+        Public SVFR_SELECTING_COMPONENT_ROW As MyPosXAuto.FTs.FT_S_MP_BOM_COMPONENTRow
 
 #End Region
 
@@ -164,7 +166,7 @@ Namespace Manifest
 
             Me._bizAgent.DoRequest(Business.B_02_01302.Affairs.InitDisplay, False)
 
-            Me.GridControl_QuotationWareDtl.DataSource = Me.SVFT_BINDING_LIST
+            'Me.tree.DataSource = Me.SVFT_BINDING_LIST
             'Me.LookupEdit_.Properties.DataSource = Me.SVFT_CHOOSE_
 
         End Sub
@@ -248,8 +250,7 @@ Namespace Manifest
                         Me._bizAgent.DoRequest(Business.B_02_01302.Affairs.AddWare, False)
                     Next
                     Me.ButtonEdit_WareCode.ResetText()
-                    Me.DoPrivateUpdateSelectingRow()
-                    Me.GridView_QuotationWareDtl.BestFitColumns()
+                    Me._bizAgent.DoRequest(Business.B_02_01302.Affairs.UpdateBindingList, False)
                 Case "ResponseTitleName2"
 
                 Case "ResponseTitleName3"
@@ -360,11 +361,13 @@ Namespace Manifest
 
             Select Case Me._bizAgent.AffairOf(responseResult.ResponseTitle)
                 Case Business.B_02_01302.Affairs.LoadInfo
-
+                    Me._bizAgent.DoRequest(Business.B_02_01302.Affairs.UpdateBindingList, False)
+                Case Business.B_02_01302.Affairs.UpdateBindingList
                     Me.DoPrivateUpdateSelectingRow()
-                    Me.GridView_QuotationWareDtl.BestFitColumns()
+                    Me.TreeList_OverViewList.BestFitColumns()
 
                 Case Business.B_02_01302.Affairs.AddWare
+                    Me._bizAgent.DoRequest(Business.B_02_01302.Affairs.UpdateBindingList, False)
                     'Case Business.B_02_00202.Affairs.SaveInfo             
                     'Window.XLMessageBox.ShowMessage( _                
                     '    MyPosXService.Decls.MSG_OK_00001, _                
@@ -435,8 +438,8 @@ Namespace Manifest
 
         Private Sub ButtonEdit_WareCode_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles ButtonEdit_WareCode.KeyDown
             Me._bizAgent.DoRequest(Business.B_02_01302.Affairs.AddWare, False)
-            Me.DoPrivateUpdateSelectingRow()
-            Me.GridView_QuotationWareDtl.BestFitColumns()
+            'Me.DoPrivateUpdateSelectingRow()
+            'Me.GridView_QuotationWareDtl.BestFitColumns()
         End Sub
 
 #End Region
@@ -453,7 +456,7 @@ Namespace Manifest
 
         Private Sub TbActionEditBom()
             Dim inputForm As New M_02_01303(Me.TransactRequestHandle, Me.FormID)
-            inputForm.SV_UTLD_0001 = Me.SVFR_SELECTING_ROW
+            inputForm.SV_EDITING_COMPONENT_ID = Me.SVFR_SELECTING_COMPONENT_ROW.COMPONENT_ID
             Me.PopupForm(inputForm, "TbActionEditBom", True)
         End Sub
 
@@ -561,40 +564,40 @@ Namespace Manifest
         Private Sub DoPrivateUpdateSelectingRow()
 
 
-            Me.SVFR_SELECTING_ROW = Nothing
+            Me.SVFR_SELECTING_COMPONENT_ROW = Nothing
 
-            Me.ToolStripButton_EditBom.Enabled = False
-            'Me.ToolStripButton_Revise.Enabled = False
+            'Me.ToolStripButton_EditBom.Enabled = False
+            ''Me.ToolStripButton_Revise.Enabled = False
 
-            If Me.GridView_QuotationWareDtl.RowCount > 0 Then
-                Me.SVFR_SELECTING_ROW = _
-                    CType(Me.GridView_QuotationWareDtl.GetDataRow( _
-                        Me.GridView_QuotationWareDtl.FocusedRowHandle),  _
-                        MyPosXAuto.FTs.FT_XV_T_MP_QUOTATION_WARE_DTLRow)
+            'If Me.GridView_QuotationWareDtl.RowCount > 0 Then
+            '    Me.SVFR_SELECTING_ROW = _
+            '        CType(Me.GridView_QuotationWareDtl.GetDataRow( _
+            '            Me.GridView_QuotationWareDtl.FocusedRowHandle),  _
+            '            MyPosXAuto.FTs.FT_XV_T_MP_QUOTATION_WARE_DTLRow)
 
-                Me.ToolStripButton_EditBom.Enabled = True
-                'Me.ToolStripButton_Revise.Enabled = True
+            '    Me.ToolStripButton_EditBom.Enabled = True
+            '    'Me.ToolStripButton_Revise.Enabled = True
+
+            'End If
+
+
+
+            If IsNothing(Me.TreeList_OverViewList.FocusedNode) = False Then
+
+                Me.SVFR_SELECTING_COMPONENT_ROW = _
+                     CType(CType( _
+                         Me.TreeList_OverViewList.GetDataRecordByNode( _
+                             Me.TreeList_OverViewList.FocusedNode),  _
+                         DataRowView).Row, MyPosXAuto.FTs.FT_S_MP_BOM_COMPONENTRow)
+
+                If Me.SVFR_SELECTING_COMPONENT_ROW.COMPONENT_ID.Length > 0 Then
+                    Me.ToolStripButton_EditBom.Enabled = True
+                End If
+
+                'Me.ToolStripButton_DeleteXXXX.Enabled = True
+                'Me.ToolStripButton_ReviseXXXX.Enabled = True
 
             End If
-
-
-
-            'If IsNothing(Me.TreeList_XXXX.FocusedNode) = False Then  
-            '                                                         
-            '    Me.SVFR_SELECTING_ROW = _                            
-            '         CType(CType( _                                  
-            '             Me.TreeList_XXXX.GetDataRecordByNode( _     
-            '                 Me.TreeList_XXXX.FocusedNode),  _       
-            '             DataRowView).Row, MyPosXAuto.FTs.FT_M_AV_XXXXRow)
-            '                                                         
-            '    If Me.SVFR_SELECTING_ROW.XXXX_ID > 0 Then            
-            '        Me.ToolStripButton_Choose.Enabled = True         
-            '    End If                                               
-            '                                                         
-            '    Me.ToolStripButton_DeleteXXXX.Enabled = True         
-            '    Me.ToolStripButton_ReviseXXXX.Enabled = True         
-            '                                                         
-            'End If                                                   
 
 
 
