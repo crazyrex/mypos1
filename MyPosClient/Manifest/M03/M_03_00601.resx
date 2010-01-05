@@ -118,17 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="DefaultLookAndFeel_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>278, 0</value>
+    <value>294, 0</value>
   </metadata>
   <metadata name="Timer_Surveillant.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>134, 0</value>
+    <value>141, 0</value>
   </metadata>
   <metadata name="ToolStrip_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ToolStripButton_Refresh.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>36, 22</value>
   </data>
   <data name="ToolStripButton_Refresh.Text" xml:space="preserve">
     <value>刷新</value>
@@ -152,13 +152,13 @@
     <value>Magenta</value>
   </data>
   <data name="ToolStripButton_ExportSalesReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 22</value>
+    <value>65, 22</value>
   </data>
   <data name="ToolStripButton_ExportSalesReport.Text" xml:space="preserve">
     <value>导出Excel</value>
   </data>
   <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>36, 22</value>
   </data>
   <data name="ToolStripButton_Close.Text" xml:space="preserve">
     <value>关闭</value>
@@ -185,14 +185,177 @@
   <data name="&gt;&gt;ToolStrip_Form.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Label_EmployeeID.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label_EmployeeID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>663, 39</value>
+  </data>
+  <data name="Label_EmployeeID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 18</value>
+  </data>
+  <data name="Label_EmployeeID.TabIndex" type="System.Int32, mscorlib">
+    <value>10007</value>
+  </data>
+  <data name="Label_EmployeeID.Text" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Label_EmployeeID.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;Label_EmployeeID.Name" xml:space="preserve">
+    <value>Label_EmployeeID</value>
+  </data>
+  <data name="&gt;&gt;Label_EmployeeID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label_EmployeeID.Parent" xml:space="preserve">
+    <value>PanelControl_Filter</value>
+  </data>
+  <data name="&gt;&gt;Label_EmployeeID.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Label_EmployeeName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label_EmployeeName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>547, 40</value>
+  </data>
+  <data name="Label_EmployeeName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 18</value>
+  </data>
+  <data name="Label_EmployeeName.TabIndex" type="System.Int32, mscorlib">
+    <value>10006</value>
+  </data>
+  <data name="&gt;&gt;Label_EmployeeName.Name" xml:space="preserve">
+    <value>Label_EmployeeName</value>
+  </data>
+  <data name="&gt;&gt;Label_EmployeeName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label_EmployeeName.Parent" xml:space="preserve">
+    <value>PanelControl_Filter</value>
+  </data>
+  <data name="&gt;&gt;Label_EmployeeName.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ButtonEdit1.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ButtonEdit1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 37</value>
+  </data>
+  <data name="ButtonEdit1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 21</value>
+  </data>
+  <data name="ButtonEdit1.TabIndex" type="System.Int32, mscorlib">
+    <value>10005</value>
+  </data>
+  <data name="&gt;&gt;ButtonEdit1.Name" xml:space="preserve">
+    <value>ButtonEdit1</value>
+  </data>
+  <data name="&gt;&gt;ButtonEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.ButtonEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;ButtonEdit1.Parent" xml:space="preserve">
+    <value>PanelControl_Filter</value>
+  </data>
+  <data name="&gt;&gt;ButtonEdit1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ButtonEdit_EmployeeCode.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ButtonEdit_EmployeeCode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>425, 36</value>
+  </data>
+  <data name="ButtonEdit_EmployeeCode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 21</value>
+  </data>
+  <data name="ButtonEdit_EmployeeCode.TabIndex" type="System.Int32, mscorlib">
+    <value>10005</value>
+  </data>
+  <data name="&gt;&gt;ButtonEdit_EmployeeCode.Name" xml:space="preserve">
+    <value>ButtonEdit_EmployeeCode</value>
+  </data>
+  <data name="&gt;&gt;ButtonEdit_EmployeeCode.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.ButtonEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;ButtonEdit_EmployeeCode.Parent" xml:space="preserve">
+    <value>PanelControl_Filter</value>
+  </data>
+  <data name="&gt;&gt;ButtonEdit_EmployeeCode.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="Label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 39</value>
+  </data>
+  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 15</value>
+  </data>
+  <data name="Label5.TabIndex" type="System.Int32, mscorlib">
+    <value>10004</value>
+  </data>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>货品类型</value>
+  </data>
+  <data name="&gt;&gt;Label5.Name" xml:space="preserve">
+    <value>Label5</value>
+  </data>
+  <data name="&gt;&gt;Label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label5.Parent" xml:space="preserve">
+    <value>PanelControl_Filter</value>
+  </data>
+  <data name="&gt;&gt;Label5.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>360, 39</value>
+  </data>
+  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 15</value>
+  </data>
+  <data name="Label4.TabIndex" type="System.Int32, mscorlib">
+    <value>10004</value>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>销售人员</value>
+  </data>
+  <data name="&gt;&gt;Label4.Name" xml:space="preserve">
+    <value>Label4</value>
+  </data>
+  <data name="&gt;&gt;Label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label4.Parent" xml:space="preserve">
+    <value>PanelControl_Filter</value>
+  </data>
+  <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
   <data name="CheckEdit_ExcelIncludeSalesRelated.Location" type="System.Drawing.Point, System.Drawing">
-    <value>498, 34</value>
+    <value>503, 64</value>
   </data>
   <data name="CheckEdit_ExcelIncludeSalesRelated.Properties.Caption" xml:space="preserve">
     <value>Excel报表带有销售相关信息</value>
   </data>
   <data name="CheckEdit_ExcelIncludeSalesRelated.Size" type="System.Drawing.Size, System.Drawing">
-    <value>186, 19</value>
+    <value>180, 19</value>
   </data>
   <data name="CheckEdit_ExcelIncludeSalesRelated.TabIndex" type="System.Int32, mscorlib">
     <value>10003</value>
@@ -207,17 +370,17 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;CheckEdit_ExcelIncludeSalesRelated.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>6</value>
   </data>
   <data name="LookUpEdit_Pos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>550, 8</value>
+    <value>425, 9</value>
   </data>
   <assembly alias="DevExpress.Utils.v8.1" name="DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
   <data name="LookUpEdit_Pos.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
     <value>Combo</value>
   </data>
   <data name="LookUpEdit_Pos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 20</value>
+    <value>258, 21</value>
   </data>
   <data name="LookUpEdit_Pos.TabIndex" type="System.Int32, mscorlib">
     <value>10002</value>
@@ -232,17 +395,16 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;LookUpEdit_Pos.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>7</value>
   </data>
   <data name="Label_TurnoverPos.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Label_TurnoverPos.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="Label_TurnoverPos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>502, 12</value>
+    <value>360, 11</value>
   </data>
   <data name="Label_TurnoverPos.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 15</value>
@@ -263,16 +425,16 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;Label_TurnoverPos.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>8</value>
   </data>
   <data name="TextEdit_Search.EditValue" xml:space="preserve">
     <value />
   </data>
   <data name="TextEdit_Search.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 59</value>
+    <value>83, 64</value>
   </data>
   <data name="TextEdit_Search.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 20</value>
+    <value>211, 21</value>
   </data>
   <data name="TextEdit_Search.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -287,7 +449,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;TextEdit_Search.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>9</value>
   </data>
   <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -296,7 +458,7 @@
     <value>Arial, 9pt</value>
   </data>
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 59</value>
+    <value>22, 64</value>
   </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 15</value>
@@ -317,16 +479,16 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>10</value>
   </data>
   <data name="DateEdit_ToDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 8</value>
+    <value>204, 8</value>
   </data>
   <data name="DateEdit_ToDate.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
     <value>Combo</value>
   </data>
   <data name="DateEdit_ToDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 20</value>
+    <value>90, 21</value>
   </data>
   <data name="DateEdit_ToDate.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -341,7 +503,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;DateEdit_ToDate.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>11</value>
   </data>
   <data name="Label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -350,7 +512,7 @@
     <value>Arial, 9pt</value>
   </data>
   <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>166, 10</value>
+    <value>179, 10</value>
   </data>
   <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>19, 15</value>
@@ -371,16 +533,16 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>12</value>
   </data>
   <data name="DateEdit_FromDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 8</value>
+    <value>83, 8</value>
   </data>
   <data name="DateEdit_FromDate.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
     <value>Combo</value>
   </data>
   <data name="DateEdit_FromDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 20</value>
+    <value>90, 21</value>
   </data>
   <data name="DateEdit_FromDate.TabIndex" type="System.Int32, mscorlib">
     <value>10000</value>
@@ -395,7 +557,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;DateEdit_FromDate.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>13</value>
   </data>
   <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -425,7 +587,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>14</value>
   </data>
   <data name="PanelControl_Filter.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -434,7 +596,7 @@
     <value>0, 25</value>
   </data>
   <data name="PanelControl_Filter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>700, 84</value>
+    <value>700, 91</value>
   </data>
   <data name="PanelControl_Filter.TabIndex" type="System.Int32, mscorlib">
     <value>10001</value>
@@ -455,7 +617,7 @@
     <value>Fill</value>
   </data>
   <data name="GridControl_Sales.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 109</value>
+    <value>0, 116</value>
   </data>
   <data name="GridColumn_TurnoverCode.Caption" xml:space="preserve">
     <value>订单号</value>
@@ -788,7 +950,7 @@
     <value>False</value>
   </data>
   <data name="GridControl_Sales.Size" type="System.Drawing.Size, System.Drawing">
-    <value>700, 391</value>
+    <value>700, 384</value>
   </data>
   <data name="GridControl_Sales.TabIndex" type="System.Int32, mscorlib">
     <value>10002</value>
@@ -806,7 +968,7 @@
     <value>0</value>
   </data>
   <metadata name="SaveFileDialog_ExportToExcel.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>473, 0</value>
+    <value>502, 0</value>
   </metadata>
   <data name="SaveFileDialog_ExportToExcel.Filter" xml:space="preserve">
     <value>Excel文档|*.xls</value>
