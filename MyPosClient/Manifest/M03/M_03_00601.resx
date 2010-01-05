@@ -136,16 +136,16 @@
   <data name="ToolStripButton_ExportSalesReport.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIISURBVDhPpZP7S1NxGMbPPxKaXVUkMEq8IpKUCoY/hGgI
-        ymqkDYYXcCjDZOANURSjCNGFQUTsl4GXVMxKk62YU4fXQpaIlygHQxBRH8/zwvyaIAYe+HLgnPN8nue9
-        HA3nvDTq63oW/jm13XOwvPTB3DYFY5MH+bXfcN8ygfTSMSSXfESicQDxBqdYHwH29g9w2tnZ3UcguIvN
-        rR3417exuBJE5N1n/wfwLgXEOc38Bc6xNRHb+/y4nm49G0Bnit2zf9H6bkliE/jKuYxrd6oVgDWfjB+K
-        TWeKMyrGEVfowITvD9re/9ABVQrAhh0HHK+ZselMMaN/mvwtDb+aVqkA7HYIwIj3ysfluPTorJnP6Ezx
-        oHsD1s5ZXEktUwCOioB5f1CEPR9+wTG6iuiserTo8dkwng7HT/R+XUPF8xlcTjErAOdMcW6NW8STiwG8
-        7vej8oUPN/PsEv3t8Ao0TZP3T1u8uJRkUgAuSYHtO97oLxmXd5t9Ho8aPTK+GzntqNfrLm2fFoihwYOI
-        xGIF4KjoGBLzY1OrF9k6OOFxnwDC4wxIMX1G0pMhgVyMNyoA13PAtS7OrJk1PrC69LUdQWxuF6IybHrX
-        LRI7JrtZdoDAo1XmbjMyD+tjSXxGcXRmnYg5ttD9QuxDhN0uUgDOmbvNTpPOJaGAo2K36cyaGZvOFIfd
-        KlSA8/zRh9ABIDUG+1JpAAAAAElFTkSuQmCC
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAgxJREFUOE+lkvtL
+        U2EYx+0PEbtpFwnBKPGKiJImGP0gYhIYs1E5GF5gIxkpA00JRSmMEF0ohMh+GaRWYlqabMVcNdS2QpaI
+        VqiDIYhk397vA6fXhCjyhYdzeM/5fp7vczkAdeL2cwho7v/wWzT1zcN+Pwhr51uY2/y41PQaF+wzKKiZ
+        QvaN58g0jyLd5KEUcQbg+84P/Cm2tncQjW3j68YWIqubCC3FcOJc478BAuGoZM6zvoRnakXEruEIjhc4
+        /g5gZop9c+voGAyLbQIfeBZxLL9BA1jzXvuGbWamuKh+GmmVbswE19A59FEBbmoAG7YbsLtm2mZmiml9
+        cvabNDwpz6YB7LYBoMXCumkJr7LOmnnHzBQ/9X2Bo2cOibm1GsBREbAQiYmw/8lnuCeWkVzcgnZlnw1j
+        3HV/wuNXK6i/9x5Hc6wawDlTXHbLJ+LZUBQPRyKwdQdxutwl1h+NLXHh5Ht1ewBHsiwawCW57HyDAfWR
+        dvl0uhZQ1eqX8aVc7EKLqrum651ATLf9OJx5XQM4KmY0xPzZ0hFAiQJnXB0WwME0E3IsL5B17ZlADqWb
+        NYDrOepdlcysmTWWOrxqbceRWtaLk0VO1XW72D5Vckd2gMBfq8zdpmUG62NJvKM4+XyziDk24xmfWoGE
+        s1c0gHPmbrPTpHNJKOCo2G1mZs20zcwUJ5yp1AB5+8/zEwgF5GMVDxh4AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="ToolStripButton_ExportSalesReport.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -186,6 +186,60 @@
     <value>2</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Label_ItemClassifyID.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label_ItemClassifyID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>301, 39</value>
+  </data>
+  <data name="Label_ItemClassifyID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 18</value>
+  </data>
+  <data name="Label_ItemClassifyID.TabIndex" type="System.Int32, mscorlib">
+    <value>10009</value>
+  </data>
+  <data name="Label_ItemClassifyID.Text" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Label_ItemClassifyID.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;Label_ItemClassifyID.Name" xml:space="preserve">
+    <value>Label_ItemClassifyID</value>
+  </data>
+  <data name="&gt;&gt;Label_ItemClassifyID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label_ItemClassifyID.Parent" xml:space="preserve">
+    <value>PanelControl_Filter</value>
+  </data>
+  <data name="&gt;&gt;Label_ItemClassifyID.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Label_ItemClassifyName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label_ItemClassifyName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>204, 39</value>
+  </data>
+  <data name="Label_ItemClassifyName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 18</value>
+  </data>
+  <data name="Label_ItemClassifyName.TabIndex" type="System.Int32, mscorlib">
+    <value>10008</value>
+  </data>
+  <data name="&gt;&gt;Label_ItemClassifyName.Name" xml:space="preserve">
+    <value>Label_ItemClassifyName</value>
+  </data>
+  <data name="&gt;&gt;Label_ItemClassifyName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label_ItemClassifyName.Parent" xml:space="preserve">
+    <value>PanelControl_Filter</value>
+  </data>
+  <data name="&gt;&gt;Label_ItemClassifyName.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="Label_EmployeeID.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -214,7 +268,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;Label_EmployeeID.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="Label_EmployeeName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -238,31 +292,31 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;Label_EmployeeName.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
-  <data name="ButtonEdit1.Enabled" type="System.Boolean, mscorlib">
+  <data name="ButtonEdit_ItemClassifyCode.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="ButtonEdit1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="ButtonEdit_ItemClassifyCode.Location" type="System.Drawing.Point, System.Drawing">
     <value>83, 37</value>
   </data>
-  <data name="ButtonEdit1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="ButtonEdit_ItemClassifyCode.Size" type="System.Drawing.Size, System.Drawing">
     <value>116, 21</value>
   </data>
-  <data name="ButtonEdit1.TabIndex" type="System.Int32, mscorlib">
+  <data name="ButtonEdit_ItemClassifyCode.TabIndex" type="System.Int32, mscorlib">
     <value>10005</value>
   </data>
-  <data name="&gt;&gt;ButtonEdit1.Name" xml:space="preserve">
-    <value>ButtonEdit1</value>
+  <data name="&gt;&gt;ButtonEdit_ItemClassifyCode.Name" xml:space="preserve">
+    <value>ButtonEdit_ItemClassifyCode</value>
   </data>
-  <data name="&gt;&gt;ButtonEdit1.Type" xml:space="preserve">
+  <data name="&gt;&gt;ButtonEdit_ItemClassifyCode.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.ButtonEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
-  <data name="&gt;&gt;ButtonEdit1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;ButtonEdit_ItemClassifyCode.Parent" xml:space="preserve">
     <value>PanelControl_Filter</value>
   </data>
-  <data name="&gt;&gt;ButtonEdit1.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;ButtonEdit_ItemClassifyCode.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="ButtonEdit_EmployeeCode.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -286,7 +340,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;ButtonEdit_EmployeeCode.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="Label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -316,7 +370,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;Label5.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="Label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -346,7 +400,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="CheckEdit_ExcelIncludeSalesRelated.Location" type="System.Drawing.Point, System.Drawing">
     <value>503, 64</value>
@@ -370,7 +424,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;CheckEdit_ExcelIncludeSalesRelated.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="LookUpEdit_Pos.Location" type="System.Drawing.Point, System.Drawing">
     <value>425, 9</value>
@@ -395,7 +449,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;LookUpEdit_Pos.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="Label_TurnoverPos.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -425,7 +479,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;Label_TurnoverPos.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="TextEdit_Search.EditValue" xml:space="preserve">
     <value />
@@ -449,7 +503,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;TextEdit_Search.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -479,7 +533,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="DateEdit_ToDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>204, 8</value>
@@ -503,7 +557,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;DateEdit_ToDate.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="Label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -533,7 +587,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="DateEdit_FromDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>83, 8</value>
@@ -557,7 +611,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;DateEdit_FromDate.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
   </data>
   <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -587,7 +641,7 @@
     <value>PanelControl_Filter</value>
   </data>
   <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>16</value>
   </data>
   <data name="PanelControl_Filter.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
