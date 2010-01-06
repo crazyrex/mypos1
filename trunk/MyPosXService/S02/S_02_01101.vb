@@ -228,15 +228,19 @@ Public Class S_02_01101
 
 
 
-    Public Function ServBizUtld0003( _
-        ByVal valParaUtld As String, _
-        ByRef refParaUtld As String _
+    Public Function ServLoadOperatorByCode( _
+        ByVal valOperatorCode As String, _
+        ByRef refOperatorRowSE As MyPosXAuto.FTs.FT_M_STAFFRowSEntity _
         ) As String
 
         If Me.ValidateAuthPassword(CommDecl.CURRENT_LOCAL_REMOTE_AUTH_PASSWORD) = False Then Return CommDecl.MSG_ALERT_REMOTE_AUTH_DENIED
 
         Try
 
+            Dim staffConditions As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_STAFF(XL.DB.Utils.Condition.LogicOperators.Logic_And)
+            staffConditions.Add(MyPosXAuto.Facade.AfBizMaster.M_STAFFColumns.STAFF_CODEColumn, "=", valOperatorCode)
+
+            MyPosXAuto.Facade.AfBizMaster.FillM_STAFFRowSEntity(refOperatorRowSE, staffConditions)
 
 
         Catch ex As XL.Common.Utils.XLException

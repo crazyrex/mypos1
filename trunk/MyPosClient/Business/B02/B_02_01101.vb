@@ -78,7 +78,7 @@ Namespace Business
             UpdateSummary
             ValidateOnline
             PrintPurchaseList
-            BizUtld0007
+            LoadOperatorByCode
             BizUtld0008
             BizUtld0009
             BizUtld0010
@@ -236,12 +236,12 @@ Namespace Business
                     '-------------------------------------------------------------------
                     functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoPrintPurchaseList)
 
-                Case Affairs.BizUtld0007
+                Case Affairs.LoadOperatorByCode
 
                     '
                     '取到处理函数的结果，传入返回给Manifest的AgentResponse包
                     '-------------------------------------------------------------------
-                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoBizUtld0007)
+                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoLoadOperatorByCode)
 
                 Case Affairs.BizUtld0008
 
@@ -1244,18 +1244,28 @@ Namespace Business
         '''
         '''
         '''-------------------------------------------------------------------
-        Private Function DoBizUtld0007() As String
+        Private Function DoLoadOperatorByCode() As String
 
 
             Try
 
+                If Me._manifest.ButtonEdit_OperatorCode.Text.Trim.Length > 0 Then
 
-                'Dim servResult As String = _
-                '    Me._service.ServBizUtld0007()
+                    Dim staffRowSE As New MyPosXAuto.FTs.FT_M_STAFFRowSEntity
+                    Dim servResult As String = _
+                        Me._service.ServLoadOperatorByCode( _
+                            Me._manifest.ButtonEdit_OperatorCode.Text.Trim, _
+                            staffRowSE)
 
-                'If servResult.Length > 0 Then
-                '    Return servResult        
-                'End If                       
+                    If servResult.Length > 0 Then
+                        Return servResult
+                    End If
+
+                    Me._manifest.ButtonEdit_OperatorCode.Text = staffRowSE.STAFF_CODE
+                    Me._manifest.Label_OperatorName.Text = staffRowSE.STAFF_NAME
+                    Me._manifest.Label_OperatorID.Text = staffRowSE.STAFF_ID
+
+                End If
 
             Catch ex As XL.Common.Utils.XLException
 
