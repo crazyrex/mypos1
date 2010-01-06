@@ -482,7 +482,7 @@ Namespace Manifest
 
         End Sub
 
-        Private Sub ButtonEdit_WareCode_ButtonClick(ByVal sender As Object, ByVal e As DevExpress.XtraEditors.Controls.ButtonPressedEventArgs) Handles ButtonEdit_WareCode.ButtonClick
+        Private Sub ButtonEdit_WareCode_ButtonClick(ByVal sender As Object, ByVal e As DevExpress.XtraEditors.Controls.ButtonPressedEventArgs) Handles ButtonEdit_WareCode.ButtonClick, ButtonEdit1.ButtonClick
             Dim inputForm As New M_01_00201(Me.TransactRequestHandle, Me.FormID)
             inputForm.LAUNCH_CONDITION = MyPosXService.S_01_00201.LCs.Choose
             Me.PopupForm(inputForm, "ButtonEdit_WareCode_ButtonClick", False)
@@ -526,7 +526,7 @@ Namespace Manifest
         '    End If                                                                                                                                                                        
         'End Sub                                                                                                                                                                           
 
-        Private Sub ButtonEdit_WareCode_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles ButtonEdit_WareCode.KeyDown
+        Private Sub ButtonEdit_WareCode_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles ButtonEdit_WareCode.KeyDown, ButtonEdit1.KeyDown
             If e.KeyCode <> Keys.Enter Then
                 Return
             End If
@@ -627,7 +627,7 @@ Namespace Manifest
             Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.UpdateSummary, False)
         End Sub
 
-        Private Sub Label_ClientID_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles Label_ClientID.TextChanged
+        Private Sub Label_ClientID_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles Label_ClientID.TextChanged, Label10.TextChanged
 
             If Me.FormStatus <> FormStatuses.Loading_IA_AfterFormLoaded Then
                 Return
