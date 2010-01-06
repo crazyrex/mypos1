@@ -1552,7 +1552,6 @@
             '
             'CheckEdit_IsOnLine
             '
-            Me.CheckEdit_IsOnLine.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
             Me.CheckEdit_IsOnLine.Location = New System.Drawing.Point(385, 11)
             Me.CheckEdit_IsOnLine.Name = "CheckEdit_IsOnLine"
             Me.CheckEdit_IsOnLine.Properties.Caption = "上线操作"
@@ -1720,7 +1719,6 @@
             '
             'LinkLabel_UploadCacheData
             '
-            Me.LinkLabel_UploadCacheData.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
             Me.LinkLabel_UploadCacheData.AutoSize = True
             Me.LinkLabel_UploadCacheData.Enabled = False
             Me.LinkLabel_UploadCacheData.Location = New System.Drawing.Point(466, 12)
@@ -1821,7 +1819,6 @@
             '
             'Label_CacheStatus
             '
-            Me.Label_CacheStatus.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
             Me.Label_CacheStatus.AutoSize = True
             Me.Label_CacheStatus.BackColor = System.Drawing.Color.White
             Me.Label_CacheStatus.Font = New System.Drawing.Font("Arial", 9.0!)
