@@ -131,6 +131,7 @@ Namespace Manifest
 
             Me.FormInputGuarder.SetInputLinkedLabel(Me.ButtonEdit_WareCode, Me.ButtonEdit_WareCode, Me.Label_WareID)
             Me.FormInputGuarder.SetInputLinkedLabel(Me.TextEdit_ClientCode, Me.Label_ClientName, Me.Label_ClientID)
+            Me.FormInputGuarder.SetInputLinkedLabel(Me.ButtonEdit_OperatorCode, Me.Label_OperatorName, Me.Label_OperatorID)
 
             'Me._bizAgent.SetDisableControlUnderRequest(Me.DisableControlUnderRequest)
 
@@ -286,7 +287,13 @@ Namespace Manifest
                     Me.SV_RETURN_RELIEF_TURNOVER_ROW_SE.TURNOVER_ID = inputForm.Label_ReliefTurnoverID.Text
                     Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.LoadReturnReliefTurnover, False)
                     Me.DoPrivateUpdateTitleByReturnStatus()
-                Case "ResponseTitleName2"
+
+                Case "ButtonEdit_OperatorCode_ButtonClick"
+                    Dim chooseForm = TryCast(popupForm, M_01_00101)
+                    Me.ButtonEdit_OperatorCode.Text = chooseForm.SVFR_SELECTING_STAFF_ROW.STAFF_CODE
+                    Me.Label_OperatorName.Text = chooseForm.SVFR_SELECTING_STAFF_ROW.STAFF_NAME
+                    Me.Label_OperatorID.Text = chooseForm.SVFR_SELECTING_STAFF_ROW.STAFF_ID
+
 
                 Case "ResponseTitleName3"
 
@@ -482,7 +489,7 @@ Namespace Manifest
 
         End Sub
 
-        Private Sub ButtonEdit_WareCode_ButtonClick(ByVal sender As Object, ByVal e As DevExpress.XtraEditors.Controls.ButtonPressedEventArgs) Handles ButtonEdit_WareCode.ButtonClick, ButtonEdit1.ButtonClick
+        Private Sub ButtonEdit_WareCode_ButtonClick(ByVal sender As Object, ByVal e As DevExpress.XtraEditors.Controls.ButtonPressedEventArgs) Handles ButtonEdit_WareCode.ButtonClick
             Dim inputForm As New M_01_00201(Me.TransactRequestHandle, Me.FormID)
             inputForm.LAUNCH_CONDITION = MyPosXService.S_01_00201.LCs.Choose
             Me.PopupForm(inputForm, "ButtonEdit_WareCode_ButtonClick", False)
@@ -526,7 +533,7 @@ Namespace Manifest
         '    End If                                                                                                                                                                        
         'End Sub                                                                                                                                                                           
 
-        Private Sub ButtonEdit_WareCode_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles ButtonEdit_WareCode.KeyDown, ButtonEdit1.KeyDown
+        Private Sub ButtonEdit_WareCode_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles ButtonEdit_WareCode.KeyDown
             If e.KeyCode <> Keys.Enter Then
                 Return
             End If
@@ -627,7 +634,7 @@ Namespace Manifest
             Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.UpdateSummary, False)
         End Sub
 
-        Private Sub Label_ClientID_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles Label_ClientID.TextChanged, Label10.TextChanged
+        Private Sub Label_ClientID_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles Label_ClientID.TextChanged, Label_OperatorID.TextChanged
 
             If Me.FormStatus <> FormStatuses.Loading_IA_AfterFormLoaded Then
                 Return
@@ -1177,6 +1184,17 @@ Namespace Manifest
 
 #End Region
 
+        Private Sub ButtonEdit_OperatorCode_ButtonClick(ByVal sender As Object, ByVal e As DevExpress.XtraEditors.Controls.ButtonPressedEventArgs) Handles ButtonEdit_OperatorCode.ButtonClick
+            Dim chooseForm As New M_01_00101(Me.TransactRequestHandle, Me.FormID)
+            chooseForm.LAUNCH_CONDITION = MyPosXService.S_01_00101.LCs.Choose
+            Me.PopupForm(chooseForm, "ButtonEdit_OperatorCode_ButtonClick", True)
+        End Sub
+
+        Private Sub ButtonEdit_OperatorCode_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles ButtonEdit_OperatorCode.KeyDown
+            If e.KeyCode = Keys.Enter Then
+                Me._bizAgent.DoRequest(Business.B_02_01001.Affairs.LoadOperatorByCode, False)
+            End If
+        End Sub
     End Class
 
 

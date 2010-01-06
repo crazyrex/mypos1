@@ -249,8 +249,11 @@ Namespace Manifest
                 '        End Select                                                                                 
                 'End Select                                                                                         
 
-                Case "ResponseTitleName1"
-
+                Case "ButtonEdit_OperatorCode_ButtonClick"
+                    Dim chooseForm = TryCast(popupForm, M_01_00101)
+                    Me.ButtonEdit_OperatorCode.Text = chooseForm.SVFR_SELECTING_STAFF_ROW.STAFF_CODE
+                    Me.Label_OperatorName.Text = chooseForm.SVFR_SELECTING_STAFF_ROW.STAFF_NAME
+                    Me.Label_OperatorID.Text = chooseForm.SVFR_SELECTING_STAFF_ROW.STAFF_ID
 
                 Case "ResponseTitleName2"
 
@@ -876,6 +879,18 @@ Namespace Manifest
                 Me._bizAgent.DoRequest(Business.B_02_01101.Affairs.ValidateOnline, False)
             End If
 
+        End Sub
+
+        Private Sub ButtonEdit_OperatorCode_ButtonClick(ByVal sender As Object, ByVal e As DevExpress.XtraEditors.Controls.ButtonPressedEventArgs) Handles ButtonEdit_OperatorCode.ButtonClick
+            Dim chooseForm As New M_01_00101(Me.TransactRequestHandle, Me.FormID)
+            chooseForm.LAUNCH_CONDITION = MyPosXService.S_01_00101.LCs.Choose
+            Me.PopupForm(chooseForm, "ButtonEdit_OperatorCode_ButtonClick", True)
+        End Sub
+
+        Private Sub ButtonEdit_OperatorCode_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles ButtonEdit_OperatorCode.KeyDown
+            If e.KeyCode = Keys.Enter Then
+                Me._bizAgent.DoRequest(Business.B_02_01101.Affairs.LoadOperatorByCode, False)
+            End If
         End Sub
     End Class
 
