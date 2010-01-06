@@ -60,11 +60,11 @@
             Dim CTag19 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag20 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag21 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
-            Dim CTag37 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
+            Dim CTag41 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag23 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim StyleFormatCondition1 As DevExpress.XtraGrid.StyleFormatCondition = New DevExpress.XtraGrid.StyleFormatCondition
             Dim StyleFormatCondition2 As DevExpress.XtraGrid.StyleFormatCondition = New DevExpress.XtraGrid.StyleFormatCondition
-            Dim CTag36 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
+            Dim CTag40 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag24 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag28 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag25 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
@@ -72,12 +72,16 @@
             Dim CTag27 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag29 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag30 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
-            Dim CTag31 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
-            Dim CTag32 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag33 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag34 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
-            Dim CTag35 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
+            Dim CTag36 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag38 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
+            Dim CTag39 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
+            Dim CTag37 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
+            Dim CTag35 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
+            Dim CTag32 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
+            Dim CTag31 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
+            Dim CTag42 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Me.ToolStrip_Form = New System.Windows.Forms.ToolStrip
             Me.ToolStripButton_Create = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_Save = New System.Windows.Forms.ToolStripButton
@@ -155,6 +159,10 @@
             Me.Label_WareID = New System.Windows.Forms.Label
             Me.Label1 = New System.Windows.Forms.Label
             Me.Label18 = New System.Windows.Forms.Label
+            Me.Label5 = New System.Windows.Forms.Label
+            Me.Label9 = New System.Windows.Forms.Label
+            Me.ButtonEdit1 = New DevExpress.XtraEditors.ButtonEdit
+            Me.Label10 = New System.Windows.Forms.Label
             Me.ToolStrip_Form.SuspendLayout()
             CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.PanelControl1.SuspendLayout()
@@ -184,6 +192,7 @@
             CType(Me.CalcEdit_DiscountAmount.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.SpinEdit_WareAmount.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.ButtonEdit_WareCode.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.ButtonEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'DefaultLookAndFeel_Form
@@ -228,19 +237,19 @@
             'ToolStripButton_Create
             '
             Me.ToolStripButton_Create.Name = "ToolStripButton_Create"
-            Me.ToolStripButton_Create.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Create.Size = New System.Drawing.Size(36, 22)
             Me.ToolStripButton_Create.Text = "新单"
             '
             'ToolStripButton_Save
             '
             Me.ToolStripButton_Save.Name = "ToolStripButton_Save"
-            Me.ToolStripButton_Save.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Save.Size = New System.Drawing.Size(36, 22)
             Me.ToolStripButton_Save.Text = "结单"
             '
             'ToolStripButton_Remove
             '
             Me.ToolStripButton_Remove.Name = "ToolStripButton_Remove"
-            Me.ToolStripButton_Remove.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Remove.Size = New System.Drawing.Size(36, 22)
             Me.ToolStripButton_Remove.Text = "去除"
             '
             'ToolStripButton_Return
@@ -249,7 +258,7 @@
             Me.ToolStripButton_Return.Image = CType(resources.GetObject("ToolStripButton_Return.Image"), System.Drawing.Image)
             Me.ToolStripButton_Return.ImageTransparentColor = System.Drawing.Color.White
             Me.ToolStripButton_Return.Name = "ToolStripButton_Return"
-            Me.ToolStripButton_Return.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Return.Size = New System.Drawing.Size(36, 22)
             Me.ToolStripButton_Return.Text = "退货"
             '
             'ToolStripButton_PurchaseList
@@ -258,13 +267,13 @@
             Me.ToolStripButton_PurchaseList.Image = CType(resources.GetObject("ToolStripButton_PurchaseList.Image"), System.Drawing.Image)
             Me.ToolStripButton_PurchaseList.ImageTransparentColor = System.Drawing.Color.White
             Me.ToolStripButton_PurchaseList.Name = "ToolStripButton_PurchaseList"
-            Me.ToolStripButton_PurchaseList.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_PurchaseList.Size = New System.Drawing.Size(36, 22)
             Me.ToolStripButton_PurchaseList.Text = "小票"
             '
             'ToolStripButton_Close
             '
             Me.ToolStripButton_Close.Name = "ToolStripButton_Close"
-            Me.ToolStripButton_Close.Size = New System.Drawing.Size(33, 22)
+            Me.ToolStripButton_Close.Size = New System.Drawing.Size(36, 22)
             Me.ToolStripButton_Close.Text = "关闭"
             '
             'PanelControl1
@@ -1157,30 +1166,30 @@
             Me.GroupControl_Details.Name = "GroupControl_Details"
             Me.GroupControl_Details.Size = New System.Drawing.Size(731, 456)
             Me.GroupControl_Details.TabIndex = 10001
-            CTag37.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
-            CTag37.CalculatorRequired = True
-            CTag37.ComboValueTextBox = Nothing
-            CTag37.ControlRelatedCode = Nothing
-            CTag37.DateButtonTextBox = Nothing
-            CTag37.DateTimeButtonTextBox = Nothing
-            CTag37.DisplayLinkControl = Nothing
-            CTag37.DisplayLinkDisplayFieldName = Nothing
-            CTag37.DisplayLinkKeyFieldName = Nothing
-            CTag37.DisplayLinkTable = Nothing
-            CTag37.FlexgridEditItem = ""
-            CTag37.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
-            CTag37.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
-            CTag37.IsButtonCustomed = False
-            CTag37.IsTextValid = True
-            CTag37.KeyValueAbsentable = False
-            CTag37.LeagleText = ""
-            CTag37.NumericButtonTextBox = Nothing
-            CTag37.ParentControl = Me.GroupControl_Details
-            CTag37.SkipValidate = False
-            CTag37.TimeButtonTextBox = Nothing
-            CTag37.ToolTip = ""
-            CTag37.ValueType = XL.Common.ControlValueType.Character
-            Me.GroupControl_Details.Tag = CTag37
+            CTag41.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
+            CTag41.CalculatorRequired = True
+            CTag41.ComboValueTextBox = Nothing
+            CTag41.ControlRelatedCode = Nothing
+            CTag41.DateButtonTextBox = Nothing
+            CTag41.DateTimeButtonTextBox = Nothing
+            CTag41.DisplayLinkControl = Nothing
+            CTag41.DisplayLinkDisplayFieldName = Nothing
+            CTag41.DisplayLinkKeyFieldName = Nothing
+            CTag41.DisplayLinkTable = Nothing
+            CTag41.FlexgridEditItem = ""
+            CTag41.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
+            CTag41.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
+            CTag41.IsButtonCustomed = False
+            CTag41.IsTextValid = True
+            CTag41.KeyValueAbsentable = False
+            CTag41.LeagleText = ""
+            CTag41.NumericButtonTextBox = Nothing
+            CTag41.ParentControl = Me.GroupControl_Details
+            CTag41.SkipValidate = False
+            CTag41.TimeButtonTextBox = Nothing
+            CTag41.ToolTip = ""
+            CTag41.ValueType = XL.Common.ControlValueType.Character
+            Me.GroupControl_Details.Tag = CTag41
             Me.GroupControl_Details.Text = "购物明细"
             '
             'GridControl_TurnoverDtl
@@ -1502,9 +1511,13 @@
             Me.PanelControl_WareInput.Controls.Add(Me.Panel_DetailDiscount)
             Me.PanelControl_WareInput.Controls.Add(Me.LinkLabel_UploadCacheData)
             Me.PanelControl_WareInput.Controls.Add(Me.SpinEdit_WareAmount)
+            Me.PanelControl_WareInput.Controls.Add(Me.Label10)
+            Me.PanelControl_WareInput.Controls.Add(Me.ButtonEdit1)
             Me.PanelControl_WareInput.Controls.Add(Me.ButtonEdit_WareCode)
             Me.PanelControl_WareInput.Controls.Add(Me.Label_CacheStatus)
+            Me.PanelControl_WareInput.Controls.Add(Me.Label9)
             Me.PanelControl_WareInput.Controls.Add(Me.Label_WareID)
+            Me.PanelControl_WareInput.Controls.Add(Me.Label5)
             Me.PanelControl_WareInput.Controls.Add(Me.Label1)
             Me.PanelControl_WareInput.Controls.Add(Me.Label18)
             Me.PanelControl_WareInput.Dock = System.Windows.Forms.DockStyle.Bottom
@@ -1512,35 +1525,35 @@
             Me.PanelControl_WareInput.Name = "PanelControl_WareInput"
             Me.PanelControl_WareInput.Size = New System.Drawing.Size(727, 67)
             Me.PanelControl_WareInput.TabIndex = 10002
-            CTag36.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
-            CTag36.CalculatorRequired = True
-            CTag36.ComboValueTextBox = Nothing
-            CTag36.ControlRelatedCode = Nothing
-            CTag36.DateButtonTextBox = Nothing
-            CTag36.DateTimeButtonTextBox = Nothing
-            CTag36.DisplayLinkControl = Nothing
-            CTag36.DisplayLinkDisplayFieldName = Nothing
-            CTag36.DisplayLinkKeyFieldName = Nothing
-            CTag36.DisplayLinkTable = Nothing
-            CTag36.FlexgridEditItem = ""
-            CTag36.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
-            CTag36.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
-            CTag36.IsButtonCustomed = False
-            CTag36.IsTextValid = True
-            CTag36.KeyValueAbsentable = False
-            CTag36.LeagleText = ""
-            CTag36.NumericButtonTextBox = Nothing
-            CTag36.ParentControl = Me.PanelControl_WareInput
-            CTag36.SkipValidate = False
-            CTag36.TimeButtonTextBox = Nothing
-            CTag36.ToolTip = ""
-            CTag36.ValueType = XL.Common.ControlValueType.Character
-            Me.PanelControl_WareInput.Tag = CTag36
+            CTag40.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
+            CTag40.CalculatorRequired = True
+            CTag40.ComboValueTextBox = Nothing
+            CTag40.ControlRelatedCode = Nothing
+            CTag40.DateButtonTextBox = Nothing
+            CTag40.DateTimeButtonTextBox = Nothing
+            CTag40.DisplayLinkControl = Nothing
+            CTag40.DisplayLinkDisplayFieldName = Nothing
+            CTag40.DisplayLinkKeyFieldName = Nothing
+            CTag40.DisplayLinkTable = Nothing
+            CTag40.FlexgridEditItem = ""
+            CTag40.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
+            CTag40.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
+            CTag40.IsButtonCustomed = False
+            CTag40.IsTextValid = True
+            CTag40.KeyValueAbsentable = False
+            CTag40.LeagleText = ""
+            CTag40.NumericButtonTextBox = Nothing
+            CTag40.ParentControl = Me.PanelControl_WareInput
+            CTag40.SkipValidate = False
+            CTag40.TimeButtonTextBox = Nothing
+            CTag40.ToolTip = ""
+            CTag40.ValueType = XL.Common.ControlValueType.Character
+            Me.PanelControl_WareInput.Tag = CTag40
             '
             'CheckEdit_IsOnLine
             '
             Me.CheckEdit_IsOnLine.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-            Me.CheckEdit_IsOnLine.Location = New System.Drawing.Point(451, 9)
+            Me.CheckEdit_IsOnLine.Location = New System.Drawing.Point(385, 11)
             Me.CheckEdit_IsOnLine.Name = "CheckEdit_IsOnLine"
             Me.CheckEdit_IsOnLine.Properties.Caption = "上线操作"
             Me.CheckEdit_IsOnLine.Size = New System.Drawing.Size(75, 19)
@@ -1710,7 +1723,7 @@
             Me.LinkLabel_UploadCacheData.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
             Me.LinkLabel_UploadCacheData.AutoSize = True
             Me.LinkLabel_UploadCacheData.Enabled = False
-            Me.LinkLabel_UploadCacheData.Location = New System.Drawing.Point(657, 42)
+            Me.LinkLabel_UploadCacheData.Location = New System.Drawing.Point(466, 12)
             Me.LinkLabel_UploadCacheData.Name = "LinkLabel_UploadCacheData"
             Me.LinkLabel_UploadCacheData.Size = New System.Drawing.Size(55, 15)
             Me.LinkLabel_UploadCacheData.TabIndex = 10002
@@ -1781,81 +1794,6 @@
             Me.ButtonEdit_WareCode.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
             Me.ButtonEdit_WareCode.Size = New System.Drawing.Size(121, 21)
             Me.ButtonEdit_WareCode.TabIndex = 10000
-            CTag31.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
-            CTag31.CalculatorRequired = True
-            CTag31.ComboValueTextBox = Nothing
-            CTag31.ControlRelatedCode = Nothing
-            CTag31.DateButtonTextBox = Nothing
-            CTag31.DateTimeButtonTextBox = Nothing
-            CTag31.DisplayLinkControl = Nothing
-            CTag31.DisplayLinkDisplayFieldName = Nothing
-            CTag31.DisplayLinkKeyFieldName = Nothing
-            CTag31.DisplayLinkTable = Nothing
-            CTag31.FlexgridEditItem = ""
-            CTag31.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
-            CTag31.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
-            CTag31.IsButtonCustomed = False
-            CTag31.IsTextValid = True
-            CTag31.KeyValueAbsentable = False
-            CTag31.LeagleText = ""
-            CTag31.NumericButtonTextBox = Nothing
-            CTag31.ParentControl = Me.ButtonEdit_WareCode
-            CTag31.SkipValidate = False
-            CTag31.TimeButtonTextBox = Nothing
-            CTag31.ToolTip = ""
-            CTag31.ValueType = XL.Common.ControlValueType.Character
-            Me.ButtonEdit_WareCode.Tag = CTag31
-            '
-            'Label_CacheStatus
-            '
-            Me.Label_CacheStatus.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-            Me.Label_CacheStatus.AutoSize = True
-            Me.Label_CacheStatus.BackColor = System.Drawing.Color.White
-            Me.Label_CacheStatus.Font = New System.Drawing.Font("Arial", 9.0!)
-            Me.Label_CacheStatus.ForeColor = System.Drawing.Color.Black
-            Me.Label_CacheStatus.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.Label_CacheStatus.Location = New System.Drawing.Point(450, 42)
-            Me.Label_CacheStatus.Name = "Label_CacheStatus"
-            Me.Label_CacheStatus.Size = New System.Drawing.Size(55, 15)
-            Me.Label_CacheStatus.TabIndex = 10000
-            CTag32.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
-            CTag32.CalculatorRequired = True
-            CTag32.ComboValueTextBox = Nothing
-            CTag32.ControlRelatedCode = Nothing
-            CTag32.DateButtonTextBox = Nothing
-            CTag32.DateTimeButtonTextBox = Nothing
-            CTag32.DisplayLinkControl = Nothing
-            CTag32.DisplayLinkDisplayFieldName = Nothing
-            CTag32.DisplayLinkKeyFieldName = Nothing
-            CTag32.DisplayLinkTable = Nothing
-            CTag32.FlexgridEditItem = ""
-            CTag32.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
-            CTag32.FormStatus = XL.Win.Component.BaseForm.FormStatuses.BeforeLoading
-            CTag32.IsButtonCustomed = False
-            CTag32.IsTextValid = True
-            CTag32.KeyValueAbsentable = False
-            CTag32.LeagleText = ""
-            CTag32.NumericButtonTextBox = Nothing
-            CTag32.ParentControl = Me.Label_CacheStatus
-            CTag32.SkipValidate = False
-            CTag32.TimeButtonTextBox = Nothing
-            CTag32.ToolTip = ""
-            CTag32.ValueType = XL.Common.ControlValueType.Character
-            Me.Label_CacheStatus.Tag = CTag32
-            Me.Label_CacheStatus.Text = "缓冲状态"
-            '
-            'Label_WareID
-            '
-            Me.Label_WareID.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-            Me.Label_WareID.AutoSize = True
-            Me.Label_WareID.BackColor = System.Drawing.Color.White
-            Me.Label_WareID.Font = New System.Drawing.Font("Arial", 9.0!)
-            Me.Label_WareID.ForeColor = System.Drawing.Color.Black
-            Me.Label_WareID.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.Label_WareID.Location = New System.Drawing.Point(84, 2)
-            Me.Label_WareID.Name = "Label_WareID"
-            Me.Label_WareID.Size = New System.Drawing.Size(43, 15)
-            Me.Label_WareID.TabIndex = 10000
             CTag33.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag33.CalculatorRequired = True
             CTag33.ComboValueTextBox = Nothing
@@ -1868,32 +1806,31 @@
             CTag33.DisplayLinkTable = Nothing
             CTag33.FlexgridEditItem = ""
             CTag33.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
-            CTag33.FormStatus = XL.Win.Component.BaseForm.FormStatuses.BeforeLoading
+            CTag33.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
             CTag33.IsButtonCustomed = False
             CTag33.IsTextValid = True
             CTag33.KeyValueAbsentable = False
             CTag33.LeagleText = ""
             CTag33.NumericButtonTextBox = Nothing
-            CTag33.ParentControl = Me.Label_WareID
+            CTag33.ParentControl = Me.ButtonEdit_WareCode
             CTag33.SkipValidate = False
             CTag33.TimeButtonTextBox = Nothing
             CTag33.ToolTip = ""
             CTag33.ValueType = XL.Common.ControlValueType.Character
-            Me.Label_WareID.Tag = CTag33
-            Me.Label_WareID.Text = "货品ID"
-            Me.Label_WareID.Visible = False
+            Me.ButtonEdit_WareCode.Tag = CTag33
             '
-            'Label1
+            'Label_CacheStatus
             '
-            Me.Label1.AutoSize = True
-            Me.Label1.BackColor = System.Drawing.Color.White
-            Me.Label1.Font = New System.Drawing.Font("Arial", 9.0!)
-            Me.Label1.ForeColor = System.Drawing.Color.Black
-            Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.Label1.Location = New System.Drawing.Point(226, 13)
-            Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(53, 15)
-            Me.Label1.TabIndex = 10000
+            Me.Label_CacheStatus.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Me.Label_CacheStatus.AutoSize = True
+            Me.Label_CacheStatus.BackColor = System.Drawing.Color.White
+            Me.Label_CacheStatus.Font = New System.Drawing.Font("Arial", 9.0!)
+            Me.Label_CacheStatus.ForeColor = System.Drawing.Color.Black
+            Me.Label_CacheStatus.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.Label_CacheStatus.Location = New System.Drawing.Point(384, 43)
+            Me.Label_CacheStatus.Name = "Label_CacheStatus"
+            Me.Label_CacheStatus.Size = New System.Drawing.Size(55, 15)
+            Me.Label_CacheStatus.TabIndex = 10000
             CTag34.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag34.CalculatorRequired = True
             CTag34.ComboValueTextBox = Nothing
@@ -1912,12 +1849,88 @@
             CTag34.KeyValueAbsentable = False
             CTag34.LeagleText = ""
             CTag34.NumericButtonTextBox = Nothing
-            CTag34.ParentControl = Me.Label1
+            CTag34.ParentControl = Me.Label_CacheStatus
             CTag34.SkipValidate = False
             CTag34.TimeButtonTextBox = Nothing
             CTag34.ToolTip = ""
             CTag34.ValueType = XL.Common.ControlValueType.Character
-            Me.Label1.Tag = CTag34
+            Me.Label_CacheStatus.Tag = CTag34
+            Me.Label_CacheStatus.Text = "缓冲状态"
+            '
+            'Label_WareID
+            '
+            Me.Label_WareID.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Me.Label_WareID.AutoSize = True
+            Me.Label_WareID.BackColor = System.Drawing.Color.White
+            Me.Label_WareID.Font = New System.Drawing.Font("Arial", 9.0!)
+            Me.Label_WareID.ForeColor = System.Drawing.Color.Black
+            Me.Label_WareID.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.Label_WareID.Location = New System.Drawing.Point(84, 2)
+            Me.Label_WareID.Name = "Label_WareID"
+            Me.Label_WareID.Size = New System.Drawing.Size(43, 15)
+            Me.Label_WareID.TabIndex = 10000
+            CTag36.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
+            CTag36.CalculatorRequired = True
+            CTag36.ComboValueTextBox = Nothing
+            CTag36.ControlRelatedCode = Nothing
+            CTag36.DateButtonTextBox = Nothing
+            CTag36.DateTimeButtonTextBox = Nothing
+            CTag36.DisplayLinkControl = Nothing
+            CTag36.DisplayLinkDisplayFieldName = Nothing
+            CTag36.DisplayLinkKeyFieldName = Nothing
+            CTag36.DisplayLinkTable = Nothing
+            CTag36.FlexgridEditItem = ""
+            CTag36.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
+            CTag36.FormStatus = XL.Win.Component.BaseForm.FormStatuses.BeforeLoading
+            CTag36.IsButtonCustomed = False
+            CTag36.IsTextValid = True
+            CTag36.KeyValueAbsentable = False
+            CTag36.LeagleText = ""
+            CTag36.NumericButtonTextBox = Nothing
+            CTag36.ParentControl = Me.Label_WareID
+            CTag36.SkipValidate = False
+            CTag36.TimeButtonTextBox = Nothing
+            CTag36.ToolTip = ""
+            CTag36.ValueType = XL.Common.ControlValueType.Character
+            Me.Label_WareID.Tag = CTag36
+            Me.Label_WareID.Text = "货品ID"
+            Me.Label_WareID.Visible = False
+            '
+            'Label1
+            '
+            Me.Label1.AutoSize = True
+            Me.Label1.BackColor = System.Drawing.Color.White
+            Me.Label1.Font = New System.Drawing.Font("Arial", 9.0!)
+            Me.Label1.ForeColor = System.Drawing.Color.Black
+            Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.Label1.Location = New System.Drawing.Point(226, 13)
+            Me.Label1.Name = "Label1"
+            Me.Label1.Size = New System.Drawing.Size(53, 15)
+            Me.Label1.TabIndex = 10000
+            CTag38.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
+            CTag38.CalculatorRequired = True
+            CTag38.ComboValueTextBox = Nothing
+            CTag38.ControlRelatedCode = Nothing
+            CTag38.DateButtonTextBox = Nothing
+            CTag38.DateTimeButtonTextBox = Nothing
+            CTag38.DisplayLinkControl = Nothing
+            CTag38.DisplayLinkDisplayFieldName = Nothing
+            CTag38.DisplayLinkKeyFieldName = Nothing
+            CTag38.DisplayLinkTable = Nothing
+            CTag38.FlexgridEditItem = ""
+            CTag38.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
+            CTag38.FormStatus = XL.Win.Component.BaseForm.FormStatuses.BeforeLoading
+            CTag38.IsButtonCustomed = False
+            CTag38.IsTextValid = True
+            CTag38.KeyValueAbsentable = False
+            CTag38.LeagleText = ""
+            CTag38.NumericButtonTextBox = Nothing
+            CTag38.ParentControl = Me.Label1
+            CTag38.SkipValidate = False
+            CTag38.TimeButtonTextBox = Nothing
+            CTag38.ToolTip = ""
+            CTag38.ValueType = XL.Common.ControlValueType.Character
+            Me.Label1.Tag = CTag38
             Me.Label1.Text = "数量(F2)"
             '
             'Label18
@@ -1931,6 +1944,81 @@
             Me.Label18.Name = "Label18"
             Me.Label18.Size = New System.Drawing.Size(77, 15)
             Me.Label18.TabIndex = 10000
+            CTag39.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
+            CTag39.CalculatorRequired = True
+            CTag39.ComboValueTextBox = Nothing
+            CTag39.ControlRelatedCode = Nothing
+            CTag39.DateButtonTextBox = Nothing
+            CTag39.DateTimeButtonTextBox = Nothing
+            CTag39.DisplayLinkControl = Nothing
+            CTag39.DisplayLinkDisplayFieldName = Nothing
+            CTag39.DisplayLinkKeyFieldName = Nothing
+            CTag39.DisplayLinkTable = Nothing
+            CTag39.FlexgridEditItem = ""
+            CTag39.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
+            CTag39.FormStatus = XL.Win.Component.BaseForm.FormStatuses.BeforeLoading
+            CTag39.IsButtonCustomed = False
+            CTag39.IsTextValid = True
+            CTag39.KeyValueAbsentable = False
+            CTag39.LeagleText = ""
+            CTag39.NumericButtonTextBox = Nothing
+            CTag39.ParentControl = Me.Label18
+            CTag39.SkipValidate = False
+            CTag39.TimeButtonTextBox = Nothing
+            CTag39.ToolTip = ""
+            CTag39.ValueType = XL.Common.ControlValueType.Character
+            Me.Label18.Tag = CTag39
+            Me.Label18.Text = "货品代码(F1)"
+            '
+            'Label5
+            '
+            Me.Label5.BackColor = System.Drawing.Color.White
+            Me.Label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+            Me.Label5.Font = New System.Drawing.Font("Arial", 9.0!)
+            Me.Label5.ForeColor = System.Drawing.Color.Black
+            Me.Label5.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.Label5.Location = New System.Drawing.Point(603, 38)
+            Me.Label5.Name = "Label5"
+            Me.Label5.Size = New System.Drawing.Size(119, 23)
+            Me.Label5.TabIndex = 10001
+            CTag37.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
+            CTag37.CalculatorRequired = True
+            CTag37.ComboValueTextBox = Nothing
+            CTag37.ControlRelatedCode = Nothing
+            CTag37.DateButtonTextBox = Nothing
+            CTag37.DateTimeButtonTextBox = Nothing
+            CTag37.DisplayLinkControl = Nothing
+            CTag37.DisplayLinkDisplayFieldName = Nothing
+            CTag37.DisplayLinkKeyFieldName = Nothing
+            CTag37.DisplayLinkTable = Nothing
+            CTag37.FlexgridEditItem = ""
+            CTag37.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
+            CTag37.FormStatus = XL.Win.Component.BaseForm.FormStatuses.BeforeLoading
+            CTag37.IsButtonCustomed = False
+            CTag37.IsTextValid = True
+            CTag37.KeyValueAbsentable = False
+            CTag37.LeagleText = ""
+            CTag37.NumericButtonTextBox = Nothing
+            CTag37.ParentControl = Me.Label5
+            CTag37.SkipValidate = False
+            CTag37.TimeButtonTextBox = Nothing
+            CTag37.ToolTip = ""
+            CTag37.ValueType = XL.Common.ControlValueType.Character
+            Me.Label5.Tag = CTag37
+            Me.Label5.Text = "0"
+            Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+            '
+            'Label9
+            '
+            Me.Label9.AutoSize = True
+            Me.Label9.BackColor = System.Drawing.Color.White
+            Me.Label9.Font = New System.Drawing.Font("Arial", 9.0!)
+            Me.Label9.ForeColor = System.Drawing.Color.Black
+            Me.Label9.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.Label9.Location = New System.Drawing.Point(537, 13)
+            Me.Label9.Name = "Label9"
+            Me.Label9.Size = New System.Drawing.Size(43, 15)
+            Me.Label9.TabIndex = 10001
             CTag35.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag35.CalculatorRequired = True
             CTag35.ComboValueTextBox = Nothing
@@ -1949,13 +2037,82 @@
             CTag35.KeyValueAbsentable = False
             CTag35.LeagleText = ""
             CTag35.NumericButtonTextBox = Nothing
-            CTag35.ParentControl = Me.Label18
+            CTag35.ParentControl = Me.Label9
             CTag35.SkipValidate = False
             CTag35.TimeButtonTextBox = Nothing
             CTag35.ToolTip = ""
             CTag35.ValueType = XL.Common.ControlValueType.Character
-            Me.Label18.Tag = CTag35
-            Me.Label18.Text = "货品代码(F1)"
+            Me.Label9.Tag = CTag35
+            Me.Label9.Text = "操作人"
+            '
+            'ButtonEdit1
+            '
+            Me.ButtonEdit1.Location = New System.Drawing.Point(601, 10)
+            Me.ButtonEdit1.Name = "ButtonEdit1"
+            Me.ButtonEdit1.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton})
+            Me.ButtonEdit1.Size = New System.Drawing.Size(121, 21)
+            Me.ButtonEdit1.TabIndex = 10000
+            CTag32.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
+            CTag32.CalculatorRequired = True
+            CTag32.ComboValueTextBox = Nothing
+            CTag32.ControlRelatedCode = Nothing
+            CTag32.DateButtonTextBox = Nothing
+            CTag32.DateTimeButtonTextBox = Nothing
+            CTag32.DisplayLinkControl = Nothing
+            CTag32.DisplayLinkDisplayFieldName = Nothing
+            CTag32.DisplayLinkKeyFieldName = Nothing
+            CTag32.DisplayLinkTable = Nothing
+            CTag32.FlexgridEditItem = ""
+            CTag32.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
+            CTag32.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
+            CTag32.IsButtonCustomed = False
+            CTag32.IsTextValid = True
+            CTag32.KeyValueAbsentable = False
+            CTag32.LeagleText = ""
+            CTag32.NumericButtonTextBox = Nothing
+            CTag32.ParentControl = Me.ButtonEdit1
+            CTag32.SkipValidate = False
+            CTag32.TimeButtonTextBox = Nothing
+            CTag32.ToolTip = ""
+            CTag32.ValueType = XL.Common.ControlValueType.Character
+            Me.ButtonEdit1.Tag = CTag32
+            '
+            'Label10
+            '
+            Me.Label10.AutoSize = True
+            Me.Label10.BackColor = System.Drawing.Color.White
+            Me.Label10.Font = New System.Drawing.Font("Arial", 9.0!)
+            Me.Label10.ForeColor = System.Drawing.Color.Black
+            Me.Label10.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.Label10.Location = New System.Drawing.Point(667, 42)
+            Me.Label10.Name = "Label10"
+            Me.Label10.Size = New System.Drawing.Size(55, 15)
+            Me.Label10.TabIndex = 10001
+            CTag31.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
+            CTag31.CalculatorRequired = True
+            CTag31.ComboValueTextBox = Nothing
+            CTag31.ControlRelatedCode = Nothing
+            CTag31.DateButtonTextBox = Nothing
+            CTag31.DateTimeButtonTextBox = Nothing
+            CTag31.DisplayLinkControl = Nothing
+            CTag31.DisplayLinkDisplayFieldName = Nothing
+            CTag31.DisplayLinkKeyFieldName = Nothing
+            CTag31.DisplayLinkTable = Nothing
+            CTag31.FlexgridEditItem = ""
+            CTag31.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
+            CTag31.FormStatus = XL.Win.Component.BaseForm.FormStatuses.BeforeLoading
+            CTag31.IsButtonCustomed = False
+            CTag31.IsTextValid = True
+            CTag31.KeyValueAbsentable = False
+            CTag31.LeagleText = ""
+            CTag31.NumericButtonTextBox = Nothing
+            CTag31.ParentControl = Me.Label10
+            CTag31.SkipValidate = False
+            CTag31.TimeButtonTextBox = Nothing
+            CTag31.ToolTip = ""
+            CTag31.ValueType = XL.Common.ControlValueType.Character
+            Me.Label10.Tag = CTag31
+            Me.Label10.Text = "操作人ID"
             '
             'M_02_01001
             '
@@ -1969,30 +2126,30 @@
             Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
             Me.Name = "M_02_01001"
             Me.Size = New System.Drawing.Size(922, 481)
-            CTag38.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
-            CTag38.CalculatorRequired = True
-            CTag38.ComboValueTextBox = Nothing
-            CTag38.ControlRelatedCode = Nothing
-            CTag38.DateButtonTextBox = Nothing
-            CTag38.DateTimeButtonTextBox = Nothing
-            CTag38.DisplayLinkControl = Nothing
-            CTag38.DisplayLinkDisplayFieldName = Nothing
-            CTag38.DisplayLinkKeyFieldName = Nothing
-            CTag38.DisplayLinkTable = Nothing
-            CTag38.FlexgridEditItem = ""
-            CTag38.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
-            CTag38.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
-            CTag38.IsButtonCustomed = False
-            CTag38.IsTextValid = True
-            CTag38.KeyValueAbsentable = False
-            CTag38.LeagleText = ""
-            CTag38.NumericButtonTextBox = Nothing
-            CTag38.ParentControl = Me
-            CTag38.SkipValidate = False
-            CTag38.TimeButtonTextBox = Nothing
-            CTag38.ToolTip = ""
-            CTag38.ValueType = XL.Common.ControlValueType.Character
-            Me.Tag = CTag38
+            CTag42.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
+            CTag42.CalculatorRequired = True
+            CTag42.ComboValueTextBox = Nothing
+            CTag42.ControlRelatedCode = Nothing
+            CTag42.DateButtonTextBox = Nothing
+            CTag42.DateTimeButtonTextBox = Nothing
+            CTag42.DisplayLinkControl = Nothing
+            CTag42.DisplayLinkDisplayFieldName = Nothing
+            CTag42.DisplayLinkKeyFieldName = Nothing
+            CTag42.DisplayLinkTable = Nothing
+            CTag42.FlexgridEditItem = ""
+            CTag42.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
+            CTag42.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
+            CTag42.IsButtonCustomed = False
+            CTag42.IsTextValid = True
+            CTag42.KeyValueAbsentable = False
+            CTag42.LeagleText = ""
+            CTag42.NumericButtonTextBox = Nothing
+            CTag42.ParentControl = Me
+            CTag42.SkipValidate = False
+            CTag42.TimeButtonTextBox = Nothing
+            CTag42.ToolTip = ""
+            CTag42.ValueType = XL.Common.ControlValueType.Character
+            Me.Tag = CTag42
             Me.ToolStrip_Form.ResumeLayout(False)
             Me.ToolStrip_Form.PerformLayout()
             CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2028,6 +2185,7 @@
             CType(Me.CalcEdit_DiscountAmount.Properties, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.SpinEdit_WareAmount.Properties, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.ButtonEdit_WareCode.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.ButtonEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -2106,6 +2264,10 @@
         Friend WithEvents RadioGroup_UnitDiscountType As DevExpress.XtraEditors.RadioGroup
         Friend WithEvents Panel_DetailDiscount As System.Windows.Forms.Panel
         Friend WithEvents CheckEdit_IsOnLine As DevExpress.XtraEditors.CheckEdit
+        Friend WithEvents ButtonEdit1 As DevExpress.XtraEditors.ButtonEdit
+        Friend WithEvents Label9 As System.Windows.Forms.Label
+        Friend WithEvents Label5 As System.Windows.Forms.Label
+        Friend WithEvents Label10 As System.Windows.Forms.Label
 
 #End Region
 
