@@ -114,6 +114,7 @@ Namespace Manifest
             'Me.SetToolStripButtonFunctionKey(Me.ToolStripButton_Close, Keys.F12)
 
             Me.FormInputGuarder.SetValidate(Me.TextEdit_ClientCode, InputGuarder.ValidateClassify.Required, Nothing)
+            Me.FormInputGuarder.SetValidate(Me.ButtonEdit_OperatorCode, InputGuarder.ValidateClassify.Required, Nothing)
 
             Me.FormInputGuarder.SetInputLinkedLabel(Me.TextEdit_ClientCode, Me.Label_ClientName, Me.Label_ClientID)
             Me.FormInputGuarder.SetInputLinkedLabel(Me.ButtonEdit_WareCode, Me.ButtonEdit_WareCode, Me.Label_WareID)

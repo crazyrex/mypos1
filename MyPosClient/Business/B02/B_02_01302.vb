@@ -673,10 +673,11 @@ Namespace Business
                 Me._manifest.SVFT_BACKEND_QUOTATION_WARE_LIST.Clear()
 
                 Dim wareRowSEntity As New MyPosXAuto.FTs.FT_M_MP_WARERowSEntity
-                For Each quotationWareRow As MyPosXAuto.FTs.FT_T_MP_QUOTATION_WARE_DTLRow In Me._manifest.SVFT_BACKEND_QUOTATION_WARE_LIST
+                Dim quotationWareRow As MyPosXAuto.FTs.FT_T_MP_QUOTATION_WARE_DTLRow
+                For Each quotationWareRow In Me._manifest.SVFT_BACKEND_QUOTATION_WARE_LIST
                     bindingRow = Me._manifest.SVFT_BINDING_COMPONENT_LIST.NewS_MP_BOM_COMPONENTRow()
                     Me._manifest.SVFT_BINDING_COMPONENT_LIST.AddS_MP_BOM_COMPONENTRow(bindingRow)
-                    bindingRow.COMPONENT_ID = quotationWareRow.WARE_ID
+                    bindingRow.COMPONENT_ID = quotationWareRow.DETAIL_ID
                     bindingRow.ROW_REMARK = MyPosXService.Decls.ROW_REMARK_ICON_ROOT_WARE
 
                     MyPosXAuto.Facade.AfBizMaster.FillM_MP_WARERowSEntity(wareRowSEntity, quotationWareRow.WARE_ID)
@@ -689,34 +690,72 @@ Namespace Business
                 Dim componentRow As MyPosXAuto.FTs.FT_S_MP_BOM_COMPONENTRow
                 Dim componentCondition As New MyPosXAuto.Facade.AfBizConfig.ConditionOfS_MP_BOM_COMPONENT(XL.DB.Utils.Condition.LogicOperators.Logic_And)
 
+                Dim quotationWareCondition As New MyPosXAuto.Facade.AfBizManage.ConditionOfT_MP_QUOTATION_WARE_DTL(XL.DB.Utils.Condition.LogicOperators.Logic_And)
+                Dim wareBomDtlCondition As New MyPosXAuto.Facade.AfBizManage.ConditionOfT_MP_QUOT_WARE_BOM_DTL(XL.DB.Utils.Condition.LogicOperators.Logic_And)
                 Dim optionCondition As New MyPosXAuto.Facade.AfBizConfig.ConditionOfS_MP_BOM_COMP_WARE_OPT(XL.DB.Utils.Condition.LogicOperators.Logic_And)
                 Dim optionIDs As New ArrayList
+                Dim optionRowSE As New MyPosXAuto.FTs.FT_S_MP_BOM_COMP_WARE_OPTRowSEntity
                 Dim expandingRow As MyPosXAuto.FTs.FT_S_MP_BOM_COMPONENTRow
+                Dim wareRowSE As New MyPosXAuto.FTs.FT_M_MP_WARERowSEntity
+
+                Dim bomOptionRow As MyPosXAuto.FTs.FT_T_MP_QUOT_WARE_BOM_DTLRow
+
                 Do While expandingRows.Count > 0
                     expandingRow = expandingRows.Dequeue
 
-                    If expandingRow.ROW_REMARK = MyPosXService.Decls.ROW_REMARK_ICON_ROOT_WARE Then
+                    If expandingRow.ROW_REMARK = MyPosXService.Decls.ROW_REMARK_ICON_COMPONENT Then
 
-                    ElseIf expandingRow.ROW_REMARK = MyPosXService.Decls.ROW_REMARK_ROOT_OPTION Then
+                        'ROW_REMARK_ICON_COMPONENT
+                        wareBomDtlCondition.Clear()
+                        wareBomDtlCondition.Add(MyPosXAuto.Facade.AfBizManage.T_MP_QUOT_WARE_BOM_DTLColumns.COMPONENT_IDColumn, "=", expandingRow.COMPONENT_ID)
+                        For Each wareBomDtlRow In Me._manifest.SVFT_BACKEND_BOM_OPTION_LIST.FindRowsByCondition(wareBomDtlCondition)
+                            bindingRow = Me._manifest.SVFT_BINDING_COMPONENT_LIST.NewS_MP_BOM_COMPONENTRow
+                            Me._manifest.SVFT_BINDING_COMPONENT_LIST.AddS_MP_BOM_COMPONENTRow(bindingRow)
+                            'bindingRow.CloneDataRow(wareBomDtlRo)
+                            bindingRow.PARENT_COMPONENT = wareBomDtlRow.DETAIL_ID
+                            bindingRow.ROW_REMARK = MyPosXService.Decls.ROW_REMARK_ICON_OPTION
+                            MyPosXAuto.Facade.AfBizConfig.FillS_MP_BOM_COMP_WARE_OPTRowSEntity(optionRowSE, wareBomDtlRow.OPTION_ID)
+                            MyPosXAuto.Facade.AfBizMaster.FillM_MP_WARERowSEntity(wareRowSE, optionRowSE.WARE_ID)
+                            bindingRow.COMPONENT_NAME = String.Format("{0} {1} {2}", wareRowSE.WARE_NAME, wareRowSE.MODEL, wareRowSE.SPEC)
+                            expandingRows.Enqueue(bindingRow)
+                        Next
 
-                        componentCondition.Clear()
-                        componentCondition.Add(MyPosXAuto.Facade.AfBizConfig.S_MP_BOM_COMPONENTColumns.COMPOSING_WAREColumn, "=", expandingRow.COMPONENT_ID)
-                        MyPosXAuto.Facade.AfBizConfig.FillFT_S_MP_BOM_COMPONENT(componentCondition, componentList)
+                    Else
+
+                        Dim rowRemark As String = String.Empty
+                        If expandingRow.ROW_REMARK = MyPosXService.Decls.ROW_REMARK_ICON_ROOT_WARE Then
+
+                            quotationWareCondition.Clear()
+                            quotationWareCondition.Add(MyPosXAuto.Facade.AfBizManage.T_MP_QUOTATION_WARE_DTLColumns.DETAIL_IDColumn, "=", expandingRow.COMPONENT_ID)
+                            quotationWareRow = Me._manifest.SVFT_BACKEND_QUOTATION_WARE_LIST.FindRowByCondition(quotationWareCondition)
+
+                            componentCondition.Clear()
+                            componentCondition.Add(MyPosXAuto.Facade.AfBizConfig.S_MP_BOM_COMPONENTColumns.COMPOSING_WAREColumn, "=", quotationWareRow.WARE_ID)
+                            componentList.Clear()
+                            MyPosXAuto.Facade.AfBizConfig.FillFT_S_MP_BOM_COMPONENT(componentCondition, componentList)
+
+
+                        ElseIf expandingRow.ROW_REMARK = MyPosXService.Decls.ROW_REMARK_ICON_OPTION Then
+                            wareBomDtlCondition.Clear()
+                            wareBomDtlCondition.Add(MyPosXAuto.Facade.AfBizManage.T_MP_QUOT_WARE_BOM_DTLColumns.DETAIL_IDColumn, "=", expandingRow.COMPONENT_ID)
+                            bomOptionRow = Me._manifest.SVFT_BACKEND_BOM_OPTION_LIST.FindRowByCondition(wareBomDtlCondition)
+                            MyPosXAuto.Facade.AfBizConfig.FillS_MP_BOM_COMP_WARE_OPTRowSEntity(optionRowSE, bomOptionRow.OPTION_ID)
+                            componentCondition.Clear()
+                            componentCondition.Add(MyPosXAuto.Facade.AfBizConfig.S_MP_BOM_COMPONENTColumns.COMPOSING_WAREColumn, "=", optionRowSE.WARE_ID)
+                            componentList.Clear()
+                            MyPosXAuto.Facade.AfBizConfig.FillFT_S_MP_BOM_COMPONENT(componentCondition, componentList)
+
+                        End If
+
 
                         For Each componentRow In componentList
                             bindingRow = Me._manifest.SVFT_BINDING_COMPONENT_LIST.NewS_MP_BOM_COMPONENTRow
                             Me._manifest.SVFT_BINDING_COMPONENT_LIST.AddS_MP_BOM_COMPONENTRow(bindingRow)
                             bindingRow.CloneDataRow(componentRow)
                             bindingRow.PARENT_COMPONENT = expandingRow.COMPONENT_ID
+                            bindingRow.ROW_REMARK = MyPosXService.Decls.ROW_REMARK_ICON_COMPONENT
                             expandingRows.Enqueue(bindingRow)
                         Next
-                    Else
-                        'ROW_REMARK_ICON_COMPONENT
-                        optionCondition.Clear()
-                        optionCondition.Add(MyPosXAuto.Facade.AfBizConfig.S_MP_BOM_COMP_WARE_OPTColumns.COMPONENT_IDColumn, "=", expandingRow.COMPONENT_ID)
-                        optionIDs = MyPosXAuto.Facade.AfBizConfig.GetS_MP_BOM_COMP_WARE_OPT_CVListDistinct(optionCondition, MyPosXAuto.Facade.AfBizConfig.S_MP_BOM_COMP_WARE_OPTColumns.OPTION_IDColumn)
-
-
                     End If
                 Loop
                 'Dim servResult As String = _
