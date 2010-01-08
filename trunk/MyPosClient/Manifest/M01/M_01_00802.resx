@@ -118,23 +118,23 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="DefaultLookAndFeel_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>295, 0</value>
+    <value>294, 0</value>
   </metadata>
   <metadata name="Timer_Surveillant.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>138, 0</value>
+    <value>141, 0</value>
   </metadata>
   <metadata name="ToolStrip_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ToolStripButton_Save.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 22</value>
+    <value>36, 22</value>
   </data>
   <data name="ToolStripButton_Save.Text" xml:space="preserve">
     <value>保存</value>
   </data>
   <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 22</value>
+    <value>36, 22</value>
   </data>
   <data name="ToolStripButton_Close.Text" xml:space="preserve">
     <value>关闭</value>
@@ -159,7 +159,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ToolStrip_Form.ZOrder" xml:space="preserve">
-    <value>42</value>
+    <value>44</value>
   </data>
   <data name="MemoEdit_Remarks.Location" type="System.Drawing.Point, System.Drawing">
     <value>91, 8</value>
@@ -231,7 +231,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TextEdit_WebSite.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="Label16.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -261,7 +261,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label16.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="TextEdit_Email.Location" type="System.Drawing.Point, System.Drawing">
     <value>373, 284</value>
@@ -282,7 +282,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TextEdit_Email.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="Label14.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -312,7 +312,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label14.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="TextEdit_Country.Location" type="System.Drawing.Point, System.Drawing">
     <value>105, 286</value>
@@ -333,7 +333,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TextEdit_Country.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="Label15.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -363,7 +363,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label15.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
   </data>
   <data name="TextEdit_Fax.Location" type="System.Drawing.Point, System.Drawing">
     <value>373, 257</value>
@@ -384,7 +384,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TextEdit_Fax.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>16</value>
   </data>
   <data name="Label12.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -414,7 +414,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label12.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>17</value>
   </data>
   <data name="TextEdit_Postcode.Location" type="System.Drawing.Point, System.Drawing">
     <value>105, 259</value>
@@ -435,7 +435,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TextEdit_Postcode.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>18</value>
   </data>
   <data name="Label13.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -465,7 +465,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label13.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>19</value>
   </data>
   <data name="TextEdit_WorkPhone.Location" type="System.Drawing.Point, System.Drawing">
     <value>373, 230</value>
@@ -486,7 +486,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TextEdit_WorkPhone.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>20</value>
   </data>
   <data name="Label11.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -516,7 +516,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label11.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>21</value>
   </data>
   <data name="TextEdit_CellPhone.Location" type="System.Drawing.Point, System.Drawing">
     <value>373, 203</value>
@@ -537,7 +537,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TextEdit_CellPhone.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>22</value>
   </data>
   <data name="Label10.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -567,7 +567,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label10.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>23</value>
   </data>
   <data name="TextEdit_State.Location" type="System.Drawing.Point, System.Drawing">
     <value>105, 232</value>
@@ -588,7 +588,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TextEdit_State.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>24</value>
   </data>
   <data name="Label9.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -618,7 +618,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label9.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>25</value>
   </data>
   <data name="TextEdit_HomePhone.Location" type="System.Drawing.Point, System.Drawing">
     <value>373, 176</value>
@@ -639,7 +639,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TextEdit_HomePhone.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>26</value>
   </data>
   <data name="Label8.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -669,7 +669,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label8.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>27</value>
   </data>
   <data name="TextEdit_City.Location" type="System.Drawing.Point, System.Drawing">
     <value>105, 205</value>
@@ -690,7 +690,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TextEdit_City.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>28</value>
   </data>
   <data name="Label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -720,7 +720,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label7.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>29</value>
   </data>
   <data name="TextEdit_Address.Location" type="System.Drawing.Point, System.Drawing">
     <value>105, 178</value>
@@ -741,7 +741,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TextEdit_Address.ZOrder" xml:space="preserve">
-    <value>28</value>
+    <value>30</value>
   </data>
   <data name="Label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -771,7 +771,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label6.ZOrder" xml:space="preserve">
-    <value>29</value>
+    <value>31</value>
   </data>
   <data name="TextEdit_Department.Location" type="System.Drawing.Point, System.Drawing">
     <value>105, 151</value>
@@ -792,7 +792,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TextEdit_Department.ZOrder" xml:space="preserve">
-    <value>30</value>
+    <value>32</value>
   </data>
   <data name="Label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -822,7 +822,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label5.ZOrder" xml:space="preserve">
-    <value>31</value>
+    <value>33</value>
   </data>
   <data name="TextEdit_Title.Location" type="System.Drawing.Point, System.Drawing">
     <value>105, 124</value>
@@ -843,7 +843,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TextEdit_Title.ZOrder" xml:space="preserve">
-    <value>32</value>
+    <value>34</value>
   </data>
   <data name="Label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -873,7 +873,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
-    <value>33</value>
+    <value>35</value>
   </data>
   <data name="TextEdit_ContactPerson.Location" type="System.Drawing.Point, System.Drawing">
     <value>105, 97</value>
@@ -894,7 +894,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TextEdit_ContactPerson.ZOrder" xml:space="preserve">
-    <value>34</value>
+    <value>36</value>
   </data>
   <data name="Label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -924,7 +924,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
-    <value>35</value>
+    <value>37</value>
   </data>
   <data name="TextEdit_CustomerName.Location" type="System.Drawing.Point, System.Drawing">
     <value>105, 70</value>
@@ -945,7 +945,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TextEdit_CustomerName.ZOrder" xml:space="preserve">
-    <value>36</value>
+    <value>38</value>
   </data>
   <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -975,7 +975,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
-    <value>38</value>
+    <value>40</value>
   </data>
   <data name="CheckEdit_ManualCode.Location" type="System.Drawing.Point, System.Drawing">
     <value>293, 44</value>
@@ -999,7 +999,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;CheckEdit_ManualCode.ZOrder" xml:space="preserve">
-    <value>39</value>
+    <value>41</value>
   </data>
   <data name="TextEdit_CustomerID.Location" type="System.Drawing.Point, System.Drawing">
     <value>105, 43</value>
@@ -1020,7 +1020,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TextEdit_CustomerID.ZOrder" xml:space="preserve">
-    <value>40</value>
+    <value>42</value>
   </data>
   <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1050,7 +1050,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>41</value>
+    <value>43</value>
   </data>
   <data name="TextEdit_ClientAttr1.Location" type="System.Drawing.Point, System.Drawing">
     <value>91, 6</value>
@@ -1122,7 +1122,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Panel_ClientAttr1.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="TextEdit_ClientAttr2.Location" type="System.Drawing.Point, System.Drawing">
     <value>91, 6</value>
@@ -1194,7 +1194,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Panel_ClientAttr2.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="TextEdit_ClientAttr3.Location" type="System.Drawing.Point, System.Drawing">
     <value>91, 6</value>
@@ -1266,7 +1266,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Panel_ClientAttr3.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="TextEdit_ClientAttr4.Location" type="System.Drawing.Point, System.Drawing">
     <value>91, 6</value>
@@ -1338,7 +1338,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Panel_ClientAttr4.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="TextEdit_ClientAttr5.Location" type="System.Drawing.Point, System.Drawing">
     <value>91, 6</value>
@@ -1410,7 +1410,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Panel_ClientAttr5.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="TextEdit_ClientAttr6.Location" type="System.Drawing.Point, System.Drawing">
     <value>91, 6</value>
@@ -1482,7 +1482,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Panel_ClientAttr6.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="Panel_Misc.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 532</value>
@@ -1503,7 +1503,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Panel_Misc.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="LookUpEdit_ClientType.Location" type="System.Drawing.Point, System.Drawing">
     <value>373, 71</value>
@@ -1531,7 +1531,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LookUpEdit_ClientType.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="Label_ClientType.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1565,7 +1565,67 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label_ClientType.ZOrder" xml:space="preserve">
-    <value>37</value>
+    <value>39</value>
+  </data>
+  <data name="LookUpEdit_ClientLevel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>373, 98</value>
+  </data>
+  <data name="LookUpEdit1.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
+  </data>
+  <data name="LookUpEdit1.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LookUpEdit_ClientLevel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 21</value>
+  </data>
+  <data name="LookUpEdit_ClientLevel.TabIndex" type="System.Int32, mscorlib">
+    <value>10037</value>
+  </data>
+  <data name="&gt;&gt;LookUpEdit_ClientLevel.Name" xml:space="preserve">
+    <value>LookUpEdit_ClientLevel</value>
+  </data>
+  <data name="&gt;&gt;LookUpEdit_ClientLevel.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;LookUpEdit_ClientLevel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LookUpEdit_ClientLevel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Label18.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label18.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="Label18.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label18.Location" type="System.Drawing.Point, System.Drawing">
+    <value>296, 99</value>
+  </data>
+  <data name="Label18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 15</value>
+  </data>
+  <data name="Label18.TabIndex" type="System.Int32, mscorlib">
+    <value>10036</value>
+  </data>
+  <data name="Label18.Text" xml:space="preserve">
+    <value>客户等级</value>
+  </data>
+  <data name="&gt;&gt;Label18.Name" xml:space="preserve">
+    <value>Label18</value>
+  </data>
+  <data name="&gt;&gt;Label18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label18.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Label18.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
