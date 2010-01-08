@@ -856,7 +856,7 @@ Namespace Business
                             Me._manifest.SV_EDITING_WARE_ID, _
                             optionRow.COMPONENT_ID)
 
-                    overviewRow.ROW_REMARK = MyPosXService.Decls.ROW_REMARK_ROOT_OPTION
+                    overviewRow.ROW_REMARK = MyPosXService.Decls.ROW_REMARK_ICON_OPTION
 
                 Next
 

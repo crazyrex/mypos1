@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="SplitContainerControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 127</value>
+    <value>0, 91</value>
   </data>
   <data name="TreeListColumn_WareClassifyCode.Caption" xml:space="preserve">
     <value>Category ID</value>
@@ -131,7 +131,7 @@
     <value>Remarks</value>
   </data>
   <data name="TreeList_WareClassify.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 204</value>
+    <value>259, 240</value>
   </data>
   <data name="LinkLabel_DeleteImage.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 15</value>
@@ -149,40 +149,13 @@
     <value>Set</value>
   </data>
   <data name="SplitContainerControl_Left.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 369</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="GridControl_Ware.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left</value>
-  </data>
-  <data name="GridControl_Ware.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Tile</value>
-  </data>
-  <data name="GridControl_Ware.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>Inherit</value>
-  </data>
-  <assembly alias="DevExpress.XtraEditors.v8.1" name="DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
-  <data name="GridControl_Ware.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v8.1">
-    <value>Center</value>
-  </data>
-  <data name="GridControl_Ware.EmbeddedNavigator.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <assembly alias="DevExpress.Utils.v8.1" name="DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
-  <data name="GridControl_Ware.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v8.1">
-    <value>None</value>
-  </data>
-  <data name="GridControl_Ware.EmbeddedNavigator.ToolTipTitle" xml:space="preserve">
-    <value />
+    <value>259, 405</value>
   </data>
   <data name="GridColumn_RowSelect.Caption" xml:space="preserve">
     <value>Select</value>
   </data>
   <data name="GridColumn_WareCode.Caption" xml:space="preserve">
     <value>Barcode</value>
-  </data>
-  <data name="GridColumn_WareCode.SummaryItem.DisplayFormat" xml:space="preserve">
-    <value />
   </data>
   <data name="GridColumn_CustomCode.Caption" xml:space="preserve">
     <value>Item code</value>
@@ -202,99 +175,17 @@
   <data name="GridColumn_UnitPrice.Caption" xml:space="preserve">
     <value>Price</value>
   </data>
-  <data name="RepositoryItemCalcEdit_UnitPrice.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
-    <value>Default</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="RepositoryItemCalcEdit_UnitPrice.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RepositoryItemCalcEdit_UnitPrice.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RepositoryItemCalcEdit_UnitPrice.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RepositoryItemCalcEdit_UnitPrice.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
-    <value>Numeric</value>
-  </data>
-  <data name="RepositoryItemCalcEdit_UnitPrice.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="RepositoryItemCalcEdit_UnitPrice.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RepositoryItemCalcEdit_UnitPrice.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RepositoryItemCalcEdit_UnitPrice.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="GridColumn_Unitcost.Caption" xml:space="preserve">
     <value>Unit cost</value>
-  </data>
-  <data name="RepositoryItemCalcEdit_UnitCost.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
-    <value>Default</value>
-  </data>
-  <data name="RepositoryItemCalcEdit_UnitCost.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RepositoryItemCalcEdit_UnitCost.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RepositoryItemCalcEdit_UnitCost.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RepositoryItemCalcEdit_UnitCost.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
-    <value>Numeric</value>
-  </data>
-  <data name="RepositoryItemCalcEdit_UnitCost.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="RepositoryItemCalcEdit_UnitCost.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RepositoryItemCalcEdit_UnitCost.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RepositoryItemCalcEdit_UnitCost.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_SupplierID.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
-    <value>Default</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_SupplierID.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_SupplierID.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RepositoryItemLookUpEdit_SupplierID.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_SupplierID.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
-    <value>None</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_SupplierID.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_SupplierID.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_SupplierID.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RepositoryItemLookUpEdit_SupplierID.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="GridColumn_Remarks.Caption" xml:space="preserve">
     <value>Remarks</value>
   </data>
   <data name="GridControl_Ware.Size" type="System.Drawing.Size, System.Drawing">
-    <value>427, 369</value>
+    <value>494, 405</value>
   </data>
   <data name="SplitContainerControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>700, 373</value>
+    <value>767, 409</value>
   </data>
   <data name="ToolStripButton_Choose.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 22</value>
@@ -365,6 +256,7 @@
   <data name="ToolStripButton_View.Text" xml:space="preserve">
     <value>View</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="ToolStripButton_View.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -416,14 +308,14 @@
   <data name="ToolStripButton_Close.Text" xml:space="preserve">
     <value>Close</value>
   </data>
+  <data name="ToolStrip_Form.Size" type="System.Drawing.Size, System.Drawing">
+    <value>767, 25</value>
+  </data>
   <data name="ComboBoxEdit_DownloadImageMode.EditValue" xml:space="preserve">
     <value>Download All</value>
   </data>
   <data name="ComboBoxEdit_DownloadImageMode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>124, 40</value>
-  </data>
-  <data name="ComboBoxEdit_DownloadImageMode.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>366, 38</value>
   </data>
   <data name="ComboBoxEdit_DownloadImageMode.Properties.Items" xml:space="preserve">
     <value>Download All</value>
@@ -434,53 +326,24 @@
   <data name="ComboBoxEdit_DownloadImageMode.Properties.Items2" xml:space="preserve">
     <value>Current Item</value>
   </data>
-  <data name="ComboBoxEdit_DownloadImageMode.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
-    <value>Default</value>
-  </data>
-  <data name="ComboBoxEdit_DownloadImageMode.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="ComboBoxEdit_DownloadImageMode.Properties.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ComboBoxEdit_DownloadImageMode.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="ComboBoxEdit_DownloadImageMode.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
-    <value>None</value>
-  </data>
-  <data name="ComboBoxEdit_DownloadImageMode.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="ComboBoxEdit_DownloadImageMode.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="ComboBoxEdit_DownloadImageMode.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="ComboBoxEdit_DownloadImageMode.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="CheckEdit_ShowRetired.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+  <data name="ComboBoxEdit_DownloadImageMode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 21</value>
   </data>
   <data name="CheckEdit_ShowRetired.Location" type="System.Drawing.Point, System.Drawing">
-    <value>158, 12</value>
-  </data>
-  <data name="CheckEdit_ShowRetired.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>362, 12</value>
   </data>
   <data name="CheckEdit_ShowRetired.Properties.Caption" xml:space="preserve">
     <value>Show retired</value>
   </data>
   <data name="CheckEdit_ShowRetired.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 19</value>
+    <value>98, 19</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="CheckEdit_PriceCostModifiable.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left</value>
   </data>
   <data name="CheckEdit_PriceCostModifiable.Location" type="System.Drawing.Point, System.Drawing">
-    <value>524, 47</value>
-  </data>
-  <data name="CheckEdit_PriceCostModifiable.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>565, 12</value>
   </data>
   <data name="CheckEdit_PriceCostModifiable.Properties.Caption" xml:space="preserve">
     <value>Price cost editable</value>
@@ -489,10 +352,7 @@
     <value>133, 19</value>
   </data>
   <data name="CheckEdit_RemotingMode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 12</value>
-  </data>
-  <data name="CheckEdit_RemotingMode.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>466, 12</value>
   </data>
   <data name="CheckEdit_RemotingMode.Properties.Caption" xml:space="preserve">
     <value>Online mode</value>
@@ -501,10 +361,7 @@
     <value>90, 19</value>
   </data>
   <data name="CheckEdit_ExportPictureToExcel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>228, 42</value>
-  </data>
-  <data name="CheckEdit_ExportPictureToExcel.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>116, 12</value>
   </data>
   <data name="CheckEdit_ExportPictureToExcel.Properties.Caption" xml:space="preserve">
     <value>Export image to Excel</value>
@@ -513,7 +370,7 @@
     <value>155, 19</value>
   </data>
   <data name="LinkLabel_DownloadImages.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 43</value>
+    <value>267, 41</value>
   </data>
   <data name="LinkLabel_DownloadImages.Size" type="System.Drawing.Size, System.Drawing">
     <value>101, 15</value>
@@ -521,8 +378,11 @@
   <data name="LinkLabel_DownloadImages.Text" xml:space="preserve">
     <value>Download image</value>
   </data>
+  <data name="LinkLabel_SaveCostPriceModify.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left</value>
+  </data>
   <data name="LinkLabel_SaveCostPriceModify.Location" type="System.Drawing.Point, System.Drawing">
-    <value>654, 49</value>
+    <value>704, 14</value>
   </data>
   <data name="LinkLabel_SaveCostPriceModify.Size" type="System.Drawing.Size, System.Drawing">
     <value>34, 15</value>
@@ -531,7 +391,7 @@
     <value>Save</value>
   </data>
   <data name="LinkLabel_CancelAll.Location" type="System.Drawing.Point, System.Drawing">
-    <value>626, 15</value>
+    <value>612, 39</value>
   </data>
   <data name="LinkLabel_CancelAll.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 15</value>
@@ -540,7 +400,7 @@
     <value>Cancel all</value>
   </data>
   <data name="LinkLabel_SelectAll.Location" type="System.Drawing.Point, System.Drawing">
-    <value>562, 15</value>
+    <value>680, 39</value>
   </data>
   <data name="LinkLabel_SelectAll.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 17</value>
@@ -549,7 +409,7 @@
     <value>Select all</value>
   </data>
   <data name="LinkLabel_AllWareList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>466, 15</value>
+    <value>270, 13</value>
   </data>
   <data name="LinkLabel_AllWareList.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 17</value>
@@ -558,7 +418,7 @@
     <value>Show all items</value>
   </data>
   <data name="LinkLabel_AllWareExportExcel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>365, 15</value>
+    <value>15, 13</value>
   </data>
   <data name="LinkLabel_AllWareExportExcel.Size" type="System.Drawing.Size, System.Drawing">
     <value>95, 17</value>
@@ -567,40 +427,13 @@
     <value>Export all items</value>
   </data>
   <data name="TextEdit_Search.Location" type="System.Drawing.Point, System.Drawing">
-    <value>66, 75</value>
+    <value>66, 37</value>
   </data>
-  <data name="TextEdit_Search.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="TextEdit_Search.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v8.1">
-    <value>Default</value>
-  </data>
-  <data name="TextEdit_Search.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="TextEdit_Search.Properties.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TextEdit_Search.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="TextEdit_Search.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v8.1">
-    <value>None</value>
-  </data>
-  <data name="TextEdit_Search.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="TextEdit_Search.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="TextEdit_Search.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="TextEdit_Search.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="TextEdit_Search.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 21</value>
   </data>
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 79</value>
+    <value>15, 41</value>
   </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 15</value>
@@ -609,6 +442,9 @@
     <value>Search</value>
   </data>
   <data name="PanelControl_Filter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>700, 102</value>
+    <value>767, 66</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>767, 500</value>
   </data>
 </root>
