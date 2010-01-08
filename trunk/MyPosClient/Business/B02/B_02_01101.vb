@@ -493,12 +493,9 @@ Namespace Business
                 End If
 
 
-                'Me._manifest.SV_RPTOPT_LABEL = New XForm.ReportOption(MyPosXService.Decls.RPT_NAME_0001, XForm.ReportOption.PrintType.Label, True)
-                'Me._manifest.SV_RPTOPT_LABEL.DefaultFileName = SysInfo.ReadLocalSysInfo(XService.Decls.LVN_ASSET_LABEL_FILE_PATH)            
-
-                'Me._manifest.SV_RPTOPT_PRINTER = New XForm.ReportOption(XService.Decls.RPT_NAME_0001, XForm.ReportOption.PrintType.Print, True)
-                '                                                                                                                             
-                'Me._manifest.SV_RPTOPT_EXCEL = New XForm.ReportOption(XService.Decls.RPT_NAME_0002, XForm.ReportOption.PrintType.Excel, True)
+                Me._manifest.ButtonEdit_OperatorCode.Text = Utils.Decls.LOGIN_STAFF_ROW_SE.STAFF_CODE
+                Me._manifest.Label_OperatorName.Text = Utils.Decls.LOGIN_STAFF_ROW_SE.STAFF_NAME
+                Me._manifest.Label_OperatorID.Text = Utils.Decls.LOGIN_STAFF_ROW_SE.STAFF_ID
 
 
             Catch ex As XL.Common.Utils.XLException

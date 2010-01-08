@@ -499,6 +499,9 @@ Namespace Business
                     Return String.Empty
                 End If
 
+                Me._manifest.ButtonEdit_OperatorCode.Text = Utils.Decls.LOGIN_STAFF_ROW_SE.STAFF_CODE
+                Me._manifest.Label_OperatorName.Text = Utils.Decls.LOGIN_STAFF_ROW_SE.STAFF_NAME
+                Me._manifest.Label_OperatorID.Text = Utils.Decls.LOGIN_STAFF_ROW_SE.STAFF_ID
 
             Catch ex As XL.Common.Utils.XLException
 
