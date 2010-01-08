@@ -33,6 +33,7 @@ Public Class ServiceTK
     Public Sub ServInitDefaultData( _
         ByRef refDEFAULT_CI_CURRENCY_TYPE_VALUE_RMB As Integer, _
         ByRef refDEFAULT_CI_VALUE_WARE_BOM_TYPE_NONE As Integer, _
+        ByRef refDEFAULT_CI_TEXT_CLIENT_LEVEL_DEFAULT As Integer, _
         ByRef refRegisterVersionLevelString As String _
         )
 
@@ -59,6 +60,18 @@ Public Class ServiceTK
                 True)
 
         MyPosXService.Decls.DEFAULT_CI_VALUE_WARE_BOM_TYPE_NONE = refDEFAULT_CI_VALUE_WARE_BOM_TYPE_NONE
+
+
+
+        MyPosXService.Decls.DEFAULT_CI_VALUE_CLIENT_LEVEL_DEFAULT = _
+            MyPosXService.Facade.OpSysConfig.CreateCommonItem( _
+                Guid.NewGuid.ToString, _
+                MyPosXAuto.Decls.CICNAME_CLIENT_LEVEL, _
+                MyPosXService.Decls.DEFAULT_CI_TEXT_CLIENT_LEVEL_DEFAULT, _
+                String.Empty, _
+                True)
+
+        MyPosXService.Decls.DEFAULT_CI_VALUE_CLIENT_LEVEL_DEFAULT = refDEFAULT_CI_TEXT_CLIENT_LEVEL_DEFAULT
 
 
         '=================================================================================================================
