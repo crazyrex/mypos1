@@ -412,7 +412,7 @@ Namespace Business
                         wareRow.WARE_NAME, _
                         wareRow.WARE_ID, _
                         String.Empty)
-                rootComponentRow.ROW_REMARK = "ROOT_WARE"
+                rootComponentRow.ROW_REMARK = MyPosXService.Decls.ROW_REMARK_ICON_ROOT_WARE
                 Me._manifest.TreeList_Component.DataSource = Me._manifest.SVFT_BINDING_COMPONENT_LIST
 
                 Dim sysAttribute1 = SysInfo.ReadShareSysInfo(MyPosXService.Decls.SVN_CUSTOM_ATTRIBUTE1)
@@ -613,7 +613,7 @@ Namespace Business
                         wareRow.WARE_NAME, _
                         wareRow.WARE_ID, _
                         String.Empty)
-                rootComponentRow.ROW_REMARK = "ROOT_WARE"
+                rootComponentRow.ROW_REMARK = MyPosXService.Decls.ROW_REMARK_ICON_ROOT_WARE
 
                 Dim componentCondition As New MyPosXAuto.Facade.AfBizConfig.ConditionOfS_MP_BOM_COMPONENT(XL.DB.Utils.Condition.LogicOperators.Logic_And)
                 componentCondition.Add(MyPosXAuto.Facade.AfBizConfig.S_MP_BOM_COMPONENTColumns.COMPOSING_WAREColumn, "=", wareRow.WARE_ID)
@@ -636,7 +636,7 @@ Namespace Business
                 'End If
                 For Each bindingRow As MyPosXAuto.FTs.FT_S_MP_BOM_COMPONENTRow In Me._manifest.SVFT_BINDING_COMPONENT_LIST
                     If bindingRow.COMPONENT_ID <> Me._manifest.SV_EDITING_WARE_ID Then
-                        bindingRow.ROW_REMARK = "COMPONENT"
+                        bindingRow.ROW_REMARK = MyPosXService.Decls.ROW_REMARK_ICON_COMPONENT
                     End If
                 Next
                 Me._manifest.ShowStatusMessage(StatusMessageIcon.Progressing, MyPosXService.Decls.MSG_STATUS_0028)
@@ -856,7 +856,7 @@ Namespace Business
                             Me._manifest.SV_EDITING_WARE_ID, _
                             optionRow.COMPONENT_ID)
 
-                    overviewRow.ROW_REMARK = "OPTION"
+                    overviewRow.ROW_REMARK = MyPosXService.Decls.ROW_REMARK_ROOT_OPTION
 
                 Next
 

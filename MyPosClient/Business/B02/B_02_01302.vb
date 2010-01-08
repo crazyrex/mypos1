@@ -666,13 +666,68 @@ Namespace Business
             Try
 
 
+                Me._manifest.TreeList_OverViewList.DataSource = Nothing
+
+                Dim expandingRows As New Queue(Of MyPosXAuto.FTs.FT_S_MP_BOM_COMPONENTRow)
+                Dim bindingRow As MyPosXAuto.FTs.FT_S_MP_BOM_COMPONENTRow
+                Me._manifest.SVFT_BACKEND_QUOTATION_WARE_LIST.Clear()
+
+                Dim wareRowSEntity As New MyPosXAuto.FTs.FT_M_MP_WARERowSEntity
+                For Each quotationWareRow As MyPosXAuto.FTs.FT_T_MP_QUOTATION_WARE_DTLRow In Me._manifest.SVFT_BACKEND_QUOTATION_WARE_LIST
+                    bindingRow = Me._manifest.SVFT_BINDING_COMPONENT_LIST.NewS_MP_BOM_COMPONENTRow()
+                    Me._manifest.SVFT_BINDING_COMPONENT_LIST.AddS_MP_BOM_COMPONENTRow(bindingRow)
+                    bindingRow.COMPONENT_ID = quotationWareRow.WARE_ID
+                    bindingRow.ROW_REMARK = MyPosXService.Decls.ROW_REMARK_ICON_ROOT_WARE
+
+                    MyPosXAuto.Facade.AfBizMaster.FillM_MP_WARERowSEntity(wareRowSEntity, quotationWareRow.WARE_ID)
+                    bindingRow.COMPONENT_NAME = wareRowSEntity.WARE_NAME
+
+                    expandingRows.Enqueue(bindingRow)
+                Next
+
+                Dim componentList As New MyPosXAuto.FTs.FT_S_MP_BOM_COMPONENT
+                Dim componentRow As MyPosXAuto.FTs.FT_S_MP_BOM_COMPONENTRow
+                Dim componentCondition As New MyPosXAuto.Facade.AfBizConfig.ConditionOfS_MP_BOM_COMPONENT(XL.DB.Utils.Condition.LogicOperators.Logic_And)
+
+                Dim optionCondition As New MyPosXAuto.Facade.AfBizConfig.ConditionOfS_MP_BOM_COMP_WARE_OPT(XL.DB.Utils.Condition.LogicOperators.Logic_And)
+                Dim optionIDs As New ArrayList
+                Dim expandingRow As MyPosXAuto.FTs.FT_S_MP_BOM_COMPONENTRow
+                Do While expandingRows.Count > 0
+                    expandingRow = expandingRows.Dequeue
+
+                    If expandingRow.ROW_REMARK = MyPosXService.Decls.ROW_REMARK_ICON_ROOT_WARE Then
+
+                    ElseIf expandingRow.ROW_REMARK = MyPosXService.Decls.ROW_REMARK_ROOT_OPTION Then
+
+                        componentCondition.Clear()
+                        componentCondition.Add(MyPosXAuto.Facade.AfBizConfig.S_MP_BOM_COMPONENTColumns.COMPOSING_WAREColumn, "=", expandingRow.COMPONENT_ID)
+                        MyPosXAuto.Facade.AfBizConfig.FillFT_S_MP_BOM_COMPONENT(componentCondition, componentList)
+
+                        For Each componentRow In componentList
+                            bindingRow = Me._manifest.SVFT_BINDING_COMPONENT_LIST.NewS_MP_BOM_COMPONENTRow
+                            Me._manifest.SVFT_BINDING_COMPONENT_LIST.AddS_MP_BOM_COMPONENTRow(bindingRow)
+                            bindingRow.CloneDataRow(componentRow)
+                            bindingRow.PARENT_COMPONENT = expandingRow.COMPONENT_ID
+                            expandingRows.Enqueue(bindingRow)
+                        Next
+                    Else
+                        'ROW_REMARK_ICON_COMPONENT
+                        optionCondition.Clear()
+                        optionCondition.Add(MyPosXAuto.Facade.AfBizConfig.S_MP_BOM_COMP_WARE_OPTColumns.COMPONENT_IDColumn, "=", expandingRow.COMPONENT_ID)
+                        optionIDs = MyPosXAuto.Facade.AfBizConfig.GetS_MP_BOM_COMP_WARE_OPT_CVListDistinct(optionCondition, MyPosXAuto.Facade.AfBizConfig.S_MP_BOM_COMP_WARE_OPTColumns.OPTION_IDColumn)
+
+
+                    End If
+                Loop
                 'Dim servResult As String = _
-                '    Me._service.ServUpdateBindingList()
+                '    Me._service.ServUpdateBindingList( _
+                '        Me._ma)
 
                 'If servResult.Length > 0 Then
-                '    Return servResult        
-                'End If                       
+                '    Return servResult
+                'End If
 
+                Me._manifest.TreeList_OverViewList.DataSource = Me._manifest.SVFT_BINDING_COMPONENT_LIST
             Catch ex As XL.Common.Utils.XLException
 
                 Dim logContentBuilder As New LineStrBuilder
