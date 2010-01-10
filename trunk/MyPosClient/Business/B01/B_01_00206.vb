@@ -680,15 +680,56 @@ Namespace Business
             Try
 
 
-                Dim servResult As String = _
-                    Me._service.ServAddOptions( _
-                        Me._manifest.SVFR_SELECTING_COMPONENT_ROW.COMPONENT_ID, _
-                        CommTK.ALToStr(Me._manifest.SV_ADDING_WARE_IDS), _
-                        Me._manifest.SVFT_BINDING_OPTION_LIST)
 
-                If servResult.Length > 0 Then
-                    Return servResult
-                End If
+                Dim optionRow As MyPosXAuto.FTs.FT_XV_S_MP_BOM_COMP_WARE_OPTRow
+                Dim componentRow = MyPosXAuto.Facade.AfBizConfig.GetS_MP_BOM_COMPONENTRow(Me._manifest.SVFR_SELECTING_COMPONENT_ROW.COMPONENT_ID)
+
+                Dim existingWareIDs As New List(Of String)
+                For Each optionRow In Me._manifest.SVFT_BINDING_OPTION_LIST
+                    existingWareIDs.Add(optionRow.WARE_ID)
+                Next
+
+                Dim wareRow As MyPosXAuto.FTs.FT_M_MP_WARERow
+                Dim optionCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_S_MP_BOM_COMP_WARE_OPT(XL.DB.Utils.Condition.LogicOperators.Logic_And)
+
+                For Each addingWareID As String In Me._manifest.SV_ADDING_WARE_IDS
+
+                    If existingWareIDs.Contains(addingWareID) = True Then
+                        Continue For
+                    End If
+
+                    wareRow = MyPosXAuto.Facade.AfBizMaster.GetM_MP_WARERow(addingWareID)
+                    If IsNothing(wareRow) = True Then
+                        Continue For
+                    End If
+
+                    optionCondition.Clear()
+                    optionCondition.Add(MyPosXAuto.Facade.AfXV.XV_S_MP_BOM_COMP_WARE_OPTColumns.WARE_IDColumn, "=", addingWareID)
+
+                    If Me._manifest.SVFT_BINDING_OPTION_LIST.FindRowsByCondition(optionCondition).Count > 0 Then
+                        Continue For
+                    End If
+
+                    optionRow = Me._manifest.SVFT_BINDING_OPTION_LIST.NewXV_S_MP_BOM_COMP_WARE_OPTRow()
+                    Me._manifest.SVFT_BINDING_OPTION_LIST.AddXV_S_MP_BOM_COMP_WARE_OPTRow(optionRow)
+                    optionRow.COMPONENT_ID = Me._manifest.SVFR_SELECTING_COMPONENT_ROW.COMPONENT_ID
+                    optionRow.OPTION_ID = Guid.NewGuid.ToString
+                    optionRow.WARE_ID = wareRow.WARE_ID
+                    optionRow.WARE_CODE = wareRow.WARE_CODE
+                    optionRow.WARE_NAME = wareRow.WARE_NAME
+                    optionRow.ROW_HIGHLIGHT = MyPosXService.Decls.ROW_HIGHLIGHT_MODIFIED
+
+                Next
+
+                'Dim servResult As String = _
+                '    Me._service.ServAddOptions( _
+                '        Me._manifest.SVFR_SELECTING_COMPONENT_ROW.COMPONENT_ID, _
+                '        CommTK.ALToStr(Me._manifest.SV_ADDING_WARE_IDS), _
+                '        Me._manifest.SVFT_BINDING_OPTION_LIST)
+
+                'If servResult.Length > 0 Then
+                '    Return servResult
+                'End If
 
                 Me._manifest.GridControl_Ware.DataSource = Me._manifest.SVFT_BINDING_OPTION_LIST
 
@@ -773,7 +814,7 @@ Namespace Business
 
 
             Try
-                If IsNothing(Me._manifest.SVFR_SELECTING_COMPONENT_ROW) = False Then
+                If IsNothing(Me._manifest.SVFR_SELECTING_COMPONENT_ROW) = True Then
                     'Me._manifest.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0025)
                     Return String.Empty
                 End If

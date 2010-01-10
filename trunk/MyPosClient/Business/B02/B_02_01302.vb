@@ -74,7 +74,7 @@ Namespace Business
             LoadList
             AddWare
             UpdateBindingList
-            BizUtld0003
+            AddWareDetails
             BizUtld0004
             BizUtld0005
             BizUtld0006
@@ -208,12 +208,12 @@ Namespace Business
                     '-------------------------------------------------------------------
                     functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoUpdateBindingList)
 
-                Case Affairs.BizUtld0003
+                Case Affairs.AddWareDetails
 
                     '
                     '取到处理函数的结果，传入返回给Manifest的AgentResponse包
                     '-------------------------------------------------------------------
-                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoBizUtld0003)
+                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoAddWareDetails)
 
                 Case Affairs.BizUtld0004
 
@@ -667,10 +667,10 @@ Namespace Business
 
 
                 Me._manifest.TreeList_OverViewList.DataSource = Nothing
+                Me._manifest.SVFT_BINDING_COMPONENT_LIST.Clear()
 
                 Dim expandingRows As New Queue(Of MyPosXAuto.FTs.FT_S_MP_BOM_COMPONENTRow)
                 Dim bindingRow As MyPosXAuto.FTs.FT_S_MP_BOM_COMPONENTRow
-                Me._manifest.SVFT_BACKEND_QUOTATION_WARE_LIST.Clear()
 
                 Dim wareRowSEntity As New MyPosXAuto.FTs.FT_M_MP_WARERowSEntity
                 Dim quotationWareRow As MyPosXAuto.FTs.FT_T_MP_QUOTATION_WARE_DTLRow
@@ -758,6 +758,9 @@ Namespace Business
                         Next
                     End If
                 Loop
+
+                Me._manifest.TreeList_OverViewList.DataSource = Me._manifest.SVFT_BINDING_COMPONENT_LIST
+
                 'Dim servResult As String = _
                 '    Me._service.ServUpdateBindingList( _
                 '        Me._ma)
@@ -798,14 +801,57 @@ Namespace Business
         '''
         '''
         '''-------------------------------------------------------------------
-        Private Function DoBizUtld0003() As String
+        Private Function DoAddWareDetails() As String
 
 
             Try
+                'Dim wareCondition As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_MP_WARE(XL.DB.Utils.Condition.LogicOperators.Logic_And)
+                Dim wareRowSEntity As New MyPosXAuto.FTs.FT_M_MP_WARERowSEntity
 
+                For Each wareID As String In Me._manifest.SV_ADDING_WARE_IDS
+
+                    'wareCondition.Clear()
+                    'wareCondition.Add(MyPosXAuto.Facade.AfBizMaster.M_MP_WAREColumns.WARE_IDColumn, "=", Me._manifest.ButtonEdit_WareCode.Text)
+
+                    MyPosXAuto.Facade.AfBizMaster.FillM_MP_WARERowSEntity(wareRowSEntity, wareID)
+
+                    If wareRowSEntity.IsNull = True Then
+                        WinTK.PlayWavSound("Error.wmv")
+                        Me._manifest.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0023)
+                        Return String.Empty
+                    End If
+
+                    Me._manifest.ButtonEdit_WareCode.Text = wareRowSEntity.WARE_CODE
+                    Me._manifest.Label_WareID.Text = wareRowSEntity.WARE_ID
+
+                    Dim priceNoDiscount As Decimal
+                    Dim origionPrice = MyPosXService.Facade.OpBizMaster.GetPosWarePrice( _
+                        wareRowSEntity.WARE_ID, _
+                        Utils.Decls.CURRENT_POS_ROW.POS_ID, _
+                        priceNoDiscount)
+
+                    If origionPrice < 0 Then
+                        Me._manifest.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0006)
+                        Return String.Empty
+                    End If
+
+
+                    Dim dtlRow = Me._manifest.SVFT_BACKEND_QUOTATION_WARE_LIST.NewT_MP_QUOTATION_WARE_DTLRow
+                    Me._manifest.SVFT_BACKEND_QUOTATION_WARE_LIST.AddT_MP_QUOTATION_WARE_DTLRow(dtlRow)
+                    dtlRow.DETAIL_ID = Guid.NewGuid.ToString
+                    dtlRow.WARE_ID = wareRowSEntity.WARE_ID
+                    dtlRow.UNIT_PRICE = origionPrice
+                    dtlRow.UNIT_COST = _
+                        MyPosXService.Facade.OpBizMaster.GetPosWareCost( _
+                            dtlRow.WARE_ID, _
+                            Utils.Decls.CURRENT_POS_ROW.POS_ID)
+
+                    dtlRow.QUANTITY = 1
+
+                Next
 
                 'Dim servResult As String = _
-                '    Me._service.ServBizUtld0003()
+                '    Me._service.ServAddWareDetails()
 
                 'If servResult.Length > 0 Then
                 '    Return servResult        

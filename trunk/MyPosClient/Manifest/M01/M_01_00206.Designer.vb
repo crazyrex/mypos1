@@ -58,6 +58,7 @@ Namespace Manifest
             Dim CTag15 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag17 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Me.ToolStrip_Form = New System.Windows.Forms.ToolStrip
+            Me.ToolStripButton_Choose = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_Refresh = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_Close = New System.Windows.Forms.ToolStripButton
             Me.PanelControl_Filter = New DevExpress.XtraEditors.PanelControl
@@ -91,8 +92,6 @@ Namespace Manifest
             Me.RepositoryItemCheckEdit_Select = New DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
             Me.GridColumn_WareCode = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_CustomCode = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.RepositoryItemCalcEdit_MaxQty = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
-            Me.RepositoryItemCalcEdit_MinQty = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
             Me.GridColumn_WareName = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_Spec = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_Model = New DevExpress.XtraGrid.Columns.GridColumn
@@ -109,6 +108,8 @@ Namespace Manifest
             Me.RepositoryItemLookUpEdit_SupplierID = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
             Me.GridColumn_Remarks = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_RowHighlight = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.RepositoryItemCalcEdit_MinQty = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
+            Me.RepositoryItemCalcEdit_MaxQty = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
             Me.PanelControl2 = New DevExpress.XtraEditors.PanelControl
             Me.ToolStrip1 = New System.Windows.Forms.ToolStrip
             Me.ToolStripButton_AddOptions = New System.Windows.Forms.ToolStripButton
@@ -122,7 +123,6 @@ Namespace Manifest
             Me.TreeListColumn2 = New DevExpress.XtraTreeList.Columns.TreeListColumn
             Me.RepositoryItemTextEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemTextEdit
             Me.TreeListColumn3 = New DevExpress.XtraTreeList.Columns.TreeListColumn
-            Me.ToolStripButton_Choose = New System.Windows.Forms.ToolStripButton
             Me.ToolStrip_Form.SuspendLayout()
             CType(Me.PanelControl_Filter, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.PanelControl_Filter.SuspendLayout()
@@ -146,11 +146,11 @@ Namespace Manifest
             CType(Me.GridControl_Ware, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.GridView_Ware, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemCheckEdit_Select, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.RepositoryItemCalcEdit_MaxQty, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.RepositoryItemCalcEdit_MinQty, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemCalcEdit_UnitPrice, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemCalcEdit_UnitCost, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemLookUpEdit_SupplierID, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.RepositoryItemCalcEdit_MinQty, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.RepositoryItemCalcEdit_MaxQty, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.ToolStrip1.SuspendLayout()
             Me.XtraTabPage_OverView.SuspendLayout()
@@ -197,6 +197,13 @@ Namespace Manifest
             CTag1.ToolTip = ""
             CTag1.ValueType = XL.Common.ControlValueType.Character
             Me.ToolStrip_Form.Tag = CTag1
+            '
+            'ToolStripButton_Choose
+            '
+            Me.ToolStripButton_Choose.Name = "ToolStripButton_Choose"
+            Me.ToolStripButton_Choose.Size = New System.Drawing.Size(36, 22)
+            Me.ToolStripButton_Choose.Text = "选择"
+            Me.ToolStripButton_Choose.Visible = False
             '
             'ToolStripButton_Refresh
             '
@@ -791,18 +798,6 @@ Namespace Manifest
             Me.GridColumn_CustomCode.Visible = True
             Me.GridColumn_CustomCode.VisibleIndex = 2
             '
-            'RepositoryItemCalcEdit_MaxQty
-            '
-            Me.RepositoryItemCalcEdit_MaxQty.AutoHeight = False
-            Me.RepositoryItemCalcEdit_MaxQty.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-            Me.RepositoryItemCalcEdit_MaxQty.Name = "RepositoryItemCalcEdit_MaxQty"
-            '
-            'RepositoryItemCalcEdit_MinQty
-            '
-            Me.RepositoryItemCalcEdit_MinQty.AutoHeight = False
-            Me.RepositoryItemCalcEdit_MinQty.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-            Me.RepositoryItemCalcEdit_MinQty.Name = "RepositoryItemCalcEdit_MinQty"
-            '
             'GridColumn_WareName
             '
             Me.GridColumn_WareName.Caption = "货品名称"
@@ -947,6 +942,18 @@ Namespace Manifest
             Me.GridColumn_RowHighlight.Name = "GridColumn_RowHighlight"
             Me.GridColumn_RowHighlight.OptionsColumn.AllowFocus = False
             '
+            'RepositoryItemCalcEdit_MinQty
+            '
+            Me.RepositoryItemCalcEdit_MinQty.AutoHeight = False
+            Me.RepositoryItemCalcEdit_MinQty.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+            Me.RepositoryItemCalcEdit_MinQty.Name = "RepositoryItemCalcEdit_MinQty"
+            '
+            'RepositoryItemCalcEdit_MaxQty
+            '
+            Me.RepositoryItemCalcEdit_MaxQty.AutoHeight = False
+            Me.RepositoryItemCalcEdit_MaxQty.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+            Me.RepositoryItemCalcEdit_MaxQty.Name = "RepositoryItemCalcEdit_MaxQty"
+            '
             'PanelControl2
             '
             Me.PanelControl2.Appearance.BackColor = System.Drawing.Color.White
@@ -1090,6 +1097,8 @@ Namespace Manifest
             Me.TreeListColumn1.FieldName = "DSR_FT_ROW_REMARK"
             Me.TreeListColumn1.Name = "TreeListColumn1"
             Me.TreeListColumn1.OptionsColumn.AllowFocus = False
+            Me.TreeListColumn1.OptionsColumn.AllowSort = False
+            Me.TreeListColumn1.SortOrder = System.Windows.Forms.SortOrder.Descending
             Me.TreeListColumn1.Visible = True
             Me.TreeListColumn1.VisibleIndex = 0
             Me.TreeListColumn1.Width = 114
@@ -1107,10 +1116,11 @@ Namespace Manifest
             Me.TreeListColumn2.ColumnEdit = Me.RepositoryItemTextEdit1
             Me.TreeListColumn2.FieldName = "COMPONENT_NAME"
             Me.TreeListColumn2.Name = "TreeListColumn2"
-            Me.TreeListColumn2.OptionsColumn.AllowFocus = False
+            Me.TreeListColumn2.OptionsColumn.AllowSort = False
+            Me.TreeListColumn2.OptionsColumn.ReadOnly = True
             Me.TreeListColumn2.Visible = True
             Me.TreeListColumn2.VisibleIndex = 1
-            Me.TreeListColumn2.Width = 646
+            Me.TreeListColumn2.Width = 262
             '
             'RepositoryItemTextEdit1
             '
@@ -1122,13 +1132,7 @@ Namespace Manifest
             Me.TreeListColumn3.Caption = "高亮显示"
             Me.TreeListColumn3.FieldName = "DSR_FT_ROW_HIGHLIGHT"
             Me.TreeListColumn3.Name = "TreeListColumn3"
-            '
-            'ToolStripButton_Choose
-            '
-            Me.ToolStripButton_Choose.Name = "ToolStripButton_Choose"
-            Me.ToolStripButton_Choose.Size = New System.Drawing.Size(36, 22)
-            Me.ToolStripButton_Choose.Text = "选择"
-            Me.ToolStripButton_Choose.Visible = False
+            Me.TreeListColumn3.OptionsColumn.AllowSort = False
             '
             'M_01_00206
             '
@@ -1194,11 +1198,11 @@ Namespace Manifest
             CType(Me.GridControl_Ware, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.GridView_Ware, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemCheckEdit_Select, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.RepositoryItemCalcEdit_MaxQty, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.RepositoryItemCalcEdit_MinQty, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemCalcEdit_UnitPrice, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemCalcEdit_UnitCost, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemLookUpEdit_SupplierID, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.RepositoryItemCalcEdit_MinQty, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.RepositoryItemCalcEdit_MaxQty, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ToolStrip1.ResumeLayout(False)
             Me.ToolStrip1.PerformLayout()

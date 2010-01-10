@@ -45,6 +45,8 @@
             Dim StyleFormatCondition1 As DevExpress.XtraGrid.StyleFormatCondition = New DevExpress.XtraGrid.StyleFormatCondition
             Dim CTag6 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Me.ToolStrip_Form = New System.Windows.Forms.ToolStrip
+            Me.ToolStripButton_Add = New System.Windows.Forms.ToolStripButton
+            Me.ToolStripButton_Remove = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_Save = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_Close = New System.Windows.Forms.ToolStripButton
             Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl
@@ -57,8 +59,7 @@
             Me.GridColumn_WareCode = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_CustomCode = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_Quantity = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.RepositoryItemCalcEdit_MaxQty = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
-            Me.RepositoryItemCalcEdit_MinQty = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
+            Me.RepositoryItemCalcEdit_Quantity = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
             Me.GridColumn_WareName = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_Spec = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_Model = New DevExpress.XtraGrid.Columns.GridColumn
@@ -75,8 +76,7 @@
             Me.RepositoryItemLookUpEdit_SupplierID = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
             Me.GridColumn_Remarks = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_RowHighlight = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.ToolStripButton_Add = New System.Windows.Forms.ToolStripButton
-            Me.ToolStripButton_Remove = New System.Windows.Forms.ToolStripButton
+            Me.RepositoryItemCalcEdit_MinQty = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
             Me.ToolStrip_Form.SuspendLayout()
             CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.PanelControl1.SuspendLayout()
@@ -84,11 +84,11 @@
             CType(Me.GridControl_Ware, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.GridView_Ware, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemCheckEdit_Select, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.RepositoryItemCalcEdit_MaxQty, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.RepositoryItemCalcEdit_MinQty, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.RepositoryItemCalcEdit_Quantity, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemCalcEdit_UnitPrice, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemCalcEdit_UnitCost, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemLookUpEdit_SupplierID, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.RepositoryItemCalcEdit_MinQty, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'DefaultLookAndFeel_Form
@@ -129,6 +129,18 @@
             CTag1.ToolTip = ""
             CTag1.ValueType = XL.Common.ControlValueType.Character
             Me.ToolStrip_Form.Tag = CTag1
+            '
+            'ToolStripButton_Add
+            '
+            Me.ToolStripButton_Add.Name = "ToolStripButton_Add"
+            Me.ToolStripButton_Add.Size = New System.Drawing.Size(36, 22)
+            Me.ToolStripButton_Add.Text = "添加"
+            '
+            'ToolStripButton_Remove
+            '
+            Me.ToolStripButton_Remove.Name = "ToolStripButton_Remove"
+            Me.ToolStripButton_Remove.Size = New System.Drawing.Size(36, 22)
+            Me.ToolStripButton_Remove.Text = "去除"
             '
             'ToolStripButton_Save
             '
@@ -276,7 +288,7 @@
             Me.GridControl_Ware.Location = New System.Drawing.Point(0, 78)
             Me.GridControl_Ware.MainView = Me.GridView_Ware
             Me.GridControl_Ware.Name = "GridControl_Ware"
-            Me.GridControl_Ware.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemCheckEdit_Select, Me.RepositoryItemLookUpEdit_SupplierID, Me.RepositoryItemCalcEdit_UnitPrice, Me.RepositoryItemCalcEdit_UnitCost, Me.RepositoryItemCalcEdit_MinQty, Me.RepositoryItemCalcEdit_MaxQty})
+            Me.GridControl_Ware.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemCheckEdit_Select, Me.RepositoryItemLookUpEdit_SupplierID, Me.RepositoryItemCalcEdit_UnitPrice, Me.RepositoryItemCalcEdit_UnitCost, Me.RepositoryItemCalcEdit_MinQty, Me.RepositoryItemCalcEdit_Quantity})
             Me.GridControl_Ware.Size = New System.Drawing.Size(700, 422)
             Me.GridControl_Ware.TabIndex = 10002
             Me.GridControl_Ware.TabStop = False
@@ -321,7 +333,7 @@
             Me.GridColumn_WareCode.OptionsColumn.AllowFocus = False
             Me.GridColumn_WareCode.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Count
             Me.GridColumn_WareCode.Visible = True
-            Me.GridColumn_WareCode.VisibleIndex = 1
+            Me.GridColumn_WareCode.VisibleIndex = 2
             '
             'GridColumn_CustomCode
             '
@@ -330,28 +342,22 @@
             Me.GridColumn_CustomCode.Name = "GridColumn_CustomCode"
             Me.GridColumn_CustomCode.OptionsColumn.AllowFocus = False
             Me.GridColumn_CustomCode.Visible = True
-            Me.GridColumn_CustomCode.VisibleIndex = 2
+            Me.GridColumn_CustomCode.VisibleIndex = 3
             '
             'GridColumn_Quantity
             '
             Me.GridColumn_Quantity.Caption = "数量"
-            Me.GridColumn_Quantity.ColumnEdit = Me.RepositoryItemCalcEdit_MaxQty
+            Me.GridColumn_Quantity.ColumnEdit = Me.RepositoryItemCalcEdit_Quantity
             Me.GridColumn_Quantity.FieldName = "QUANTITY"
             Me.GridColumn_Quantity.Name = "GridColumn_Quantity"
             Me.GridColumn_Quantity.Visible = True
-            Me.GridColumn_Quantity.VisibleIndex = 3
+            Me.GridColumn_Quantity.VisibleIndex = 1
             '
-            'RepositoryItemCalcEdit_MaxQty
+            'RepositoryItemCalcEdit_Quantity
             '
-            Me.RepositoryItemCalcEdit_MaxQty.AutoHeight = False
-            Me.RepositoryItemCalcEdit_MaxQty.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-            Me.RepositoryItemCalcEdit_MaxQty.Name = "RepositoryItemCalcEdit_MaxQty"
-            '
-            'RepositoryItemCalcEdit_MinQty
-            '
-            Me.RepositoryItemCalcEdit_MinQty.AutoHeight = False
-            Me.RepositoryItemCalcEdit_MinQty.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-            Me.RepositoryItemCalcEdit_MinQty.Name = "RepositoryItemCalcEdit_MinQty"
+            Me.RepositoryItemCalcEdit_Quantity.AutoHeight = False
+            Me.RepositoryItemCalcEdit_Quantity.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+            Me.RepositoryItemCalcEdit_Quantity.Name = "RepositoryItemCalcEdit_Quantity"
             '
             'GridColumn_WareName
             '
@@ -497,17 +503,11 @@
             Me.GridColumn_RowHighlight.Name = "GridColumn_RowHighlight"
             Me.GridColumn_RowHighlight.OptionsColumn.AllowFocus = False
             '
-            'ToolStripButton_Add
+            'RepositoryItemCalcEdit_MinQty
             '
-            Me.ToolStripButton_Add.Name = "ToolStripButton_Add"
-            Me.ToolStripButton_Add.Size = New System.Drawing.Size(36, 22)
-            Me.ToolStripButton_Add.Text = "添加"
-            '
-            'ToolStripButton_Remove
-            '
-            Me.ToolStripButton_Remove.Name = "ToolStripButton_Remove"
-            Me.ToolStripButton_Remove.Size = New System.Drawing.Size(36, 22)
-            Me.ToolStripButton_Remove.Text = "去除"
+            Me.RepositoryItemCalcEdit_MinQty.AutoHeight = False
+            Me.RepositoryItemCalcEdit_MinQty.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+            Me.RepositoryItemCalcEdit_MinQty.Name = "RepositoryItemCalcEdit_MinQty"
             '
             'M_02_01304
             '
@@ -554,11 +554,11 @@
             CType(Me.GridControl_Ware, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.GridView_Ware, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemCheckEdit_Select, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.RepositoryItemCalcEdit_MaxQty, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.RepositoryItemCalcEdit_MinQty, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.RepositoryItemCalcEdit_Quantity, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemCalcEdit_UnitPrice, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemCalcEdit_UnitCost, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemLookUpEdit_SupplierID, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.RepositoryItemCalcEdit_MinQty, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -573,7 +573,7 @@
         Friend WithEvents GridColumn_WareCode As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents GridColumn_CustomCode As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents GridColumn_Quantity As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents RepositoryItemCalcEdit_MaxQty As DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
+        Friend WithEvents RepositoryItemCalcEdit_Quantity As DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
         Friend WithEvents RepositoryItemCalcEdit_MinQty As DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
         Friend WithEvents GridColumn_WareName As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents GridColumn_Spec As DevExpress.XtraGrid.Columns.GridColumn

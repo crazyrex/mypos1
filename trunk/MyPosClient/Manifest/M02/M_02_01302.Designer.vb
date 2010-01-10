@@ -36,6 +36,7 @@
         Friend WithEvents ToolStrip_Form As System.Windows.Forms.ToolStrip
         Friend WithEvents ToolStripButton_Close As System.Windows.Forms.ToolStripButton
         <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
+            Me.components = New System.ComponentModel.Container
             Dim CTag1 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag2 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag3 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
@@ -53,8 +54,10 @@
             Dim CTag15 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag17 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Dim CTag16 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(M_02_01302))
             Dim CTag18 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Me.ToolStrip_Form = New System.Windows.Forms.ToolStrip
+            Me.ToolStripButton_RemoveWare = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_EditBom = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_Close = New System.Windows.Forms.ToolStripButton
             Me.TextEdit_TurnoverCode = New DevExpress.XtraEditors.TextEdit
@@ -77,6 +80,7 @@
             Me.TreeList_OverViewList = New DevExpress.XtraTreeList.TreeList
             Me.TreeListColumn1 = New DevExpress.XtraTreeList.Columns.TreeListColumn
             Me.RepositoryItemImageComboBox1 = New DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox
+            Me.ImageCollection_TreeIcon = New DevExpress.Utils.ImageCollection(Me.components)
             Me.TreeListColumn2 = New DevExpress.XtraTreeList.Columns.TreeListColumn
             Me.RepositoryItemTextEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemTextEdit
             Me.TreeListColumn3 = New DevExpress.XtraTreeList.Columns.TreeListColumn
@@ -95,6 +99,7 @@
             Me.GroupControl1.SuspendLayout()
             CType(Me.TreeList_OverViewList, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemImageComboBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.ImageCollection_TreeIcon, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.RepositoryItemTextEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
@@ -107,7 +112,7 @@
             '
             'ToolStrip_Form
             '
-            Me.ToolStrip_Form.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton_EditBom, Me.ToolStripButton_Close})
+            Me.ToolStrip_Form.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton_RemoveWare, Me.ToolStripButton_EditBom, Me.ToolStripButton_Close})
             Me.ToolStrip_Form.Location = New System.Drawing.Point(0, 0)
             Me.ToolStrip_Form.Name = "ToolStrip_Form"
             Me.ToolStrip_Form.Size = New System.Drawing.Size(700, 25)
@@ -124,7 +129,7 @@
             CTag1.DisplayLinkTable = Nothing
             CTag1.FlexgridEditItem = ""
             CTag1.FormReadingMode = XL.Win.Component.BaseForm.FormReadingMode.NoReading
-            CTag1.FormStatus = XL.Win.Component.BaseForm.FormStatuses.BeforeLoading
+            CTag1.FormStatus = XL.Win.Component.BaseForm.FormStatuses.Loading_IA_AfterFormLoaded
             CTag1.IsButtonCustomed = False
             CTag1.IsTextValid = True
             CTag1.KeyValueAbsentable = False
@@ -137,11 +142,17 @@
             CTag1.ValueType = XL.Common.ControlValueType.Character
             Me.ToolStrip_Form.Tag = CTag1
             '
+            'ToolStripButton_RemoveWare
+            '
+            Me.ToolStripButton_RemoveWare.Name = "ToolStripButton_RemoveWare"
+            Me.ToolStripButton_RemoveWare.Size = New System.Drawing.Size(36, 22)
+            Me.ToolStripButton_RemoveWare.Text = "去除"
+            '
             'ToolStripButton_EditBom
             '
             Me.ToolStripButton_EditBom.Name = "ToolStripButton_EditBom"
-            Me.ToolStripButton_EditBom.Size = New System.Drawing.Size(63, 22)
-            Me.ToolStripButton_EditBom.Text = "编辑Bom"
+            Me.ToolStripButton_EditBom.Size = New System.Drawing.Size(87, 22)
+            Me.ToolStripButton_EditBom.Text = "编辑Bom选项"
             '
             'ToolStripButton_Close
             '
@@ -770,6 +781,11 @@
             '
             Me.RepositoryItemImageComboBox1.Items.AddRange(New DevExpress.XtraEditors.Controls.ImageComboBoxItem() {New DevExpress.XtraEditors.Controls.ImageComboBoxItem("", "ROOT_WARE", 0), New DevExpress.XtraEditors.Controls.ImageComboBoxItem("", "COMPONENT", 1), New DevExpress.XtraEditors.Controls.ImageComboBoxItem("", "OPTION", 2)})
             Me.RepositoryItemImageComboBox1.Name = "RepositoryItemImageComboBox1"
+            Me.RepositoryItemImageComboBox1.SmallImages = Me.ImageCollection_TreeIcon
+            '
+            'ImageCollection_TreeIcon
+            '
+            Me.ImageCollection_TreeIcon.ImageStream = CType(resources.GetObject("ImageCollection_TreeIcon.ImageStream"), DevExpress.Utils.ImageCollectionStreamer)
             '
             'TreeListColumn2
             '
@@ -847,6 +863,7 @@
             Me.GroupControl1.ResumeLayout(False)
             CType(Me.TreeList_OverViewList, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemImageComboBox1, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.ImageCollection_TreeIcon, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.RepositoryItemTextEdit1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
@@ -876,6 +893,8 @@
         Friend WithEvents TreeListColumn2 As DevExpress.XtraTreeList.Columns.TreeListColumn
         Friend WithEvents RepositoryItemTextEdit1 As DevExpress.XtraEditors.Repository.RepositoryItemTextEdit
         Friend WithEvents TreeListColumn3 As DevExpress.XtraTreeList.Columns.TreeListColumn
+        Friend WithEvents ToolStripButton_RemoveWare As System.Windows.Forms.ToolStripButton
+        Friend WithEvents ImageCollection_TreeIcon As DevExpress.Utils.ImageCollection
 
 #End Region
 
