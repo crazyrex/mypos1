@@ -57,7 +57,7 @@
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(M_02_01302))
             Dim CTag18 As XL.Win.Utils.CTag = New XL.Win.Utils.CTag
             Me.ToolStrip_Form = New System.Windows.Forms.ToolStrip
-            Me.ToolStripButton_RemoveWare = New System.Windows.Forms.ToolStripButton
+            Me.ToolStripButton_RemoveWareDtl = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_EditBom = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_Close = New System.Windows.Forms.ToolStripButton
             Me.TextEdit_TurnoverCode = New DevExpress.XtraEditors.TextEdit
@@ -112,7 +112,7 @@
             '
             'ToolStrip_Form
             '
-            Me.ToolStrip_Form.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton_RemoveWare, Me.ToolStripButton_EditBom, Me.ToolStripButton_Close})
+            Me.ToolStrip_Form.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton_RemoveWareDtl, Me.ToolStripButton_EditBom, Me.ToolStripButton_Close})
             Me.ToolStrip_Form.Location = New System.Drawing.Point(0, 0)
             Me.ToolStrip_Form.Name = "ToolStrip_Form"
             Me.ToolStrip_Form.Size = New System.Drawing.Size(700, 25)
@@ -144,9 +144,9 @@
             '
             'ToolStripButton_RemoveWare
             '
-            Me.ToolStripButton_RemoveWare.Name = "ToolStripButton_RemoveWare"
-            Me.ToolStripButton_RemoveWare.Size = New System.Drawing.Size(36, 22)
-            Me.ToolStripButton_RemoveWare.Text = "去除"
+            Me.ToolStripButton_RemoveWareDtl.Name = "ToolStripButton_RemoveWare"
+            Me.ToolStripButton_RemoveWareDtl.Size = New System.Drawing.Size(36, 22)
+            Me.ToolStripButton_RemoveWareDtl.Text = "去除"
             '
             'ToolStripButton_EditBom
             '
@@ -893,7 +893,7 @@
         Friend WithEvents TreeListColumn2 As DevExpress.XtraTreeList.Columns.TreeListColumn
         Friend WithEvents RepositoryItemTextEdit1 As DevExpress.XtraEditors.Repository.RepositoryItemTextEdit
         Friend WithEvents TreeListColumn3 As DevExpress.XtraTreeList.Columns.TreeListColumn
-        Friend WithEvents ToolStripButton_RemoveWare As System.Windows.Forms.ToolStripButton
+        Friend WithEvents ToolStripButton_RemoveWareDtl As System.Windows.Forms.ToolStripButton
         Friend WithEvents ImageCollection_TreeIcon As DevExpress.Utils.ImageCollection
 
 #End Region

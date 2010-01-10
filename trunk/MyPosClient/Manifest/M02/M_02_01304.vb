@@ -32,7 +32,8 @@ Namespace Manifest
         'Shared Value, 用于与其它窗体交换数值的情况下, 需要自己根据需要更改命名
         '原则上所有UTLD的变量不能出现在成品中, 在确定不需要的情况下应删除UTLD
         '-------------------------------------------------------------------
-        Public SV_UTLD_0001 As String ="SV_UTLD_0001"
+        Public SV_EDITING_COMPONENT_ID As String = String.Empty
+        Public SV_OPTION_QUANTITIES As New Dictionary(Of String, Decimal)
         Public SV_UTLD_0002 As String ="SV_UTLD_0002"
         'Public SV_UTLD_0003 As String ="SV_UTLD_0003"
         'Public SV_UTLD_0004 As String ="SV_UTLD_0004"
@@ -45,6 +46,7 @@ Namespace Manifest
         'Public SVLM_UTLD_0002 As String ="SVLM_UTLD_0002"
 
         '数据列表变量
+        Public SVFT_EDITING_OPTION_LIST As New MyPosXAuto.FTs.FT_XV_T_MP_QUOT_WARE_BOM_DTL
         'Public SVFT_BINDING_XXX_LIST As New MyPosXAuto.FTs.FT_
         'Public SVFT_CHOOSE_XXX_LIST As New MyPosXAuto.FTs.FT_
 
@@ -164,7 +166,7 @@ Namespace Manifest
 
             Me._bizAgent.DoRequest(Business.B_02_01304.Affairs.InitDisplay, False)
 
-            'Me.GridControl_.DataSource = Me.SVFT_BINDING_
+            Me.GridControl_Ware.DataSource = Me.SVFT_EDITING_OPTION_LIST
             'Me.LookupEdit_.Properties.DataSource = Me.SVFT_CHOOSE_
 
         End Sub
@@ -302,7 +304,7 @@ Namespace Manifest
         Public Overrides Sub UpdateDisplay()
 
             'Me._bizAgent.DoRequest(Business.B_0X_00XXX.Affairs.LoadInfo, False)
-            'Me._bizAgent.DoRequest(Business.B_0X_00XXX.Affairs.LoadList, False)
+            Me._bizAgent.DoRequest(Business.B_02_01304.Affairs.LoadList, False)
 
         End Sub
 
@@ -383,6 +385,12 @@ Namespace Manifest
         End Sub
 
 
+
+        Private Sub RepositoryItemCalcEdit_Quantity_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemCalcEdit_Quantity.EditValueChanged
+            Dim calcEdit As DevExpress.XtraEditors.CalcEdit = CType(sender, DevExpress.XtraEditors.CalcEdit)
+            Me.SVFR_SELECTING_ROW.APPLY_QUANTITY = calcEdit.Value
+
+        End Sub
         'Private Sub RepositoryItemCheckEdit_Select_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemCheckEdit_Select.EditValueChanged
 
         '    Dim checkEdit As DevExpress.XtraEditors.CheckEdit = CType(sender, DevExpress.XtraEditors.CheckEdit)                                                                 
@@ -427,7 +435,8 @@ Namespace Manifest
 
         Private Sub TbActionSave()
 
-            Me.SaveInfo(True)
+            Me.ResponseToParentForm()
+            Me.CloseForm()
 
         End Sub
 

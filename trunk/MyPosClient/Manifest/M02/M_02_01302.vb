@@ -129,7 +129,7 @@ Namespace Manifest
 
             Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Close, AddressOf Me.TbActionClose)
             Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_EditBom, AddressOf Me.TbActionEditBom)
-            'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_AddWareDetail, AddressOf Me.TbActionAddWareDetail)
+            Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_RemoveWareDtl, AddressOf Me.TbActionRemoveWareDtl)
             'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0003, AddressOf Me.TbActionUtld0003)
             'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0004, AddressOf Me.TbActionUtld0004)
             'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0005, AddressOf Me.TbActionUtld0005)
@@ -260,9 +260,36 @@ Namespace Manifest
                     Next
                     Me._bizAgent.DoRequest(Business.B_02_01302.Affairs.AddWareDetails, False)
 
-                Case "ResponseTitleName3"
+                Case "TbActionEditBom"
+                    Dim inputForm = TryCast(popupForm, M_02_01304)
+                    Dim dtlOption As New MyPosXAuto.Facade.AfBizManage.ConditionOfT_MP_QUOT_WARE_BOM_DTL(XL.DB.Utils.Condition.LogicOperators.Logic_And)
+                    Dim dtlRow As MyPosXAuto.FTs.FT_T_MP_QUOT_WARE_BOM_DTLRow
+                    Dim involvedWareIDs As New ArrayList
 
+                    For Each setupRow As MyPosXAuto.FTs.FT_XV_T_MP_QUOT_WARE_BOM_DTLRow In inputForm.SVFT_EDITING_OPTION_LIST
 
+                        If setupRow.APPLY_QUANTITY <= 0 Then
+                            Continue For
+                        End If
+
+                        involvedWareIDs.Add(setupRow)
+                        dtlOption.Clear()
+                        dtlOption.Add(MyPosXAuto.Facade.AfBizManage.T_MP_QUOT_WARE_BOM_DTLColumns.COMPONENT_IDColumn, "=", inputForm.SV_EDITING_COMPONENT_ID)
+                        dtlOption.Add(MyPosXAuto.Facade.AfBizManage.T_MP_QUOT_WARE_BOM_DTLColumns.QUOT_WARE_DTLColumn, "=", Me.SVFR_SELECTING_COMPONENT_ROW.PARENT_COMPONENT)
+                        dtlOption.Add(MyPosXAuto.Facade.AfBizManage.T_MP_QUOT_WARE_BOM_DTLColumns.OPTION_IDColumn, "=", setupRow.OPTION_ID)
+                        dtlRow = Me.SVFT_BACKEND_BOM_OPTION_LIST.FindRowByCondition(dtlOption)
+                        If IsNothing(dtlRow) = True Then
+                            dtlRow = Me.SVFT_BACKEND_BOM_OPTION_LIST.AddNewT_MP_QUOT_WARE_BOM_DTLRow( _
+                                setupRow.APPLY_QUANTITY, _
+                                inputForm.SV_EDITING_COMPONENT_ID, _
+                                Guid.NewGuid.ToString, _
+                                setupRow.OPTION_ID, _
+                                Me.SVFR_SELECTING_COMPONENT_ROW.PARENT_COMPONENT)
+                        Else
+                            dtlRow.APPLY_QUANTITY = setupRow.APPLY_QUANTITY
+                        End If
+
+                    Next
             End Select
         End Sub
 
@@ -450,7 +477,12 @@ Namespace Manifest
             'Me.GridView_QuotationWareDtl.BestFitColumns()
         End Sub
 
+        Private Sub TreeList_OverViewList_FocusedNodeChanged(ByVal sender As Object, ByVal e As DevExpress.XtraTreeList.FocusedNodeChangedEventArgs) Handles TreeList_OverViewList.FocusedNodeChanged
+            Me.DoPrivateUpdateSelectingRow()
+        End Sub
+
 #End Region
+
 
 #Region "ToolStrip Actions"
 
@@ -463,12 +495,23 @@ Namespace Manifest
 
 
         Private Sub TbActionEditBom()
-            Dim inputForm As New M_02_01303(Me.TransactRequestHandle, Me.FormID)
+
+            Dim inputForm As New M_02_01304(Me.TransactRequestHandle, Me.FormID)
             inputForm.SV_EDITING_COMPONENT_ID = Me.SVFR_SELECTING_COMPONENT_ROW.COMPONENT_ID
+            Dim optionCondition As New MyPosXAuto.Facade.AfBizManage.ConditionOfT_MP_QUOT_WARE_BOM_DTL(XL.DB.Utils.Condition.LogicOperators.Logic_And)
+            optionCondition.Add(MyPosXAuto.Facade.AfBizManage.T_MP_QUOT_WARE_BOM_DTLColumns.DETAIL_IDColumn, "=", Me.SVFR_SELECTING_COMPONENT_ROW.PARENT_COMPONENT)
+            optionCondition.Add(MyPosXAuto.Facade.AfBizManage.T_MP_QUOT_WARE_BOM_DTLColumns.COMPONENT_IDColumn, "=", Me.SVFR_SELECTING_COMPONENT_ROW.COMPONENT_ID)
+
+            For Each bomOptionDtlRow As MyPosXAuto.FTs.FT_T_MP_QUOT_WARE_BOM_DTLRow In Me.SVFT_BACKEND_BOM_OPTION_LIST.FindRowsByCondition(optionCondition)
+                inputForm.SV_OPTION_QUANTITIES.Add(bomOptionDtlRow.OPTION_ID, bomOptionDtlRow.APPLY_QUANTITY)
+            Next
             Me.PopupForm(inputForm, "TbActionEditBom", True)
         End Sub
 
+        Private Sub TbActionRemoveWareDtl()
 
+            Me.SVFR_SELECTING_COMPONENT_ROW.Delete()
+        End Sub
 
         Private Sub TbActionUtld0003()
 
@@ -570,21 +613,8 @@ Namespace Manifest
 
             Me.SVFR_SELECTING_COMPONENT_ROW = Nothing
 
-            'Me.ToolStripButton_EditBom.Enabled = False
-            ''Me.ToolStripButton_Revise.Enabled = False
-
-            'If Me.GridView_QuotationWareDtl.RowCount > 0 Then
-            '    Me.SVFR_SELECTING_ROW = _
-            '        CType(Me.GridView_QuotationWareDtl.GetDataRow( _
-            '            Me.GridView_QuotationWareDtl.FocusedRowHandle),  _
-            '            MyPosXAuto.FTs.FT_XV_T_MP_QUOTATION_WARE_DTLRow)
-
-            '    Me.ToolStripButton_EditBom.Enabled = True
-            '    'Me.ToolStripButton_Revise.Enabled = True
-
-            'End If
-
-
+            Me.ToolStripButton_EditBom.Enabled = False
+            Me.ToolStripButton_RemoveWareDtl.Enabled = False
 
             If IsNothing(Me.TreeList_OverViewList.FocusedNode) = False Then
 
@@ -594,8 +624,10 @@ Namespace Manifest
                              Me.TreeList_OverViewList.FocusedNode),  _
                          DataRowView).Row, MyPosXAuto.FTs.FT_S_MP_BOM_COMPONENTRow)
 
-                If Me.SVFR_SELECTING_COMPONENT_ROW.COMPONENT_ID.Length > 0 Then
+                If Me.SVFR_SELECTING_COMPONENT_ROW.ROW_REMARK = MyPosXService.Decls.ROW_REMARK_ICON_COMPONENT Then
                     Me.ToolStripButton_EditBom.Enabled = True
+                Else
+                    Me.ToolStripButton_RemoveWareDtl.Enabled = True
                 End If
 
                 'Me.ToolStripButton_DeleteXXXX.Enabled = True
@@ -815,6 +847,7 @@ Namespace Manifest
 
 #End Region
 
+        
 
     End Class
 

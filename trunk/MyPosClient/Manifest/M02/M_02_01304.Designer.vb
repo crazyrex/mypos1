@@ -58,7 +58,7 @@
             Me.RepositoryItemCheckEdit_Select = New DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
             Me.GridColumn_WareCode = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_CustomCode = New DevExpress.XtraGrid.Columns.GridColumn
-            Me.GridColumn_Quantity = New DevExpress.XtraGrid.Columns.GridColumn
+            Me.GridColumn_ApplyQuantity = New DevExpress.XtraGrid.Columns.GridColumn
             Me.RepositoryItemCalcEdit_Quantity = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
             Me.GridColumn_WareName = New DevExpress.XtraGrid.Columns.GridColumn
             Me.GridColumn_Spec = New DevExpress.XtraGrid.Columns.GridColumn
@@ -296,7 +296,7 @@
             '
             'GridView_Ware
             '
-            Me.GridView_Ware.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn_RowSelect, Me.GridColumn_WareCode, Me.GridColumn_CustomCode, Me.GridColumn_Quantity, Me.GridColumn_WareName, Me.GridColumn_Spec, Me.GridColumn_Model, Me.GridColumn_Attribute1, Me.GridColumn_Attribute2, Me.GridColumn_Attribute3, Me.GridColumn_Attribute4, Me.GridColumn_UnitName, Me.GridColumn_UnitPrice, Me.GridColumn_Unitcost, Me.GridColumn_SupplierID, Me.GridColumn_Remarks, Me.GridColumn_RowHighlight})
+            Me.GridView_Ware.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn_RowSelect, Me.GridColumn_WareCode, Me.GridColumn_CustomCode, Me.GridColumn_ApplyQuantity, Me.GridColumn_WareName, Me.GridColumn_Spec, Me.GridColumn_Model, Me.GridColumn_Attribute1, Me.GridColumn_Attribute2, Me.GridColumn_Attribute3, Me.GridColumn_Attribute4, Me.GridColumn_UnitName, Me.GridColumn_UnitPrice, Me.GridColumn_Unitcost, Me.GridColumn_SupplierID, Me.GridColumn_Remarks, Me.GridColumn_RowHighlight})
             StyleFormatCondition1.Appearance.BackColor = System.Drawing.Color.Lime
             StyleFormatCondition1.Appearance.BackColor2 = System.Drawing.Color.White
             StyleFormatCondition1.Appearance.Options.UseBackColor = True
@@ -344,14 +344,14 @@
             Me.GridColumn_CustomCode.Visible = True
             Me.GridColumn_CustomCode.VisibleIndex = 3
             '
-            'GridColumn_Quantity
+            'GridColumn_ApplyQuantity
             '
-            Me.GridColumn_Quantity.Caption = "数量"
-            Me.GridColumn_Quantity.ColumnEdit = Me.RepositoryItemCalcEdit_Quantity
-            Me.GridColumn_Quantity.FieldName = "QUANTITY"
-            Me.GridColumn_Quantity.Name = "GridColumn_Quantity"
-            Me.GridColumn_Quantity.Visible = True
-            Me.GridColumn_Quantity.VisibleIndex = 1
+            Me.GridColumn_ApplyQuantity.Caption = "数量"
+            Me.GridColumn_ApplyQuantity.ColumnEdit = Me.RepositoryItemCalcEdit_Quantity
+            Me.GridColumn_ApplyQuantity.FieldName = "APPLY_QUANTITY"
+            Me.GridColumn_ApplyQuantity.Name = "GridColumn_ApplyQuantity"
+            Me.GridColumn_ApplyQuantity.Visible = True
+            Me.GridColumn_ApplyQuantity.VisibleIndex = 1
             '
             'RepositoryItemCalcEdit_Quantity
             '
@@ -572,7 +572,7 @@
         Friend WithEvents RepositoryItemCheckEdit_Select As DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
         Friend WithEvents GridColumn_WareCode As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents GridColumn_CustomCode As DevExpress.XtraGrid.Columns.GridColumn
-        Friend WithEvents GridColumn_Quantity As DevExpress.XtraGrid.Columns.GridColumn
+        Friend WithEvents GridColumn_ApplyQuantity As DevExpress.XtraGrid.Columns.GridColumn
         Friend WithEvents RepositoryItemCalcEdit_Quantity As DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
         Friend WithEvents RepositoryItemCalcEdit_MinQty As DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
         Friend WithEvents GridColumn_WareName As DevExpress.XtraGrid.Columns.GridColumn
