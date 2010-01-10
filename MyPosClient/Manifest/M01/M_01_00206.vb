@@ -264,6 +264,7 @@ Namespace Manifest
                         Me.SV_ADDING_WARE_IDS.Add(wareRow.WARE_ID)
                     Next
                     Me._bizAgent.DoRequest(Business.B_01_00206.Affairs.AddOptions, False)
+
                 Case "ResponseTitleName2"
 
                 Case "ResponseTitleName3"
@@ -430,7 +431,7 @@ Namespace Manifest
 
                 Case Business.B_01_00206.Affairs.LoadOverviewList
                     Me.TreeList_OverViewList.ExpandAll()
-                    'Me.TreeList_OverViewList.BestFitColumns()
+                    Me.TreeList_OverViewList.BestFitColumns()
 
             End Select
         End Sub

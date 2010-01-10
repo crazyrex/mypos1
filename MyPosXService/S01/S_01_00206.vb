@@ -262,6 +262,13 @@ Public Class S_01_00206
                     Continue For
                 End If
 
+                optionCondition.Clear()
+                optionCondition.Add(MyPosXAuto.Facade.AfXV.XV_S_MP_BOM_COMP_WARE_OPTColumns.WARE_IDColumn, "=", addingWareID)
+
+                If refBindingList.FindRowsByCondition(optionCondition).Count > 0 Then
+                    Continue For
+                End If
+
                 optionRow = refBindingList.NewXV_S_MP_BOM_COMP_WARE_OPTRow()
                 refBindingList.AddXV_S_MP_BOM_COMP_WARE_OPTRow(optionRow)
                 optionRow.COMPONENT_ID = valComponentID

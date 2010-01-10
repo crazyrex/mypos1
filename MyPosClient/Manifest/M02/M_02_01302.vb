@@ -33,7 +33,7 @@ Namespace Manifest
         '原则上所有UTLD的变量不能出现在成品中, 在确定不需要的情况下应删除UTLD
         '-------------------------------------------------------------------
         Public SV_EDITING_QUOTATION_ID As String = String.Empty
-        'Public SV_UTLD_0003 As String ="SV_UTLD_0003"
+        Public SV_ADDING_WARE_IDS As New ArrayList
         'Public SV_UTLD_0004 As String ="SV_UTLD_0004"
         'Public SV_UTLD_0005 As String ="SV_UTLD_0005"
         'Public SV_RPTOPT_EXCEL As XForm.ReportOption = Nothing
@@ -129,7 +129,7 @@ Namespace Manifest
 
             Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Close, AddressOf Me.TbActionClose)
             Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_EditBom, AddressOf Me.TbActionEditBom)
-            'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0002, AddressOf Me.TbActionUtld0002)
+            'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_AddWareDetail, AddressOf Me.TbActionAddWareDetail)
             'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0003, AddressOf Me.TbActionUtld0003)
             'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0004, AddressOf Me.TbActionUtld0004)
             'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0005, AddressOf Me.TbActionUtld0005)
@@ -166,7 +166,7 @@ Namespace Manifest
 
             Me._bizAgent.DoRequest(Business.B_02_01302.Affairs.InitDisplay, False)
 
-            'Me.tree.DataSource = Me.SVFT_BINDING_LIST
+            'Me.TreeList_OverViewList.DataSource = Me.SVFT_BINDING_COMPONENT_LIST
             'Me.LookupEdit_.Properties.DataSource = Me.SVFT_CHOOSE_
 
         End Sub
@@ -243,15 +243,22 @@ Namespace Manifest
                 '        End Select                                                                                 
                 'End Select                                                                                         
 
+                'Case "ButtonEdit_WareCode_ButtonClick"
+                '    Dim chooseForm = TryCast(popupForm, M_01_00201)
+                '    For Each chooseRow As MyPosXAuto.FTs.FT_M_MP_WARERow In chooseForm.SVFT_BINDING_WARE_LIST.FindRowsSelecting(True)
+                '        Me.ButtonEdit_WareCode.Text = chooseRow.WARE_CODE
+                '        Me._bizAgent.DoRequest(Business.B_02_01302.Affairs.AddWare, False)
+                '    Next
+                '    Me.ButtonEdit_WareCode.ResetText()
+                '    Me._bizAgent.DoRequest(Business.B_02_01302.Affairs.UpdateBindingList, False)
+
                 Case "ButtonEdit_WareCode_ButtonClick"
                     Dim chooseForm = TryCast(popupForm, M_01_00201)
-                    For Each chooseRow As MyPosXAuto.FTs.FT_M_MP_WARERow In chooseForm.SVFT_BINDING_WARE_LIST.FindRowsSelecting(True)
-                        Me.ButtonEdit_WareCode.Text = chooseRow.WARE_CODE
-                        Me._bizAgent.DoRequest(Business.B_02_01302.Affairs.AddWare, False)
+                    Me.TreeList_OverViewList.DataSource = Nothing
+                    For Each wareRow As MyPosXAuto.FTs.FT_M_MP_WARERow In chooseForm.SVFT_BINDING_WARE_LIST.FindRowsSelecting(True)
+                        Me.SV_ADDING_WARE_IDS.Add(wareRow.WARE_ID)
                     Next
-                    Me.ButtonEdit_WareCode.ResetText()
-                    Me._bizAgent.DoRequest(Business.B_02_01302.Affairs.UpdateBindingList, False)
-                Case "ResponseTitleName2"
+                    Me._bizAgent.DoRequest(Business.B_02_01302.Affairs.AddWareDetails, False)
 
                 Case "ResponseTitleName3"
 
@@ -381,7 +388,8 @@ Namespace Manifest
                     'Else                                              
                     '    Me.IA_ClearContent()                          
                     'End If                                            
-
+                Case Business.B_02_01302.Affairs.AddWareDetails
+                    Me._bizAgent.DoRequest(Business.B_02_01302.Affairs.UpdateBindingList, False)
 
             End Select
         End Sub
@@ -429,9 +437,9 @@ Namespace Manifest
 
         Private Sub ButtonEdit_WareCode_ButtonClick(ByVal sender As Object, ByVal e As DevExpress.XtraEditors.Controls.ButtonPressedEventArgs) Handles ButtonEdit_WareCode.ButtonClick
             Dim chooseForm As New M_01_00201(Me.TransactRequestHandle, Me.FormID)
-            chooseForm.SVLM_STAY_AFTER_CHOOSE = True
             chooseForm.LAUNCH_CONDITION = MyPosXService.S_01_00201.LCs.Choose
             chooseForm.SVLM_MULTI_CHOICE = True
+            chooseForm.SVLM_STAY_AFTER_CHOOSE = True
             Me.PopupForm(chooseForm, "ButtonEdit_WareCode_ButtonClick", True)
 
         End Sub
@@ -460,10 +468,6 @@ Namespace Manifest
             Me.PopupForm(inputForm, "TbActionEditBom", True)
         End Sub
 
-
-        Private Sub TbActionUtld0002()
-
-        End Sub
 
 
         Private Sub TbActionUtld0003()
