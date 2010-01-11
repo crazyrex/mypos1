@@ -118,35 +118,35 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="DefaultLookAndFeel_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>278, 0</value>
+    <value>294, 0</value>
   </metadata>
   <metadata name="Timer_Surveillant.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>134, 0</value>
+    <value>141, 0</value>
   </metadata>
   <metadata name="ToolStrip_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ToolStripButton_Add.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>36, 22</value>
   </data>
   <data name="ToolStripButton_Add.Text" xml:space="preserve">
     <value>添加</value>
   </data>
   <data name="ToolStripButton_Save.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>36, 22</value>
   </data>
   <data name="ToolStripButton_Save.Text" xml:space="preserve">
     <value>保存</value>
   </data>
   <data name="ToolStripButton_Remove.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>36, 22</value>
   </data>
   <data name="ToolStripButton_Remove.Text" xml:space="preserve">
     <value>去除</value>
   </data>
   <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>36, 22</value>
   </data>
   <data name="ToolStripButton_Close.Text" xml:space="preserve">
     <value>关闭</value>
@@ -172,6 +172,30 @@
   </data>
   <data name="&gt;&gt;ToolStrip_Form.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="CheckEdit_RetailOperatorSalesShare.Location" type="System.Drawing.Point, System.Drawing">
+    <value>652, 43</value>
+  </data>
+  <data name="CheckEdit1.Properties.Caption" xml:space="preserve">
+    <value>零售操作人直接提成</value>
+  </data>
+  <data name="CheckEdit_RetailOperatorSalesShare.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 19</value>
+  </data>
+  <data name="CheckEdit_RetailOperatorSalesShare.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_RetailOperatorSalesShare.Name" xml:space="preserve">
+    <value>CheckEdit_RetailOperatorSalesShare</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_RetailOperatorSalesShare.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_RetailOperatorSalesShare.Parent" xml:space="preserve">
+    <value>PanelControl1</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit_RetailOperatorSalesShare.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="Label_WareID.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -201,7 +225,7 @@
     <value>PanelControl1</value>
   </data>
   <data name="&gt;&gt;Label_WareID.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="LookUpEdit_PosType.Location" type="System.Drawing.Point, System.Drawing">
     <value>88, 41</value>
@@ -211,7 +235,7 @@
     <value>Combo</value>
   </data>
   <data name="LookUpEdit_PosType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 20</value>
+    <value>130, 21</value>
   </data>
   <data name="LookUpEdit_PosType.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -226,7 +250,7 @@
     <value>PanelControl1</value>
   </data>
   <data name="&gt;&gt;LookUpEdit_PosType.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="SpinEdit_EmployeeCommissionRate.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
@@ -235,7 +259,7 @@
     <value>288, 4</value>
   </data>
   <data name="SpinEdit_EmployeeCommissionRate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
+    <value>100, 21</value>
   </data>
   <data name="SpinEdit_EmployeeCommissionRate.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -286,7 +310,7 @@
     <value>74, 4</value>
   </data>
   <data name="SpinEdit_PriceScale.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 20</value>
+    <value>133, 21</value>
   </data>
   <data name="SpinEdit_PriceScale.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -349,7 +373,7 @@
     <value>PanelControl1</value>
   </data>
   <data name="&gt;&gt;Panel_FinancialPart.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="Label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -376,7 +400,7 @@
     <value>PanelControl1</value>
   </data>
   <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="LinkLabel_ApplyQty.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -403,7 +427,7 @@
     <value>PanelControl1</value>
   </data>
   <data name="&gt;&gt;LinkLabel_ApplyQty.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="SpinEdit_SaftyInventoryQty.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
@@ -412,7 +436,7 @@
     <value>508, 15</value>
   </data>
   <data name="SpinEdit_SaftyInventoryQty.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
+    <value>100, 21</value>
   </data>
   <data name="SpinEdit_SaftyInventoryQty.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -427,7 +451,7 @@
     <value>PanelControl1</value>
   </data>
   <data name="&gt;&gt;SpinEdit_SaftyInventoryQty.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="Label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -454,13 +478,13 @@
     <value>PanelControl1</value>
   </data>
   <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="TextEdit_Remark.Location" type="System.Drawing.Point, System.Drawing">
     <value>294, 14</value>
   </data>
   <data name="TextEdit_Remark.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 20</value>
+    <value>133, 21</value>
   </data>
   <data name="TextEdit_Remark.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -475,7 +499,7 @@
     <value>PanelControl1</value>
   </data>
   <data name="&gt;&gt;TextEdit_Remark.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -502,13 +526,13 @@
     <value>PanelControl1</value>
   </data>
   <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="TextEdit_SetCode.Location" type="System.Drawing.Point, System.Drawing">
     <value>88, 14</value>
   </data>
   <data name="TextEdit_SetCode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 20</value>
+    <value>130, 21</value>
   </data>
   <data name="TextEdit_SetCode.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -523,7 +547,7 @@
     <value>PanelControl1</value>
   </data>
   <data name="&gt;&gt;TextEdit_SetCode.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -550,7 +574,7 @@
     <value>PanelControl1</value>
   </data>
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="PanelControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -581,7 +605,7 @@
     <value>Fill</value>
   </data>
   <data name="GridControl_WarePriceSetDtl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 67</value>
+    <value>2, 68</value>
   </data>
   <data name="GridColumn_Select.Caption" xml:space="preserve">
     <value>选择</value>
@@ -758,7 +782,7 @@
     <value>高亮显示</value>
   </data>
   <data name="GridControl_WarePriceSetDtl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>796, 325</value>
+    <value>796, 324</value>
   </data>
   <data name="GridControl_WarePriceSetDtl.TabIndex" type="System.Int32, mscorlib">
     <value>10002</value>
@@ -887,7 +911,7 @@
     <value>86, 12</value>
   </data>
   <data name="ButtonEdit_WareCode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 20</value>
+    <value>130, 21</value>
   </data>
   <data name="ButtonEdit_WareCode.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -935,7 +959,7 @@
     <value>474, 15</value>
   </data>
   <data name="TextEdit_Search.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 20</value>
+    <value>184, 21</value>
   </data>
   <data name="TextEdit_Search.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1010,7 +1034,7 @@
     <value>Top</value>
   </data>
   <data name="PanelControl2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 20</value>
+    <value>2, 21</value>
   </data>
   <data name="PanelControl2.Size" type="System.Drawing.Size, System.Drawing">
     <value>796, 47</value>
