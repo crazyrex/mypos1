@@ -264,6 +264,7 @@ Namespace Manifest
                     Dim inputForm = TryCast(popupForm, M_02_01304)
                     Dim dtlOption As New MyPosXAuto.Facade.AfBizManage.ConditionOfT_MP_QUOT_WARE_BOM_DTL(XL.DB.Utils.Condition.LogicOperators.Logic_And)
                     Dim dtlRow As MyPosXAuto.FTs.FT_T_MP_QUOT_WARE_BOM_DTLRow
+                    Dim involvedOptionIDs As New ArrayList
                     Dim involvedWareIDs As New ArrayList
 
                     For Each setupRow As MyPosXAuto.FTs.FT_XV_T_MP_QUOT_WARE_BOM_DTLRow In inputForm.SVFT_EDITING_OPTION_LIST
@@ -272,7 +273,7 @@ Namespace Manifest
                             Continue For
                         End If
 
-                        involvedWareIDs.Add(setupRow)
+                        involvedOptionIDs.Add(setupRow.OPTION_ID)
                         dtlOption.Clear()
                         dtlOption.Add(MyPosXAuto.Facade.AfBizManage.T_MP_QUOT_WARE_BOM_DTLColumns.COMPONENT_IDColumn, "=", inputForm.SV_EDITING_COMPONENT_ID)
                         dtlOption.Add(MyPosXAuto.Facade.AfBizManage.T_MP_QUOT_WARE_BOM_DTLColumns.QUOT_WARE_DTLColumn, "=", Me.SVFR_SELECTING_COMPONENT_ROW.PARENT_COMPONENT)
@@ -289,7 +290,20 @@ Namespace Manifest
                             dtlRow.APPLY_QUANTITY = setupRow.APPLY_QUANTITY
                         End If
 
+                        involvedWareIDs.Add(setupRow.WARE_ID)
+
                     Next
+
+                    dtlOption.Clear()
+                    dtlOption.Add(MyPosXAuto.Facade.AfBizManage.T_MP_QUOT_WARE_BOM_DTLColumns.COMPONENT_IDColumn, "=", inputForm.SV_EDITING_COMPONENT_ID)
+                    dtlOption.Add(MyPosXAuto.Facade.AfBizManage.T_MP_QUOT_WARE_BOM_DTLColumns.QUOT_WARE_DTLColumn, "=", Me.SVFR_SELECTING_COMPONENT_ROW.PARENT_COMPONENT)
+                    dtlOption.Add(MyPosXAuto.Facade.AfBizManage.T_MP_QUOT_WARE_BOM_DTLColumns.OPTION_IDColumn, False, involvedOptionIDs)
+                    Me.SVFT_BACKEND_BOM_OPTION_LIST.RemoveFT_T_MP_QUOT_WARE_BOM_DTLRows(dtlOption)
+
+                    Dim bindingComponentCondition As New MyPosXAuto.Facade.AfBizManage.ConditionOfT_MP_QUOTATION_WAR
+                    Me.DoPrivateUpdateSelectingRow()
+
+                    Me._bizAgent.DoRequest(Business.B_02_01302.Affairs.UpdateBindingList, False)
             End Select
         End Sub
 
