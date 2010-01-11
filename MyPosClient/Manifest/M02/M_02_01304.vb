@@ -388,7 +388,6 @@ Namespace Manifest
 
         Private Sub RepositoryItemCalcEdit_Quantity_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemCalcEdit_Quantity.EditValueChanged
             Dim calcEdit As DevExpress.XtraEditors.CalcEdit = CType(sender, DevExpress.XtraEditors.CalcEdit)
-            Me.SVFR_SELECTING_ROW.APPLY_QUANTITY = calcEdit.Value
 
         End Sub
         'Private Sub RepositoryItemCheckEdit_Select_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemCheckEdit_Select.EditValueChanged
