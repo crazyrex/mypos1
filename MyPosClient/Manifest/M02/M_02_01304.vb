@@ -50,7 +50,7 @@ Namespace Manifest
         'Public SVFT_BINDING_XXX_LIST As New MyPosXAuto.FTs.FT_
         'Public SVFT_CHOOSE_XXX_LIST As New MyPosXAuto.FTs.FT_
 
-        'Public SVFR_SELECTING_XXX_ROW As MyPosXAuto.FTs.FT_ Row
+        Public SVFR_SELECTING_ROW As MyPosXAuto.FTs.FT_XV_T_MP_QUOT_WARE_BOM_DTLRow
 
         #End Region
 
@@ -358,11 +358,11 @@ Namespace Manifest
                 'Case Business.B_01_00201.Affairs.DeleteInfo
                 '    Me.UpdateDisplay()                     
 
-                'Case Business.B_02_00201.Affairs.LoadList             
-                '    Me.DoPrivateUpdateSelectingRow()               
-                '    Me.GridView_XXXXXList.BestFitColumns()         
+                Case Business.B_02_01304.Affairs.LoadList
+                    Me.DoPrivateUpdateSelectingRow()
+                    Me.GridView_Ware.BestFitColumns()
 
-                'Case Business.B_02_00202.Affairs.SaveInfo             
+                    'Case Business.B_02_00202.Affairs.SaveInfo             
                     'Window.XLMessageBox.ShowMessage( _                
                     '    MyPosXService.Decls.MSG_OK_00001, _                
                     '    Window.XLMessageBox.MessageType.Information, _
@@ -387,7 +387,7 @@ Namespace Manifest
 
 
         Private Sub RepositoryItemCalcEdit_Quantity_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemCalcEdit_Quantity.EditValueChanged
-            Dim calcEdit As DevExpress.XtraEditors.CalcEdit = CType(sender, DevExpress.XtraEditors.CalcEdit)
+            Dim calcEdit = CType(sender, DevExpress.XtraEditors.CalcEdit)
 
         End Sub
         'Private Sub RepositoryItemCheckEdit_Select_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemCheckEdit_Select.EditValueChanged
@@ -397,9 +397,9 @@ Namespace Manifest
 
         'End Sub                                                                                                                                                                 
 
-        'Private Sub GridView_List_FocusedRowChanged(ByVal sender As Object, ByVal e As DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs) Handles GridView_List.FocusedRowChanged
-        '    Me.DoPrivateUpdateSelectingRow()                                                                                                                                          
-        'End Sub                                                                                                                                                                          
+        Private Sub GridView_List_FocusedRowChanged(ByVal sender As Object, ByVal e As DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs) Handles GridView_Ware.FocusedRowChanged
+            Me.DoPrivateUpdateSelectingRow()
+        End Sub
 
 
         'Private Sub GridView_List_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles GridView_List.DoubleClick                                                     
@@ -554,21 +554,21 @@ Namespace Manifest
         Private Sub DoPrivateUpdateSelectingRow()
 
 
-            'Me.SVFR_SELECTING_ROW = Nothing                          
-            '                                                         
-            'Me.ToolStripButton_Delete.Enabled = False                
-            'Me.ToolStripButton_Revise.Enabled = False                
-            '                                                         
-            'If Me.GridView_BranchList.RowCount > 0 Then              
-            '    Me.SVFR_SELECTING_ROW = _                            
-            '        CType(Me.GridView_BindingList.GetDataRow( _      
-            '            Me.GridView_BindingList.FocusedRowHandle),  _
-            '            MyPosXAuto.FTs.FT_Row)                            
-            '                                                         
-            '    Me.ToolStripButton_Delete.Enabled = True             
-            '    Me.ToolStripButton_Revise.Enabled = True             
-            '                                                         
-            'End If                                                   
+            Me.SVFR_SELECTING_ROW = Nothing
+
+            'Me.ToolStripButton_Delete.Enabled = False
+            'Me.ToolStripButton_Revise.Enabled = False
+
+            If Me.GridView_Ware.RowCount > 0 Then
+                Me.SVFR_SELECTING_ROW = _
+                    CType(Me.GridView_Ware.GetDataRow( _
+                        Me.GridView_Ware.FocusedRowHandle),  _
+                        MyPosXAuto.FTs.FT_XV_T_MP_QUOT_WARE_BOM_DTLRow)
+
+                'Me.ToolStripButton_Delete.Enabled = True
+                'Me.ToolStripButton_Revise.Enabled = True
+
+            End If
 
 
 

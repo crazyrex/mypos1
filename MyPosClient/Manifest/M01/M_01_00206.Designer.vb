@@ -1084,7 +1084,6 @@ Namespace Manifest
             Me.TreeList_OverViewList.KeyFieldName = "COMPONENT_ID"
             Me.TreeList_OverViewList.Location = New System.Drawing.Point(0, 0)
             Me.TreeList_OverViewList.Name = "TreeList_OverViewList"
-            Me.TreeList_OverViewList.OptionsBehavior.DragNodes = True
             Me.TreeList_OverViewList.OptionsView.AutoWidth = False
             Me.TreeList_OverViewList.ParentFieldName = "PARENT_COMPONENT"
             Me.TreeList_OverViewList.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemTextEdit1, Me.RepositoryItemImageComboBox1})

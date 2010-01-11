@@ -712,11 +712,12 @@ Namespace Business
                             bindingRow = Me._manifest.SVFT_BINDING_COMPONENT_LIST.NewS_MP_BOM_COMPONENTRow
                             Me._manifest.SVFT_BINDING_COMPONENT_LIST.AddS_MP_BOM_COMPONENTRow(bindingRow)
                             'bindingRow.CloneDataRow(wareBomDtlRo)
-                            bindingRow.PARENT_COMPONENT = wareBomDtlRow.DETAIL_ID
+                            bindingRow.PARENT_COMPONENT = expandingRow.COMPONENT_ID
                             bindingRow.ROW_REMARK = MyPosXService.Decls.ROW_REMARK_ICON_OPTION
                             MyPosXAuto.Facade.AfBizConfig.FillS_MP_BOM_COMP_WARE_OPTRowSEntity(optionRowSE, wareBomDtlRow.OPTION_ID)
                             MyPosXAuto.Facade.AfBizMaster.FillM_MP_WARERowSEntity(wareRowSE, optionRowSE.WARE_ID)
-                            bindingRow.COMPONENT_NAME = String.Format("{0} {1} {2}", wareRowSE.WARE_NAME, wareRowSE.MODEL, wareRowSE.SPEC)
+                            bindingRow.COMPONENT_NAME = String.Format("{0} {1} {2} ({3}{4})", wareRowSE.WARE_NAME, wareRowSE.MODEL, wareRowSE.SPEC, wareBomDtlRow.APPLY_QUANTITY, wareRowSE.UNIT_NAME)
+                            bindingRow.COMPONENT_ID = wareBomDtlRow.DETAIL_ID
                             expandingRows.Enqueue(bindingRow)
                         Next
 
@@ -821,7 +822,7 @@ Namespace Business
                         Return String.Empty
                     End If
 
-                    Me._manifest.ButtonEdit_WareCode.Text = wareRowSEntity.WARE_CODE
+                    'Me._manifest.ButtonEdit_WareCode.Text = wareRowSEntity.WARE_CODE
                     Me._manifest.Label_WareID.Text = wareRowSEntity.WARE_ID
 
                     Dim priceNoDiscount As Decimal
