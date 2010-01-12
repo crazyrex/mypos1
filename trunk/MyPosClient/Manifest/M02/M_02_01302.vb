@@ -535,11 +535,11 @@ Namespace Manifest
                 bindingComponentCondition.Add(MyPosXAuto.Facade.AfBizConfig.S_MP_BOM_COMPONENTColumns.PARENT_COMPONENTColumn, "=", removingIDQueue.Dequeue)
                 For Each bindingComponentRow As MyPosXAuto.FTs.FT_S_MP_BOM_COMPONENTRow In Me.SVFT_BINDING_COMPONENT_LIST.FindRowsByCondition(bindingComponentCondition)
                     removingIDQueue.Enqueue(bindingComponentRow.COMPONENT_ID)
-                    removingBindingComponentIDs.Add(bindingComponentRow.COMPONENT_ID)
+                    'removingBindingComponentIDs.Add(bindingComponentRow.COMPONENT_ID)
                 Next
             Loop
 
-            Me.svft()
+            'Me.svft()
 
         End Sub
 
