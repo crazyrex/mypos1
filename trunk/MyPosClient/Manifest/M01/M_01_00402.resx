@@ -176,11 +176,11 @@
   <data name="CheckEdit_RetailOperatorSalesShare.Location" type="System.Drawing.Point, System.Drawing">
     <value>652, 43</value>
   </data>
-  <data name="CheckEdit1.Properties.Caption" xml:space="preserve">
-    <value>零售操作人直接提成</value>
+  <data name="CheckEdit_RetailOperatorSalesShare.Properties.Caption" xml:space="preserve">
+    <value>零售结单确认销售提成</value>
   </data>
   <data name="CheckEdit_RetailOperatorSalesShare.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 19</value>
+    <value>148, 19</value>
   </data>
   <data name="CheckEdit_RetailOperatorSalesShare.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
