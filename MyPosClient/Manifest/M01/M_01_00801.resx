@@ -230,6 +230,30 @@
   <data name="ToolStripButton_SellDiscount.Text" xml:space="preserve">
     <value>折扣设定</value>
   </data>
+  <data name="ToolStripButton_ClientSMS.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAgxJREFUOE+lkvtL
+        U2EYx+0PEbtpFwnBKPGKiJImGP0gYhIYs1E5GF5gIxkpA00JRSmMEF0ohMh+GaRWYlqabMVcNdS2QpaI
+        VqiDIYhk397vA6fXhCjyhYdzeM/5fp7vczkAdeL2cwho7v/wWzT1zcN+Pwhr51uY2/y41PQaF+wzKKiZ
+        QvaN58g0jyLd5KEUcQbg+84P/Cm2tncQjW3j68YWIqubCC3FcOJc478BAuGoZM6zvoRnakXEruEIjhc4
+        /g5gZop9c+voGAyLbQIfeBZxLL9BA1jzXvuGbWamuKh+GmmVbswE19A59FEBbmoAG7YbsLtm2mZmiml9
+        cvabNDwpz6YB7LYBoMXCumkJr7LOmnnHzBQ/9X2Bo2cOibm1GsBREbAQiYmw/8lnuCeWkVzcgnZlnw1j
+        3HV/wuNXK6i/9x5Hc6wawDlTXHbLJ+LZUBQPRyKwdQdxutwl1h+NLXHh5Ht1ewBHsiwawCW57HyDAfWR
+        dvl0uhZQ1eqX8aVc7EKLqrum651ATLf9OJx5XQM4KmY0xPzZ0hFAiQJnXB0WwME0E3IsL5B17ZlADqWb
+        NYDrOepdlcysmTWWOrxqbceRWtaLk0VO1XW72D5Vckd2gMBfq8zdpmUG62NJvKM4+XyziDk24xmfWoGE
+        s1c0gHPmbrPTpHNJKOCo2G1mZs20zcwUJ5yp1AB5+8/zEwgF5GMVDxh4AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="ToolStripButton_ClientSMS.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="ToolStripButton_ClientSMS.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 22</value>
+  </data>
+  <data name="ToolStripButton_ClientSMS.Text" xml:space="preserve">
+    <value>客户短信</value>
+  </data>
   <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 22</value>
   </data>
@@ -289,7 +313,7 @@
     <value>NoControl</value>
   </data>
   <data name="LinkLabel_UnselectAll.Location" type="System.Drawing.Point, System.Drawing">
-    <value>647, 19</value>
+    <value>646, 18</value>
   </data>
   <data name="LinkLabel_UnselectAll.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 15</value>
@@ -316,7 +340,7 @@
     <value>True</value>
   </data>
   <data name="LinkLabel_SelectAll.Location" type="System.Drawing.Point, System.Drawing">
-    <value>610, 19</value>
+    <value>609, 18</value>
   </data>
   <data name="LinkLabel_SelectAll.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 15</value>
@@ -370,7 +394,7 @@
     <value>Arial, 9pt</value>
   </data>
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 16</value>
+    <value>18, 15</value>
   </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 15</value>
@@ -973,6 +997,18 @@
   <data name="&gt;&gt;GridColumn_CurrentPoint.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
+  <data name="&gt;&gt;GridColumn_ClientLevel.Name" xml:space="preserve">
+    <value>GridColumn_ClientLevel</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_ClientLevel.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;RepositoryItemLookUpEdit_ClientLevel.Name" xml:space="preserve">
+    <value>RepositoryItemLookUpEdit_ClientLevel</value>
+  </data>
+  <data name="&gt;&gt;RepositoryItemLookUpEdit_ClientLevel.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
   <data name="&gt;&gt;SaveFileDialog_ExportExcel.Name" xml:space="preserve">
     <value>SaveFileDialog_ExportExcel</value>
   </data>
@@ -985,17 +1021,11 @@
   <data name="&gt;&gt;OpenFileDialog_ImportFile.Type" xml:space="preserve">
     <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;GridColumn_ClientLevel.Name" xml:space="preserve">
-    <value>GridColumn_ClientLevel</value>
+  <data name="&gt;&gt;ToolStripButton_ClientSMS.Name" xml:space="preserve">
+    <value>ToolStripButton_ClientSMS</value>
   </data>
-  <data name="&gt;&gt;GridColumn_ClientLevel.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
-  </data>
-  <data name="&gt;&gt;RepositoryItemLookUpEdit_ClientLevel.Name" xml:space="preserve">
-    <value>RepositoryItemLookUpEdit_ClientLevel</value>
-  </data>
-  <data name="&gt;&gt;RepositoryItemLookUpEdit_ClientLevel.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  <data name="&gt;&gt;ToolStripButton_ClientSMS.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>M_01_00801</value>
