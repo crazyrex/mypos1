@@ -685,15 +685,27 @@ Namespace Facade
 
         Public Shared Sub ImportTurnoverCacheData( _
             ByVal turnoverCacheDataList As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER, _
-            ByVal turnoverDtlCacheDataList As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTL)
+            ByVal turnoverDtlCacheDataList As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTL, _
+            ByVal turnoverShareDtlList As MyPosXAuto.FTs.FT_H_MP_TURNOVER_SHARE_DTL)
 
 
-            Dim turnoverDetailIDs As New Dictionary(Of String, ArrayList)
-            Dim detailIDs As ArrayList
+            Dim turnoverShareDtlCacheDataRow As MyPosXAuto.FTs.FT_H_MP_TURNOVER_SHARE_DTLRow
+            Dim turnoverShareDtlDBDataRow As MyPosXAuto.FTs.FT_H_MP_TURNOVER_SHARE_DTLRow
+            Dim turnoverShareDetailIDs As New Dictionary(Of String, ArrayList)
+            Dim turnoverShareDtlIDs As ArrayList
+            Dim turnoverShareDtlCondition As New MyPosXAuto.Facade.AfBizTurnover.ConditionOfH_MP_TURNOVER_SHARE_DTL(XL.DB.Utils.Condition.LogicOperators.Logic_And)
+            For Each turnoverShareDtlCacheDataRow In turnoverShareDtlList.FindRowsByCondition(Nothing)
+
+                If turnoverShareDtlCacheDataRow.SHARE_PERCENT = 0 Then
+                    Continue For
+                End If
+            Next
 
 
             Dim turnoverDtlCacheDataRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow
             Dim turnoverDtlDBDataRow As MyPosXAuto.FTs.FT_H_MP_TURNOVER_DTLRow
+            Dim turnoverDetailIDs As New Dictionary(Of String, ArrayList)
+            Dim detailIDs As ArrayList
 
             Dim turnoverDtlCondition As New MyPosXAuto.Facade.AfBizTurnover.ConditionOfH_MP_TURNOVER_DTL(XL.DB.Utils.Condition.LogicOperators.Logic_And)
             For Each turnoverDtlCacheDataRow In turnoverDtlCacheDataList.FindRowsByCondition(Nothing)
@@ -758,6 +770,8 @@ Namespace Facade
                 OpBizTurnover.GenerateDefaultTurnoverPayment(turnoverCacheDataRow.TURNOVER_ID)
 
             Next
+
+
         End Sub
 
         Public Shared Sub UpdateTurnoverPointsIO()

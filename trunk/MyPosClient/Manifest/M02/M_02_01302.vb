@@ -262,7 +262,7 @@ Namespace Manifest
 
                 Case "TbActionEditBom"
                     Dim inputForm = TryCast(popupForm, M_02_01304)
-                    Dim dtlOption As New MyPosXAuto.Facade.AfBizManage.ConditionOfT_MP_QUOT_WARE_BOM_DTL(XL.DB.Utils.Condition.LogicOperators.Logic_And)
+                    Dim dtlOptionCondition As New MyPosXAuto.Facade.AfBizManage.ConditionOfT_MP_QUOT_WARE_BOM_DTL(XL.DB.Utils.Condition.LogicOperators.Logic_And)
                     Dim dtlRow As MyPosXAuto.FTs.FT_T_MP_QUOT_WARE_BOM_DTLRow
                     Dim involvedOptionIDs As New ArrayList
                     Dim involvedOptionWareIDs As New ArrayList
@@ -274,11 +274,11 @@ Namespace Manifest
                         End If
 
                         involvedOptionIDs.Add(setupRow.OPTION_ID)
-                        dtlOption.Clear()
-                        dtlOption.Add(MyPosXAuto.Facade.AfBizManage.T_MP_QUOT_WARE_BOM_DTLColumns.COMPONENT_IDColumn, "=", inputForm.SV_EDITING_COMPONENT_ID)
-                        dtlOption.Add(MyPosXAuto.Facade.AfBizManage.T_MP_QUOT_WARE_BOM_DTLColumns.QUOT_WARE_DTLColumn, "=", Me.SVFR_SELECTING_COMPONENT_ROW.PARENT_COMPONENT)
-                        dtlOption.Add(MyPosXAuto.Facade.AfBizManage.T_MP_QUOT_WARE_BOM_DTLColumns.OPTION_IDColumn, "=", setupRow.OPTION_ID)
-                        dtlRow = Me.SVFT_BACKEND_BOM_OPTION_LIST.FindRowByCondition(dtlOption)
+                        dtlOptionCondition.Clear()
+                        dtlOptionCondition.Add(MyPosXAuto.Facade.AfBizManage.T_MP_QUOT_WARE_BOM_DTLColumns.COMPONENT_IDColumn, "=", inputForm.SV_EDITING_COMPONENT_ID)
+                        dtlOptionCondition.Add(MyPosXAuto.Facade.AfBizManage.T_MP_QUOT_WARE_BOM_DTLColumns.QUOT_WARE_DTLColumn, "=", Me.SVFR_SELECTING_COMPONENT_ROW.PARENT_COMPONENT)
+                        dtlOptionCondition.Add(MyPosXAuto.Facade.AfBizManage.T_MP_QUOT_WARE_BOM_DTLColumns.OPTION_IDColumn, "=", setupRow.OPTION_ID)
+                        dtlRow = Me.SVFT_BACKEND_BOM_OPTION_LIST.FindRowByCondition(dtlOptionCondition)
                         If IsNothing(dtlRow) = True Then
                             dtlRow = Me.SVFT_BACKEND_BOM_OPTION_LIST.AddNewT_MP_QUOT_WARE_BOM_DTLRow( _
                                 setupRow.APPLY_QUANTITY, _
@@ -294,11 +294,11 @@ Namespace Manifest
 
                     Next
 
-                    dtlOption.Clear()
-                    dtlOption.Add(MyPosXAuto.Facade.AfBizManage.T_MP_QUOT_WARE_BOM_DTLColumns.COMPONENT_IDColumn, "=", inputForm.SV_EDITING_COMPONENT_ID)
-                    dtlOption.Add(MyPosXAuto.Facade.AfBizManage.T_MP_QUOT_WARE_BOM_DTLColumns.QUOT_WARE_DTLColumn, "=", Me.SVFR_SELECTING_COMPONENT_ROW.PARENT_COMPONENT)
-                    dtlOption.Add(MyPosXAuto.Facade.AfBizManage.T_MP_QUOT_WARE_BOM_DTLColumns.OPTION_IDColumn, False, involvedOptionIDs)
-                    Me.SVFT_BACKEND_BOM_OPTION_LIST.RemoveFT_T_MP_QUOT_WARE_BOM_DTLRows(dtlOption)
+                    dtlOptionCondition.Clear()
+                    dtlOptionCondition.Add(MyPosXAuto.Facade.AfBizManage.T_MP_QUOT_WARE_BOM_DTLColumns.COMPONENT_IDColumn, "=", inputForm.SV_EDITING_COMPONENT_ID)
+                    dtlOptionCondition.Add(MyPosXAuto.Facade.AfBizManage.T_MP_QUOT_WARE_BOM_DTLColumns.QUOT_WARE_DTLColumn, "=", Me.SVFR_SELECTING_COMPONENT_ROW.PARENT_COMPONENT)
+                    dtlOptionCondition.Add(MyPosXAuto.Facade.AfBizManage.T_MP_QUOT_WARE_BOM_DTLColumns.OPTION_IDColumn, False, involvedOptionIDs)
+                    Me.SVFT_BACKEND_BOM_OPTION_LIST.RemoveFT_T_MP_QUOT_WARE_BOM_DTLRows(dtlOptionCondition)
 
                     Dim bindingComponentCondition As New MyPosXAuto.Facade.AfBizManage.ConditionOfT_MP_QUOTATION_WARE_DTL(XL.DB.Utils.Condition.LogicOperators.Logic_And)
                     bindingComponentCondition.Add(MyPosXAuto.Facade.AfBizManage.T_MP_QUOTATION_WARE_DTLColumns.WARE_IDColumn, True, involvedOptionWareIDs)
@@ -414,6 +414,7 @@ Namespace Manifest
                     Me._bizAgent.DoRequest(Business.B_02_01302.Affairs.UpdateBindingList, False)
                 Case Business.B_02_01302.Affairs.UpdateBindingList
                     Me.DoPrivateUpdateSelectingRow()
+                    Me.TreeList_OverViewList.ExpandAll()
                     Me.TreeList_OverViewList.BestFitColumns()
 
                 Case Business.B_02_01302.Affairs.AddWare
@@ -524,20 +525,30 @@ Namespace Manifest
         End Sub
 
         Private Sub TbActionRemoveWareDtl()
-            Dim removingIDQueue As New Queue(Of String)
-            removingIDQueue.Enqueue(Me.SVFR_SELECTING_COMPONENT_ROW.COMPONENT_ID)
-            Dim removingBackendOptionDtlIDs As New ArrayList
-            Dim bindingComponentCondition As New MyPosXAuto.Facade.AfBizConfig.ConditionOfS_MP_BOM_COMPONENT(XL.DB.Utils.Condition.LogicOperators.Logic_And)
 
-            Do While removingIDQueue.Count > 0
+            If Me.SVFR_SELECTING_COMPONENT_ROW.ROW_REMARK = MyPosXService.Decls.ROW_REMARK_ICON_ROOT_WARE Then
+                Dim dtlOptionCondition As New MyPosXAuto.Facade.AfBizManage.ConditionOfT_MP_QUOT_WARE_BOM_DTL(XL.DB.Utils.Condition.LogicOperators.Logic_And)
+                dtlOptionCondition.Add(MyPosXAuto.Facade.AfBizManage.T_MP_QUOT_WARE_BOM_DTLColumns.QUOT_WARE_DTLColumn, "=", Me.SVFR_SELECTING_COMPONENT_ROW.COMPONENT_ID)
+                Me.SVFT_BACKEND_BOM_OPTION_LIST.RemoveFT_T_MP_QUOT_WARE_BOM_DTLRows(dtlOptionCondition)
+            End If
 
-                bindingComponentCondition.Clear()
-                bindingComponentCondition.Add(MyPosXAuto.Facade.AfBizConfig.S_MP_BOM_COMPONENTColumns.PARENT_COMPONENTColumn, "=", removingIDQueue.Dequeue)
-                For Each bindingComponentRow As MyPosXAuto.FTs.FT_S_MP_BOM_COMPONENTRow In Me.SVFT_BINDING_COMPONENT_LIST.FindRowsByCondition(bindingComponentCondition)
-                    removingIDQueue.Enqueue(bindingComponentRow.COMPONENT_ID)
-                    'removingBindingComponentIDs.Add(bindingComponentRow.COMPONENT_ID)
-                Next
-            Loop
+            Me.SVFR_SELECTING_COMPONENT_ROW.Delete()
+
+            'Me.SVFR_SELECTING_COMPONENT_ROW.Delete()
+            'Dim removingIDQueue As New Queue(Of String)
+            'removingIDQueue.Enqueue(Me.SVFR_SELECTING_COMPONENT_ROW.COMPONENT_ID)
+            'Dim removingBackendOptionDtlIDs As New ArrayList
+            'Dim bindingComponentCondition As New MyPosXAuto.Facade.AfBizConfig.ConditionOfS_MP_BOM_COMPONENT(XL.DB.Utils.Condition.LogicOperators.Logic_And)
+
+            'Do While removingIDQueue.Count > 0
+
+            '    bindingComponentCondition.Clear()
+            '    bindingComponentCondition.Add(MyPosXAuto.Facade.AfBizConfig.S_MP_BOM_COMPONENTColumns.PARENT_COMPONENTColumn, "=", removingIDQueue.Dequeue)
+            '    For Each bindingComponentRow As MyPosXAuto.FTs.FT_S_MP_BOM_COMPONENTRow In Me.SVFT_BINDING_COMPONENT_LIST.FindRowsByCondition(bindingComponentCondition)
+            '        removingIDQueue.Enqueue(bindingComponentRow.COMPONENT_ID)
+            '        'removingBindingComponentIDs.Add(bindingComponentRow.COMPONENT_ID)
+            '    Next
+            'Loop
 
             'Me.svft()
 

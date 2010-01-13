@@ -32,10 +32,10 @@ Namespace Manifest
         'Shared Value, 用于与其它窗体交换数值的情况下, 需要自己根据需要更改命名
         '原则上所有UTLD的变量不能出现在成品中, 在确定不需要的情况下应删除UTLD
         '-------------------------------------------------------------------
-        Public SV_POS_SET_ROWSE As New MyPosXAuto.FTs.FT_S_MP_POS_SETRowSEntity
+        Public SV_POS_SET_ROW_SE As New MyPosXAuto.FTs.FT_S_MP_POS_SETRowSEntity
         Public SV_RETURN_RELIEF_TURNOVER_ROW_SE As New MyPosXAuto.FTs.FT_H_MP_TURNOVERRowSEntity
         Public SV_PRINTING_TURNOVER_CODE As String = String.Empty
-        'Public SV_UTLD_0004 As String ="SV_UTLD_0004"
+        Public SV_EDITING_TURNOVER_ID As String = String.Empty
         'Public SV_UTLD_0005 As String ="SV_UTLD_0005"
         'Public SV_RPTOPT_EXCEL As XForm.ReportOption = Nothing
         Public SV_REPORT_TURNOVER_DTL_LIST As XForm.ReportOption = Nothing
@@ -50,6 +50,8 @@ Namespace Manifest
 
         Public SVFT_CACHE_DATA_TURNOVER_LIST As New MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER
         Public SVFT_CACHE_DATA_TURNOVER_DTL_LIST As New MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTL
+        Public SVFT_CACHE_DATA_TURNOVER_SHARE_DTL_LIST As New MyPosXAuto.FTs.FT_H_MP_TURNOVER_SHARE_DTL
+        Public SVFT_EDITING_DATA_TURNOVER_SHARE_DTL_LIST As New MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_SHARE_DTL
 
         'Public SVFT_CHOOSE_XXX_LIST As New XAuto.FTs.FT_
 
@@ -195,7 +197,8 @@ Namespace Manifest
             'Initialize option list controls which value source is from the edit form content
 
             Me.ButtonEdit_WareCode.Select()
-
+            Me.SV_EDITING_TURNOVER_ID = Guid.NewGuid.ToString
+            Me.SVFT_EDITING_DATA_TURNOVER_SHARE_DTL_LIST.Clear()
 
             If clearFields = False Then
                 Return
@@ -289,14 +292,18 @@ Namespace Manifest
                     Me.DoPrivateUpdateTitleByReturnStatus()
 
                 Case "ButtonEdit_OperatorCode_ButtonClick"
+
                     Dim chooseForm = TryCast(popupForm, M_01_00101)
                     Me.ButtonEdit_OperatorCode.Text = chooseForm.SVFR_SELECTING_STAFF_ROW.STAFF_CODE
                     Me.Label_OperatorName.Text = chooseForm.SVFR_SELECTING_STAFF_ROW.STAFF_NAME
                     Me.Label_OperatorID.Text = chooseForm.SVFR_SELECTING_STAFF_ROW.STAFF_ID
 
 
-                Case "ResponseTitleName3"
-
+                Case "Case Business.B_02_01001.Affairs.SaveInfo"
+                    Dim configForm = TryCast(popupForm, M_02_00109)
+                    Me.SVFT_EDITING_DATA_TURNOVER_SHARE_DTL_LIST.Clear()
+                    Me.SVFT_EDITING_DATA_TURNOVER_SHARE_DTL_LIST.ImportTable(configForm.SVFT_BINDING_LIST, Nothing)
+                    Me.ShowStatusMessage(StatusMessageIcon.Info, MyPosXService.Decls.MSG_STATUS_0033)
 
             End Select
         End Sub
@@ -346,7 +353,7 @@ Namespace Manifest
             Dim validateInputResult As String = Me.ValidateInput()
 
             If validateInputResult.Length > 0 Then
-                XL.Win.Window.XLMessageBox.ShowMessage(validateInputResult, Window.XLMessageBox.MessageType.Wrong, MessageBoxButtons.OK)
+                Me.ShowStatusMessage(StatusMessageIcon.Alert, validateInputResult)
                 Return False
             End If
 
@@ -468,7 +475,13 @@ Namespace Manifest
                     Me.IsSaved = False
 
                 Case Business.B_02_01001.Affairs.SaveInfo
-
+                    If Me.SV_POS_SET_ROW_SE.RETAIL_OPERATOR_SALES_SHARE = True Then
+                        Dim configForm As New M_02_00109(Me.TransactRequestHandle, Me.FormID)
+                        configForm.SV_TURNOVER_ID = Me.SV_EDITING_TURNOVER_ID
+                        configForm.LAUNCH_CONDITION = MyPosXService.S_02_00109.LCs.RetailSet
+                        configForm.SVFT_BINDING_LIST.ImportTable(Me.SVFT_EDITING_DATA_TURNOVER_SHARE_DTL_LIST, Nothing)
+                        Me.PopupForm(configForm, "Case Business.B_02_01001.Affairs.SaveInfo", True)
+                    End If
                     Me.ShowStatusMessage(StatusMessageIcon.Okay, MyPosXService.Decls.MSG_STATUS_0007, Me.SV_PRINTING_TURNOVER_CODE)
                     Me.SV_RETURN_RELIEF_TURNOVER_ROW_SE.Reset()
                     Me.DoPrivateUpdateCacheStatus()

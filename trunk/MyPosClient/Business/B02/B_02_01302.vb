@@ -75,7 +75,7 @@ Namespace Business
             AddWare
             UpdateBindingList
             AddWareDetails
-            BizUtld0004
+            RemoveBindingRow
             BizUtld0005
             BizUtld0006
             BizUtld0007
@@ -215,12 +215,12 @@ Namespace Business
                     '-------------------------------------------------------------------
                     functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoAddWareDetails)
 
-                Case Affairs.BizUtld0004
+                Case Affairs.RemoveBindingRow
 
                     '
                     '取到处理函数的结果，传入返回给Manifest的AgentResponse包
                     '-------------------------------------------------------------------
-                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoBizUtld0004)
+                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoRemoveBindingRow)
 
                 Case Affairs.BizUtld0005
 
@@ -889,14 +889,14 @@ Namespace Business
         '''
         '''
         '''-------------------------------------------------------------------
-        Private Function DoBizUtld0004() As String
+        Private Function DoRemoveBindingRow() As String
 
 
             Try
 
 
                 'Dim servResult As String = _
-                '    Me._service.ServBizUtld0004()
+                '    Me._service.ServRemoveBindingRow()
 
                 'If servResult.Length > 0 Then
                 '    Return servResult        

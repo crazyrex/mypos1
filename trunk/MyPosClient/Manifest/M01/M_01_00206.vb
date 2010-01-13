@@ -260,6 +260,7 @@ Namespace Manifest
                 Case "TbActionAddOptions"
                     Dim chooseForm = TryCast(popupForm, M_01_00201)
                     Me.TreeList_OverViewList.DataSource = Nothing
+                    Me.SV_ADDING_WARE_IDS.Clear()
                     For Each wareRow As MyPosXAuto.FTs.FT_M_MP_WARERow In chooseForm.SVFT_BINDING_WARE_LIST.FindRowsSelecting(True)
                         Me.SV_ADDING_WARE_IDS.Add(wareRow.WARE_ID)
                     Next
@@ -391,11 +392,13 @@ Namespace Manifest
 
                 Case Business.B_01_00206.Affairs.SaveComponentList
                     Me.SplitContainerControl_BomSetup.Panel2.Enabled = True
+                    Me.ShowStatusMessage(StatusMessageIcon.Okay, MyPosXService.Decls.MSG_STATUS_0027)
                     Me.ResetSaveMode()
                     Me.DoPrivateUpdateBomSetupVisibles()
 
                 Case Business.B_01_00206.Affairs.SaveOptionList
                     Me.SplitContainerControl_BomSetup.Panel1.Enabled = True
+                    Me.ShowStatusMessage(StatusMessageIcon.Okay, MyPosXService.Decls.MSG_STATUS_0027)
                     Me.ResetSaveMode()
                     Me.DoPrivateUpdateBomSetupVisibles()
 
@@ -441,12 +444,12 @@ Namespace Manifest
         End Sub
 
 
-        'Private Sub RepositoryItemCheckEdit_Select_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemCheckEdit_Select.EditValueChanged
+        Private Sub RepositoryItemCheckEdit_Select_EditValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles RepositoryItemCheckEdit_Select.EditValueChanged
 
-        '    Dim checkEdit As DevExpress.XtraEditors.CheckEdit = CType(sender, DevExpress.XtraEditors.CheckEdit)                                                                 
-        '    Me.SVFR_SELECTING_ROW.ROW_SELECTED = checkEdit.Checked                                                                                                              
+            Dim checkEdit As DevExpress.XtraEditors.CheckEdit = CType(sender, DevExpress.XtraEditors.CheckEdit)
+            Me.SVFR_SELECTING_COMPONENT_WARE_OPT_ROW.ROW_SELECTED = checkEdit.Checked
 
-        'End Sub                                                                                                                                                                 
+        End Sub
 
         'Private Sub GridView_List_FocusedRowChanged(ByVal sender As Object, ByVal e As DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs) Handles GridView_List.FocusedRowChanged
         '    Me.DoPrivateUpdateSelectingRow()                                                                                                                                          
@@ -598,14 +601,27 @@ Namespace Manifest
             Me.IsSaved = False
 
             Me.SplitContainerControl_BomSetup.Panel2.Enabled = False
+            Me.DoPrivateUpdateSelectingComponentRow()
             Me.DoPrivateUpdateBomSetupVisibles()
 
         End Sub
 
         Private Sub TbActionRemoveOptions()
+            If Me.SVFT_BINDING_OPTION_LIST.FindRowsSelecting(True).Count = 0 Then
+                Me.ShowStatusMessage(StatusMessageIcon.Attention, MyPosXService.Decls.MSG_STATUS_0032)
+                Return
+            End If
 
-            Me.SVFR_SELECTING_COMPONENT_WARE_OPT_ROW.Delete()
+            Dim deletingRows = Me.SVFT_BINDING_OPTION_LIST.FindRowsSelecting(True)
+            For Each deletingRow In deletingRows
+                deletingRow.Delete()
+            Next
+
             Me.IsSaved = False
+            Me.SplitContainerControl_BomSetup.Panel1.Enabled = False
+            Me.DoPrivateUpdateSelectingOptionRow()
+            Me.DoPrivateUpdateBomSetupVisibles()
+
 
         End Sub
 
@@ -1029,6 +1045,7 @@ Namespace Manifest
 
 #End Region
 
+        
         
     End Class
 

@@ -81,8 +81,8 @@ Namespace Business
             LoadReturnReliefTurnover
             ValidateOnline
             LoadOperatorByCode
-            BizUtld0010
-            BizUtld0011
+            SaveCacheData
+            LoadCacheData
             BizUtld0012
             BizUtld0013
             BizUtld0014
@@ -256,19 +256,19 @@ Namespace Business
                     '-------------------------------------------------------------------
                     functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoLoadOperatorByCode)
 
-                Case Affairs.BizUtld0010
+                Case Affairs.SaveCacheData
 
                     '
                     '取到处理函数的结果，传入返回给Manifest的AgentResponse包
                     '-------------------------------------------------------------------
-                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoBizUtld0010)
+                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoSaveCacheData)
 
-                Case Affairs.BizUtld0011
+                Case Affairs.LoadCacheData
 
                     '
                     '取到处理函数的结果，传入返回给Manifest的AgentResponse包
                     '-------------------------------------------------------------------
-                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoBizUtld0011)
+                    functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoLoadCacheData)
 
                 Case Affairs.BizUtld0012
 
@@ -427,7 +427,7 @@ Namespace Business
 
                 Me._manifest.SV_REPORT_TURNOVER_DTL_LIST = New XForm.ReportOption(MyPosXService.Decls.RPT_NAME_0001, XForm.ReportOption.PrintType.Print, True)
 
-                
+
                 If sysHideFinancials = True Then
                     Me._manifest.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0005)
                 End If
@@ -478,21 +478,13 @@ Namespace Business
                     Return String.Empty
                 End If
 
-                If Me._manifest.SV_POS_SET_ROWSE.POS_TYPE = MyPosXAuto.Decls.CIVALUE_POS_TYPE_WAREHOUSE Then
+                If Me._manifest.SV_POS_SET_ROW_SE.POS_TYPE = MyPosXAuto.Decls.CIVALUE_POS_TYPE_WAREHOUSE Then
                     Me._manifest.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0014)
                     Me._manifest.DoPublicDisableOperations()
                     Return String.Empty
                 End If
 
-                Me._manifest.SVFT_CACHE_DATA_TURNOVER_LIST.LoadXml( _
-                    WinTK.GetResourceFilePath( _
-                        ResourceType.Data, _
-                        Utils.Decls.CACHE_DATA_FILE_TURNOVER))
-                Me._manifest.SVFT_CACHE_DATA_TURNOVER_DTL_LIST.LoadXml( _
-                    WinTK.GetResourceFilePath( _
-                        ResourceType.Data, _
-                        Utils.Decls.CACHE_DATA_FILE_TURNOVER_DETAIL))
-
+                Me._manifest.InvokeBizRequest(Affairs.LoadCacheData, False)
                 If IsNothing(Utils.Decls.CURRENT_POS_ROW) = True Then
                     Me._manifest.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0008)
                     Me._manifest.Enabled = False
@@ -610,10 +602,9 @@ Namespace Business
                          MyPosXAuto.Decls.CIVALUE_TURNOVER_STYLE_SOLD)
 
                     Me._manifest.InvokeBizRequest(Affairs.PrintPurchaseList, False)
-                    Dim turnoverID = Guid.NewGuid.ToString
 
                     MyPosXAuto.Facade.AfBizTurnover.CreateH_MP_TURNOVERInfo( _
-                        TURNOVER_ID:=turnoverID, _
+                        TURNOVER_ID:=Me._manifest.SV_EDITING_TURNOVER_ID, _
                         TURNOVER_CODE:=Me._manifest.SV_PRINTING_TURNOVER_CODE, _
                         TURNOVER_TIME:=CommTK.GetSyncServerTime, _
                         POS_ID:=SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_CURRENT_POS_ID), _
@@ -648,15 +639,15 @@ Namespace Business
 
                         dbTurnoverDtlRow.CloneDataRow(bindingRow)
                         dbTurnoverDtlRow.DETAIL_ID = Guid.NewGuid.ToString
-                        dbTurnoverDtlRow.TURNOVER_ID = turnoverID
+                        dbTurnoverDtlRow.TURNOVER_ID = Me._manifest.SV_EDITING_TURNOVER_ID
                     Next
 
                     MyPosXAuto.Facade.AfBizTurnover.SaveBatchH_MP_TURNOVER_DTLData(dbTurnoverDtlList)
                     MyPosXService.Facade.OpBizTurnover.UpdateTurnoverPointsIO()
+                    MyPosXAuto.Facade.AfBizTurnover.SaveBatchH_MP_TURNOVER_SHARE_DTLData(Me._manifest.SVFT_EDITING_DATA_TURNOVER_SHARE_DTL_LIST)
 
                     Return String.Empty
                 End If
-
 
                 Me._manifest.SV_PRINTING_TURNOVER_CODE = _
                     MyPosXService.Facade.OpBizTurnover.GetAutoLocalTurnoverCode( _
@@ -664,9 +655,8 @@ Namespace Business
                     turnoverType, _
                     SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_CURRENT_POS_ID))
 
-
                 Dim turnoverCacheDataRow = Me._manifest.SVFT_CACHE_DATA_TURNOVER_LIST.AddNewXV_H_MP_TURNOVERRow( _
-                    TURNOVER_ID:=Guid.NewGuid.ToString, _
+                    TURNOVER_ID:=Me._manifest.SV_EDITING_TURNOVER_ID, _
                     TURNOVER_CODE:=Me._manifest.SV_PRINTING_TURNOVER_CODE, _
                     TURNOVER_TIME:=CommTK.GetSyncServerTime, _
                     POS_ID:=SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_CURRENT_POS_ID), _
@@ -728,18 +718,24 @@ Namespace Business
                     turnoverDtlCacheDataRow.TURNOVER_ID = turnoverCacheDataRow.TURNOVER_ID
                 Next
 
+                Dim cacheTurnoverShareDtlCondition As New MyPosXAuto.Facade.AfBizTurnover.ConditionOfH_MP_TURNOVER_SHARE_DTL(XL.DB.Utils.Condition.LogicOperators.Logic_And)
+
+                Dim involvingDetailIDs As New ArrayList
+                For Each editingTurnoverShareDtlRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_SHARE_DTLRow In Me._manifest.SVFT_EDITING_DATA_TURNOVER_SHARE_DTL_LIST
+                    involvingDetailIDs.Add(editingTurnoverShareDtlRow.DETAIL_ID)
+                    cacheTurnoverShareDtlCondition.Clear()
+                    cacheTurnoverShareDtlCondition.Add(MyPosXAuto.Facade.AfBizTurnover.H_MP_TURNOVER_SHARE_DTLColumns.DETAIL_IDColumn, "=", editingTurnoverShareDtlRow.DETAIL_ID)
+                    If Me._manifest.SVFT_CACHE_DATA_TURNOVER_SHARE_DTL_LIST.FindRowsByCondition(cacheTurnoverShareDtlCondition).Count > 0 Then
+                        Continue For
+                    End If
+
+                Next
+                cacheTurnoverShareDtlCondition.Clear()
+                cacheTurnoverShareDtlCondition.Add(MyPosXAuto.Facade.AfBizTurnover.H_MP_TURNOVER_SHARE_DTLColumns.DETAIL_IDColumn, False, involvingDetailIDs)
+                Me._manifest.SVFT_CACHE_DATA_TURNOVER_SHARE_DTL_LIST.RemoveFT_H_MP_TURNOVER_SHARE_DTLRows(cacheTurnoverShareDtlCondition)
+
                 Me._manifest.InvokeBizRequest(Affairs.PrintPurchaseList, False)
-
-
-                Me._manifest.SVFT_CACHE_DATA_TURNOVER_LIST.SaveXml( _
-                    WinTK.GetResourceFilePath( _
-                        ResourceType.Data, _
-                        Utils.Decls.CACHE_DATA_FILE_TURNOVER))
-                Me._manifest.SVFT_CACHE_DATA_TURNOVER_DTL_LIST.SaveXml( _
-                    WinTK.GetResourceFilePath( _
-                        ResourceType.Data, _
-                        Utils.Decls.CACHE_DATA_FILE_TURNOVER_DETAIL))
-
+                Me._manifest.InvokeBizRequest(Affairs.SaveCacheData, False)
 
                 'Dim servResult As String = _                                       
                 '    Me._service.ServSaveInfo()                                     
@@ -1142,7 +1138,8 @@ Namespace Business
                 Dim servResult As String = _
                     Me._service.ServUploadCacheData( _
                         Me._manifest.SVFT_CACHE_DATA_TURNOVER_LIST, _
-                        Me._manifest.SVFT_CACHE_DATA_TURNOVER_DTL_LIST)
+                        Me._manifest.SVFT_CACHE_DATA_TURNOVER_DTL_LIST, _
+                        Me._manifest.SVFT_CACHE_DATA_TURNOVER_SHARE_DTL_LIST)
 
                 If servResult.Length > 0 Then
                     Return servResult
@@ -1154,15 +1151,7 @@ Namespace Business
                 Me._manifest.SVFT_CACHE_DATA_TURNOVER_LIST.Clear()
                 Me._manifest.SVFT_CACHE_DATA_TURNOVER_DTL_LIST.Clear()
 
-                Me._manifest.SVFT_CACHE_DATA_TURNOVER_LIST.SaveXml( _
-                    WinTK.GetResourceFilePath( _
-                        ResourceType.Data, _
-                        Utils.Decls.CACHE_DATA_FILE_TURNOVER))
-                Me._manifest.SVFT_CACHE_DATA_TURNOVER_DTL_LIST.SaveXml( _
-                    WinTK.GetResourceFilePath( _
-                        ResourceType.Data, _
-                        Utils.Decls.CACHE_DATA_FILE_TURNOVER_DETAIL))
-
+                Me._manifest.InvokeBizRequest(Affairs.SaveCacheData, False)
 
             Catch ex As XL.Common.Utils.XLException
 
@@ -1485,14 +1474,28 @@ Namespace Business
         '''
         '''
         '''-------------------------------------------------------------------
-        Private Function DoBizUtld0010() As String
+        Private Function DoSaveCacheData() As String
 
 
             Try
 
+                Me._manifest.SVFT_CACHE_DATA_TURNOVER_LIST.SaveXml( _
+                    WinTK.GetResourceFilePath( _
+                        ResourceType.Data, _
+                        Utils.Decls.CACHE_DATA_FILE_TURNOVER))
+
+                Me._manifest.SVFT_CACHE_DATA_TURNOVER_DTL_LIST.SaveXml( _
+                    WinTK.GetResourceFilePath( _
+                        ResourceType.Data, _
+                        Utils.Decls.CACHE_DATA_FILE_TURNOVER_DETAIL))
+
+                Me._manifest.SVFT_CACHE_DATA_TURNOVER_SHARE_DTL_LIST.SaveXml( _
+                    WinTK.GetResourceFilePath( _
+                        ResourceType.Data, _
+                        Utils.Decls.CACHE_DATA_FILE_TURNOVER_SHARE_DTL))
 
                 'Dim servResult As String = _
-                '    Me._service.ServBizUtld0010()
+                '    Me._service.ServSaveCacheData()
 
                 'If servResult.Length > 0 Then
                 '    Return servResult        
@@ -1529,14 +1532,28 @@ Namespace Business
         '''
         '''
         '''-------------------------------------------------------------------
-        Private Function DoBizUtld0011() As String
+        Private Function DoLoadCacheData() As String
 
 
             Try
 
+                Me._manifest.SVFT_CACHE_DATA_TURNOVER_LIST.LoadXml( _
+                    WinTK.GetResourceFilePath( _
+                        ResourceType.Data, _
+                        Utils.Decls.CACHE_DATA_FILE_TURNOVER))
+
+                Me._manifest.SVFT_CACHE_DATA_TURNOVER_DTL_LIST.LoadXml( _
+                    WinTK.GetResourceFilePath( _
+                        ResourceType.Data, _
+                        Utils.Decls.CACHE_DATA_FILE_TURNOVER_DETAIL))
+
+                Me._manifest.SVFT_CACHE_DATA_TURNOVER_SHARE_DTL_LIST.LoadXml( _
+                    WinTK.GetResourceFilePath( _
+                        ResourceType.Data, _
+                        Utils.Decls.CACHE_DATA_FILE_TURNOVER_SHARE_DTL))
 
                 'Dim servResult As String = _
-                '    Me._service.ServBizUtld0011()
+                '    Me._service.ServLoadCacheData()
 
                 'If servResult.Length > 0 Then
                 '    Return servResult        

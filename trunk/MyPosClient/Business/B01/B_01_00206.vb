@@ -559,7 +559,7 @@ Namespace Business
                     Return servResult
                 End If
 
-                Me._manifest.ShowStatusMessage(StatusMessageIcon.Okay, MyPosXService.Decls.MSG_STATUS_0027)
+                'Me._manifest.ShowStatusMessage(StatusMessageIcon.Okay, MyPosXService.Decls.MSG_STATUS_0027)
             Catch ex As XL.Common.Utils.XLException
 
                 Dim logContentBuilder As New LineStrBuilder
