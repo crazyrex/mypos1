@@ -16,7 +16,7 @@ Public Class Form1
 
     
     Private Sub Button2_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button2.Click
-        SendMail("yu.jianjun.cn@gmail.com", "BBBBBB", "CCC")
+        SendMail("372861804@qq.com", "BBBBBB", "CCC")
     End Sub
 
     Public Shared Function SendMail(ByVal StrTo As String, ByVal StrBody As String, ByVal strSubjec As String) As String
