@@ -7,7 +7,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{6430220F-6BD5-4E70-800F-B16BFADFAA67}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>MyPosClient.Utils.Entry</StartupObject>
+    <StartupObject>MyPosClient.Form1</StartupObject>
     <RootNamespace>MyPosClient</RootNamespace>
     <AssemblyName>MyPosClient</AssemblyName>
     <FileAlignment>512</FileAlignment>
