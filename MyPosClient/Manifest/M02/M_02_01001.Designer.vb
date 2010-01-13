@@ -1853,6 +1853,7 @@
             CTag32.ToolTip = ""
             CTag32.ValueType = XL.Common.ControlValueType.Character
             Me.ButtonEdit_OperatorCode.Tag = CTag32
+            Me.ButtonEdit_OperatorCode.Visible = False
             '
             'ButtonEdit_WareCode
             '
@@ -1959,6 +1960,7 @@
             CTag35.ValueType = XL.Common.ControlValueType.Character
             Me.Label9.Tag = CTag35
             Me.Label9.Text = "操作人"
+            Me.Label9.Visible = False
             '
             'Label_WareID
             '
@@ -2036,6 +2038,7 @@
             Me.Label_OperatorName.Tag = CTag37
             Me.Label_OperatorName.Text = "0"
             Me.Label_OperatorName.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+            Me.Label_OperatorName.Visible = False
             '
             'Label1
             '

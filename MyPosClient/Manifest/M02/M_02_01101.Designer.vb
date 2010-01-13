@@ -634,6 +634,7 @@
             CTag4.ToolTip = ""
             CTag4.ValueType = XL.Common.ControlValueType.Character
             Me.ButtonEdit_OperatorCode.Tag = CTag4
+            Me.ButtonEdit_OperatorCode.Visible = False
             '
             'Label9
             '
@@ -671,6 +672,7 @@
             CTag5.ValueType = XL.Common.ControlValueType.Character
             Me.Label9.Tag = CTag5
             Me.Label9.Text = "操作人"
+            Me.Label9.Visible = False
             '
             'Label_OperatorName
             '
@@ -709,6 +711,7 @@
             Me.Label_OperatorName.Tag = CTag6
             Me.Label_OperatorName.Text = "0"
             Me.Label_OperatorName.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+            Me.Label_OperatorName.Visible = False
             '
             'CheckEdit_IsOnLine
             '
