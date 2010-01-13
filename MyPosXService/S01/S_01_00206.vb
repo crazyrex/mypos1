@@ -392,7 +392,7 @@ Public Class S_01_00206
             MyPosXAuto.Facade.AfBizConfig.FillFT_S_MP_BOM_COMP_WARE_OPT(optionCondition, dbOptionList)
 
             Dim involvedOptionIDs As New ArrayList
-            For Each optionRow As MyPosXAuto.FTs.FT_XV_S_MP_BOM_COMP_WARE_OPTRow In refOptionList
+            For Each optionRow As MyPosXAuto.FTs.FT_XV_S_MP_BOM_COMP_WARE_OPTRow In refOptionList.FindRowsByCondition(Nothing)
 
                 involvedOptionIDs.Add(optionRow.OPTION_ID)
                 optionCondition.Clear()

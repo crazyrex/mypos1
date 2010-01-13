@@ -11,6 +11,7 @@
 
         Public Const CACHE_DATA_FILE_TURNOVER As String = "CACHE_DATA_FILE_TURNOVER"
         Public Const CACHE_DATA_FILE_TURNOVER_DETAIL As String = "CACHE_DATA_FILE_TURNOVER_DETAIL"
+        Public Const CACHE_DATA_FILE_TURNOVER_SHARE_DTL As String = "CACHE_DATA_FILE_TURNOVER_SHARE_DTL"
         Shared Sub New()
             Utils.TK.InitImageParameter()
         End Sub

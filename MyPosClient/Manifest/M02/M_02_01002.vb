@@ -246,7 +246,7 @@ Namespace Manifest
             Dim validateInputResult As String = Me.ValidateInput()
 
             If validateInputResult.Length > 0 Then
-                XL.Win.Window.XLMessageBox.ShowMessage(validateInputResult, Window.XLMessageBox.MessageType.Wrong, MessageBoxButtons.OK)
+                Me.ShowStatusMessage(StatusMessageIcon.Alert, validateInputResult)
                 Return False
             End If
 
