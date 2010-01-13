@@ -686,20 +686,41 @@ Namespace Facade
         Public Shared Sub ImportTurnoverCacheData( _
             ByVal turnoverCacheDataList As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER, _
             ByVal turnoverDtlCacheDataList As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTL, _
-            ByVal turnoverShareDtlList As MyPosXAuto.FTs.FT_H_MP_TURNOVER_SHARE_DTL)
+            Optional ByVal turnoverShareDtlList As MyPosXAuto.FTs.FT_H_MP_TURNOVER_SHARE_DTL = Nothing)
 
-
-            Dim turnoverShareDtlCacheDataRow As MyPosXAuto.FTs.FT_H_MP_TURNOVER_SHARE_DTLRow
-            Dim turnoverShareDtlDBDataRow As MyPosXAuto.FTs.FT_H_MP_TURNOVER_SHARE_DTLRow
             Dim turnoverShareDetailIDs As New Dictionary(Of String, ArrayList)
             Dim turnoverShareDtlIDs As ArrayList
             Dim turnoverShareDtlCondition As New MyPosXAuto.Facade.AfBizTurnover.ConditionOfH_MP_TURNOVER_SHARE_DTL(XL.DB.Utils.Condition.LogicOperators.Logic_And)
-            For Each turnoverShareDtlCacheDataRow In turnoverShareDtlList.FindRowsByCondition(Nothing)
 
-                If turnoverShareDtlCacheDataRow.SHARE_PERCENT = 0 Then
-                    Continue For
-                End If
-            Next
+            If IsNothing(turnoverShareDtlList) = False Then
+
+                Dim turnoverShareDtlCacheDataRow As MyPosXAuto.FTs.FT_H_MP_TURNOVER_SHARE_DTLRow
+                Dim turnoverShareDtlDBDataRow As MyPosXAuto.FTs.FT_H_MP_TURNOVER_SHARE_DTLRow
+                For Each turnoverShareDtlCacheDataRow In turnoverShareDtlList.FindRowsByCondition(Nothing)
+
+                    If turnoverShareDtlCacheDataRow.SHARE_PERCENT = 0 Then
+                        Continue For
+                    End If
+
+                    turnoverShareDtlCondition.Clear()
+
+                    turnoverShareDtlDBDataRow = MyPosXAuto.Facade.AfBizTurnover.GetH_MP_TURNOVER_SHARE_DTLRow(turnoverShareDtlCacheDataRow.DETAIL_ID)
+                    If IsNothing(turnoverShareDtlDBDataRow) = True Then
+                        MyPosXAuto.Facade.AfBizTurnover.CreateH_MP_TURNOVER_SHARE_DTLInfoByRow(turnoverShareDtlCacheDataRow)
+                    Else
+                        MyPosXAuto.Facade.AfBizTurnover.ReviseH_MP_TURNOVER_SHARE_DTLInfoByRow(turnoverShareDtlCacheDataRow)
+                    End If
+
+                    If turnoverShareDetailIDs.ContainsKey(turnoverShareDtlCacheDataRow.TURNOVER_ID) = False Then
+                        turnoverShareDtlIDs = New ArrayList
+                        turnoverShareDetailIDs.Add(turnoverShareDtlCacheDataRow.TURNOVER_ID, turnoverShareDtlIDs)
+                    Else
+                        turnoverShareDtlIDs = turnoverShareDetailIDs.Item(turnoverShareDtlCacheDataRow.TURNOVER_ID)
+                    End If
+                    turnoverShareDtlIDs.Add(turnoverShareDtlCacheDataRow.DETAIL_ID)
+                Next
+
+            End If
 
 
             Dim turnoverDtlCacheDataRow As MyPosXAuto.FTs.FT_XV_H_MP_TURNOVER_DTLRow
@@ -753,6 +774,14 @@ Namespace Facade
                     MyPosXAuto.Facade.AfBizTurnover.CreateH_MP_TURNOVERInfoByRow(turnoverCacheDataRow)
                 Else
                     MyPosXAuto.Facade.AfBizTurnover.ReviseH_MP_TURNOVERInfoByRow(turnoverCacheDataRow)
+                End If
+
+                If turnoverShareDetailIDs.ContainsKey(turnoverCacheDataRow.TURNOVER_ID) = True Then
+                    turnoverShareDtlIDs = turnoverShareDetailIDs.Item(turnoverCacheDataRow.TURNOVER_ID)
+                    turnoverShareDtlCondition.Clear()
+                    turnoverShareDtlCondition.Add(AfBizTurnover.H_MP_TURNOVER_SHARE_DTLColumns.DETAIL_IDColumn, False, turnoverShareDtlIDs)
+                    turnoverShareDtlCondition.Add(AfBizTurnover.H_MP_TURNOVER_SHARE_DTLColumns.TURNOVER_IDColumn, "=", turnoverCacheDataRow.TURNOVER_ID)
+                    MyPosXAuto.Facade.AfBizTurnover.DeleteH_MP_TURNOVER_SHARE_DTLData(turnoverShareDtlCondition)
                 End If
 
                 If turnoverDetailIDs.ContainsKey(turnoverCacheDataRow.TURNOVER_ID) = True Then
