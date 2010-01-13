@@ -16,7 +16,7 @@ Public Class Form1
 
     
     Private Sub Button2_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button2.Click
-        SendMail("372861804@qq.com", "BBBBBB", "CCC")
+        SendMail("henryqu01@gmail.com", "果然如此", "是不是内容太少了 ？")
     End Sub
 
     Public Shared Function SendMail(ByVal StrTo As String, ByVal StrBody As String, ByVal strSubjec As String) As String
@@ -26,7 +26,7 @@ Public Class Form1
         '发送邮件的邮箱地址
         Dim myEmail As String = "yu.jianjun.cn@gmail.com"
         '发送邮件的邮箱密码
-        Dim myPwd As String = "123"
+        Dim myPwd As String = ""
 
         onemail.BodyEncoding = System.Text.Encoding.UTF8
         onemail.IsBodyHtml = True
