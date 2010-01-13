@@ -77,6 +77,7 @@ Namespace Facade
                         resultList.AddT_MP_INVENTORY_RESULTRow(resultRow)
                         resultRow.WARE_ID = draftRow.WARE_ID
                         resultRow.INVENTORY_ID = inventoryID
+                        resultRow.RESULT_ID = System.Guid.NewGuid.ToString
                     End If
 
                     resultRow.INVENTORY_AMOUNT = draftRow.INVENTORY_AMOUNT
@@ -106,6 +107,7 @@ Namespace Facade
                     resultList.AddT_MP_INVENTORY_RESULTRow(resultRow)
                     resultRow.WARE_ID = wareTotalRow.WARE_ID
                     resultRow.INVENTORY_ID = inventoryID
+                    resultRow.RESULT_ID = System.Guid.NewGuid.ToString
                 End If
 
                 resultRow.INVENTORY_AMOUNT = 0
