@@ -118,17 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="DefaultLookAndFeel_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>266, 0</value>
+    <value>294, 0</value>
   </metadata>
   <metadata name="Timer_Surveillant.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>128, 0</value>
+    <value>141, 0</value>
   </metadata>
   <metadata name="ToolStrip_Form.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ToolStripButton_Create.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>36, 22</value>
   </data>
   <data name="ToolStripButton_Create.Text" xml:space="preserve">
     <value>新建</value>
@@ -156,7 +156,7 @@
     <value>Magenta</value>
   </data>
   <data name="ToolStripButton_BeginCheck.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 22</value>
+    <value>60, 22</value>
   </data>
   <data name="ToolStripButton_BeginCheck.Text" xml:space="preserve">
     <value>开始盘点</value>
@@ -183,7 +183,7 @@
     <value>Magenta</value>
   </data>
   <data name="ToolStripButton_Review.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>36, 22</value>
   </data>
   <data name="ToolStripButton_Review.Text" xml:space="preserve">
     <value>复核</value>
@@ -192,7 +192,7 @@
     <value>False</value>
   </data>
   <data name="ToolStripButton_Revise.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>36, 22</value>
   </data>
   <data name="ToolStripButton_Revise.Text" xml:space="preserve">
     <value>修改</value>
@@ -201,13 +201,13 @@
     <value>False</value>
   </data>
   <data name="ToolStripButton_Delete.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>36, 22</value>
   </data>
   <data name="ToolStripButton_Delete.Text" xml:space="preserve">
     <value>删除</value>
   </data>
   <data name="ToolStripButton_Refresh.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>36, 22</value>
   </data>
   <data name="ToolStripButton_Refresh.Text" xml:space="preserve">
     <value>刷新</value>
@@ -216,13 +216,13 @@
     <value>False</value>
   </data>
   <data name="ToolStripButton_View.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>36, 22</value>
   </data>
   <data name="ToolStripButton_View.Text" xml:space="preserve">
     <value>查看</value>
   </data>
   <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>36, 22</value>
   </data>
   <data name="ToolStripButton_Close.Text" xml:space="preserve">
     <value>关闭</value>
@@ -275,6 +275,10 @@
   <data name="DateEdit_ToDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>274, 14</value>
   </data>
+  <assembly alias="DevExpress.Utils.v8.1" name="DevExpress.Utils.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
+  <data name="DateEdit_ToDate.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
+  </data>
   <data name="DateEdit_ToDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>134, 21</value>
   </data>
@@ -325,6 +329,9 @@
   </data>
   <data name="DateEdit_FromDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>70, 14</value>
+  </data>
+  <data name="DateEdit_FromDate.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
   </data>
   <data name="DateEdit_FromDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>134, 21</value>
@@ -446,6 +453,9 @@
   </data>
   <data name="RepositoryItemLookUpEdit_InventoryStatus.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="RepositoryItemLookUpEdit_InventoryStatus.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v8.1">
+    <value>Combo</value>
   </data>
   <data name="GridColumn_InventoryStatus.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
