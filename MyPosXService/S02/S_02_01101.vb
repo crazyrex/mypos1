@@ -195,8 +195,7 @@ Public Class S_02_01101
 
             MyPosXService.Facade.OpBizTurnover.ImportTurnoverCacheData( _
                 refCacheDataTurnoverList, _
-                refCacheDataTurnoverDtlList, _
-                )
+                refCacheDataTurnoverDtlList)
 
             MyPosXService.Facade.OpBizTurnover.UpdateTurnoverPointsIO()
 
