@@ -34,7 +34,7 @@ Namespace Manifest
         '-------------------------------------------------------------------
         Public SV_PRINTING_TURNOVER_CODE As String = String.Empty
         Public SV_UTLD_0002 As String = "SV_UTLD_0002"
-        Public SV_POS_SET_ROWSE As New MyPosXAuto.FTs.FT_S_MP_POS_SETRowSEntity
+        Public SV_POS_SET_ROW_SE As New MyPosXAuto.FTs.FT_S_MP_POS_SETRowSEntity
         Public SVFT_REF_SALE_TEMPLATE_WARE_LIST As New MyPosXAuto.FTs.FT_XV_T_MP_SALE_TEMPLATE_WARE
         'Public SV_UTLD_0003 As String ="SV_UTLD_0003"
         'Public SV_UTLD_0004 As String ="SV_UTLD_0004"

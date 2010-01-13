@@ -414,7 +414,7 @@ Namespace Business
                     sysAttribute4, _
                     affairDescription, _
                     SysInfo.ReadLocalSysInfo(MyPosXService.Decls.LVN_CURRENT_POS_ID), _
-                    Me._manifest.SV_POS_SET_ROWSE, _
+                    Me._manifest.SV_POS_SET_ROW_SE, _
                     Me._manifest.SVFT_REF_SALE_TEMPLATE_WARE_LIST)
 
                 If staffRowSE.IsNull = False Then
@@ -471,7 +471,11 @@ Namespace Business
                     Return String.Empty
                 End If
 
-                If Me._manifest.SV_POS_SET_ROWSE.POS_TYPE = MyPosXAuto.Decls.CIVALUE_POS_TYPE_WAREHOUSE Then
+                MyPosXAuto.Facade.AfBizConfig.FillS_MP_POS_SETRowSEntity( _
+                    Me._manifest.SV_POS_SET_ROW_SE, _
+                    Utils.Decls.CURRENT_POS_ROW.POS_SET_ID)
+
+                If Me._manifest.SV_POS_SET_ROW_SE.POS_TYPE = MyPosXAuto.Decls.CIVALUE_POS_TYPE_WAREHOUSE Then
                     Me._manifest.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0014)
                     Me._manifest.DoPublicDisableOperations()
                     Return String.Empty
