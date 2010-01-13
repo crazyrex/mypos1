@@ -134,7 +134,7 @@
 </value>
   </data>
   <data name="ToolStripButton_ReInventory.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 22</value>
+    <value>60, 22</value>
   </data>
   <data name="ToolStripButton_ReInventory.Text" xml:space="preserve">
     <value>Recheck</value>
@@ -155,7 +155,7 @@
 </value>
   </data>
   <data name="ToolStripButton_Replace.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 22</value>
+    <value>58, 22</value>
   </data>
   <data name="ToolStripButton_Replace.Text" xml:space="preserve">
     <value>Replace</value>
@@ -176,13 +176,13 @@
 </value>
   </data>
   <data name="ToolStripButton_ExportExcel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 22</value>
+    <value>50, 22</value>
   </data>
   <data name="ToolStripButton_ExportExcel.Text" xml:space="preserve">
     <value>Export</value>
   </data>
   <data name="ToolStripButton_Close.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 22</value>
+    <value>44, 22</value>
   </data>
   <data name="ToolStripButton_Close.Text" xml:space="preserve">
     <value>Close</value>
