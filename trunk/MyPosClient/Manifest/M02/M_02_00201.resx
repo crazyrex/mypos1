@@ -440,7 +440,7 @@
     <value>2</value>
   </data>
   <data name="GridColumn_EmployeeName.Caption" xml:space="preserve">
-    <value>员工</value>
+    <value>创建人</value>
   </data>
   <data name="GridColumn_EmployeeName.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -465,6 +465,18 @@
   </data>
   <data name="GridColumn_RowHighLight.Caption" xml:space="preserve">
     <value>GridColumn6</value>
+  </data>
+  <data name="GridColumn_CheckAllItem.Caption" xml:space="preserve">
+    <value>全盘</value>
+  </data>
+  <data name="RepositoryItemCheckEdit_CheckAllItem.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="GridColumn_CheckAllItem.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn_CheckAllItem.VisibleIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
   <data name="GridControl_InventoryList.Size" type="System.Drawing.Size, System.Drawing">
     <value>700, 423</value>
@@ -606,6 +618,18 @@
   </data>
   <data name="&gt;&gt;GridColumn_RowHighLight.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_CheckAllItem.Name" xml:space="preserve">
+    <value>GridColumn_CheckAllItem</value>
+  </data>
+  <data name="&gt;&gt;GridColumn_CheckAllItem.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
+  </data>
+  <data name="&gt;&gt;RepositoryItemCheckEdit_CheckAllItem.Name" xml:space="preserve">
+    <value>RepositoryItemCheckEdit_CheckAllItem</value>
+  </data>
+  <data name="&gt;&gt;RepositoryItemCheckEdit_CheckAllItem.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit, DevExpress.XtraEditors.v8.1, Version=8.1.5.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>M_02_00201</value>
