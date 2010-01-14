@@ -15,17 +15,20 @@ Namespace Utils
         Public _iEmailFrom As String = String.Empty
         Public _iPassword As String = String.Empty
         Public _iSMTPServer As String = String.Empty
+        Public _iSMTPPort As Integer
         Public _iUser As String = String.Empty
 
         Public Sub New( _
            ByVal iEmailFrom As String, _
            ByVal iPassword As String, _
            ByVal iSMTPServer As String, _
+           ByVal iSMTPPort As Integer, _
            ByVal iUser As String)
 
             Me._iEmailFrom = iEmailFrom
             Me._iPassword = iPassword
             Me._iSMTPServer = iSMTPServer
+            Me._iSMTPPort = iSMTPPort
             Me._iUser = iUser
 
         End Sub
@@ -45,7 +48,7 @@ Namespace Utils
             onemail.Subject = subject
             onemail.Body = body
 
-            Dim clint As New SmtpClient(SMTPServer, 587)
+            Dim clint As New SmtpClient(SMTPServer, Me._iSMTPPort)
             '发送邮件的服务器
             clint.Credentials = New System.Net.NetworkCredential(EmailFrom, Password)
             clint.EnableSsl = True
