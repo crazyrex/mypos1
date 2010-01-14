@@ -156,6 +156,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BasicModules\Decls.vb" />
+    <Compile Include="BasicModules\EmailSender.vb" />
     <Compile Include="BasicModules\Entry.vb" />
     <Compile Include="BasicModules\ExcelTK.vb" />
     <Compile Include="BasicModules\Form1.Designer.vb">
