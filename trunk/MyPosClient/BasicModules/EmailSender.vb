@@ -12,11 +12,11 @@ Namespace Utils
     Public Class EmailSender
         Implements XL.Common.Interfaces.IEmailSender
 
-        Public _iEmailFrom As String = String.Empty
-        Public _iPassword As String = String.Empty
-        Public _iSMTPServer As String = String.Empty
-        Public _iSMTPPort As Integer
-        Public _iUser As String = String.Empty
+        Public _emailFrom As String = String.Empty
+        Public _password As String = String.Empty
+        Public _SMTPServer As String = String.Empty
+        Public _SMTPPort As Integer
+        Public _user As String = String.Empty
 
         Public Sub New( _
            ByVal iEmailFrom As String, _
@@ -25,11 +25,11 @@ Namespace Utils
            ByVal iSMTPPort As Integer, _
            ByVal iUser As String)
 
-            Me._iEmailFrom = iEmailFrom
-            Me._iPassword = iPassword
-            Me._iSMTPServer = iSMTPServer
-            Me._iSMTPPort = iSMTPPort
-            Me._iUser = iUser
+            Me._EmailFrom = iEmailFrom
+            Me._password = iPassword
+            Me._SMTPServer = iSMTPServer
+            Me._SMTPPort = iSMTPPort
+            Me._user = iUser
 
         End Sub
 
@@ -48,7 +48,7 @@ Namespace Utils
             onemail.Subject = subject
             onemail.Body = body
 
-            Dim clint As New SmtpClient(SMTPServer, Me._iSMTPPort)
+            Dim clint As New SmtpClient(SMTPServer, Me._SMTPPort)
             '发送邮件的服务器
             clint.Credentials = New System.Net.NetworkCredential(EmailFrom, Password)
             clint.EnableSsl = True
@@ -59,25 +59,25 @@ Namespace Utils
 
         Public ReadOnly Property EmailFrom() As String Implements XL.Common.Interfaces.IEmailSender.EmailFrom
             Get
-                Return _iEmailFrom
+                Return Me._emailFrom
             End Get
         End Property
 
         Public ReadOnly Property Password() As String Implements XL.Common.Interfaces.IEmailSender.Password
             Get
-                Return _iPassword
+                Return Me._password
             End Get
         End Property
 
         Public ReadOnly Property SMTPServer() As String Implements XL.Common.Interfaces.IEmailSender.SMTPServer
             Get
-                Return _iSMTPServer
+                Return Me._SMTPServer
             End Get
         End Property
 
         Public ReadOnly Property User() As String Implements XL.Common.Interfaces.IEmailSender.User
             Get
-                Return _iUser
+                Return Me._user
             End Get
         End Property
     End Class
