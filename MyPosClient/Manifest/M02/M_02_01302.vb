@@ -113,7 +113,7 @@ Namespace Manifest
 
             'WinTK.RelateTreeListTabControl(Me.TreeList_, Me.XtraTabControl_
 
-            Me.FormInputGuarder.SetValidate(Me.TextEdit_TurnoverCode, InputGuarder.ValidateClassify.Required, Nothing)
+            Me.FormInputGuarder.SetValidate(Me.TextEdit_QuotationCode, InputGuarder.ValidateClassify.Required, Nothing)
             Me.FormInputGuarder.SetValidate(Me.LookUpEdit_QuotationType, InputGuarder.ValidateClassify.Required, Nothing)
             Me.FormInputGuarder.SetValidate(Me.Label_LastReviser, InputGuarder.ValidateClassify.Required, Nothing)
 
@@ -130,7 +130,7 @@ Namespace Manifest
             Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Close, AddressOf Me.TbActionClose)
             Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_EditBom, AddressOf Me.TbActionEditBom)
             Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_RemoveWareDtl, AddressOf Me.TbActionRemoveWareDtl)
-            'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0003, AddressOf Me.TbActionUtld0003)
+            Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Save, AddressOf Me.TbActionSave)
             'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0004, AddressOf Me.TbActionUtld0004)
             'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0005, AddressOf Me.TbActionUtld0005)
             'Me.SetToolStripButtonTransactionHandle(Me.ToolStripButton_Utld0006, AddressOf Me.TbActionUtld0006)
@@ -345,7 +345,7 @@ Namespace Manifest
             '进行保存操作
             '-------------------------------------------------------------------
 
-            'Me._bizAgent.DoRequest(Business.B_0X_00XXX.Affairs.SaveInfo, False)
+            Me._bizAgent.DoRequest(Business.B_02_01302.Affairs.SaveInfo, False)
 
 
             '
@@ -419,21 +419,15 @@ Namespace Manifest
 
                 Case Business.B_02_01302.Affairs.AddWare
                     Me._bizAgent.DoRequest(Business.B_02_01302.Affairs.UpdateBindingList, False)
-                    'Case Business.B_02_00202.Affairs.SaveInfo             
-                    'Window.XLMessageBox.ShowMessage( _                
-                    '    MyPosXService.Decls.MSG_OK_00001, _                
-                    '    Window.XLMessageBox.MessageType.Information, _
-                    '    MessageBoxButtons.OK)                         
-                    'Me.ResponseToParentForm()                         
 
-                    'If Me.SV_EDITING_TRANSFER_ID > 0 Then            
-                    '    Me.ResetSaveMode()                            
-                    '    Me.CloseForm()                                
-                    'Else                                              
-                    '    Me.IA_ClearContent()                          
-                    'End If                                            
+                Case Business.B_02_01302.Affairs.SaveInfo
+                    Me.ResponseToParentForm()
+                    Me.ResetSaveMode()
+                    Me.CloseForm()
                 Case Business.B_02_01302.Affairs.AddWareDetails
                     Me._bizAgent.DoRequest(Business.B_02_01302.Affairs.UpdateBindingList, False)
+
+                    'Case Business.B_02_01302.Affairs.SaveInfo
 
             End Select
         End Sub
@@ -532,6 +526,10 @@ Namespace Manifest
                 Me.SVFT_BACKEND_BOM_OPTION_LIST.RemoveFT_T_MP_QUOT_WARE_BOM_DTLRows(dtlOptionCondition)
             End If
 
+            If Me.SVFT_BINDING_COMPONENT_LIST.UndeletedRowCount = 1 Then
+                Me.TreeList_OverViewList.DataSource = Nothing
+            End If
+
             Me.SVFR_SELECTING_COMPONENT_ROW.Delete()
 
             'Me.SVFR_SELECTING_COMPONENT_ROW.Delete()
@@ -554,7 +552,9 @@ Namespace Manifest
 
         End Sub
 
-        Private Sub TbActionUtld0003()
+        Private Sub TbActionSave()
+
+            Me.SaveInfo(True)
 
         End Sub
 

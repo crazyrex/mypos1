@@ -13,10 +13,10 @@ Imports XL.Win.Utils
 Namespace Business
 
 
-    Public Class B_02_01302  
+    Public Class B_02_01302
         Inherits XL.Win.Component.BaseAgent
 
-#Region" 组件设计器生成的代码"
+#Region " 组件设计器生成的代码"
 
         Public Sub New(ByVal Container As System.ComponentModel.IContainer)
             MyClass.New()
@@ -59,13 +59,13 @@ Namespace Business
 #End Region
 
 
-#Region"Prerequested Inits"
+#Region "Prerequested Inits"
 
         '
         '本代理所对应的表现层实例
         '
-        Private _manifest As Manifest.M_02_01302     
-        Private _service As MyPosXService.S_02_01302     
+        Private _manifest As Manifest.M_02_01302
+        Private _service As MyPosXService.S_02_01302
 
         Public Enum Affairs
             InitDisplay
@@ -106,20 +106,20 @@ Namespace Business
             Catch ex As Exception
 
                 If ex.Message = CommDecl.MSG_ALERT_REMOTE_CONNECTION_INAVAILABLE AndAlso _
-                    CommDecl.SYSTEM_SHOULD_BE_ONLINE = False AndAlso _
-                        Window.XLMessageBox.ShowMessage( _
-                            "远程连接失败,切换到离线模式吗?", _
-                            Window.XLMessageBox.MessageType.Wrong, _
-                            MessageBoxButtons.OKCancel) = DialogResult.OK Then
+                  CommDecl.SYSTEM_SHOULD_BE_ONLINE = False AndAlso _
+                    Window.XLMessageBox.ShowMessage( _
+                      "远程连接失败,切换到离线模式吗?", _
+                      Window.XLMessageBox.MessageType.Wrong, _
+                      MessageBoxButtons.OKCancel) = DialogResult.OK Then
                     CommDecl.SYSTEM_IS_ONLINE = False
                     Me._service = MyPosXService.S_02_01302.GetInstance()
                     Return
                 End If
 
                 Window.XLMessageBox.ShowMessage( _
-                    ex.Message, _
-                    Window.XLMessageBox.MessageType.Wrong, _
-                    MessageBoxButtons.OK)
+                  ex.Message, _
+                  Window.XLMessageBox.MessageType.Wrong, _
+                  MessageBoxButtons.OK)
 
                 Me._manifest.Enabled = False
 
@@ -175,23 +175,23 @@ Namespace Business
 
                 Case Affairs.LoadInfo
 
-                    '                                                                             
-                    '取到处理函数的结果，传入返回给Manifest的AgentResponse包                      
-                    '-------------------------------------------------------------------          
+                    '                                       
+                    '取到处理函数的结果，传入返回给Manifest的AgentResponse包           
+                    '-------------------------------------------------------------------     
                     functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoLoadInfo)
 
                 Case Affairs.SaveInfo
 
-                    '                                                                             
-                    '取到处理函数的结果，传入返回给Manifest的AgentResponse包                      
-                    '-------------------------------------------------------------------          
+                    '                                       
+                    '取到处理函数的结果，传入返回给Manifest的AgentResponse包           
+                    '-------------------------------------------------------------------     
                     functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoSaveInfo)
 
                 Case Affairs.LoadList
 
-                    '                                                                             
-                    '取到处理函数的结果，传入返回给Manifest的AgentResponse包                      
-                    '-------------------------------------------------------------------          
+                    '                                       
+                    '取到处理函数的结果，传入返回给Manifest的AgentResponse包           
+                    '-------------------------------------------------------------------     
                     functionHandle = New XL.Win.StringFunctionTransaction(AddressOf Me.DoLoadList)
 
                 Case Affairs.AddWare
@@ -388,19 +388,19 @@ Namespace Business
                 '--------------------------------------------------------------------------------------------------------
                 Dim chooseQuotationTypeList As New MyPosXAuto.FTs.FT_CIV_QUOTATION_TYPE
                 MyPosXAuto.Facade.AfCIV.FillCI_QUOTATION_TYPEList( _
-                    CommDecl.CURRENT_LANGUAGE_OPTION, _
-                    String.Empty, _
-                    chooseQuotationTypeList, _
-                    False)
+                  CommDecl.CURRENT_LANGUAGE_OPTION, _
+                  String.Empty, _
+                  chooseQuotationTypeList, _
+                  False)
                 Me._manifest.LookUpEdit_QuotationType.Properties.DataSource = chooseQuotationTypeList
                 Me._manifest.Label_LastReviser.Text = String.Format("({0}){1}", Utils.Decls.LOGIN_STAFF_ROW_SE.STAFF_NAME, Utils.Decls.LOGIN_STAFF_ROW_SE.STAFF_CODE)
                 'Me._manifest.TextEdit_TurnoverCode.Text = MyPosXService.Facade.OpBizTurnover.GetAutoTurnoverCode
 
                 'Me._manifest.SV_RPTOPT_LABEL = New XForm.ReportOption(MyPosXService.Decls.RPT_NAME_0001, XForm.ReportOption.PrintType.Label, True)
-                'Me._manifest.SV_RPTOPT_LABEL.DefaultFileName = SysInfo.ReadLocalSysInfo(XService.Decls.LVN_ASSET_LABEL_FILE_PATH)            
+                'Me._manifest.SV_RPTOPT_LABEL.DefaultFileName = SysInfo.ReadLocalSysInfo(XService.Decls.LVN_ASSET_LABEL_FILE_PATH)      
 
                 'Me._manifest.SV_RPTOPT_PRINTER = New XForm.ReportOption(XService.Decls.RPT_NAME_0001, XForm.ReportOption.PrintType.Print, True)
-                '                                                                                                                             
+                '                                                               
                 'Me._manifest.SV_RPTOPT_EXCEL = New XForm.ReportOption(XService.Decls.RPT_NAME_0002, XForm.ReportOption.PrintType.Excel, True)
 
 
@@ -431,22 +431,37 @@ Namespace Business
 
         End Function
 
-        '''Function remark:                                                         
-        '''                                                                         
-        '''                                                                         
-        '''-------------------------------------------------------------------      
+        '''Function remark:                             
+        '''                                     
+        '''                                     
+        '''-------------------------------------------------------------------   
         Private Function DoLoadInfo() As String
 
 
             Try
 
+                If Me._manifest.SV_EDITING_QUOTATION_ID.Length = 0 Then
+                    Return String.Empty
+                End If
 
-                'Dim servResult As String = _                                       
-                '    Me._service.ServLoadInfo()                                     
+                Dim quotationWareDtlCondition As New MyPosXAuto.Facade.AfBizManage.ConditionOfT_MP_QUOTATION_WARE_DTL(XL.DB.Utils.Condition.LogicOperators.Logic_And)
+                quotationWareDtlCondition.Add(MyPosXAuto.Facade.AfBizManage.T_MP_QUOTATION_WARE_DTLColumns.QUOTATION_IDColumn, "=", Me._manifest.SV_EDITING_QUOTATION_ID)
+                MyPosXAuto.Facade.AfBizManage.FillFT_T_MP_QUOTATION_WARE_DTL(quotationWareDtlCondition, Me._manifest.SVFT_BACKEND_QUOTATION_WARE_LIST)
+                Dim quotationWareDtlIDs As New ArrayList
+                For Each quotationWareDtlRow As MyPosXAuto.FTs.FT_T_MP_QUOTATION_WARE_DTLRow In Me._manifest.SVFT_BACKEND_QUOTATION_WARE_LIST
+                    quotationWareDtlIDs.Add(quotationWareDtlRow.DETAIL_ID)
+                Next
 
-                'If servResult.Length > 0 Then                                      
-                '    Return servResult                                              
-                'End If                                                             
+                Dim quotWareBomDtlCondition As New MyPosXAuto.Facade.AfBizManage.ConditionOfT_MP_QUOT_WARE_BOM_DTL(XL.DB.Utils.Condition.LogicOperators.Logic_And)
+                quotWareBomDtlCondition.Add(MyPosXAuto.Facade.AfBizManage.T_MP_QUOT_WARE_BOM_DTLColumns.QUOT_WARE_DTLColumn, True, quotationWareDtlIDs)
+                MyPosXAuto.Facade.AfBizManage.FillFT_T_MP_QUOT_WARE_BOM_DTL(quotWareBomDtlCondition, Me._manifest.SVFT_BACKEND_BOM_OPTION_LIST)
+
+                'Dim servResult As String = _                    
+                '  Me._service.ServLoadInfo()                   
+
+                'If servResult.Length > 0 Then                   
+                '  Return servResult                       
+                'End If                               
 
             Catch ex As XL.Common.Utils.XLException
 
@@ -475,22 +490,44 @@ Namespace Business
 
         End Function
 
-        '''Function remark:                                                         
-        '''                                                                         
-        '''                                                                         
-        '''-------------------------------------------------------------------      
+        '''Function remark:                             
+        '''                                     
+        '''                                     
+        '''-------------------------------------------------------------------   
         Private Function DoSaveInfo() As String
 
 
             Try
 
+                If Me._manifest.SV_EDITING_QUOTATION_ID.Length = 0 Then
 
-                'Dim servResult As String = _                                       
-                '    Me._service.ServSaveInfo()                                     
+                    MyPosXAuto.Facade.AfBizManage.CreateT_MP_QUOTATIONInfo( _
+                        CommDecl.NULL_DATE, _
+                        Utils.Decls.LOGIN_STAFF_ROW_SE.STAFF_ID, _
+                        Me._manifest.TextEdit_QuotationCode.Text, _
+                        Me._manifest.SV_EDITING_QUOTATION_ID, _
+                        CommTK.FInteger(Me._manifest.LookUpEdit_QuotationType.EditValue), _
+                        Me._manifest.TextEdit_Remark.Text)
 
-                'If servResult.Length > 0 Then                                      
-                '    Return servResult                                              
-                'End If                                                             
+                Else
+                    MyPosXAuto.Facade.AfBizManage.ReviseT_MP_QUOTATIONInfo( _
+                        Me._manifest.SV_EDITING_QUOTATION_ID, _
+                        CommDecl.NULL_DATE, _
+                        Utils.Decls.LOGIN_STAFF_ROW_SE.STAFF_ID, _
+                        Me._manifest.TextEdit_QuotationCode.Text, _
+                        CommTK.FInteger(Me._manifest.LookUpEdit_QuotationType.EditValue), _
+                        Me._manifest.TextEdit_Remark.Text)
+
+                End If
+
+                MyPosXAuto.Facade.AfBizManage.SaveBatchT_MP_QUOTATION_WARE_DTLData(Me._manifest.SVFT_BACKEND_QUOTATION_WARE_LIST)
+                MyPosXAuto.Facade.AfBizManage.SaveBatchT_MP_QUOT_WARE_BOM_DTLData(Me._manifest.SVFT_BACKEND_BOM_OPTION_LIST)
+                'Dim servResult As String = _                    
+                '  Me._service.ServSaveInfo()                   
+
+                'If servResult.Length > 0 Then                   
+                '  Return servResult                       
+                'End If                               
 
             Catch ex As XL.Common.Utils.XLException
 
@@ -519,22 +556,22 @@ Namespace Business
 
         End Function
 
-        '''Function remark:                                                         
-        '''                                                                         
-        '''                                                                         
-        '''-------------------------------------------------------------------      
+        '''Function remark:                             
+        '''                                     
+        '''                                     
+        '''-------------------------------------------------------------------   
         Private Function DoLoadList() As String
 
 
             Try
 
 
-                'Dim servResult As String = _                                       
-                '    Me._service.ServLoadList()                                     
+                'Dim servResult As String = _                    
+                '  Me._service.ServLoadList()                   
 
-                'If servResult.Length > 0 Then                                      
-                '    Return servResult                                              
-                'End If                                                             
+                'If servResult.Length > 0 Then                   
+                '  Return servResult                       
+                'End If                               
 
             Catch ex As XL.Common.Utils.XLException
 
@@ -590,9 +627,9 @@ Namespace Business
 
                 Dim priceNoDiscount As Decimal
                 Dim origionPrice = MyPosXService.Facade.OpBizMaster.GetPosWarePrice( _
-                    wareRowSEntity.WARE_ID, _
-                    Utils.Decls.CURRENT_POS_ROW.POS_ID, _
-                    priceNoDiscount)
+                  wareRowSEntity.WARE_ID, _
+                  Utils.Decls.CURRENT_POS_ROW.POS_ID, _
+                  priceNoDiscount)
 
                 If origionPrice < 0 Then
                     Me._manifest.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0006)
@@ -616,18 +653,18 @@ Namespace Business
                 'dtlRow.ATTRIBUTE4 = wareRowSEntity.ATTRIBUTE4
                 dtlRow.UNIT_PRICE = origionPrice
                 dtlRow.UNIT_COST = _
-                    MyPosXService.Facade.OpBizMaster.GetPosWareCost( _
-                        dtlRow.WARE_ID, _
-                        Utils.Decls.CURRENT_POS_ROW.POS_ID)
+                  MyPosXService.Facade.OpBizMaster.GetPosWareCost( _
+                    dtlRow.WARE_ID, _
+                    Utils.Decls.CURRENT_POS_ROW.POS_ID)
 
                 dtlRow.QUANTITY = 1
 
                 'Dim servResult As String = _
-                '    Me._service.ServAddWare()
+                '  Me._service.ServAddWare()
 
                 'If servResult.Length > 0 Then
-                '    Return servResult        
-                'End If                       
+                '  Return servResult    
+                'End If            
 
             Catch ex As XL.Common.Utils.XLException
 
@@ -763,11 +800,11 @@ Namespace Business
                 Me._manifest.TreeList_OverViewList.DataSource = Me._manifest.SVFT_BINDING_COMPONENT_LIST
 
                 'Dim servResult As String = _
-                '    Me._service.ServUpdateBindingList( _
-                '        Me._ma)
+                '  Me._service.ServUpdateBindingList( _
+                '    Me._ma)
 
                 'If servResult.Length > 0 Then
-                '    Return servResult
+                '  Return servResult
                 'End If
 
                 Me._manifest.TreeList_OverViewList.DataSource = Me._manifest.SVFT_BINDING_COMPONENT_LIST
@@ -827,9 +864,9 @@ Namespace Business
 
                     Dim priceNoDiscount As Decimal
                     Dim origionPrice = MyPosXService.Facade.OpBizMaster.GetPosWarePrice( _
-                        wareRowSEntity.WARE_ID, _
-                        Utils.Decls.CURRENT_POS_ROW.POS_ID, _
-                        priceNoDiscount)
+                      wareRowSEntity.WARE_ID, _
+                      Utils.Decls.CURRENT_POS_ROW.POS_ID, _
+                      priceNoDiscount)
 
                     If origionPrice < 0 Then
                         Me._manifest.ShowStatusMessage(StatusMessageIcon.Alert, MyPosXService.Decls.MSG_STATUS_0006)
@@ -843,20 +880,20 @@ Namespace Business
                     dtlRow.WARE_ID = wareRowSEntity.WARE_ID
                     dtlRow.UNIT_PRICE = origionPrice
                     dtlRow.UNIT_COST = _
-                        MyPosXService.Facade.OpBizMaster.GetPosWareCost( _
-                            dtlRow.WARE_ID, _
-                            Utils.Decls.CURRENT_POS_ROW.POS_ID)
+                      MyPosXService.Facade.OpBizMaster.GetPosWareCost( _
+                        dtlRow.WARE_ID, _
+                        Utils.Decls.CURRENT_POS_ROW.POS_ID)
 
                     dtlRow.QUANTITY = 1
 
                 Next
 
                 'Dim servResult As String = _
-                '    Me._service.ServAddWareDetails()
+                '  Me._service.ServAddWareDetails()
 
                 'If servResult.Length > 0 Then
-                '    Return servResult        
-                'End If                       
+                '  Return servResult    
+                'End If            
 
             Catch ex As XL.Common.Utils.XLException
 
@@ -896,11 +933,11 @@ Namespace Business
 
 
                 'Dim servResult As String = _
-                '    Me._service.ServRemoveBindingRow()
+                '  Me._service.ServRemoveBindingRow()
 
                 'If servResult.Length > 0 Then
-                '    Return servResult        
-                'End If                       
+                '  Return servResult    
+                'End If            
 
             Catch ex As XL.Common.Utils.XLException
 
@@ -940,11 +977,11 @@ Namespace Business
 
 
                 'Dim servResult As String = _
-                '    Me._service.ServBizUtld0005()
+                '  Me._service.ServBizUtld0005()
 
                 'If servResult.Length > 0 Then
-                '    Return servResult        
-                'End If                       
+                '  Return servResult    
+                'End If            
 
             Catch ex As XL.Common.Utils.XLException
 
@@ -984,11 +1021,11 @@ Namespace Business
 
 
                 'Dim servResult As String = _
-                '    Me._service.ServBizUtld0006()
+                '  Me._service.ServBizUtld0006()
 
                 'If servResult.Length > 0 Then
-                '    Return servResult        
-                'End If                       
+                '  Return servResult    
+                'End If            
 
             Catch ex As XL.Common.Utils.XLException
 
@@ -1028,11 +1065,11 @@ Namespace Business
 
 
                 'Dim servResult As String = _
-                '    Me._service.ServBizUtld0007()
+                '  Me._service.ServBizUtld0007()
 
                 'If servResult.Length > 0 Then
-                '    Return servResult        
-                'End If                       
+                '  Return servResult    
+                'End If            
 
             Catch ex As XL.Common.Utils.XLException
 
@@ -1072,11 +1109,11 @@ Namespace Business
 
 
                 'Dim servResult As String = _
-                '    Me._service.ServBizUtld0008()
+                '  Me._service.ServBizUtld0008()
 
                 'If servResult.Length > 0 Then
-                '    Return servResult        
-                'End If                       
+                '  Return servResult    
+                'End If            
 
             Catch ex As XL.Common.Utils.XLException
 
@@ -1116,11 +1153,11 @@ Namespace Business
 
 
                 'Dim servResult As String = _
-                '    Me._service.ServBizUtld0009()
+                '  Me._service.ServBizUtld0009()
 
                 'If servResult.Length > 0 Then
-                '    Return servResult        
-                'End If                       
+                '  Return servResult    
+                'End If            
 
             Catch ex As XL.Common.Utils.XLException
 
@@ -1160,11 +1197,11 @@ Namespace Business
 
 
                 'Dim servResult As String = _
-                '    Me._service.ServBizUtld0010()
+                '  Me._service.ServBizUtld0010()
 
                 'If servResult.Length > 0 Then
-                '    Return servResult        
-                'End If                       
+                '  Return servResult    
+                'End If            
 
             Catch ex As XL.Common.Utils.XLException
 
@@ -1204,11 +1241,11 @@ Namespace Business
 
 
                 'Dim servResult As String = _
-                '    Me._service.ServBizUtld0011()
+                '  Me._service.ServBizUtld0011()
 
                 'If servResult.Length > 0 Then
-                '    Return servResult        
-                'End If                       
+                '  Return servResult    
+                'End If            
 
             Catch ex As XL.Common.Utils.XLException
 
@@ -1248,11 +1285,11 @@ Namespace Business
 
 
                 'Dim servResult As String = _
-                '    Me._service.ServBizUtld0012()
+                '  Me._service.ServBizUtld0012()
 
                 'If servResult.Length > 0 Then
-                '    Return servResult        
-                'End If                       
+                '  Return servResult    
+                'End If            
 
             Catch ex As XL.Common.Utils.XLException
 
@@ -1292,11 +1329,11 @@ Namespace Business
 
 
                 'Dim servResult As String = _
-                '    Me._service.ServBizUtld0013()
+                '  Me._service.ServBizUtld0013()
 
                 'If servResult.Length > 0 Then
-                '    Return servResult        
-                'End If                       
+                '  Return servResult    
+                'End If            
 
             Catch ex As XL.Common.Utils.XLException
 
@@ -1336,11 +1373,11 @@ Namespace Business
 
 
                 'Dim servResult As String = _
-                '    Me._service.ServBizUtld0014()
+                '  Me._service.ServBizUtld0014()
 
                 'If servResult.Length > 0 Then
-                '    Return servResult        
-                'End If                       
+                '  Return servResult    
+                'End If            
 
             Catch ex As XL.Common.Utils.XLException
 
@@ -1380,11 +1417,11 @@ Namespace Business
 
 
                 'Dim servResult As String = _
-                '    Me._service.ServBizUtld0015()
+                '  Me._service.ServBizUtld0015()
 
                 'If servResult.Length > 0 Then
-                '    Return servResult        
-                'End If                       
+                '  Return servResult    
+                'End If            
 
             Catch ex As XL.Common.Utils.XLException
 
@@ -1424,11 +1461,11 @@ Namespace Business
 
 
                 'Dim servResult As String = _
-                '    Me._service.ServBizUtld0016()
+                '  Me._service.ServBizUtld0016()
 
                 'If servResult.Length > 0 Then
-                '    Return servResult        
-                'End If                       
+                '  Return servResult    
+                'End If            
 
             Catch ex As XL.Common.Utils.XLException
 
@@ -1468,11 +1505,11 @@ Namespace Business
 
 
                 'Dim servResult As String = _
-                '    Me._service.ServBizUtld0017()
+                '  Me._service.ServBizUtld0017()
 
                 'If servResult.Length > 0 Then
-                '    Return servResult        
-                'End If                       
+                '  Return servResult    
+                'End If            
 
             Catch ex As XL.Common.Utils.XLException
 
@@ -1512,11 +1549,11 @@ Namespace Business
 
 
                 'Dim servResult As String = _
-                '    Me._service.ServBizUtld0018()
+                '  Me._service.ServBizUtld0018()
 
                 'If servResult.Length > 0 Then
-                '    Return servResult        
-                'End If                       
+                '  Return servResult    
+                'End If            
 
             Catch ex As XL.Common.Utils.XLException
 
@@ -1556,11 +1593,11 @@ Namespace Business
 
 
                 'Dim servResult As String = _
-                '    Me._service.ServBizUtld0019()
+                '  Me._service.ServBizUtld0019()
 
                 'If servResult.Length > 0 Then
-                '    Return servResult        
-                'End If                       
+                '  Return servResult    
+                'End If            
 
             Catch ex As XL.Common.Utils.XLException
 
@@ -1600,11 +1637,11 @@ Namespace Business
 
 
                 'Dim servResult As String = _
-                '    Me._service.ServBizUtld0020()
+                '  Me._service.ServBizUtld0020()
 
                 'If servResult.Length > 0 Then
-                '    Return servResult        
-                'End If                       
+                '  Return servResult    
+                'End If            
 
             Catch ex As XL.Common.Utils.XLException
 
@@ -1645,64 +1682,64 @@ End Namespace
 
 'Code Samples Below ------------------------
 
-        ''''Function remark:                                                                                                            
-        ''''                                                                                                                            
-        ''''                                                                                                                            
-        ''''-------------------------------------------------------------------                                                         
-        'Private Function DoLoadXXXByCode() As String                                                                                   
-        '                                                                                                                               
-        '                                                                                                                               
-        '    Try                                                                                                                        
-        '        If Me._manifest.ButtonEdit_XXXCode.Text.Trim.Length = 0 Then                                                           
-        '            Return String.Empty                                                                                                
-        '        End If                                                                                                                 
-        '                                                                                                                               
-        '        Dim SSCondition As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_SSS(XL.DB.Utils.Condition.LogicOperators.Logic_And)
-        '        SSCondition.Add(MyPosXAuto.Facade.AfBizMaster.M_SSSColumns.SS_CODEColumn, "=", Me._manifest.ButtonEdit_XXXCode.Text)      
-        '                                                                                                                               
-        '        Dim SSRow As MyPosXAuto.FTs.FT_M_SSSRow = _                                                                                 
-        '            MyPosXAuto.Facade.AfBizMaster.GetM_SSSRow(SSCondition)                                                                  
-        '                                                                                                                               
-        '        If IsNothing(SSRow) = True Then                                                                                        
-        '            Return XService.Decls.MSG_ALERT_00001                                                                              
-        '        End If                                                                                                                 
-        '                                                                                                                               
-        '        Me._manifest.ButtonEdit_XXXCode.Text = SSRow.SS_CODE                                                                   
-        '        Me._manifest.Label_XXXName.Text = SSRow.SS_NAME                                                                        
-        '        Me._manifest.Label_XXXID.Text = CommTK.FString(SSRow.SS_ID)                                                            
-        '                                                                                                                               
-        '        'Dim servResult As String = _                                                                                          
-        '        '    Me._service.ServLoadXXXByCode()                                                                                   
-        '                                                                                                                               
-        '        'If servResult.Length > 0 Then                                                                                         
-        '        '    Return servResult                                                                                                 
-        '        'End If                                                                                                                
-        '                                                                                                                               
-        '    Catch ex As XL.Common.Utils.XLException                                                                                    
-        '                                                                                                                               
-        '        Dim logContentBuilder As New LineStrBuilder                                                                            
-        '        logContentBuilder.AppendLine("Message: {0}", ex.Message)                                                           
-        '        logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)                                                    
-        '                                                                                                                               
-        '        WinTK.OutputLog("XL Exception", logContentBuilder.ToString())                                                        
-        '                                                                                                                               
-        '        Return ex.Message                                                                                                      
-        '                                                                                                                               
-        '    Catch ex As Exception                                                                                                      
-        '                                                                                                                               
-        '        Dim logContentBuilder As New LineStrBuilder                                                                            
-        '        logContentBuilder.AppendLine("Message: {0}", ex.Message)                                                           
-        '        logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)                                                    
-        '                                                                                                                               
-        '        WinTK.OutputLog("Exception occured", logContentBuilder.ToString())                                                   
-        '                                                                                                                               
-        '        XL.Win.Window.XLMessageBox.UseSmallFont = True                                                                         
-        '        Return ex.Message & vbNewLine & ex.StackTrace.ToString()                                                               
-        '                                                                                                                               
-        '    End Try                                                                                                                    
-        '                                                                                                                               
-        '    Return String.Empty                                                                                                        
-        '                                                                                                                               
-        'End Function                                                                                                                   
+''''Function remark:                                                      
+''''                                                              
+''''                                                              
+''''-------------------------------------------------------------------                             
+'Private Function DoLoadXXXByCode() As String                                          
+'                                                                
+'                                                                
+'  Try                                                            
+'    If Me._manifest.ButtonEdit_XXXCode.Text.Trim.Length = 0 Then                              
+'      Return String.Empty                                                
+'    End If                                                         
+'                                                                
+'    Dim SSCondition As New MyPosXAuto.Facade.AfBizMaster.ConditionOfM_SSS(XL.DB.Utils.Condition.LogicOperators.Logic_And)
+'    SSCondition.Add(MyPosXAuto.Facade.AfBizMaster.M_SSSColumns.SS_CODEColumn, "=", Me._manifest.ButtonEdit_XXXCode.Text)   
+'                                                                
+'    Dim SSRow As MyPosXAuto.FTs.FT_M_SSSRow = _                                         
+'      MyPosXAuto.Facade.AfBizMaster.GetM_SSSRow(SSCondition)                                 
+'                                                                
+'    If IsNothing(SSRow) = True Then                                            
+'      Return XService.Decls.MSG_ALERT_00001                                       
+'    End If                                                         
+'                                                                
+'    Me._manifest.ButtonEdit_XXXCode.Text = SSRow.SS_CODE                                  
+'    Me._manifest.Label_XXXName.Text = SSRow.SS_NAME                                    
+'    Me._manifest.Label_XXXID.Text = CommTK.FString(SSRow.SS_ID)                              
+'                                                                
+'    'Dim servResult As String = _                                             
+'    '  Me._service.ServLoadXXXByCode()                                          
+'                                                                
+'    'If servResult.Length > 0 Then                                             
+'    '  Return servResult                                                 
+'    'End If                                                        
+'                                                                
+'  Catch ex As XL.Common.Utils.XLException                                          
+'                                                                
+'    Dim logContentBuilder As New LineStrBuilder                                      
+'    logContentBuilder.AppendLine("Message: {0}", ex.Message)                              
+'    logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)                          
+'                                                                
+'    WinTK.OutputLog("XL Exception", logContentBuilder.ToString())                            
+'                                                                
+'    Return ex.Message                                                   
+'                                                                
+'  Catch ex As Exception                                                   
+'                                                                
+'    Dim logContentBuilder As New LineStrBuilder                                      
+'    logContentBuilder.AppendLine("Message: {0}", ex.Message)                              
+'    logContentBuilder.AppendLine("Stack Trace: {0}", ex.StackTrace)                          
+'                                                                
+'    WinTK.OutputLog("Exception occured", logContentBuilder.ToString())                          
+'                                                                
+'    XL.Win.Window.XLMessageBox.UseSmallFont = True                                     
+'    Return ex.Message & vbNewLine & ex.StackTrace.ToString()                                
+'                                                                
+'  End Try                                                          
+'                                                                
+'  Return String.Empty                                                    
+'                                                                
+'End Function                                                          
 
 

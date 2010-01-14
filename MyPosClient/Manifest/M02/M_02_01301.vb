@@ -212,7 +212,7 @@ Namespace Manifest
             '对于列表画面
             '-------------------------------------------------------------------
 
-            Me.UpdateDisplay
+            'Me.UpdateDisplay
 
 
         End Sub
@@ -221,16 +221,16 @@ Namespace Manifest
         Public Overrides Sub IA_RespDialog(ByVal responseTitle As String, ByVal popupForm As XL.Win.Component.BaseForm)
 
             Select Case responseTitle
-                'Case "TbActionCreate", "TbActionRevise"
-                '    Me.UpdateDisplay()                 
+                Case "TbActionCreate", "TbActionRevise"
+                    Me.UpdateDisplay()
 
-                'Case "ButtonEdit_BranchCode_ButtonClick"                                         
-                '    Dim chooseForm As M_01_00101 = CType(popupForm, M_01_00101)                    
-                '    Me.ButtonEdit_BranchCode.Text = chooseForm.SVFR_SELECTING_ROW.BRANCH_CODE      
-                '    Me._bizAgent.DoRequest(Business.B_01_00X01.Affairs.LoadBranchInfoByCode, False)
+                    'Case "ButtonEdit_BranchCode_ButtonClick"                                         
+                    '    Dim chooseForm As M_01_00101 = CType(popupForm, M_01_00101)                    
+                    '    Me.ButtonEdit_BranchCode.Text = chooseForm.SVFR_SELECTING_ROW.BRANCH_CODE      
+                    '    Me._bizAgent.DoRequest(Business.B_01_00X01.Affairs.LoadBranchInfoByCode, False)
 
 
-                'Case "TbActionReport"                                                                                
+                    'Case "TbActionReport"                                                                                
 
                     'Dim optionForm As XForm.Manifest.M_ReportOptions = CType(popupForm, XForm.Manifest.M_ReportOptions)
                     'Select Case optionForm.SV_SELECTING_OPTION.Type                                                    

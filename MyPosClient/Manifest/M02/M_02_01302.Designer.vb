@@ -60,7 +60,7 @@
             Me.ToolStripButton_RemoveWareDtl = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_EditBom = New System.Windows.Forms.ToolStripButton
             Me.ToolStripButton_Close = New System.Windows.Forms.ToolStripButton
-            Me.TextEdit_TurnoverCode = New DevExpress.XtraEditors.TextEdit
+            Me.TextEdit_QuotationCode = New DevExpress.XtraEditors.TextEdit
             Me.Label_TurnoverCode = New System.Windows.Forms.Label
             Me.DateEdit_DepositTime = New DevExpress.XtraEditors.DateEdit
             Me.Label_TurnoverTime = New System.Windows.Forms.Label
@@ -84,8 +84,9 @@
             Me.TreeListColumn2 = New DevExpress.XtraTreeList.Columns.TreeListColumn
             Me.RepositoryItemTextEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemTextEdit
             Me.TreeListColumn3 = New DevExpress.XtraTreeList.Columns.TreeListColumn
+            Me.ToolStripButton_Save = New System.Windows.Forms.ToolStripButton
             Me.ToolStrip_Form.SuspendLayout()
-            CType(Me.TextEdit_TurnoverCode.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.TextEdit_QuotationCode.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.DateEdit_DepositTime.Properties.VistaTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.DateEdit_DepositTime.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.LookUpEdit_QuotationType.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -112,7 +113,7 @@
             '
             'ToolStrip_Form
             '
-            Me.ToolStrip_Form.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton_RemoveWareDtl, Me.ToolStripButton_EditBom, Me.ToolStripButton_Close})
+            Me.ToolStrip_Form.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton_RemoveWareDtl, Me.ToolStripButton_EditBom, Me.ToolStripButton_Save, Me.ToolStripButton_Close})
             Me.ToolStrip_Form.Location = New System.Drawing.Point(0, 0)
             Me.ToolStrip_Form.Name = "ToolStrip_Form"
             Me.ToolStrip_Form.Size = New System.Drawing.Size(700, 25)
@@ -160,14 +161,14 @@
             Me.ToolStripButton_Close.Size = New System.Drawing.Size(36, 22)
             Me.ToolStripButton_Close.Text = "关闭"
             '
-            'TextEdit_TurnoverCode
+            'TextEdit_QuotationCode
             '
-            Me.TextEdit_TurnoverCode.ImeMode = System.Windows.Forms.ImeMode.Disable
-            Me.TextEdit_TurnoverCode.Location = New System.Drawing.Point(98, 11)
-            Me.TextEdit_TurnoverCode.Name = "TextEdit_TurnoverCode"
-            Me.TextEdit_TurnoverCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-            Me.TextEdit_TurnoverCode.Size = New System.Drawing.Size(181, 21)
-            Me.TextEdit_TurnoverCode.TabIndex = 10000
+            Me.TextEdit_QuotationCode.ImeMode = System.Windows.Forms.ImeMode.Disable
+            Me.TextEdit_QuotationCode.Location = New System.Drawing.Point(98, 11)
+            Me.TextEdit_QuotationCode.Name = "TextEdit_QuotationCode"
+            Me.TextEdit_QuotationCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+            Me.TextEdit_QuotationCode.Size = New System.Drawing.Size(181, 21)
+            Me.TextEdit_QuotationCode.TabIndex = 10000
             CTag2.AutoAvailable = XL.Win.AutoAvailables.OnSelfIncludingSubOnes
             CTag2.CalculatorRequired = True
             CTag2.ComboValueTextBox = Nothing
@@ -186,12 +187,12 @@
             CTag2.KeyValueAbsentable = False
             CTag2.LeagleText = ""
             CTag2.NumericButtonTextBox = Nothing
-            CTag2.ParentControl = Me.TextEdit_TurnoverCode
+            CTag2.ParentControl = Me.TextEdit_QuotationCode
             CTag2.SkipValidate = False
             CTag2.TimeButtonTextBox = Nothing
             CTag2.ToolTip = ""
             CTag2.ValueType = XL.Common.ControlValueType.Character
-            Me.TextEdit_TurnoverCode.Tag = CTag2
+            Me.TextEdit_QuotationCode.Tag = CTag2
             '
             'Label_TurnoverCode
             '
@@ -455,7 +456,7 @@
             Me.PanelControl1.Controls.Add(Me.Label_LastReviser)
             Me.PanelControl1.Controls.Add(Me.Label3)
             Me.PanelControl1.Controls.Add(Me.Label_TurnoverTime)
-            Me.PanelControl1.Controls.Add(Me.TextEdit_TurnoverCode)
+            Me.PanelControl1.Controls.Add(Me.TextEdit_QuotationCode)
             Me.PanelControl1.Controls.Add(Me.TextEdit_Remark)
             Me.PanelControl1.Dock = System.Windows.Forms.DockStyle.Top
             Me.PanelControl1.Location = New System.Drawing.Point(0, 25)
@@ -808,6 +809,12 @@
             Me.TreeListColumn3.FieldName = "DSR_FT_ROW_HIGHLIGHT"
             Me.TreeListColumn3.Name = "TreeListColumn3"
             '
+            'ToolStripButton_Save
+            '
+            Me.ToolStripButton_Save.Name = "ToolStripButton_Save"
+            Me.ToolStripButton_Save.Size = New System.Drawing.Size(36, 22)
+            Me.ToolStripButton_Save.Text = "保存"
+            '
             'M_02_01302
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -846,7 +853,7 @@
             Me.Tag = CTag18
             Me.ToolStrip_Form.ResumeLayout(False)
             Me.ToolStrip_Form.PerformLayout()
-            CType(Me.TextEdit_TurnoverCode.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.TextEdit_QuotationCode.Properties, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.DateEdit_DepositTime.Properties.VistaTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.DateEdit_DepositTime.Properties, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.LookUpEdit_QuotationType.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -868,7 +875,7 @@
             Me.PerformLayout()
 
         End Sub
-        Friend WithEvents TextEdit_TurnoverCode As DevExpress.XtraEditors.TextEdit
+        Friend WithEvents TextEdit_QuotationCode As DevExpress.XtraEditors.TextEdit
         Friend WithEvents Label_TurnoverCode As System.Windows.Forms.Label
         Friend WithEvents DateEdit_DepositTime As DevExpress.XtraEditors.DateEdit
         Friend WithEvents Label_TurnoverTime As System.Windows.Forms.Label
@@ -894,6 +901,7 @@
         Friend WithEvents TreeListColumn3 As DevExpress.XtraTreeList.Columns.TreeListColumn
         Friend WithEvents ToolStripButton_RemoveWareDtl As System.Windows.Forms.ToolStripButton
         Friend WithEvents ImageCollection_TreeIcon As DevExpress.Utils.ImageCollection
+        Friend WithEvents ToolStripButton_Save As System.Windows.Forms.ToolStripButton
 
 #End Region
 
