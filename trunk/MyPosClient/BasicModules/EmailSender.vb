@@ -45,7 +45,7 @@ Namespace Utils
             onemail.Subject = subject
             onemail.Body = body
 
-            Dim clint As New SmtpClient("smtp.gmail.com", 587)
+            Dim clint As New SmtpClient(SMTPServer, 587)
             '发送邮件的服务器
             clint.Credentials = New System.Net.NetworkCredential(EmailFrom, Password)
             clint.EnableSsl = True
