@@ -19,17 +19,17 @@ Namespace Utils
         Public _user As String = String.Empty
 
         Public Sub New( _
-           ByVal iEmailFrom As String, _
-           ByVal iPassword As String, _
-           ByVal iSMTPServer As String, _
-           ByVal iSMTPPort As Integer, _
-           ByVal iUser As String)
+           ByVal emailFrom As String, _
+           ByVal password As String, _
+           ByVal SMTPServer As String, _
+           ByVal SMTPPort As Integer, _
+           ByVal user As String)
 
-            Me._EmailFrom = iEmailFrom
-            Me._password = iPassword
-            Me._SMTPServer = iSMTPServer
-            Me._SMTPPort = iSMTPPort
-            Me._user = iUser
+            Me._emailFrom = emailFrom
+            Me._password = password
+            Me._SMTPServer = SMTPServer
+            Me._SMTPPort = SMTPPort
+            Me._user = user
 
         End Sub
 
