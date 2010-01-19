@@ -303,6 +303,10 @@ Namespace Manifest
                     Dim configForm = TryCast(popupForm, M_02_00109)
                     Me.SVFT_EDITING_DATA_TURNOVER_SHARE_DTL_LIST.Clear()
                     Me.SVFT_EDITING_DATA_TURNOVER_SHARE_DTL_LIST.ImportTable(configForm.SVFT_BINDING_LIST, Nothing)
+                    Dim shareCondition As New MyPosXAuto.Facade.AfXV.ConditionOfXV_H_MP_TURNOVER_SHARE_DTL(XL.DB.Utils.Condition.LogicOperators.Logic_And)
+                    shareCondition.Add(MyPosXAuto.Facade.AfXV.XV_H_MP_TURNOVER_SHARE_DTLColumns.TURNOVER_IDColumn, "=", Me.SV_EDITING_TURNOVER_ID)
+                    Me.SVFT_CACHE_DATA_TURNOVER_SHARE_DTL_LIST.RemoveFT_H_MP_TURNOVER_SHARE_DTLRows(shareCondition)
+                    Me.SVFT_CACHE_DATA_TURNOVER_SHARE_DTL_LIST.ImportTable(Me.SVFT_EDITING_DATA_TURNOVER_SHARE_DTL_LIST, shareCondition)
                     Me.ShowStatusMessage(StatusMessageIcon.Info, MyPosXService.Decls.MSG_STATUS_0033)
 
             End Select
